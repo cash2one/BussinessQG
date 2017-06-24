@@ -1,0 +1,23 @@
+keyPersonUrl = 'var keyPersonUrl '   #主要人员信息
+branchUrl = 'var branchUrl '         #分支机构信息
+var alterInfoUrl                     #变更信息
+
+var stakQualitInfoUrl               #股权出质登记信息
+var otherLicenceInfoUrl             #行政许可信息
+var judiciaryStockfreezePersonUrl   #司法协助信息
+
+                                    #经营异常名录信息
+
+以上信息采集用洛阳股份有限公司进行测试
+
+
+以下信息 用阳泉市天利时尚购物广场有限公司 的信息进行测试
+var   punishmentDetailInfoUrl      #  行政处罚信息
+var spotCheckInfoUrl          #抽查检查信息
+
+
+
+TrademarkUrl 商标信息
+
+以下信息采集用包头市草原永兴饲料有限责任公司 进行测试
+var entBusExcepUrl 列入异常名录信息
