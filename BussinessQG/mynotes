@@ -5,8 +5,9 @@ var alterInfoUrl                     #变更信息
 var stakQualitInfoUrl               #股权出质登记信息
 var otherLicenceInfoUrl             #行政许可信息
 var judiciaryStockfreezePersonUrl   #司法协助信息
+ (浙商银行股份有限公司也包含 )
 
-                                    #经营异常名录信息
+var entBusExcepUrl                   #经营异常名录信息
 
 以上信息采集用洛阳股份有限公司进行测试
 
@@ -15,12 +16,39 @@ var judiciaryStockfreezePersonUrl   #司法协助信息
 var   punishmentDetailInfoUrl      #  行政处罚信息
 var spotCheckInfoUrl          #抽查检查信息
 
+郑州银行股份有限公司
+即时信息-行政许可信息
+var insLicenceinfoUrl
 
-
-TrademarkUrl 商标信息
+trademarkInfoUrl 商标信息
 
 以下信息采集用包头市草原永兴饲料有限责任公司 进行测试
 var entBusExcepUrl 列入异常名录信息
 
 
 年报信息尚待分析
+1.首先第一步向发送请求的到各个年份的url
+ var anCheYearInfo
+2.再向各年份发送请求，得到各个分支url,而后获取信息
+http://www.gsxt.gov.cn/corp-query-entprise-info-vAnnualReportBaseInfoForJs-PROVINCENODENUM410000ff8080815b26a218015bb413cbb36469.html
+
+annSocsecinfoUrl :社保信息
+allForinvestmentInfoUrl:对外投资信息
+forGuaranteeinfoUrl:对外担保信息
+
+alterUrl :修改记录
+webSiteInfoUrl :网站或网店信息
+baseinfoUrl :基本信息
+sponsorUrl :股东及出资信息
+forGuaranteeinfoUrl ：对外担保信息
+中国工商银行股份有限公司 年报情况较为特殊
+上海申卡文化传播有限公司 带有股权变更信息
+湖南省恭兵食品有限公司 带有动产抵押信息
+
+#动产抵押所有人信息
+#http://www.gsxt.gov.cn/corp-query-entprise-info-mortregpersoninfo-PROVINCENODENUM4300002c9902d558baa3de015a36605e6a0961.html
+#动产抵押所有物品信息
+#http://www.gsxt.gov.cn/corp-query-entprise-info-mortGuaranteeInfo-PROVINCENODENUM4300002c9902d558baa3de015a36605e6a0961.html
+
+#动产抵押被担保主债权信息
+#http://www.gsxt.gov.cn/corp-query-entprise-info-mortCreditorRightInfo-PROVINCENODENUM4300002c9902d558baa3de015a36605e6a0961.html
