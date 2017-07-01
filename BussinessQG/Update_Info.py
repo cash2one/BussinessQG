@@ -13,7 +13,7 @@ sys.setdefaultencoding('utf-8')
 Type = sys.getfilesystemencoding()
 # 配置日志文件start-----------------------------------------------------------------
 
-code = '914305007073048253'
+code = '91110000562118166J'
 logging.basicConfig(level=logging.DEBUG,
                     format='%(asctime)s %(filename)s[line:%(lineno)d] %(levelname)s %(message)s',
                     datefmt='%a, %d %b %Y %H:%M:%S',

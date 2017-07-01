@@ -50,6 +50,13 @@ province = {
     "64": "NXA",
     "65": "XNJ"
 }
+# brand_path = {
+#
+#
+# }
+
+
+
 
 shareholder_pattern = re.compile(r'var shareholderUrl = "(.*?)"')
 person_pattern = re.compile(r'var keyPersonUrl = "(.*?)"')
@@ -65,6 +72,7 @@ gt_permit = re.compile(r'var insLicenceinfoUrl = "(.*?)"')
 brand_pattern = re.compile(r'var trademarkInfoUrl = "(.*?)"')
 report_pattern = re.compile(r'var anCheYearInfo = "(.*?)"')
 mort_pattern = re.compile(r'var mortRegInfoUrl = "(.*?)"')
+gtshare_pattern = re.compile(' var insInvinfoUrl = "(.*?)"')
 list = []
 for i in range(0, 20):
     temp = random.randint(0, 9)

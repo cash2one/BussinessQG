@@ -62,23 +62,26 @@ def get_singleinfo_url(result):
     brand_url = get_url(config.brand_pattern, url_content)
     mort_url = get_url(config.mort_pattern, url_content)
     report_url = get_url(config.report_pattern, url_content)
-    # print brand_url
-    information["branch"] = branch_url
-    information["shareholder"] = shareholder_url
-    information["person"] = person_url
-    information["change"] = change_url
-    information["check"] = check_url
-    information["permit"] = permit_url
-    information["except"] = except_url
-    information["punish"] = punish_url
-    information["freeze"] = freeze_url
-    information["stock"] = stock_url
-    information["gt_permit"] = gt_permit_url
-    information["brand"] = brand_url
-    information["report"] = report_url
-    information["mort"] = mort_url
+    ge_share_url = get_url(config.gtshare_pattern,url_content)
 
-    return information
+    # print brand_url
+    url["branch"] = branch_url
+    url["shareholder"] = shareholder_url
+    url["person"] = person_url
+    url["change"] = change_url
+    url["check"] = check_url
+    url["permit"] = permit_url
+    url["except"] = except_url
+    url["punish"] = punish_url
+    url["freeze"] = freeze_url
+    url["stock"] = stock_url
+    url["gt_permit"] = gt_permit_url
+    url["brand"] = brand_url
+    url["report"] = report_url
+    url["mort"] = mort_url
+    url["gtshare"] = gt_share_url
+
+    return url
 
 
 def update_info_main(cursor, connect, code):
@@ -93,21 +96,21 @@ def update_info_main(cursor, connect, code):
         information = QGGS_basic.get_basic_info(result, status_code)
         QGGS_basic.update_basic(information, connect, cursor, gs_basic_id)
         information = get_singleinfo_url(result)
-        Get_BrancInfo().get_info(None, gs_basic_id, cursor, connect, information["branch"], QGGS_branch, 'branch')
-        Get_BrancInfo().get_info(None, gs_basic_id, cursor, connect, information["person"], QGGS_person, 'person')
-        Get_BrancInfo().get_info(None, gs_basic_id, cursor, connect, information["change"], QGGS_change, 'change')
-        Get_BrancInfo().get_info(None, gs_basic_id, cursor, connect, information["shareholder"], QGGS_shareholder,
-                                 'shareholder')
-        Get_BrancInfo().get_info(None, gs_basic_id, cursor, connect, information["check"], QGGS_check, 'check')
-        Get_BrancInfo().get_info(None, gs_basic_id, cursor, connect, information["punish"], QGGS_punish, 'punish')
-        Get_BrancInfo().get_info(None, gs_basic_id, cursor, connect, information["permit"], QGGS_permit, 'permit')
-        Get_BrancInfo().get_info(None, gs_basic_id, cursor, connect, information["gt_permit"], QGGS_permit, 'gt_permit')
-        Get_BrancInfo().get_info(None, gs_basic_id, cursor, connect, information["except"], QGGS_except, 'except')
-        Get_BrancInfo().get_info(None, gs_basic_id, cursor, connect, information["freeze"], QGGS_freeze, 'freeze')
-        Get_BrancInfo().get_info(None, gs_basic_id, cursor, connect, information["stock"], QGGS_stock, 'stock')
-        Get_BrancInfo().get_info(None, gs_basic_id, cursor, connect, information["brand"], QGGS_brand, 'brand')
-        Get_BranchInfo().get_info(None, gs_basic_id, cursor, connect, information["mort"], QGGS_mort, 'mort')
-        update_report_main(information["report"], cursor, connect, gs_basic_id)
+        # Get_BrancInfo().get_info(None, gs_basic_id, cursor, connect, url["branch"], QGGS_branch, 'branch')
+        # Get_BrancInfo().get_info(None, gs_basic_id, cursor, connect, url["person"], QGGS_person, 'person')
+        # Get_BrancInfo().get_info(None, gs_basic_id, cursor, connect, url["change"], QGGS_change, 'change')
+        # Get_BrancInfo().get_info(None, gs_basic_id, cursor, connect, url["shareholder"], QGGS_shareholder,'shareholder')
+        # Get_BrancInfo().get_info(None, gs_basic_id, cursor, connect, url["check"], QGGS_check, 'check')
+        # Get_BrancInfo().get_info(None, gs_basic_id, cursor, connect, url["punish"], QGGS_punish, 'punish')
+        # Get_BrancInfo().get_info(None, gs_basic_id, cursor, connect, url["permit"], QGGS_permit, 'permit')
+        # Get_BrancInfo().get_info(None, gs_basic_id, cursor, connect, url["gt_permit"], QGGS_permit, 'gt_permit')
+        # Get_BrancInfo().get_info(None, gs_basic_id, cursor, connect, url["except"], QGGS_except, 'except')
+        # Get_BrancInfo().get_info(None, gs_basic_id, cursor, connect, url["freeze"], QGGS_freeze, 'freeze')
+        # Get_BrancInfo().get_info(None, gs_basic_id, cursor, connect, url["stock"], QGGS_stock, 'stock')
+        # Get_BrancInfo().get_info(None, gs_basic_id, cursor, connect, url["brand"], QGGS_brand, 'brand')
+        # Get_BranchInfo().get_info(None, gs_basic_id, cursor, connect, url["mort"], QGGS_mort, 'mort')
+        # update_report_main(information["report"], cursor, connect, gs_basic_id)
+        Get_BranchInfo().get_info(None, gs_basic_id, cursor, connect, url["gtshare"], QGGS_gtshareholder, 'gtshare')
     else:
         logging.error('网页打开出错！！!')
 
