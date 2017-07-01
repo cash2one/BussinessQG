@@ -1,8 +1,6 @@
 #!/usr/bin/env python
 # -*- coding:utf-8 -*-
 # @author liangmengmeng
-import logging
-import sys
 
 from GetUrl import *
 from Main_get_info import *
@@ -13,11 +11,11 @@ sys.setdefaultencoding('utf-8')
 Type = sys.getfilesystemencoding()
 # 配置日志文件start-----------------------------------------------------------------
 
-code = '91110000562118166J'
+code = '000925'
 logging.basicConfig(level=logging.DEBUG,
                     format='%(asctime)s %(filename)s[line:%(lineno)d] %(levelname)s %(message)s',
                     datefmt='%a, %d %b %Y %H:%M:%S',
-                    filename='%s_main_%s.log' % (time.strftime("%Y-%m-%d ", time.localtime()), code),
+                    filename='./log/%s_main_%s.log' % (time.strftime("%Y-%m-%d ", time.localtime()), code),
                     filemode='w')
 
 

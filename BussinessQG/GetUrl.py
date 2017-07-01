@@ -3,7 +3,6 @@
 import hashlib
 import json
 import os
-import random
 import re
 import sys
 import time
@@ -14,7 +13,6 @@ import requests
 from bs4 import BeautifulSoup
 
 import config
-from Public_code import Connect_to_DB as Connect_to_DB
 
 # import provincelist
 # 用于解决中文编码问题
@@ -88,10 +86,11 @@ def last_request(challenge, validate, string, cookies):
     span = result.find("span", {"class": "search_result_span1"})
     pattern = re.compile(r'[0-9]+')
     number = re.findall(pattern, span.text)
-    information = get_need_info(result)
     if int(number[0]) == 1:
+        information = get_need_info(result)
         return information
     elif int(number[0]) > 1:
+        information = get_need_info(result)
         if int(number[0]) % 10 == 0:
             page = int(number[0]) / 10
         elif int(number[0]) % 10 != 0:
@@ -103,49 +102,56 @@ def last_request(challenge, validate, string, cookies):
             tempinformation = get_need_info(result)
             information = dict(information, **tempinformation)
         return information
+    return information
 
 
 # 将所获得的数据进行更新
 def update_db(information, cursor, connect):
     update_flag, insert_flag = 0, 0
-    for key in information.keys():
-        url = information[key][0]
-        url = MySQLdb.escape_string(url)
-        code = information[key][3]
-        pattern = re.compile(r"^91.*|92.*|93.*")
-        ccode = re.findall(pattern, code)
-        if len(ccode) == 0:
-            ccode = None
-        elif len(ccode) == 1:
-            ccode = ccode[0]
-        m = hashlib.md5()
-        m.update(code)
-        id = m.hexdigest()
-        updated = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
-        company, status, daibiao, dates = information[key][1], information[key][2], information[key][4], \
-                                          information[key][5]
-        try:
-            cursor.execute(select_string, code)
-            basic_id = cursor.fetchall()
-            if len(basic_id) == 0:
-                pattern = re.compile(r'^9.*')
-                temp = re.findall(pattern, code)
-                if len(temp) == 0:
-                    provin = config.province[code[0:2]]
-                else:
-                    provin = config.province[code[2:4]]
-                # print insert_string %(id, url, provin, company, code, ccode, daibiao, dates, status, updated)
-                rows_flag = cursor.execute(insert_string,
-                                           (id, url, provin, company, code, ccode, daibiao, dates, status, updated))
-                insert_flag += rows_flag
-                connect.commit()
-            elif len(basic_id) == 1:
-                basic_id = basic_id[0][0]
-                rows_flag = cursor.execute(update_string, (url, company, daibiao, dates, status, updated, basic_id))
-                update_flag += rows_flag
-                connect.commit()
-        except Exception, e:
-            print "error", e
+    if len(information) > 0:
+        for key in information.keys():
+            url = information[key][0]
+            print url
+            url = MySQLdb.escape_string(url)
+            code = information[key][3]
+            pattern = re.compile(r"^91.*|92.*|93.*")
+            ccode = re.findall(pattern, code)
+            if len(ccode) == 0:
+                ccode = None
+            elif len(ccode) == 1:
+                ccode = ccode[0]
+            m = hashlib.md5()
+            m.update(code)
+            id = m.hexdigest()
+            updated = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
+            company, status, daibiao, dates = information[key][1], information[key][2], information[key][4], \
+                                              information[key][5]
+            try:
+                cursor.execute(select_string, code)
+                basic_id = cursor.fetchall()
+                print code
+                if len(basic_id) == 0:
+                    pattern = re.compile(r'^9.*')
+                    temp = re.findall(pattern, code)
+                    if len(temp) == 0:
+                        provin = config.province[code[0:2]]
+                    else:
+                        provin = config.province[code[2:4]]
+                    # print insert_string %(id, url, provin, company, code, ccode, daibiao, dates, status, updated)
+                    rows_flag = cursor.execute(insert_string,
+                                               (id, url, provin, company, code, ccode, daibiao, dates, status, updated))
+                    insert_flag += rows_flag
+                    connect.commit()
+                elif len(basic_id) == 1:
+                    basic_id = basic_id[0][0]
+                    print update_string % (url, company, daibiao, dates, status, updated, basic_id)
+                    rows_flag = cursor.execute(update_string, (url, company, daibiao, dates, status, updated, basic_id))
+                    update_flag += rows_flag
+                    connect.commit()
+            except Exception, e:
+                print "error", e
+    elif len(information) == 0:
+        print '无查询信息'
     print "url insert:%s" % insert_flag
     print "url updated:%s" % update_flag
 

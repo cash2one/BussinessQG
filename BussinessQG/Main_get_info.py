@@ -65,7 +65,7 @@ def get_singleinfo_url(result):
     return url
 
 
-def update_info_main(cursor, connect, code):
+def update_info_main(cursor, connect, code, gs_basic_id):
     cursor.execute(select_string, code)
     for basic_id, url in cursor.fetchall():
         gs_basic_id = basic_id
