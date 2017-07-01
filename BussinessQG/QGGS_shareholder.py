@@ -1,13 +1,14 @@
 #!/usr/bin/env python
 # -*- coding:utf-8 -*-
 
-import datetime
+
 import json
 import logging
 import sys
 import time
 
 from  Public_code import Send_Request as Send_Request
+from deal_html_code import change_date_style
 from deal_html_code import deal_lable
 
 reload(sys)
@@ -15,8 +16,8 @@ sys.setdefaultencoding('utf-8')
 Type = sys.getfilesystemencoding()
 
 select_string = 'select gs_shareholder_id from gs_shareholder where gs_basic_id = %s and name = %s and types = %s and cate = %s'
-share_string = 'insert into gs_shareholder(gs_basic_id,name,cate,types,license_type,license_code,ra_date, ra_ways, true_amount,updated)values(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)'
-update_string = 'update gs_shareholder set types = %s ,license_type = %s ,license_code = %s ,ra_date = %s,ra_ways = %s,true_amount = %s ,updated = %s where gs_shareholder_id = %s '
+share_string = 'insert into gs_shareholder(gs_basic_id,name,cate,types,license_type,license_code,ra_date, ra_ways, true_amount,reg_amount,ta_ways,ta_date,updated)values(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)'
+update_string = 'update gs_shareholder set types = %s ,license_type = %s ,license_code = %s ,ra_date = %s,ra_ways = %s,true_amount = %s ,reg_amount = %s, ta_ways = %s, ta_date = %s,updated = %s where gs_shareholder_id = %s '
 
 
 def name(data):
@@ -39,8 +40,9 @@ def name(data):
             ra_date, ra_ways, true_amount = deal_detail_content(detail_url)
         else:
             logging.info('无 shareholder 详情信息')
-            ra_date, ra_ways, true_amount = None, None, None
-        information[i] = [name, license_code, license_type, types, ra_date, ra_ways, true_amount]
+            ra_date, ra_ways, true_amount, reg_amount, ta_ways, ta_date = None, None, None, None, None, None
+        information[i] = [name, license_code, license_type, types, ra_date, ra_ways, true_amount, reg_amount, ta_ways,
+                          ta_date]
     return information
 
 
@@ -49,8 +51,6 @@ def deal_detail_content(detail_url):
     detail_code, status_code = Send_Request().send_requests(detail_url)
     if status_code == 200:
         detail_code = json.loads(detail_code)["data"]
-        # if len(detail_code[0])== 0:
-        #     content = detail_code[]
         if len(detail_code[1]) != 0:
             content1 = detail_code[1][0]
         elif len(detail_code[0]) != 0:
@@ -58,20 +58,27 @@ def deal_detail_content(detail_url):
         if len(content1) != 0:
             if "conDate" in content1.keys():
                 ra_date = content1["conDate"]
-                ra_date = datetime.datetime.utcfromtimestamp(ra_date / 1000)
-                otherStyleTime = ra_date.strftime("%Y-%m-%d")
-                ra_date = otherStyleTime
+                ra_date = change_date_style(ra_date)
+                ta_date = ra_date
             else:
+                ta_date = None
                 ra_date = None
             if "conForm_CN" in content1.keys():
                 ra_ways = content1["conForm_CN"]
+                ta_ways = ra_ways
             else:
+                ta_ways = None
                 ra_ways = None
             if "subConAm" in content1.keys():
-                true_amount = content1["subConAm"]
+                reg_amount = content1["subConAm"]
+            else:
+                reg_amount = None
+            if "acConAm" in content1.keys():
+                true_amount = content1["acConAm"]
             else:
                 true_amount = None
-    return ra_date, ra_ways, true_amount
+
+    return ra_date, ra_ways, true_amount, reg_amount, ta_ways, ta_date
 
 
 def update_to_db(gs_basic_id, cursor, connect, information):
@@ -81,6 +88,7 @@ def update_to_db(gs_basic_id, cursor, connect, information):
         name, license_code, license_type = information[key][0], information[key][1], information[key][2]
         types, ra_date, ra_ways, true_amount = information[key][3], information[key][4], information[key][5], \
                                                information[key][6]
+        reg_amount, ta_ways, ta_date = information[key][7], information[key][8], information[key][9]
         try:
             count = cursor.execute(select_string, (gs_basic_id, name, types, cate))
 
@@ -88,14 +96,15 @@ def update_to_db(gs_basic_id, cursor, connect, information):
                 updated_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
                 rows_count = cursor.execute(share_string, (
                     gs_basic_id, name, cate, types, license_type, license_code, ra_date, ra_ways, true_amount,
-                    updated_time))
+                    reg_amount, ta_ways, ta_date, updated_time))
                 insert_flag += rows_count
                 connect.commit()
             elif int(count) == 1:
                 gs_shareolder_id = cursor.fetchall()[0][0]
                 updated_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
                 rows_count = cursor.execute(update_string, (
-                    types, license_type, license_code, ra_date, ra_ways, true_amount, updated_time, gs_shareolder_id))
+                    types, license_type, license_code, ra_date, ra_ways, true_amount, reg_amount, ta_ways, ta_date,
+                    updated_time, gs_shareolder_id))
                 update_flag += rows_count
                 connect.commit()
         except Exception, e:

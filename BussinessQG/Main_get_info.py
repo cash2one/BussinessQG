@@ -1,29 +1,10 @@
 #!/usr/bin/env python
 # -*- coding:utf-8 -*-
-import json
-import logging
-import re
-import sys
-import time
 
 from bs4 import BeautifulSoup
 
 import QGGS_basic
-import QGGS_branch
-import QGGS_brand
-import QGGS_change
-import QGGS_check
-import QGGS_except
-import QGGS_freeze
-import QGGS_mort
-import QGGS_permit
-import QGGS_person
-import QGGS_punish
-import QGGS_shareholder
-import QGGS_stock
-import config
-from Public_code import Get_BranchInfo as Get_BrancInfo
-from  Public_code import Send_Request as Send_Request
+import QGGS_gtshareholder
 from QGGS_Report import *
 
 reload(sys)
@@ -45,7 +26,7 @@ def get_url(pattern, url_content):
 
 
 def get_singleinfo_url(result):
-    information = {}
+    url = {}
     url_content = BeautifulSoup(result, 'lxml').find("div", {"id": "url"}).find("script")
     # print url_content
     shareholder_url = get_url(config.shareholder_pattern, url_content)
@@ -62,7 +43,7 @@ def get_singleinfo_url(result):
     brand_url = get_url(config.brand_pattern, url_content)
     mort_url = get_url(config.mort_pattern, url_content)
     report_url = get_url(config.report_pattern, url_content)
-    ge_share_url = get_url(config.gtshare_pattern,url_content)
+    gt_share_url = get_url(config.gtshare_pattern, url_content)
 
     # print brand_url
     url["branch"] = branch_url
@@ -95,7 +76,7 @@ def update_info_main(cursor, connect, code):
     if status_code == 200 and len(fail) == 0:
         information = QGGS_basic.get_basic_info(result, status_code)
         QGGS_basic.update_basic(information, connect, cursor, gs_basic_id)
-        information = get_singleinfo_url(result)
+        url = get_singleinfo_url(result)
         # Get_BrancInfo().get_info(None, gs_basic_id, cursor, connect, url["branch"], QGGS_branch, 'branch')
         # Get_BrancInfo().get_info(None, gs_basic_id, cursor, connect, url["person"], QGGS_person, 'person')
         # Get_BrancInfo().get_info(None, gs_basic_id, cursor, connect, url["change"], QGGS_change, 'change')
