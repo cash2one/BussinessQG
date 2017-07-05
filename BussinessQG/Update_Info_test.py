@@ -29,9 +29,11 @@ def main():
             print code, gs_basic_id
             challenge, validate, cookies = loop_break_password()
             information = last_request(challenge, validate, code, cookies)
-            if len(information) != 0:
-                update_db(information, cursor, connect)
-                update_info_main(cursor, connect, code)
+            if len(information) > 0:
+                url = information[code][0]
+                # print url
+                # update_db(information, cursor, connect)
+                update_info_main(cursor, connect, url, gs_basic_id)
         connect.close()
     except Exception, e:
         print e

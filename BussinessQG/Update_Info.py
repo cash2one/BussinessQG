@@ -22,8 +22,9 @@ Type = sys.getfilesystemencoding()
 # 配置日志文件start-----------------------------------------------------------------
 # gs_basic_id = sys.argv[1]
 # code = sys.argv[2]
-gs_basic_id = 229418495
-code = '9111000071783407X5'
+#110000017421980 229417850
+gs_basic_id = 229417850
+code = '110000017421980'
 logging.basicConfig(level=logging.DEBUG,
                     format='%(asctime)s %(filename)s[line:%(lineno)d] %(levelname)s %(message)s',
                     datefmt='%a, %d %b %Y %H:%M:%S',

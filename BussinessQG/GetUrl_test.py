@@ -176,7 +176,7 @@ def main():
         HOST, USER, PASSWD, DB, PORT = config.HOST, config.USER, config.PASSWD, config.DB, config.PORT
         connect, cursor = Connect_to_DB().ConnectDB(HOST, USER, PASSWD, DB, PORT)
         # string = '914100001711393654'
-        string = '9111000071783407X5'
+        string = '9115000011411214XH'
         # string = '洛阳银行股份有限公司'
         challenge, validate, cookies = loop_break_password()
         information = last_request(challenge, validate, string, cookies)

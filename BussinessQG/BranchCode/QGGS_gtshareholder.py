@@ -20,8 +20,9 @@ def name(data):
         name = singledata["inv"]
 
         subDetails = singledata["subDetails"]
+        print subDetails
         if len(subDetails)!=0:
-            subDetails = subDetails["subDetails"][0]
+            subDetails = singledata["subDetails"][0]
         else:
             subDetails = None
         if subDetails!= None:

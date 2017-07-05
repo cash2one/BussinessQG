@@ -53,6 +53,6 @@ def update_to_db(gs_basic_id, cursor, connect, information):
                 connect.commit()
         except Exception, e:
             # print "except error:", e
-            logging.error("except error:" % e)
+            logging.error("except error: %s" % e)
     flag = insert_flag + update_flag
     return flag
