@@ -13,8 +13,8 @@ import MySQLdb
 import requests
 from bs4 import BeautifulSoup
 
-import config
-from Public_code import Connect_to_DB
+from PublicCode import config
+from PublicCode.Public_code import Connect_to_DB
 
 # import provincelist
 # 用于解决中文编码问题
@@ -27,8 +27,8 @@ url_first = "http://www.gsxt.gov.cn"
 
 select_string = 'select gs_basic_id from gs_basic where code = %s'
 # gs_basic_id = sys.argv[1]
-insert_string = "insert into gs_basic(id,uuid,province,name,code,ccode,legal_person,reg_date,status,updated ) values (%s,%s,%s,%s, %s, %s,%s,%s, %s,%s)"
-update_string = "update gs_basic set uuid = %s,name = %s,legal_person = %s,reg_date = %s,status = %s,updated = %s where gs_basic_id = %s"
+insert_string = "insert into gs_basic(id,province,name,code,ccode,legal_person,reg_date,status,updated ) values (%s,%s,%s, %s, %s,%s,%s, %s,%s)"
+update_string = "update gs_basic set name = %s,legal_person = %s,reg_date = %s,status = %s,updated = %s where gs_basic_id = %s"
 
 
 # 用于程序自我重启
@@ -52,7 +52,7 @@ def get_cookies():
 # 用于获取validate与challenge
 
 def break_password(cookies):
-    url = 'http://www.geev.website/geetest/get?token=seo_test1&reg=http://www.gsxt.gov.cn/SearchItemCaptcha'
+    url = 'http://115.28.86.78/geetest/get?token=seo_test1&reg=http://www.gsxt.gov.cn/SearchItemCaptcha'
     result = session.get(url, cookies=cookies, headers=config.headersfirst)
     json_list = json.loads(result.content)
     success_flag = json_list["success"]
@@ -138,12 +138,12 @@ def update_db(information, cursor, connect):
                     provin = config.province[code[2:4]]
                 # print insert_string %(id, url, provin, company, code, ccode, daibiao, dates, status, updated)
                 rows_flag = cursor.execute(insert_string,
-                                           (id, url, provin, company, code, ccode, daibiao, dates, status, updated))
+                                           (id, provin, company, code, ccode, daibiao, dates, status, updated))
                 insert_flag += rows_flag
                 connect.commit()
             elif len(basic_id) == 1:
                 basic_id = basic_id[0][0]
-                rows_flag = cursor.execute(update_string, (url, company, daibiao, dates, status, updated, basic_id))
+                rows_flag = cursor.execute(update_string, (company, daibiao, dates, status, updated, basic_id))
                 update_flag += rows_flag
                 connect.commit()
         except Exception, e:
@@ -176,7 +176,7 @@ def main():
         HOST, USER, PASSWD, DB, PORT = config.HOST, config.USER, config.PASSWD, config.DB, config.PORT
         connect, cursor = Connect_to_DB().ConnectDB(HOST, USER, PASSWD, DB, PORT)
         # string = '914100001711393654'
-        string = '金融信息'
+        string = '9111000071783407X5'
         # string = '洛阳银行股份有限公司'
         challenge, validate, cookies = loop_break_password()
         information = last_request(challenge, validate, string, cookies)

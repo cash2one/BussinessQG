@@ -8,8 +8,8 @@ import sys
 import time
 
 from  PublicCode.Public_code import Send_Request as Send_Request
-from deal_html_code import change_date_style
-from deal_html_code import deal_lable
+from PublicCode.deal_html_code import change_date_style
+from PublicCode.deal_html_code import deal_lable
 
 reload(sys)
 sys.setdefaultencoding('utf-8')
@@ -37,7 +37,7 @@ def name(data):
         if detail_check == "true":
             detail_key = data["invId"]
             detail_url = "http://www.gsxt.gov.cn/corp-query-entprise-info-shareholderDetail-%s.html" % detail_key
-            ra_date, ra_ways, true_amount = deal_detail_content(detail_url)
+            ra_date, ra_ways, true_amount,reg_amount, ta_ways, ta_date= deal_detail_content(detail_url)
         else:
             logging.info('无 shareholder 详情信息')
             ra_date, ra_ways, true_amount, reg_amount, ta_ways, ta_date = None, None, None, None, None, None

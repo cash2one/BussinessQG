@@ -5,7 +5,7 @@ import logging
 import sys
 import time
 
-from deal_html_code import deal_lable
+from PublicCode.deal_html_code import deal_lable
 
 reload(sys)
 sys.setdefaultencoding('utf-8')
@@ -57,6 +57,4 @@ def update_to_db(gs_basic_id, cursor, connect, information):
             # print "change error:",e
             logging.error("change error:" % e)
     flag = insert_flag + update_flag
-    # print insert_flag, update_flag
-    # print flag
     return flag

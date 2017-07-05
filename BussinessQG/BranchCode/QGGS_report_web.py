@@ -5,7 +5,7 @@ import logging
 import sys
 import time
 
-import QGGS_Report
+
 
 reload(sys)
 sys.setdefaultencoding('utf-8')

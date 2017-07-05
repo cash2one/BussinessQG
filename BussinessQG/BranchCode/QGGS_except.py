@@ -3,10 +3,9 @@
 
 import logging
 import sys
-import sys
 import time
 
-from deal_html_code import change_date_style
+from PublicCode.deal_html_code import change_date_style
 
 reload(sys)
 sys.setdefaultencoding('utf-8')
@@ -56,6 +55,4 @@ def update_to_db(gs_basic_id, cursor, connect, information):
             # print "except error:", e
             logging.error("except error:" % e)
     flag = insert_flag + update_flag
-    # print insert_flag, update_flag
-    # print flag
     return flag

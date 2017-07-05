@@ -12,8 +12,7 @@ import QGGS_report_invest
 import QGGS_report_schange
 import QGGS_report_shareholder
 import QGGS_report_web
-import config
-from PublicCode.Public_code import Connect_to_DB as Connect_to_DB
+from PublicCode import config
 from PublicCode.Public_code import Get_BranchInfo as Get_BranchInfo
 from PublicCode.Public_code import Send_Request as Send_Request
 
@@ -24,10 +23,10 @@ Type = sys.getfilesystemencoding()
 host = config.host
 select_report = 'select gs_report_id from gs_report where gs_basic_id = %s and year = %s'
 basic_string = 'insert into gs_report(gs_basic_id,id,year,name,tel,address,email,postcode,status,employee\
-,assets,benifit,income,profit,income_main,net_profit,tax,debt,loan,subsidy,updated) values(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,\
-%s,%s,%s,%s,%s,%s,%s)'
+,assets,benifit,income,profit,income_main,net_profit,tax,debt,updated) values(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,\
+%s,%s,%s,%s,%s)'
 update_basic = 'update gs_report set name = %s,tel = %s,address = %s,email = %s,postcode = %s,status = %s,employee = %s\
-,assets = %s ,benifit = %s ,income = %s ,profit = %s ,income_main = %s ,net_profit = %s ,tax = %s ,debt = %s ,loan = %s,subsidy = %s,updated = %s where gs_report_id = %s'
+,assets = %s ,benifit = %s ,income = %s ,profit = %s ,income_main = %s ,net_profit = %s ,tax = %s ,debt = %s ,updated = %s where gs_report_id = %s'
 
 
 # global gs_report_id
@@ -106,10 +105,13 @@ class Report:
             data = json.loads(result)["data"][0]
             name = data["entName"]
             tel = data["tel"]
-            # print tel
-            pattern = re.compile(
-                u'((\d{11})|^((\d{7,8})|(\d{4}|\d{3})-(\d{7,8})|(\d{4}|\d{3})-(\d{7,8})-(\d{4}|\d{3}|\d{2}|\d{1})|(\d{7,8})-(\d{4}|\d{3}|\d{2}|\d{1}))).*')
-            tel = re.findall(pattern, tel)[0][0]
+            if tel !='':
+                pattern = re.compile(
+                    u'((\d{11})|^((\d{7,8})|(\d{4}|\d{3})-(\d{7,8})|(\d{4}|\d{3})-(\d{7,8})-(\d{4}|\d{3}|\d{2}|\d{1})|(\d{7,8})-(\d{4}|\d{3}|\d{2}|\d{1}))).*')
+                tel = re.findall(pattern, tel)
+                if len(tel)!= 0:
+                     tel = tel[0][0]
+
             address = data["addr"]
             email = data["email"]
             postcode = data["postalCode"]
@@ -126,10 +128,10 @@ class Report:
             net_profit = data["netInc"]
             tax = data["ratGro"]
             debt = data["liaGro"]
-            loan = None
-            subsidy = None
+            # loan = None
+            # subsidy = None
             information[0] = [name, tel, address, email, postcode, status, assets, benifit, income, employee, profit,
-                              income_main, net_profit, tax, debt, loan, subsidy]
+                              income_main, net_profit, tax, debt]
         return information
 
     # 用于更新年报基本信息
@@ -138,7 +140,7 @@ class Report:
         postcode, status, assets, benifit = baseinfo[0][4], baseinfo[0][5], baseinfo[0][6], baseinfo[0][7]
         income, employee, profit, income_main = baseinfo[0][8], baseinfo[0][9], baseinfo[0][10], baseinfo[0][11]
         net_profit, tax, debt = baseinfo[0][12], baseinfo[0][13], baseinfo[0][14]
-        loan, subsidy = baseinfo[0][15], baseinfo[0][16]
+        # loan, subsidy = baseinfo[0][15], baseinfo[0][16]
         m = hashlib.md5()
         idstring = str(gs_basic_id) + str(year) + '1'
         m.update(idstring)
@@ -150,7 +152,7 @@ class Report:
                 updated_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
                 row_count = cursor.execute(basic_string, (
                     gs_basic_id, id, year, name, tel, address, email, postcode, status,
-                    employee, assets, benifit, income, profit, income_main, net_profit, tax, debt, loan, subsidy,
+                    employee, assets, benifit, income, profit, income_main, net_profit, tax, debt,
                     updated_time))
                 gs_report_id = connect.insert_id()
                 connect.commit()
@@ -162,11 +164,10 @@ class Report:
                 row_count = cursor.execute(update_basic,
                                            (name, tel, address, email, postcode, status,
                                             employee, assets, benifit, income, profit, income_main, net_profit, tax,
-                                            debt, loan,
-                                            subsidy, updated_time, gs_report_id))
+                                            debt,updated_time, gs_report_id))
                 connect.commit()
         except Exception, e:
-            print e
+            # print e
             logging.error('report basic error %s' % e)
         print 'execute report %s basic:%s' % (year, row_count)
         return gs_report_id

@@ -2,14 +2,15 @@
 # -*- coding:utf-8 -*-
 # @author liangmengmeng
 
-from BranchCode.GetUrl import *
-from PublicCode.Public_code import Connect_to_DB
-from Main_get_info import *
+import logging
 import sys
 import time
-import logging
 
-# from QGGS_Report import *cc
+from BranchCode.GetUrl import *
+from Main_get_info import *
+from PublicCode.Public_code import Connect_to_DB
+
+
 reload(sys)
 sys.setdefaultencoding('utf-8')
 Type = sys.getfilesystemencoding()

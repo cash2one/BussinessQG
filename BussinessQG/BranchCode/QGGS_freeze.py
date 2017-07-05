@@ -8,8 +8,7 @@ import sys
 import time
 
 from  PublicCode.Public_code import Send_Request as Send_Request
-from deal_html_code import change_date_style
-import re
+from PublicCode.deal_html_code import change_date_style
 
 reload(sys)
 sys.setdefaultencoding('utf-8')
@@ -96,11 +95,9 @@ def update_to_db(gs_basic_id, cursor, connect, information):
                 m.update(rule_no)
                 id = m.hexdigest()
                 updated_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
-                # print freeze_string % (gs_basic_id,id,executor, stock_amount, court, notice_no,status,items, rule_no, enforce_no,cert_cate,cert_code, start_date, end_date,period, pub_date,updated_time)
                 rows_count = cursor.execute(freeze_string, (
                 gs_basic_id, id, executor, stock_amount, court, notice_no, status, items, rule_no, enforce_no,
                 cert_cate, cert_code, start_date, end_date, period, pub_date, updated_time))
-                # print rows_count
                 insert_flag += rows_count
                 connect.commit()
             elif int(count) == 1:

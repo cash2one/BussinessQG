@@ -4,9 +4,9 @@
 import logging
 import sys
 import time
-import requests
-from deal_html_code import change_date_style
+
 from PublicCode.Public_code import Send_Request
+from PublicCode.deal_html_code import change_date_style
 
 reload(sys)
 sys.setdefaultencoding('utf-8')
@@ -47,7 +47,6 @@ def update_to_db(gs_basic_id, cursor, connect, information):
         ia_servicelist, ia_zyqqx, ia_zcdate = information[key][3], information[key][4], information[key][5]
         nodeNum ,tmImage= information[key][6],information[key][7]
 
-
         try:
             count = cursor.execute(select_brand, (gs_basic_id, ia_zch))
             if count == 0:
@@ -65,19 +64,15 @@ def update_to_db(gs_basic_id, cursor, connect, information):
                 rows_count = cursor.execute(update_brand,
                                             (gs_basic_id, ia_flh, ia_zcgg, ia_servicelist, ia_zyqqx, ia_zcdate,
                                              updated_time, gs_brand_id))
-                # print rows_count
                 update_flag += rows_count
                 connect.commit()
             if tmImage != '':
                 ia_img_url = 'http://www.gsxt.gov.cn' + '/doc/%s/tmfiles/' % nodeNum + str(tmImage)
-                # print ia_img_url
                 img_result, status_code = Send_Request().send_requests(ia_img_url)
                 if img_result!= None:
                     with open('./brandimages/' + str(gs_brand_id).decode("utf8") + "_" + str(ia_zch).decode("utf8") + ".jpg","wb") as f:
                         f.write(img_result)
         except Exception, e:
-            # print "brand error:", e
             logging.error("brand error: %s" % e)
     flag = insert_flag + update_flag
-    # print flag
     return flag

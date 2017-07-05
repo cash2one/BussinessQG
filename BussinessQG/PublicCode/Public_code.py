@@ -88,7 +88,9 @@ class Get_BranchInfo:
             data = json.loads(result)["data"]
             recordsTotal = json.loads(result)["recordsTotal"]
             print "%s: %s" % (name, recordsTotal)
-            coutnumber.counthtml[name] = recordsTotal
+            if recordsTotal ==None:
+                recordsTotal = 0
+            coutnumber.counthtml[str(name)] = recordsTotal
             totalPage = json.loads(result)["totalPage"]
             perpage = json.loads(result)["perPage"]
             page = totalPage
@@ -127,10 +129,10 @@ class Get_BranchInfo:
                 logging.info('暂无 %s信息' % name)
         elif status_code == 404:
             logging.info('暂无 %s信息' % name)
-        elif len(fail2)==0:
+        elif len(fail2) == 0:
             print '网页打开出错！！！'
             logging.info('网页打开出错！！！')
         else:
             logging.info('网页打开出错！！')
         print 'execute %s: %s' % (name, total)
-        coutnumber.countexcute[name] = int(total)
+        coutnumber.countexcute[str(name)] = int(total)

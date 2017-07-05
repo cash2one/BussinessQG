@@ -2,7 +2,7 @@
 # -*- coding:utf-8 -*-
 import hashlib
 import json
-import os
+import logging
 import re
 import sys
 import time
@@ -12,7 +12,7 @@ import MySQLdb
 import requests
 from bs4 import BeautifulSoup
 
-import config
+from PublicCode import config
 
 # import provincelist
 # 用于解决中文编码问题
@@ -44,20 +44,20 @@ def get_cookies():
                 break
                 # print cookies
         except Exception, e:
+            i = i - 1
             time.sleep(3)
-            print 'index error: ',e
-            i = i-1
+            logging.info('index error: %s'%e)
+
     return cookies
 
 
 # 用于获取validate与challenge
 def break_password(cookies):
-    url = 'http://www.geev.website/geetest/get?token=seo_test1&reg=http://www.gsxt.gov.cn/SearchItemCaptcha'
+    url = 'http://115.28.86.78/geetest/get?token=seo_test1&reg=http://www.gsxt.gov.cn/SearchItemCaptcha'
     try:
         result = session.get(url, cookies=cookies, headers=config.headersfirst)
-        # print result
-        pattern = re.compile(r'<html>.*</html>')
-        fail = re.findall(pattern,result.content)
+        pattern = re.compile('<html>.*</html>')
+        fail = re.findall(pattern, result.content)
         if len(fail) == 0:
             json_list = json.loads(result.content)
             message = json_list["message"]
@@ -70,8 +70,9 @@ def break_password(cookies):
         else:
             success_flag, challenge, validate = 0, None, None
     except Exception, e:
-        print 'break error:',e
         success_flag, challenge, validate = 0, None, None
+        logging.error('break error: %s'% e)
+
     return success_flag, challenge, validate, cookies
 
 
@@ -87,7 +88,8 @@ def loop_break_password():
             elif success_flag == 1:
                 break
     except Exception, e:
-        print 'break password error:', e
+        logging.error('break password error: %s'%e)
+
     return challenge, validate, cookies
 
 
@@ -99,6 +101,7 @@ def last_request(challenge, validate, string, cookies):
     encryed_string = urllib.quote(string)
     search_text = "tab=ent_tab&token=36210782&searchword=%s&geetest_challenge=%s&geetest_validate=%s&geetest_seccode=%s|7Cjordan" % (
         encryed_string, challenge, validate, validate)
+
     result = session.post(url, search_text, cookies=cookies, headers=config.headers)
     result = BeautifulSoup(result.content, "lxml")
     span = result.find("span", {"class": "search_result_span1"})
@@ -110,7 +113,7 @@ def last_request(challenge, validate, string, cookies):
             information = get_need_info(result)
             return information
         else:
-            print '搜索结果不止一条'
+            logging.error('搜索结果不止一条')
     return information
 
 
@@ -145,7 +148,6 @@ def update_db(information, cursor, connect):
                         provin = config.province[code[0:2]]
                     else:
                         provin = config.province[code[2:4]]
-                    # print insert_string %(id, url, provin, company, code, ccode, daibiao, dates, status, updated)
                     rows_flag = cursor.execute(insert_string,
                                                (id,url, provin, company, code, ccode, daibiao, dates, status, updated))
                     insert_flag += rows_flag
@@ -156,11 +158,9 @@ def update_db(information, cursor, connect):
                     update_flag += rows_flag
                     connect.commit()
             except Exception, e:
-                print "error", e
+               logging.info('error %s' % e)
     elif len(information) == 0:
-        print '无查询信息'
-    print "url insert:%s" % insert_flag
-    print "url updated:%s" % update_flag
+        logging.error('无查询信息')
 
 
 # 用于获取所需信息

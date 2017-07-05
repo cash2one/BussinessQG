@@ -23,7 +23,10 @@ select_basic_id = 'select gs_basic_id from gs_basic where code = %s '
 def get_basic_info(result, status_code):
     information = {}
     result = BeautifulSoup(result, 'lxml')
-    if status_code == 200:
+    # print result
+    pattern = re.compile(r'.*返回首页.*')
+    fail = re.findall(pattern, str(result))
+    if status_code == 200 and len(fail) == 0:
         basic_info = result.find("div", {"id": "primaryInfo"}).find_all("dl")
         if len(basic_info) > 0:
             try:
@@ -33,14 +36,16 @@ def get_basic_info(result, status_code):
                     templist = re.split(u'：', temp)
                     if len(templist) == 1:
                         templist = re.split(u':', temp)
-
-                    information[templist[0].strip()] = templist[1].strip()
+                    templist[1] = templist[1].replace('\n','').replace('\t','').replace(' ','')
+                    information[templist[0].strip()] = templist[1]
             except Exception, e:
-                print 'basic error', e
-    # elif len(fail)!=0:
-    #     print '访问失败，重新返回首页'
+                logging.info('basic error %s'%e)
+                # print 'basic error', e
+    elif len(fail)!= 0:
+        # print
+        logging.info('访问失败，重新返回首页')
 
-        return information
+    return information
 
 
 def update_basic(information, connect, cursor, gs_basic_id):
@@ -50,8 +55,9 @@ def update_basic(information, connect, cursor, gs_basic_id):
         name = information[u"名称"]
     if '统一社会信用代码' in information.keys():
         code = information[u"统一社会信用代码"]
-        # print code
+
         ccode = information[u"统一社会信用代码"]
+        ccode = str(ccode).replace('\t','').replace('\n','').replace(' ','')
     elif '注册号' in information.keys():
         code = information[u"注册号"]
         ccode = None

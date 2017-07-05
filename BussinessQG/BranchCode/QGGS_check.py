@@ -1,13 +1,13 @@
 #!/usr/bin/env python
 # -*- coding:utf-8 -*-
 
+import hashlib
 import logging
-import sys
 import sys
 import time
 
-from deal_html_code import change_date_style
-import hashlib
+from PublicCode.deal_html_code import change_date_style
+
 reload(sys)
 sys.setdefaultencoding('utf-8')
 Type = sys.getfilesystemencoding()
@@ -37,7 +37,6 @@ def update_to_db(gs_basic_id, cursor, connect, information):
     for key in information.keys():
         types, result = information[key][0], information[key][1]
         check_date, gov_dept = information[key][2], information[key][3]
-        # print types,result,check_date,gov_dept
         try:
             count = cursor.execute(select_check, (gs_basic_id, check_date))
             if count == 0:
@@ -62,6 +61,4 @@ def update_to_db(gs_basic_id, cursor, connect, information):
             # print "check error:",e
             logging.error("check error:" % e)
     flag = insert_flag + update_flag
-    # print insert_flag, update_flag
-    # print flag
     return flag

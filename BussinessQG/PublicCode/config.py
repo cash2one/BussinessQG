@@ -8,25 +8,42 @@ import sys
 reload(sys)
 sys.setdefaultencoding('utf-8')
 Type = sys.getfilesystemencoding()
-log_path = ''
+#日志文件路径start-----------------------------------------------------------
+log_path = './Public/Python/log'
+#日志文件路径end-------------------------------------------------------------
+
+#网络主站start---------------------------------------------------------------
 host = "http://www.gsxt.gov.cn"
+#网络主站end----------------------------------------------------------------
+
+
+#数据库用户名配置-----------------------------------------------------------
 HOST, USER, PASSWD, DB, PORT = 'localhost', 'root', '123456', 'test', 3306
+#数据库用户名配置end--------------------------------------------------------
+
+
+#人员图片与职位的对应start--------------------------------------------------
 person_img = {
     'B0AAAAOCAYAAADT0Rc6AAABdklEQVR42qWUMUgDQRBFDwsrsbGw': "董事",
     'CsAAAAOCAYAAAC2POVFAAAB/0lEQVR42rWVQUSDYRjHJ5MOiUw6': "董事长",
     'B0AAAAOCAYAAADT0Rc6AAABaUlEQVR42mNgwA7SgNgUiV8OxEoM': "监事",
     'EcAAAAOCAYAAAB95wG7AAAC9UlEQVR42q2XT2RcURTGnxgR8WRT': '监事会主席',
-    'DkAAAAOCAYAAACVZ7SQAAACrUlEQVR42q2WT2TcURDHn1irhwgV':'独立董事',
-    'FUAAAAOCAYAAABevFBuAAACQklEQVR42s2YT0TDYRjHf5J0yMhk':'董事，董事长',
-    'DkAAAAOCAYAAACVZ7SQAAACOUlEQVR42s2WQUTDURzHZzLJdEuS':'职工监事',
-    'DkAAAAOCAYAAACVZ7SQAAACxklEQVR42qWWX2TbURTHfyr6MD+h':'外部监事',
-    'EcAAAAOCAYAAAB95wG7AAACn0lEQVR42sWXT2RcURTGnxGRRYUa':'董事长，行长',
-    'CsAAAAOCAYAAAC2POVFAAACPUlEQVR42sWVX2SVYRzHHzNHcsSR':'总经理',
-    'DkAAAAOCAYAAACVZ7SQAAACk0lEQVR42rWWQWRcURSGn4roYoSI':'副董事长',
-    'DkAAAAOCAYAAACVZ7SQAAACg0lEQVR42rWXQWScQRTHR0SsWqGH':'其他人员',
-    'FUAAAAOCAYAAABevFBuAAAEC0lEQVR42r2YcUScYRzHXzknk8hk':'董事兼总经理'
+    'DkAAAAOCAYAAACVZ7SQAAACrUlEQVR42q2WT2TcURDHn1irhwgV': '独立董事',
+    'FUAAAAOCAYAAABevFBuAAACQklEQVR42s2YT0TDYRjHf5J0yMhk': '董事，董事长',
+    'DkAAAAOCAYAAACVZ7SQAAACOUlEQVR42s2WQUTDURzHZzLJdEuS': '职工监事',
+    'DkAAAAOCAYAAACVZ7SQAAACxklEQVR42qWWX2TbURTHfyr6MD+h': '外部监事',
+    'EcAAAAOCAYAAAB95wG7AAACn0lEQVR42sWXT2RcURTGnxGRRYUa': '董事长，行长',
+    'CsAAAAOCAYAAAC2POVFAAACPUlEQVR42sWVX2SVYRzHHzNHcsSR': '总经理',
+    'DkAAAAOCAYAAACVZ7SQAAACk0lEQVR42rWWQWRcURSGn4roYoSI': '副董事长',
+    'DkAAAAOCAYAAACVZ7SQAAACg0lEQVR42rWXQWScQRTHR0SsWqGH': '其他人员',
+    'FUAAAAOCAYAAABevFBuAAAEC0lEQVR42r2YcUScYRzHXzknk8hk': '董事兼总经理',
+    'DkAAAAOCAYAAACVZ7SQAAACk0lEQVR42rWWQWRcURSGn4roYoSI': '经理'
 
 }
+#人员图片与职位对应end -----------------------------------------------------
+
+
+#省份代号对应start ---------------------------------------------------------
 province = {
     "10": "BEJ",
     "11": "BEJ",
@@ -61,7 +78,11 @@ province = {
     "64": "NXA",
     "65": "XNJ"
 }
+#省份代号对应end------------------------------------------------------------------
 
+
+
+#各个分块数据url匹配对应----------------------------------------------------------
 shareholder_pattern = re.compile(r'var shareholderUrl = "(.*?)"')
 person_pattern = re.compile(r'var keyPersonUrl = "(.*?)"')
 branch_pattern = re.compile(r'var branchUrl = "(.*?)"')
@@ -79,7 +100,10 @@ report_pattern = re.compile(r'var anCheYearInfo = "(.*?)"')
 mort_pattern = re.compile(r'var mortRegInfoUrl = "(.*?)"')
 gtshare_pattern = re.compile('var insInvinfoUrl = "(.*?)"')
 gtpunish_pattern = re.compile('var insPunishmentinfoUrl = "(.*?)"')
+#各分块数据url---------------------------------------------------------------------------
 
+
+#头部信息仿照start-----------------------------------------------------------------------
 list = []
 
 for i in range(0, 20):
@@ -117,3 +141,4 @@ headers = {
     "Connection": "keep-alive",
     "Upgrade-Insecure-Requests": "1"
 }
+#头部信息仿造end-------------------------------------------------------------------

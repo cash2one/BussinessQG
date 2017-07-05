@@ -1,16 +1,12 @@
 #!/usr/bin/env python
 # -*- coding:utf-8 -*-
 
-import datetime
 import hashlib
-import json
 import logging
 import sys
 import time
 
-import QGGS_Report
-from  PublicCode.Public_code import Send_Request as Send_Request
-from deal_html_code import change_date_style
+from PublicCode.deal_html_code import change_date_style
 
 reload(sys)
 sys.setdefaultencoding('utf-8')

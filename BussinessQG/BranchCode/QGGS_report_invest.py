@@ -49,7 +49,6 @@ def update_to_db(gs_report_id, gs_basic_id, cursor, connect, information):
                 connect.commit()
                 update_flag += flag
         except Exception, e:
-            print e
             logging.error('out_invest error %s ' % e)
     total = insert_flag + update_flag
     return total

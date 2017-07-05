@@ -7,19 +7,23 @@
 
 # from QGGS_Report import *
 
-from BranchCode.GetUrl import *
-from PublicCode.Public_code import Connect_to_DB
-from Main_get_info import *
+import logging
 import sys
 import time
-import logging
+
+from BranchCode.GetUrl import *
+from Main_get_info import *
 from PublicCode import coutnumber
+from PublicCode.Public_code import Connect_to_DB
+
 reload(sys)
 sys.setdefaultencoding('utf-8')
 Type = sys.getfilesystemencoding()
 # 配置日志文件start-----------------------------------------------------------------
-
-code = '91330000761336668H'
+# gs_basic_id = sys.argv[1]
+# code = sys.argv[2]
+gs_basic_id = 229418495
+code = '9111000071783407X5'
 logging.basicConfig(level=logging.DEBUG,
                     format='%(asctime)s %(filename)s[line:%(lineno)d] %(levelname)s %(message)s',
                     datefmt='%a, %d %b %Y %H:%M:%S',
@@ -34,10 +38,11 @@ def main():
         connect, cursor = Connect_to_DB().ConnectDB(HOST, USER, PASSWD, DB, PORT)
         challenge, validate, cookies = loop_break_password()
         information = last_request(challenge, validate, code, cookies)
-        update_db(information, cursor, connect)
-        # url = information[0][0]
-        # gs_basic_id = sys.
-        update_info_main(cursor, connect, code)
+        if len(information) > 0:
+            url = information[code][0]
+            print url
+            # update_db(information, cursor, connect)
+            update_info_main(cursor, connect, url, gs_basic_id)
         connect.close()
     except Exception, e:
         logging.info("main error: %s" % e)

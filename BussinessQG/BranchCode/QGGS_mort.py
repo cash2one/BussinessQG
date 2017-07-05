@@ -7,9 +7,8 @@ import logging
 import sys
 import time
 
-import config
 from  PublicCode.Public_code import Send_Request as Send_Request
-from deal_html_code import change_date_style
+from PublicCode.deal_html_code import change_date_style
 
 reload(sys)
 sys.setdefaultencoding('utf-8')
@@ -90,18 +89,15 @@ def update_to_db(gs_basic_id, cursor, connect, info):
             update_goods(gs_mort_id, gs_basic_id, cursor, connect, goods_info)
             update_person(gs_mort_id, gs_basic_id, cursor, connect, person_info)
         except Exception, e:
-            print e
             logging.info('mort error :%s' % e)
     total = insert_flag + update_flag
     return total
 
 
 # 更新抵押物品信息
-# def update_goods(gs_mort_id,gs_basic_id,cursor,connect,goods_info):
-
 def update_goods(gs_mort_id, gs_basic_id, cursor, connect, info):
     total = len(info)
-    print 'mort_goods :%s' % total
+    # print 'mort_goods :%s' % total
     insert_flag, update_flag = 0, 0
     for key in info.keys():
         name, ownership, situation, remark = info[key][0], info[key][1], info[key][2], info[key][3]

@@ -24,7 +24,7 @@ def name(data):
         name = singledata["brName"]
         code = singledata["regNo"]
         uniscId = singledata["uniscId"]
-        if singledata !='':
+        if uniscId !='':
             code = None
         gov_dept = singledata["regOrg_CN"]
         information[i] = [name, code, gov_dept]
@@ -53,6 +53,4 @@ def update_to_db(gs_basic_id, cursor, connect, information):
         except Exception, e:
             logging.error("branch error:" % e)
     flag = insert_flag + update_flag
-    # print insert_flag, update_flag
-    # print flag
     return flag
