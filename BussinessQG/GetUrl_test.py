@@ -14,7 +14,7 @@ import requests
 from bs4 import BeautifulSoup
 
 import config
-from Public_code import Connect_to_DB as Connect_to_DB
+from Public_code import Connect_to_DB
 
 # import provincelist
 # 用于解决中文编码问题
@@ -50,6 +50,7 @@ def get_cookies():
 
 
 # 用于获取validate与challenge
+
 def break_password(cookies):
     url = 'http://www.geev.website/geetest/get?token=seo_test1&reg=http://www.gsxt.gov.cn/SearchItemCaptcha'
     result = session.get(url, cookies=cookies, headers=config.headersfirst)
@@ -175,7 +176,7 @@ def main():
         HOST, USER, PASSWD, DB, PORT = config.HOST, config.USER, config.PASSWD, config.DB, config.PORT
         connect, cursor = Connect_to_DB().ConnectDB(HOST, USER, PASSWD, DB, PORT)
         # string = '914100001711393654'
-        string = '91110000100011743X'
+        string = '金融信息'
         # string = '洛阳银行股份有限公司'
         challenge, validate, cookies = loop_break_password()
         information = last_request(challenge, validate, string, cookies)
