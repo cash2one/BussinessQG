@@ -1,0 +1,18 @@
+采集全国工商系统中的信息
+采集网址：http://www.gsxt.gov.cn
+
+采集步骤及代码相关说明：
+借助第三方进行极验破解，将详情网址保存到数据库中，保存的过程中根据code进行有则插入，无则更新
+而后向各个分页发送请求，获取各个页面的分页信息，同样有则插入，无则更新
+代码存放文件夹BussinessQG
+文件夹 BranchCode 里面存放的是获取各项分项数据的代码
+文件夹brandimages用于存放商标代码
+文件夹log用于存放日志信息
+文件夹PubilcCode用于存放公共的代码
+Main_get_info.py 用于调用BranchCode中的各个分项数据代码
+Update_Info.py调用Main_get_info.py 对各个分项数据进行更新
+
+basic 根据code进行
+
+
+

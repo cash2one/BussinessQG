@@ -72,7 +72,6 @@ def break_password(cookies):
     except Exception, e:
         success_flag, challenge, validate = 0, None, None
         logging.error('break error: %s'% e)
-
     return success_flag, challenge, validate, cookies
 
 
@@ -99,21 +98,23 @@ def last_request(challenge, validate, string, cookies):
     information = {}
     url = 'http://www.gsxt.gov.cn/corp-query-search-1.html'
     encryed_string = urllib.quote(string)
-    search_text = "tab=ent_tab&token=36210782&searchword=%s&geetest_challenge=%s&geetest_validate=%s&geetest_seccode=%s|7Cjordan" % (
+    search_text = "tab=ent_tab&token=34911389&searchword=%s&geetest_challenge=%s&geetest_validate=%s&geetest_seccode=%s|7Cjordan" % (
         encryed_string, challenge, validate, validate)
-
     result = session.post(url, search_text, cookies=cookies, headers=config.headers)
     result = BeautifulSoup(result.content, "lxml")
     span = result.find("span", {"class": "search_result_span1"})
-    # print span
     if span!= None:
         pattern = re.compile(r'>.*([0-9]+).*<')
         number = re.findall(pattern, str(span))
         if int(number[0]) == 1:
             information = get_need_info(result)
             return information
-        else:
+        elif int(number[0]) > 0:
+            print '搜索结果不止一条'
             logging.error('搜索结果不止一条')
+    else:
+        print '无搜索信息'
+        logging.info('无搜索信息')
     return information
 
 

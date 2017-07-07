@@ -9,7 +9,7 @@ reload(sys)
 sys.setdefaultencoding('utf-8')
 Type = sys.getfilesystemencoding()
 #日志文件路径start-----------------------------------------------------------
-log_path = './Public/Python/log'
+log_path = './Public/Python'
 #日志文件路径end-------------------------------------------------------------
 
 #网络主站start---------------------------------------------------------------

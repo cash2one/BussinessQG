@@ -101,7 +101,9 @@ class Get_BranchInfo:
                 if report_id == None:
                     flag = QGGS_branch.update_to_db(gs_basic_id, cursor, connect, information)
                 else:
-                    flag = QGGS_branch.update_to_db(report_id, gs_basic_id, cursor, connect, information)
+                    pattern = re.compile(r'[\d]{2}')
+                    province = re.findall(pattern, url_pattern)[0]
+                    flag = QGGS_branch.update_to_db(report_id, gs_basic_id, cursor, connect, information,province)
                 # print flag
                 total += flag
             if page > 1:
@@ -109,7 +111,9 @@ class Get_BranchInfo:
                 if report_id == None:
                     flag = QGGS_branch.update_to_db(gs_basic_id, cursor, connect, information)
                 else:
-                    flag = QGGS_branch.update_to_db(report_id, gs_basic_id, cursor, connect, information)
+                    pattern = re.compile(r'[\d]{2}')
+                    province = re.findall(pattern, url_pattern)[0]
+                    flag = QGGS_branch.update_to_db(report_id, gs_basic_id, cursor, connect, information,province)
                 # print flag
                 total += flag
                 for i in range(1, page):
@@ -122,7 +126,9 @@ class Get_BranchInfo:
                     if report_id == None:
                         flag = QGGS_branch.update_to_db(gs_basic_id, cursor, connect, information)
                     else:
-                        flag = QGGS_branch.update_to_db(report_id, gs_basic_id, cursor, connect, information)
+                        pattern = re.compile(r'[\d]{2}')
+                        province = re.findall(pattern, url_pattern)[0]
+                        flag = QGGS_branch.update_to_db(report_id, gs_basic_id, cursor, connect, information,province)
                     # print flag
                     total += flag
             elif page == 0:
@@ -130,7 +136,7 @@ class Get_BranchInfo:
         elif status_code == 404:
             logging.info('暂无 %s信息' % name)
         elif len(fail2) == 0:
-            print '网页打开出错！！！'
+            # print '网页打开出错！！！'
             logging.info('网页打开出错！！！')
         else:
             logging.info('网页打开出错！！')
