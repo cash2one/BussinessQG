@@ -23,8 +23,9 @@ Type = sys.getfilesystemencoding()
 # gs_basic_id = sys.argv[1]
 # code = sys.argv[2]
 #110000017421980 229417850
-gs_basic_id = 229417758
-code = '91310000132206289R'
+gs_basic_id = 229418487
+code = '91140303699129341F'
+ccode = ''
 logging.basicConfig(level=logging.DEBUG,
                     format='%(asctime)s %(filename)s[line:%(lineno)d] %(levelname)s %(message)s',
                     datefmt='%a, %d %b %Y %H:%M:%S',
@@ -33,23 +34,27 @@ logging.basicConfig(level=logging.DEBUG,
 
 
 # 配置日志文件End-------------------------------------------------------------------
+insert_basic_py = 'insert into gs_py(gs_basic_id)values(%s)'
+update_basic_py = 'update gs_py set gs_basic = %s where gs_basic_id = %s'
+
 def main():
     try:
         HOST, USER, PASSWD, DB, PORT = config.HOST, config.USER, config.PASSWD, config.DB, config.PORT
         connect, cursor = Connect_to_DB().ConnectDB(HOST, USER, PASSWD, DB, PORT)
         challenge, validate, cookies = loop_break_password()
-        information = last_request(challenge, validate, code, cookies)
-        if len(information) > 0:
-            url = information[code][0]
-            print url
-            # update_db(information, cursor, connect)
-            update_info_main(cursor, connect, url, gs_basic_id)
-        connect.close()
+        url, flag = last_request(challenge, validate, code, ccode, cookies)
+        cursor.execute(insert_basic_py, gs_basic_id)
+        if url!= None:
+            update_info_main(cursor, connect, url, flag, gs_basic_id)
+        else:
+            cursor.execute(update_basic_py, (flag, gs_basic_id))
+            connect.commit()
     except Exception, e:
         logging.info("main error: %s" % e)
     finally:
-        print coutnumber.counthtml
-        print coutnumber.countexcute
+        # print coutnumber.counthtml
+        # print coutnumber.countexcute
+        connect.close()
 
 
 if __name__ == "__main__":

@@ -34,7 +34,7 @@ def name(data):
 
 
 def update_to_db(gs_basic_id, cursor, connect, information):
-    insert_flag, update_flag = 0, 0
+    insert_flag = 0
     for key in information.keys():
         name, code, filename, start_date = information[key][0], information[key][1], information[key][2], \
                                            information[key][3]
@@ -50,15 +50,9 @@ def update_to_db(gs_basic_id, cursor, connect, information):
                     gs_basic_id, id, name, code, filename, start_date, end_date, content, gov_dept, updated_time))
                 insert_flag += rows_count
                 connect.commit()
-            elif int(count) == 1:
-                gs_permit_id = cursor.fetchall()[0][0]
-                updated_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
-                rows_count = cursor.execute(update_string, (
-                    name, filename, start_date, end_date, content, gov_dept, updated_time, gs_permit_id))
-                update_flag += rows_count
-                connect.commit()
+
         except Exception, e:
-            # print "permit error:", e
+
             logging.error("permit error: %s" % e)
-    flag = insert_flag + update_flag
+    flag = insert_flag
     return flag

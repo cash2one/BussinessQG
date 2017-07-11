@@ -13,23 +13,25 @@ reload(sys)
 sys.setdefaultencoding('utf-8')
 Type = sys.getfilesystemencoding()
 
-# gs_basic_id = 104589242
 
-update_string = 'update gs_basic set id = %s, name = %s ,ccode = %s,status = %s ,types = %s ,jj_type = %s,legal_person = %s, \
+
+update_string = 'update gs_basic set gs_basic_id = %s, name = %s ,ccode = %s,status = %s ,types = %s ,jj_type = %s,legal_person = %s, \
 responser = %s ,investor = %s,runner = %s ,reg_date = %s ,appr_date = %s,reg_amount = %s, start_date = %s ,end_date = %s ,reg_zone = %s,reg_address = %s ,scope = %s ,updated = %s where gs_basic_id = %s'
-select_basic_id = 'select gs_basic_id from gs_basic where code = %s '
+
 
 
 def get_basic_info(result, status_code):
     information = {}
     result = BeautifulSoup(result, 'lxml')
     # print result
+    flag = 0
     pattern = re.compile(r'.*返回首页.*')
     fail = re.findall(pattern, str(result))
-    if status_code == 200 and len(fail) == 0:
-        basic_info = result.find("div", {"id": "primaryInfo"}).find_all("dl")
-        if len(basic_info) > 0:
-            try:
+    try:
+        if status_code == 200 and len(fail) == 0:
+            basic_info = result.find("div", {"id": "primaryInfo"}).find_all("dl")
+            if len(basic_info) > 0:
+
                 for item in basic_info:
                     temp = re.sub(re.compile(''), '', item.text)
                     temp = re.sub(re.compile(u'·'), '', temp)
@@ -38,14 +40,15 @@ def get_basic_info(result, status_code):
                         templist = re.split(u':', temp)
                     templist[1] = templist[1].replace('\n','').replace('\t','').replace(' ','')
                     information[templist[0].strip()] = templist[1]
-            except Exception, e:
-                logging.info('basic error %s'%e)
-                # print 'basic error', e
-    elif len(fail)!= 0:
-        # print
-        logging.info('访问失败，重新返回首页')
 
-    return information
+        elif len(fail)!= 0:
+            flag = 100000005
+            logging.info('访问失败，重新返回首页')
+    except Exception, e:
+        flag = 100000005
+        logging.info('basic error %s' % e)
+        # print 'basic error', e
+    return information,flag
 
 
 def update_basic(information, connect, cursor, gs_basic_id):
@@ -55,12 +58,19 @@ def update_basic(information, connect, cursor, gs_basic_id):
         name = information[u"名称"]
     if '统一社会信用代码' in information.keys():
         code = information[u"统一社会信用代码"]
-
         ccode = information[u"统一社会信用代码"]
         ccode = str(ccode).replace('\t','').replace('\n','').replace(' ','')
     elif '注册号' in information.keys():
         code = information[u"注册号"]
         ccode = None
+    elif '统一社会信用代码/注册号' in information.keys():
+        code = information[u"统一社会信用代码/注册号"]
+        pattern = re.compile('^91.*|92.*|93.*')
+        ccode = re.findall(pattern,code)
+        if len(ccode) == 0:
+            ccode = None
+        elif len(ccode) == 1:
+            ccode = ccode[0]
     if '登记状态' in information.keys():
         status = information[u"登记状态"]
     if '类型' in information.keys():
@@ -124,6 +134,13 @@ def update_basic(information, connect, cursor, gs_basic_id):
         else:
             start_date = re.sub(re.compile(u'年|月'), '-', start_date)
             start_date = re.sub(re.compile(u'日'), '', start_date)
+    elif '合伙期限自' in information.keys():
+        start_date = information[u"合伙期限至"]
+        if start_date == '':
+            start_date = None
+        else:
+            start_date = re.sub(re.compile(u'年|月'), '-', start_date)
+            start_date = re.sub(re.compile(u'日'), '', start_date)
     else:
         start_date = None
     if '营业期限至' in information.keys():
@@ -150,14 +167,14 @@ def update_basic(information, connect, cursor, gs_basic_id):
     elif '经营范围' in information.keys():
         scope = information[u"经营范围"]
     updated_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
-    m = hashlib.md5()
-    m.update(code + 'A')
-    id = m.hexdigest()
+    row_count = 0
     try:
         row_count = cursor.execute(update_string, (
-            id, name, ccode, status, types, jj_type, legal_person, responser, investor, runner, sign_date,
+            gs_basic_id, name, ccode, status, types, jj_type, legal_person, responser, investor, runner, sign_date,
             appr_date, reg_amount, start_date, end_date, reg_zone, reg_address, scope, updated_time, gs_basic_id))
         print 'update basic :%s' % row_count
         connect.commit()
     except Exception, e:
         logging.error("basic error:" % e)
+    finally:
+        return row_count

@@ -13,7 +13,7 @@ from PublicCode.deal_html_code import change_date_style
 reload(sys)
 sys.setdefaultencoding('utf-8')
 Type = sys.getfilesystemencoding()
-freeze_string = 'insert into gs_freeze(gs_basic_id,id,executor, stock_amount, court, notice_no,status,items, rule_no, enforce_no,cert_cate,cert_code, start_date, end_date,period, pub_date,updated)values(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)'
+freeze_string = 'insert into gs_freeze(gs_basic_id,executor, stock_amount, court, notice_no,status,items, rule_no, enforce_no,cert_cate,cert_code, start_date, end_date,period, pub_date,updated)values(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)'
 select_freeze = 'select gs_freeze_id from gs_freeze where gs_basic_id = %s and rule_no = %s'
 update_freeze = 'update gs_freeze set gs_basic_id = %s,executor = %s ,stock_amount = %s, court = %s,status = %s ,items = %s,rule_no = %s,enforce_no = %s ,cert_cate = %s, cert_code = %s,start_date = %s,end_date = %s,period = %s ,pub_date = %s ,updated = %s where gs_freeze_id = %s'
 
@@ -78,7 +78,8 @@ def deal_detail_content(detail_url):
 
 
 def update_to_db(gs_basic_id, cursor, connect, information):
-    insert_flag, update_flag = 0, 0
+    insert_flag = 0
+    flag = 0
     for key in information.keys():
         executor, stock_amount, court, notice_no = information[key][0], information[key][1], information[key][2], \
                                                    information[key][3]
@@ -90,30 +91,17 @@ def update_to_db(gs_basic_id, cursor, connect, information):
         try:
             count = cursor.execute(select_freeze, (gs_basic_id, rule_no))
             if count == 0:
-                # print rule_no
-                m = hashlib.md5()
-                m.update(rule_no)
-                id = m.hexdigest()
+
                 updated_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
                 rows_count = cursor.execute(freeze_string, (
-                gs_basic_id, id, executor, stock_amount, court, notice_no, status, items, rule_no, enforce_no,
+                gs_basic_id, executor, stock_amount, court, notice_no, status, items, rule_no, enforce_no,
                 cert_cate, cert_code, start_date, end_date, period, pub_date, updated_time))
                 insert_flag += rows_count
                 connect.commit()
-            elif int(count) == 1:
-                gs_freeze_id = cursor.fetchall()[0][0]
-                updated_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
-
-                rows_count = cursor.execute(update_freeze,
-                                            (gs_basic_id, executor, stock_amount, court, status, items, rule_no,
-                                             enforce_no, cert_cate, cert_code, start_date, end_date, period, pub_date,
-                                             updated_time, gs_freeze_id))
-
-                update_flag += rows_count
-                connect.commit()
         except Exception, e:
-            # print "freeze error:", e
-            print e
             logging.error("freeze error: %s" % e)
-    flag = insert_flag + update_flag
-    return flag
+            flag = 100000001
+        finally:
+            if flag <100000001:
+                flag = insert_flag
+            return flag

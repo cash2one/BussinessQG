@@ -29,7 +29,8 @@ select_person = 'select gs_mort_person_id from gs_mort_person where gs_mort_id =
 person_string = 'insert into gs_mort_person(gs_mort_id,id,gs_basic_id,name,cert,number,updated) values (%s,%s,%s,%s,%s,%s,%s)'
 update_mort_person = 'update gs_mort_person set name = %s,cert = %s,updated = %s where gs_mort_person_id = %s'
 
-
+person_py = 'update gs_py set gs_mort_goods = %s where gs_basic_id = %s'
+goods_py = 'update gs_py set gs_mort_person = %s where gs_basic_id = %s'
 def name(data):
     informaiton = {}
     for i in xrange(len(data)):
@@ -61,6 +62,7 @@ def name(data):
 
 def update_to_db(gs_basic_id, cursor, connect, info):
     update_flag, insert_flag = 0, 0
+    mort_flag = {}
     for key in info.keys():
         code, dates, dept, amount = info[key][0], info[key][1], info[key][2], info[key][3]
         status, cates, period, ranges, remark = info[key][4], info[key][5], info[key][6], info[key][7], info[key][8]
@@ -68,7 +70,6 @@ def update_to_db(gs_basic_id, cursor, connect, info):
         person_info = info[key][10]
         try:
             count = cursor.execute(select_mort, (gs_basic_id, code))
-
             if count == 0:
                 m = hashlib.md5()
                 m.update(code)
@@ -86,22 +87,62 @@ def update_to_db(gs_basic_id, cursor, connect, info):
                 dates, dept, amount, status, cates, period, ranges, remark, updated_time, gs_mort_id))
                 update_flag += flag
                 connect.commit()
-            update_goods(gs_mort_id, gs_basic_id, cursor, connect, goods_info)
-            update_person(gs_mort_id, gs_basic_id, cursor, connect, person_info)
+
         except Exception, e:
             logging.info('mort error :%s' % e)
+            mort_flag[0] = 100000001
     total = insert_flag + update_flag
-    return total
+    return total,mort_flag
 
+def update_goods_py(gs_mort_id, gs_basic_id, cursor, connect, goods_info):
+    try:
+        total, execute = update_goods(gs_mort_id, gs_basic_id, cursor, connect, goods_info)
+        if total == 0:
+            flag = None
+        elif total > 0 and execute>=0 and execute< 100000001:
+            flag = execute
+        elif total > 0 and execute > 100000001:
+            flag = 100000001
 
+    except Exception, e:
+        flag = 100000005
+        logging.error("mort goods error %s" % e)
+    finally:
+        if flag == None:
+            pass
+        else:
+            cursor.execute(goods_py, (flag, gs_basic_id))
+            connect.commit()
+
+def update_person_py(gs_mort_id, gs_basic_id, cursor, connect, person_info):
+    try:
+        total, execute = update_goods(gs_mort_id, gs_basic_id, cursor, connect, person_info)
+        if total == 0:
+            flag = None
+        elif total > 0 and execute>=0 and execute< 100000001:
+            flag = execute
+        elif total > 0 and execute > 100000001:
+            flag = 100000001
+
+    except Exception, e:
+        flag = 100000005
+        logging.error("mort goods error %s" % e)
+    finally:
+        if flag == None:
+            pass
+        else:
+            cursor.execute(person_py, (flag, gs_basic_id))
+            connect.commit()
 # 更新抵押物品信息
 def update_goods(gs_mort_id, gs_basic_id, cursor, connect, info):
     total = len(info)
-    # print 'mort_goods :%s' % total
+    print 'mort_goods :%s' % total
+    goods_flag = 0
     insert_flag, update_flag = 0, 0
-    for key in info.keys():
-        name, ownership, situation, remark = info[key][0], info[key][1], info[key][2], info[key][3]
-        try:
+    try:
+        for key in info.keys():
+            name, ownership, situation, remark = info[key][0], info[key][1], info[key][2], info[key][3]
+
             count = cursor.execute(select_goods, (gs_mort_id, name, ownership))
             if count == 0:
                 m = hashlib.md5()
@@ -109,7 +150,7 @@ def update_goods(gs_mort_id, gs_basic_id, cursor, connect, info):
                 id = m.hexdigest()
                 updated_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
                 flag = cursor.execute(goods_string, (
-                    gs_mort_id, id, gs_basic_id, name, ownership, situation, remark, updated_time))
+                        gs_mort_id, id, gs_basic_id, name, ownership, situation, remark, updated_time))
                 insert_flag += flag
                 connect.commit()
             elif int(count) == 1:
@@ -117,10 +158,17 @@ def update_goods(gs_mort_id, gs_basic_id, cursor, connect, info):
                 gs_mort_goods_id = cursor.fetchall()[0][0]
                 flag = cursor.execute(update_goods, (situation, remark, updated_time, gs_mort_goods_id))
                 update_flag += flag
-        except Exception, e:
-            logging.info('mort_goods error:%s' % e)
-    total = insert_flag + update_flag
-    print 'execute mort_goods :%s' % total
+    except Exception, e:
+        goods_flag = 100000001
+        logging.info('mort_goods error:%s' % e)
+    finally:
+        executetotal = insert_flag + update_flag
+        if goods_flag < 100000001:
+            goods_flag = executetotal
+        print 'execute mort_goods :%s' % executetotal
+        return total,goods_flag
+
+
 
 
 # 更新抵押人信息
@@ -128,9 +176,11 @@ def update_person(gs_mort_id, gs_basic_id, cursor, connect, info):
     total = len(info)
     print 'person_info :%s' % total
     insert_flag, update_flag = 0, 0
-    for key in info.keys():
-        name, cert, number = info[key][0], info[key][1], info[key][2]
-        try:
+    person_flag = 0
+    try:
+        for key in info.keys():
+            name, cert, number = info[key][0], info[key][1], info[key][2]
+
             count = cursor.execute(select_person, (gs_mort_id, number))
             if count == 0:
                 updated_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
@@ -146,11 +196,16 @@ def update_person(gs_mort_id, gs_basic_id, cursor, connect, info):
                 flag = cursor.execute(update_mort_person, (name, cert, updated_time, gs_mort_person_id))
                 update_flag += flag
                 connect.commit()
-        except Exception, e:
-            print e
-            logging.info('mort_person error:%s' % e)
-    total = insert_flag + update_flag
-    print 'execute mort_person:%s' % total
+    except Exception, e:
+        person_flag = 100000001
+        logging.info('mort_person error:%s' % e)
+    finally:
+        executetotal = insert_flag + update_flag
+        if person_flag < 100000001:
+            person_flag = executetotal
+            print 'execute mort_person:%s' % executetotal
+        return total,person_flag
+
 
 
 # 向网页发送请求获取信息

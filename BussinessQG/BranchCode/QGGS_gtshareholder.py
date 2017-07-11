@@ -10,9 +10,9 @@ reload(sys)
 sys.setdefaultencoding('utf-8')
 Type = sys.getfilesystemencoding()
 
-select_string = 'select gs_shareholder_id from gs_shareholder where gs_basic_id = %s and name = %s and reg_amount = %s and true_amount = %s and cate = %s'
+
 share_string = 'insert into gs_shareholder(gs_basic_id,name,cate,reg_amount,ra_date,ra_ways,true_amount,ta_date,ta_ways,updated)values(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)'
-update_string = 'update gs_shareholder set ra_date = %s,ra_ways = %s,ta_date = %s,ta_ways = %s,updated = %s where gs_shareholder_id = %s '
+
 def name(data):
     information = {}
     for i in xrange(len(data)):
@@ -20,7 +20,7 @@ def name(data):
         name = singledata["inv"]
 
         subDetails = singledata["subDetails"]
-        print subDetails
+        # print subDetails
         if len(subDetails)!=0:
             subDetails = singledata["subDetails"][0]
         else:
@@ -48,32 +48,24 @@ def name(data):
     return information
 def update_to_db(gs_basic_id,cursor,connect,information):
     cate = 2
-    insert_flag, update_flag = 0, 0
+    insert_flag = 0
     for key in information.keys():
         name, reg_amount, ra_date, ra_ways = information[key][0],information[key][1],information[key][2],information[key][3]
         true_amount, ta_date, ta_ways = information[key][4],information[key][5],information[key][6]
 
         try:
-            count = cursor.execute(select_string, (gs_basic_id, name, reg_amount,true_amount, cate))
 
-            if count == 0:
-                updated_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
-                rows_count = cursor.execute(share_string, (
+
+            updated_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
+            rows_count = cursor.execute(share_string, (
                     gs_basic_id, name, cate, reg_amount, ra_date, ra_ways, true_amount, ta_date, ta_ways, updated_time))
-                insert_flag += rows_count
-                connect.commit()
-            elif int(count) == 1:
-                gs_shareolder_id = cursor.fetchall()[0][0]
-                updated_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
-                rows_count = cursor.execute(update_string, (
-                    ra_date, ra_ways, ta_date, ta_ways,updated_time, gs_shareolder_id))
-                update_flag += rows_count
-                connect.commit()
+            insert_flag += rows_count
+            connect.commit()
+
         except Exception, e:
-            # print "shareholder error:", e
-            print e
+
             logging.error("gt_shareholder error: %s" % e)
-    flag = insert_flag + update_flag
+    flag = insert_flag
     return flag
 
 

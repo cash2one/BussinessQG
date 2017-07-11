@@ -15,7 +15,7 @@ import QGGS_report_web
 from PublicCode import config
 from PublicCode.Public_code import Get_BranchInfo as Get_BranchInfo
 from PublicCode.Public_code import Send_Request as Send_Request
-
+from PublicCode import config
 reload(sys)
 sys.setdefaultencoding('utf-8')
 Type = sys.getfilesystemencoding()
@@ -55,8 +55,9 @@ class Report:
                 anCheId = singledata["anCheId"]
                 anCheYear = singledata["anCheYear"]
                 province = anCheId[15:17]
+                province = config.province[province]
                 # print province
-                information[i] = [anCheId, anCheYear,province]
+                information[i] = [anCheId, anCheYear, province]
         else:
             logging.info("report url fail")
         return information
@@ -229,7 +230,7 @@ class Report:
         try:
             if count == 0:
                 updated_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
-                print run_string % (gs_report_id,gs_basic_id,province,asset,if_asset,benifit,if_benifit,income,if_income,profit,if_profit,main_income,if_main,net_income,if_net,tax,if_tax,debt,if_debt,uuid,updated_time,updated_time)
+                # print run_string % (gs_report_id,gs_basic_id,province,asset,if_asset,benifit,if_benifit,income,if_income,profit,if_profit,main_income,if_main,net_income,if_net,tax,if_tax,debt,if_debt,uuid,updated_time,updated_time)
                 row_count = cursor.execute(run_string, (gs_report_id,gs_basic_id,province,asset,if_asset,benifit,if_benifit,income,if_income,profit,if_profit,main_income,if_main,net_income,if_net,tax,if_tax,debt,if_debt,uuid,updated_time,updated_time))
                 connect.commit()
             elif int(count) == 1:

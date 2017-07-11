@@ -24,3 +24,13 @@ def change_date_style(old_date):
         otherStyleTime = time.strftime('%Y-%m-%d ', new_date)
         new_date = otherStyleTime
     return new_date
+
+#计算时间差
+def caculate_time(now_date,old_date):
+
+    #转化为时间数组
+    timearray = time.strptime(old_date,"%Y-%m-%d %H:%M:%S")
+    #转换时间为时间戳
+    change_time = time.mktime(timearray)
+    interval = float(now_date) - float(change_time)
+    return interval

@@ -10,7 +10,7 @@ sys.setdefaultencoding('utf-8')
 Type = sys.getfilesystemencoding()
 punish_string = 'insert into gs_punish(gs_basic_id,id,number, types, content,date, pub_date, gov_dept,updated)values(%s,%s,%s,%s,%s,%s,%s,%s,%s)'
 select_punish = 'select gs_punish_id from gs_punish where gs_basic_id = %s and number = %s'
-update_punish = 'update gs_punish set types = %s ,content = %s,date = %s,pub_date = %s,gov_dept = %s ,updated = %s where gs_punish_id = %s'
+
 
 
 def name(data):
@@ -30,7 +30,7 @@ def name(data):
 
 
 def update_to_db(gs_basic_id, cursor, connect, information):
-    insert_flag, update_flag = 0, 0
+    insert_flag =  0
     for key in information.keys():
         number, types, content = information[key][0], information[key][1], information[key][2]
         date, pub_date, gov_dept = information[key][3], information[key][4], information[key][5]
@@ -46,15 +46,9 @@ def update_to_db(gs_basic_id, cursor, connect, information):
                 gs_basic_id, id,number, types, content, date, pub_date, gov_dept, updated_time))
                 insert_flag += rows_count
                 connect.commit()
-            elif count == 1:
-                gs_punish_id = cursor.fetchall()[0][0]
-                updated_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
-                rows_count = cursor.execute(update_punish,
-                                            (types, content, date, pub_date, gov_dept, updated_time, gs_punish_id))
-                update_flag += rows_count
-                connect.commit()
+
         except Exception, e:
             # print "punish error:", e
             logging.error("punish error:%s" % e)
-    flag = insert_flag + update_flag
+    flag = insert_flag
     return flag

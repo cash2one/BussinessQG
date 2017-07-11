@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding:utf-8 -*-
 
-import hashlib
+
 import logging
 import sys
 import time
@@ -12,9 +12,8 @@ reload(sys)
 sys.setdefaultencoding('utf-8')
 Type = sys.getfilesystemencoding()
 
-check_string = 'insert into gs_check(gs_basic_id,id,types,result,check_date,gov_dept,updated)values(%s,%s,%s,%s,%s,%s,%s)'
+check_string = 'insert  into gs_check(gs_basic_id,types,result,check_date,gov_dept,updated)values(%s,%s,%s,%s,%s,%s)'
 select_check = 'select gs_check_id from gs_check where gs_basic_id = %s and check_date = %s'
-update_check = 'update gs_check set types = %s ,result = %s,check_date = %s,gov_dept = %s ,updated = %s where gs_check_id = %s'
 
 
 def name(data):
@@ -41,24 +40,12 @@ def update_to_db(gs_basic_id, cursor, connect, information):
             count = cursor.execute(select_check, (gs_basic_id, check_date))
             if count == 0:
                 updated_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
-                m = hashlib.md5()
-                m.update(str(gs_basic_id)+str(check_date))
-                id = m.hexdigest()
 
                 rows_count = cursor.execute(check_string,
-                                            (gs_basic_id, id,types, result, check_date, gov_dept, updated_time))
+                                            (gs_basic_id, types, result, check_date, gov_dept, updated_time))
                 insert_flag += rows_count
                 connect.commit()
-            elif count == 1:
-                gs_check_id = cursor.fetchall()[0][0]
-                updated_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
-
-                rows_count = cursor.execute(update_check,
-                                            (types, result, check_date, gov_dept, updated_time, gs_check_id))
-                update_flag += rows_count
-                connect.commit()
         except Exception, e:
-            # print "check error:",e
-            logging.error("check error:" % e)
+            logging.error("check error: %s" % e)
     flag = insert_flag + update_flag
     return flag

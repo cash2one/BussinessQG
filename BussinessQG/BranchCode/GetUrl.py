@@ -94,89 +94,52 @@ def loop_break_password():
 
 # 循环得到validate
 
-def last_request(challenge, validate, string, cookies):
-    information = {}
+def last_request(challenge, validate, code,ccode, cookies):
+    pattern = re.compile(r'^9.*')
+
+    result1 = re.findall(pattern,code)
+    result2 = re.findall(pattern,ccode)
+    if len(result1) == 0 and len(result2) == 0:
+        string = code
+    elif len(result1) == 1:
+        string = code
+    elif len(result2) == 1:
+        string = ccode
+
+    get_url = None
     url = 'http://www.gsxt.gov.cn/corp-query-search-1.html'
     encryed_string = urllib.quote(string)
     search_text = "tab=ent_tab&token=34911389&searchword=%s&geetest_challenge=%s&geetest_validate=%s&geetest_seccode=%s|7Cjordan" % (
         encryed_string, challenge, validate, validate)
     result = session.post(url, search_text, cookies=cookies, headers=config.headers)
     result = BeautifulSoup(result.content, "lxml")
+    # print result
     span = result.find("span", {"class": "search_result_span1"})
     if span!= None:
         pattern = re.compile(r'>.*([0-9]+).*<')
         number = re.findall(pattern, str(span))
         if int(number[0]) == 1:
-            information = get_need_info(result)
-            return information
+            get_url = get_need_info(result)
+            flag = 100000001
+            return get_url,flag
         elif int(number[0]) > 0:
             print '搜索结果不止一条'
+            get_url = None
+            flag = 100000002
             logging.error('搜索结果不止一条')
     else:
         print '无搜索信息'
+        get_url = None
+        flag = 100000004
         logging.info('无搜索信息')
-    return information
-
-
-# 将所获得的数据进行更新
-def update_db(information, cursor, connect):
-    update_flag, insert_flag = 0, 0
-    if len(information) > 0:
-        for key in information.keys():
-            url = information[key][0]
-            url = MySQLdb.escape_string(url)
-            code = information[key][3]
-            pattern = re.compile(r"^91.*|92.*|93.*")
-            ccode = re.findall(pattern, code)
-            if len(ccode) == 0:
-                ccode = None
-            elif len(ccode) == 1:
-                ccode = ccode[0]
-            m = hashlib.md5()
-            m.update(code)
-            id = m.hexdigest()
-            updated = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
-            company, status, daibiao, dates = information[key][1], information[key][2], information[key][4], \
-                                              information[key][5]
-            try:
-                cursor.execute(select_string, code)
-                basic_id = cursor.fetchall()
-
-                if len(basic_id) == 0:
-                    pattern = re.compile(r'^9.*')
-                    temp = re.findall(pattern, code)
-                    if len(temp) == 0:
-                        provin = config.province[code[0:2]]
-                    else:
-                        provin = config.province[code[2:4]]
-                    rows_flag = cursor.execute(insert_string,
-                                               (id,url, provin, company, code, ccode, daibiao, dates, status, updated))
-                    insert_flag += rows_flag
-                    connect.commit()
-                elif len(basic_id) == 1:
-                    basic_id = basic_id[0][0]
-                    rows_flag = cursor.execute(update_string, (url,company, daibiao, dates, status, updated, basic_id))
-                    update_flag += rows_flag
-                    connect.commit()
-            except Exception, e:
-               logging.info('error %s' % e)
-    elif len(information) == 0:
-        logging.error('无查询信息')
+    return get_url, flag
 
 
 # 用于获取所需信息
 def get_need_info(result):
-    information = {}
+    url = None
     a_list = result.find('div', {"class", "main-layout fw f14"}).find_all("a", {"class": "search_list_item db"})
     for item in a_list:
         href = item["href"]
         url = url_first + href
-        company = item.find("h1", {"class": "f20"}).text.strip()
-        status = item.find("div", {"class": "wrap-corpStatus"}).text.strip()
-        code = item.find("div", {"class": "div-map2"}).find("span", {"class", "g3"}).text.strip()
-        daibiao = item.find("div", {"class": "div-user2"}).find("span", {"class": "g3"}).text.strip()
-        dates = item.find("div", {"class": "div-info-circle2"}).find("span", {"class": "g3"}).text.strip()
-        dates = dates.replace("年", '-').replace("月", '-').replace("日", '')
-        information[code] = [url, company, status, code, daibiao, dates]
-
-    return information
+    return url

@@ -9,6 +9,7 @@ import MySQLdb
 import requests
 import coutnumber
 import re
+import config
 # 用于连接数据库
 class Connect_to_DB:
     def ConnectDB(self, HOST, USER, PASSWD, DB, PORT):
@@ -77,7 +78,7 @@ class Send_Request:
 # 用于获得各个分页的内容
 class Get_BranchInfo:
     def get_info(self, report_id, gs_basic_id, cursor, connect, url_pattern, QGGS_branch, name):
-        total = 0
+        total,recordsTotal = 0,-1
         # print url_pattern
         result, status_code = Send_Request().send_requests(url_pattern)
         pattern = re.compile(r'<html>.*</html>|.*index/invalidLink.*')
@@ -103,6 +104,7 @@ class Get_BranchInfo:
                 else:
                     pattern = re.compile(r'[\d]{2}')
                     province = re.findall(pattern, url_pattern)[0]
+                    province = config.province[province]
                     flag = QGGS_branch.update_to_db(report_id, gs_basic_id, cursor, connect, information,province)
                 # print flag
                 total += flag
@@ -113,8 +115,9 @@ class Get_BranchInfo:
                 else:
                     pattern = re.compile(r'[\d]{2}')
                     province = re.findall(pattern, url_pattern)[0]
+                    province = config.province[province]
                     flag = QGGS_branch.update_to_db(report_id, gs_basic_id, cursor, connect, information,province)
-                # print flag
+
                 total += flag
                 for i in range(1, page):
                     start = perpage * i
@@ -128,6 +131,7 @@ class Get_BranchInfo:
                     else:
                         pattern = re.compile(r'[\d]{2}')
                         province = re.findall(pattern, url_pattern)[0]
+                        province = config.province[config]
                         flag = QGGS_branch.update_to_db(report_id, gs_basic_id, cursor, connect, information,province)
                     # print flag
                     total += flag
@@ -142,3 +146,4 @@ class Get_BranchInfo:
             logging.info('网页打开出错！！')
         print 'execute %s: %s' % (name, total)
         coutnumber.countexcute[str(name)] = int(total)
+        return recordsTotal,total
