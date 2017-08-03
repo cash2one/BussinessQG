@@ -1,0 +1,307 @@
+Tue, 01 Aug 2017 21:41:45 Public_code.py[line:28] INFO connect is success!
+Tue, 01 Aug 2017 21:41:45 Public_code.py[line:62] INFO there remains 2 times to send requests 
+Tue, 01 Aug 2017 21:41:45 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cn
+Tue, 01 Aug 2017 21:41:45 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "GET /%7BPHhEB_G3k-2cXrSywQv77ykXq1TUtkIZWuzPILXoetHaN0_0AGMHVdrqvYQWMebWVgPNJDD286q0SoeI1He1k_EABHBUQSxKWGOVfSWnFyMywTDOt9KluRuOqOJtKa8o-1501592667871%7D HTTP/1.1" 200 None
+Tue, 01 Aug 2017 21:41:45 Public_code.py[line:65] INFO the status_code is 200 
+Tue, 01 Aug 2017 21:41:45 Public_code.py[line:152] INFO black: 0
+Tue, 01 Aug 2017 21:41:45 Public_code.py[line:181] INFO 暂无 black信息
+Tue, 01 Aug 2017 21:41:45 Public_code.py[line:185] INFO execute black: 0
+Tue, 01 Aug 2017 21:42:58 Public_code.py[line:28] INFO connect is success!
+Tue, 01 Aug 2017 21:42:58 Public_code.py[line:62] INFO there remains 2 times to send requests 
+Tue, 01 Aug 2017 21:42:58 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cn
+Tue, 01 Aug 2017 21:42:58 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "GET /%7BPHhEB_G3k-2cXrSywQv777324FIuvaV_A5CJ9tnPA-IXqtqDfFc1D6eKu765flJhUuo5qUaqyjtY77dN7A-y9hJiR4an9hkvprHEUx3t-c7-p2TeJtZUl-zgT0ptdFRS-1501592667892%7D?start=0 HTTP/1.1" 200 None
+Tue, 01 Aug 2017 21:42:58 Public_code.py[line:65] INFO the status_code is 200 
+Tue, 01 Aug 2017 21:42:58 Public_code.py[line:62] INFO there remains 2 times to send requests 
+Tue, 01 Aug 2017 21:42:58 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cn
+Tue, 01 Aug 2017 21:42:59 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "GET /%7BPHhEB_G3k-2cXrSywQv777324FIuvaV_A5CJ9tnPA-IXqtqDfFc1D6eKu765flJhUuo5qUaqyjtY77dN7A-y9hJiR4an9hkvprHEUx3t-c7-p2TeJtZUl-zgT0ptdFRS-1501592667892%7D HTTP/1.1" 200 None
+Tue, 01 Aug 2017 21:42:59 Public_code.py[line:65] INFO the status_code is 200 
+Tue, 01 Aug 2017 21:42:59 Public_code.py[line:107] INFO branch: 236
+Tue, 01 Aug 2017 21:43:14 Public_code.py[line:28] INFO connect is success!
+Tue, 01 Aug 2017 21:43:14 Public_code.py[line:62] INFO there remains 2 times to send requests 
+Tue, 01 Aug 2017 21:43:14 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cn
+Tue, 01 Aug 2017 21:43:14 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "GET /%7BPHhEB_G3k-2cXrSywQv777324FIuvaV_A5CJ9tnPA-IXqtqDfFc1D6eKu765flJhUuo5qUaqyjtY77dN7A-y9hJiR4an9hkvprHEUx3t-c7-p2TeJtZUl-zgT0ptdFRS-1501592667892%7D?start=0 HTTP/1.1" 200 None
+Tue, 01 Aug 2017 21:43:14 Public_code.py[line:65] INFO the status_code is 200 
+Tue, 01 Aug 2017 21:43:14 Public_code.py[line:62] INFO there remains 2 times to send requests 
+Tue, 01 Aug 2017 21:43:14 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cn
+Tue, 01 Aug 2017 21:43:14 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "GET /%7BPHhEB_G3k-2cXrSywQv777324FIuvaV_A5CJ9tnPA-IXqtqDfFc1D6eKu765flJhUuo5qUaqyjtY77dN7A-y9hJiR4an9hkvprHEUx3t-c7-p2TeJtZUl-zgT0ptdFRS-1501592667892%7D HTTP/1.1" 200 None
+Tue, 01 Aug 2017 21:43:14 Public_code.py[line:65] INFO the status_code is 200 
+Tue, 01 Aug 2017 21:43:14 Public_code.py[line:107] INFO branch: 236
+Tue, 01 Aug 2017 21:44:27 Public_code.py[line:28] INFO connect is success!
+Tue, 01 Aug 2017 21:44:27 Public_code.py[line:62] INFO there remains 2 times to send requests 
+Tue, 01 Aug 2017 21:44:27 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cn
+Tue, 01 Aug 2017 21:44:28 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "GET /%7BPHhEB_G3k-2cXrSywQv7796busi-NYk6-ji0ICcJ3MEic4M0c4sYUOxLl1QZJwvhxdJu0GNzmM_XC-iTuuwnuiLZbUj2SnqAx-rCk31UB-ik1RzGdxZVMjcuNZKs8kDO-1501592667881%7D?start=0 HTTP/1.1" 200 None
+Tue, 01 Aug 2017 21:44:28 Public_code.py[line:65] INFO the status_code is 200 
+Tue, 01 Aug 2017 21:44:28 Public_code.py[line:62] INFO there remains 2 times to send requests 
+Tue, 01 Aug 2017 21:44:28 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cn
+Tue, 01 Aug 2017 21:44:28 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "GET /%7BPHhEB_G3k-2cXrSywQv7796busi-NYk6-ji0ICcJ3MEic4M0c4sYUOxLl1QZJwvhxdJu0GNzmM_XC-iTuuwnuiLZbUj2SnqAx-rCk31UB-ik1RzGdxZVMjcuNZKs8kDO-1501592667881%7D HTTP/1.1" 200 None
+Tue, 01 Aug 2017 21:44:28 Public_code.py[line:65] INFO the status_code is 200 
+Tue, 01 Aug 2017 21:44:28 Public_code.py[line:107] INFO brand: 137
+Tue, 01 Aug 2017 21:45:46 Public_code.py[line:28] INFO connect is success!
+Tue, 01 Aug 2017 21:45:46 Public_code.py[line:62] INFO there remains 2 times to send requests 
+Tue, 01 Aug 2017 21:45:46 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cn
+Tue, 01 Aug 2017 21:45:47 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "GET /%7BPHhEB_G3k-2cXrSywQv77yYm5q2nu6U4z28N88t-KeDHVG9W8jnAwSx53xttaKec35FbbFU3bVazlNdrzvqlW_T4x0RMbMjGQphP8J1eT1TiQs55li9U66VLhQUR4sY0-1501592667888%7D HTTP/1.1" 200 None
+Tue, 01 Aug 2017 21:45:47 Public_code.py[line:65] INFO the status_code is 200 
+Tue, 01 Aug 2017 21:45:50 Public_code.py[line:152] INFO change: 32
+Tue, 01 Aug 2017 21:45:50 Public_code.py[line:62] INFO there remains 2 times to send requests 
+Tue, 01 Aug 2017 21:45:50 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cn
+Tue, 01 Aug 2017 21:45:50 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "GET /%7BPHhEB_G3k-2cXrSywQv77yYm5q2nu6U4z28N88t-KeDHVG9W8jnAwSx53xttaKec35FbbFU3bVazlNdrzvqlW_T4x0RMbMjGQphP8J1eT1TiQs55li9U66VLhQUR4sY0-1501592667888%7D?start=5 HTTP/1.1" 200 None
+Tue, 01 Aug 2017 21:45:50 Public_code.py[line:65] INFO the status_code is 200 
+Tue, 01 Aug 2017 21:45:50 Public_code.py[line:62] INFO there remains 2 times to send requests 
+Tue, 01 Aug 2017 21:45:50 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cn
+Tue, 01 Aug 2017 21:45:50 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "GET /%7BPHhEB_G3k-2cXrSywQv77yYm5q2nu6U4z28N88t-KeDHVG9W8jnAwSx53xttaKec35FbbFU3bVazlNdrzvqlW_T4x0RMbMjGQphP8J1eT1TiQs55li9U66VLhQUR4sY0-1501592667888%7D?start=10 HTTP/1.1" 200 None
+Tue, 01 Aug 2017 21:45:50 Public_code.py[line:65] INFO the status_code is 200 
+Tue, 01 Aug 2017 21:45:50 Public_code.py[line:62] INFO there remains 2 times to send requests 
+Tue, 01 Aug 2017 21:45:50 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cn
+Tue, 01 Aug 2017 21:45:55 Public_code.py[line:69] ERROR HTTPConnectionPool(host='www.gsxt.gov.cn', port=80): Read timed out. (read timeout=5)
+Tue, 01 Aug 2017 21:45:56 Public_code.py[line:62] INFO there remains 1 times to send requests 
+Tue, 01 Aug 2017 21:45:56 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cn
+Tue, 01 Aug 2017 21:45:56 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "GET /%7BPHhEB_G3k-2cXrSywQv77yYm5q2nu6U4z28N88t-KeDHVG9W8jnAwSx53xttaKec35FbbFU3bVazlNdrzvqlW_T4x0RMbMjGQphP8J1eT1TiQs55li9U66VLhQUR4sY0-1501592667888%7D?start=15 HTTP/1.1" 200 None
+Tue, 01 Aug 2017 21:45:56 Public_code.py[line:65] INFO the status_code is 200 
+Tue, 01 Aug 2017 21:45:56 Public_code.py[line:62] INFO there remains 2 times to send requests 
+Tue, 01 Aug 2017 21:45:56 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cn
+Tue, 01 Aug 2017 21:45:57 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "GET /%7BPHhEB_G3k-2cXrSywQv77yYm5q2nu6U4z28N88t-KeDHVG9W8jnAwSx53xttaKec35FbbFU3bVazlNdrzvqlW_T4x0RMbMjGQphP8J1eT1TiQs55li9U66VLhQUR4sY0-1501592667888%7D?start=20 HTTP/1.1" 200 None
+Tue, 01 Aug 2017 21:45:57 Public_code.py[line:65] INFO the status_code is 200 
+Tue, 01 Aug 2017 21:45:57 Public_code.py[line:62] INFO there remains 2 times to send requests 
+Tue, 01 Aug 2017 21:45:57 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cn
+Tue, 01 Aug 2017 21:45:57 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "GET /%7BPHhEB_G3k-2cXrSywQv77yYm5q2nu6U4z28N88t-KeDHVG9W8jnAwSx53xttaKec35FbbFU3bVazlNdrzvqlW_T4x0RMbMjGQphP8J1eT1TiQs55li9U66VLhQUR4sY0-1501592667888%7D?start=25 HTTP/1.1" 200 None
+Tue, 01 Aug 2017 21:45:57 Public_code.py[line:65] INFO the status_code is 200 
+Tue, 01 Aug 2017 21:45:57 Public_code.py[line:62] INFO there remains 2 times to send requests 
+Tue, 01 Aug 2017 21:45:57 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cn
+Tue, 01 Aug 2017 21:45:57 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "GET /%7BPHhEB_G3k-2cXrSywQv77yYm5q2nu6U4z28N88t-KeDHVG9W8jnAwSx53xttaKec35FbbFU3bVazlNdrzvqlW_T4x0RMbMjGQphP8J1eT1TiQs55li9U66VLhQUR4sY0-1501592667888%7D?start=30 HTTP/1.1" 200 None
+Tue, 01 Aug 2017 21:45:57 Public_code.py[line:65] INFO the status_code is 200 
+Tue, 01 Aug 2017 21:45:57 Public_code.py[line:185] INFO execute change: 0
+Tue, 01 Aug 2017 21:53:12 Public_code.py[line:28] INFO connect is success!
+Tue, 01 Aug 2017 21:54:38 Public_code.py[line:28] INFO connect is success!
+Tue, 01 Aug 2017 21:54:53 Public_code.py[line:28] INFO connect is success!
+Tue, 01 Aug 2017 21:56:15 Public_code.py[line:28] INFO connect is success!
+Tue, 01 Aug 2017 21:57:20 Public_code.py[line:28] INFO connect is success!
+Tue, 01 Aug 2017 21:57:20 Public_code.py[line:62] INFO there remains 2 times to send requests 
+Tue, 01 Aug 2017 21:57:20 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cn
+Tue, 01 Aug 2017 21:57:21 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "GET /%7BPHhEB_G3k-2cXrSywQv7726y0KbIHWO00aVkYHvqdDviO360KxhXkJIjfNqnkn9GZP89lQw7I5K-8jRaGzToMvLEufuagwW_gWnBc32bZP6fQyd-8C9qWHGNpQ5h66kn-1501592667894%7D HTTP/1.1" 200 None
+Tue, 01 Aug 2017 21:57:21 Public_code.py[line:65] INFO the status_code is 200 
+Tue, 01 Aug 2017 21:57:21 Public_code.py[line:152] INFO clear: 236
+Tue, 01 Aug 2017 21:57:21 Public_code.py[line:62] INFO there remains 2 times to send requests 
+Tue, 01 Aug 2017 21:57:21 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cn
+Tue, 01 Aug 2017 21:57:21 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "GET /%7BPHhEB_G3k-2cXrSywQv7726y0KbIHWO00aVkYHvqdDviO360KxhXkJIjfNqnkn9GZP89lQw7I5K-8jRaGzToMvLEufuagwW_gWnBc32bZP6fQyd-8C9qWHGNpQ5h66kn-1501592667894%7D?start=5 HTTP/1.1" 200 None
+Tue, 01 Aug 2017 21:57:21 Public_code.py[line:65] INFO the status_code is 200 
+Tue, 01 Aug 2017 21:57:21 Public_code.py[line:62] INFO there remains 2 times to send requests 
+Tue, 01 Aug 2017 21:57:21 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cn
+Tue, 01 Aug 2017 21:57:22 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "GET /%7BPHhEB_G3k-2cXrSywQv7726y0KbIHWO00aVkYHvqdDviO360KxhXkJIjfNqnkn9GZP89lQw7I5K-8jRaGzToMvLEufuagwW_gWnBc32bZP6fQyd-8C9qWHGNpQ5h66kn-1501592667894%7D?start=10 HTTP/1.1" 200 None
+Tue, 01 Aug 2017 21:57:22 Public_code.py[line:65] INFO the status_code is 200 
+Tue, 01 Aug 2017 21:57:22 Public_code.py[line:62] INFO there remains 2 times to send requests 
+Tue, 01 Aug 2017 21:57:22 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cn
+Tue, 01 Aug 2017 21:57:22 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "GET /%7BPHhEB_G3k-2cXrSywQv7726y0KbIHWO00aVkYHvqdDviO360KxhXkJIjfNqnkn9GZP89lQw7I5K-8jRaGzToMvLEufuagwW_gWnBc32bZP6fQyd-8C9qWHGNpQ5h66kn-1501592667894%7D?start=15 HTTP/1.1" 200 None
+Tue, 01 Aug 2017 21:57:22 Public_code.py[line:65] INFO the status_code is 200 
+Tue, 01 Aug 2017 21:57:22 Public_code.py[line:62] INFO there remains 2 times to send requests 
+Tue, 01 Aug 2017 21:57:22 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cn
+Tue, 01 Aug 2017 21:57:22 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "GET /%7BPHhEB_G3k-2cXrSywQv7726y0KbIHWO00aVkYHvqdDviO360KxhXkJIjfNqnkn9GZP89lQw7I5K-8jRaGzToMvLEufuagwW_gWnBc32bZP6fQyd-8C9qWHGNpQ5h66kn-1501592667894%7D?start=20 HTTP/1.1" 200 None
+Tue, 01 Aug 2017 21:57:22 Public_code.py[line:65] INFO the status_code is 200 
+Tue, 01 Aug 2017 21:57:22 Public_code.py[line:62] INFO there remains 2 times to send requests 
+Tue, 01 Aug 2017 21:57:23 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cn
+Tue, 01 Aug 2017 21:57:23 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "GET /%7BPHhEB_G3k-2cXrSywQv7726y0KbIHWO00aVkYHvqdDviO360KxhXkJIjfNqnkn9GZP89lQw7I5K-8jRaGzToMvLEufuagwW_gWnBc32bZP6fQyd-8C9qWHGNpQ5h66kn-1501592667894%7D?start=25 HTTP/1.1" 200 None
+Tue, 01 Aug 2017 21:57:23 Public_code.py[line:65] INFO the status_code is 200 
+Tue, 01 Aug 2017 21:57:23 Public_code.py[line:62] INFO there remains 2 times to send requests 
+Tue, 01 Aug 2017 21:57:23 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cn
+Tue, 01 Aug 2017 21:57:23 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "GET /%7BPHhEB_G3k-2cXrSywQv7726y0KbIHWO00aVkYHvqdDviO360KxhXkJIjfNqnkn9GZP89lQw7I5K-8jRaGzToMvLEufuagwW_gWnBc32bZP6fQyd-8C9qWHGNpQ5h66kn-1501592667894%7D?start=30 HTTP/1.1" 200 None
+Tue, 01 Aug 2017 21:57:23 Public_code.py[line:65] INFO the status_code is 200 
+Tue, 01 Aug 2017 21:57:23 Public_code.py[line:62] INFO there remains 2 times to send requests 
+Tue, 01 Aug 2017 21:57:23 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cn
+Tue, 01 Aug 2017 21:57:24 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "GET /%7BPHhEB_G3k-2cXrSywQv7726y0KbIHWO00aVkYHvqdDviO360KxhXkJIjfNqnkn9GZP89lQw7I5K-8jRaGzToMvLEufuagwW_gWnBc32bZP6fQyd-8C9qWHGNpQ5h66kn-1501592667894%7D?start=35 HTTP/1.1" 200 None
+Tue, 01 Aug 2017 21:57:24 Public_code.py[line:65] INFO the status_code is 200 
+Tue, 01 Aug 2017 21:57:24 Public_code.py[line:62] INFO there remains 2 times to send requests 
+Tue, 01 Aug 2017 21:57:24 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cn
+Tue, 01 Aug 2017 21:57:24 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "GET /%7BPHhEB_G3k-2cXrSywQv7726y0KbIHWO00aVkYHvqdDviO360KxhXkJIjfNqnkn9GZP89lQw7I5K-8jRaGzToMvLEufuagwW_gWnBc32bZP6fQyd-8C9qWHGNpQ5h66kn-1501592667894%7D?start=40 HTTP/1.1" 200 None
+Tue, 01 Aug 2017 21:57:24 Public_code.py[line:65] INFO the status_code is 200 
+Tue, 01 Aug 2017 21:57:24 Public_code.py[line:62] INFO there remains 2 times to send requests 
+Tue, 01 Aug 2017 21:57:24 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cn
+Tue, 01 Aug 2017 21:57:25 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "GET /%7BPHhEB_G3k-2cXrSywQv7726y0KbIHWO00aVkYHvqdDviO360KxhXkJIjfNqnkn9GZP89lQw7I5K-8jRaGzToMvLEufuagwW_gWnBc32bZP6fQyd-8C9qWHGNpQ5h66kn-1501592667894%7D?start=45 HTTP/1.1" 200 None
+Tue, 01 Aug 2017 21:57:25 Public_code.py[line:65] INFO the status_code is 200 
+Tue, 01 Aug 2017 21:57:25 Public_code.py[line:62] INFO there remains 2 times to send requests 
+Tue, 01 Aug 2017 21:57:25 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cn
+Tue, 01 Aug 2017 21:57:25 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "GET /%7BPHhEB_G3k-2cXrSywQv7726y0KbIHWO00aVkYHvqdDviO360KxhXkJIjfNqnkn9GZP89lQw7I5K-8jRaGzToMvLEufuagwW_gWnBc32bZP6fQyd-8C9qWHGNpQ5h66kn-1501592667894%7D?start=50 HTTP/1.1" 200 None
+Tue, 01 Aug 2017 21:57:25 Public_code.py[line:65] INFO the status_code is 200 
+Tue, 01 Aug 2017 21:57:25 Public_code.py[line:62] INFO there remains 2 times to send requests 
+Tue, 01 Aug 2017 21:57:25 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cn
+Tue, 01 Aug 2017 21:57:25 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "GET /%7BPHhEB_G3k-2cXrSywQv7726y0KbIHWO00aVkYHvqdDviO360KxhXkJIjfNqnkn9GZP89lQw7I5K-8jRaGzToMvLEufuagwW_gWnBc32bZP6fQyd-8C9qWHGNpQ5h66kn-1501592667894%7D?start=55 HTTP/1.1" 200 None
+Tue, 01 Aug 2017 21:57:25 Public_code.py[line:65] INFO the status_code is 200 
+Tue, 01 Aug 2017 21:57:25 Public_code.py[line:62] INFO there remains 2 times to send requests 
+Tue, 01 Aug 2017 21:57:25 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cn
+Tue, 01 Aug 2017 21:57:26 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "GET /%7BPHhEB_G3k-2cXrSywQv7726y0KbIHWO00aVkYHvqdDviO360KxhXkJIjfNqnkn9GZP89lQw7I5K-8jRaGzToMvLEufuagwW_gWnBc32bZP6fQyd-8C9qWHGNpQ5h66kn-1501592667894%7D?start=60 HTTP/1.1" 200 None
+Tue, 01 Aug 2017 21:57:26 Public_code.py[line:65] INFO the status_code is 200 
+Tue, 01 Aug 2017 21:57:26 Public_code.py[line:62] INFO there remains 2 times to send requests 
+Tue, 01 Aug 2017 21:57:26 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cn
+Tue, 01 Aug 2017 21:57:26 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "GET /%7BPHhEB_G3k-2cXrSywQv7726y0KbIHWO00aVkYHvqdDviO360KxhXkJIjfNqnkn9GZP89lQw7I5K-8jRaGzToMvLEufuagwW_gWnBc32bZP6fQyd-8C9qWHGNpQ5h66kn-1501592667894%7D?start=65 HTTP/1.1" 200 None
+Tue, 01 Aug 2017 21:57:26 Public_code.py[line:65] INFO the status_code is 200 
+Tue, 01 Aug 2017 21:57:26 Public_code.py[line:62] INFO there remains 2 times to send requests 
+Tue, 01 Aug 2017 21:57:26 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cn
+Tue, 01 Aug 2017 21:57:26 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "GET /%7BPHhEB_G3k-2cXrSywQv7726y0KbIHWO00aVkYHvqdDviO360KxhXkJIjfNqnkn9GZP89lQw7I5K-8jRaGzToMvLEufuagwW_gWnBc32bZP6fQyd-8C9qWHGNpQ5h66kn-1501592667894%7D?start=70 HTTP/1.1" 200 None
+Tue, 01 Aug 2017 21:57:26 Public_code.py[line:65] INFO the status_code is 200 
+Tue, 01 Aug 2017 21:57:26 Public_code.py[line:62] INFO there remains 2 times to send requests 
+Tue, 01 Aug 2017 21:57:26 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cn
+Tue, 01 Aug 2017 21:57:26 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "GET /%7BPHhEB_G3k-2cXrSywQv7726y0KbIHWO00aVkYHvqdDviO360KxhXkJIjfNqnkn9GZP89lQw7I5K-8jRaGzToMvLEufuagwW_gWnBc32bZP6fQyd-8C9qWHGNpQ5h66kn-1501592667894%7D?start=75 HTTP/1.1" 200 None
+Tue, 01 Aug 2017 21:57:26 Public_code.py[line:65] INFO the status_code is 200 
+Tue, 01 Aug 2017 21:57:26 Public_code.py[line:62] INFO there remains 2 times to send requests 
+Tue, 01 Aug 2017 21:57:26 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cn
+Tue, 01 Aug 2017 21:57:27 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "GET /%7BPHhEB_G3k-2cXrSywQv7726y0KbIHWO00aVkYHvqdDviO360KxhXkJIjfNqnkn9GZP89lQw7I5K-8jRaGzToMvLEufuagwW_gWnBc32bZP6fQyd-8C9qWHGNpQ5h66kn-1501592667894%7D?start=80 HTTP/1.1" 200 None
+Tue, 01 Aug 2017 21:57:27 Public_code.py[line:65] INFO the status_code is 200 
+Tue, 01 Aug 2017 21:57:27 Public_code.py[line:62] INFO there remains 2 times to send requests 
+Tue, 01 Aug 2017 21:57:27 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cn
+Tue, 01 Aug 2017 21:57:27 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "GET /%7BPHhEB_G3k-2cXrSywQv7726y0KbIHWO00aVkYHvqdDviO360KxhXkJIjfNqnkn9GZP89lQw7I5K-8jRaGzToMvLEufuagwW_gWnBc32bZP6fQyd-8C9qWHGNpQ5h66kn-1501592667894%7D?start=85 HTTP/1.1" 200 None
+Tue, 01 Aug 2017 21:57:27 Public_code.py[line:65] INFO the status_code is 200 
+Tue, 01 Aug 2017 21:57:27 Public_code.py[line:62] INFO there remains 2 times to send requests 
+Tue, 01 Aug 2017 21:57:27 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cn
+Tue, 01 Aug 2017 21:57:27 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "GET /%7BPHhEB_G3k-2cXrSywQv7726y0KbIHWO00aVkYHvqdDviO360KxhXkJIjfNqnkn9GZP89lQw7I5K-8jRaGzToMvLEufuagwW_gWnBc32bZP6fQyd-8C9qWHGNpQ5h66kn-1501592667894%7D?start=90 HTTP/1.1" 200 None
+Tue, 01 Aug 2017 21:57:27 Public_code.py[line:65] INFO the status_code is 200 
+Tue, 01 Aug 2017 21:57:27 Public_code.py[line:62] INFO there remains 2 times to send requests 
+Tue, 01 Aug 2017 21:57:27 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cn
+Tue, 01 Aug 2017 21:57:27 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "GET /%7BPHhEB_G3k-2cXrSywQv7726y0KbIHWO00aVkYHvqdDviO360KxhXkJIjfNqnkn9GZP89lQw7I5K-8jRaGzToMvLEufuagwW_gWnBc32bZP6fQyd-8C9qWHGNpQ5h66kn-1501592667894%7D?start=95 HTTP/1.1" 200 None
+Tue, 01 Aug 2017 21:57:27 Public_code.py[line:65] INFO the status_code is 200 
+Tue, 01 Aug 2017 21:57:27 Public_code.py[line:62] INFO there remains 2 times to send requests 
+Tue, 01 Aug 2017 21:57:27 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cn
+Tue, 01 Aug 2017 21:57:28 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "GET /%7BPHhEB_G3k-2cXrSywQv7726y0KbIHWO00aVkYHvqdDviO360KxhXkJIjfNqnkn9GZP89lQw7I5K-8jRaGzToMvLEufuagwW_gWnBc32bZP6fQyd-8C9qWHGNpQ5h66kn-1501592667894%7D?start=100 HTTP/1.1" 200 None
+Tue, 01 Aug 2017 21:57:28 Public_code.py[line:65] INFO the status_code is 200 
+Tue, 01 Aug 2017 21:57:28 Public_code.py[line:62] INFO there remains 2 times to send requests 
+Tue, 01 Aug 2017 21:57:28 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cn
+Tue, 01 Aug 2017 21:57:33 Public_code.py[line:69] ERROR HTTPConnectionPool(host='www.gsxt.gov.cn', port=80): Read timed out. (read timeout=5)
+Tue, 01 Aug 2017 21:57:34 Public_code.py[line:62] INFO there remains 1 times to send requests 
+Tue, 01 Aug 2017 21:57:34 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cn
+Tue, 01 Aug 2017 21:57:34 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "GET /%7BPHhEB_G3k-2cXrSywQv7726y0KbIHWO00aVkYHvqdDviO360KxhXkJIjfNqnkn9GZP89lQw7I5K-8jRaGzToMvLEufuagwW_gWnBc32bZP6fQyd-8C9qWHGNpQ5h66kn-1501592667894%7D?start=105 HTTP/1.1" 200 None
+Tue, 01 Aug 2017 21:57:34 Public_code.py[line:65] INFO the status_code is 200 
+Tue, 01 Aug 2017 21:57:34 Public_code.py[line:62] INFO there remains 2 times to send requests 
+Tue, 01 Aug 2017 21:57:34 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cn
+Tue, 01 Aug 2017 21:57:34 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "GET /%7BPHhEB_G3k-2cXrSywQv7726y0KbIHWO00aVkYHvqdDviO360KxhXkJIjfNqnkn9GZP89lQw7I5K-8jRaGzToMvLEufuagwW_gWnBc32bZP6fQyd-8C9qWHGNpQ5h66kn-1501592667894%7D?start=110 HTTP/1.1" 200 None
+Tue, 01 Aug 2017 21:57:34 Public_code.py[line:65] INFO the status_code is 200 
+Tue, 01 Aug 2017 21:57:34 Public_code.py[line:62] INFO there remains 2 times to send requests 
+Tue, 01 Aug 2017 21:57:35 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cn
+Tue, 01 Aug 2017 21:57:35 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "GET /%7BPHhEB_G3k-2cXrSywQv7726y0KbIHWO00aVkYHvqdDviO360KxhXkJIjfNqnkn9GZP89lQw7I5K-8jRaGzToMvLEufuagwW_gWnBc32bZP6fQyd-8C9qWHGNpQ5h66kn-1501592667894%7D?start=115 HTTP/1.1" 200 None
+Tue, 01 Aug 2017 21:57:35 Public_code.py[line:65] INFO the status_code is 200 
+Tue, 01 Aug 2017 21:57:35 Public_code.py[line:62] INFO there remains 2 times to send requests 
+Tue, 01 Aug 2017 21:57:35 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cn
+Tue, 01 Aug 2017 21:57:35 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "GET /%7BPHhEB_G3k-2cXrSywQv7726y0KbIHWO00aVkYHvqdDviO360KxhXkJIjfNqnkn9GZP89lQw7I5K-8jRaGzToMvLEufuagwW_gWnBc32bZP6fQyd-8C9qWHGNpQ5h66kn-1501592667894%7D?start=120 HTTP/1.1" 200 None
+Tue, 01 Aug 2017 21:57:35 Public_code.py[line:65] INFO the status_code is 200 
+Tue, 01 Aug 2017 21:57:35 Public_code.py[line:62] INFO there remains 2 times to send requests 
+Tue, 01 Aug 2017 21:57:35 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cn
+Tue, 01 Aug 2017 21:57:36 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "GET /%7BPHhEB_G3k-2cXrSywQv7726y0KbIHWO00aVkYHvqdDviO360KxhXkJIjfNqnkn9GZP89lQw7I5K-8jRaGzToMvLEufuagwW_gWnBc32bZP6fQyd-8C9qWHGNpQ5h66kn-1501592667894%7D?start=125 HTTP/1.1" 200 None
+Tue, 01 Aug 2017 21:57:36 Public_code.py[line:65] INFO the status_code is 200 
+Tue, 01 Aug 2017 21:57:36 Public_code.py[line:62] INFO there remains 2 times to send requests 
+Tue, 01 Aug 2017 21:57:36 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cn
+Tue, 01 Aug 2017 21:57:37 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "GET /%7BPHhEB_G3k-2cXrSywQv7726y0KbIHWO00aVkYHvqdDviO360KxhXkJIjfNqnkn9GZP89lQw7I5K-8jRaGzToMvLEufuagwW_gWnBc32bZP6fQyd-8C9qWHGNpQ5h66kn-1501592667894%7D?start=130 HTTP/1.1" 200 None
+Tue, 01 Aug 2017 21:57:37 Public_code.py[line:65] INFO the status_code is 200 
+Tue, 01 Aug 2017 21:57:37 Public_code.py[line:62] INFO there remains 2 times to send requests 
+Tue, 01 Aug 2017 21:57:37 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cn
+Tue, 01 Aug 2017 21:57:37 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "GET /%7BPHhEB_G3k-2cXrSywQv7726y0KbIHWO00aVkYHvqdDviO360KxhXkJIjfNqnkn9GZP89lQw7I5K-8jRaGzToMvLEufuagwW_gWnBc32bZP6fQyd-8C9qWHGNpQ5h66kn-1501592667894%7D?start=135 HTTP/1.1" 200 None
+Tue, 01 Aug 2017 21:57:37 Public_code.py[line:65] INFO the status_code is 200 
+Tue, 01 Aug 2017 21:57:37 Public_code.py[line:62] INFO there remains 2 times to send requests 
+Tue, 01 Aug 2017 21:57:37 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cn
+Tue, 01 Aug 2017 21:57:37 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "GET /%7BPHhEB_G3k-2cXrSywQv7726y0KbIHWO00aVkYHvqdDviO360KxhXkJIjfNqnkn9GZP89lQw7I5K-8jRaGzToMvLEufuagwW_gWnBc32bZP6fQyd-8C9qWHGNpQ5h66kn-1501592667894%7D?start=140 HTTP/1.1" 200 None
+Tue, 01 Aug 2017 21:57:37 Public_code.py[line:65] INFO the status_code is 200 
+Tue, 01 Aug 2017 21:57:37 Public_code.py[line:62] INFO there remains 2 times to send requests 
+Tue, 01 Aug 2017 21:57:37 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cn
+Tue, 01 Aug 2017 21:57:37 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "GET /%7BPHhEB_G3k-2cXrSywQv7726y0KbIHWO00aVkYHvqdDviO360KxhXkJIjfNqnkn9GZP89lQw7I5K-8jRaGzToMvLEufuagwW_gWnBc32bZP6fQyd-8C9qWHGNpQ5h66kn-1501592667894%7D?start=145 HTTP/1.1" 200 None
+Tue, 01 Aug 2017 21:57:37 Public_code.py[line:65] INFO the status_code is 200 
+Tue, 01 Aug 2017 21:57:37 Public_code.py[line:62] INFO there remains 2 times to send requests 
+Tue, 01 Aug 2017 21:57:37 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cn
+Tue, 01 Aug 2017 21:57:38 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "GET /%7BPHhEB_G3k-2cXrSywQv7726y0KbIHWO00aVkYHvqdDviO360KxhXkJIjfNqnkn9GZP89lQw7I5K-8jRaGzToMvLEufuagwW_gWnBc32bZP6fQyd-8C9qWHGNpQ5h66kn-1501592667894%7D?start=150 HTTP/1.1" 200 None
+Tue, 01 Aug 2017 21:57:38 Public_code.py[line:65] INFO the status_code is 200 
+Tue, 01 Aug 2017 21:57:38 Public_code.py[line:62] INFO there remains 2 times to send requests 
+Tue, 01 Aug 2017 21:57:38 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cn
+Tue, 01 Aug 2017 21:57:38 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "GET /%7BPHhEB_G3k-2cXrSywQv7726y0KbIHWO00aVkYHvqdDviO360KxhXkJIjfNqnkn9GZP89lQw7I5K-8jRaGzToMvLEufuagwW_gWnBc32bZP6fQyd-8C9qWHGNpQ5h66kn-1501592667894%7D?start=155 HTTP/1.1" 200 None
+Tue, 01 Aug 2017 21:57:38 Public_code.py[line:65] INFO the status_code is 200 
+Tue, 01 Aug 2017 21:57:38 Public_code.py[line:62] INFO there remains 2 times to send requests 
+Tue, 01 Aug 2017 21:57:38 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cn
+Tue, 01 Aug 2017 21:57:39 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "GET /%7BPHhEB_G3k-2cXrSywQv7726y0KbIHWO00aVkYHvqdDviO360KxhXkJIjfNqnkn9GZP89lQw7I5K-8jRaGzToMvLEufuagwW_gWnBc32bZP6fQyd-8C9qWHGNpQ5h66kn-1501592667894%7D?start=160 HTTP/1.1" 200 None
+Tue, 01 Aug 2017 21:57:39 Public_code.py[line:65] INFO the status_code is 200 
+Tue, 01 Aug 2017 21:57:39 Public_code.py[line:62] INFO there remains 2 times to send requests 
+Tue, 01 Aug 2017 21:57:39 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cn
+Tue, 01 Aug 2017 21:57:39 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "GET /%7BPHhEB_G3k-2cXrSywQv7726y0KbIHWO00aVkYHvqdDviO360KxhXkJIjfNqnkn9GZP89lQw7I5K-8jRaGzToMvLEufuagwW_gWnBc32bZP6fQyd-8C9qWHGNpQ5h66kn-1501592667894%7D?start=165 HTTP/1.1" 200 None
+Tue, 01 Aug 2017 21:57:39 Public_code.py[line:65] INFO the status_code is 200 
+Tue, 01 Aug 2017 21:57:39 Public_code.py[line:62] INFO there remains 2 times to send requests 
+Tue, 01 Aug 2017 21:57:39 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cn
+Tue, 01 Aug 2017 21:57:39 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "GET /%7BPHhEB_G3k-2cXrSywQv7726y0KbIHWO00aVkYHvqdDviO360KxhXkJIjfNqnkn9GZP89lQw7I5K-8jRaGzToMvLEufuagwW_gWnBc32bZP6fQyd-8C9qWHGNpQ5h66kn-1501592667894%7D?start=170 HTTP/1.1" 200 None
+Tue, 01 Aug 2017 21:57:39 Public_code.py[line:65] INFO the status_code is 200 
+Tue, 01 Aug 2017 21:57:39 Public_code.py[line:62] INFO there remains 2 times to send requests 
+Tue, 01 Aug 2017 21:57:39 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cn
+Tue, 01 Aug 2017 21:57:40 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "GET /%7BPHhEB_G3k-2cXrSywQv7726y0KbIHWO00aVkYHvqdDviO360KxhXkJIjfNqnkn9GZP89lQw7I5K-8jRaGzToMvLEufuagwW_gWnBc32bZP6fQyd-8C9qWHGNpQ5h66kn-1501592667894%7D?start=175 HTTP/1.1" 200 None
+Tue, 01 Aug 2017 21:57:40 Public_code.py[line:65] INFO the status_code is 200 
+Tue, 01 Aug 2017 21:57:40 Public_code.py[line:62] INFO there remains 2 times to send requests 
+Tue, 01 Aug 2017 21:57:40 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cn
+Tue, 01 Aug 2017 21:57:40 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "GET /%7BPHhEB_G3k-2cXrSywQv7726y0KbIHWO00aVkYHvqdDviO360KxhXkJIjfNqnkn9GZP89lQw7I5K-8jRaGzToMvLEufuagwW_gWnBc32bZP6fQyd-8C9qWHGNpQ5h66kn-1501592667894%7D?start=180 HTTP/1.1" 200 None
+Tue, 01 Aug 2017 21:57:40 Public_code.py[line:65] INFO the status_code is 200 
+Tue, 01 Aug 2017 21:57:40 Public_code.py[line:62] INFO there remains 2 times to send requests 
+Tue, 01 Aug 2017 21:57:40 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cn
+Tue, 01 Aug 2017 21:57:40 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "GET /%7BPHhEB_G3k-2cXrSywQv7726y0KbIHWO00aVkYHvqdDviO360KxhXkJIjfNqnkn9GZP89lQw7I5K-8jRaGzToMvLEufuagwW_gWnBc32bZP6fQyd-8C9qWHGNpQ5h66kn-1501592667894%7D?start=185 HTTP/1.1" 200 None
+Tue, 01 Aug 2017 21:57:40 Public_code.py[line:65] INFO the status_code is 200 
+Tue, 01 Aug 2017 21:57:40 Public_code.py[line:62] INFO there remains 2 times to send requests 
+Tue, 01 Aug 2017 21:57:40 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cn
+Tue, 01 Aug 2017 21:57:41 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "GET /%7BPHhEB_G3k-2cXrSywQv7726y0KbIHWO00aVkYHvqdDviO360KxhXkJIjfNqnkn9GZP89lQw7I5K-8jRaGzToMvLEufuagwW_gWnBc32bZP6fQyd-8C9qWHGNpQ5h66kn-1501592667894%7D?start=190 HTTP/1.1" 200 None
+Tue, 01 Aug 2017 21:57:41 Public_code.py[line:65] INFO the status_code is 200 
+Tue, 01 Aug 2017 21:57:41 Public_code.py[line:62] INFO there remains 2 times to send requests 
+Tue, 01 Aug 2017 21:57:41 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cn
+Tue, 01 Aug 2017 21:57:41 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "GET /%7BPHhEB_G3k-2cXrSywQv7726y0KbIHWO00aVkYHvqdDviO360KxhXkJIjfNqnkn9GZP89lQw7I5K-8jRaGzToMvLEufuagwW_gWnBc32bZP6fQyd-8C9qWHGNpQ5h66kn-1501592667894%7D?start=195 HTTP/1.1" 200 None
+Tue, 01 Aug 2017 21:57:41 Public_code.py[line:65] INFO the status_code is 200 
+Tue, 01 Aug 2017 21:57:41 Public_code.py[line:62] INFO there remains 2 times to send requests 
+Tue, 01 Aug 2017 21:57:41 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cn
+Tue, 01 Aug 2017 21:57:41 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "GET /%7BPHhEB_G3k-2cXrSywQv7726y0KbIHWO00aVkYHvqdDviO360KxhXkJIjfNqnkn9GZP89lQw7I5K-8jRaGzToMvLEufuagwW_gWnBc32bZP6fQyd-8C9qWHGNpQ5h66kn-1501592667894%7D?start=200 HTTP/1.1" 200 None
+Tue, 01 Aug 2017 21:57:41 Public_code.py[line:65] INFO the status_code is 200 
+Tue, 01 Aug 2017 21:57:41 Public_code.py[line:62] INFO there remains 2 times to send requests 
+Tue, 01 Aug 2017 21:57:41 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cn
+Tue, 01 Aug 2017 21:57:41 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "GET /%7BPHhEB_G3k-2cXrSywQv7726y0KbIHWO00aVkYHvqdDviO360KxhXkJIjfNqnkn9GZP89lQw7I5K-8jRaGzToMvLEufuagwW_gWnBc32bZP6fQyd-8C9qWHGNpQ5h66kn-1501592667894%7D?start=205 HTTP/1.1" 200 None
+Tue, 01 Aug 2017 21:57:41 Public_code.py[line:65] INFO the status_code is 200 
+Tue, 01 Aug 2017 21:57:41 Public_code.py[line:62] INFO there remains 2 times to send requests 
+Tue, 01 Aug 2017 21:57:41 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cn
+Tue, 01 Aug 2017 21:57:46 Public_code.py[line:69] ERROR HTTPConnectionPool(host='www.gsxt.gov.cn', port=80): Read timed out. (read timeout=5)
+Tue, 01 Aug 2017 21:57:46 Public_code.py[line:62] INFO there remains 1 times to send requests 
+Tue, 01 Aug 2017 21:57:46 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cn
+Tue, 01 Aug 2017 21:57:47 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "GET /%7BPHhEB_G3k-2cXrSywQv7726y0KbIHWO00aVkYHvqdDviO360KxhXkJIjfNqnkn9GZP89lQw7I5K-8jRaGzToMvLEufuagwW_gWnBc32bZP6fQyd-8C9qWHGNpQ5h66kn-1501592667894%7D?start=210 HTTP/1.1" 200 None
+Tue, 01 Aug 2017 21:57:47 Public_code.py[line:65] INFO the status_code is 200 
+Tue, 01 Aug 2017 21:57:47 Public_code.py[line:62] INFO there remains 2 times to send requests 
+Tue, 01 Aug 2017 21:57:47 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cn
+Tue, 01 Aug 2017 21:57:47 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "GET /%7BPHhEB_G3k-2cXrSywQv7726y0KbIHWO00aVkYHvqdDviO360KxhXkJIjfNqnkn9GZP89lQw7I5K-8jRaGzToMvLEufuagwW_gWnBc32bZP6fQyd-8C9qWHGNpQ5h66kn-1501592667894%7D?start=215 HTTP/1.1" 200 None
+Tue, 01 Aug 2017 21:57:47 Public_code.py[line:65] INFO the status_code is 200 
+Tue, 01 Aug 2017 21:57:47 Public_code.py[line:62] INFO there remains 2 times to send requests 
+Tue, 01 Aug 2017 21:57:47 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cn
+Tue, 01 Aug 2017 21:57:47 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "GET /%7BPHhEB_G3k-2cXrSywQv7726y0KbIHWO00aVkYHvqdDviO360KxhXkJIjfNqnkn9GZP89lQw7I5K-8jRaGzToMvLEufuagwW_gWnBc32bZP6fQyd-8C9qWHGNpQ5h66kn-1501592667894%7D?start=220 HTTP/1.1" 200 None
+Tue, 01 Aug 2017 21:57:47 Public_code.py[line:65] INFO the status_code is 200 
+Tue, 01 Aug 2017 21:57:47 Public_code.py[line:62] INFO there remains 2 times to send requests 
+Tue, 01 Aug 2017 21:57:47 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cn
+Tue, 01 Aug 2017 21:57:47 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "GET /%7BPHhEB_G3k-2cXrSywQv7726y0KbIHWO00aVkYHvqdDviO360KxhXkJIjfNqnkn9GZP89lQw7I5K-8jRaGzToMvLEufuagwW_gWnBc32bZP6fQyd-8C9qWHGNpQ5h66kn-1501592667894%7D?start=225 HTTP/1.1" 200 None
+Tue, 01 Aug 2017 21:57:47 Public_code.py[line:65] INFO the status_code is 200 
+Tue, 01 Aug 2017 21:57:47 Public_code.py[line:62] INFO there remains 2 times to send requests 
+Tue, 01 Aug 2017 21:57:47 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cn
+Tue, 01 Aug 2017 21:57:48 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "GET /%7BPHhEB_G3k-2cXrSywQv7726y0KbIHWO00aVkYHvqdDviO360KxhXkJIjfNqnkn9GZP89lQw7I5K-8jRaGzToMvLEufuagwW_gWnBc32bZP6fQyd-8C9qWHGNpQ5h66kn-1501592667894%7D?start=230 HTTP/1.1" 200 None
+Tue, 01 Aug 2017 21:57:48 Public_code.py[line:65] INFO the status_code is 200 
+Tue, 01 Aug 2017 21:57:48 Public_code.py[line:62] INFO there remains 2 times to send requests 
+Tue, 01 Aug 2017 21:57:48 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cn
+Tue, 01 Aug 2017 21:57:53 Public_code.py[line:69] ERROR HTTPConnectionPool(host='www.gsxt.gov.cn', port=80): Read timed out. (read timeout=5)
+Tue, 01 Aug 2017 21:57:53 Public_code.py[line:62] INFO there remains 1 times to send requests 
+Tue, 01 Aug 2017 21:57:53 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cn
+Tue, 01 Aug 2017 21:57:53 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "GET /%7BPHhEB_G3k-2cXrSywQv7726y0KbIHWO00aVkYHvqdDviO360KxhXkJIjfNqnkn9GZP89lQw7I5K-8jRaGzToMvLEufuagwW_gWnBc32bZP6fQyd-8C9qWHGNpQ5h66kn-1501592667894%7D?start=235 HTTP/1.1" 200 None
+Tue, 01 Aug 2017 21:57:53 Public_code.py[line:65] INFO the status_code is 200 
+Tue, 01 Aug 2017 21:57:53 Public_code.py[line:185] INFO execute clear: 0
+Tue, 01 Aug 2017 22:00:16 Public_code.py[line:28] INFO connect is success!
+Tue, 01 Aug 2017 22:01:23 Public_code.py[line:28] INFO connect is success!
+Tue, 01 Aug 2017 22:02:09 Public_code.py[line:28] INFO connect is success!
+Tue, 01 Aug 2017 22:04:22 Public_code.py[line:28] INFO connect is success!
+Tue, 01 Aug 2017 22:05:16 Public_code.py[line:28] INFO connect is success!
+Tue, 01 Aug 2017 22:05:16 Public_code.py[line:62] INFO there remains 2 times to send requests 
+Tue, 01 Aug 2017 22:05:16 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cn
+Tue, 01 Aug 2017 22:05:17 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "GET /%7BPHhEB_G3k-2cXrSywQv777FsTQ29gB6Q4UKf7XSQIB2PI2VxMdwgNWGPOZqSeIIzmtIbzRU8GRlfRxPV7RMcl1GAGundcy8y9YEphe2JcG-cPPjsb7AqMKyt7ZDU8_l6Kt20O2TJU2ZurYUxsEASbQ-1501592667872%7D HTTP/1.1" 200 None
+Tue, 01 Aug 2017 22:05:17 Public_code.py[line:65] INFO the status_code is 200 
+Tue, 01 Aug 2017 22:05:17 Public_code.py[line:152] INFO freeze: 0
+Tue, 01 Aug 2017 22:05:17 Public_code.py[line:181] INFO 暂无 freeze信息
+Tue, 01 Aug 2017 22:05:17 Public_code.py[line:185] INFO execute freeze: 0
+Tue, 01 Aug 2017 22:08:28 Public_code.py[line:28] INFO connect is success!
+Tue, 01 Aug 2017 22:08:28 Public_code.py[line:62] INFO there remains 2 times to send requests 
+Tue, 01 Aug 2017 22:08:28 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cn
+Tue, 01 Aug 2017 22:08:28 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "GET /%7BPHhEB_G3k-2cXrSywQv776DHf1h4-yMCY-8VthX0vaIBTElSQpZREO7ZVU7wBOM8ZP89lQw7I5K-8jRaGzToMvLEufuagwW_gWnBc32bZP6fQyd-8C9qWHGNpQ5h66kn-1501592667895%7D HTTP/1.1" 200 None
+Tue, 01 Aug 2017 22:08:28 Public_code.py[line:65] INFO the status_code is 200 
+Tue, 01 Aug 2017 22:08:28 Public_code.py[line:152] INFO mort: 0
+Tue, 01 Aug 2017 22:08:28 Public_code.py[line:181] INFO 暂无 mort信息
+Tue, 01 Aug 2017 22:08:28 Public_code.py[line:185] INFO execute mort: 0
+Tue, 01 Aug 2017 22:10:33 Public_code.py[line:28] INFO connect is success!
+Tue, 01 Aug 2017 22:10:33 Public_code.py[line:62] INFO there remains 2 times to send requests 
+Tue, 01 Aug 2017 22:10:33 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cn
+Tue, 01 Aug 2017 22:10:33 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "GET /%7BPHhEB_G3k-2cXrSywQv779GV0YbXH6NO6hv6T7gQ4JsBTElSQpZREO7ZVU7wBOM8ZP89lQw7I5K-8jRaGzToMvLEufuagwW_gWnBc32bZP6fQyd-8C9qWHGNpQ5h66kn-1501592667899%7D HTTP/1.1" 200 None
+Tue, 01 Aug 2017 22:10:33 Public_code.py[line:65] INFO the status_code is 200 
+Tue, 01 Aug 2017 22:10:33 Public_code.py[line:152] INFO permit: 1
+Tue, 01 Aug 2017 22:10:33 Public_code.py[line:185] INFO execute permit: 0

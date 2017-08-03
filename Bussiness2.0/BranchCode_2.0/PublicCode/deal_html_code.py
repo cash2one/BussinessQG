@@ -55,6 +55,8 @@ def remove_symbol(string):
         string = None
     else:
         string = re.sub('\s','',string)
+        pattetn = re.compile(u'&nbsp')
+        string = pattetn.sub('', string)
         pattern = re.compile(r'<[^>]+>', re.S)
         string = pattern.sub('', string)
     return string

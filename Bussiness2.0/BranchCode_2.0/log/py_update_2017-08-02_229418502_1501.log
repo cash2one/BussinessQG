@@ -1,0 +1,923 @@
+Wed, 02 Aug 2017 09:43:24 Public_code.py[line:28] INFO connect is success!
+Wed, 02 Aug 2017 09:43:24 QGGS_basic.py[line:281] ERROR basic error tuple index out of range
+Wed, 02 Aug 2017 09:43:43 Public_code.py[line:28] INFO connect is success!
+Wed, 02 Aug 2017 09:43:44 Image.py[line:397] DEBUG Importing BmpImagePlugin
+Wed, 02 Aug 2017 09:43:44 Image.py[line:397] DEBUG Importing BufrStubImagePlugin
+Wed, 02 Aug 2017 09:43:44 Image.py[line:397] DEBUG Importing CurImagePlugin
+Wed, 02 Aug 2017 09:43:44 Image.py[line:397] DEBUG Importing DcxImagePlugin
+Wed, 02 Aug 2017 09:43:44 Image.py[line:397] DEBUG Importing DdsImagePlugin
+Wed, 02 Aug 2017 09:43:44 Image.py[line:397] DEBUG Importing EpsImagePlugin
+Wed, 02 Aug 2017 09:43:44 Image.py[line:397] DEBUG Importing FitsStubImagePlugin
+Wed, 02 Aug 2017 09:43:44 Image.py[line:397] DEBUG Importing FliImagePlugin
+Wed, 02 Aug 2017 09:43:44 Image.py[line:397] DEBUG Importing FpxImagePlugin
+Wed, 02 Aug 2017 09:43:44 Image.py[line:397] DEBUG Importing FtexImagePlugin
+Wed, 02 Aug 2017 09:43:44 Image.py[line:397] DEBUG Importing GbrImagePlugin
+Wed, 02 Aug 2017 09:43:44 Image.py[line:397] DEBUG Importing GifImagePlugin
+Wed, 02 Aug 2017 09:43:44 Image.py[line:397] DEBUG Importing GribStubImagePlugin
+Wed, 02 Aug 2017 09:43:44 Image.py[line:397] DEBUG Importing Hdf5StubImagePlugin
+Wed, 02 Aug 2017 09:43:44 Image.py[line:397] DEBUG Importing IcnsImagePlugin
+Wed, 02 Aug 2017 09:43:44 Image.py[line:397] DEBUG Importing IcoImagePlugin
+Wed, 02 Aug 2017 09:43:44 Image.py[line:397] DEBUG Importing ImImagePlugin
+Wed, 02 Aug 2017 09:43:44 Image.py[line:397] DEBUG Importing ImtImagePlugin
+Wed, 02 Aug 2017 09:43:44 Image.py[line:397] DEBUG Importing IptcImagePlugin
+Wed, 02 Aug 2017 09:43:44 Image.py[line:397] DEBUG Importing JpegImagePlugin
+Wed, 02 Aug 2017 09:43:44 Image.py[line:397] DEBUG Importing Jpeg2KImagePlugin
+Wed, 02 Aug 2017 09:43:44 Image.py[line:397] DEBUG Importing McIdasImagePlugin
+Wed, 02 Aug 2017 09:43:44 Image.py[line:397] DEBUG Importing MicImagePlugin
+Wed, 02 Aug 2017 09:43:44 Image.py[line:397] DEBUG Importing MpegImagePlugin
+Wed, 02 Aug 2017 09:43:44 Image.py[line:397] DEBUG Importing MpoImagePlugin
+Wed, 02 Aug 2017 09:43:44 Image.py[line:397] DEBUG Importing MspImagePlugin
+Wed, 02 Aug 2017 09:43:44 Image.py[line:397] DEBUG Importing PalmImagePlugin
+Wed, 02 Aug 2017 09:43:44 Image.py[line:397] DEBUG Importing PcdImagePlugin
+Wed, 02 Aug 2017 09:43:44 Image.py[line:397] DEBUG Importing PcxImagePlugin
+Wed, 02 Aug 2017 09:43:44 Image.py[line:397] DEBUG Importing PdfImagePlugin
+Wed, 02 Aug 2017 09:43:44 Image.py[line:397] DEBUG Importing PixarImagePlugin
+Wed, 02 Aug 2017 09:43:44 Image.py[line:397] DEBUG Importing PngImagePlugin
+Wed, 02 Aug 2017 09:43:44 Image.py[line:397] DEBUG Importing PpmImagePlugin
+Wed, 02 Aug 2017 09:43:44 Image.py[line:397] DEBUG Importing PsdImagePlugin
+Wed, 02 Aug 2017 09:43:44 Image.py[line:397] DEBUG Importing SgiImagePlugin
+Wed, 02 Aug 2017 09:43:44 Image.py[line:397] DEBUG Importing SpiderImagePlugin
+Wed, 02 Aug 2017 09:43:44 Image.py[line:397] DEBUG Importing SunImagePlugin
+Wed, 02 Aug 2017 09:43:44 Image.py[line:397] DEBUG Importing TgaImagePlugin
+Wed, 02 Aug 2017 09:43:44 Image.py[line:397] DEBUG Importing TiffImagePlugin
+Wed, 02 Aug 2017 09:43:44 Image.py[line:397] DEBUG Importing WebPImagePlugin
+Wed, 02 Aug 2017 09:43:44 Image.py[line:397] DEBUG Importing WmfImagePlugin
+Wed, 02 Aug 2017 09:43:44 Image.py[line:397] DEBUG Importing XbmImagePlugin
+Wed, 02 Aug 2017 09:43:44 Image.py[line:397] DEBUG Importing XpmImagePlugin
+Wed, 02 Aug 2017 09:43:44 Image.py[line:397] DEBUG Importing XVThumbImagePlugin
+Wed, 02 Aug 2017 09:44:48 Public_code.py[line:28] INFO connect is success!
+Wed, 02 Aug 2017 09:44:48 Image.py[line:397] DEBUG Importing BmpImagePlugin
+Wed, 02 Aug 2017 09:44:48 Image.py[line:397] DEBUG Importing BufrStubImagePlugin
+Wed, 02 Aug 2017 09:44:48 Image.py[line:397] DEBUG Importing CurImagePlugin
+Wed, 02 Aug 2017 09:44:48 Image.py[line:397] DEBUG Importing DcxImagePlugin
+Wed, 02 Aug 2017 09:44:48 Image.py[line:397] DEBUG Importing DdsImagePlugin
+Wed, 02 Aug 2017 09:44:48 Image.py[line:397] DEBUG Importing EpsImagePlugin
+Wed, 02 Aug 2017 09:44:48 Image.py[line:397] DEBUG Importing FitsStubImagePlugin
+Wed, 02 Aug 2017 09:44:48 Image.py[line:397] DEBUG Importing FliImagePlugin
+Wed, 02 Aug 2017 09:44:48 Image.py[line:397] DEBUG Importing FpxImagePlugin
+Wed, 02 Aug 2017 09:44:48 Image.py[line:397] DEBUG Importing FtexImagePlugin
+Wed, 02 Aug 2017 09:44:48 Image.py[line:397] DEBUG Importing GbrImagePlugin
+Wed, 02 Aug 2017 09:44:48 Image.py[line:397] DEBUG Importing GifImagePlugin
+Wed, 02 Aug 2017 09:44:48 Image.py[line:397] DEBUG Importing GribStubImagePlugin
+Wed, 02 Aug 2017 09:44:48 Image.py[line:397] DEBUG Importing Hdf5StubImagePlugin
+Wed, 02 Aug 2017 09:44:48 Image.py[line:397] DEBUG Importing IcnsImagePlugin
+Wed, 02 Aug 2017 09:44:48 Image.py[line:397] DEBUG Importing IcoImagePlugin
+Wed, 02 Aug 2017 09:44:48 Image.py[line:397] DEBUG Importing ImImagePlugin
+Wed, 02 Aug 2017 09:44:48 Image.py[line:397] DEBUG Importing ImtImagePlugin
+Wed, 02 Aug 2017 09:44:48 Image.py[line:397] DEBUG Importing IptcImagePlugin
+Wed, 02 Aug 2017 09:44:48 Image.py[line:397] DEBUG Importing JpegImagePlugin
+Wed, 02 Aug 2017 09:44:48 Image.py[line:397] DEBUG Importing Jpeg2KImagePlugin
+Wed, 02 Aug 2017 09:44:48 Image.py[line:397] DEBUG Importing McIdasImagePlugin
+Wed, 02 Aug 2017 09:44:48 Image.py[line:397] DEBUG Importing MicImagePlugin
+Wed, 02 Aug 2017 09:44:48 Image.py[line:397] DEBUG Importing MpegImagePlugin
+Wed, 02 Aug 2017 09:44:48 Image.py[line:397] DEBUG Importing MpoImagePlugin
+Wed, 02 Aug 2017 09:44:48 Image.py[line:397] DEBUG Importing MspImagePlugin
+Wed, 02 Aug 2017 09:44:48 Image.py[line:397] DEBUG Importing PalmImagePlugin
+Wed, 02 Aug 2017 09:44:48 Image.py[line:397] DEBUG Importing PcdImagePlugin
+Wed, 02 Aug 2017 09:44:48 Image.py[line:397] DEBUG Importing PcxImagePlugin
+Wed, 02 Aug 2017 09:44:48 Image.py[line:397] DEBUG Importing PdfImagePlugin
+Wed, 02 Aug 2017 09:44:48 Image.py[line:397] DEBUG Importing PixarImagePlugin
+Wed, 02 Aug 2017 09:44:48 Image.py[line:397] DEBUG Importing PngImagePlugin
+Wed, 02 Aug 2017 09:44:48 Image.py[line:397] DEBUG Importing PpmImagePlugin
+Wed, 02 Aug 2017 09:44:48 Image.py[line:397] DEBUG Importing PsdImagePlugin
+Wed, 02 Aug 2017 09:44:49 Image.py[line:397] DEBUG Importing SgiImagePlugin
+Wed, 02 Aug 2017 09:44:49 Image.py[line:397] DEBUG Importing SpiderImagePlugin
+Wed, 02 Aug 2017 09:44:49 Image.py[line:397] DEBUG Importing SunImagePlugin
+Wed, 02 Aug 2017 09:44:49 Image.py[line:397] DEBUG Importing TgaImagePlugin
+Wed, 02 Aug 2017 09:44:49 Image.py[line:397] DEBUG Importing TiffImagePlugin
+Wed, 02 Aug 2017 09:44:49 Image.py[line:397] DEBUG Importing WebPImagePlugin
+Wed, 02 Aug 2017 09:44:49 Image.py[line:397] DEBUG Importing WmfImagePlugin
+Wed, 02 Aug 2017 09:44:49 Image.py[line:397] DEBUG Importing XbmImagePlugin
+Wed, 02 Aug 2017 09:44:49 Image.py[line:397] DEBUG Importing XpmImagePlugin
+Wed, 02 Aug 2017 09:44:49 Image.py[line:397] DEBUG Importing XVThumbImagePlugin
+Wed, 02 Aug 2017 09:45:03 Public_code.py[line:28] INFO connect is success!
+Wed, 02 Aug 2017 09:45:03 QGGS_basic.py[line:282] ERROR basic error tuple index out of range
+Wed, 02 Aug 2017 09:46:31 Public_code.py[line:28] INFO connect is success!
+Wed, 02 Aug 2017 09:46:31 QGGS_basic.py[line:282] ERROR basic error tuple index out of range
+Wed, 02 Aug 2017 09:51:03 Public_code.py[line:28] INFO connect is success!
+Wed, 02 Aug 2017 09:51:03 QGGS_basic.py[line:282] ERROR basic error tuple index out of range
+Wed, 02 Aug 2017 09:52:49 Public_code.py[line:28] INFO connect is success!
+Wed, 02 Aug 2017 09:52:49 Public_code.py[line:62] INFO there remains 2 times to send requests 
+Wed, 02 Aug 2017 09:52:49 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cn
+Wed, 02 Aug 2017 09:52:49 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "GET /%7B098EkvYOHmG5Uu3y4gubl337FXY7qlm1xKTacKOw6d2bNySxjehpp2giXfnogfmwB2Hrjt_UFXxxorOooGwko6tkLu5dKMXWcuXcSlja-ScUppEC0p76_WUsI4xQpipK1bs1kM5Rzx5F4y_ErLwPOw-1501637290654%7D HTTP/1.1" 200 None
+Wed, 02 Aug 2017 09:52:49 Public_code.py[line:65] INFO the status_code is 200 
+Wed, 02 Aug 2017 09:52:50 QGGS_basic.py[line:247] INFO update basic :1
+Wed, 02 Aug 2017 09:59:47 Public_code.py[line:28] INFO connect is success!
+Wed, 02 Aug 2017 09:59:47 Public_code.py[line:62] INFO there remains 2 times to send requests 
+Wed, 02 Aug 2017 09:59:47 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cn
+Wed, 02 Aug 2017 09:59:48 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "GET /%7BPHhEB_G3k-2cXrSywQv77ykXq1TUtkIZWuzPILXoetHaN0_0AGMHVdrqvYQWMebWVgPNJDD286q0SoeI1He1k_EABHBUQSxKWGOVfSWnFyMywTDOt9KluRuOqOJtKa8o-1501592667871%7D HTTP/1.1" 200 None
+Wed, 02 Aug 2017 09:59:48 Public_code.py[line:65] INFO the status_code is 200 
+Wed, 02 Aug 2017 09:59:48 Public_code.py[line:184] INFO 网页打开出错！！
+Wed, 02 Aug 2017 09:59:48 Public_code.py[line:185] INFO execute black: 100000004
+Wed, 02 Aug 2017 10:00:37 Public_code.py[line:28] INFO connect is success!
+Wed, 02 Aug 2017 10:00:37 Public_code.py[line:62] INFO there remains 2 times to send requests 
+Wed, 02 Aug 2017 10:00:37 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cnhttp
+Wed, 02 Aug 2017 10:00:38 Public_code.py[line:69] ERROR HTTPConnectionPool(host='www.gsxt.gov.cnhttp', port=80): Max retries exceeded with url: //www.gsxt.gov.cn/%7BSJd8u6CoZYwKbW6mAZJvS_mpPw8VhQyjxXY3oVPkZsANDy1HFbESaORDN8Xf7v_HN-lY81jKcJ6Evwbtls6mxZc5rQT35uSUraB-RKUm8OwCqtFSO3ZmGUDC90LZrEY6-1501638636258%7D (Caused by NewConnectionError('<requests.packages.urllib3.connection.HTTPConnection object at 0x00000000044354A8>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed',))
+Wed, 02 Aug 2017 10:00:39 Public_code.py[line:62] INFO there remains 1 times to send requests 
+Wed, 02 Aug 2017 10:00:39 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cnhttp
+Wed, 02 Aug 2017 10:00:40 Public_code.py[line:69] ERROR HTTPConnectionPool(host='www.gsxt.gov.cnhttp', port=80): Max retries exceeded with url: //www.gsxt.gov.cn/%7BSJd8u6CoZYwKbW6mAZJvS_mpPw8VhQyjxXY3oVPkZsANDy1HFbESaORDN8Xf7v_HN-lY81jKcJ6Evwbtls6mxZc5rQT35uSUraB-RKUm8OwCqtFSO3ZmGUDC90LZrEY6-1501638636258%7D (Caused by NewConnectionError('<requests.packages.urllib3.connection.HTTPConnection object at 0x0000000004435C18>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed',))
+Wed, 02 Aug 2017 10:00:40 Public_code.py[line:62] INFO there remains 0 times to send requests 
+Wed, 02 Aug 2017 10:00:40 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cnhttp
+Wed, 02 Aug 2017 10:00:41 Public_code.py[line:69] ERROR HTTPConnectionPool(host='www.gsxt.gov.cnhttp', port=80): Max retries exceeded with url: //www.gsxt.gov.cn/%7BSJd8u6CoZYwKbW6mAZJvS_mpPw8VhQyjxXY3oVPkZsANDy1HFbESaORDN8Xf7v_HN-lY81jKcJ6Evwbtls6mxZc5rQT35uSUraB-RKUm8OwCqtFSO3ZmGUDC90LZrEY6-1501638636258%7D (Caused by NewConnectionError('<requests.packages.urllib3.connection.HTTPConnection object at 0x0000000004584390>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed',))
+Wed, 02 Aug 2017 10:00:41 Public_code.py[line:75] ERROR 网站暂时无法访问！！!
+Wed, 02 Aug 2017 10:00:41 Public_code.py[line:184] INFO 网页打开出错！！
+Wed, 02 Aug 2017 10:00:41 Public_code.py[line:185] INFO execute black: 100000004
+Wed, 02 Aug 2017 10:01:46 Public_code.py[line:28] INFO connect is success!
+Wed, 02 Aug 2017 10:01:46 Public_code.py[line:62] INFO there remains 2 times to send requests 
+Wed, 02 Aug 2017 10:01:46 Public_code.py[line:69] ERROR Invalid URL '/%7B098EkvYOHmG5Uu3y4gublygGRqYTfamVI-lsZmJjNIG5toFyv73yrLcM7a83jR1B6id7rTn-SI8ZcE-Hbn9jduxy7Ivk_JvI3Wn0Bk2-S32nmFP7sfFW9QvxnM-tOxNZ-1501637293288%7D': No schema supplied. Perhaps you meant http:///%7B098EkvYOHmG5Uu3y4gublygGRqYTfamVI-lsZmJjNIG5toFyv73yrLcM7a83jR1B6id7rTn-SI8ZcE-Hbn9jduxy7Ivk_JvI3Wn0Bk2-S32nmFP7sfFW9QvxnM-tOxNZ-1501637293288%7D?
+Wed, 02 Aug 2017 10:01:46 Public_code.py[line:62] INFO there remains 1 times to send requests 
+Wed, 02 Aug 2017 10:01:46 Public_code.py[line:69] ERROR Invalid URL '/%7B098EkvYOHmG5Uu3y4gublygGRqYTfamVI-lsZmJjNIG5toFyv73yrLcM7a83jR1B6id7rTn-SI8ZcE-Hbn9jduxy7Ivk_JvI3Wn0Bk2-S32nmFP7sfFW9QvxnM-tOxNZ-1501637293288%7D': No schema supplied. Perhaps you meant http:///%7B098EkvYOHmG5Uu3y4gublygGRqYTfamVI-lsZmJjNIG5toFyv73yrLcM7a83jR1B6id7rTn-SI8ZcE-Hbn9jduxy7Ivk_JvI3Wn0Bk2-S32nmFP7sfFW9QvxnM-tOxNZ-1501637293288%7D?
+Wed, 02 Aug 2017 10:01:47 Public_code.py[line:62] INFO there remains 0 times to send requests 
+Wed, 02 Aug 2017 10:01:47 Public_code.py[line:69] ERROR Invalid URL '/%7B098EkvYOHmG5Uu3y4gublygGRqYTfamVI-lsZmJjNIG5toFyv73yrLcM7a83jR1B6id7rTn-SI8ZcE-Hbn9jduxy7Ivk_JvI3Wn0Bk2-S32nmFP7sfFW9QvxnM-tOxNZ-1501637293288%7D': No schema supplied. Perhaps you meant http:///%7B098EkvYOHmG5Uu3y4gublygGRqYTfamVI-lsZmJjNIG5toFyv73yrLcM7a83jR1B6id7rTn-SI8ZcE-Hbn9jduxy7Ivk_JvI3Wn0Bk2-S32nmFP7sfFW9QvxnM-tOxNZ-1501637293288%7D?
+Wed, 02 Aug 2017 10:01:48 Public_code.py[line:75] ERROR 网站暂时无法访问！！!
+Wed, 02 Aug 2017 10:01:48 Public_code.py[line:184] INFO 网页打开出错！！
+Wed, 02 Aug 2017 10:01:48 Public_code.py[line:185] INFO execute black: 100000004
+Wed, 02 Aug 2017 10:02:48 Public_code.py[line:28] INFO connect is success!
+Wed, 02 Aug 2017 10:02:48 Public_code.py[line:62] INFO there remains 2 times to send requests 
+Wed, 02 Aug 2017 10:02:48 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cn
+Wed, 02 Aug 2017 10:02:49 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "GET /%7B098EkvYOHmG5Uu3y4gublygGRqYTfamVI-lsZmJjNIG5toFyv73yrLcM7a83jR1B6id7rTn-SI8ZcE-Hbn9jduxy7Ivk_JvI3Wn0Bk2-S32nmFP7sfFW9QvxnM-tOxNZ-1501637293288%7D HTTP/1.1" 200 None
+Wed, 02 Aug 2017 10:02:49 Public_code.py[line:65] INFO the status_code is 200 
+Wed, 02 Aug 2017 10:02:49 Public_code.py[line:152] INFO black: 0
+Wed, 02 Aug 2017 10:02:49 Public_code.py[line:181] INFO 暂无 black信息
+Wed, 02 Aug 2017 10:02:49 Public_code.py[line:185] INFO execute black: 0
+Wed, 02 Aug 2017 10:07:27 Public_code.py[line:28] INFO connect is success!
+Wed, 02 Aug 2017 10:07:27 Public_code.py[line:62] INFO there remains 2 times to send requests 
+Wed, 02 Aug 2017 10:07:27 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cn
+Wed, 02 Aug 2017 10:07:28 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "GET /%7BSJd8u6CoZYwKbW6mAZJvS2YN9v2X0SHwEnoBbudyh4O5lcQ_2rHcyZvjWrolaR4Eyu-nt_DSeKKktrGdxzF1u5IvQmvoIttHgUSOGRSfE2LyiKRrReRuZdzN5bf4_oaL-1501638636276%7D?start=0 HTTP/1.1" 200 None
+Wed, 02 Aug 2017 10:07:28 Public_code.py[line:65] INFO the status_code is 200 
+Wed, 02 Aug 2017 10:07:28 Public_code.py[line:62] INFO there remains 2 times to send requests 
+Wed, 02 Aug 2017 10:07:28 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cn
+Wed, 02 Aug 2017 10:07:28 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "GET /%7BSJd8u6CoZYwKbW6mAZJvS2YN9v2X0SHwEnoBbudyh4O5lcQ_2rHcyZvjWrolaR4Eyu-nt_DSeKKktrGdxzF1u5IvQmvoIttHgUSOGRSfE2LyiKRrReRuZdzN5bf4_oaL-1501638636276%7D HTTP/1.1" 200 None
+Wed, 02 Aug 2017 10:07:28 Public_code.py[line:65] INFO the status_code is 200 
+Wed, 02 Aug 2017 10:07:28 Public_code.py[line:107] INFO branch: 236
+Wed, 02 Aug 2017 10:10:10 Public_code.py[line:28] INFO connect is success!
+Wed, 02 Aug 2017 10:10:10 Public_code.py[line:62] INFO there remains 2 times to send requests 
+Wed, 02 Aug 2017 10:10:10 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cn
+Wed, 02 Aug 2017 10:10:11 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "GET /%7BSJd8u6CoZYwKbW6mAZJvS0siA7tgi7JDVCW9d-Ofnqmw94bguYoHMHqh6ue0PfwJQwZ_HwZ7DSnVUgXDHEaXXMp67b0LoS7WHiXbANeGERmzPN_7tH9KSKKFAha-6t6t-1501638636267%7D?start=0 HTTP/1.1" 200 None
+Wed, 02 Aug 2017 10:10:11 Public_code.py[line:65] INFO the status_code is 200 
+Wed, 02 Aug 2017 10:10:11 Public_code.py[line:62] INFO there remains 2 times to send requests 
+Wed, 02 Aug 2017 10:10:11 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cn
+Wed, 02 Aug 2017 10:10:11 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "GET /%7BSJd8u6CoZYwKbW6mAZJvS0siA7tgi7JDVCW9d-Ofnqmw94bguYoHMHqh6ue0PfwJQwZ_HwZ7DSnVUgXDHEaXXMp67b0LoS7WHiXbANeGERmzPN_7tH9KSKKFAha-6t6t-1501638636267%7D HTTP/1.1" 200 None
+Wed, 02 Aug 2017 10:10:11 Public_code.py[line:65] INFO the status_code is 200 
+Wed, 02 Aug 2017 10:10:11 Public_code.py[line:107] INFO brand: 137
+Wed, 02 Aug 2017 10:10:57 Public_code.py[line:28] INFO connect is success!
+Wed, 02 Aug 2017 10:10:57 Public_code.py[line:62] INFO there remains 2 times to send requests 
+Wed, 02 Aug 2017 10:10:57 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cn
+Wed, 02 Aug 2017 10:10:57 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "GET /%7BSJd8u6CoZYwKbW6mAZJvS0siA7tgi7JDVCW9d-Ofnqmw94bguYoHMHqh6ue0PfwJQwZ_HwZ7DSnVUgXDHEaXXMp67b0LoS7WHiXbANeGERmzPN_7tH9KSKKFAha-6t6t-1501638636267%7D?start=0 HTTP/1.1" 200 None
+Wed, 02 Aug 2017 10:10:57 Public_code.py[line:65] INFO the status_code is 200 
+Wed, 02 Aug 2017 10:10:57 Public_code.py[line:62] INFO there remains 2 times to send requests 
+Wed, 02 Aug 2017 10:10:57 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cn
+Wed, 02 Aug 2017 10:10:58 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "GET /%7BSJd8u6CoZYwKbW6mAZJvS0siA7tgi7JDVCW9d-Ofnqmw94bguYoHMHqh6ue0PfwJQwZ_HwZ7DSnVUgXDHEaXXMp67b0LoS7WHiXbANeGERmzPN_7tH9KSKKFAha-6t6t-1501638636267%7D HTTP/1.1" 200 None
+Wed, 02 Aug 2017 10:10:58 Public_code.py[line:65] INFO the status_code is 200 
+Wed, 02 Aug 2017 10:10:58 Public_code.py[line:107] INFO brand: 137
+Wed, 02 Aug 2017 10:12:16 Public_code.py[line:28] INFO connect is success!
+Wed, 02 Aug 2017 10:12:19 Image.py[line:397] DEBUG Importing BmpImagePlugin
+Wed, 02 Aug 2017 10:12:19 Image.py[line:397] DEBUG Importing BufrStubImagePlugin
+Wed, 02 Aug 2017 10:12:19 Image.py[line:397] DEBUG Importing CurImagePlugin
+Wed, 02 Aug 2017 10:12:19 Image.py[line:397] DEBUG Importing DcxImagePlugin
+Wed, 02 Aug 2017 10:12:19 Image.py[line:397] DEBUG Importing DdsImagePlugin
+Wed, 02 Aug 2017 10:12:19 Image.py[line:397] DEBUG Importing EpsImagePlugin
+Wed, 02 Aug 2017 10:12:19 Image.py[line:397] DEBUG Importing FitsStubImagePlugin
+Wed, 02 Aug 2017 10:12:19 Image.py[line:397] DEBUG Importing FliImagePlugin
+Wed, 02 Aug 2017 10:12:19 Image.py[line:397] DEBUG Importing FpxImagePlugin
+Wed, 02 Aug 2017 10:12:19 Image.py[line:397] DEBUG Importing FtexImagePlugin
+Wed, 02 Aug 2017 10:12:19 Image.py[line:397] DEBUG Importing GbrImagePlugin
+Wed, 02 Aug 2017 10:12:19 Image.py[line:397] DEBUG Importing GifImagePlugin
+Wed, 02 Aug 2017 10:12:19 Image.py[line:397] DEBUG Importing GribStubImagePlugin
+Wed, 02 Aug 2017 10:12:19 Image.py[line:397] DEBUG Importing Hdf5StubImagePlugin
+Wed, 02 Aug 2017 10:12:19 Image.py[line:397] DEBUG Importing IcnsImagePlugin
+Wed, 02 Aug 2017 10:12:19 Image.py[line:397] DEBUG Importing IcoImagePlugin
+Wed, 02 Aug 2017 10:12:19 Image.py[line:397] DEBUG Importing ImImagePlugin
+Wed, 02 Aug 2017 10:12:19 Image.py[line:397] DEBUG Importing ImtImagePlugin
+Wed, 02 Aug 2017 10:12:19 Image.py[line:397] DEBUG Importing IptcImagePlugin
+Wed, 02 Aug 2017 10:12:19 Image.py[line:397] DEBUG Importing JpegImagePlugin
+Wed, 02 Aug 2017 10:12:19 Image.py[line:397] DEBUG Importing Jpeg2KImagePlugin
+Wed, 02 Aug 2017 10:12:19 Image.py[line:397] DEBUG Importing McIdasImagePlugin
+Wed, 02 Aug 2017 10:12:19 Image.py[line:397] DEBUG Importing MicImagePlugin
+Wed, 02 Aug 2017 10:12:19 Image.py[line:397] DEBUG Importing MpegImagePlugin
+Wed, 02 Aug 2017 10:12:19 Image.py[line:397] DEBUG Importing MpoImagePlugin
+Wed, 02 Aug 2017 10:12:19 Image.py[line:397] DEBUG Importing MspImagePlugin
+Wed, 02 Aug 2017 10:12:19 Image.py[line:397] DEBUG Importing PalmImagePlugin
+Wed, 02 Aug 2017 10:12:19 Image.py[line:397] DEBUG Importing PcdImagePlugin
+Wed, 02 Aug 2017 10:12:19 Image.py[line:397] DEBUG Importing PcxImagePlugin
+Wed, 02 Aug 2017 10:12:19 Image.py[line:397] DEBUG Importing PdfImagePlugin
+Wed, 02 Aug 2017 10:12:19 Image.py[line:397] DEBUG Importing PixarImagePlugin
+Wed, 02 Aug 2017 10:12:19 Image.py[line:397] DEBUG Importing PngImagePlugin
+Wed, 02 Aug 2017 10:12:19 Image.py[line:397] DEBUG Importing PpmImagePlugin
+Wed, 02 Aug 2017 10:12:20 Image.py[line:397] DEBUG Importing PsdImagePlugin
+Wed, 02 Aug 2017 10:12:20 Image.py[line:397] DEBUG Importing SgiImagePlugin
+Wed, 02 Aug 2017 10:12:20 Image.py[line:397] DEBUG Importing SpiderImagePlugin
+Wed, 02 Aug 2017 10:12:20 Image.py[line:397] DEBUG Importing SunImagePlugin
+Wed, 02 Aug 2017 10:12:20 Image.py[line:397] DEBUG Importing TgaImagePlugin
+Wed, 02 Aug 2017 10:12:20 Image.py[line:397] DEBUG Importing TiffImagePlugin
+Wed, 02 Aug 2017 10:12:20 Image.py[line:397] DEBUG Importing WebPImagePlugin
+Wed, 02 Aug 2017 10:12:20 Image.py[line:397] DEBUG Importing WmfImagePlugin
+Wed, 02 Aug 2017 10:12:20 Image.py[line:397] DEBUG Importing XbmImagePlugin
+Wed, 02 Aug 2017 10:12:20 Image.py[line:397] DEBUG Importing XpmImagePlugin
+Wed, 02 Aug 2017 10:12:20 Image.py[line:397] DEBUG Importing XVThumbImagePlugin
+Wed, 02 Aug 2017 10:13:21 Public_code.py[line:62] INFO there remains 2 times to send requests 
+Wed, 02 Aug 2017 10:13:22 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cn
+Wed, 02 Aug 2017 10:13:22 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "GET /%7BSJd8u6CoZYwKbW6mAZJvS0siA7tgi7JDVCW9d-Ofnqmw94bguYoHMHqh6ue0PfwJQwZ_HwZ7DSnVUgXDHEaXXMp67b0LoS7WHiXbANeGERmzPN_7tH9KSKKFAha-6t6t-1501638636267%7D?start=0 HTTP/1.1" 200 None
+Wed, 02 Aug 2017 10:13:22 Public_code.py[line:65] INFO the status_code is 200 
+Wed, 02 Aug 2017 10:13:27 Public_code.py[line:62] INFO there remains 2 times to send requests 
+Wed, 02 Aug 2017 10:13:27 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cn
+Wed, 02 Aug 2017 10:13:27 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "GET /%7BSJd8u6CoZYwKbW6mAZJvS0siA7tgi7JDVCW9d-Ofnqmw94bguYoHMHqh6ue0PfwJQwZ_HwZ7DSnVUgXDHEaXXMp67b0LoS7WHiXbANeGERmzPN_7tH9KSKKFAha-6t6t-1501638636267%7D HTTP/1.1" 200 None
+Wed, 02 Aug 2017 10:13:27 Public_code.py[line:65] INFO the status_code is 200 
+Wed, 02 Aug 2017 10:13:32 Public_code.py[line:107] INFO brand: 137
+Wed, 02 Aug 2017 10:17:07 Public_code.py[line:28] INFO connect is success!
+Wed, 02 Aug 2017 10:17:08 Image.py[line:397] DEBUG Importing BmpImagePlugin
+Wed, 02 Aug 2017 10:17:08 Image.py[line:397] DEBUG Importing BufrStubImagePlugin
+Wed, 02 Aug 2017 10:17:08 Image.py[line:397] DEBUG Importing CurImagePlugin
+Wed, 02 Aug 2017 10:17:08 Image.py[line:397] DEBUG Importing DcxImagePlugin
+Wed, 02 Aug 2017 10:17:08 Image.py[line:397] DEBUG Importing DdsImagePlugin
+Wed, 02 Aug 2017 10:17:08 Image.py[line:397] DEBUG Importing EpsImagePlugin
+Wed, 02 Aug 2017 10:17:08 Image.py[line:397] DEBUG Importing FitsStubImagePlugin
+Wed, 02 Aug 2017 10:17:08 Image.py[line:397] DEBUG Importing FliImagePlugin
+Wed, 02 Aug 2017 10:17:08 Image.py[line:397] DEBUG Importing FpxImagePlugin
+Wed, 02 Aug 2017 10:17:08 Image.py[line:397] DEBUG Importing FtexImagePlugin
+Wed, 02 Aug 2017 10:17:08 Image.py[line:397] DEBUG Importing GbrImagePlugin
+Wed, 02 Aug 2017 10:17:08 Image.py[line:397] DEBUG Importing GifImagePlugin
+Wed, 02 Aug 2017 10:17:08 Image.py[line:397] DEBUG Importing GribStubImagePlugin
+Wed, 02 Aug 2017 10:17:08 Image.py[line:397] DEBUG Importing Hdf5StubImagePlugin
+Wed, 02 Aug 2017 10:17:08 Image.py[line:397] DEBUG Importing IcnsImagePlugin
+Wed, 02 Aug 2017 10:17:08 Image.py[line:397] DEBUG Importing IcoImagePlugin
+Wed, 02 Aug 2017 10:17:08 Image.py[line:397] DEBUG Importing ImImagePlugin
+Wed, 02 Aug 2017 10:17:08 Image.py[line:397] DEBUG Importing ImtImagePlugin
+Wed, 02 Aug 2017 10:17:08 Image.py[line:397] DEBUG Importing IptcImagePlugin
+Wed, 02 Aug 2017 10:17:08 Image.py[line:397] DEBUG Importing JpegImagePlugin
+Wed, 02 Aug 2017 10:17:08 Image.py[line:397] DEBUG Importing Jpeg2KImagePlugin
+Wed, 02 Aug 2017 10:17:08 Image.py[line:397] DEBUG Importing McIdasImagePlugin
+Wed, 02 Aug 2017 10:17:08 Image.py[line:397] DEBUG Importing MicImagePlugin
+Wed, 02 Aug 2017 10:17:08 Image.py[line:397] DEBUG Importing MpegImagePlugin
+Wed, 02 Aug 2017 10:17:08 Image.py[line:397] DEBUG Importing MpoImagePlugin
+Wed, 02 Aug 2017 10:17:08 Image.py[line:397] DEBUG Importing MspImagePlugin
+Wed, 02 Aug 2017 10:17:08 Image.py[line:397] DEBUG Importing PalmImagePlugin
+Wed, 02 Aug 2017 10:17:08 Image.py[line:397] DEBUG Importing PcdImagePlugin
+Wed, 02 Aug 2017 10:17:08 Image.py[line:397] DEBUG Importing PcxImagePlugin
+Wed, 02 Aug 2017 10:17:08 Image.py[line:397] DEBUG Importing PdfImagePlugin
+Wed, 02 Aug 2017 10:17:08 Image.py[line:397] DEBUG Importing PixarImagePlugin
+Wed, 02 Aug 2017 10:17:08 Image.py[line:397] DEBUG Importing PngImagePlugin
+Wed, 02 Aug 2017 10:17:08 Image.py[line:397] DEBUG Importing PpmImagePlugin
+Wed, 02 Aug 2017 10:17:08 Image.py[line:397] DEBUG Importing PsdImagePlugin
+Wed, 02 Aug 2017 10:17:08 Image.py[line:397] DEBUG Importing SgiImagePlugin
+Wed, 02 Aug 2017 10:17:08 Image.py[line:397] DEBUG Importing SpiderImagePlugin
+Wed, 02 Aug 2017 10:17:08 Image.py[line:397] DEBUG Importing SunImagePlugin
+Wed, 02 Aug 2017 10:17:08 Image.py[line:397] DEBUG Importing TgaImagePlugin
+Wed, 02 Aug 2017 10:17:08 Image.py[line:397] DEBUG Importing TiffImagePlugin
+Wed, 02 Aug 2017 10:17:08 Image.py[line:397] DEBUG Importing WebPImagePlugin
+Wed, 02 Aug 2017 10:17:08 Image.py[line:397] DEBUG Importing WmfImagePlugin
+Wed, 02 Aug 2017 10:17:08 Image.py[line:397] DEBUG Importing XbmImagePlugin
+Wed, 02 Aug 2017 10:17:08 Image.py[line:397] DEBUG Importing XpmImagePlugin
+Wed, 02 Aug 2017 10:17:08 Image.py[line:397] DEBUG Importing XVThumbImagePlugin
+Wed, 02 Aug 2017 10:18:41 Public_code.py[line:28] INFO connect is success!
+Wed, 02 Aug 2017 10:18:42 Image.py[line:397] DEBUG Importing BmpImagePlugin
+Wed, 02 Aug 2017 10:18:42 Image.py[line:397] DEBUG Importing BufrStubImagePlugin
+Wed, 02 Aug 2017 10:18:42 Image.py[line:397] DEBUG Importing CurImagePlugin
+Wed, 02 Aug 2017 10:18:42 Image.py[line:397] DEBUG Importing DcxImagePlugin
+Wed, 02 Aug 2017 10:18:42 Image.py[line:397] DEBUG Importing DdsImagePlugin
+Wed, 02 Aug 2017 10:18:42 Image.py[line:397] DEBUG Importing EpsImagePlugin
+Wed, 02 Aug 2017 10:18:42 Image.py[line:397] DEBUG Importing FitsStubImagePlugin
+Wed, 02 Aug 2017 10:18:42 Image.py[line:397] DEBUG Importing FliImagePlugin
+Wed, 02 Aug 2017 10:18:42 Image.py[line:397] DEBUG Importing FpxImagePlugin
+Wed, 02 Aug 2017 10:18:42 Image.py[line:397] DEBUG Importing FtexImagePlugin
+Wed, 02 Aug 2017 10:18:42 Image.py[line:397] DEBUG Importing GbrImagePlugin
+Wed, 02 Aug 2017 10:18:42 Image.py[line:397] DEBUG Importing GifImagePlugin
+Wed, 02 Aug 2017 10:18:42 Image.py[line:397] DEBUG Importing GribStubImagePlugin
+Wed, 02 Aug 2017 10:18:42 Image.py[line:397] DEBUG Importing Hdf5StubImagePlugin
+Wed, 02 Aug 2017 10:18:42 Image.py[line:397] DEBUG Importing IcnsImagePlugin
+Wed, 02 Aug 2017 10:18:42 Image.py[line:397] DEBUG Importing IcoImagePlugin
+Wed, 02 Aug 2017 10:18:42 Image.py[line:397] DEBUG Importing ImImagePlugin
+Wed, 02 Aug 2017 10:18:42 Image.py[line:397] DEBUG Importing ImtImagePlugin
+Wed, 02 Aug 2017 10:18:42 Image.py[line:397] DEBUG Importing IptcImagePlugin
+Wed, 02 Aug 2017 10:18:42 Image.py[line:397] DEBUG Importing JpegImagePlugin
+Wed, 02 Aug 2017 10:18:42 Image.py[line:397] DEBUG Importing Jpeg2KImagePlugin
+Wed, 02 Aug 2017 10:18:42 Image.py[line:397] DEBUG Importing McIdasImagePlugin
+Wed, 02 Aug 2017 10:18:42 Image.py[line:397] DEBUG Importing MicImagePlugin
+Wed, 02 Aug 2017 10:18:42 Image.py[line:397] DEBUG Importing MpegImagePlugin
+Wed, 02 Aug 2017 10:18:42 Image.py[line:397] DEBUG Importing MpoImagePlugin
+Wed, 02 Aug 2017 10:18:42 Image.py[line:397] DEBUG Importing MspImagePlugin
+Wed, 02 Aug 2017 10:18:42 Image.py[line:397] DEBUG Importing PalmImagePlugin
+Wed, 02 Aug 2017 10:18:42 Image.py[line:397] DEBUG Importing PcdImagePlugin
+Wed, 02 Aug 2017 10:18:42 Image.py[line:397] DEBUG Importing PcxImagePlugin
+Wed, 02 Aug 2017 10:18:42 Image.py[line:397] DEBUG Importing PdfImagePlugin
+Wed, 02 Aug 2017 10:18:42 Image.py[line:397] DEBUG Importing PixarImagePlugin
+Wed, 02 Aug 2017 10:18:42 Image.py[line:397] DEBUG Importing PngImagePlugin
+Wed, 02 Aug 2017 10:18:42 Image.py[line:397] DEBUG Importing PpmImagePlugin
+Wed, 02 Aug 2017 10:18:42 Image.py[line:397] DEBUG Importing PsdImagePlugin
+Wed, 02 Aug 2017 10:18:42 Image.py[line:397] DEBUG Importing SgiImagePlugin
+Wed, 02 Aug 2017 10:18:42 Image.py[line:397] DEBUG Importing SpiderImagePlugin
+Wed, 02 Aug 2017 10:18:42 Image.py[line:397] DEBUG Importing SunImagePlugin
+Wed, 02 Aug 2017 10:18:42 Image.py[line:397] DEBUG Importing TgaImagePlugin
+Wed, 02 Aug 2017 10:18:42 Image.py[line:397] DEBUG Importing TiffImagePlugin
+Wed, 02 Aug 2017 10:18:42 Image.py[line:397] DEBUG Importing WebPImagePlugin
+Wed, 02 Aug 2017 10:18:42 Image.py[line:397] DEBUG Importing WmfImagePlugin
+Wed, 02 Aug 2017 10:18:42 Image.py[line:397] DEBUG Importing XbmImagePlugin
+Wed, 02 Aug 2017 10:18:42 Image.py[line:397] DEBUG Importing XpmImagePlugin
+Wed, 02 Aug 2017 10:18:42 Image.py[line:397] DEBUG Importing XVThumbImagePlugin
+Wed, 02 Aug 2017 10:19:32 Public_code.py[line:28] INFO connect is success!
+Wed, 02 Aug 2017 10:19:32 Public_code.py[line:62] INFO there remains 2 times to send requests 
+Wed, 02 Aug 2017 10:19:32 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cn
+Wed, 02 Aug 2017 10:19:33 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "GET /%7BSJd8u6CoZYwKbW6mAZJvS0siA7tgi7JDVCW9d-Ofnqmw94bguYoHMHqh6ue0PfwJQwZ_HwZ7DSnVUgXDHEaXXMp67b0LoS7WHiXbANeGERmzPN_7tH9KSKKFAha-6t6t-1501638636267%7D?start=0 HTTP/1.1" 200 None
+Wed, 02 Aug 2017 10:19:33 Public_code.py[line:65] INFO the status_code is 200 
+Wed, 02 Aug 2017 10:19:33 Public_code.py[line:62] INFO there remains 2 times to send requests 
+Wed, 02 Aug 2017 10:19:33 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cn
+Wed, 02 Aug 2017 10:19:33 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "GET /%7BSJd8u6CoZYwKbW6mAZJvS0siA7tgi7JDVCW9d-Ofnqmw94bguYoHMHqh6ue0PfwJQwZ_HwZ7DSnVUgXDHEaXXMp67b0LoS7WHiXbANeGERmzPN_7tH9KSKKFAha-6t6t-1501638636267%7D HTTP/1.1" 200 None
+Wed, 02 Aug 2017 10:19:33 Public_code.py[line:65] INFO the status_code is 200 
+Wed, 02 Aug 2017 10:19:33 Public_code.py[line:107] INFO brand: 137
+Wed, 02 Aug 2017 10:19:47 Public_code.py[line:28] INFO connect is success!
+Wed, 02 Aug 2017 10:19:48 Image.py[line:397] DEBUG Importing BmpImagePlugin
+Wed, 02 Aug 2017 10:19:48 Image.py[line:397] DEBUG Importing BufrStubImagePlugin
+Wed, 02 Aug 2017 10:19:48 Image.py[line:397] DEBUG Importing CurImagePlugin
+Wed, 02 Aug 2017 10:19:48 Image.py[line:397] DEBUG Importing DcxImagePlugin
+Wed, 02 Aug 2017 10:19:48 Image.py[line:397] DEBUG Importing DdsImagePlugin
+Wed, 02 Aug 2017 10:19:48 Image.py[line:397] DEBUG Importing EpsImagePlugin
+Wed, 02 Aug 2017 10:19:48 Image.py[line:397] DEBUG Importing FitsStubImagePlugin
+Wed, 02 Aug 2017 10:19:48 Image.py[line:397] DEBUG Importing FliImagePlugin
+Wed, 02 Aug 2017 10:19:48 Image.py[line:397] DEBUG Importing FpxImagePlugin
+Wed, 02 Aug 2017 10:19:48 Image.py[line:397] DEBUG Importing FtexImagePlugin
+Wed, 02 Aug 2017 10:19:48 Image.py[line:397] DEBUG Importing GbrImagePlugin
+Wed, 02 Aug 2017 10:19:48 Image.py[line:397] DEBUG Importing GifImagePlugin
+Wed, 02 Aug 2017 10:19:48 Image.py[line:397] DEBUG Importing GribStubImagePlugin
+Wed, 02 Aug 2017 10:19:48 Image.py[line:397] DEBUG Importing Hdf5StubImagePlugin
+Wed, 02 Aug 2017 10:19:48 Image.py[line:397] DEBUG Importing IcnsImagePlugin
+Wed, 02 Aug 2017 10:19:48 Image.py[line:397] DEBUG Importing IcoImagePlugin
+Wed, 02 Aug 2017 10:19:48 Image.py[line:397] DEBUG Importing ImImagePlugin
+Wed, 02 Aug 2017 10:19:48 Image.py[line:397] DEBUG Importing ImtImagePlugin
+Wed, 02 Aug 2017 10:19:48 Image.py[line:397] DEBUG Importing IptcImagePlugin
+Wed, 02 Aug 2017 10:19:48 Image.py[line:397] DEBUG Importing JpegImagePlugin
+Wed, 02 Aug 2017 10:19:48 Image.py[line:397] DEBUG Importing Jpeg2KImagePlugin
+Wed, 02 Aug 2017 10:19:48 Image.py[line:397] DEBUG Importing McIdasImagePlugin
+Wed, 02 Aug 2017 10:19:48 Image.py[line:397] DEBUG Importing MicImagePlugin
+Wed, 02 Aug 2017 10:19:48 Image.py[line:397] DEBUG Importing MpegImagePlugin
+Wed, 02 Aug 2017 10:19:48 Image.py[line:397] DEBUG Importing MpoImagePlugin
+Wed, 02 Aug 2017 10:19:48 Image.py[line:397] DEBUG Importing MspImagePlugin
+Wed, 02 Aug 2017 10:19:48 Image.py[line:397] DEBUG Importing PalmImagePlugin
+Wed, 02 Aug 2017 10:19:48 Image.py[line:397] DEBUG Importing PcdImagePlugin
+Wed, 02 Aug 2017 10:19:48 Image.py[line:397] DEBUG Importing PcxImagePlugin
+Wed, 02 Aug 2017 10:19:48 Image.py[line:397] DEBUG Importing PdfImagePlugin
+Wed, 02 Aug 2017 10:19:48 Image.py[line:397] DEBUG Importing PixarImagePlugin
+Wed, 02 Aug 2017 10:19:48 Image.py[line:397] DEBUG Importing PngImagePlugin
+Wed, 02 Aug 2017 10:19:48 Image.py[line:397] DEBUG Importing PpmImagePlugin
+Wed, 02 Aug 2017 10:19:48 Image.py[line:397] DEBUG Importing PsdImagePlugin
+Wed, 02 Aug 2017 10:19:48 Image.py[line:397] DEBUG Importing SgiImagePlugin
+Wed, 02 Aug 2017 10:19:48 Image.py[line:397] DEBUG Importing SpiderImagePlugin
+Wed, 02 Aug 2017 10:19:48 Image.py[line:397] DEBUG Importing SunImagePlugin
+Wed, 02 Aug 2017 10:19:48 Image.py[line:397] DEBUG Importing TgaImagePlugin
+Wed, 02 Aug 2017 10:19:48 Image.py[line:397] DEBUG Importing TiffImagePlugin
+Wed, 02 Aug 2017 10:19:48 Image.py[line:397] DEBUG Importing WebPImagePlugin
+Wed, 02 Aug 2017 10:19:48 Image.py[line:397] DEBUG Importing WmfImagePlugin
+Wed, 02 Aug 2017 10:19:48 Image.py[line:397] DEBUG Importing XbmImagePlugin
+Wed, 02 Aug 2017 10:19:48 Image.py[line:397] DEBUG Importing XpmImagePlugin
+Wed, 02 Aug 2017 10:19:48 Image.py[line:397] DEBUG Importing XVThumbImagePlugin
+Wed, 02 Aug 2017 10:23:47 Public_code.py[line:28] INFO connect is success!
+Wed, 02 Aug 2017 10:23:47 Public_code.py[line:62] INFO there remains 2 times to send requests 
+Wed, 02 Aug 2017 10:23:47 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cn
+Wed, 02 Aug 2017 10:23:48 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "GET /%7BSJd8u6CoZYwKbW6mAZJvS0siA7tgi7JDVCW9d-Ofnqmw94bguYoHMHqh6ue0PfwJQwZ_HwZ7DSnVUgXDHEaXXMp67b0LoS7WHiXbANeGERmzPN_7tH9KSKKFAha-6t6t-1501638636267%7D HTTP/1.1" 200 None
+Wed, 02 Aug 2017 10:23:48 Public_code.py[line:65] INFO the status_code is 200 
+Wed, 02 Aug 2017 10:23:48 Public_code.py[line:62] INFO there remains 2 times to send requests 
+Wed, 02 Aug 2017 10:23:48 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cn
+Wed, 02 Aug 2017 10:23:48 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "GET /%7BSJd8u6CoZYwKbW6mAZJvS0siA7tgi7JDVCW9d-Ofnqmw94bguYoHMHqh6ue0PfwJQwZ_HwZ7DSnVUgXDHEaXXMp67b0LoS7WHiXbANeGERmzPN_7tH9KSKKFAha-6t6t-1501638636267%7D HTTP/1.1" 200 None
+Wed, 02 Aug 2017 10:23:48 Public_code.py[line:65] INFO the status_code is 200 
+Wed, 02 Aug 2017 10:23:48 Public_code.py[line:106] INFO brand: 137
+Wed, 02 Aug 2017 10:23:54 Public_code.py[line:28] INFO connect is success!
+Wed, 02 Aug 2017 10:23:54 Image.py[line:397] DEBUG Importing BmpImagePlugin
+Wed, 02 Aug 2017 10:23:54 Image.py[line:397] DEBUG Importing BufrStubImagePlugin
+Wed, 02 Aug 2017 10:23:54 Image.py[line:397] DEBUG Importing CurImagePlugin
+Wed, 02 Aug 2017 10:23:54 Image.py[line:397] DEBUG Importing DcxImagePlugin
+Wed, 02 Aug 2017 10:23:54 Image.py[line:397] DEBUG Importing DdsImagePlugin
+Wed, 02 Aug 2017 10:23:54 Image.py[line:397] DEBUG Importing EpsImagePlugin
+Wed, 02 Aug 2017 10:23:54 Image.py[line:397] DEBUG Importing FitsStubImagePlugin
+Wed, 02 Aug 2017 10:23:54 Image.py[line:397] DEBUG Importing FliImagePlugin
+Wed, 02 Aug 2017 10:23:54 Image.py[line:397] DEBUG Importing FpxImagePlugin
+Wed, 02 Aug 2017 10:23:54 Image.py[line:397] DEBUG Importing FtexImagePlugin
+Wed, 02 Aug 2017 10:23:54 Image.py[line:397] DEBUG Importing GbrImagePlugin
+Wed, 02 Aug 2017 10:23:54 Image.py[line:397] DEBUG Importing GifImagePlugin
+Wed, 02 Aug 2017 10:23:54 Image.py[line:397] DEBUG Importing GribStubImagePlugin
+Wed, 02 Aug 2017 10:23:54 Image.py[line:397] DEBUG Importing Hdf5StubImagePlugin
+Wed, 02 Aug 2017 10:23:54 Image.py[line:397] DEBUG Importing IcnsImagePlugin
+Wed, 02 Aug 2017 10:23:54 Image.py[line:397] DEBUG Importing IcoImagePlugin
+Wed, 02 Aug 2017 10:23:54 Image.py[line:397] DEBUG Importing ImImagePlugin
+Wed, 02 Aug 2017 10:23:54 Image.py[line:397] DEBUG Importing ImtImagePlugin
+Wed, 02 Aug 2017 10:23:54 Image.py[line:397] DEBUG Importing IptcImagePlugin
+Wed, 02 Aug 2017 10:23:54 Image.py[line:397] DEBUG Importing JpegImagePlugin
+Wed, 02 Aug 2017 10:23:54 Image.py[line:397] DEBUG Importing Jpeg2KImagePlugin
+Wed, 02 Aug 2017 10:23:54 Image.py[line:397] DEBUG Importing McIdasImagePlugin
+Wed, 02 Aug 2017 10:23:54 Image.py[line:397] DEBUG Importing MicImagePlugin
+Wed, 02 Aug 2017 10:23:54 Image.py[line:397] DEBUG Importing MpegImagePlugin
+Wed, 02 Aug 2017 10:23:54 Image.py[line:397] DEBUG Importing MpoImagePlugin
+Wed, 02 Aug 2017 10:23:54 Image.py[line:397] DEBUG Importing MspImagePlugin
+Wed, 02 Aug 2017 10:23:54 Image.py[line:397] DEBUG Importing PalmImagePlugin
+Wed, 02 Aug 2017 10:23:54 Image.py[line:397] DEBUG Importing PcdImagePlugin
+Wed, 02 Aug 2017 10:23:54 Image.py[line:397] DEBUG Importing PcxImagePlugin
+Wed, 02 Aug 2017 10:23:54 Image.py[line:397] DEBUG Importing PdfImagePlugin
+Wed, 02 Aug 2017 10:23:54 Image.py[line:397] DEBUG Importing PixarImagePlugin
+Wed, 02 Aug 2017 10:23:54 Image.py[line:397] DEBUG Importing PngImagePlugin
+Wed, 02 Aug 2017 10:23:54 Image.py[line:397] DEBUG Importing PpmImagePlugin
+Wed, 02 Aug 2017 10:23:54 Image.py[line:397] DEBUG Importing PsdImagePlugin
+Wed, 02 Aug 2017 10:23:54 Image.py[line:397] DEBUG Importing SgiImagePlugin
+Wed, 02 Aug 2017 10:23:54 Image.py[line:397] DEBUG Importing SpiderImagePlugin
+Wed, 02 Aug 2017 10:23:54 Image.py[line:397] DEBUG Importing SunImagePlugin
+Wed, 02 Aug 2017 10:23:54 Image.py[line:397] DEBUG Importing TgaImagePlugin
+Wed, 02 Aug 2017 10:23:54 Image.py[line:397] DEBUG Importing TiffImagePlugin
+Wed, 02 Aug 2017 10:23:54 Image.py[line:397] DEBUG Importing WebPImagePlugin
+Wed, 02 Aug 2017 10:23:54 Image.py[line:397] DEBUG Importing WmfImagePlugin
+Wed, 02 Aug 2017 10:23:54 Image.py[line:397] DEBUG Importing XbmImagePlugin
+Wed, 02 Aug 2017 10:23:54 Image.py[line:397] DEBUG Importing XpmImagePlugin
+Wed, 02 Aug 2017 10:23:54 Image.py[line:397] DEBUG Importing XVThumbImagePlugin
+Wed, 02 Aug 2017 10:24:31 Public_code.py[line:62] INFO there remains 2 times to send requests 
+Wed, 02 Aug 2017 10:24:31 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cn
+Wed, 02 Aug 2017 10:24:32 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "GET /%7BSJd8u6CoZYwKbW6mAZJvS0siA7tgi7JDVCW9d-Ofnqmw94bguYoHMHqh6ue0PfwJQwZ_HwZ7DSnVUgXDHEaXXMp67b0LoS7WHiXbANeGERmzPN_7tH9KSKKFAha-6t6t-1501638636267%7D HTTP/1.1" 200 None
+Wed, 02 Aug 2017 10:24:32 Public_code.py[line:65] INFO the status_code is 200 
+Wed, 02 Aug 2017 10:24:38 Public_code.py[line:62] INFO there remains 2 times to send requests 
+Wed, 02 Aug 2017 10:24:38 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cn
+Wed, 02 Aug 2017 10:24:39 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "GET /%7BSJd8u6CoZYwKbW6mAZJvS0siA7tgi7JDVCW9d-Ofnqmw94bguYoHMHqh6ue0PfwJQwZ_HwZ7DSnVUgXDHEaXXMp67b0LoS7WHiXbANeGERmzPN_7tH9KSKKFAha-6t6t-1501638636267%7D HTTP/1.1" 200 None
+Wed, 02 Aug 2017 10:24:39 Public_code.py[line:65] INFO the status_code is 200 
+Wed, 02 Aug 2017 10:24:47 Public_code.py[line:106] INFO brand: 137
+Wed, 02 Aug 2017 10:27:58 Public_code.py[line:28] INFO connect is success!
+Wed, 02 Aug 2017 10:27:59 Image.py[line:397] DEBUG Importing BmpImagePlugin
+Wed, 02 Aug 2017 10:27:59 Image.py[line:397] DEBUG Importing BufrStubImagePlugin
+Wed, 02 Aug 2017 10:27:59 Image.py[line:397] DEBUG Importing CurImagePlugin
+Wed, 02 Aug 2017 10:27:59 Image.py[line:397] DEBUG Importing DcxImagePlugin
+Wed, 02 Aug 2017 10:27:59 Image.py[line:397] DEBUG Importing DdsImagePlugin
+Wed, 02 Aug 2017 10:27:59 Image.py[line:397] DEBUG Importing EpsImagePlugin
+Wed, 02 Aug 2017 10:27:59 Image.py[line:397] DEBUG Importing FitsStubImagePlugin
+Wed, 02 Aug 2017 10:27:59 Image.py[line:397] DEBUG Importing FliImagePlugin
+Wed, 02 Aug 2017 10:27:59 Image.py[line:397] DEBUG Importing FpxImagePlugin
+Wed, 02 Aug 2017 10:27:59 Image.py[line:397] DEBUG Importing FtexImagePlugin
+Wed, 02 Aug 2017 10:27:59 Image.py[line:397] DEBUG Importing GbrImagePlugin
+Wed, 02 Aug 2017 10:27:59 Image.py[line:397] DEBUG Importing GifImagePlugin
+Wed, 02 Aug 2017 10:27:59 Image.py[line:397] DEBUG Importing GribStubImagePlugin
+Wed, 02 Aug 2017 10:27:59 Image.py[line:397] DEBUG Importing Hdf5StubImagePlugin
+Wed, 02 Aug 2017 10:27:59 Image.py[line:397] DEBUG Importing IcnsImagePlugin
+Wed, 02 Aug 2017 10:27:59 Image.py[line:397] DEBUG Importing IcoImagePlugin
+Wed, 02 Aug 2017 10:27:59 Image.py[line:397] DEBUG Importing ImImagePlugin
+Wed, 02 Aug 2017 10:27:59 Image.py[line:397] DEBUG Importing ImtImagePlugin
+Wed, 02 Aug 2017 10:27:59 Image.py[line:397] DEBUG Importing IptcImagePlugin
+Wed, 02 Aug 2017 10:27:59 Image.py[line:397] DEBUG Importing JpegImagePlugin
+Wed, 02 Aug 2017 10:27:59 Image.py[line:397] DEBUG Importing Jpeg2KImagePlugin
+Wed, 02 Aug 2017 10:27:59 Image.py[line:397] DEBUG Importing McIdasImagePlugin
+Wed, 02 Aug 2017 10:27:59 Image.py[line:397] DEBUG Importing MicImagePlugin
+Wed, 02 Aug 2017 10:27:59 Image.py[line:397] DEBUG Importing MpegImagePlugin
+Wed, 02 Aug 2017 10:27:59 Image.py[line:397] DEBUG Importing MpoImagePlugin
+Wed, 02 Aug 2017 10:27:59 Image.py[line:397] DEBUG Importing MspImagePlugin
+Wed, 02 Aug 2017 10:27:59 Image.py[line:397] DEBUG Importing PalmImagePlugin
+Wed, 02 Aug 2017 10:27:59 Image.py[line:397] DEBUG Importing PcdImagePlugin
+Wed, 02 Aug 2017 10:27:59 Image.py[line:397] DEBUG Importing PcxImagePlugin
+Wed, 02 Aug 2017 10:27:59 Image.py[line:397] DEBUG Importing PdfImagePlugin
+Wed, 02 Aug 2017 10:27:59 Image.py[line:397] DEBUG Importing PixarImagePlugin
+Wed, 02 Aug 2017 10:27:59 Image.py[line:397] DEBUG Importing PngImagePlugin
+Wed, 02 Aug 2017 10:27:59 Image.py[line:397] DEBUG Importing PpmImagePlugin
+Wed, 02 Aug 2017 10:27:59 Image.py[line:397] DEBUG Importing PsdImagePlugin
+Wed, 02 Aug 2017 10:27:59 Image.py[line:397] DEBUG Importing SgiImagePlugin
+Wed, 02 Aug 2017 10:27:59 Image.py[line:397] DEBUG Importing SpiderImagePlugin
+Wed, 02 Aug 2017 10:27:59 Image.py[line:397] DEBUG Importing SunImagePlugin
+Wed, 02 Aug 2017 10:27:59 Image.py[line:397] DEBUG Importing TgaImagePlugin
+Wed, 02 Aug 2017 10:27:59 Image.py[line:397] DEBUG Importing TiffImagePlugin
+Wed, 02 Aug 2017 10:27:59 Image.py[line:397] DEBUG Importing WebPImagePlugin
+Wed, 02 Aug 2017 10:27:59 Image.py[line:397] DEBUG Importing WmfImagePlugin
+Wed, 02 Aug 2017 10:27:59 Image.py[line:397] DEBUG Importing XbmImagePlugin
+Wed, 02 Aug 2017 10:27:59 Image.py[line:397] DEBUG Importing XpmImagePlugin
+Wed, 02 Aug 2017 10:27:59 Image.py[line:397] DEBUG Importing XVThumbImagePlugin
+Wed, 02 Aug 2017 10:28:04 Public_code.py[line:28] INFO connect is success!
+Wed, 02 Aug 2017 10:28:04 Public_code.py[line:62] INFO there remains 2 times to send requests 
+Wed, 02 Aug 2017 10:28:04 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cn
+Wed, 02 Aug 2017 10:28:04 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "GET /%7BSJd8u6CoZYwKbW6mAZJvS0siA7tgi7JDVCW9d-Ofnqmw94bguYoHMHqh6ue0PfwJQwZ_HwZ7DSnVUgXDHEaXXMp67b0LoS7WHiXbANeGERmzPN_7tH9KSKKFAha-6t6t-1501638636267%7D HTTP/1.1" 200 None
+Wed, 02 Aug 2017 10:28:04 Public_code.py[line:65] INFO the status_code is 200 
+Wed, 02 Aug 2017 10:28:04 Public_code.py[line:62] INFO there remains 2 times to send requests 
+Wed, 02 Aug 2017 10:28:04 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cn
+Wed, 02 Aug 2017 10:28:05 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "GET /%7BSJd8u6CoZYwKbW6mAZJvS0siA7tgi7JDVCW9d-Ofnqmw94bguYoHMHqh6ue0PfwJQwZ_HwZ7DSnVUgXDHEaXXMp67b0LoS7WHiXbANeGERmzPN_7tH9KSKKFAha-6t6t-1501638636267%7D HTTP/1.1" 200 None
+Wed, 02 Aug 2017 10:28:05 Public_code.py[line:65] INFO the status_code is 200 
+Wed, 02 Aug 2017 10:28:05 Public_code.py[line:107] INFO brand: 0
+Wed, 02 Aug 2017 11:44:38 Public_code.py[line:28] INFO connect is success!
+Wed, 02 Aug 2017 11:44:38 Public_code.py[line:62] INFO there remains 2 times to send requests 
+Wed, 02 Aug 2017 11:44:39 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cn
+Wed, 02 Aug 2017 11:44:39 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "GET /http://www.gsxt.gov.cn/%7BSJd8u6CoZYwKbW6mAZJvS6eoI-xbDJ3H6ev5y_KKUDgsfWCw9VinG89UmY_nt0fnnR9caX5jqV4e3RCW_WwkzcYrDwupyYPH7VDEz5XpYvZAvp5Ncw7SOyNh6xqQCjHo-1501638636273%7D HTTP/1.1" 404 None
+Wed, 02 Aug 2017 11:44:39 Public_code.py[line:65] INFO the status_code is 404 
+Wed, 02 Aug 2017 11:44:39 Public_code.py[line:75] ERROR 网站暂时无法访问！！!
+Wed, 02 Aug 2017 11:44:39 Public_code.py[line:184] INFO 网页打开出错！！
+Wed, 02 Aug 2017 11:44:39 Public_code.py[line:185] INFO execute change: 100000004
+Wed, 02 Aug 2017 11:48:11 Public_code.py[line:28] INFO connect is success!
+Wed, 02 Aug 2017 11:48:11 Public_code.py[line:62] INFO there remains 2 times to send requests 
+Wed, 02 Aug 2017 11:48:11 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cn
+Wed, 02 Aug 2017 11:48:11 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "GET /%7BSJd8u6CoZYwKbW6mAZJvS6eoI-xbDJ3H6ev5y_KKUDgsfWCw9VinG89UmY_nt0fnnR9caX5jqV4e3RCW_WwkzcYrDwupyYPH7VDEz5XpYvZAvp5Ncw7SOyNh6xqQCjHo-1501638636273%7D HTTP/1.1" 200 None
+Wed, 02 Aug 2017 11:48:11 Public_code.py[line:65] INFO the status_code is 200 
+Wed, 02 Aug 2017 11:48:15 Public_code.py[line:152] INFO change: 32
+Wed, 02 Aug 2017 11:48:15 Public_code.py[line:62] INFO there remains 2 times to send requests 
+Wed, 02 Aug 2017 11:48:15 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cn
+Wed, 02 Aug 2017 11:48:15 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "GET /%7BSJd8u6CoZYwKbW6mAZJvS6eoI-xbDJ3H6ev5y_KKUDgsfWCw9VinG89UmY_nt0fnnR9caX5jqV4e3RCW_WwkzcYrDwupyYPH7VDEz5XpYvZAvp5Ncw7SOyNh6xqQCjHo-1501638636273%7D?start=5 HTTP/1.1" 200 None
+Wed, 02 Aug 2017 11:48:15 Public_code.py[line:65] INFO the status_code is 200 
+Wed, 02 Aug 2017 11:48:15 Public_code.py[line:62] INFO there remains 2 times to send requests 
+Wed, 02 Aug 2017 11:48:15 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cn
+Wed, 02 Aug 2017 11:48:16 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "GET /%7BSJd8u6CoZYwKbW6mAZJvS6eoI-xbDJ3H6ev5y_KKUDgsfWCw9VinG89UmY_nt0fnnR9caX5jqV4e3RCW_WwkzcYrDwupyYPH7VDEz5XpYvZAvp5Ncw7SOyNh6xqQCjHo-1501638636273%7D?start=10 HTTP/1.1" 200 None
+Wed, 02 Aug 2017 11:48:16 Public_code.py[line:65] INFO the status_code is 200 
+Wed, 02 Aug 2017 11:48:16 Public_code.py[line:62] INFO there remains 2 times to send requests 
+Wed, 02 Aug 2017 11:48:16 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cn
+Wed, 02 Aug 2017 11:48:16 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "GET /%7BSJd8u6CoZYwKbW6mAZJvS6eoI-xbDJ3H6ev5y_KKUDgsfWCw9VinG89UmY_nt0fnnR9caX5jqV4e3RCW_WwkzcYrDwupyYPH7VDEz5XpYvZAvp5Ncw7SOyNh6xqQCjHo-1501638636273%7D?start=15 HTTP/1.1" 200 None
+Wed, 02 Aug 2017 11:48:16 Public_code.py[line:65] INFO the status_code is 200 
+Wed, 02 Aug 2017 11:48:16 Public_code.py[line:62] INFO there remains 2 times to send requests 
+Wed, 02 Aug 2017 11:48:16 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cn
+Wed, 02 Aug 2017 11:48:16 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "GET /%7BSJd8u6CoZYwKbW6mAZJvS6eoI-xbDJ3H6ev5y_KKUDgsfWCw9VinG89UmY_nt0fnnR9caX5jqV4e3RCW_WwkzcYrDwupyYPH7VDEz5XpYvZAvp5Ncw7SOyNh6xqQCjHo-1501638636273%7D?start=20 HTTP/1.1" 200 None
+Wed, 02 Aug 2017 11:48:16 Public_code.py[line:65] INFO the status_code is 200 
+Wed, 02 Aug 2017 11:48:16 Public_code.py[line:62] INFO there remains 2 times to send requests 
+Wed, 02 Aug 2017 11:48:16 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cn
+Wed, 02 Aug 2017 11:48:16 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "GET /%7BSJd8u6CoZYwKbW6mAZJvS6eoI-xbDJ3H6ev5y_KKUDgsfWCw9VinG89UmY_nt0fnnR9caX5jqV4e3RCW_WwkzcYrDwupyYPH7VDEz5XpYvZAvp5Ncw7SOyNh6xqQCjHo-1501638636273%7D?start=25 HTTP/1.1" 200 None
+Wed, 02 Aug 2017 11:48:16 Public_code.py[line:65] INFO the status_code is 200 
+Wed, 02 Aug 2017 11:48:16 Public_code.py[line:62] INFO there remains 2 times to send requests 
+Wed, 02 Aug 2017 11:48:16 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cn
+Wed, 02 Aug 2017 11:48:16 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "GET /%7BSJd8u6CoZYwKbW6mAZJvS6eoI-xbDJ3H6ev5y_KKUDgsfWCw9VinG89UmY_nt0fnnR9caX5jqV4e3RCW_WwkzcYrDwupyYPH7VDEz5XpYvZAvp5Ncw7SOyNh6xqQCjHo-1501638636273%7D?start=30 HTTP/1.1" 200 None
+Wed, 02 Aug 2017 11:48:16 Public_code.py[line:65] INFO the status_code is 200 
+Wed, 02 Aug 2017 11:48:16 Public_code.py[line:185] INFO execute change: 0
+Wed, 02 Aug 2017 11:49:24 Public_code.py[line:28] INFO connect is success!
+Wed, 02 Aug 2017 11:51:14 Public_code.py[line:28] INFO connect is success!
+Wed, 02 Aug 2017 11:51:14 Public_code.py[line:62] INFO there remains 2 times to send requests 
+Wed, 02 Aug 2017 11:51:14 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cn
+Wed, 02 Aug 2017 11:51:14 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "GET /%7BPHhEB_G3k-2cXrSywQv7726y0KbIHWO00aVkYHvqdDviO360KxhXkJIjfNqnkn9GZP89lQw7I5K-8jRaGzToMvLEufuagwW_gWnBc32bZP6fQyd-8C9qWHGNpQ5h66kn-1501592667894%7D HTTP/1.1" 200 None
+Wed, 02 Aug 2017 11:51:14 Public_code.py[line:65] INFO the status_code is 200 
+Wed, 02 Aug 2017 11:51:14 Public_code.py[line:184] INFO 网页打开出错！！
+Wed, 02 Aug 2017 11:51:14 Public_code.py[line:185] INFO execute clear: 100000004
+Wed, 02 Aug 2017 17:09:04 Public_code.py[line:28] INFO connect is success!
+Wed, 02 Aug 2017 17:09:04 Public_code.py[line:62] INFO there remains 2 times to send requests 
+Wed, 02 Aug 2017 17:09:14 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): 127.0.0.1
+Wed, 02 Aug 2017 17:09:14 connectionpool.py[line:400] DEBUG http://127.0.0.1:8888 "GET http://www.gsxt.gov.cn/%7B5l_RJDt6qW3U2WQziG7diOKL_p66iUtxr0dE_cRGxi69ApBl5Te5Ek19T0msEk3BXQntVA9TfucXVo6JT_ejxNafS8E3_vtenmHnlvAO8SQQShlay6H7vjLuV_IrhoXw-1501664728692%7D HTTP/1.1" 200 None
+Wed, 02 Aug 2017 17:09:14 Public_code.py[line:65] INFO the status_code is 200 
+Wed, 02 Aug 2017 17:09:17 Public_code.py[line:152] INFO change: 32
+Wed, 02 Aug 2017 17:09:17 Public_code.py[line:62] INFO there remains 2 times to send requests 
+Wed, 02 Aug 2017 17:09:26 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): 127.0.0.1
+Wed, 02 Aug 2017 17:09:27 connectionpool.py[line:400] DEBUG http://127.0.0.1:8888 "GET http://www.gsxt.gov.cn/%7B5l_RJDt6qW3U2WQziG7diOKL_p66iUtxr0dE_cRGxi69ApBl5Te5Ek19T0msEk3BXQntVA9TfucXVo6JT_ejxNafS8E3_vtenmHnlvAO8SQQShlay6H7vjLuV_IrhoXw-1501664728692%7D?start=5 HTTP/1.1" 200 None
+Wed, 02 Aug 2017 17:09:27 Public_code.py[line:65] INFO the status_code is 200 
+Wed, 02 Aug 2017 17:09:27 Public_code.py[line:62] INFO there remains 2 times to send requests 
+Wed, 02 Aug 2017 17:09:37 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): 127.0.0.1
+Wed, 02 Aug 2017 17:09:37 connectionpool.py[line:400] DEBUG http://127.0.0.1:8888 "GET http://www.gsxt.gov.cn/%7B5l_RJDt6qW3U2WQziG7diOKL_p66iUtxr0dE_cRGxi69ApBl5Te5Ek19T0msEk3BXQntVA9TfucXVo6JT_ejxNafS8E3_vtenmHnlvAO8SQQShlay6H7vjLuV_IrhoXw-1501664728692%7D?start=10 HTTP/1.1" 200 None
+Wed, 02 Aug 2017 17:09:37 Public_code.py[line:65] INFO the status_code is 200 
+Wed, 02 Aug 2017 17:09:37 Public_code.py[line:62] INFO there remains 2 times to send requests 
+Wed, 02 Aug 2017 17:09:47 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): 127.0.0.1
+Wed, 02 Aug 2017 17:09:47 connectionpool.py[line:400] DEBUG http://127.0.0.1:8888 "GET http://www.gsxt.gov.cn/%7B5l_RJDt6qW3U2WQziG7diOKL_p66iUtxr0dE_cRGxi69ApBl5Te5Ek19T0msEk3BXQntVA9TfucXVo6JT_ejxNafS8E3_vtenmHnlvAO8SQQShlay6H7vjLuV_IrhoXw-1501664728692%7D?start=15 HTTP/1.1" 200 None
+Wed, 02 Aug 2017 17:09:47 Public_code.py[line:65] INFO the status_code is 200 
+Wed, 02 Aug 2017 17:09:47 Public_code.py[line:62] INFO there remains 2 times to send requests 
+Wed, 02 Aug 2017 17:09:56 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): 127.0.0.1
+Wed, 02 Aug 2017 17:09:56 connectionpool.py[line:400] DEBUG http://127.0.0.1:8888 "GET http://www.gsxt.gov.cn/%7B5l_RJDt6qW3U2WQziG7diOKL_p66iUtxr0dE_cRGxi69ApBl5Te5Ek19T0msEk3BXQntVA9TfucXVo6JT_ejxNafS8E3_vtenmHnlvAO8SQQShlay6H7vjLuV_IrhoXw-1501664728692%7D?start=20 HTTP/1.1" 200 None
+Wed, 02 Aug 2017 17:09:56 Public_code.py[line:65] INFO the status_code is 200 
+Wed, 02 Aug 2017 17:09:56 Public_code.py[line:62] INFO there remains 2 times to send requests 
+Wed, 02 Aug 2017 17:10:05 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): 127.0.0.1
+Wed, 02 Aug 2017 17:10:05 connectionpool.py[line:400] DEBUG http://127.0.0.1:8888 "GET http://www.gsxt.gov.cn/%7B5l_RJDt6qW3U2WQziG7diOKL_p66iUtxr0dE_cRGxi69ApBl5Te5Ek19T0msEk3BXQntVA9TfucXVo6JT_ejxNafS8E3_vtenmHnlvAO8SQQShlay6H7vjLuV_IrhoXw-1501664728692%7D?start=25 HTTP/1.1" 200 None
+Wed, 02 Aug 2017 17:10:05 Public_code.py[line:65] INFO the status_code is 200 
+Wed, 02 Aug 2017 17:10:05 Public_code.py[line:62] INFO there remains 2 times to send requests 
+Wed, 02 Aug 2017 17:10:15 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): 127.0.0.1
+Wed, 02 Aug 2017 17:10:15 connectionpool.py[line:400] DEBUG http://127.0.0.1:8888 "GET http://www.gsxt.gov.cn/%7B5l_RJDt6qW3U2WQziG7diOKL_p66iUtxr0dE_cRGxi69ApBl5Te5Ek19T0msEk3BXQntVA9TfucXVo6JT_ejxNafS8E3_vtenmHnlvAO8SQQShlay6H7vjLuV_IrhoXw-1501664728692%7D?start=30 HTTP/1.1" 200 None
+Wed, 02 Aug 2017 17:10:15 Public_code.py[line:65] INFO the status_code is 200 
+Wed, 02 Aug 2017 17:10:15 Public_code.py[line:185] INFO execute change: 0
+Wed, 02 Aug 2017 17:13:34 Public_code.py[line:28] INFO connect is success!
+Wed, 02 Aug 2017 17:13:34 Public_code.py[line:62] INFO there remains 2 times to send requests 
+Wed, 02 Aug 2017 17:13:43 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): 127.0.0.1
+Wed, 02 Aug 2017 17:13:43 connectionpool.py[line:400] DEBUG http://127.0.0.1:8888 "GET http://www.gsxt.gov.cn/%7B5l_RJDt6qW3U2WQziG7diOKL_p66iUtxr0dE_cRGxi69ApBl5Te5Ek19T0msEk3BXQntVA9TfucXVo6JT_ejxNafS8E3_vtenmHnlvAO8SQQShlay6H7vjLuV_IrhoXw-1501664728692%7D HTTP/1.1" 200 None
+Wed, 02 Aug 2017 17:13:43 Public_code.py[line:65] INFO the status_code is 200 
+Wed, 02 Aug 2017 17:13:46 Public_code.py[line:152] INFO change: 32
+Wed, 02 Aug 2017 17:13:47 Public_code.py[line:62] INFO there remains 2 times to send requests 
+Wed, 02 Aug 2017 17:13:56 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): 127.0.0.1
+Wed, 02 Aug 2017 17:13:56 connectionpool.py[line:400] DEBUG http://127.0.0.1:8888 "GET http://www.gsxt.gov.cn/%7B5l_RJDt6qW3U2WQziG7diOKL_p66iUtxr0dE_cRGxi69ApBl5Te5Ek19T0msEk3BXQntVA9TfucXVo6JT_ejxNafS8E3_vtenmHnlvAO8SQQShlay6H7vjLuV_IrhoXw-1501664728692%7D?start=5 HTTP/1.1" 200 None
+Wed, 02 Aug 2017 17:13:56 Public_code.py[line:65] INFO the status_code is 200 
+Wed, 02 Aug 2017 17:13:57 Public_code.py[line:62] INFO there remains 2 times to send requests 
+Wed, 02 Aug 2017 17:14:06 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): 127.0.0.1
+Wed, 02 Aug 2017 17:14:07 connectionpool.py[line:400] DEBUG http://127.0.0.1:8888 "GET http://www.gsxt.gov.cn/%7B5l_RJDt6qW3U2WQziG7diOKL_p66iUtxr0dE_cRGxi69ApBl5Te5Ek19T0msEk3BXQntVA9TfucXVo6JT_ejxNafS8E3_vtenmHnlvAO8SQQShlay6H7vjLuV_IrhoXw-1501664728692%7D?start=10 HTTP/1.1" 200 None
+Wed, 02 Aug 2017 17:14:07 Public_code.py[line:65] INFO the status_code is 200 
+Wed, 02 Aug 2017 17:14:07 Public_code.py[line:62] INFO there remains 2 times to send requests 
+Wed, 02 Aug 2017 17:14:16 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): 127.0.0.1
+Wed, 02 Aug 2017 17:14:16 connectionpool.py[line:400] DEBUG http://127.0.0.1:8888 "GET http://www.gsxt.gov.cn/%7B5l_RJDt6qW3U2WQziG7diOKL_p66iUtxr0dE_cRGxi69ApBl5Te5Ek19T0msEk3BXQntVA9TfucXVo6JT_ejxNafS8E3_vtenmHnlvAO8SQQShlay6H7vjLuV_IrhoXw-1501664728692%7D?start=15 HTTP/1.1" 200 None
+Wed, 02 Aug 2017 17:14:16 Public_code.py[line:65] INFO the status_code is 200 
+Wed, 02 Aug 2017 17:14:16 Public_code.py[line:62] INFO there remains 2 times to send requests 
+Wed, 02 Aug 2017 17:14:27 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): 127.0.0.1
+Wed, 02 Aug 2017 17:14:27 connectionpool.py[line:400] DEBUG http://127.0.0.1:8888 "GET http://www.gsxt.gov.cn/%7B5l_RJDt6qW3U2WQziG7diOKL_p66iUtxr0dE_cRGxi69ApBl5Te5Ek19T0msEk3BXQntVA9TfucXVo6JT_ejxNafS8E3_vtenmHnlvAO8SQQShlay6H7vjLuV_IrhoXw-1501664728692%7D?start=20 HTTP/1.1" 200 None
+Wed, 02 Aug 2017 17:14:27 Public_code.py[line:65] INFO the status_code is 200 
+Wed, 02 Aug 2017 17:14:27 Public_code.py[line:62] INFO there remains 2 times to send requests 
+Wed, 02 Aug 2017 17:14:36 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): 127.0.0.1
+Wed, 02 Aug 2017 17:14:36 connectionpool.py[line:400] DEBUG http://127.0.0.1:8888 "GET http://www.gsxt.gov.cn/%7B5l_RJDt6qW3U2WQziG7diOKL_p66iUtxr0dE_cRGxi69ApBl5Te5Ek19T0msEk3BXQntVA9TfucXVo6JT_ejxNafS8E3_vtenmHnlvAO8SQQShlay6H7vjLuV_IrhoXw-1501664728692%7D?start=25 HTTP/1.1" 200 None
+Wed, 02 Aug 2017 17:14:36 Public_code.py[line:65] INFO the status_code is 200 
+Wed, 02 Aug 2017 17:14:36 Public_code.py[line:62] INFO there remains 2 times to send requests 
+Wed, 02 Aug 2017 17:14:46 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): 127.0.0.1
+Wed, 02 Aug 2017 17:14:46 connectionpool.py[line:400] DEBUG http://127.0.0.1:8888 "GET http://www.gsxt.gov.cn/%7B5l_RJDt6qW3U2WQziG7diOKL_p66iUtxr0dE_cRGxi69ApBl5Te5Ek19T0msEk3BXQntVA9TfucXVo6JT_ejxNafS8E3_vtenmHnlvAO8SQQShlay6H7vjLuV_IrhoXw-1501664728692%7D?start=30 HTTP/1.1" 200 None
+Wed, 02 Aug 2017 17:14:46 Public_code.py[line:65] INFO the status_code is 200 
+Wed, 02 Aug 2017 17:14:46 Public_code.py[line:185] INFO execute change: 30
+Wed, 02 Aug 2017 17:16:29 Public_code.py[line:28] INFO connect is success!
+Wed, 02 Aug 2017 17:16:29 Public_code.py[line:62] INFO there remains 2 times to send requests 
+Wed, 02 Aug 2017 17:16:39 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): 127.0.0.1
+Wed, 02 Aug 2017 17:16:39 connectionpool.py[line:400] DEBUG http://127.0.0.1:8888 "GET http://www.gsxt.gov.cn/%7B5l_RJDt6qW3U2WQziG7diOKL_p66iUtxr0dE_cRGxi69ApBl5Te5Ek19T0msEk3BXQntVA9TfucXVo6JT_ejxNafS8E3_vtenmHnlvAO8SQQShlay6H7vjLuV_IrhoXw-1501664728692%7D HTTP/1.1" 200 None
+Wed, 02 Aug 2017 17:16:39 Public_code.py[line:65] INFO the status_code is 200 
+Wed, 02 Aug 2017 17:16:42 Public_code.py[line:152] INFO change: 32
+Wed, 02 Aug 2017 17:16:42 Public_code.py[line:62] INFO there remains 2 times to send requests 
+Wed, 02 Aug 2017 17:16:53 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): 127.0.0.1
+Wed, 02 Aug 2017 17:16:53 connectionpool.py[line:400] DEBUG http://127.0.0.1:8888 "GET http://www.gsxt.gov.cn/%7B5l_RJDt6qW3U2WQziG7diOKL_p66iUtxr0dE_cRGxi69ApBl5Te5Ek19T0msEk3BXQntVA9TfucXVo6JT_ejxNafS8E3_vtenmHnlvAO8SQQShlay6H7vjLuV_IrhoXw-1501664728692%7D?start=5 HTTP/1.1" 200 None
+Wed, 02 Aug 2017 17:16:53 Public_code.py[line:65] INFO the status_code is 200 
+Wed, 02 Aug 2017 17:16:53 Public_code.py[line:62] INFO there remains 2 times to send requests 
+Wed, 02 Aug 2017 17:17:03 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): 127.0.0.1
+Wed, 02 Aug 2017 17:17:03 connectionpool.py[line:400] DEBUG http://127.0.0.1:8888 "GET http://www.gsxt.gov.cn/%7B5l_RJDt6qW3U2WQziG7diOKL_p66iUtxr0dE_cRGxi69ApBl5Te5Ek19T0msEk3BXQntVA9TfucXVo6JT_ejxNafS8E3_vtenmHnlvAO8SQQShlay6H7vjLuV_IrhoXw-1501664728692%7D?start=10 HTTP/1.1" 200 None
+Wed, 02 Aug 2017 17:17:03 Public_code.py[line:65] INFO the status_code is 200 
+Wed, 02 Aug 2017 17:17:03 Public_code.py[line:62] INFO there remains 2 times to send requests 
+Wed, 02 Aug 2017 17:17:12 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): 127.0.0.1
+Wed, 02 Aug 2017 17:17:12 connectionpool.py[line:400] DEBUG http://127.0.0.1:8888 "GET http://www.gsxt.gov.cn/%7B5l_RJDt6qW3U2WQziG7diOKL_p66iUtxr0dE_cRGxi69ApBl5Te5Ek19T0msEk3BXQntVA9TfucXVo6JT_ejxNafS8E3_vtenmHnlvAO8SQQShlay6H7vjLuV_IrhoXw-1501664728692%7D?start=15 HTTP/1.1" 200 None
+Wed, 02 Aug 2017 17:17:12 Public_code.py[line:65] INFO the status_code is 200 
+Wed, 02 Aug 2017 17:17:12 Public_code.py[line:62] INFO there remains 2 times to send requests 
+Wed, 02 Aug 2017 17:17:21 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): 127.0.0.1
+Wed, 02 Aug 2017 17:17:22 connectionpool.py[line:400] DEBUG http://127.0.0.1:8888 "GET http://www.gsxt.gov.cn/%7B5l_RJDt6qW3U2WQziG7diOKL_p66iUtxr0dE_cRGxi69ApBl5Te5Ek19T0msEk3BXQntVA9TfucXVo6JT_ejxNafS8E3_vtenmHnlvAO8SQQShlay6H7vjLuV_IrhoXw-1501664728692%7D?start=20 HTTP/1.1" 200 None
+Wed, 02 Aug 2017 17:17:22 Public_code.py[line:65] INFO the status_code is 200 
+Wed, 02 Aug 2017 17:17:22 Public_code.py[line:62] INFO there remains 2 times to send requests 
+Wed, 02 Aug 2017 17:17:31 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): 127.0.0.1
+Wed, 02 Aug 2017 17:17:31 connectionpool.py[line:400] DEBUG http://127.0.0.1:8888 "GET http://www.gsxt.gov.cn/%7B5l_RJDt6qW3U2WQziG7diOKL_p66iUtxr0dE_cRGxi69ApBl5Te5Ek19T0msEk3BXQntVA9TfucXVo6JT_ejxNafS8E3_vtenmHnlvAO8SQQShlay6H7vjLuV_IrhoXw-1501664728692%7D?start=25 HTTP/1.1" 200 None
+Wed, 02 Aug 2017 17:17:31 Public_code.py[line:65] INFO the status_code is 200 
+Wed, 02 Aug 2017 17:17:31 Public_code.py[line:62] INFO there remains 2 times to send requests 
+Wed, 02 Aug 2017 17:17:41 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): 127.0.0.1
+Wed, 02 Aug 2017 17:17:41 connectionpool.py[line:400] DEBUG http://127.0.0.1:8888 "GET http://www.gsxt.gov.cn/%7B5l_RJDt6qW3U2WQziG7diOKL_p66iUtxr0dE_cRGxi69ApBl5Te5Ek19T0msEk3BXQntVA9TfucXVo6JT_ejxNafS8E3_vtenmHnlvAO8SQQShlay6H7vjLuV_IrhoXw-1501664728692%7D?start=30 HTTP/1.1" 200 None
+Wed, 02 Aug 2017 17:17:41 Public_code.py[line:65] INFO the status_code is 200 
+Wed, 02 Aug 2017 17:17:41 Public_code.py[line:185] INFO execute change: 30
+Wed, 02 Aug 2017 17:20:19 Public_code.py[line:28] INFO connect is success!
+Wed, 02 Aug 2017 17:20:19 Public_code.py[line:62] INFO there remains 2 times to send requests 
+Wed, 02 Aug 2017 17:20:28 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): 127.0.0.1
+Wed, 02 Aug 2017 17:20:28 connectionpool.py[line:400] DEBUG http://127.0.0.1:8888 "GET http://www.gsxt.gov.cn/%7B5l_RJDt6qW3U2WQziG7diOKL_p66iUtxr0dE_cRGxi69ApBl5Te5Ek19T0msEk3BXQntVA9TfucXVo6JT_ejxNafS8E3_vtenmHnlvAO8SQQShlay6H7vjLuV_IrhoXw-1501664728692%7D HTTP/1.1" 200 None
+Wed, 02 Aug 2017 17:20:28 Public_code.py[line:65] INFO the status_code is 200 
+Wed, 02 Aug 2017 17:20:32 Public_code.py[line:152] INFO change: 32
+Wed, 02 Aug 2017 17:20:32 Public_code.py[line:62] INFO there remains 2 times to send requests 
+Wed, 02 Aug 2017 17:20:41 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): 127.0.0.1
+Wed, 02 Aug 2017 17:20:41 connectionpool.py[line:400] DEBUG http://127.0.0.1:8888 "GET http://www.gsxt.gov.cn/%7B5l_RJDt6qW3U2WQziG7diOKL_p66iUtxr0dE_cRGxi69ApBl5Te5Ek19T0msEk3BXQntVA9TfucXVo6JT_ejxNafS8E3_vtenmHnlvAO8SQQShlay6H7vjLuV_IrhoXw-1501664728692%7D?start=5 HTTP/1.1" 200 None
+Wed, 02 Aug 2017 17:20:41 Public_code.py[line:65] INFO the status_code is 200 
+Wed, 02 Aug 2017 17:20:42 Public_code.py[line:62] INFO there remains 2 times to send requests 
+Wed, 02 Aug 2017 17:20:51 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): 127.0.0.1
+Wed, 02 Aug 2017 17:20:51 connectionpool.py[line:400] DEBUG http://127.0.0.1:8888 "GET http://www.gsxt.gov.cn/%7B5l_RJDt6qW3U2WQziG7diOKL_p66iUtxr0dE_cRGxi69ApBl5Te5Ek19T0msEk3BXQntVA9TfucXVo6JT_ejxNafS8E3_vtenmHnlvAO8SQQShlay6H7vjLuV_IrhoXw-1501664728692%7D?start=10 HTTP/1.1" 200 None
+Wed, 02 Aug 2017 17:20:51 Public_code.py[line:65] INFO the status_code is 200 
+Wed, 02 Aug 2017 17:20:51 Public_code.py[line:62] INFO there remains 2 times to send requests 
+Wed, 02 Aug 2017 17:21:01 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): 127.0.0.1
+Wed, 02 Aug 2017 17:21:01 connectionpool.py[line:400] DEBUG http://127.0.0.1:8888 "GET http://www.gsxt.gov.cn/%7B5l_RJDt6qW3U2WQziG7diOKL_p66iUtxr0dE_cRGxi69ApBl5Te5Ek19T0msEk3BXQntVA9TfucXVo6JT_ejxNafS8E3_vtenmHnlvAO8SQQShlay6H7vjLuV_IrhoXw-1501664728692%7D?start=15 HTTP/1.1" 200 None
+Wed, 02 Aug 2017 17:21:01 Public_code.py[line:65] INFO the status_code is 200 
+Wed, 02 Aug 2017 17:21:01 Public_code.py[line:62] INFO there remains 2 times to send requests 
+Wed, 02 Aug 2017 17:21:11 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): 127.0.0.1
+Wed, 02 Aug 2017 17:21:11 connectionpool.py[line:400] DEBUG http://127.0.0.1:8888 "GET http://www.gsxt.gov.cn/%7B5l_RJDt6qW3U2WQziG7diOKL_p66iUtxr0dE_cRGxi69ApBl5Te5Ek19T0msEk3BXQntVA9TfucXVo6JT_ejxNafS8E3_vtenmHnlvAO8SQQShlay6H7vjLuV_IrhoXw-1501664728692%7D?start=20 HTTP/1.1" 200 None
+Wed, 02 Aug 2017 17:21:11 Public_code.py[line:65] INFO the status_code is 200 
+Wed, 02 Aug 2017 17:21:11 Public_code.py[line:62] INFO there remains 2 times to send requests 
+Wed, 02 Aug 2017 17:21:20 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): 127.0.0.1
+Wed, 02 Aug 2017 17:21:21 connectionpool.py[line:400] DEBUG http://127.0.0.1:8888 "GET http://www.gsxt.gov.cn/%7B5l_RJDt6qW3U2WQziG7diOKL_p66iUtxr0dE_cRGxi69ApBl5Te5Ek19T0msEk3BXQntVA9TfucXVo6JT_ejxNafS8E3_vtenmHnlvAO8SQQShlay6H7vjLuV_IrhoXw-1501664728692%7D?start=25 HTTP/1.1" 200 None
+Wed, 02 Aug 2017 17:21:21 Public_code.py[line:65] INFO the status_code is 200 
+Wed, 02 Aug 2017 17:21:21 Public_code.py[line:62] INFO there remains 2 times to send requests 
+Wed, 02 Aug 2017 17:21:30 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): 127.0.0.1
+Wed, 02 Aug 2017 17:21:30 connectionpool.py[line:400] DEBUG http://127.0.0.1:8888 "GET http://www.gsxt.gov.cn/%7B5l_RJDt6qW3U2WQziG7diOKL_p66iUtxr0dE_cRGxi69ApBl5Te5Ek19T0msEk3BXQntVA9TfucXVo6JT_ejxNafS8E3_vtenmHnlvAO8SQQShlay6H7vjLuV_IrhoXw-1501664728692%7D?start=30 HTTP/1.1" 200 None
+Wed, 02 Aug 2017 17:21:30 Public_code.py[line:65] INFO the status_code is 200 
+Wed, 02 Aug 2017 17:21:30 Public_code.py[line:187] INFO execute change: 30
+Wed, 02 Aug 2017 17:24:04 Public_code.py[line:28] INFO connect is success!
+Wed, 02 Aug 2017 17:25:05 Public_code.py[line:28] INFO connect is success!
+Wed, 02 Aug 2017 17:25:06 Image.py[line:397] DEBUG Importing BmpImagePlugin
+Wed, 02 Aug 2017 17:25:06 Image.py[line:397] DEBUG Importing BufrStubImagePlugin
+Wed, 02 Aug 2017 17:25:06 Image.py[line:397] DEBUG Importing CurImagePlugin
+Wed, 02 Aug 2017 17:25:06 Image.py[line:397] DEBUG Importing DcxImagePlugin
+Wed, 02 Aug 2017 17:25:06 Image.py[line:397] DEBUG Importing DdsImagePlugin
+Wed, 02 Aug 2017 17:25:06 Image.py[line:397] DEBUG Importing EpsImagePlugin
+Wed, 02 Aug 2017 17:25:06 Image.py[line:397] DEBUG Importing FitsStubImagePlugin
+Wed, 02 Aug 2017 17:25:06 Image.py[line:397] DEBUG Importing FliImagePlugin
+Wed, 02 Aug 2017 17:25:06 Image.py[line:397] DEBUG Importing FpxImagePlugin
+Wed, 02 Aug 2017 17:25:06 Image.py[line:397] DEBUG Importing FtexImagePlugin
+Wed, 02 Aug 2017 17:25:06 Image.py[line:397] DEBUG Importing GbrImagePlugin
+Wed, 02 Aug 2017 17:25:06 Image.py[line:397] DEBUG Importing GifImagePlugin
+Wed, 02 Aug 2017 17:25:06 Image.py[line:397] DEBUG Importing GribStubImagePlugin
+Wed, 02 Aug 2017 17:25:06 Image.py[line:397] DEBUG Importing Hdf5StubImagePlugin
+Wed, 02 Aug 2017 17:25:06 Image.py[line:397] DEBUG Importing IcnsImagePlugin
+Wed, 02 Aug 2017 17:25:06 Image.py[line:397] DEBUG Importing IcoImagePlugin
+Wed, 02 Aug 2017 17:25:06 Image.py[line:397] DEBUG Importing ImImagePlugin
+Wed, 02 Aug 2017 17:25:06 Image.py[line:397] DEBUG Importing ImtImagePlugin
+Wed, 02 Aug 2017 17:25:06 Image.py[line:397] DEBUG Importing IptcImagePlugin
+Wed, 02 Aug 2017 17:25:06 Image.py[line:397] DEBUG Importing JpegImagePlugin
+Wed, 02 Aug 2017 17:25:06 Image.py[line:397] DEBUG Importing Jpeg2KImagePlugin
+Wed, 02 Aug 2017 17:25:06 Image.py[line:397] DEBUG Importing McIdasImagePlugin
+Wed, 02 Aug 2017 17:25:06 Image.py[line:397] DEBUG Importing MicImagePlugin
+Wed, 02 Aug 2017 17:25:06 Image.py[line:397] DEBUG Importing MpegImagePlugin
+Wed, 02 Aug 2017 17:25:06 Image.py[line:397] DEBUG Importing MpoImagePlugin
+Wed, 02 Aug 2017 17:25:06 Image.py[line:397] DEBUG Importing MspImagePlugin
+Wed, 02 Aug 2017 17:25:06 Image.py[line:397] DEBUG Importing PalmImagePlugin
+Wed, 02 Aug 2017 17:25:06 Image.py[line:397] DEBUG Importing PcdImagePlugin
+Wed, 02 Aug 2017 17:25:06 Image.py[line:397] DEBUG Importing PcxImagePlugin
+Wed, 02 Aug 2017 17:25:06 Image.py[line:397] DEBUG Importing PdfImagePlugin
+Wed, 02 Aug 2017 17:25:06 Image.py[line:397] DEBUG Importing PixarImagePlugin
+Wed, 02 Aug 2017 17:25:06 Image.py[line:397] DEBUG Importing PngImagePlugin
+Wed, 02 Aug 2017 17:25:06 Image.py[line:397] DEBUG Importing PpmImagePlugin
+Wed, 02 Aug 2017 17:25:06 Image.py[line:397] DEBUG Importing PsdImagePlugin
+Wed, 02 Aug 2017 17:25:06 Image.py[line:397] DEBUG Importing SgiImagePlugin
+Wed, 02 Aug 2017 17:25:06 Image.py[line:397] DEBUG Importing SpiderImagePlugin
+Wed, 02 Aug 2017 17:25:06 Image.py[line:397] DEBUG Importing SunImagePlugin
+Wed, 02 Aug 2017 17:25:06 Image.py[line:397] DEBUG Importing TgaImagePlugin
+Wed, 02 Aug 2017 17:25:06 Image.py[line:397] DEBUG Importing TiffImagePlugin
+Wed, 02 Aug 2017 17:25:06 Image.py[line:397] DEBUG Importing WebPImagePlugin
+Wed, 02 Aug 2017 17:25:06 Image.py[line:397] DEBUG Importing WmfImagePlugin
+Wed, 02 Aug 2017 17:25:06 Image.py[line:397] DEBUG Importing XbmImagePlugin
+Wed, 02 Aug 2017 17:25:06 Image.py[line:397] DEBUG Importing XpmImagePlugin
+Wed, 02 Aug 2017 17:25:06 Image.py[line:397] DEBUG Importing XVThumbImagePlugin
+Wed, 02 Aug 2017 17:26:42 Public_code.py[line:28] INFO connect is success!
+Wed, 02 Aug 2017 17:26:42 Public_code.py[line:62] INFO there remains 2 times to send requests 
+Wed, 02 Aug 2017 17:26:52 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): 127.0.0.1
+Wed, 02 Aug 2017 17:26:52 connectionpool.py[line:400] DEBUG http://127.0.0.1:8888 "GET http://www.gsxt.gov.cn/%7B5l_RJDt6qW3U2WQziG7diOOfC3UC4PYR-fB3d0OCS7QhO96RLo49J9oGiL2HvR6h7z2_3RfhSpDYyi0SAslpirM_EsN25JdENt3uKuyHM7g4e3EAGAFqFhhCbx-MM5jI-1501664728707%7D HTTP/1.1" 200 None
+Wed, 02 Aug 2017 17:26:52 Public_code.py[line:65] INFO the status_code is 200 
+Wed, 02 Aug 2017 17:26:52 Public_code.py[line:152] INFO clear: 236
+Wed, 02 Aug 2017 17:26:52 Public_code.py[line:62] INFO there remains 2 times to send requests 
+Wed, 02 Aug 2017 17:27:03 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): 127.0.0.1
+Wed, 02 Aug 2017 17:27:03 connectionpool.py[line:400] DEBUG http://127.0.0.1:8888 "GET http://www.gsxt.gov.cn/%7B5l_RJDt6qW3U2WQziG7diOOfC3UC4PYR-fB3d0OCS7QhO96RLo49J9oGiL2HvR6h7z2_3RfhSpDYyi0SAslpirM_EsN25JdENt3uKuyHM7g4e3EAGAFqFhhCbx-MM5jI-1501664728707%7D?start=5 HTTP/1.1" 200 None
+Wed, 02 Aug 2017 17:27:03 Public_code.py[line:65] INFO the status_code is 200 
+Wed, 02 Aug 2017 17:27:03 Public_code.py[line:62] INFO there remains 2 times to send requests 
+Wed, 02 Aug 2017 17:27:12 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): 127.0.0.1
+Wed, 02 Aug 2017 17:27:12 connectionpool.py[line:400] DEBUG http://127.0.0.1:8888 "GET http://www.gsxt.gov.cn/%7B5l_RJDt6qW3U2WQziG7diOOfC3UC4PYR-fB3d0OCS7QhO96RLo49J9oGiL2HvR6h7z2_3RfhSpDYyi0SAslpirM_EsN25JdENt3uKuyHM7g4e3EAGAFqFhhCbx-MM5jI-1501664728707%7D?start=10 HTTP/1.1" 200 None
+Wed, 02 Aug 2017 17:27:12 Public_code.py[line:65] INFO the status_code is 200 
+Wed, 02 Aug 2017 17:27:12 Public_code.py[line:62] INFO there remains 2 times to send requests 
+Wed, 02 Aug 2017 17:27:21 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): 127.0.0.1
+Wed, 02 Aug 2017 17:27:22 connectionpool.py[line:400] DEBUG http://127.0.0.1:8888 "GET http://www.gsxt.gov.cn/%7B5l_RJDt6qW3U2WQziG7diOOfC3UC4PYR-fB3d0OCS7QhO96RLo49J9oGiL2HvR6h7z2_3RfhSpDYyi0SAslpirM_EsN25JdENt3uKuyHM7g4e3EAGAFqFhhCbx-MM5jI-1501664728707%7D?start=15 HTTP/1.1" 200 None
+Wed, 02 Aug 2017 17:27:22 Public_code.py[line:65] INFO the status_code is 200 
+Wed, 02 Aug 2017 17:27:22 Public_code.py[line:62] INFO there remains 2 times to send requests 
+Wed, 02 Aug 2017 17:27:31 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): 127.0.0.1
+Wed, 02 Aug 2017 17:27:31 connectionpool.py[line:400] DEBUG http://127.0.0.1:8888 "GET http://www.gsxt.gov.cn/%7B5l_RJDt6qW3U2WQziG7diOOfC3UC4PYR-fB3d0OCS7QhO96RLo49J9oGiL2HvR6h7z2_3RfhSpDYyi0SAslpirM_EsN25JdENt3uKuyHM7g4e3EAGAFqFhhCbx-MM5jI-1501664728707%7D?start=20 HTTP/1.1" 200 None
+Wed, 02 Aug 2017 17:27:31 Public_code.py[line:65] INFO the status_code is 200 
+Wed, 02 Aug 2017 17:27:31 Public_code.py[line:62] INFO there remains 2 times to send requests 
+Wed, 02 Aug 2017 17:27:40 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): 127.0.0.1
+Wed, 02 Aug 2017 17:27:40 connectionpool.py[line:400] DEBUG http://127.0.0.1:8888 "GET http://www.gsxt.gov.cn/%7B5l_RJDt6qW3U2WQziG7diOOfC3UC4PYR-fB3d0OCS7QhO96RLo49J9oGiL2HvR6h7z2_3RfhSpDYyi0SAslpirM_EsN25JdENt3uKuyHM7g4e3EAGAFqFhhCbx-MM5jI-1501664728707%7D?start=25 HTTP/1.1" 200 None
+Wed, 02 Aug 2017 17:27:40 Public_code.py[line:65] INFO the status_code is 200 
+Wed, 02 Aug 2017 17:27:40 Public_code.py[line:62] INFO there remains 2 times to send requests 
+Wed, 02 Aug 2017 17:27:50 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): 127.0.0.1
+Wed, 02 Aug 2017 17:27:50 connectionpool.py[line:400] DEBUG http://127.0.0.1:8888 "GET http://www.gsxt.gov.cn/%7B5l_RJDt6qW3U2WQziG7diOOfC3UC4PYR-fB3d0OCS7QhO96RLo49J9oGiL2HvR6h7z2_3RfhSpDYyi0SAslpirM_EsN25JdENt3uKuyHM7g4e3EAGAFqFhhCbx-MM5jI-1501664728707%7D?start=30 HTTP/1.1" 200 None
+Wed, 02 Aug 2017 17:27:50 Public_code.py[line:65] INFO the status_code is 200 
+Wed, 02 Aug 2017 17:27:50 Public_code.py[line:62] INFO there remains 2 times to send requests 
+Wed, 02 Aug 2017 17:28:01 Public_code.py[line:28] INFO connect is success!
+Wed, 02 Aug 2017 17:28:01 Public_code.py[line:62] INFO there remains 2 times to send requests 
+Wed, 02 Aug 2017 17:28:11 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): 127.0.0.1
+Wed, 02 Aug 2017 17:28:11 connectionpool.py[line:400] DEBUG http://127.0.0.1:8888 "GET http://www.gsxt.gov.cn/%7B5l_RJDt6qW3U2WQziG7diOOfC3UC4PYR-fB3d0OCS7QhO96RLo49J9oGiL2HvR6h7z2_3RfhSpDYyi0SAslpirM_EsN25JdENt3uKuyHM7g4e3EAGAFqFhhCbx-MM5jI-1501664728707%7D HTTP/1.1" 200 None
+Wed, 02 Aug 2017 17:28:11 Public_code.py[line:65] INFO the status_code is 200 
+Wed, 02 Aug 2017 17:28:11 Public_code.py[line:152] INFO clear: 236
+Wed, 02 Aug 2017 17:28:11 Public_code.py[line:62] INFO there remains 2 times to send requests 
+Wed, 02 Aug 2017 17:28:20 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): 127.0.0.1
+Wed, 02 Aug 2017 17:28:21 connectionpool.py[line:400] DEBUG http://127.0.0.1:8888 "GET http://www.gsxt.gov.cn/%7B5l_RJDt6qW3U2WQziG7diOOfC3UC4PYR-fB3d0OCS7QhO96RLo49J9oGiL2HvR6h7z2_3RfhSpDYyi0SAslpirM_EsN25JdENt3uKuyHM7g4e3EAGAFqFhhCbx-MM5jI-1501664728707%7D?start=5 HTTP/1.1" 200 None
+Wed, 02 Aug 2017 17:28:21 Public_code.py[line:65] INFO the status_code is 200 
+Wed, 02 Aug 2017 17:28:21 Public_code.py[line:62] INFO there remains 2 times to send requests 
+Wed, 02 Aug 2017 17:28:30 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): 127.0.0.1
+Wed, 02 Aug 2017 17:28:30 connectionpool.py[line:400] DEBUG http://127.0.0.1:8888 "GET http://www.gsxt.gov.cn/%7B5l_RJDt6qW3U2WQziG7diOOfC3UC4PYR-fB3d0OCS7QhO96RLo49J9oGiL2HvR6h7z2_3RfhSpDYyi0SAslpirM_EsN25JdENt3uKuyHM7g4e3EAGAFqFhhCbx-MM5jI-1501664728707%7D?start=10 HTTP/1.1" 200 None
+Wed, 02 Aug 2017 17:28:30 Public_code.py[line:65] INFO the status_code is 200 
+Wed, 02 Aug 2017 17:28:30 Public_code.py[line:62] INFO there remains 2 times to send requests 
+Wed, 02 Aug 2017 17:28:39 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): 127.0.0.1
+Wed, 02 Aug 2017 17:28:39 connectionpool.py[line:400] DEBUG http://127.0.0.1:8888 "GET http://www.gsxt.gov.cn/%7B5l_RJDt6qW3U2WQziG7diOOfC3UC4PYR-fB3d0OCS7QhO96RLo49J9oGiL2HvR6h7z2_3RfhSpDYyi0SAslpirM_EsN25JdENt3uKuyHM7g4e3EAGAFqFhhCbx-MM5jI-1501664728707%7D?start=15 HTTP/1.1" 200 None
+Wed, 02 Aug 2017 17:28:39 Public_code.py[line:65] INFO the status_code is 200 
+Wed, 02 Aug 2017 17:28:39 Public_code.py[line:62] INFO there remains 2 times to send requests 
+Wed, 02 Aug 2017 17:28:51 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): 127.0.0.1
+Wed, 02 Aug 2017 17:28:51 connectionpool.py[line:400] DEBUG http://127.0.0.1:8888 "GET http://www.gsxt.gov.cn/%7B5l_RJDt6qW3U2WQziG7diOOfC3UC4PYR-fB3d0OCS7QhO96RLo49J9oGiL2HvR6h7z2_3RfhSpDYyi0SAslpirM_EsN25JdENt3uKuyHM7g4e3EAGAFqFhhCbx-MM5jI-1501664728707%7D?start=20 HTTP/1.1" 200 None
+Wed, 02 Aug 2017 17:28:51 Public_code.py[line:65] INFO the status_code is 200 
+Wed, 02 Aug 2017 17:28:51 Public_code.py[line:62] INFO there remains 2 times to send requests 
+Wed, 02 Aug 2017 17:29:00 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): 127.0.0.1
+Wed, 02 Aug 2017 17:29:00 connectionpool.py[line:400] DEBUG http://127.0.0.1:8888 "GET http://www.gsxt.gov.cn/%7B5l_RJDt6qW3U2WQziG7diOOfC3UC4PYR-fB3d0OCS7QhO96RLo49J9oGiL2HvR6h7z2_3RfhSpDYyi0SAslpirM_EsN25JdENt3uKuyHM7g4e3EAGAFqFhhCbx-MM5jI-1501664728707%7D?start=25 HTTP/1.1" 200 None
+Wed, 02 Aug 2017 17:29:00 Public_code.py[line:65] INFO the status_code is 200 
+Wed, 02 Aug 2017 17:29:00 Public_code.py[line:62] INFO there remains 2 times to send requests 
+Wed, 02 Aug 2017 17:29:10 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): 127.0.0.1
+Wed, 02 Aug 2017 17:29:10 connectionpool.py[line:400] DEBUG http://127.0.0.1:8888 "GET http://www.gsxt.gov.cn/%7B5l_RJDt6qW3U2WQziG7diOOfC3UC4PYR-fB3d0OCS7QhO96RLo49J9oGiL2HvR6h7z2_3RfhSpDYyi0SAslpirM_EsN25JdENt3uKuyHM7g4e3EAGAFqFhhCbx-MM5jI-1501664728707%7D?start=30 HTTP/1.1" 200 None
+Wed, 02 Aug 2017 17:29:10 Public_code.py[line:65] INFO the status_code is 200 
+Wed, 02 Aug 2017 17:29:10 Public_code.py[line:62] INFO there remains 2 times to send requests 
+Wed, 02 Aug 2017 17:29:19 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): 127.0.0.1
+Wed, 02 Aug 2017 17:29:19 connectionpool.py[line:400] DEBUG http://127.0.0.1:8888 "GET http://www.gsxt.gov.cn/%7B5l_RJDt6qW3U2WQziG7diOOfC3UC4PYR-fB3d0OCS7QhO96RLo49J9oGiL2HvR6h7z2_3RfhSpDYyi0SAslpirM_EsN25JdENt3uKuyHM7g4e3EAGAFqFhhCbx-MM5jI-1501664728707%7D?start=35 HTTP/1.1" 200 None
+Wed, 02 Aug 2017 17:29:19 Public_code.py[line:65] INFO the status_code is 200 
+Wed, 02 Aug 2017 17:29:19 Public_code.py[line:62] INFO there remains 2 times to send requests 
+Wed, 02 Aug 2017 17:29:28 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): 127.0.0.1
+Wed, 02 Aug 2017 17:29:28 connectionpool.py[line:400] DEBUG http://127.0.0.1:8888 "GET http://www.gsxt.gov.cn/%7B5l_RJDt6qW3U2WQziG7diOOfC3UC4PYR-fB3d0OCS7QhO96RLo49J9oGiL2HvR6h7z2_3RfhSpDYyi0SAslpirM_EsN25JdENt3uKuyHM7g4e3EAGAFqFhhCbx-MM5jI-1501664728707%7D?start=40 HTTP/1.1" 200 None
+Wed, 02 Aug 2017 17:29:28 Public_code.py[line:65] INFO the status_code is 200 
+Wed, 02 Aug 2017 17:29:28 Public_code.py[line:62] INFO there remains 2 times to send requests 
+Wed, 02 Aug 2017 17:29:37 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): 127.0.0.1
+Wed, 02 Aug 2017 17:29:38 connectionpool.py[line:400] DEBUG http://127.0.0.1:8888 "GET http://www.gsxt.gov.cn/%7B5l_RJDt6qW3U2WQziG7diOOfC3UC4PYR-fB3d0OCS7QhO96RLo49J9oGiL2HvR6h7z2_3RfhSpDYyi0SAslpirM_EsN25JdENt3uKuyHM7g4e3EAGAFqFhhCbx-MM5jI-1501664728707%7D?start=45 HTTP/1.1" 200 None
+Wed, 02 Aug 2017 17:29:38 Public_code.py[line:65] INFO the status_code is 200 
+Wed, 02 Aug 2017 17:29:38 Public_code.py[line:62] INFO there remains 2 times to send requests 
+Wed, 02 Aug 2017 17:29:47 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): 127.0.0.1
+Wed, 02 Aug 2017 17:29:47 connectionpool.py[line:400] DEBUG http://127.0.0.1:8888 "GET http://www.gsxt.gov.cn/%7B5l_RJDt6qW3U2WQziG7diOOfC3UC4PYR-fB3d0OCS7QhO96RLo49J9oGiL2HvR6h7z2_3RfhSpDYyi0SAslpirM_EsN25JdENt3uKuyHM7g4e3EAGAFqFhhCbx-MM5jI-1501664728707%7D?start=50 HTTP/1.1" 200 None
+Wed, 02 Aug 2017 17:29:47 Public_code.py[line:65] INFO the status_code is 200 
+Wed, 02 Aug 2017 17:29:47 Public_code.py[line:62] INFO there remains 2 times to send requests 
+Wed, 02 Aug 2017 17:29:58 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): 127.0.0.1
+Wed, 02 Aug 2017 17:29:58 connectionpool.py[line:400] DEBUG http://127.0.0.1:8888 "GET http://www.gsxt.gov.cn/%7B5l_RJDt6qW3U2WQziG7diOOfC3UC4PYR-fB3d0OCS7QhO96RLo49J9oGiL2HvR6h7z2_3RfhSpDYyi0SAslpirM_EsN25JdENt3uKuyHM7g4e3EAGAFqFhhCbx-MM5jI-1501664728707%7D?start=55 HTTP/1.1" 200 None
+Wed, 02 Aug 2017 17:29:58 Public_code.py[line:65] INFO the status_code is 200 
+Wed, 02 Aug 2017 17:29:58 Public_code.py[line:62] INFO there remains 2 times to send requests 
+Wed, 02 Aug 2017 17:30:07 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): 127.0.0.1
+Wed, 02 Aug 2017 17:30:07 connectionpool.py[line:400] DEBUG http://127.0.0.1:8888 "GET http://www.gsxt.gov.cn/%7B5l_RJDt6qW3U2WQziG7diOOfC3UC4PYR-fB3d0OCS7QhO96RLo49J9oGiL2HvR6h7z2_3RfhSpDYyi0SAslpirM_EsN25JdENt3uKuyHM7g4e3EAGAFqFhhCbx-MM5jI-1501664728707%7D?start=60 HTTP/1.1" 200 None
+Wed, 02 Aug 2017 17:30:07 Public_code.py[line:65] INFO the status_code is 200 
+Wed, 02 Aug 2017 17:30:07 Public_code.py[line:62] INFO there remains 2 times to send requests 
+Wed, 02 Aug 2017 17:30:16 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): 127.0.0.1
+Wed, 02 Aug 2017 17:30:16 connectionpool.py[line:400] DEBUG http://127.0.0.1:8888 "GET http://www.gsxt.gov.cn/%7B5l_RJDt6qW3U2WQziG7diOOfC3UC4PYR-fB3d0OCS7QhO96RLo49J9oGiL2HvR6h7z2_3RfhSpDYyi0SAslpirM_EsN25JdENt3uKuyHM7g4e3EAGAFqFhhCbx-MM5jI-1501664728707%7D?start=65 HTTP/1.1" 200 None
+Wed, 02 Aug 2017 17:30:16 Public_code.py[line:65] INFO the status_code is 200 
+Wed, 02 Aug 2017 17:30:16 Public_code.py[line:62] INFO there remains 2 times to send requests 
+Wed, 02 Aug 2017 17:30:26 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): 127.0.0.1
+Wed, 02 Aug 2017 17:30:26 connectionpool.py[line:400] DEBUG http://127.0.0.1:8888 "GET http://www.gsxt.gov.cn/%7B5l_RJDt6qW3U2WQziG7diOOfC3UC4PYR-fB3d0OCS7QhO96RLo49J9oGiL2HvR6h7z2_3RfhSpDYyi0SAslpirM_EsN25JdENt3uKuyHM7g4e3EAGAFqFhhCbx-MM5jI-1501664728707%7D?start=70 HTTP/1.1" 200 None
+Wed, 02 Aug 2017 17:30:26 Public_code.py[line:65] INFO the status_code is 200 
+Wed, 02 Aug 2017 17:30:26 Public_code.py[line:62] INFO there remains 2 times to send requests 
+Wed, 02 Aug 2017 17:30:36 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): 127.0.0.1
+Wed, 02 Aug 2017 17:30:36 connectionpool.py[line:400] DEBUG http://127.0.0.1:8888 "GET http://www.gsxt.gov.cn/%7B5l_RJDt6qW3U2WQziG7diOOfC3UC4PYR-fB3d0OCS7QhO96RLo49J9oGiL2HvR6h7z2_3RfhSpDYyi0SAslpirM_EsN25JdENt3uKuyHM7g4e3EAGAFqFhhCbx-MM5jI-1501664728707%7D?start=75 HTTP/1.1" 200 None
+Wed, 02 Aug 2017 17:30:36 Public_code.py[line:65] INFO the status_code is 200 
+Wed, 02 Aug 2017 17:30:36 Public_code.py[line:62] INFO there remains 2 times to send requests 
+Wed, 02 Aug 2017 17:30:45 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): 127.0.0.1
+Wed, 02 Aug 2017 17:30:45 connectionpool.py[line:400] DEBUG http://127.0.0.1:8888 "GET http://www.gsxt.gov.cn/%7B5l_RJDt6qW3U2WQziG7diOOfC3UC4PYR-fB3d0OCS7QhO96RLo49J9oGiL2HvR6h7z2_3RfhSpDYyi0SAslpirM_EsN25JdENt3uKuyHM7g4e3EAGAFqFhhCbx-MM5jI-1501664728707%7D?start=80 HTTP/1.1" 200 None
+Wed, 02 Aug 2017 17:30:45 Public_code.py[line:65] INFO the status_code is 200 
+Wed, 02 Aug 2017 17:30:45 Public_code.py[line:62] INFO there remains 2 times to send requests 
+Wed, 02 Aug 2017 17:30:49 Public_code.py[line:28] INFO connect is success!
+Wed, 02 Aug 2017 17:30:49 Public_code.py[line:62] INFO there remains 2 times to send requests 
+Wed, 02 Aug 2017 17:30:58 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): 127.0.0.1
+Wed, 02 Aug 2017 17:30:58 connectionpool.py[line:400] DEBUG http://127.0.0.1:8888 "GET http://www.gsxt.gov.cn/%7B5l_RJDt6qW3U2WQziG7diOOfC3UC4PYR-fB3d0OCS7QhO96RLo49J9oGiL2HvR6h7z2_3RfhSpDYyi0SAslpirM_EsN25JdENt3uKuyHM7g4e3EAGAFqFhhCbx-MM5jI-1501664728707%7D HTTP/1.1" 200 None
+Wed, 02 Aug 2017 17:30:58 Public_code.py[line:65] INFO the status_code is 200 
+Wed, 02 Aug 2017 17:30:58 Public_code.py[line:152] INFO clear: 236
+Wed, 02 Aug 2017 17:30:58 Public_code.py[line:62] INFO there remains 2 times to send requests 
+Wed, 02 Aug 2017 17:31:13 Public_code.py[line:28] INFO connect is success!
+Wed, 02 Aug 2017 17:31:14 Image.py[line:397] DEBUG Importing BmpImagePlugin
+Wed, 02 Aug 2017 17:31:14 Image.py[line:397] DEBUG Importing BufrStubImagePlugin
+Wed, 02 Aug 2017 17:31:14 Image.py[line:397] DEBUG Importing CurImagePlugin
+Wed, 02 Aug 2017 17:31:14 Image.py[line:397] DEBUG Importing DcxImagePlugin
+Wed, 02 Aug 2017 17:31:14 Image.py[line:397] DEBUG Importing DdsImagePlugin
+Wed, 02 Aug 2017 17:31:14 Image.py[line:397] DEBUG Importing EpsImagePlugin
+Wed, 02 Aug 2017 17:31:14 Image.py[line:397] DEBUG Importing FitsStubImagePlugin
+Wed, 02 Aug 2017 17:31:14 Image.py[line:397] DEBUG Importing FliImagePlugin
+Wed, 02 Aug 2017 17:31:14 Image.py[line:397] DEBUG Importing FpxImagePlugin
+Wed, 02 Aug 2017 17:31:14 Image.py[line:397] DEBUG Importing FtexImagePlugin
+Wed, 02 Aug 2017 17:31:14 Image.py[line:397] DEBUG Importing GbrImagePlugin
+Wed, 02 Aug 2017 17:31:14 Image.py[line:397] DEBUG Importing GifImagePlugin
+Wed, 02 Aug 2017 17:31:14 Image.py[line:397] DEBUG Importing GribStubImagePlugin
+Wed, 02 Aug 2017 17:31:14 Image.py[line:397] DEBUG Importing Hdf5StubImagePlugin
+Wed, 02 Aug 2017 17:31:14 Image.py[line:397] DEBUG Importing IcnsImagePlugin
+Wed, 02 Aug 2017 17:31:14 Image.py[line:397] DEBUG Importing IcoImagePlugin
+Wed, 02 Aug 2017 17:31:14 Image.py[line:397] DEBUG Importing ImImagePlugin
+Wed, 02 Aug 2017 17:31:14 Image.py[line:397] DEBUG Importing ImtImagePlugin
+Wed, 02 Aug 2017 17:31:14 Image.py[line:397] DEBUG Importing IptcImagePlugin
+Wed, 02 Aug 2017 17:31:14 Image.py[line:397] DEBUG Importing JpegImagePlugin
+Wed, 02 Aug 2017 17:31:14 Image.py[line:397] DEBUG Importing Jpeg2KImagePlugin
+Wed, 02 Aug 2017 17:31:14 Image.py[line:397] DEBUG Importing McIdasImagePlugin
+Wed, 02 Aug 2017 17:31:14 Image.py[line:397] DEBUG Importing MicImagePlugin
+Wed, 02 Aug 2017 17:31:14 Image.py[line:397] DEBUG Importing MpegImagePlugin
+Wed, 02 Aug 2017 17:31:14 Image.py[line:397] DEBUG Importing MpoImagePlugin
+Wed, 02 Aug 2017 17:31:14 Image.py[line:397] DEBUG Importing MspImagePlugin
+Wed, 02 Aug 2017 17:31:14 Image.py[line:397] DEBUG Importing PalmImagePlugin
+Wed, 02 Aug 2017 17:31:14 Image.py[line:397] DEBUG Importing PcdImagePlugin
+Wed, 02 Aug 2017 17:31:14 Image.py[line:397] DEBUG Importing PcxImagePlugin
+Wed, 02 Aug 2017 17:31:14 Image.py[line:397] DEBUG Importing PdfImagePlugin
+Wed, 02 Aug 2017 17:31:14 Image.py[line:397] DEBUG Importing PixarImagePlugin
+Wed, 02 Aug 2017 17:31:14 Image.py[line:397] DEBUG Importing PngImagePlugin
+Wed, 02 Aug 2017 17:31:14 Image.py[line:397] DEBUG Importing PpmImagePlugin
+Wed, 02 Aug 2017 17:31:14 Image.py[line:397] DEBUG Importing PsdImagePlugin
+Wed, 02 Aug 2017 17:31:14 Image.py[line:397] DEBUG Importing SgiImagePlugin
+Wed, 02 Aug 2017 17:31:14 Image.py[line:397] DEBUG Importing SpiderImagePlugin
+Wed, 02 Aug 2017 17:31:14 Image.py[line:397] DEBUG Importing SunImagePlugin
+Wed, 02 Aug 2017 17:31:14 Image.py[line:397] DEBUG Importing TgaImagePlugin
+Wed, 02 Aug 2017 17:31:14 Image.py[line:397] DEBUG Importing TiffImagePlugin
+Wed, 02 Aug 2017 17:31:14 Image.py[line:397] DEBUG Importing WebPImagePlugin
+Wed, 02 Aug 2017 17:31:14 Image.py[line:397] DEBUG Importing WmfImagePlugin
+Wed, 02 Aug 2017 17:31:14 Image.py[line:397] DEBUG Importing XbmImagePlugin
+Wed, 02 Aug 2017 17:31:14 Image.py[line:397] DEBUG Importing XpmImagePlugin
+Wed, 02 Aug 2017 17:31:14 Image.py[line:397] DEBUG Importing XVThumbImagePlugin
+Wed, 02 Aug 2017 17:31:34 Public_code.py[line:62] INFO there remains 2 times to send requests 
+Wed, 02 Aug 2017 17:31:43 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): 127.0.0.1
+Wed, 02 Aug 2017 17:31:43 connectionpool.py[line:400] DEBUG http://127.0.0.1:8888 "GET http://www.gsxt.gov.cn/%7B5l_RJDt6qW3U2WQziG7diOOfC3UC4PYR-fB3d0OCS7QhO96RLo49J9oGiL2HvR6h7z2_3RfhSpDYyi0SAslpirM_EsN25JdENt3uKuyHM7g4e3EAGAFqFhhCbx-MM5jI-1501664728707%7D HTTP/1.1" 200 None
+Wed, 02 Aug 2017 17:31:43 Public_code.py[line:65] INFO the status_code is 200 
+Wed, 02 Aug 2017 17:32:16 Public_code.py[line:152] INFO clear: 236
+Wed, 02 Aug 2017 17:36:59 Public_code.py[line:28] INFO connect is success!
+Wed, 02 Aug 2017 17:36:59 Public_code.py[line:62] INFO there remains 2 times to send requests 
+Wed, 02 Aug 2017 17:37:09 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): 127.0.0.1
+Wed, 02 Aug 2017 17:37:09 connectionpool.py[line:400] DEBUG http://127.0.0.1:8888 "GET http://www.gsxt.gov.cn/%7B5l_RJDt6qW3U2WQziG7diOOfC3UC4PYR-fB3d0OCS7QhO96RLo49J9oGiL2HvR6h7z2_3RfhSpDYyi0SAslpirM_EsN25JdENt3uKuyHM7g4e3EAGAFqFhhCbx-MM5jI-1501664728707%7D HTTP/1.1" 200 None
+Wed, 02 Aug 2017 17:37:09 Public_code.py[line:65] INFO the status_code is 200 
+Wed, 02 Aug 2017 17:37:09 Public_code.py[line:155] INFO clear: 0
+Wed, 02 Aug 2017 17:37:09 Public_code.py[line:188] INFO 暂无 clear信息
+Wed, 02 Aug 2017 17:37:09 Public_code.py[line:192] INFO execute clear: 0
+Wed, 02 Aug 2017 17:39:58 Public_code.py[line:28] INFO connect is success!
+Wed, 02 Aug 2017 17:43:59 Public_code.py[line:28] INFO connect is success!
+Wed, 02 Aug 2017 17:43:59 Public_code.py[line:62] INFO there remains 2 times to send requests 
+Wed, 02 Aug 2017 17:43:59 Public_code.py[line:69] ERROR Invalid URL '%7B5l_RJDt6qW3U2WQziG7diEo5PO8zdln3wR7CHcvcfuUeQcagSCYB_2et6JSH_xR-fFpx7cfm_z27HQh3zs9YaOtyh3U1fbLEN0NoSXsCJxCISpsbgbAREv7rTy527HfTRHBGU6Mnw53Pd4T538a29g-1501664728671%7D': No schema supplied. Perhaps you meant http://%7B5l_RJDt6qW3U2WQziG7diEo5PO8zdln3wR7CHcvcfuUeQcagSCYB_2et6JSH_xR-fFpx7cfm_z27HQh3zs9YaOtyh3U1fbLEN0NoSXsCJxCISpsbgbAREv7rTy527HfTRHBGU6Mnw53Pd4T538a29g-1501664728671%7D?
+Wed, 02 Aug 2017 17:43:59 Public_code.py[line:62] INFO there remains 1 times to send requests 
+Wed, 02 Aug 2017 17:43:59 Public_code.py[line:69] ERROR Invalid URL '%7B5l_RJDt6qW3U2WQziG7diEo5PO8zdln3wR7CHcvcfuUeQcagSCYB_2et6JSH_xR-fFpx7cfm_z27HQh3zs9YaOtyh3U1fbLEN0NoSXsCJxCISpsbgbAREv7rTy527HfTRHBGU6Mnw53Pd4T538a29g-1501664728671%7D': No schema supplied. Perhaps you meant http://%7B5l_RJDt6qW3U2WQziG7diEo5PO8zdln3wR7CHcvcfuUeQcagSCYB_2et6JSH_xR-fFpx7cfm_z27HQh3zs9YaOtyh3U1fbLEN0NoSXsCJxCISpsbgbAREv7rTy527HfTRHBGU6Mnw53Pd4T538a29g-1501664728671%7D?
+Wed, 02 Aug 2017 17:44:00 Public_code.py[line:62] INFO there remains 0 times to send requests 
+Wed, 02 Aug 2017 17:44:00 Public_code.py[line:69] ERROR Invalid URL '%7B5l_RJDt6qW3U2WQziG7diEo5PO8zdln3wR7CHcvcfuUeQcagSCYB_2et6JSH_xR-fFpx7cfm_z27HQh3zs9YaOtyh3U1fbLEN0NoSXsCJxCISpsbgbAREv7rTy527HfTRHBGU6Mnw53Pd4T538a29g-1501664728671%7D': No schema supplied. Perhaps you meant http://%7B5l_RJDt6qW3U2WQziG7diEo5PO8zdln3wR7CHcvcfuUeQcagSCYB_2et6JSH_xR-fFpx7cfm_z27HQh3zs9YaOtyh3U1fbLEN0NoSXsCJxCISpsbgbAREv7rTy527HfTRHBGU6Mnw53Pd4T538a29g-1501664728671%7D?
+Wed, 02 Aug 2017 17:44:00 Public_code.py[line:75] ERROR 网站暂时无法访问！！!
+Wed, 02 Aug 2017 17:44:00 Public_code.py[line:191] INFO 网页打开出错！！
+Wed, 02 Aug 2017 17:44:00 Public_code.py[line:192] INFO execute freeze: 100000004
+Wed, 02 Aug 2017 17:44:41 Public_code.py[line:28] INFO connect is success!
+Wed, 02 Aug 2017 17:44:41 Public_code.py[line:62] INFO there remains 2 times to send requests 
+Wed, 02 Aug 2017 17:44:52 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): 127.0.0.1
+Wed, 02 Aug 2017 17:44:53 connectionpool.py[line:400] DEBUG http://127.0.0.1:8888 "GET http://www.gsxt.gov.cn/%7B5l_RJDt6qW3U2WQziG7diEo5PO8zdln3wR7CHcvcfuUeQcagSCYB_2et6JSH_xR-fFpx7cfm_z27HQh3zs9YaOtyh3U1fbLEN0NoSXsCJxCISpsbgbAREv7rTy527HfTRHBGU6Mnw53Pd4T538a29g-1501664728671%7D HTTP/1.1" 200 None
+Wed, 02 Aug 2017 17:44:53 Public_code.py[line:65] INFO the status_code is 200 
+Wed, 02 Aug 2017 17:44:53 Public_code.py[line:155] INFO freeze: 0
+Wed, 02 Aug 2017 17:44:53 Public_code.py[line:188] INFO 暂无 freeze信息
+Wed, 02 Aug 2017 17:44:53 Public_code.py[line:192] INFO execute freeze: 0
+Wed, 02 Aug 2017 17:46:20 Public_code.py[line:28] INFO connect is success!
+Wed, 02 Aug 2017 17:46:20 Public_code.py[line:62] INFO there remains 2 times to send requests 
+Wed, 02 Aug 2017 17:46:30 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): 127.0.0.1
+Wed, 02 Aug 2017 17:46:30 connectionpool.py[line:400] DEBUG http://127.0.0.1:8888 "GET http://www.gsxt.gov.cn/%7B5l_RJDt6qW3U2WQziG7diETxSlQJmWMMTGzSCUWQleW8FC_wPMrrQVhKgctzjFOv7z2_3RfhSpDYyi0SAslpirM_EsN25JdENt3uKuyHM7g4e3EAGAFqFhhCbx-MM5jI-1501664728711%7D HTTP/1.1" 200 None
+Wed, 02 Aug 2017 17:46:30 Public_code.py[line:65] INFO the status_code is 200 
+Wed, 02 Aug 2017 17:46:30 Public_code.py[line:155] INFO mort: 0
+Wed, 02 Aug 2017 17:46:30 Public_code.py[line:188] INFO 暂无 mort信息
+Wed, 02 Aug 2017 17:46:30 Public_code.py[line:192] INFO execute mort: 0
+Wed, 02 Aug 2017 17:49:04 Public_code.py[line:28] INFO connect is success!
+Wed, 02 Aug 2017 17:49:04 Public_code.py[line:62] INFO there remains 2 times to send requests 
+Wed, 02 Aug 2017 17:49:13 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): 127.0.0.1
+Wed, 02 Aug 2017 17:49:14 connectionpool.py[line:400] DEBUG http://127.0.0.1:8888 "GET http://www.gsxt.gov.cn/%7B5l_RJDt6qW3U2WQziG7diGQUYDort2c7n8x6RPoEsL68FC_wPMrrQVhKgctzjFOv7z2_3RfhSpDYyi0SAslpirM_EsN25JdENt3uKuyHM7g4e3EAGAFqFhhCbx-MM5jI-1501664728723%7D HTTP/1.1" 200 None
+Wed, 02 Aug 2017 17:49:14 Public_code.py[line:65] INFO the status_code is 200 
+Wed, 02 Aug 2017 17:49:14 Public_code.py[line:155] INFO permit: 1
+Wed, 02 Aug 2017 17:49:14 Public_code.py[line:192] INFO execute permit: 0
+Wed, 02 Aug 2017 18:41:29 Public_code.py[line:28] INFO connect is success!
+Wed, 02 Aug 2017 18:41:29 Public_code.py[line:62] INFO there remains 2 times to send requests 
+Wed, 02 Aug 2017 18:41:29 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cn
+Wed, 02 Aug 2017 18:41:30 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "GET /%7BSJd8u6CoZYwKbW6mAZJvS0siA7tgi7JDVCW9d-Ofnqmw94bguYoHMHqh6ue0PfwJQwZ_HwZ7DSnVUgXDHEaXXMp67b0LoS7WHiXbANeGERmzPN_7tH9KSKKFAha-6t6t-1501638636267%7D HTTP/1.1" 200 None
+Wed, 02 Aug 2017 18:41:30 Public_code.py[line:65] INFO the status_code is 200 
+Wed, 02 Aug 2017 18:43:28 Public_code.py[line:28] INFO connect is success!
+Wed, 02 Aug 2017 18:43:28 Public_code.py[line:62] INFO there remains 2 times to send requests 
+Wed, 02 Aug 2017 18:43:28 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cn
+Wed, 02 Aug 2017 18:43:28 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "GET /%7Btr7DJ71ak4raVOPd1J9a0RHyVylH9_Du8P7w3d7tgi4BD2rtWT-mV7bu0FS7TEwPoPCnKSkrvKg7N1uvcjZ4BapkA4SFx4LVO2zWWiNsWCYl1tr3moB6kmHdXW6IHVhZ-1501668561622%7D HTTP/1.1" 200 None
+Wed, 02 Aug 2017 18:43:28 Public_code.py[line:65] INFO the status_code is 200 
+Wed, 02 Aug 2017 18:43:28 Public_code.py[line:62] INFO there remains 2 times to send requests 
+Wed, 02 Aug 2017 18:43:28 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cn
+Wed, 02 Aug 2017 18:43:28 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "GET /%7Btr7DJ71ak4raVOPd1J9a0RHyVylH9_Du8P7w3d7tgi4BD2rtWT-mV7bu0FS7TEwPoPCnKSkrvKg7N1uvcjZ4BapkA4SFx4LVO2zWWiNsWCYl1tr3moB6kmHdXW6IHVhZ-1501668561622%7D HTTP/1.1" 200 None
+Wed, 02 Aug 2017 18:43:28 Public_code.py[line:65] INFO the status_code is 200 
+Wed, 02 Aug 2017 18:43:28 Public_code.py[line:107] INFO brand: 0

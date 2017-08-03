@@ -1,0 +1,6 @@
+Mon, 31 Jul 2017 09:41:13 Public_code.py[line:28] INFO connect is success!
+Mon, 31 Jul 2017 09:41:13 Public_code.py[line:62] INFO there remains 9 times to send requests 
+Mon, 31 Jul 2017 09:41:13 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cn
+Mon, 31 Jul 2017 09:41:13 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "GET /%7Bqr5noJYhNJD7EMQJIWjCj8-NSl5Y2Fl8lzIbFnjJCkN1krVlI4b6o0SWKQRuBcRsB71goUaXQ1t9uFuqG85wWa1J7vvFYG-iR2p1eI0NpBaBSen0iT0cav1XsJJinHKAydqpv8zo7_O11xhUju3XHQ-1501464700322%7D HTTP/1.1" 200 None
+Mon, 31 Jul 2017 09:41:13 Public_code.py[line:65] INFO the status_code is 200 
+Mon, 31 Jul 2017 09:41:14 QGGS_basic.py[line:241] INFO update basic :1
