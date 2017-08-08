@@ -27,9 +27,13 @@ from PublicCode.Public_code import Connect_to_DB
 from PublicCode.Public_code import Get_BranchInfo as Get_BranchInfo
 from PublicCode.Public_code import Send_Request as Send_Request
 
-url = sys.argv[1]
-gs_basic_id = sys.argv[2]
-gs_py_id = sys.argv[3]
+# url = sys.argv[1]
+# gs_basic_id = sys.argv[2]
+# gs_py_id = sys.argv[3]
+
+url = 'http://www.gsxt.gov.cn/%7BTgfN2Py4EG9HUlLktZwmxCk-4rmCBGlrdZMvL3HIFmGwPTDm4fkFZ6omhNo6w_M55sN3w2_28WsVDJU5fh34p4SvClsmVJBWO-91BGp6SLvIgsSWwnQwUsCLlYRWNEl9-1502154111304%7D'
+gs_basic_id = 229421949
+gs_py_id = 1501
 
 
 reload(sys)
@@ -42,10 +46,12 @@ host = config.host
 select_report = 'select gs_report_id from gs_report where gs_basic_id = %s and year = %s'
 basic_string = 'insert into gs_report(gs_basic_id,year,province,name,uuid, tel, address, email, postcode, status, employee, if_empnum, womennum,\
  if_womennum, holding, if_holding,mainbus,code,ccode,pripid,source,created,updated) values(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)'
-
+select_report1 = 'select gs_report_id from gs_report where gs_basic_id = %s and year = %s and source = 0'
 run_string = 'insert into gs_report_run(gs_report_id,gs_basic_id,province,asset,if_asset,benifit,if_benifit,income,if_income,profit,if_profit,main_income,if_main,net_income,if_net,tax,if_tax,debt,if_debt,uuid,created,updated) values(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)'
 frun_string = 'insert into gs_report_run(gs_report_id,gs_basic_id,province,uuid,income,if_income,profit,if_profit,tax,if_tax,loan, if_loan, subsidy, if_subsidy,created,updated) values(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)'
-
+select_run = 'select gs_report_run_id,gs_report_id from gs_report_run where gs_basic_id = %s and uuid = %s'
+update_run = 'update gs_report_run set asset = %s,if_asset = %s,benifit= %s,if_benifit = %s,income = %s,if_income = %s,profit = %s,if_profit = %s,main_income =%s,if_main= %s,net_income = %s,if_net = %s,tax= %s,if_tax= %s,debt = %s,if_debt = %s,updated = %s where gs_report_run_id= %s'
+update_frun = 'update gs_report_run set income = %s,if_income = %s,profit = %s,if_profit = %s,tax = %s,if_tax = %s,loan = %s, if_loan = %s, subsidy = %s, if_subsidy = %s,updated = %s where gs_report_run_id = %s '
 update_report_py ='update gs_py set gs_py_id = %s ,report = %s ,updated = %s where gs_basic_id = %s and gs_py_id = %s'
 update_run_py = 'update gs_py set gs_py_id = %s ,report_run = %s,updated = %s where gs_basic_id = %s and gs_py_id = %s'
 assure_py = 'update gs_py set gs_py_id = %s ,report_assure = %s ,updated = %s where gs_basic_id = %s and gs_py_id = %s '
@@ -55,7 +61,7 @@ schange_py = 'update gs_py set gs_py_id = %s ,report_schange = %s,updated = %s w
 share_py = 'update gs_py set gs_py_id = %s,report_share = %s,updated = %s where gs_basic_id = %s and gs_py_id = %s'
 web_py = 'update gs_py set gs_py_id = %s,report_web = %s,updated = %s where gs_basic_id = %s and gs_py_id = %s'
 update_address = 'update gs_basic set gs_basic_id = %s,tel = %s,address = %s,email = %s,updated = %s where gs_basic_id = %s'
-select_year = 'select year from gs_report where gs_basic_id = %s'
+select_year = 'select year from gs_report where gs_basic_id = %s '
 select_basic_year = 'select reg_date from gs_basic where gs_basic_id = %s'
 update_pbreport = 'insert into gs_report(gs_basic_id,year,province,name,uuid,code,ccode,source,report_mode,created,updated) values(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)'
 
@@ -133,9 +139,110 @@ class Report:
             flag = 1
         except Exception,e:
             logging.info('report error %s'%e)
-            flag = 10000006
+            flag = 100000006
         finally:
              return flag
+    #用于更新年报股份银行等一般性企业的资产状况信息
+    def get_report_runinfo(self, year,anCheId,province):
+
+        url_list = self.get_report_url(anCheId)
+        baseurl = url_list["baseinfo"]
+        baseinfo, runinfo = self.get_baseinfo(baseurl)
+        asset, if_asset, benifit, if_benifit = runinfo[0][0], runinfo[0][1], runinfo[0][2], runinfo[0][3]
+        income, if_income, profit, if_profit = runinfo[0][4], runinfo[0][5], runinfo[0][6], runinfo[0][7]
+        main_income, if_main, net_income, if_net = runinfo[0][8], runinfo[0][9], runinfo[0][10], runinfo[0][11]
+        tax, if_tax, debt, if_debt = runinfo[0][12],runinfo[0][13],runinfo[0][14],runinfo[0][15]
+        m = hashlib.md5()
+        m.update(str(self.gs_basic_id) + str(year))
+        uuid = m.hexdigest()
+        remark = 0
+        row_count = 0
+        try:
+            count = self.cursor.execute(select_report1, (self.gs_basic_id, year))
+            if count == 0:
+               pass
+            elif int(count)== 1:
+                gs_report_id = self.cursor.fetchall()[0][0]
+                counts = self.cursor.execute(select_run,(gs_basic_id,uuid))
+                if counts ==0:
+                    updated_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
+                    row_count = self.cursor.execute(run_string, (
+                        gs_report_id, self.gs_basic_id, province, asset, if_asset, benifit, if_benifit, income, if_income,
+                        profit,
+                        if_profit, main_income, if_main, net_income, if_net, tax, if_tax, debt, if_debt, uuid, updated_time,
+                        updated_time))
+                    self.connect.commit()
+                elif int(counts) ==1:
+
+                    for gs_report_run_id,gs_report_id in self.cursor.fetchall():
+                        updated_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
+                        row_count = self.cursor.execute(update_run,(asset, if_asset, benifit, if_benifit,income, if_income, profit, if_profit,main_income, if_main, net_income, if_net,tax, if_tax, debt, if_debt,updated_time,gs_report_run_id))
+                        self.connect.commit()
+        except Exception,e:
+            remark = 100000006
+            logging("update report error: %s"%e)
+        finally:
+            if remark < 100000001:
+                remark = row_count
+            updated_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
+            self.cursor.execute(update_run_py, (self.gs_py_id, remark, updated_time, gs_basic_id, self.gs_py_id))
+            self.connect.commit()
+            logging.info('execute report %s frun:%s' % (year, row_count))
+
+            return remark
+    #用于更新年报个体户等个别企业的年报的资产状况信息
+    def get_freport_fruninfo(self,year,anCheId,province,type):
+        if type == 'sfc':
+            url_list = self.get_freport_url(anCheId)
+        elif type == 'pb':
+            url_list = self.get_preport_url(anCheId)
+        baseurl = url_list["base"]
+        baseinfo, fruninfo = self.get_fbaseinfo(baseurl)
+        uuid, loan, if_loan, subsidy, if_subsidy = fruninfo[0][0], fruninfo[0][1], fruninfo[0][2], fruninfo[0][3], \
+                                                   fruninfo[0][4]
+        income, if_income, tax, if_tax = fruninfo[0][5], fruninfo[0][6], fruninfo[0][7], fruninfo[0][8]
+        profit, if_profit = fruninfo[0][9], fruninfo[0][10]
+        m = hashlib.md5()
+        m.update(str(self.gs_basic_id) + str(year))
+        uuid = m.hexdigest()
+        remark = 0
+        row_count = 0
+        try:
+            count = self.cursor.execute(select_report1, (self.gs_basic_id, year))
+            if count ==0:
+                pass
+            elif int(count)==1:
+                gs_report_id = self.cursor.fetchall()[0][0]
+                counts = self.cursor.execute(select_run, (self.gs_basic_id, uuid))
+                if counts ==0:
+                    updated_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
+
+                    row_count = self.cursor.execute(update_frun, (
+                        gs_report_id, gs_basic_id, province, uuid, income, if_income, profit, if_profit, tax, if_tax, loan,
+                        if_loan, subsidy, if_subsidy, updated_time, updated_time))
+                    self.connect.commit()
+                elif int(counts)==1:
+                    for gs_report_run_id, gs_report_id in self.cursor.fetchall():
+                        updated_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
+                        row_count = self.cursor.execute(update_frun, (
+                            income, if_income, profit, if_profit, tax, if_tax, loan,if_loan,
+                            subsidy, if_subsidy, updated_time, gs_report_run_id))
+                        self.connect.commit()
+        except Exception,e:
+            remark = 100000006
+            logging.info('frun error:%s'%e)
+        finally:
+            if remark <10000001:
+                remark = row_count
+            updated_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
+            self.cursor.execute(update_run_py, (self.gs_py_id, remark, updated_time, gs_basic_id, self.gs_py_id))
+            self.connect.commit()
+            logging.info('execute report %s frun:%s' % (year, row_count))
+
+            return remark
+
+
+
 
     #获取合作社家庭的个人用户的基本信息
     def get_freport_info(self,year,anCheId,province):
@@ -540,7 +647,6 @@ class Report:
         profit, if_profit = fruninfo[0][9],fruninfo[0][10]
         remark = 0
         try:
-            frun_string = 'insert into gs_report_run(gs_report_id,gs_basic_id,province,uuid,income,if_income,profit,if_profit,tax,if_tax,loan, if_loan, subsidy, if_subsidy,created,updated) values(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)'
 
             updated_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
 
@@ -583,7 +689,7 @@ class Report:
             updated_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
             cursor.execute(update_run_py, (self.gs_py_id,remark, updated_time,gs_basic_id,self.gs_py_id))
             connect.commit()
-
+    #用于更新纸质年报的信息
     def update_pbreport(self,year,gs_basic_id,cursor,connect,province):
 
         m = hashlib.md5()
@@ -606,6 +712,7 @@ class Report:
 #对年报中的各分项数据进行更新
 def update_report_main(url, cursor, connect, gs_basic_id,gs_py_id):
     total,insert_toal = 0,0
+    update_total = 0
     try:
         info = Report(url, cursor, connect, gs_basic_id,gs_py_id)
         year_href,remark = info.get_year_href()
@@ -620,7 +727,19 @@ def update_report_main(url, cursor, connect, gs_basic_id,gs_py_id):
                 year = year_href[key][1]
                 count = cursor.execute(select_report, (gs_basic_id, year))
                 if int(count) > 0:
-                    pass
+                    anCheId = year_href[key][0]
+                    province = year_href[key][2]
+                    entType = year_href[key][3]
+                    annRepFrom = year_href[key][4]
+                    if entType == 'e':
+                        flag = info.get_report_runinfo(year,anCheId,province)
+                    elif entType == 'sfc':
+                        flag = info.get_freport_fruninfo(year_href,anCheId,province,entType)
+                    elif entType == 'pb' and annRepFrom!='2':
+                        flag = info.get_pbreport_info(year,anCheId,province,entType)
+                    elif entType == 'pb' and annRepFrom =='2':
+                        flag = 0
+                    update_total+= flag
                 elif count == 0:
                     anCheId = year_href[key][0]
                     province = year_href[key][2]
@@ -642,46 +761,35 @@ def update_report_main(url, cursor, connect, gs_basic_id,gs_py_id):
         connect.commit()
         logging.info('report error %s' % e)
     finally:
-        return flag,total,insert_toal
+        return flag,total,insert_toal,update_total
 
 
 
 def update_report(url,cursor, connect, gs_basic_id,gs_py_id):
     total,insert_total = 0,0
+    update_total = 0
     try:
         now_year = time.localtime(time.time())[0]
-        last_year = now_year -1
         select_string = select_basic_year % gs_basic_id
         cursor.execute(select_string)
         sign_date = str(cursor.fetchall()[0][0])[0:4]
         if now_year == int(sign_date):
             flag = -1
         elif now_year > int(sign_date):
-            select_year_string = select_year % gs_basic_id
-            cursor.execute(select_year_string)
-            remark = 0
-            for year in cursor.fetchall():
-                total+=1
-                if last_year == year[0]:
-                    remark = 1
-                    break
-            if remark == 1:
-               flag = 0
-            elif remark == 0:
-                flag,total,insert_total = update_report_main(url, cursor, connect, gs_basic_id,gs_py_id)
+            flag,total,insert_total,update_total = update_report_main(url, cursor, connect, gs_basic_id,gs_py_id)
     except Exception, e:
         flag = 100000006
         logging.error('report error :%s' % e)
     finally:
         remark = flag
-        return remark,total,insert_total
+        return remark,total,insert_total,update_total
 
 
 def main():
     Log().found_log(gs_py_id,gs_basic_id)
     HOST, USER, PASSWD, DB, PORT = config.HOST, config.USER, config.PASSWD, config.DB, config.PORT
     connect, cursor = Connect_to_DB().ConnectDB(HOST, USER, PASSWD, DB, PORT)
-    flag,total,insert_total = update_report(url, cursor, connect, gs_basic_id, gs_py_id)
+    flag,total,insert_total,update_total = update_report(url, cursor, connect, gs_basic_id, gs_py_id)
     cursor.close()
     connect.close()
     info = {
@@ -693,7 +801,7 @@ def main():
     info["flag"] = int(flag)
     info["total"] = int(total)
     info["insert"] = int(insert_total)
-    info["update"] = 0
+    info["update"] = int(update_total)
     print info
 
 if __name__ == "__main__":

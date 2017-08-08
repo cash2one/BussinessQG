@@ -20,16 +20,16 @@ url = sys.argv[1]
 gs_basic_id = sys.argv[2]
 gs_py_id = sys.argv[3]
 
-# url = 'http://www.gsxt.gov.cn/%7B5l_RJDt6qW3U2WQziG7diOKL_p66iUtxr0dE_cRGxi69ApBl5Te5Ek19T0msEk3BXQntVA9TfucXVo6JT_ejxNafS8E3_vtenmHnlvAO8SQQShlay6H7vjLuV_IrhoXw-1501664728692%7D'
-# gs_basic_id = 229418502
+# url = 'http://www.gsxt.gov.cn/%7BTgfN2Py4EG9HUlLktZwmxPBixxO493YQp02u3wptRcP2d4GzMefp1XL9WUPxdS1AosIMgZW267ZEht8Xuq7LDpcnCrLz-Z99eyceMvATPD8-1502157397046%7Dqisusohttp://www.gsxt.gov.cn/%7BTgfN2Py4EG9HUlLktZwmxPBixxO493YQp02u3wptRcP2d4GzMefp1XL9WUPxdS1AosIMgZW267ZEht8Xuq7LDpcnCrLz-Z99eyceMvATPD8-1502157397046%7D'
+# gs_basic_id = 229421950
 # gs_py_id = 1501
 
 reload(sys)
 sys.setdefaultencoding('utf-8')
 Type = sys.getfilesystemencoding()
 
-insert_string = 'insert into gs_change(gs_basic_id,types,item,content_before,content_after,change_date,updated)values(%s,%s,%s,%s,%s,%s,%s)'
-select_string = 'select gs_basic_id,content_after from gs_change where gs_basic_id = %s and item = %s and change_date = %s '
+insert_string = 'insert into gs_change(gs_basic_id,types,item,content_before,content_after,change_date,source,updated)values(%s,%s,%s,%s,%s,%s,%s,%s)'
+select_string = 'select gs_basic_id,content_after from gs_change where gs_basic_id = %s and item = %s and change_date = %s and source =1 '
 update_change_py = 'update gs_py set gs_py_id = %s,gs_change = %s,updated = %s where gs_py_id = %s'
 
 class Change:
@@ -60,8 +60,9 @@ class Change:
                 updated_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
                 count = cursor.execute(select_string,(gs_basic_id,item,change_date))
                 if count == 0:
+                    source = 1
                     row_count = cursor.execute(insert_string, (
-                                gs_basic_id, types, item, content_before, content_after, change_date, updated_time))
+                                gs_basic_id, types, item, content_before, content_after, change_date,source,updated_time))
                     insert_flag += row_count
                     connect.commit()
                 elif count > 1:
@@ -87,7 +88,7 @@ def  main():
     HOST, USER, PASSWD, DB, PORT = config.HOST, config.USER, config.PASSWD, config.DB, config.PORT
     connect, cursor = Connect_to_DB().ConnectDB(HOST, USER, PASSWD, DB, PORT)
     pages, perpages = 0,0
-    urllist = url.split('||')
+    urllist = url.split('qisuso')
     Judge(gs_py_id, connect, cursor, gs_basic_id, urllist,pages,perpages).update_branch(update_change_py, Change, "change")
     cursor.close()
     connect.close()

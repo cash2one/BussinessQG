@@ -23,12 +23,12 @@ url = sys.argv[1]
 gs_basic_id = sys.argv[2]
 gs_py_id = sys.argv[3]
 
-# url = 'http://www.gsxt.gov.cn/%7BjAWcw_bj0PIJP_immSWpsepYKUom7FJ_XtzJIg5L3tTHDwib99NNg7m3zxJlBuJ9wSbxnkgYtacIYppg-PeeZZzMPeN7TewexnEtskwRUewsEkk6z5AcAKvaIXDNGVjO-1501206716967%7D'
-# gs_basic_id = 229417686
-# gs_py_id = 1199
-select_string = 'select gs_person_id from gs_person where name = %s and position = %s and gs_basic_id = %s'
-insert_string = 'insert into gs_person(gs_basic_id,name,position,updated)values(%s,%s,%s,%s)'
-person_string = 'update gs_person set gs_person_id = %s,updated = %s where gs_person_id = %s'
+# url = 'http://www.gsxt.gov.cn/%7BTgfN2Py4EG9HUlLktZwmxPV1tpNzjLb_j9__MFHAebzr6akZtQ2Emg9zqL0p9mxX9d38D34fEGJRAQ4ccu6QWs4ka_DS9ahCYpIiI56bmBw-1502153112719%7D'
+# gs_basic_id = 229421950
+# gs_py_id = 1500
+select_string = 'select gs_person_id,position from gs_person where gs_basic_id = %s and name = %s and source = 1'
+insert_string = 'insert into gs_person(gs_basic_id,name,position,source,updated)values(%s,%s,%s,%s,%s)'
+person_string = 'update gs_person set gs_person_id = %s,position = %s,updated = %s where gs_person_id = %s'
 update_person_py = 'update gs_py set gs_py_id = %s,gs_person = %s,updated = %s where  gs_py_id = %s '
 
 class Person:
@@ -52,7 +52,7 @@ class Person:
                 position = data["position_CN"].replace(" ","")
             elif position == '':
                 position = None
-            print name,position
+            #print name,position
             information[i] = [name, position]
         return information
 
@@ -63,19 +63,35 @@ class Person:
         try:
             for key in information.keys():
                 name = str(information[key][0])
-                position = str(information[key][1])
-                rows = cursor.execute(select_string, (name, position, gs_basic_id))
+                position = information[key][1]
+                rows = cursor.execute(select_string, ( gs_basic_id,name))
                 # print name,position
 
-                if int(rows) == 1:
-                    gs_person_id = cursor.fetchall()[0][0]
-                    updated_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
-                    count = cursor.execute(person_string, (gs_person_id,updated_time, gs_person_id))
-                    update_flag += count
-                    connect.commit()
+                if int(rows) >= 1:
+                    # gs_person_id = cursor.fetchall()[0][0]
+                    sign = 0
+                    for gs_person_id,pos in cursor.fetchall():
+                        if pos == position:
+                            sign = 1
+                        elif pos == None and position != None:
+                            updated_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
+                            count = cursor.execute(person_string, (gs_person_id, position, updated_time, gs_person_id))
+                            update_flag += count
+                            connect.commit()
+                            sign = 0
+                    if sign == 0:
+                        source = 1
+                        updated_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
+                        count = cursor.execute(insert_string, (gs_basic_id, name, position, source, updated_time))
+                        insert_flag += count
+                        connect.commit()
+
+                    else:
+                        pass
                 elif rows == 0:
+                    source = 1
                     updated_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
-                    count = cursor.execute(insert_string, (gs_basic_id, name,position, updated_time))
+                    count = cursor.execute(insert_string, (gs_basic_id, name,position,source, updated_time))
                     insert_flag += count
                     connect.commit()
         except Exception, e:

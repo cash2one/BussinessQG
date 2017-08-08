@@ -112,7 +112,7 @@ class Get_BranchInfo:
             totalPage = json.loads(result)["totalPage"]
             perpage = json.loads(result)["perPage"]
 
-            if totalPage == 0 and recordsTotal != 0 and recordsTotal!=-1:
+            if totalPage == 0 and recordsTotal!= 0 and recordsTotal!=-1:
                 page = 1
             else:
                 page = totalPage
@@ -178,7 +178,7 @@ class Get_BranchInfo:
                 for i in range(1, page):
                     start = perpage * i
                     url = url_pattern + '?start=%s' % start
-                    # print url
+                    #print url
                     result, status_code = Send_Request().send_requests(url)
                     data = json.loads(result)["data"]
                     flag,insert_flag,update_flag = self.judge_branch(report_id, gs_basic_id, cursor, connect, url_pattern, QGGS_branch, name,

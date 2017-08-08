@@ -265,11 +265,11 @@ def main():
         if count == 1:
             for data1,data2,data3 in cursor.fetchall():
                 if data1 ==u'无' or data1=='':
-                    tel = None
+                    data1 = None
                 if data2 ==u'无' or data2 =='':
-                     address = None
+                     data2 = None
                 if data3 == u'无' or data3 == '':
-                    email = None
+                    data3 = None
                 tel = data1
                 address = data2
                 email = data3

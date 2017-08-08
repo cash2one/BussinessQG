@@ -43,6 +43,7 @@ select_name = 'select name from gs_basic where gs_basic_id = %s'
 update_basic = 'update gs_basic_exp set gs_basic_exp_id =%s,gs_basic_id = %s,history = %s,updated = %s where gs_basic_exp_id = %s'
 insert_history = 'insert into gs_basic_exp(gs_basic_id,history,updated)values(%s,%s,%s)'
 select_basic = 'select gs_basic_exp_id from gs_basic_exp where gs_basic_id = %s'
+
 # 用于获取网页cookies
 
 def get_cookies():

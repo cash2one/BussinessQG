@@ -78,7 +78,6 @@ def main():
     HOST, USER, PASSWD, DB, PORT = config.HOST, config.USER, config.PASSWD, config.DB, config.PORT
     connect, cursor = Connect_to_DB().ConnectDB(HOST, USER, PASSWD, DB, PORT)
     pages, perpages = 0, 0
-    # urllist = url.split('qisuso')
     Judge(gs_py_id,connect,cursor,gs_basic_id,url,pages,perpages).update_branch(update_punish_py,Punish,"punish")
     cursor.close()
     connect.close()

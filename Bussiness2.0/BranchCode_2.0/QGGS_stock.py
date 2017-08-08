@@ -20,14 +20,16 @@ sys.setdefaultencoding('utf-8')
 Type = sys.getfilesystemencoding()
 
 
-url = sys.argv[1]
-gs_basic_id = sys.argv[2]
-gs_py_id = sys.argv[3]
+# url = sys.argv[1]
+# gs_basic_id = sys.argv[2]
+# gs_py_id = sys.argv[3]
 
-
+url = 'http://www.gsxt.gov.cn/%7B2jnvFE_glKBnPs5aZ44ZgwovbECKi4FCNkxI-KUUSeFb5POYf73EX0LEGgd55A60vFH415BH9hjMU2fHqaFfyLarbJ85Dn2WCV-IuRO4CR1jiEbutLwuT3PK7xpM3PqI-1501755233013%7D'
+gs_basic_id = 229421773
+gs_py_id = 1501
 
 stock_string = 'insert into gs_stock(gs_basic_id,equityno,pledgor,pled_blicno,impam,imporg,imporg_blicno,equlle_date,public_date,type,updated)values(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)'
-select_stock = 'select gs_stock_id from gs_stock where gs_basic_id = %s and equityNo = %s'
+select_stock = 'select gs_stock_id from gs_stock where gs_basic_id = %s and equityno = %s'
 update_stock = 'update gs_stock set gs_basic_id = %s,pledgor = %s,pled_blicno = %s,impam = %s,imporg = %s,imporg_blicno = %s,equlle_date = %s,public_date = %s,type = %s ,updated = %s where gs_stock_id = %s'
 update_stock_py = 'update gs_py set gs_py_id = %s,gs_stock = %s ,updated = %s where gs_py_id = %s'
 
@@ -71,7 +73,7 @@ class Stock:
                 equPleDate, publicDate, type = information[key][6], information[key][7], information[key][8]
 
                 count = cursor.execute(select_stock, (gs_basic_id, equityNo))
-                    # print count
+
                 if count == 0:
                     updated_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
                     rows_count = cursor.execute(stock_string, (
@@ -87,6 +89,7 @@ class Stock:
                     rows_count = cursor.execute(update_stock,
                                                     (gs_basic_id, pledgor, pledBLicNo, impAm, impOrg, impOrgBLicNo, equPleDate,
                                                      publicDate, type, updated_time, gs_stock_id))
+                    # print rows_count
                     update_flag += rows_count
                     connect.commit()
         except Exception, e:

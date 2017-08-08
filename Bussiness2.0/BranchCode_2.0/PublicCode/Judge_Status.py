@@ -39,13 +39,10 @@ class Judge:
             recordstotal, total,insert_total,update_total,totalpage,perpage = Get_BranchInfo(self.gs_py_id).get_singleinfo(None, self.gs_basic_id,self.cursor,self.connect,self.url, QGGS,name,self.page,self.perpage)
         else:
             totalpage, perpage = 0, 0
-            if name =='change' or name == 'permit'or name == 'punish':
-                recordstotal1,total1,insert_total1,update_total1 = Get_BranchInfo(self.gs_py_id).get_info(None,self.gs_basic_id,self.cursor,self.connect,self.url[0], QGGS,name)
-                recordstotal2, total2, insert_total2, update_total2 = Get_BranchInfo(self.gs_py_id).get_info(None,self.gs_basic_id,self.cursor,self.connect,self.url[1], QGGS,name)
-                recordstotal = recordstotal1+recordstotal2
-                total = total1+total2
-                insert_total = insert_total1+insert_total2
-                update_total = insert_total1+insert_total2
+            if name =='change':
+                recordstotal,total,insert_total,update_total = Get_BranchInfo(self.gs_py_id).get_info(None,self.gs_basic_id,self.cursor,self.connect,self.url[0], QGGS,name)
+                if recordstotal<=0:
+                    recordstotal, total, insert_total, update_total = Get_BranchInfo(self.gs_py_id).get_info(None,self.gs_basic_id,self.cursor,self.connect,self.url[1],QGGS,name)
             else:
                 recordstotal, total, insert_total, update_total=Get_BranchInfo(self.gs_py_id).get_info(None, self.gs_basic_id, self.cursor, self.connect, self.url,QGGS, name)
         flag = self.jude_status(recordstotal,total)
@@ -54,9 +51,9 @@ class Judge:
             self.cursor.execute(update_sql, (self.gs_py_id,flag, updated_time,self.gs_py_id))
             self.connect.commit()
         # return flag,recordstotal,update_total,insert_total,totalpage,perpage
-        self.print_info(flag,recordstotal,update_total,insert_total,totalpage,perpage)
+        self.print_info(flag,recordstotal,update_total,insert_total,totalpage,perpage,self.page)
 
-    def print_info(self,flag,recordstotal,update_total,insert_total,totalpage,perpage):
+    def print_info(self,flag,recordstotal,update_total,insert_total,totalpage,perpage,rspage):
 
         info = {
             "flag": 0,
@@ -64,12 +61,17 @@ class Judge:
             "update": 0,
             "insert": 0,
             'totalpage': 0,
-            'perpage': 0
+            'perpage': 0,
+            'rspage':1
         }
+
+        if rspage>=totalpage:
+            rspage = 0
         info["flag"] = int(flag)
         info["total"] = int(recordstotal)
         info["update"] = int(update_total)
         info["insert"] = int(insert_total)
         info["totalpage"] = int(totalpage)
         info["perpage"] = int(perpage)
+        info["rspage"] = int(rspage)
         print info

@@ -23,13 +23,13 @@ reload(sys)
 sys.setdefaultencoding('utf-8')
 Type = sys.getfilesystemencoding()
 
-url = sys.argv[1]
-gs_basic_id = sys.argv[2]
-gs_py_id = sys.argv[3]
+# url = sys.argv[1]
+# gs_basic_id = sys.argv[2]
+# gs_py_id = sys.argv[3]
 
-# url = 'http://www.gsxt.gov.cn/%7B5l_RJDt6qW3U2WQziG7diEo5PO8zdln3wR7CHcvcfuUeQcagSCYB_2et6JSH_xR-fFpx7cfm_z27HQh3zs9YaOtyh3U1fbLEN0NoSXsCJxCISpsbgbAREv7rTy527HfTRHBGU6Mnw53Pd4T538a29g-1501664728671%7D'
-# gs_basic_id = 229418502
-# gs_py_id = 1501
+url = 'http://www.gsxt.gov.cn/%7B-QA8bihTdBdzkJOr2RTnmamkMJYhZYCo_dzL8v8dhIiRr4khfxKOl-0Q_qPhVKRGs_fGElF5xhG_otFTc1isft3HlIYwTMdeLnNMtkta1G6iV6s1gMnwV1ejt8MMdpJj0kUXzznOJikhS19I2F4SVQ-1501810595671%7D'
+gs_basic_id =229418494
+gs_py_id = 1501
 
 freeze_string = 'insert into gs_freeze(gs_basic_id,executor, stock_amount, court, notice_no,status,items, rule_no, enforce_no,cert_cate,cert_code, start_date, end_date,period, pub_date,updated)values(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)'
 select_freeze = 'select gs_freeze_id from gs_freeze where gs_basic_id = %s and rule_no = %s'
@@ -38,6 +38,7 @@ update_freeze_py = 'update gs_py set gs_py_id = %s ,gs_freeze = %s ,updated = %s
 class Freeze:
     def name(self,data):
         information = {}
+        provnum = 0
         for i in xrange(len(data)):
             singledata = data[i]
             executor = singledata["inv"]
@@ -61,9 +62,13 @@ class Freeze:
                 elif uniscId == '' and regNo!='':
                     provnum = regNo[0:2] +'0000'
                 elif regNo == ''and uniscId == '':
-                    provnum = parent_Id[0:2]+'0000'
+                    if parent_Id.startswith('1')==True or parent_Id.startswith('2'):
+                        provnum = parent_Id[1:3]+'0000'
+                    else:
+                        provnum = parent_Id[0:2]+'0000'
                 if len(parent_Id)>36:
                     parent_Id = parent_Id[0:36]
+                print regNo,uniscId,parent_Id
                 print provnum
                 detail_url = 'http://www.gsxt.gov.cn/corp-query-entprise-info-judiciaryStockfreeze-PROVINCENODENUM%s%s.html' % (
                 provnum, parent_Id)

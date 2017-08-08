@@ -21,16 +21,14 @@ reload(sys)
 sys.setdefaultencoding('utf-8')
 Type = sys.getfilesystemencoding()
 
-# url = sys.argv[1]
-# gs_basic_id = sys.argv[2]
-# gs_py_id = sys.argv[3]
+url = sys.argv[1]
+gs_basic_id = sys.argv[2]
+gs_py_id = sys.argv[3]
 
-url = 'http://www.gsxt.gov.cn/%7B3ZuE0plDBX9Kbvdv2RK893XNUJLrpbtzF4R-bL51vrh9_sERyIhVnqhN9elpedG8iMomMf6tDdRyZ2wXwa8JV3aPGwCYUZefCFuq8rB4CLWaCaxa8SuTZf8i8ViHwaxJ-1501752640437%7D'
-gs_basic_id = 229418502
-gs_py_id = 1501
-# http://www.gsxt.gov.cn/%7BdDJl9n7SHrdg23Xbla16SR9L3HDMcRaEl-7SHfBdMBBmJDWFHRdN2BkawosGi2dFRTlso9Njpd_ENzN-yHkIRKUuGQZhM5PG69aSmJuDixomEzjQC306yg-87wjE4wFI-1501740503025%7Dqisusohttp://www.gsxt.gov.cn/%7BdDJl9n7SHrdg23Xbla16SaS_FabCuuYFgn8OGRF2PRmJDWFHRdN2BkawosGi2dF03_xDEmHRZAg2aRhGXqhhxsuOXRtZXJfMjQLGA0O7oAVxMHpMgIa_45I9V09LXKBeFRrYTCawphBQDg_1k1T7w-1501737583814%7D
+# url = 'http://www.gsxt.gov.cn/%7BdDJl9n7SHrdg23Xbla16SR9L3HDMcRaEl-7SHfBdMBBmJDWFHRdN2BkawosGi2dFRTlso9Njpd_ENzN-yHkIRKUuGQZhM5PG69aSmJuDixomEzjQC306yg-87wjE4wFI-1501740503025%7Dqisusohttp://www.gsxt.gov.cn/%7BdDJl9n7SHrdg23Xbla16SaS_FabCuuYFgn8OGRF2PRmJDWFHRdN2BkawosGi2dF03_xDEmHRZAg2aRhGXqhhxsuOXRtZXJfMjQLGA0O7oAVxMHpMgIa_45I9V09LXKBeFRrYTCawphBQDg_1k1T7w-1501737583814%7D'
+# gs_basic_id = 229418502
+# gs_py_id = 1501
 
- # 204109602 1327
 
 select_string = 'select gs_permit_id from gs_permit where gs_basic_id = %s and filename = %s'
 permit_string = 'insert into gs_permit(gs_basic_id,id,name, code, filename, start_date, end_date, content, gov_dept,updated)values(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)'
