@@ -9,7 +9,7 @@ import logging
 import sys
 import time
 import json
-from PublicCode.Public_code import Send_Request
+from SPublicCode.Public_code import Send_Request
 
 reload(sys)
 sys.setdefaultencoding('utf-8')
@@ -18,7 +18,7 @@ Type = sys.getfilesystemencoding()
 lab_string = 'insert into gs_report_lab(gs_basic_id,gs_report_id,uuid,province,if_owe, if_basenum, if_periodamount,birth_owe, birth_num, birth, birth_base' \
              ',old_num, old_owe, old, old_base,unemploy, unemploy_base, unemploy_owe, unemploy_num,medical, medical_base, medical_owe, medical_num, '\
     'injury, injury_owe, injury_num,created,updated)values(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)'
-lab_py = 'update gs_py set gs_py_id = %s,report_lab = %s ,updated = %s where gs_basic_id = %s and gs_py_id = %s'
+
 def name(url):
     result,status_code =Send_Request().send_requests(url)
     recordsTotal = json.loads(result)["recordsTotal"]
@@ -55,7 +55,7 @@ def name(url):
                        unemploy,unemploy_base,unemploy_owe,unemploy_num,medical,medical_base,medical_owe,medical_num,injury,injury_owe,injury_num]
 
     return info
-def update_to_db(gs_report_id, gs_basic_id,gs_py_id, cursor, connect, info,province):
+def update_to_db(gs_report_id, gs_basic_id, cursor, connect, info,province):
     remark = 0
     try:
         uuid, if_owe, if_basenum, if_periodamount = info[0][0],info[0][1],info[0][2],info[0][3]
@@ -70,13 +70,10 @@ def update_to_db(gs_report_id, gs_basic_id,gs_py_id, cursor, connect, info,provi
                                    unemploy_num, medical, medical_base, medical_owe, medical_num,injury, injury_owe, injury_num,updated_time,updated_time))
         connect.commit()
     except Exception, e:
-        remark = 100000006
+        remark = 100000001
         logging.error("lab error %s" % e)
     finally:
         if remark <100000001:
             remark = row_count
-        updated_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
-        cursor.execute(lab_py,(gs_py_id,remark,updated_time,gs_basic_id,gs_py_id))
-        connect.commit()
         return remark
 

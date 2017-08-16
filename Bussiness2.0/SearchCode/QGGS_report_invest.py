@@ -24,12 +24,12 @@ class Invest:
             singledata = data[i]
             uuid = singledata["forInvId"]
             name = singledata["entName"]
-            if "regNo" in singledata.keys():
-                code = singledata["regNo"]
+            if "uniscId" in singledata.keys():
+                code = singledata["uniscId"]
             else:
                 code = None
-            if "uniscId" in singledata.keys():
-                ccode = singledata["uniscId"]
+            if "regNo" in singledata.keys():
+                ccode = singledata["regNo"]
             else:
                 ccode = None
             information[i] = [name, code, ccode,uuid]

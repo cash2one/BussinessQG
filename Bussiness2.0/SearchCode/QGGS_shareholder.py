@@ -2,21 +2,20 @@
 # -*- coding: utf-8 -*-
 # @File  : QGGS_shareholder.py
 # @Author: Lmm
-# @Date  : 2017-07-28
-# @Desc  :用于更新发起人及出资信息
-
+# @Date  : 2017-08-08
+# @Desc  :
 import json
 import logging
 import sys
 import time
 
-from  PublicCode.Public_code import Send_Request as Send_Request
-from PublicCode.deal_html_code import change_date_style
-from PublicCode.deal_html_code import deal_lable
-from PublicCode import config
-from PublicCode.Public_code import Connect_to_DB
-from PublicCode.Judge_Status import Judge
-from PublicCode.Bulid_Log import Log
+from  SPublicCode.Public_code import Send_Request as Send_Request
+from SPublicCode.deal_html_code import change_date_style
+from SPublicCode.deal_html_code import deal_lable
+from SPublicCode import config
+from SPublicCode.Public_code import Connect_to_DB
+from SPublicCode.Judge_Status import Judge
+from SPublicCode.Bulid_Log import Log
 
 reload(sys)
 sys.setdefaultencoding('utf-8')
@@ -25,18 +24,18 @@ Type = sys.getfilesystemencoding()
 
 # url = sys.argv[1]
 # gs_basic_id = sys.argv[2]
-# gs_py_id = sys.argv[3]
+# gs_search_id = sys.argv[3]
 # pagenumber = sys.argv[4]
 # perpage = sys.argv[5]
 
-url = 'http://www.gsxt.gov.cn/%7BT3MeYJuLFfLz3_3hCLfW_DNgqEo_Ch6KLBSGNGLDbWjzGB19aH0DbAPeX5263Dd2tc0ncavit3crzfDDpcwru4_PVbFjagjRbTcb8e9gfowNeAEioCLbOdWb2_8TmDZrbdZscODIhXZiK5HmXzWOGQ-1502760712664%7D'
-gs_basic_id = 1900000099
-gs_py_id = 1501
+url = 'http://www.gsxt.gov.cn/%7B2B8UGsQnqIpxjXy1gmBFk67LI1IFYOEbBUapwrzrnWe3dHvQJfF-a4ZPewr_et4-jnPZDG01pE6vc2J-ExPdLH2qHn4JrMfsOW0Wrq6nFoA-1502264834600%7D'
+gs_basic_id = 229422000
+gs_search_id = 837
 pagenumber = 1
 perpage = 0
 share_string = 'insert into gs_shareholder(gs_basic_id,name,cate,types,license_type,license_code,ra_date, ra_ways, true_amount,reg_amount,ta_ways,ta_date,updated)values(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)'
 select_string = 'select gs_shareholder_id from gs_shareholder where gs_basic_id = %s and name = %s and types = %s and cate = %s'
-update_share_py = 'update gs_py set gs_py_id = %s,gs_shareholder = %s,updated = %s where gs_py_id = %s'
+
 
 
 class Shareholder:
@@ -139,10 +138,10 @@ class Shareholder:
                 remark = insert_flag
             return remark,insert_flag,update_flag
 def main():
-    Log().found_log(gs_py_id,gs_basic_id)
+    Log().found_search_log(gs_search_id,gs_basic_id)
     HOST, USER, PASSWD, DB, PORT = config.HOST, config.USER, config.PASSWD, config.DB, config.PORT
     connect, cursor = Connect_to_DB().ConnectDB(HOST, USER, PASSWD, DB, PORT)
-    Judge(gs_py_id, connect, cursor, gs_basic_id, url,pagenumber, perpage).update_branch(update_share_py,Shareholder, "share")
+    Judge(connect, cursor, gs_basic_id, url,pagenumber, perpage).update_branch(Shareholder, "share")
     cursor.close()
     connect.close()
 

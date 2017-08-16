@@ -8,7 +8,7 @@
 import logging
 import sys
 import time
-from PublicCode.deal_html_code import change_date_style
+from SPublicCode.deal_html_code import change_date_style
 
 
 reload(sys)
@@ -20,7 +20,8 @@ permit_string = 'insert into gs_report_permit(gs_basic_id,gs_report_id,uuid,prov
 class Permit:
     def name(self,data):
         information = {}
-        for i,singledata in enumerate(data):
+        for i in xrange(len(data)):
+            singledata = data[i]
             uuid = singledata["licId"]
             types = singledata["licName_CN"]
             valto = singledata["valTo"]
@@ -38,7 +39,7 @@ class Permit:
                 insert_flag += flag
                 connect.commit()
         except Exception, e:
-            remark = 100000006
+            remark = 100000001
             logging("permit error %s" % e)
         finally:
             if remark < 100000001:

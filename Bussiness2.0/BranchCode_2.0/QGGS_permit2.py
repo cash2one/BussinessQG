@@ -10,13 +10,13 @@ import hashlib
 import logging
 import sys
 import time
-import re
+import json
 from PublicCode.deal_html_code import change_date_style
 from PublicCode import config
 from PublicCode.Public_code import Connect_to_DB
 from PublicCode.Judge_Status import Judge
 from PublicCode.Bulid_Log import Log
-
+from PublicCode.Public_code import Send_Request
 reload(sys)
 sys.setdefaultencoding('utf-8')
 Type = sys.getfilesystemencoding()
@@ -25,14 +25,16 @@ url = sys.argv[1]
 gs_basic_id = sys.argv[2]
 gs_py_id = sys.argv[3]
 
-# url = 'http://www.gsxt.gov.cn/%7BdDJl9n7SHrdg23Xbla16SR9L3HDMcRaEl-7SHfBdMBBmJDWFHRdN2BkawosGi2dFRTlso9Njpd_ENzN-yHkIRKUuGQZhM5PG69aSmJuDixomEzjQC306yg-87wjE4wFI-1501740503025%7Dqisusohttp://www.gsxt.gov.cn/%7BdDJl9n7SHrdg23Xbla16SaS_FabCuuYFgn8OGRF2PRmJDWFHRdN2BkawosGi2dF03_xDEmHRZAg2aRhGXqhhxsuOXRtZXJfMjQLGA0O7oAVxMHpMgIa_45I9V09LXKBeFRrYTCawphBQDg_1k1T7w-1501737583814%7D'
-# gs_basic_id = 229418502
+# url = 'http://www.gsxt.gov.cn/%7Bqoz690efQLJjKbRocOyPU01R4dyvD9rqscm-olXMz4qvJN-Me4o5RBN4c4qQJ53k9rVnUbJXPwCWEmOLNwWI0mwPgmzUEutogDv93cB9hJe6LGep0Ow4n7BBWMhY_SMb-1502705210847%7D'
+# gs_basic_id = 1900000097
 # gs_py_id = 1501
 
 
-select_string = 'select gs_permit_id from gs_permit where gs_basic_id = %s and filename = %s'
-permit_string = 'insert into gs_permit(gs_basic_id,id,name, code, filename, start_date, end_date, content, gov_dept,updated)values(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)'
+select_string = 'select gs_permit_id from gs_permit where gs_basic_id = %s and filename = %s and code = %s and start_date = %s and end_date = %s and source = 1'
+permit_string = 'insert into gs_permit(gs_basic_id,id,name, code, filename, start_date, end_date, content, gov_dept,status,source,updated)values(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)'
 update_permit_py = 'update gs_py set gs_py_id = %s ,gs_permit = %s ,updated = %s where gs_py_id = %s'
+permit_alter = 'insert into gs_permit_alter(gs_permit_id,alt_name, alt_date, alt_af, alt_be,updated) values(%s,%s,%s,%s,%s,%s)'
+select_permit =  'select gs_permit_alter_id from gs_permit_alter where gs_permit_id = %s and alt_name = %s and alt_date = %s'
 
 class Permit:
     def name(self,data):
@@ -48,8 +50,43 @@ class Permit:
             end_date = change_date_style(end_date)
             content = singledata["licItem"]
             gov_dept = singledata["licAnth"]
-            information[i] = [name, code, filename, start_date, end_date, content, gov_dept]
+            status = singledata["status"]
+            licId = singledata["licId"]
+            if status=='1':
+                status = '有效'
+            else:
+                status = '无效'
+            detail_url ="http://www.gsxt.gov.cn/corp-query-entprise-info-insLicenceDetailInfo-%s.html" % licId
+            information[i] = [name, code, filename, start_date, end_date, content, gov_dept,detail_url,status]
         return information
+
+    def get_detail_info(self,url):
+        result,status_code = Send_Request().send_requests(url)
+        info = {}
+        if status_code ==200:
+            data = json.loads(result)["list"]
+            if len(data) ==0:
+                logging.info("暂无permit详情信息")
+            else:
+                for i,singledata in enumerate(data):
+                    alt_name = singledata["alt"]
+                    alt_date = singledata["altDate"]
+                    alt_date = change_date_style(alt_date)
+                    alt_af = singledata["altAf"]
+                    alt_be = singledata["altBe"]
+                    info[i] = [alt_name,alt_date,alt_af,alt_be]
+        return info
+    def update_detail_info(self,info,cursor,connect,gs_permit_id):
+        try:
+            for key in info.keys():
+                alt_name, alt_date, alt_af, alt_be = info[key][0],info[key][1],info[key][2],info[key][3]
+                count = cursor.execute(select_permit,(gs_permit_id,alt_name,alt_date))
+                if count == 0:
+                    updated_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
+                    cursor.execute(permit_alter,(gs_permit_id,alt_name, alt_date, alt_af, alt_be,updated_time))
+                    connect.commit()
+        except Exception,e:
+            logging.error("permit detail error:%s"%e)
 
 
     def update_to_db(self,gs_basic_id, cursor, connect, information):
@@ -59,19 +96,34 @@ class Permit:
             name, code, filename, start_date = information[key][0], information[key][1], information[key][2], \
                                                information[key][3]
             end_date, content, gov_dept = information[key][4], information[key][5], information[key][6]
-            count = cursor.execute(select_string, (gs_basic_id, filename))
+            detail_url = information[key][7]
+            status = information[key][8]
+            count = cursor.execute(select_string, (gs_basic_id, filename,code,start_date,end_date))
             m = hashlib.md5()
             m.update(code)
             id = m.hexdigest()
             # print filename
+            source = 1
             try:
                 if count == 0:
                     updated_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
                     rows_count = cursor.execute(permit_string, (
-                        gs_basic_id, id, name, code, filename, start_date, end_date, content, gov_dept, updated_time))
+                        gs_basic_id, id, name, code, filename, start_date, end_date, content, gov_dept, status,source,updated_time))
+                    gs_permit_id = connect.insert_id()
                     insert_flag += rows_count
                     connect.commit()
-
+                    info = self.get_detail_info(detail_url)
+                    if len(info)==0:
+                        logging.info("暂无permit详情信息！")
+                    else:
+                        self.update_detail_info(info, cursor, connect, gs_permit_id)
+                elif int(count )==1:
+                    gs_permit_id = cursor.fetchall()[0][0]
+                    info = self.get_detail_info(detail_url)
+                    if len(info) == 0:
+                        logging.info("暂无permit详情信息！")
+                    else:
+                        self.update_detail_info(info, cursor, connect, gs_permit_id)
             except Exception, e:
                 remark = 100000006
                 logging.error("permit error: %s" % e)

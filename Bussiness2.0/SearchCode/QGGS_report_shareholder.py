@@ -14,7 +14,7 @@ import logging
 import sys
 import time
 
-from PublicCode.deal_html_code import change_date_style
+from SPublicCode.deal_html_code import change_date_style
 
 reload(sys)
 sys.setdefaultencoding('utf-8')
@@ -58,7 +58,7 @@ class Share:
                 connect.commit()
                 insert_flag += flag
         except Exception, e:
-            remark = 100000006
+            remark = 100000001
             logging.error('share error %s' % e)
         finally:
             if remark < 100000001:

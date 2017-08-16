@@ -25,15 +25,15 @@ Type = sys.getfilesystemencoding()
 # gs_basic_id = sys.argv[2]
 # gs_py_id = sys.argv[3]
 
-url = 'http://www.gsxt.gov.cn/%7B3ZuE0plDBX9Kbvdv2RK893XNUJLrpbtzF4R-bL51vrh9_sERyIhVnqhN9elpedG8iMomMf6tDdRyZ2wXwa8JV3aPGwCYUZefCFuq8rB4CLWaCaxa8SuTZf8i8ViHwaxJ-1501752640437%7D'
-gs_basic_id = 229418502
+url = 'http://www.gsxt.gov.cn/%7BT3MeYJuLFfLz3_3hCLfW_D7rl24ej0FREfGxNgxzT64_NUmxZAyzXCNptPDbN6CTpIP0K5DJ4gk9glIGRMPpacfPFH9-rhCmtSezoqOCtNk-1502787164569%7D'
+gs_basic_id = 1900000103
 gs_py_id = 1501
 # http://www.gsxt.gov.cn/%7BdDJl9n7SHrdg23Xbla16SR9L3HDMcRaEl-7SHfBdMBBmJDWFHRdN2BkawosGi2dFRTlso9Njpd_ENzN-yHkIRKUuGQZhM5PG69aSmJuDixomEzjQC306yg-87wjE4wFI-1501740503025%7Dqisusohttp://www.gsxt.gov.cn/%7BdDJl9n7SHrdg23Xbla16SaS_FabCuuYFgn8OGRF2PRmJDWFHRdN2BkawosGi2dF03_xDEmHRZAg2aRhGXqhhxsuOXRtZXJfMjQLGA0O7oAVxMHpMgIa_45I9V09LXKBeFRrYTCawphBQDg_1k1T7w-1501737583814%7D
 
  # 204109602 1327
 
-select_string = 'select gs_permit_id from gs_permit where gs_basic_id = %s and filename = %s'
-permit_string = 'insert into gs_permit(gs_basic_id,id,name, code, filename, start_date, end_date, content, gov_dept,updated)values(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)'
+select_string = 'select gs_permit_id from gs_permit where gs_basic_id = %s and filename = %s and code = %s and start_date = %s and end_date = %s and source = 1'
+permit_string = 'insert into gs_permit(gs_basic_id,id,name, code, filename, start_date, end_date, content, gov_dept,source,updated)values(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)'
 update_permit_py = 'update gs_py set gs_py_id = %s ,gs_permit = %s ,updated = %s where gs_py_id = %s'
 
 class Permit:
@@ -57,11 +57,12 @@ class Permit:
     def update_to_db(self,gs_basic_id, cursor, connect, information):
         insert_flag,update_flag = 0,0
         remark = 0
+        source = 1
         for key in information.keys():
             name, code, filename, start_date = information[key][0], information[key][1], information[key][2], \
                                                information[key][3]
             end_date, content, gov_dept = information[key][4], information[key][5], information[key][6]
-            count = cursor.execute(select_string, (gs_basic_id, filename))
+            count = cursor.execute(select_string, (gs_basic_id, filename,code,start_date,end_date))
             m = hashlib.md5()
             m.update(code)
             id = m.hexdigest()
@@ -70,7 +71,7 @@ class Permit:
                 if count == 0:
                     updated_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
                     rows_count = cursor.execute(permit_string, (
-                        gs_basic_id, id, name, code, filename, start_date, end_date, content, gov_dept, updated_time))
+                        gs_basic_id, id, name, code, filename, start_date, end_date, content, gov_dept, source,updated_time))
                     insert_flag += rows_count
                     connect.commit()
 

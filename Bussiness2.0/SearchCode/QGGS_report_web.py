@@ -49,7 +49,7 @@ class Web:
                     connect.commit()
                     insert_flag += flag
         except Exception, e:
-            remark = 100000006
+            remark = 100000001
             logging.error('web error %s' % e)
         finally:
             if remark < 100000001:

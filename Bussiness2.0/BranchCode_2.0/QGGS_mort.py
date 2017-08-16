@@ -18,12 +18,12 @@ from PublicCode.Public_code import Connect_to_DB
 from PublicCode.Judge_Status import Judge
 from PublicCode.Bulid_Log import Log
 
-url = sys.argv[1]
-gs_basic_id = sys.argv[2]
-gs_py_id = sys.argv[3]
-# url = 'http://www.gsxt.gov.cn/%7B5l_RJDt6qW3U2WQziG7diETxSlQJmWMMTGzSCUWQleW8FC_wPMrrQVhKgctzjFOv7z2_3RfhSpDYyi0SAslpirM_EsN25JdENt3uKuyHM7g4e3EAGAFqFhhCbx-MM5jI-1501664728711%7D'
-# gs_basic_id = 229418502
-# gs_py_id = 1501
+# url = sys.argv[1]
+# gs_basic_id = sys.argv[2]
+# gs_py_id = sys.argv[3]
+url = 'http://www.gsxt.gov.cn/%7BBkWuG51z8_CwdB0OOclio5jWh7D5HQNDl3t-DW8LlCq9-f5S12GIcLQPO3LJGqtdDhBCBt_kTIWdEjDWOtx234IoswVN4Lc1SFQGr-M3Ne47gm5vCVqCDHzOAwnsx6SN-1502677219108%7D'
+gs_basic_id = 229421822
+gs_py_id = 1501
 reload(sys)
 sys.setdefaultencoding('utf-8')
 Type = sys.getfilesystemencoding()
@@ -39,7 +39,7 @@ goods_string = 'insert into gs_mort_goods(gs_mort_id,id,gs_basic_id,name,ownersh
 update_goods_sql = 'update gs_mort_goods set gs_mort_goods_id = %s,situation = %s,remark = %s,updated = %s where gs_mort_goods_id = %s'
 goods_url = 'http://www.gsxt.gov.cn/corp-query-entprise-info-mortGuaranteeInfo-%s.html'
 person_url = 'http://www.gsxt.gov.cn/corp-query-entprise-info-mortregpersoninfo-%s.html'
-select_person = 'select gs_mort_person_id from gs_mort_person where gs_mort_id = %s and number = %s'
+select_person = 'select gs_mort_person_id from gs_mort_person where gs_mort_id = %s and name = %s'
 person_string = 'insert into gs_mort_person(gs_mort_id,id,gs_basic_id,name,cert,number,updated) values (%s,%s,%s,%s,%s,%s,%s)'
 update_mort_person = 'update gs_mort_person set gs_mort_person_id = %s,name = %s,cert = %s,updated = %s where gs_mort_person_id = %s'
 
@@ -115,7 +115,7 @@ class Mort:
             total = insert_flag + update_flag
             if mort_flag <100000001:
                 mort_flag = total
-            return mort_flag
+            return mort_flag,insert_flag,update_flag
 
 
     def update_goods_py(self,gs_py_id,gs_mort_id, gs_basic_id, cursor, connect, goods_info):
@@ -207,7 +207,7 @@ class Mort:
             for key in info.keys():
                 name, cert, number = info[key][0], info[key][1], info[key][2]
 
-                count = cursor.execute(select_person, (gs_mort_id, number))
+                count = cursor.execute(select_person, (gs_mort_id, name))
                 if count == 0:
                     updated_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
                     m = hashlib.md5()

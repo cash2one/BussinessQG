@@ -81,7 +81,7 @@ class Stock:
                         updated_time))
                     insert_flag += rows_count
                     connect.commit()
-                elif count == 1:
+                elif int(count) == 1:
                     #print equityNo
                     gs_stock_id = cursor.fetchall()[0][0]
                     updated_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))

@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 # @File  : Public_code.py
 # @Author: Lmm
-# @Date  : 2017-07-28
+# @Date  : 2017-08-08
 # @Desc  : 创建了几个公共类用于连接数据库，发送请求
 
 
@@ -80,22 +80,12 @@ class Send_Request:
 
 # 用于获得各个分页的内容
 class Get_BranchInfo:
-    def __init__(self,gs_py_id):
-        self.gs_py_id = gs_py_id
+
     def get_singleinfo(self,report_id,gs_basic_id,cursor,connect,url_pattern,QGGS_branch,name,page,perpage):
         total, recordsTotal = 0, -1
-        page = int(page)
-        perpage = int(perpage)
-        if page == 1:
-            url = url_pattern
-        else:
-            start = perpage * (page - 1)
-            url = url_pattern + '?start=%s' % start
-
-        result, status_code = Send_Request().send_requests(url)
+        result, status_code = Send_Request().send_requests(url_pattern)
         if status_code == 404:
-            total = 100000004
-            # logging.info('暂无 %s信息' % name)
+            flag = 100000004
         elif status_code == 200:
             pattern = re.compile(r'<html>.*</html>|.*index/invalidLink.*')
             fail = re.findall(pattern, result)
@@ -105,30 +95,30 @@ class Get_BranchInfo:
             data = json.loads(result)["data"]
             if recordsTotal == 0 and len(data) != 0:
                 recordsTotal = len(result)
-            # print "%s: %s" % (name, recordsTotal)
             logging.info("%s: %s" % (name, recordsTotal))
             if recordsTotal == None:
                 recordsTotal = 0
             totalPage = json.loads(result)["totalPage"]
             perpage = json.loads(result)["perPage"]
 
-            if totalPage == 0 and recordsTotal!= 0 and recordsTotal!=-1:
+            if totalPage == 0 and recordsTotal != 0 and recordsTotal!=-1:
                 page = 1
             else:
                 page = totalPage
             data = json.loads(result)["data"]
             flag, insert_flag, update_flag = self.judge_branch(report_id, gs_basic_id, cursor, connect, url_pattern,
                                                                QGGS_branch, name, data)
+        else:
+            flag, insert_flag, update_flag = 0,0,0
+
         return recordsTotal,flag,insert_flag,update_flag,page,perpage
 
 
     def judge_branch(self,report_id,gs_basic_id,cursor,connect,url_pattern,QGGS_branch,name,data):
 
         information = QGGS_branch().name(data)
-        if report_id == None and name != 'mort':
+        if report_id == None :
             flag,insert_flag,update_flag = QGGS_branch().update_to_db(gs_basic_id, cursor, connect, information)
-        elif name == 'mort':
-            flag,insert_flag,update_flag= QGGS_branch().update_to_db(self.gs_py_id, gs_basic_id, cursor, connect, information)
         else:
             pattern = re.compile(r'[\d]{2}')
             province = re.findall(pattern, url_pattern)[0]
@@ -147,10 +137,10 @@ class Get_BranchInfo:
         if status_code == 200 and len(fail)==0:
             data = json.loads(result)["data"]
             recordsTotal = json.loads(result)["recordsTotal"]
-            if recordsTotal == 0 and len(data)!= 0 :
+            if recordsTotal == 0 and len(data)!=0 :
                 recordsTotal = len(data)
             if recordsTotal!=0 and len(data)==0:
-                recordsTotal = 0
+                recordsTotal =0
 
             logging.info("%s: %s" % (name, recordsTotal))
             if recordsTotal ==None:
@@ -189,8 +179,6 @@ class Get_BranchInfo:
             total = 100000004
             logging.info('网页打开出错！！')
         logging.info('execute %s: %s' % (name, total))
-        # print 'execute %s: %s' % (name, total)
-
         return recordsTotal,total,insert_total,update_total
 
 

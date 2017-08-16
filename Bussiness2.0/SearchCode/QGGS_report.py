@@ -2,8 +2,8 @@
 # -*- coding: utf-8 -*-
 # @File  : QGGS_report.py
 # @Author: Lmm
-# @Date  : 2017-07-28
-# @Desc  : 用于获取年报中的所有信息，并进行更新
+# @Date  : 2017-08-08
+# @Desc  :
 
 import json
 import logging
@@ -17,19 +17,19 @@ import QGGS_report_permit
 import QGGS_report_schange
 import QGGS_report_shareholder
 import QGGS_report_web
-from PublicCode import config
-from PublicCode.Bulid_Log import Log
-from PublicCode.Public_code import Connect_to_DB
-from PublicCode.Public_code import Get_BranchInfo as Get_BranchInfo
-from PublicCode.Public_code import Send_Request as Send_Request
+from SPublicCode import config
+from SPublicCode.Bulid_Log import Log
+from SPublicCode.Public_code import Connect_to_DB
+from SPublicCode.Public_code import Get_BranchInfo as Get_BranchInfo
+from SPublicCode.Public_code import Send_Request as Send_Request
 
 url = sys.argv[1]
 gs_basic_id = sys.argv[2]
 gs_py_id = sys.argv[3]
 
-# url = 'http://www.gsxt.gov.cn/%7B5ggRiUY6sPTb0mUkF3xs4qSlx2pSdVGKYYopv5Q1qDZs6gP2OfzFjTMOcLXcTkgDwzsiWBiKi5-nU2rT3IzeMhXthF9OvHvqoeRh0VgKlMquDWzv7asiVEgZLvzmPwRP-1502706710097%7D'
-# gs_basic_id = 1900000097
-# gs_py_id = 1501
+# url = 'http://www.gsxt.gov.cn/%7BTgfN2Py4EG9HUlLktZwmxCk-4rmCBGlrdZMvL3HIFmGwPTDm4fkFZ6omhNo6w_M5Y6ZPYMLowLrV1VsqDK3o4ci6MtlkeAP69sidm5jcXNPIgsSWwnQwUsCLlYRWNEl9-1502173426358%7D'
+# gs_basic_id = 229422000
+# gs_search_id = 837
 
 
 reload(sys)
@@ -41,52 +41,29 @@ host = config.host
 
 select_report = 'select gs_report_id from gs_report where gs_basic_id = %s and year = %s'
 basic_string = 'insert into gs_report(gs_basic_id,year,province,name,uuid, tel, address, email, postcode, status, employee, if_empnum, womennum,\
- if_womennum, holding, if_holding,mainbus,code,ccode,pripid,source,runner,amount,created,updated) values(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)'
+ if_womennum, holding, if_holding,mainbus,code,ccode,pripid,source,created,updated) values(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)'
 select_report1 = 'select gs_report_id from gs_report where gs_basic_id = %s and year = %s and source = 0'
 run_string = 'insert into gs_report_run(gs_report_id,gs_basic_id,province,asset,if_asset,benifit,if_benifit,income,if_income,profit,if_profit,main_income,if_main,net_income,if_net,tax,if_tax,debt,if_debt,uuid,created,updated) values(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)'
 frun_string = 'insert into gs_report_run(gs_report_id,gs_basic_id,province,uuid,income,if_income,profit,if_profit,tax,if_tax,loan, if_loan, subsidy, if_subsidy,created,updated) values(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)'
 select_run = 'select gs_report_run_id,gs_report_id from gs_report_run where gs_basic_id = %s and uuid = %s'
 update_run = 'update gs_report_run set asset = %s,if_asset = %s,benifit= %s,if_benifit = %s,income = %s,if_income = %s,profit = %s,if_profit = %s,main_income =%s,if_main= %s,net_income = %s,if_net = %s,tax= %s,if_tax= %s,debt = %s,if_debt = %s,updated = %s where gs_report_run_id= %s'
 update_frun = 'update gs_report_run set income = %s,if_income = %s,profit = %s,if_profit = %s,tax = %s,if_tax = %s,loan = %s, if_loan = %s, subsidy = %s, if_subsidy = %s,updated = %s where gs_report_run_id = %s '
-update_report_py ='update gs_py set gs_py_id = %s ,report = %s ,updated = %s where gs_basic_id = %s and gs_py_id = %s'
-update_run_py = 'update gs_py set gs_py_id = %s ,report_run = %s,updated = %s where gs_basic_id = %s and gs_py_id = %s'
-assure_py = 'update gs_py set gs_py_id = %s ,report_assure = %s ,updated = %s where gs_basic_id = %s and gs_py_id = %s '
-invest_py = 'update gs_py set gs_py_id = %s ,report_invest = %s ,updated = %s where gs_basic_id = %s and gs_py_id = %s'
-permit_py = 'update gs_py set gs_py_id = %s ,report_permit = %s ,updated = %s where gs_basic_id = %s and gs_py_id = %s'
-schange_py = 'update gs_py set gs_py_id = %s ,report_schange = %s,updated = %s where gs_basic_id = %s and gs_py_id = %s'
-share_py = 'update gs_py set gs_py_id = %s,report_share = %s,updated = %s where gs_basic_id = %s and gs_py_id = %s'
-web_py = 'update gs_py set gs_py_id = %s,report_web = %s,updated = %s where gs_basic_id = %s and gs_py_id = %s'
+
 update_address = 'update gs_basic set gs_basic_id = %s,tel = %s,address = %s,email = %s,updated = %s where gs_basic_id = %s'
 select_year = 'select year from gs_report where gs_basic_id = %s '
 select_basic_year = 'select reg_date from gs_basic where gs_basic_id = %s'
 update_pbreport = 'insert into gs_report(gs_basic_id,year,province,name,uuid,code,ccode,source,report_mode,created,updated) values(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)'
 
 class Report:
-    def __init__(self, url, cursor, connect, gs_basic_id,gs_py_id):
+    def __init__(self, url, cursor, connect, gs_basic_id):
         self.url = url
         self.cursor = cursor
         self.connect = connect
         self.gs_basic_id = gs_basic_id
-        self.gs_py_id = gs_py_id
-    def judge_status(self,update_sql,records,total):
-        if records == 0:
-            flag = None
-        elif records > 0 and total >= 0 and total < 100000001:
-            flag = total
-        elif records > 0 and total > 100000001:
-                flag = 100000006
-        if flag == None:
-            flag = -1
-        else:
-            updated_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
-            self.cursor.execute(update_sql,(self.gs_py_id,flag,updated_time,self.gs_basic_id,self.gs_py_id))
-            self.connect.commit()
-
     #用于获取各年份的链接
     def get_year_href(self):
         information = {}
         result, status_code = Send_Request().send_requests(self.url)
-        # print result
         pattern = re.compile('.*/index/invalidLink.*|.*页面不存在.*')
         fail = re.findall(pattern, result)
         flag = 1
@@ -117,18 +94,19 @@ class Report:
             baseinfo, runinfo = self.get_baseinfo(baseurl)
             report_id = self.update_base(self.gs_basic_id, baseinfo, year, self.cursor, self.connect, province)
             self.update_run(year, report_id, self.gs_basic_id, self.cursor, self.connect, province, runinfo)
-            records,total,insert_total,update_total = Get_BranchInfo(self.gs_py_id).get_info(report_id, self.gs_basic_id, self.cursor, self.connect, url_list["web"],
+            Get_BranchInfo().get_info(report_id, self.gs_basic_id, self.cursor, self.connect, url_list["web"],
                                                                    QGGS_report_web.Web, "reportweb%s" % year)
-            self.judge_status(web_py,records,total)
-            records,total,insert_total,update_total = Get_BranchInfo(self.gs_py_id).get_info(report_id, self.gs_basic_id, self.cursor, self.connect, url_list["invest"],
+
+
+            Get_BranchInfo().get_info(report_id, self.gs_basic_id, self.cursor, self.connect, url_list["invest"],
                                           QGGS_report_invest.Invest, "reportinvest%s" % year)
-            self.judge_status(invest_py,records,total)
-            records,total,insert_total,update_total = Get_BranchInfo(self.gs_py_id).get_info(report_id, self.gs_basic_id, self.cursor, self.connect, url_list["share"],
+
+            Get_BranchInfo().get_info(report_id, self.gs_basic_id, self.cursor, self.connect, url_list["share"],
                                           QGGS_report_shareholder.Share, "reportshare%s" % year)
-            self.judge_status(share_py,records,total)
-            records,total,insert_total,update_total = Get_BranchInfo(self.gs_py_id).get_info(report_id, self.gs_basic_id, self.cursor, self.connect, url_list["schange"],
+
+            Get_BranchInfo().get_info(report_id, self.gs_basic_id, self.cursor, self.connect, url_list["schange"],
                                           QGGS_report_schange.Schange, "reportschange%s" % year)
-            self.judge_status(schange_py,records,total)
+
             info = QGGS_report_lab.name(url_list["society"])
             if len(info)>0:
                 QGGS_report_lab.update_to_db(report_id, self.gs_basic_id, self.cursor, self.connect, info,province)
@@ -180,11 +158,7 @@ class Report:
         finally:
             if remark < 100000001:
                 remark = row_count
-            updated_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
-            self.cursor.execute(update_run_py, (self.gs_py_id, remark, updated_time, gs_basic_id, self.gs_py_id))
-            self.connect.commit()
             logging.info('execute report %s frun:%s' % (year, row_count))
-
             return remark
     #用于更新年报个体户等个别企业的年报的资产状况信息
     def get_freport_fruninfo(self,year,anCheId,province,type):
@@ -230,14 +204,7 @@ class Report:
         finally:
             if remark <10000001:
                 remark = row_count
-            updated_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
-            self.cursor.execute(update_run_py, (self.gs_py_id, remark, updated_time, gs_basic_id, self.gs_py_id))
-            self.connect.commit()
-            logging.info('execute report %s frun:%s' % (year, row_count))
-
             return remark
-
-
 
 
     #获取合作社家庭的个人用户的基本信息
@@ -249,15 +216,15 @@ class Report:
             baseinfo, runinfo = self.get_fbaseinfo(baseurl)
             report_id = self.update_base(self.gs_basic_id, baseinfo, year, self.cursor, self.connect, province)
             self.update_frun(year, report_id, self.gs_basic_id, self.cursor, self.connect, province, runinfo)
-            records, total, insert_total, update_total = Get_BranchInfo(self.gs_py_id).get_info(report_id, self.gs_basic_id, self.cursor, self.connect, url_list["web"],
+            Get_BranchInfo().get_info(report_id, self.gs_basic_id, self.cursor, self.connect, url_list["web"],
                                                                    QGGS_report_web.Web, "reportweb%s" % year)
-            self.judge_status(web_py,records,total)
-            records, total, insert_total, update_total = Get_BranchInfo(self.gs_py_id).get_info(report_id, self.gs_basic_id, self.cursor, self.connect, url_list["web"],
+
+            Get_BranchInfo().get_info(report_id, self.gs_basic_id, self.cursor, self.connect, url_list["web"],
                                       QGGS_report_permit.Permit, "reportpermit%s" % year)
-            self.judge_status(permit_py,records,total)
+
             info = QGGS_report_lab.name(url_list["society"])
             if len(info) > 0:
-                QGGS_report_lab.update_to_db(report_id, self.gs_basic_id,self.gs_py_id, self.cursor, self.connect, info,province)
+                QGGS_report_lab.update_to_db(report_id, self.gs_basic_id,self.cursor, self.connect, info,province)
             flag = 1
         except Exception,e:
             flag = 100000006
@@ -272,12 +239,11 @@ class Report:
             baseinfo, runinfo = self.get_pbaseinfo(baseurl)
             report_id = self.update_base(self.gs_basic_id, baseinfo, year, self.cursor, self.connect, province)
             self.update_frun(year, report_id, self.gs_basic_id, self.cursor, self.connect, province, runinfo)
-            records, total, insert_total, update_total = Get_BranchInfo(self.gs_py_id).get_info(report_id, self.gs_basic_id, self.cursor, self.connect, url_list["web"],
+            Get_BranchInfo().get_info(report_id, self.gs_basic_id, self.cursor, self.connect, url_list["web"],
                                                                    QGGS_report_web.Web, "reportweb%s" % year)
-            self.judge_status(web_py,records,total)
-            records, total, insert_total, update_total = Get_BranchInfo(self.gs_py_id).get_info(report_id, self.gs_basic_id, self.cursor, self.connect, url_list["web"],
+
+            Get_BranchInfo().get_info(report_id, self.gs_basic_id, self.cursor, self.connect, url_list["web"],
                                       QGGS_report_permit.Permit, "reportpermit%s" % year)
-            self.judge_status(permit_py,records,total)
             flag = 1
         except Exception,e:
             flag = 100000006
@@ -435,7 +401,6 @@ class Report:
             code = data["regNo"]
             ccode = data["uniscId"]
             uuid = data["anCheId"]
-
             name = data["entName"]
             tel = data["tel"]
             address = data["addr"]
@@ -469,8 +434,7 @@ class Report:
                 if_holding = 0
             mainbus = data["mainBusiAct"]
             pripid = data["pripId"]
-            runner,amount = None,None
-            information[0] = [name,uuid, tel, address, email, postcode, status, employee, if_empnum, womennum, if_womennum, holding, if_holding,mainbus,code,ccode,pripid,runner,amount]
+            information[0] = [name,uuid, tel, address, email, postcode, status, employee, if_empnum, womennum, if_womennum, holding, if_holding,mainbus,code,ccode,pripid]
             asset = data["assGro"]
             if_asset = data["assGroDis"]
             if asset!=None and str(if_asset)!='':
@@ -507,7 +471,7 @@ class Report:
             if_main = data["maiBusIncDis"]
             if if_main !=None and str(if_main)!='':
                 if_main = int(data["maiBusIncDis"])
-                if if_main == 2:
+                if if_main ==2:
                     if_main = 0
             else:
                 if_main = 0
@@ -571,17 +535,8 @@ class Report:
             mainbus = None
             code = data["regNo"]
             ccode = data["uniscId"]
-            if "name" in data.keys():
-                runner = data["name"]
-            else:
-                name = None
-            if "fundAm" in data.keys():
-                amount = data["fundAm"]
-            else:
-                amount = None
-
             information[0] = [name, uuid, tel, address, email, postcode, status, employee, if_empnum, womennum,
-                              if_womennum, holding, if_holding, mainbus, code, ccode,runner,amount]
+                              if_womennum, holding, if_holding, mainbus, code, ccode]
             loan = None
             if_loan = 0
 
@@ -618,11 +573,7 @@ class Report:
         if_empnum, womennum, if_womennum, holding = baseinfo[0][8],baseinfo[0][9],baseinfo[0][10],baseinfo[0][11]
         if_holding, mainbus = baseinfo[0][12],baseinfo[0][13]
         code,ccode= baseinfo[0][14],baseinfo[0][15]
-        runner, amount = baseinfo[0][16],baseinfo[0][17]
         updated_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
-        m = hashlib.md5()
-        m.update(str(self.gs_basic_id) + str(year))
-        uuid = m.hexdigest()
         if email =='无':
             email = None
         if tel == '无':
@@ -637,42 +588,33 @@ class Report:
             updated_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
             row_count = cursor.execute(basic_string, (gs_basic_id, year, province,
                     name, uuid, tel, address, email, postcode, status, employee, if_empnum, womennum, if_womennum,
-                    holding, if_holding, mainbus,code,ccode,pripid,source,runner,amount,updated_time,updated_time))
+                    holding, if_holding, mainbus,code,ccode,pripid,source,updated_time,updated_time))
             gs_report_id = connect.insert_id()
             connect.commit()
         except Exception, e:
             remark = 100000006
             logging.error('report basic error %s' % e)
         finally:
-            if remark < 100000001:
-                remark = row_count
-            updated_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
-            cursor.execute(update_report_py,(self.gs_py_id,remark,updated_time,gs_basic_id,self.gs_py_id))
-            connect.commit()
-        return gs_report_id
+            return gs_report_id
     #对于个体户的家庭经营状况信息
     def update_frun (self,year,gs_report_id,gs_basic_id,cursor,connect,province,fruninfo):
 
         uuid, loan, if_loan, subsidy, if_subsidy = fruninfo[0][0],fruninfo[0][1],fruninfo[0][2],fruninfo[0][3],fruninfo[0][4]
         income, if_income, tax, if_tax = fruninfo[0][5],fruninfo[0][6],fruninfo[0][7],fruninfo[0][8]
         profit, if_profit = fruninfo[0][9],fruninfo[0][10]
-        remark = 0
         try:
+
             updated_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
+
             row_count = cursor.execute(frun_string, (gs_report_id,gs_basic_id,province,uuid,income,if_income,profit,if_profit,tax,if_tax,loan, if_loan, subsidy, if_subsidy,updated_time,updated_time))
             connect.commit()
+
         except Exception, e:
-            remark = 100000006
             logging.error('report %sfrun error %s' %(year,e))
         finally:
-            if remark <10000001:
-                remark = row_count
-            updated_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
-            cursor.execute(update_run_py,(self.gs_py_id,remark,updated_time,gs_basic_id,self.gs_py_id))
-            connect.commit()
-            logging.error('execute report %s frun:%s' % (year, row_count))
+            logging.info('execute report %s frun:%s' % (year, row_count))
 
-            # print 'execute report %s frun:%s' % (year, row_count)
+
 
     #对于股份有限公司等的资产状况信息
     def update_run(self,year,gs_report_id,gs_basic_id,cursor,connect,province,runinfo):
@@ -681,22 +623,16 @@ class Report:
         main_income, if_main, net_income, if_net = runinfo[0][8],runinfo[0][9],runinfo[0][10],runinfo[0][11]
         tax, if_tax, debt, if_debt = runinfo[0][12],runinfo[0][13],runinfo[0][14],runinfo[0][15]
         uuid = runinfo[0][16]
-        remark = 0
         try:
             updated_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
             row_count = cursor.execute(run_string, (gs_report_id,gs_basic_id,province,asset,if_asset,benifit,if_benifit,income,if_income,profit,if_profit,main_income,if_main,net_income,if_net,tax,if_tax,debt,if_debt,uuid,updated_time,updated_time))
             connect.commit()
 
         except Exception, e:
-            remark = 100000006
             logging.error('report run error %s' % e)
-
         finally:
-            if remark < 100000001:
-                remark = row_count
-            updated_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
-            cursor.execute(update_run_py, (self.gs_py_id,remark, updated_time,gs_basic_id,self.gs_py_id))
-            connect.commit()
+            logging.info('execute report %s frun:%s' % (year, row_count))
+
     #用于更新纸质年报的信息
     def update_pbreport(self,year,gs_basic_id,cursor,connect,province):
 
@@ -718,11 +654,11 @@ class Report:
         finally:
             return remark
 #对年报中的各分项数据进行更新
-def update_report_main(url, cursor, connect, gs_basic_id,gs_py_id):
+def update_report_main(url, cursor, connect, gs_basic_id):
     total,insert_toal = 0,0
     update_total = 0
     try:
-        info = Report(url, cursor, connect, gs_basic_id,gs_py_id)
+        info = Report(url, cursor, connect, gs_basic_id)
         year_href,remark = info.get_year_href()
         if len(year_href) == 0:
             if remark == 1:
@@ -764,16 +700,13 @@ def update_report_main(url, cursor, connect, gs_basic_id,gs_py_id):
                     insert_toal+=flag
     except Exception, e:
         flag = 100000006
-        updated_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
-        cursor.execute(update_report_py, (gs_py_id, flag, updated_time, gs_basic_id, gs_py_id))
-        connect.commit()
         logging.info('report error %s' % e)
     finally:
         return flag,total,insert_toal,update_total
 
 
 
-def update_report(url,cursor, connect, gs_basic_id,gs_py_id):
+def update_report(url,cursor, connect, gs_basic_id):
     total,insert_total = 0,0
     update_total = 0
     try:
@@ -784,7 +717,7 @@ def update_report(url,cursor, connect, gs_basic_id,gs_py_id):
         if now_year == int(sign_date):
             flag = -1
         elif now_year > int(sign_date):
-            flag,total,insert_total,update_total = update_report_main(url, cursor, connect, gs_basic_id,gs_py_id)
+            flag,total,insert_total,update_total = update_report_main(url, cursor, connect, gs_basic_id)
     except Exception, e:
         flag = 100000006
         logging.error('report error :%s' % e)
@@ -794,10 +727,10 @@ def update_report(url,cursor, connect, gs_basic_id,gs_py_id):
 
 
 def main():
-    Log().found_log(gs_py_id,gs_basic_id)
+    Log().found_search_log(gs_search_id, gs_basic_id)
     HOST, USER, PASSWD, DB, PORT = config.HOST, config.USER, config.PASSWD, config.DB, config.PORT
     connect, cursor = Connect_to_DB().ConnectDB(HOST, USER, PASSWD, DB, PORT)
-    flag,total,insert_total,update_total = update_report(url, cursor, connect, gs_basic_id, gs_py_id)
+    flag,total,insert_total,update_total = update_report(url, cursor, connect, gs_basic_id)
     cursor.close()
     connect.close()
     info = {
@@ -814,12 +747,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-
-
-
-
-
-
-
-

@@ -29,7 +29,7 @@ gs_py_id = sys.argv[3]
 # gs_py_id = 1501
 
 check_string = 'insert  into gs_check(gs_basic_id,types,result,check_date,gov_dept,updated)values(%s,%s,%s,%s,%s,%s)'
-select_check = 'select gs_check_id from gs_check where gs_basic_id = %s and check_date = %s'
+select_check = 'select gs_check_id from gs_check where gs_basic_id = %s and check_date = %s and types = %s'
 update_check_py = 'update gs_py set gs_py_id = %s,gs_check = %s,updated = %s where gs_py_id = %s'
 select_check_py = 'select  updated from gs_check where gs_basic_id = %s order by updated desc  LIMIT 1'
 class Check:
@@ -40,6 +40,8 @@ class Check:
             types = singledata["insType"]
             if types == '1':
                 types = '抽查'
+            else:
+                types = '检查'
             result = singledata["insRes_CN"]
             check_date = singledata["insDate"]
             check_date = change_date_style(check_date)
@@ -56,7 +58,7 @@ class Check:
                 types, result = information[key][0], information[key][1]
                 check_date, gov_dept = information[key][2], information[key][3]
 
-                count = cursor.execute(select_check, (gs_basic_id, check_date))
+                count = cursor.execute(select_check, (gs_basic_id, check_date,types))
                 if count == 0:
                     updated_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
 

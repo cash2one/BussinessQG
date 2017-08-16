@@ -2,34 +2,33 @@
 # -*- coding: utf-8 -*-
 # @File  : QGGS_person.py
 # @Author: Lmm
-# @Date  : 2017-07-28
-# @Desc  :人员信息的更新
-
+# @Date  : 2017-08-08
+# @Desc  :
 import logging
 import re
 import sys
 import time
 
-from PublicCode import config
-from PublicCode.deal_html_code import deal_lable
-from PublicCode import config
-from PublicCode.Public_code import Connect_to_DB
-from PublicCode.Judge_Status import Judge
-from PublicCode.Bulid_Log import Log
+from SPublicCode import config
+from SPublicCode.deal_html_code import deal_lable
+from SPublicCode.Public_code import Connect_to_DB
+from SPublicCode.Judge_Status import Judge
+from SPublicCode.Bulid_Log import Log
 reload(sys)
 sys.setdefaultencoding('utf-8')
 Type = sys.getfilesystemencoding()
 # url = sys.argv[1]
 # gs_basic_id = sys.argv[2]
-# gs_py_id = sys.argv[3]
+# gs_search_id = sys.argv[3]
 
-url = 'http://www.gsxt.gov.cn/%7BT3MeYJuLFfLz3_3hCLfW_KvoktCQU1lXvplaKJeR7zOHWc4hORkB_iYrsmhl15N4585l68Qz27xLIAZlblEwIIvTSpgWd_1eLx8fU1hZnuDYxVLyphE8kgpNJsxPe6JPezLfnmBnrcmeov_KMqCuKQ-1502762436387%7D'
-gs_basic_id = 1900000099
-gs_py_id = 1501
+url = 'http://www.gsxt.gov.cn/%7B2B8UGsQnqIpxjXy1gmBFk-2w4HvlWisZB8eqY5hQKhzqf3UOuRRdZOC7xWfFAgsYh1PQ9-KyzdXVsPRGpDcY_nr24-3r72xoxbdyFqIVfD4-1502264834604%7D'
+gs_basic_id = 229422000
+gs_search_id = 837
+
 select_string = 'select gs_person_id,position from gs_person where gs_basic_id = %s and name = %s and source = 1'
 insert_string = 'insert into gs_person(gs_basic_id,name,position,source,updated)values(%s,%s,%s,%s,%s)'
 person_string = 'update gs_person set gs_person_id = %s,position = %s,updated = %s where gs_person_id = %s'
-update_person_py = 'update gs_py set gs_py_id = %s,gs_person = %s,updated = %s where  gs_py_id = %s '
+
 
 class Person:
     def name(self,data):
@@ -52,7 +51,7 @@ class Person:
                 position = data["position_CN"].replace(" ","")
             elif position == '':
                 position = None
-            print name,position
+
             information[i] = [name, position]
         return information
 
@@ -65,10 +64,8 @@ class Person:
                 name = str(information[key][0])
                 position = information[key][1]
                 rows = cursor.execute(select_string, ( gs_basic_id,name))
-                # print name,position
 
                 if int(rows) >= 1:
-                    # gs_person_id = cursor.fetchall()[0][0]
                     sign = 0
                     for gs_person_id,pos in cursor.fetchall():
                         if pos == position:
@@ -103,11 +100,11 @@ class Person:
                 remark = flag
             return remark,insert_flag,update_flag
 def main():
-    Log().found_log(gs_py_id,gs_basic_id)
+    Log().found_search_log(gs_search_id, gs_basic_id)
     HOST, USER, PASSWD, DB, PORT = config.HOST, config.USER, config.PASSWD, config.DB, config.PORT
     connect, cursor = Connect_to_DB().ConnectDB(HOST, USER, PASSWD, DB, PORT)
     pages,perpages = 0,0
-    Judge(gs_py_id,connect,cursor,gs_basic_id,url,pages,perpages).update_branch(update_person_py,Person,"person")
+    Judge(connect,cursor,gs_basic_id,url,pages,perpages).update_branch(Person,"person")
     cursor.close()
     connect.close()
 
