@@ -24,27 +24,27 @@ reload(sys)
 sys.setdefaultencoding('utf-8')
 Type = sys.getfilesystemencoding()
 
-user_id = sys.argv[1]
-keyword = sys.argv[2]
-unique_id = sys.argv[3]
-pagenumber = sys.argv[4]
-totalpage = sys.argv[5]
-cookies_params = sys.argv[6]
-challenge_params = sys.argv[7]
-validate_params = sys.argv[8]
-jsluid = sys.argv[9]
-jsessionid = sys.argv[10]
+# user_id = sys.argv[1]
+# keyword = sys.argv[2]
+# unique_id = sys.argv[3]
+# pagenumber = sys.argv[4]
+# totalpage = sys.argv[5]
+# cookies_params = sys.argv[6]
+# challenge_params = sys.argv[7]
+# validate_params = sys.argv[8]
+# jsluid = sys.argv[9]
+# jsessionid = sys.argv[10]
 
-# user_id = 1
-# keyword = '上海金融'
-# unique_id = '15021891972000'
-# pagenumber = 5
-# totalpage = 5
-# cookies_params = "23query_8080"
-# challenge_params = '401203212adb6e5579276c22849e7b9blb'
-# validate_params = '707dddd2229c733f8faf71c180152246'
-# jsluid = 'abe719e05908bcc8e42da76a00110d72'
-# jsessionid ='6992C9310A6349E9768EA0917E206918-n2:-1'
+user_id = 1
+keyword = '上海金融'
+unique_id = '15035609941109'
+pagenumber = 1
+totalpage = 0
+cookies_params = "0"
+challenge_params = '0'
+validate_params = '0'
+jsluid = '0'
+jsessionid ='0'
 
 log_path = config.log_path
 logging.basicConfig(level=logging.DEBUG,
@@ -67,7 +67,7 @@ update_basic = 'update gs_basic_exp set gs_basic_exp_id =%s,gs_basic_id = %s,his
 class Search_Info:
     # 用于获取网页cookies
     def get_cookies(self):
-        i = 10
+        i = 2
         cookies = None
         while i > 0:
             try:
@@ -379,7 +379,7 @@ class Search_Info:
         totalpage = int(totalpage)
         if rspage>=totalpage:
             rspage = 0
-        print type(cookiesarray)
+        #print type(cookiesarray)
         info["flag"] = int(flag)
         info["insert"] = int(insert)
         info["update"] = int(update)
@@ -414,6 +414,7 @@ def main():
                                        challenge_params, total_page, rspage)
             else:
                 cookies = requests.utils.dict_from_cookiejar(cookies)
+                print cookies
                 info,total_page = searchobject.last_request(url, keyword,challenge, validate, cookies,pagenumber)
                 flag, insert_flag, update_flag = searchobject.insert_search(keyword, user_id, info, cursor, connect,pagenumber)
                 searchobject.printinfo(flag, insert_flag, update_flag, unique_id, cookies, validate,

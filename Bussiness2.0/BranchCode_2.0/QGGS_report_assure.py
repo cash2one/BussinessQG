@@ -18,7 +18,7 @@ reload(sys)
 sys.setdefaultencoding('utf-8')
 Type = sys.getfilesystemencoding()
 
-assure_string = 'insert into gs_report_assure(gs_baisc_id,gs_report_id, uuid, province, creditor, debtor, cates, amount, deadline, period, ways,created,updated) \
+assure_string = 'insert into gs_report_assure(gs_basic_id,gs_report_id, uuid, province, creditor, debtor, cates, amount, deadline, period, ways,created,updated) \
 values(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)'
 assure_py = 'update gs_py set report_assure = %s where gs_basic_id = %s '
 class Assure:
@@ -47,6 +47,7 @@ class Assure:
         return information
     def update_to_db(self,gs_report_id, gs_basic_id, cursor, connect, information,province):
         remark = 0
+
         insert_flag,update_flag = 0,0
         try:
             for key in information.keys():

@@ -131,7 +131,7 @@ class Report:
             self.judge_status(schange_py,records,total)
             info = QGGS_report_lab.name(url_list["society"])
             if len(info)>0:
-                QGGS_report_lab.update_to_db(report_id, self.gs_basic_id, self.cursor, self.connect, info,province)
+                QGGS_report_lab.update_to_db(report_id, self.gs_basic_id,self.gs_py_id, self.cursor, self.connect, info,province)
             flag = 1
         except Exception,e:
             logging.info('report error %s'%e)
@@ -513,6 +513,7 @@ class Report:
                 if_main = 0
             net_income = data["netInc"]
             if_net = data["netIncDis"]
+
             if if_net!=None and str(if_net)!='':
                 if_net = int(data["netIncDis"])
                 if if_net ==2:
@@ -665,7 +666,7 @@ class Report:
             remark = 100000006
             logging.error('report %sfrun error %s' %(year,e))
         finally:
-            if remark <10000001:
+            if remark <100000001:
                 remark = row_count
             updated_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
             cursor.execute(update_run_py,(self.gs_py_id,remark,updated_time,gs_basic_id,self.gs_py_id))

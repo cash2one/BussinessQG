@@ -25,7 +25,7 @@ from SPublicCode.Public_code import Send_Request as Send_Request
 
 url = sys.argv[1]
 gs_basic_id = sys.argv[2]
-gs_py_id = sys.argv[3]
+gs_search_id = sys.argv[3]
 
 # url = 'http://www.gsxt.gov.cn/%7BTgfN2Py4EG9HUlLktZwmxCk-4rmCBGlrdZMvL3HIFmGwPTDm4fkFZ6omhNo6w_M5Y6ZPYMLowLrV1VsqDK3o4ci6MtlkeAP69sidm5jcXNPIgsSWwnQwUsCLlYRWNEl9-1502173426358%7D'
 # gs_basic_id = 229422000
@@ -655,7 +655,7 @@ class Report:
             return remark
 #对年报中的各分项数据进行更新
 def update_report_main(url, cursor, connect, gs_basic_id):
-    total,insert_toal = 0,0
+    total,insert_total = 0,0
     update_total = 0
     try:
         info = Report(url, cursor, connect, gs_basic_id)
@@ -697,12 +697,12 @@ def update_report_main(url, cursor, connect, gs_basic_id):
                         flag = info.get_pbreport_info(year,anCheId,province)
                     elif entType == 'pb' and annRepFrom =='2':
                         flag = info.update_pbreport(year,gs_basic_id,cursor,connect,province)
-                    insert_toal+=flag
+                    insert_total+=flag
     except Exception, e:
         flag = 100000006
         logging.info('report error %s' % e)
     finally:
-        return flag,total,insert_toal,update_total
+        return flag,total,insert_tupdate_totaloal,
 
 
 

@@ -38,7 +38,7 @@ class Black:
     def name(self,data):
         information = {}
         for i,singledata in enumerate(data):
-            types = '严重违法'
+            types = '黑名单'
             in_reason = singledata["serILLRea_CN"]
             in_date = singledata["abntime"]
             in_date = change_date_style(in_date)

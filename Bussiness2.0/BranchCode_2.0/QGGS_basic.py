@@ -20,12 +20,12 @@ reload(sys)
 sys.setdefaultencoding('utf-8')
 Type = sys.getfilesystemencoding()
 
-url = sys.argv[1]
-gs_basic_id = sys.argv[2]
-gs_py_id = sys.argv[3]
-# url = 'http://www.gsxt.gov.cn/%7B098EkvYOHmG5Uu3y4gubl337FXY7qlm1xKTacKOw6d2bNySxjehpp2giXfnogfmwB2Hrjt_UFXxxorOooGwko6tkLu5dKMXWcuXcSlja-ScUppEC0p76_WUsI4xQpipK1bs1kM5Rzx5F4y_ErLwPOw-1501637290654%7D'
-# gs_py_id = 1501
-# gs_basic_id = 229418502
+# url = sys.argv[1]
+# gs_basic_id = sys.argv[2]
+# gs_py_id = sys.argv[3]
+url = 'http://www.gsxt.gov.cn/%7B_pWUDrNMwf72zyd7L0uL_rwgBKPLfirkASiNY9iqgMZbNJX-my8ZQIt9CZjwMKtMx6N4mRrHu9z3g6w8_zdi1jYH5eP_V5Ovvu1Tug7NUYNUF19xaeZkkAAlP_w7po14AY8HYn5Q5zaZe_9P0NF_Tw-1503365262405%7D'
+gs_py_id = 1501
+gs_basic_id = 1900000695
 
 update_string = 'update gs_basic set gs_basic_id = %s, name = %s ,ccode = %s,status = %s ,types = %s ,jj_type = %s,legal_person = %s, \
 responser = %s ,investor = %s,runner = %s ,reg_date = %s ,appr_date = %s,reg_amount = %s, start_date = %s ,end_date = %s ,reg_zone = %s,reg_address = %s ,scope = %s ,updated = %s where gs_basic_id = %s'
@@ -181,6 +181,8 @@ def update_basic(information, connect, cursor, gs_basic_id):
         legal_person = None
     elif '执行事务合伙人' in information.keys():
         legal_person = information[u"执行事务合伙人"]
+        list = re.split(u'、',legal_person)
+        legal_person = list[0] +'等'
         investor = None
         runner = None
         responser = None

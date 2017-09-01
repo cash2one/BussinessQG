@@ -28,14 +28,14 @@ Type = sys.getfilesystemencoding()
 session = requests.session()  # 用于保持会话
 url_first = config.host
 
-gs_py_id = sys.argv[1]
-gs_basic_id = sys.argv[2]
-code = sys.argv[3]
-ccode = sys.argv[4]
-# gs_py_id = 1501
-# gs_basic_id = 229418502
-# code = '91130000236047921'
-# ccode = '91130000236047921'
+# gs_py_id = sys.argv[1]
+# gs_basic_id = sys.argv[2]
+# code = sys.argv[3]
+# ccode = sys.argv[4]
+gs_py_id = 1
+gs_basic_id = 1900000699
+code = '91310000671142819Y'
+ccode = '91310000671142819Y'
 
 
 update_py = 'update gs_py set gs_py_id = %s,gs_basic = %s,updated = %s where gs_py_id = %s'

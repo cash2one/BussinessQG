@@ -8,7 +8,7 @@
 import logging
 import sys
 import time
-
+import re
 
 
 reload(sys)
@@ -24,12 +24,19 @@ class Invest:
             singledata = data[i]
             uuid = singledata["forInvId"]
             name = singledata["entName"]
+            pattern = re.compile('^9')
             if "regNo" in singledata.keys():
                 code = singledata["regNo"]
+                match = re.findall(pattern,code)
+                if len(match)>0:
+                    code = code[0:18]
+                else:
+                    code = code[0:15]
             else:
                 code = None
             if "uniscId" in singledata.keys():
                 ccode = singledata["uniscId"]
+                ccode = ccode[0:18]
             else:
                 ccode = None
             information[i] = [name, code, ccode,uuid]

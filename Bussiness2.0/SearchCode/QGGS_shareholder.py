@@ -8,7 +8,7 @@ import json
 import logging
 import sys
 import time
-
+import re
 from  SPublicCode.Public_code import Send_Request as Send_Request
 from SPublicCode.deal_html_code import change_date_style
 from SPublicCode.deal_html_code import deal_lable
@@ -16,55 +16,71 @@ from SPublicCode import config
 from SPublicCode.Public_code import Connect_to_DB
 from SPublicCode.Judge_Status import Judge
 from SPublicCode.Bulid_Log import Log
-
+import base64
 reload(sys)
 sys.setdefaultencoding('utf-8')
 Type = sys.getfilesystemencoding()
 
 
-# url = sys.argv[1]
-# gs_basic_id = sys.argv[2]
-# gs_search_id = sys.argv[3]
-# pagenumber = sys.argv[4]
-# perpage = sys.argv[5]
+url = sys.argv[1]
+gs_basic_id = sys.argv[2]
+gs_search_id = sys.argv[3]
+pagenumber = sys.argv[4]
+perpage = sys.argv[5]
 
-url = 'http://www.gsxt.gov.cn/%7B2B8UGsQnqIpxjXy1gmBFk67LI1IFYOEbBUapwrzrnWe3dHvQJfF-a4ZPewr_et4-jnPZDG01pE6vc2J-ExPdLH2qHn4JrMfsOW0Wrq6nFoA-1502264834600%7D'
-gs_basic_id = 229422000
-gs_search_id = 837
-pagenumber = 1
-perpage = 0
-share_string = 'insert into gs_shareholder(gs_basic_id,name,cate,types,license_type,license_code,ra_date, ra_ways, true_amount,reg_amount,ta_ways,ta_date,updated)values(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)'
+# url = 'http://www.gsxt.gov.cn/%7B2B8UGsQnqIpxjXy1gmBFk67LI1IFYOEbBUapwrzrnWe3dHvQJfF-a4ZPewr_et4-jnPZDG01pE6vc2J-ExPdLH2qHn4JrMfsOW0Wrq6nFoA-1502264834600%7D'
+# gs_basic_id = 229422000
+# gs_search_id = 837
+# pagenumber = 1
+# perpage = 0
+share_string = 'insert into gs_shareholder(gs_basic_id,name,cate,types,license_type,license_code,ra_date, ra_ways, true_amount,reg_amount,ta_ways,ta_date,country,address,iv_basic_id,ps_basic_id,updated)values(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)'
 select_string = 'select gs_shareholder_id from gs_shareholder where gs_basic_id = %s and name = %s and types = %s and cate = %s'
 
+select_name = 'select gs_basic_id from gs_unique where name = "%s"'
+select_ps = 'select ps_basic_id,gs_basic_id from ps_basic where name = "%s"'
+insert_ps = 'insert into ps_basic(gs_basic_id,name,idcard,province,city,town,birthday,encode,remark,created,updated) values(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)'
+update_ps = 'update ps_basic set ps_basic_id = %s ,gs_basic_id = %s,updated = %s where ps_basic_id = %s'
 
 
 class Shareholder:
-    def name(self,data):
+    def name(self, data):
         information = {}
         datalist = data
         # print data
         for i in range(len(datalist)):
             data = datalist[i]
             name = data["inv"]
-            license_code = data["bLicNo"]
-            license_code = deal_lable(license_code)
+            if data["blicType_CN"] != '':
+                license_type = data["blicType_CN"]
+                license_type = deal_lable(license_type)
+                license_code = data["bLicNo"]
+                license_code = deal_lable(license_code)
+            elif data["cerType_CN"] != '':
+                license_type = data["cerType_CN"]
+                license_type = deal_lable(license_type)
+                license_code = data["cerNo"]
+                license_code = deal_lable(license_code)
+            else:
+                license_type = ''
+                license_code = None
             types = data["invType_CN"]
             types = deal_lable(types)
-            license_type = data["blicType_CN"]
-            detail_check = data["detailCheck"]
 
+            detail_check = data["detailCheck"]
+            country = data["country_CN"]
+            address = data["dom"]
             if detail_check == "true":
                 detail_key = data["invId"]
                 detail_url = "http://www.gsxt.gov.cn/corp-query-entprise-info-shareholderDetail-%s.html" % detail_key
-                #print detail_url
-                ra_date, ra_ways, true_amount,reg_amount, ta_ways, ta_date= self.deal_detail_content(detail_url)
+                # print detail_url
+                ra_date, ra_ways, true_amount, reg_amount, ta_ways, ta_date = self.deal_detail_content(detail_url)
             else:
                 logging.info('无 shareholder 详情信息')
                 ra_date, ra_ways, true_amount, reg_amount, ta_ways, ta_date = None, None, None, None, None, None
-            information[i] = [name, license_code, license_type, types, ra_date, ra_ways, true_amount, reg_amount, ta_ways,
-                              ta_date]
+            information[i] = [name, license_code, license_type, types, ra_date, ra_ways, true_amount, reg_amount,
+                              ta_ways,
+                              ta_date, country, address]
         return information
-
 
     def deal_detail_content(self,detail_url):
         # print detail_url
@@ -121,12 +137,34 @@ class Shareholder:
                                                        information[key][6]
                 reg_amount, ta_ways, ta_date = information[key][7], information[key][8], information[key][9]
                 count = cursor.execute(select_string, (gs_basic_id, name, types, cate))
+                country, address = information[key][10], information[key][11]
+                if name != '' or name != None:
+                    pattern = re.compile('.*公司.*|.*中心.*|.*集团.*|.*企业.*')
+                    result = re.findall(pattern, name)
+                    if len(result) == 0:
+                        iv_basic_id = 0
+                    else:
+                        select_unique = select_name % name
+                        number = cursor.execute(select_unique)
+                        if number == 0:
+                            iv_basic_id = 0
+                        elif int(number) == 1:
+                            iv_basic_id = cursor.fechall[0][0]
+                else:
+                    iv_basic_id = 0
 
+                if license_type == '中华人民共和国居民身份证':
+                    if license_code == '' or license_code == None:
+                        license_code = '非公示项'
+                    elif len(license_code) == 15 or len(license_code) == 18:
+                        ps_basic_id = self.judge_certcode(name, license_code, cursor, connect, gs_basic_id)
+                elif license_code == None or license_code == '' and license_type != '':
+                    license_code = '非公示项'
                 if count == 0:
                     updated_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
                     rows_count = cursor.execute(share_string, (
                             gs_basic_id, name, cate, types, license_type, license_code, ra_date, ra_ways, true_amount,
-                            reg_amount, ta_ways, ta_date, updated_time))
+                            reg_amount, ta_ways, ta_date, country,address,iv_basic_id,ps_basic_id,updated_time))
                     insert_flag += rows_count
                     connect.commit()
 

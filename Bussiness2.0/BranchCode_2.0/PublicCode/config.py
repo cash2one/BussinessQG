@@ -23,7 +23,7 @@ host = "http://www.gsxt.gov.cn"
 #极验破解start
 break_url = "http://59.110.138.116/geetest/get?token=seo_test1&reg=http://www.gsxt.gov.cn/SearchItemCaptcha"
 search_url = 'http://www.gsxt.gov.cn/corp-query-search-1.html'
-search_text = "tab=ent_tab&token=34911389&searchword=%s&geetest_challenge=%s&geetest_validate=%s&geetest_seccode=%s|7Cjordan"
+search_text = "tab=ent_tab&token=131269957&searchword=%s&geetest_challenge=%s&geetest_validate=%s&geetest_seccode=%s|7Cjordan"
 #极验破解end
 
 #数据库用户名配置-----------------------------------------------------------
@@ -144,7 +144,10 @@ headersfirst = {
     "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8",
     "Referer": "https://www.baidu.com/link?url=cxsFywBwbecQDgnYHggIMPkCYNCXq60XgQUeZdEpZgPfL-Rxw5mQNg45Q51fi_PN&wd=&eqid=a2e1675400237c41000000025949ce21",
     "Accept-Encoding": "gzip, deflate",
-    "Accept-Language": "zh-CN,zh;q=0.8"
+    "Accept-Language": "zh-CN,zh;q=0.8",
+
+
+
     # Cookie: __jsluid=e92eb3ffa9341978bd83a91256ed2744; UM_distinctid=15b7c2f3a9051-001ae4ee61beea-6e5c772b-100200-15b7c2f3a917af; Hm_lvt_d7682ab43891c68a00de46e9ce5b76aa=1497963057,1497963091,1497963094,1497966465; Hm_lpvt_d7682ab43891c68a00de46e9ce5b76aa=1497966465; LXB_REFER=www.baidu.com; tlb_cookie=45query_8080; CNZZDATA1261033118=1930934836-1492433574-http%253A%252F%252Fgsxt.saic.gov.cn%252F%7C1497963431; JSESSIONID=B64BDFDCDD7B035919CA0C12BFE78BE3-n2:3; Hm_lvt_cdb4bc83287f8c1282df45ed61c4eac9=1497966420,1497966423,1497966817,1497966917; Hm_lpvt_cdb4bc83287f8c1282df45ed61c4eac9=1497968045
 
 }
@@ -159,6 +162,34 @@ headers = {
     "Content-Length": "214",
     "Referer": "http://www.gsxt.gov.cn/index.html",
     "Connection": "keep-alive",
-    "Upgrade-Insecure-Requests": "1"
+    "Upgrade-Insecure-Requests": "1",
+
 }
 #头部信息仿造end-------------------------------------------------------------------
+
+
+
+#阿布云配置信息Start---------------------------------------------------------------
+
+# 代理服务器-----------------------------------------------------------------------
+proxyHost = "proxy.abuyun.com"
+proxyPort = "9020"
+#----------------------------------------------------------------------------------
+
+
+# 代理隧道验证信息-----------------------------------------------------------------
+proxyUser = "HK64472WH1Y39CFD"
+proxyPass = "3649865A060D238B"
+
+proxyMeta = "http://%(user)s:%(pass)s@%(host)s:%(port)s" % {
+      "host" : proxyHost,
+      "port" : proxyPort,
+      "user" : proxyUser,
+      "pass" : proxyPass,
+    }
+
+proxies = {
+        "http": proxyMeta,
+        "https": proxyMeta,
+}
+#阿布云配置信息end------------------------------------------------------------------

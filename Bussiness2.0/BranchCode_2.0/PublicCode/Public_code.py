@@ -35,7 +35,7 @@ class Connect_to_DB:
 
 # 用于发送请求
 class Send_Request:
-    def send_requests(self, url, num=3):
+    def send_requests(self, url, num=1):
         list = []
         soup,status_code = None,None
         for i in range(0, 20):
