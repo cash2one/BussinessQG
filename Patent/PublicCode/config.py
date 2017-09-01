@@ -19,14 +19,16 @@ HOST, USER, PASSWD, DB, PORT = '127.0.0.1', 'root', '123456', 'test', 3306
 
 #网页链接Start--------------------------------------------------------------------------------
 firsturl = 'http://www.pss-system.gov.cn/sipopublicsearch/portal/uiIndex.shtml'
-searchurl = 'http://www.pss-system.gov.cn/sipopublicsearch/patentsearch/executeSmartSearch1207-executeSmartSearch.shtml'
-search_text = 'searchCondition.searchExp=%s&search_scope=&searchCondition.dbId=VDB&resultPagination.limit=12&searchCondition.searchType=Sino_foreign&wee.bizlog.modulelevel=0200101'
+searchurl = 'http://www.pss-system.gov.cn/sipopublicsearch/patentsearch/showSearchResult-startWa.shtml'
+
 #详情链接
 viewurl = 'http://www.pss-system.gov.cn/sipopublicsearch/patentsearch/viewAbstractInfo-viewAbstractInfo.shtml'
 #法律状态链接
 lawurl = 'http://www.pss-system.gov.cn/sipopublicsearch/patentsearch/ui_searchLawState-showPage.shtml'
 #摘要图片链接
 imgurl= 'http://www.pss-system.gov.cn/sipopublicsearch/patentsearch/retrieveUrls.shtml'
+sameurl = 'http://www.pss-system.gov.cn/sipopublicsearch/patentsearch/showCognationInfo-showCognationList.shtml'
+searchparams = "resultPagination.limit=12&resultPagination.sumLimit=10&resultPagination.start=%s&resultPagination.totalCount=&searchCondition.searchType=Sino_foreign&search_scope= AND ((DOC_TYPE=((@@@@I@@@@))) OR (DOC_TYPE=((@@@@U@@@@))) OR (DOC_TYPE=((@@@@D@@@@)))) AND ((CC=(@@@@HK@@@@)) OR (CC=(@@@@MO@@@@)) OR (CC=(@@@@TW@@@@)) OR (CC=(@@@@CN@@@@)))&searchCondition.dbId=&searchCondition.searchExp=%s&wee.bizlog.modulelevel=0200101&searchCondition.executableSearchExp=VDB:((IBI='%s' AND (DOC_TYPE='I' OR DOC_TYPE='U' OR DOC_TYPE='D') AND (CC='HK' OR CC='MO' OR CC='TW' OR CC='CN')))&searchCondition.literatureSF=复合文本=(%s) AND ((DOC_TYPE=(('I'))) OR (DOC_TYPE=(('U'))) OR (DOC_TYPE=(('D')))) AND ((CC=('HK')) OR (CC=('MO')) OR (CC=('TW')) OR (CC=('CN')))&searchCondition.strategy=&searchCondition.searchKeywords=&searchCondition.searchKeywords=%s&searchCondition.searchKeywords=[ ]{0,}[T][ ]{0,}[W][ ]{0,}[ ]{0,}&searchCondition.searchKeywords=[ ]{0,}[M][ ]{0,}[O][ ]{0,}[ ]{0,}&searchCondition.searchKeywords=[ ]{0,}[H][ ]{0,}[K][ ]{0,}[ ]{0,}&searchCondition.searchKeywords=[ ]{0,}[C][ ]{0,}[N][ ]{0,}[ ]{0,}"
 #网页链接End----------------------------------------------------------------------------------
 
 #网页登录的用户名和密码Start------------------------------------------------------------------
@@ -61,7 +63,6 @@ USER_AGENTS = [
     "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.87 Safari/537.36 OPR/37.0.2178.32",
     "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/534.57.2 (KHTML, like Gecko) Version/5.1.7 Safari/534.57.2",
     "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.101 Safari/537.36",
-    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2486.0 Safari/537.36 Edge/13.10586",
     "Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; rv:11.0) like Gecko",
     "Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; WOW64; Trident/6.0)",
     "Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; WOW64; Trident/5.0)",

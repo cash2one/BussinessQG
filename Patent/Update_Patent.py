@@ -9,10 +9,13 @@ import random
 import time
 
 import requests
-
+import sys
 from PublicCode import config
 from PublicCode import deal_html_code
-
+# 用于解决中文编码问题
+reload(sys)
+sys.setdefaultencoding('utf-8')
+Type = sys.getfilesystemencoding()
 headers = config.header
 
 # page = 1
@@ -83,10 +86,10 @@ class Ia_Patent:
 			source = 'pss-system'
 			law_search_info = self.get_law_info(nrdAn, nrdPn, cookies)
 			same_info = self.get_cognation_info(nrdPn, cookies)
-			item[i] = [name, code, app_date, applicant, address, inventor, main_cate, sub_cate, pub_code, pub_date,
+			item[cid] = [name, code, app_date, applicant, address, inventor, main_cate, sub_cate, pub_code, pub_date,
 			             priority, remark, agent, agency, source, law_search_info, same_info]
-			print item
 		return item
+	
 	# 用于对信息进行处理
 	def deal_info(self, str, item):
 		string = item.xpath(".//p[contains(.,'%s')]" % str)
@@ -158,14 +161,16 @@ class Ia_Patent:
 						name, code, app_date, applicant, address, inventor, main_cate, sub_cate, pub_code, pub_date,
 						priority, remark, agent, agency, source, updated_time))
 					connect.commit()
+					ia_patent_id = connect.insert_id()
 		except Exception, e:
 			print e
+	
 	# #将采集到的法律信息更新到数据库中
-	# def update_law_info(self,info,cursor,connect,ia_patent_id):
+	# def update_law_info(self, info, cursor, connect, ia_patent_id):
 	# 	try:
 	# 		for key in info.keys():
-			
-	#将法律信息采集更新到数据库中
+	
+	# 将法律信息采集更新到数据库中
 	def upadte_law_info(self, info, cursor, connect, ia_patent_id):
 		try:
 			for key in info.keys():
