@@ -104,9 +104,16 @@ class Judge_status:
             if flag ==-1:
                 pass
             else:
-                updated_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
-                cursor.execute(update_py,(gs_py_id,flag,updated_time,gs_py_id))
-                connect.commit()
+                if name == "shareholder" or name =="person":
+                    HOST, USER, PASSWD, DB, PORT = config.HOST, config.USER, config.PASSWD, config.DB, config.PORT
+                    connect, cursor = Connect_to_DB().ConnectDB(HOST, USER, PASSWD, DB, PORT)
+                    updated_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
+                    cursor.execute(update_py,(gs_py_id,flag,updated_time,gs_py_id))
+                    connect.commit()
+                else:
+                    updated_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
+                    cursor.execute(update_py, (gs_py_id, flag, updated_time, gs_py_id))
+                    connect.commit()
         except Exception,e:
             logging.error("judge error :%s"%e)
         finally:

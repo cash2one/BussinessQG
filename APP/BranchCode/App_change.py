@@ -30,6 +30,7 @@ class Change:
                     content_before = ''
                 if "altAf" in single.keys():
                     content_after = single["altAf"]
+                    content_after = deal_html_code.remove_symbol(content_after)
                 else:
                     content_after = ''
                 if "altDate" in single.keys():

@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-# @File  : App_report_new.py
+# @File  : App_report.py
 # @Author: Lmm
 # @Date  : 2017-08-18
 # @Desc  : 获取年报中的所有信息
@@ -47,7 +47,7 @@ year = '2015'
 province ='SHH'
 basic_string = 'insert into gs_report(gs_basic_id,year,province,name, uuid, tel, address, email, postcode, status, employee, if_empnum, womennum, \
  holding, if_holding, mainbus, code, ccode, pripid,refuuid,if_invest,if_sharetrans,if_fwarnnt,if_website,if_net,report_mode,types,runner,amount,\
- created,updated) values(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)'
+ fill_date,created,updated) values(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)'
 update_address = 'update gs_basic set gs_basic_id = %s,tel = %s,address = %s,email = %s,updated = %s where gs_basic_id = %s'
 run_string = 'insert into gs_report_run(gs_report_id,gs_basic_id,province,asset,if_asset,benifit,if_benifit,income,if_income,profit,if_profit,main_income,if_main,net_income,if_net,tax,if_tax,debt,if_debt,loan,if_loan,subsidy,if_subsidy,uuid,created,updated) values(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)'
 select_basic_year = 'select reg_date from gs_basic where gs_basic_id = %s'
@@ -349,6 +349,7 @@ class Report:
         pripid, refuuid, if_invest, if_sharetrans = baseinfo[0][16],baseinfo[0][17],baseinfo[0][18],baseinfo[0][19]
         if_fwarnnt, if_website, if_net, report_mode = baseinfo[0][20],baseinfo[0][21],baseinfo[0][22],baseinfo[0][23]
         types, runner, amount, province = baseinfo[0][24],baseinfo[0][25],baseinfo[0][26],baseinfo[0][27]
+        fill_date = baseinfo[0][28]
         m = hashlib.md5()
         m.update(str(gs_basic_id) + str(year))
         uuid = m.hexdigest()
@@ -359,7 +360,7 @@ class Report:
         try:
             updated_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
             count = cursor.execute(basic_string,(gs_basic_id,year,province,name, uuid, tel, address, email, postcode, status, employee, if_empnum, womennum, \
-            holding, if_holding, mainbus, code, ccode, pripid,refuuid,if_invest,if_sharetrans,if_fwarnnt,if_website,if_net,report_mode,types,runner,amount,updated_time,updated_time))
+            holding, if_holding, mainbus, code, ccode, pripid,refuuid,if_invest,if_sharetrans,if_fwarnnt,if_website,if_net,report_mode,types,runner,amount,fill_date,updated_time,updated_time))
             gs_report_id = connect.insert_id()
             connect.commit()
         except Exception,e:
@@ -411,7 +412,7 @@ def update_report_main(gs_basic_id,gs_py_id,year,cursor,connect):
 
 
 def main():
-    #Log().found_log(gs_py_id, gs_basic_id)
+    #log().found_log(gs_py_id, gs_basic_id)
     try:
         HOST, USER, PASSWD, DB, PORT = config.HOST, config.USER, config.PASSWD, config.DB, config.PORT
         connect, cursor = Connect_to_DB().ConnectDB(HOST, USER, PASSWD, DB, PORT)

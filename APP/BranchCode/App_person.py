@@ -4,8 +4,10 @@
 import sys
 import time
 import logging
+from PublicCode import config
 from PublicCode.Public_code import Judge_status
 from PublicCode.Public_code import Log
+from PublicCode.Public_code import Connect_to_DB
 reload(sys)
 sys.setdefaultencoding('utf-8')
 Type = sys.getfilesystemencoding()
@@ -15,6 +17,9 @@ select_string = 'select gs_person_id from gs_person where name = %s and position
 insert_string = 'insert into gs_person(gs_basic_id,name,position,updated)values(%s,%s,%s,%s)'
 person_string = 'update gs_person set gs_person_id = %s,updated = %s where gs_person_id = %s'
 update_person_py = 'update gs_py set gs_py_id = %s,gs_person = %s,updated = %s where  gs_py_id = %s '
+update_string = 'update gs_person set quit = 1 where gs_basic_id = %s '
+update_quit = 'update gs_person set quit = 0,updated = %s where gs_basic_id = %s and gs_person_id = %s'
+
 class Person:
     def name(self,data):
         info = {}
@@ -33,6 +38,13 @@ class Person:
         total = len(information)
         logging.info("person total:%s"%total)
         try:
+            string = update_string % gs_basic_id
+            cursor.execute(string)
+            connect.commit()
+            cursor.close()
+            connect.close()
+            HOST, USER, PASSWD, DB, PORT = config.HOST, config.USER, config.PASSWD, config.DB, config.PORT
+            connect, cursor = Connect_to_DB().ConnectDB(HOST, USER, PASSWD, DB, PORT)
             for key in information.keys():
                 name = str(information[key][0])
                 position = str(information[key][1])
@@ -40,7 +52,10 @@ class Person:
                 # print name,position
 
                 if int(rows) == 1:
-                    pass
+                    gs_person_id = cursor.fetchall()[0][0]
+                    updated_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
+                    count = cursor.execute(update_quit, (updated_time, gs_basic_id, gs_person_id))
+                    connect.commit()
                 elif rows == 0:
                     updated_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
                     count = cursor.execute(insert_string, (gs_basic_id, name,position, updated_time))
@@ -50,6 +65,8 @@ class Person:
             remark = 100000006
             logging.error("person error: %s" % e)
         finally:
+            cursor.close()
+            connect.close()
             if remark < 100000001:
                 flag = insert_flag + update_flag
                 remark = flag

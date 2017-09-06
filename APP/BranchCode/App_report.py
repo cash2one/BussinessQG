@@ -31,8 +31,8 @@ Type = sys.getfilesystemencoding()
 # url = sys.argv[1]
 # gs_basic_id = sys.argv[2]
 # gs_py_id =  sys.argv[3]
-# url = 'http://www.sgs.gov.cn/notice/ws/data/ent_annlBasic/fd45e860d5ef4418afe96dfc5c29c340?wscckey=ab7a1ffacc8ec82c_1502437575'
-# gs_basic_id = 1900000056
+# year = sys.argv[4]
+# province = sys.addr[5]
 basic_string = 'insert into gs_report(gs_basic_id,year,province,name, uuid, tel, address, email, postcode, status, employee, if_empnum, womennum, \
  holding, if_holding, mainbus, code, ccode, pripid,refuuid,if_invest,if_sharetrans,if_fwarnnt,if_website,if_net,report_mode,types,runner,amount,\
  created,updated) values(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)'
@@ -204,6 +204,7 @@ class Report:
         if_website = int(data["hasWebsite"])
         if_net = int(data["ifNet"])
         report_mode = data["reportMode"]
+        report_mode = config.public_status[report_mode]
         if "reportType" in data.keys():
             types = config.company_type[data["reportType"]]
         else:

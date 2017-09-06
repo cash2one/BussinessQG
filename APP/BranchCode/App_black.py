@@ -51,7 +51,7 @@ class Black:
                 gov_dept = ''
             information[i] = [types, in_reason, in_date, out_reason, out_date, gov_dept]
         return information
-    def update_to_db(self,gs_basic_id, cursor, connect, information):
+    def update_to_db(self,cursor, connect, gs_basic_id,information):
         update_flag, insert_flag = 0, 0
         remark = 0
         total = len(information)

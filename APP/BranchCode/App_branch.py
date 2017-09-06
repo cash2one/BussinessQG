@@ -22,8 +22,11 @@ class Branch:
         info = {}
         if len(data)!=0:
             for i,single in enumerate(data):
-                code = single["regNo"]
-                code = deal_html_code.remove_symbol(code)
+                if "regNo" in single.keys():
+                    code = single["regNo"]
+                    code = deal_html_code.remove_symbol(code)
+                else:
+                    code = ''
                 if "uniScid" in single.keys():
                     ccode = single["uniScid"]
                 else:

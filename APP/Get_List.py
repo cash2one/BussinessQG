@@ -14,19 +14,24 @@ from PublicCode.Public_code import Connect_to_DB
 from PublicCode.Public_code import Log
 import requests
 import App_Update
-
+import sys
 # code = sys.argv[1]
-# gs_basic_id = sys.argv[2]
-# gs_py_id = sys.argv[3]
+# ccode = sys.argv[2]
+# gs_basic_id = sys.argv[3]
+# gs_py_id = sys.argv[4]
+# province = sys.argv[5]
 # code = '9131000013221158XC'
+# ccode = '9131000013221158X'
 # gs_basic_id = 229418511
 # gs_py_id = 1
+# privince = 'SHH'
+
 s = requests.session()
 s.keep_alive = False
 
 
 select_name = 'select name from gs_basic where gs_basic_id = %s'
-select_basic = 'select gs_basic_id,code from gs_basic where province = "HEB" and gs_basic_id >229417812'
+select_basic = 'select gs_basic_id,code from gs_basic where province = "YUN"'
 insert_py = 'insert into gs_py(gs_basic_id,user_id) values(%s,%s)'
 #用于获取信息列表
 def get_index(code):
@@ -47,7 +52,7 @@ def get_index(code):
             second_url = config.detail_list[province].format(uuid)
             flag = 1
         else:
-            flag = 100000002
+            flag = 100000003
     else:
         flag = 100000001
     return second_url,flag,entName
@@ -70,7 +75,7 @@ def main():
 
             second_url, flag, entName = get_index(code)
 
-            if flag == 100000002:
+            if flag == 100000003:
                 select_string = select_name % gs_basic_id
                 cursor.execute(select_string)
                 name = cursor.fetchall()[0][0]
@@ -94,7 +99,7 @@ def main():
 
 
 # def main():
-#     Log().found_log(gs_py_id,gs_basic_id)
+#     log().found_log(gs_py_id,gs_basic_id)
 #     try:
 #         HOST, USER, PASSWD, DB, PORT = config.HOST, config.USER, config.PASSWD, config.DB, config.PORT
 #         connect, cursor = Connect_to_DB().ConnectDB(HOST, USER, PASSWD, DB, PORT)
@@ -103,14 +108,16 @@ def main():
 #             'flag':0
 #         }
 #         second_url,flag,entName = get_index(code)
-#         if flag == 100000002:
+#         if flag ==100000003:
+#             second_url,flag,entName = get_index(ccode)
+#         if flag == 100000003:
 #             select_string = select_name % gs_basic_id
 #             cursor.execute(select_string)
 #             name = cursor.fetchall()[0][0]
 #             second_url, flag, entName = get_index(name)
 #             if name != entName:
 #                 second_url = 0
-#                 flag = 0
+#                 flag = 100000002
 #     except Exception,e:
 #         logging.info("get list error:%s"%e)
 #     finally:

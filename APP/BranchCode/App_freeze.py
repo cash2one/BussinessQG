@@ -71,9 +71,11 @@ class Freeze:
                 else:
                     items = ''
                 if "froDocNo" not in data.keys():
+                    rule_no = data["executeNo"]
+                elif "executeNo" in data.keys():
                     rule_no = data["froDocNo"]
                 else:
-                    rule_no = data["executeNo"]
+                    rule_no = ''
                 if "executeNo" in data.keys():
                     enforce_no = data["executeNo"]
                 else:

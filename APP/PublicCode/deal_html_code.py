@@ -61,6 +61,7 @@ def remove_symbol(string):
         string = pattetn.sub('', string)
         pattern = re.compile(r'<[^>]+>', re.S)
         string = pattern.sub('', string)
+        string = re.sub(' ','',string)
     return string
 #对中文日期进行处理
 def change_chinese_date(date):

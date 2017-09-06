@@ -47,9 +47,9 @@ class Basic:
             appr_date = deal_html_code.change_chinese_date(appr_date)
         else:
             appr_date = None
-        if "regOrganInterpreted" in data.keys():
+        if "regCapInterpreted" in data.keys():
 
-            reg_amount = data["regOrganInterpreted"]
+            reg_amount = data["regCapInterpreted"]
         else:
             reg_amount = ''
         if "opFrom" in data.keys():

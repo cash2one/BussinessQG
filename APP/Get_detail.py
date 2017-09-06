@@ -59,7 +59,7 @@ def get_info_list(data):
         info["permit2"] = data["entOthPermitSet"]
         info["person"] = data["entMemberSet"]
         info["punish"] = data["entShrPunishSet"]
-        info ["punish2"] = data[""]
+        info["punish2"] = data[""]
         info["share"] = data["entInvestorSet"]
         info["stock"] = data["entPledgeSet"]
     return info
