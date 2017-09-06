@@ -54,7 +54,9 @@ person_img = {
     'FUAAAAOCAYAAABevFBuAAADKklEQVR42sWXX2RbURzHIyL6EKVi':'董事，副行长',
     'B0AAAAOCAYAAADT0Rc6AAABoUlEQVR42r2UT0REURTGr5G0eCJJ':'经理',
     'CsAAAAOCAYAAAC2POVFAAAB00lEQVR42q2VMUgDMRSGi5TSoQil' :'副行长',
-    'EcAAAAOCAYAAAB95wG7AAADcUlEQVR42r2Xb0TcYRzAf05O5kRm' :'董事兼经理'
+    'EcAAAAOCAYAAAB95wG7AAADcUlEQVR42r2Xb0TcYRzAf05O5kRm' :'董事兼经理',
+    'CsAAAAOCAYAAAC2POVFAAAB7UlEQVR42q2WT0TDYRjHf2YmmZGk': '监事长'
+    
 }
 #人员图片与职位对应end -----------------------------------------------------
 
@@ -161,3 +163,28 @@ headers = {
     "Upgrade-Insecure-Requests": "1"
 }
 #头部信息仿造end-------------------------------------------------------------------
+
+#阿布云配置信息Start---------------------------------------------------------------
+
+# 代理服务器-----------------------------------------------------------------------
+proxyHost = "proxy.abuyun.com"
+proxyPort = "9020"
+#----------------------------------------------------------------------------------
+
+
+# 代理隧道验证信息-----------------------------------------------------------------
+proxyUser = "HK64472WH1Y39CFD"
+proxyPass = "3649865A060D238B"
+
+proxyMeta = "http://%(user)s:%(pass)s@%(host)s:%(port)s" % {
+      "host" : proxyHost,
+      "port" : proxyPort,
+      "user" : proxyUser,
+      "pass" : proxyPass,
+    }
+
+proxies = {
+        "http": proxyMeta,
+        "https": proxyMeta,
+}
+#阿布云配置信息end------------------------------------------------------------------

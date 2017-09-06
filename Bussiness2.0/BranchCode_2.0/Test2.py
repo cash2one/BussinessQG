@@ -30,7 +30,16 @@ Type = sys.getfilesystemencoding()
 # result= re.findall(pattern,string)
 # print result[0]
 
-string = '"60436520",'
-if "60436520" in string:
-    print "1"
-current_timestamp
+# string = '"60436520",'
+# if "60436520" in string:
+#     print "1"
+# current_timestamp
+import time
+now = time.time()
+n = 1
+before = now - n * 24 * 3600  #可以改变n 的值计算n天前的
+
+date = time.strftime("%Y-%m-%d %H:%M:%S ",  time.localtime(now))
+print date
+beforeDate = time.strftime("%Y-%m-%d %H:%M:%S ",  time.localtime(before))
+print beforeDate

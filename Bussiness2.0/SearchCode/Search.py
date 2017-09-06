@@ -18,6 +18,7 @@ from SPublicCode.Public_code import Connect_to_DB
 from SPublicCode.deal_html_code import remove_symbol
 from SPublicCode.deal_html_code import change_chinese_date
 from SPublicCode.deal_html_code import judge_province
+from SPublicCode import deal_html_code
 # 用于解决中文编码问题
 reload(sys)
 sys.setdefaultencoding('utf-8')
@@ -239,7 +240,8 @@ class Search_Info:
             m = hashlib.md5()
             m.update(code)
             id = m.hexdigest()
-            updated = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
+            updated = deal_html_code.get_before_date()
+            #updated = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
             cursor.execute(insert_string,((id, provin, company, code, code,legal_person, investor,runner,responser,dates, status, updated)))
             gs_basic_id = connect.insert_id()
             connect.commit()

@@ -21,19 +21,19 @@ reload(sys)
 sys.setdefaultencoding('utf-8')
 Type = sys.getfilesystemencoding()
 
-# url = sys.argv[1]
-# gs_basic_id = sys.argv[2]
-# gs_search_id = sys.argv[3]
-url = 'http://www.gsxt.gov.cn/%7B4PVY9idJtuq5rDYuVgAumxUHKGOlH2Yg_IyeO6XxM88zUfe0LBzFHx9BaDp0a0C26gV9tpukyR3qaIyH8fSSPQGXYa-plVy4SJcbOoX8SjqDtcbJ92SdhpEewnmc74Gf-1502264669938%7D'
-gs_search_id = 837
-gs_basic_id = 229422000
+url = sys.argv[1]
+gs_basic_id = sys.argv[2]
+gs_search_id = sys.argv[3]
+# url = 'http://www.gsxt.gov.cn/%7B4PVY9idJtuq5rDYuVgAumxUHKGOlH2Yg_IyeO6XxM88zUfe0LBzFHx9BaDp0a0C26gV9tpukyR3qaIyH8fSSPQGXYa-plVy4SJcbOoX8SjqDtcbJ92SdhpEewnmc74Gf-1502264669938%7D'
+# gs_search_id = 837
+# gs_basic_id = 229422000
 
 update_string = 'update gs_basic set gs_basic_id = %s, name = %s ,ccode = %s,status = %s ,types = %s ,jj_type = %s,legal_person = %s, \
-responser = %s ,investor = %s,runner = %s ,reg_date = %s ,appr_date = %s,reg_amount = %s, start_date = %s ,end_date = %s ,reg_zone = %s,reg_address = %s ,scope = %s ,updated = %s where gs_basic_id = %s'
+responser = %s ,investor = %s,runner = %s ,reg_date = %s ,appr_date = %s,reg_amount = %s, start_date = %s ,end_date = %s ,reg_zone = %s,reg_address = %s ,scope = %s  where gs_basic_id = %s'
 
 
 select_report = 'select tel,address,email from gs_report where gs_basic_id = %s order by year desc  LIMIT 1 '
-update_address = 'update gs_basic set gs_basic_id = %s,tel = %s,address = %s,email = %s,updated = %s where gs_basic_id = %s'
+update_address = 'update gs_basic set gs_basic_id = %s,tel = %s,address = %s,email = %s where gs_basic_id = %s'
 def get_url_list(url):
     result, status_code = Send_Request().send_requests(url)
     pattern = re.compile(".*返回首页.*|.*'/index/invalidLink'.*")
@@ -208,7 +208,7 @@ def update_basic(information, connect, cursor, gs_basic_id):
         scope = information[u"业务范围"]
     elif '经营范围' in information.keys():
         scope = information[u"经营范围"]
-    updated_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
+    # updated_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
     row_count = 0
     flag = 0
     ccode = remove_symbol(ccode)
@@ -216,7 +216,7 @@ def update_basic(information, connect, cursor, gs_basic_id):
     try:
         row_count = cursor.execute(update_string, (
             gs_basic_id, name, ccode, status, types, jj_type, legal_person, responser, investor, runner, sign_date,
-            appr_date, reg_amount, start_date, end_date, reg_zone, reg_address, scope, updated_time, gs_basic_id))
+            appr_date, reg_amount, start_date, end_date, reg_zone, reg_address, scope,  gs_basic_id))
         logging.info('update basic :%s' % row_count)
         connect.commit()
     except Exception, e:
@@ -246,8 +246,8 @@ def main():
                 tel = data1
                 address = data2
                 email = data3
-            updated_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
-            cursor.execute(update_address,(gs_basic_id,tel,address,email,updated_time,gs_basic_id))
+            # updated_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
+            cursor.execute(update_address,(gs_basic_id,tel,address,email,gs_basic_id))
             connect.commit()
 
         info,flag,url_list = get_url_list(url)

@@ -68,5 +68,13 @@ def change_chinese_date(date):
         date = re.sub(re.compile(u'年|月'), '-', date)
         date = re.sub(re.compile(u'日'), '', date)
     return date
+def get_before_date():
+    now = time.time()
+    n = 30
+    before = now - n * 24 * 3600  #可以改变n 的值计算n天前的
+    
+    # date = time.strftime("%Y-%m-%d %H:%M:%S ",  time.localtime(now))
+    beforeDate = time.strftime("%Y-%m-%d %H:%M:%S ",  time.localtime(before))
+    return beforeDate
 
 

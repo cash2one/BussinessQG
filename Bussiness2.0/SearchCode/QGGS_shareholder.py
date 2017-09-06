@@ -28,19 +28,19 @@ gs_search_id = sys.argv[3]
 pagenumber = sys.argv[4]
 perpage = sys.argv[5]
 
-# url = 'http://www.gsxt.gov.cn/%7B2B8UGsQnqIpxjXy1gmBFk67LI1IFYOEbBUapwrzrnWe3dHvQJfF-a4ZPewr_et4-jnPZDG01pE6vc2J-ExPdLH2qHn4JrMfsOW0Wrq6nFoA-1502264834600%7D'
+# url = 'http://www.gsxt.gov.cn/%7Bh3PaFzrRehMR5SrwpBqrkGgnnTvd7ZYNO1HVNWCcFb_R5dSUBTNFk2DukA3i96CRNUMTtNo5pEr7_sPFidpnShIx4F0oTq6ApMlfnUPn3BM-1504577954253%7D'
 # gs_basic_id = 229422000
 # gs_search_id = 837
 # pagenumber = 1
 # perpage = 0
 share_string = 'insert into gs_shareholder(gs_basic_id,name,cate,types,license_type,license_code,ra_date, ra_ways, true_amount,reg_amount,ta_ways,ta_date,country,address,iv_basic_id,ps_basic_id,updated)values(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)'
 select_string = 'select gs_shareholder_id from gs_shareholder where gs_basic_id = %s and name = %s and types = %s and cate = %s'
-
 select_name = 'select gs_basic_id from gs_unique where name = "%s"'
 select_ps = 'select ps_basic_id,gs_basic_id from ps_basic where name = "%s"'
 insert_ps = 'insert into ps_basic(gs_basic_id,name,idcard,province,city,town,birthday,encode,remark,created,updated) values(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)'
 update_ps = 'update ps_basic set ps_basic_id = %s ,gs_basic_id = %s,updated = %s where ps_basic_id = %s'
-
+update_share = 'update gs_shareholder set quit = 1 where gs_basic_id = %s and cate = 0'
+update_quit = 'update gs_shareholder set quit = 0,updated = %s where gs_shareholder_id = %s and gs_basic_id = %s'
 
 class Shareholder:
     def name(self, data):
@@ -130,7 +130,15 @@ class Shareholder:
         cate = 0
         insert_flag,update_flag = 0,0
         remark = 0
+        
         try:
+            string = update_share % gs_basic_id
+            cursor.execute(string)
+            connect.commit()
+            cursor.close()
+            connect.close()
+            HOST, USER, PASSWD, DB, PORT = config.HOST, config.USER, config.PASSWD, config.DB, config.PORT
+            connect, cursor = Connect_to_DB().ConnectDB(HOST, USER, PASSWD, DB, PORT)
             for key in information.keys():
                 name, license_code, license_type = information[key][0], information[key][1], information[key][2]
                 types, ra_date, ra_ways, true_amount = information[key][3], information[key][4], information[key][5], \
@@ -152,7 +160,7 @@ class Shareholder:
                             iv_basic_id = cursor.fechall[0][0]
                 else:
                     iv_basic_id = 0
-
+                ps_basic_id = 0
                 if license_type == '中华人民共和国居民身份证':
                     if license_code == '' or license_code == None:
                         license_code = '非公示项'
@@ -160,6 +168,8 @@ class Shareholder:
                         ps_basic_id = self.judge_certcode(name, license_code, cursor, connect, gs_basic_id)
                 elif license_code == None or license_code == '' and license_type != '':
                     license_code = '非公示项'
+                else:
+                    ps_basic_id = 0
                 if count == 0:
                     updated_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
                     rows_count = cursor.execute(share_string, (
@@ -167,11 +177,17 @@ class Shareholder:
                             reg_amount, ta_ways, ta_date, country,address,iv_basic_id,ps_basic_id,updated_time))
                     insert_flag += rows_count
                     connect.commit()
-
+                elif int(count)==1:
+                    updated_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
+                    gs_shareholder_id = cursor.fetchall()[0][0]
+                    cursor.execute(update_quit,(updated_time,gs_shareholder_id,gs_basic_id))
+                    connect.commit()
         except Exception, e:
             remark = 100000006
             logging.error("shareholder error:%s" % e)
         finally:
+            cursor.close()
+            connect.close()
             if remark < 100000001:
                 remark = insert_flag
             return remark,insert_flag,update_flag
@@ -180,8 +196,8 @@ def main():
     HOST, USER, PASSWD, DB, PORT = config.HOST, config.USER, config.PASSWD, config.DB, config.PORT
     connect, cursor = Connect_to_DB().ConnectDB(HOST, USER, PASSWD, DB, PORT)
     Judge(connect, cursor, gs_basic_id, url,pagenumber, perpage).update_branch(Shareholder, "share")
-    cursor.close()
-    connect.close()
+    # cursor.close()
+    # connect.close()
 
 if __name__ =="__main__":
     main()

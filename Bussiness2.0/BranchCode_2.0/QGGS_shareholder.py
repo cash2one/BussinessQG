@@ -23,17 +23,17 @@ sys.setdefaultencoding('utf-8')
 Type = sys.getfilesystemencoding()
 
 
-url = sys.argv[1]
-gs_basic_id = sys.argv[2]
-gs_py_id = sys.argv[3]
-pagenumber = sys.argv[4]
-perpage = sys.argv[5]
+# url = sys.argv[1]
+# gs_basic_id = sys.argv[2]
+# gs_py_id = sys.argv[3]
+# pagenumber = sys.argv[4]
+# perpage = sys.argv[5]
 
-# url = 'http://www.gsxt.gov.cn/%7BT3MeYJuLFfLz3_3hCLfW_DNgqEo_Ch6KLBSGNGLDbWjzGB19aH0DbAPeX5263Dd2tc0ncavit3crzfDDpcwru4_PVbFjagjRbTcb8e9gfowNeAEioCLbOdWb2_8TmDZrbdZscODIhXZiK5HmXzWOGQ-1502760712664%7D'
-# # gs_basic_id = 1900000099
-# # gs_py_id = 1501
-# # pagenumber = 1
-# # perpage = 0
+url = 'http://www.gsxt.gov.cn/%7BvGiu0EPxn5iq9g2e0UFvq4uPjfSgGUlXFpDRESz5lXQodzkBarXKDQesPP_TjGDv3Ddww4PsVga46ohA2o0BW4K-E1jbabtSQtKHb0JbXX1g-VszZxV850y08Q7djJxHFYNVYEuuNrCS7hmWAbhERA-1504608710311%7D'
+gs_basic_id = 1900000099
+gs_py_id = 1501
+pagenumber = 1
+perpage = 0
 share_string = 'insert into gs_shareholder(gs_basic_id,name,cate,types,license_type,license_code,ra_date, ra_ways, true_amount,reg_amount,ta_ways,ta_date,country,address,iv_basic_id,ps_basic_id,updated)values(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)'
 select_string = 'select gs_shareholder_id from gs_shareholder where gs_basic_id = %s and name = %s and types = %s and cate = %s'
 update_share_py = 'update gs_py set gs_py_id = %s,gs_shareholder = %s,updated = %s where gs_py_id = %s'
@@ -41,6 +41,9 @@ select_name = 'select gs_basic_id from gs_unique where name = "%s"'
 select_ps = 'select ps_basic_id,gs_basic_id from ps_basic where name = "%s"'
 insert_ps = 'insert into ps_basic(gs_basic_id,name,idcard,province,city,town,birthday,encode,remark,created,updated) values(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)'
 update_ps = 'update ps_basic set ps_basic_id = %s ,gs_basic_id = %s,updated = %s where ps_basic_id = %s'
+update_share = 'update gs_shareholder set quit = 1 where gs_basic_id = %s and cate = 0'
+update_quit = 'update gs_shareholder set quit = 0,updated = %s where gs_shareholder_id = %s and gs_basic_id = %s'
+
 class Shareholder:
     def name(self,data):
         information = {}
@@ -164,9 +167,14 @@ class Shareholder:
         insert_flag,update_flag = 0,0
         remark = 0
         try:
+            string = update_share % gs_basic_id
+            cursor.execute(string)
+            connect.commit()
+            cursor.close()
+            connect.close()
+            HOST, USER, PASSWD, DB, PORT = config.HOST, config.USER, config.PASSWD, config.DB, config.PORT
+            connect, cursor = Connect_to_DB().ConnectDB(HOST, USER, PASSWD, DB, PORT)
             for key in information.keys():
-
-
                 name, license_code, license_type = information[key][0], information[key][1], information[key][2]
                 types, ra_date, ra_ways, true_amount = information[key][3], information[key][4], information[key][5], \
                                                        information[key][6]
@@ -174,7 +182,7 @@ class Shareholder:
 
                 country,address = information[key][10],information[key][11]
                 if name!= '' or name !=None:
-                    pattern = re.findall('.*公司.*|.*中心.*|.*集团.*|.*企业.*')
+                    pattern = re.compile('.*公司.*|.*中心.*|.*集团.*|.*企业.*')
                     result = re.findall(pattern,name)
                     if len(result) ==0:
                         iv_basic_id = 0
@@ -195,6 +203,8 @@ class Shareholder:
                         ps_basic_id = self.judge_certcode(name, license_code, cursor, connect, gs_basic_id)
                 elif license_code == None or license_code == '' and license_type!='':
                     license_code = '非公示项'
+                else:
+                    ps_basic_id = 0
                 count = cursor.execute(select_string, (gs_basic_id, name, types, cate))
 
                 if count == 0:
@@ -204,11 +214,18 @@ class Shareholder:
                             reg_amount, ta_ways, ta_date, country,address,iv_basic_id,ps_basic_id,updated_time))
                     insert_flag += rows_count
                     connect.commit()
+                elif int(count) == 1:
+                    updated_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
+                    gs_shareholder_id = cursor.fetchall()[0][0]
+                    cursor.execute(update_quit, (updated_time, gs_shareholder_id, gs_basic_id))
+                    connect.commit()
 
         except Exception, e:
             remark = 100000006
             logging.error("shareholder error:%s" % e)
         finally:
+            cursor.close()
+            connect.close()
             if remark < 100000001:
                 remark = insert_flag
             return remark,insert_flag,update_flag
@@ -217,8 +234,8 @@ def main():
     HOST, USER, PASSWD, DB, PORT = config.HOST, config.USER, config.PASSWD, config.DB, config.PORT
     connect, cursor = Connect_to_DB().ConnectDB(HOST, USER, PASSWD, DB, PORT)
     Judge(gs_py_id, connect, cursor, gs_basic_id, url,pagenumber, perpage).update_branch(update_share_py,Shareholder, "share")
-    cursor.close()
-    connect.close()
+    # cursor.close()
+    # connect.close()
 
 if __name__ =="__main__":
     main()

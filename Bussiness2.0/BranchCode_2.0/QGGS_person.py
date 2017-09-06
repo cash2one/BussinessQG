@@ -19,18 +19,19 @@ from PublicCode.Bulid_Log import Log
 reload(sys)
 sys.setdefaultencoding('utf-8')
 Type = sys.getfilesystemencoding()
-# url = sys.argv[1]
-# gs_basic_id = sys.argv[2]
-# gs_py_id = sys.argv[3]
+url = sys.argv[1]
+gs_basic_id = sys.argv[2]
+gs_py_id = sys.argv[3]
 
-url = 'http://www.gsxt.gov.cn/%7BT3MeYJuLFfLz3_3hCLfW_KvoktCQU1lXvplaKJeR7zOHWc4hORkB_iYrsmhl15N4585l68Qz27xLIAZlblEwIIvTSpgWd_1eLx8fU1hZnuDYxVLyphE8kgpNJsxPe6JPezLfnmBnrcmeov_KMqCuKQ-1502762436387%7D'
-gs_basic_id = 1900000099
-gs_py_id = 1501
+# url = 'http://www.gsxt.gov.cn/%7Bh3PaFzrRehMR5SrwpBqrkAIrG4S4WWBAG2LE0hZDbzqRpa7_39xHUMFKuWLiWz-pSMDhKAptyNybj4wEFjwb0NwkCJduUfUXBke8_TDaXp6zCPJdxu3reoj_B6uk6VWqBJqCjOVXy2GOFi4D0KA4UA-1504578404397%7D'
+# gs_basic_id = 1900000099
+# gs_py_id = 1501
 select_string = 'select gs_person_id,position from gs_person where gs_basic_id = %s and name = %s and source = 1'
 insert_string = 'insert into gs_person(gs_basic_id,name,position,source,updated)values(%s,%s,%s,%s,%s)'
-person_string = 'update gs_person set gs_person_id = %s,position = %s,updated = %s where gs_person_id = %s'
+person_string = 'update gs_person set gs_person_id = %s,position = %s,updated = %s,quit =0 where gs_person_id = %s'
 update_person_py = 'update gs_py set gs_py_id = %s,gs_person = %s,updated = %s where  gs_py_id = %s '
-
+update_string = 'update gs_person set quit = 1 where gs_basic_id = %s '
+update_quit = 'update gs_person set quit = 0,updated = %s where gs_basic_id = %s and gs_person_id = %s'
 class Person:
     def name(self,data):
         information = {}
@@ -52,7 +53,7 @@ class Person:
                 position = data["position_CN"].replace(" ","")
             elif position == '':
                 position = None
-            print name,position
+            #print name,position
             information[i] = [name, position]
         return information
 
@@ -61,6 +62,13 @@ class Person:
         insert_flag, update_flag = 0, 0
         remark = 0
         try:
+            string = update_string % gs_basic_id
+            cursor.execute(string)
+            connect.commit()
+            cursor.close()
+            connect.close()
+            HOST, USER, PASSWD, DB, PORT = config.HOST, config.USER, config.PASSWD, config.DB, config.PORT
+            connect, cursor = Connect_to_DB().ConnectDB(HOST, USER, PASSWD, DB, PORT)
             for key in information.keys():
                 name = str(information[key][0])
                 position = information[key][1]
@@ -73,6 +81,10 @@ class Person:
                     for gs_person_id,pos in cursor.fetchall():
                         if pos == position:
                             sign = 1
+                            updated_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
+                            count = cursor.execute(update_quit, (updated_time, gs_basic_id, gs_person_id))
+                            connect.commit()
+                            # update_flag += count
                         elif pos == None and position != None:
                             updated_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
                             count = cursor.execute(person_string, (gs_person_id, position, updated_time, gs_person_id))
@@ -85,7 +97,6 @@ class Person:
                         count = cursor.execute(insert_string, (gs_basic_id, name, position, source, updated_time))
                         insert_flag += count
                         connect.commit()
-
                     else:
                         pass
                 elif rows == 0:
@@ -98,6 +109,8 @@ class Person:
             remark = 100000006
             logging.error("person error: %s" % e)
         finally:
+            cursor.close()
+            connect.close()
             if remark < 100000001:
                 flag = insert_flag + update_flag
                 remark = flag
@@ -108,8 +121,8 @@ def main():
     connect, cursor = Connect_to_DB().ConnectDB(HOST, USER, PASSWD, DB, PORT)
     pages,perpages = 0,0
     Judge(gs_py_id,connect,cursor,gs_basic_id,url,pages,perpages).update_branch(update_person_py,Person,"person")
-    cursor.close()
-    connect.close()
+    # cursor.close()
+    # connect.close()
 
 if __name__ =="__main__":
     main()

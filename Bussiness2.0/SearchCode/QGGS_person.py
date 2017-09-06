@@ -21,15 +21,15 @@ Type = sys.getfilesystemencoding()
 # gs_basic_id = sys.argv[2]
 # gs_search_id = sys.argv[3]
 
-url = 'http://www.gsxt.gov.cn/%7B2B8UGsQnqIpxjXy1gmBFk-2w4HvlWisZB8eqY5hQKhzqf3UOuRRdZOC7xWfFAgsYh1PQ9-KyzdXVsPRGpDcY_nr24-3r72xoxbdyFqIVfD4-1502264834604%7D'
-gs_basic_id = 229422000
+url = 'http://www.gsxt.gov.cn/%7Bh3PaFzrRehMR5SrwpBqrkAIrG4S4WWBAG2LE0hZDbzqRpa7_39xHUMFKuWLiWz-pSMDhKAptyNybj4wEFjwb0NwkCJduUfUXBke8_TDaXp6zCPJdxu3reoj_B6uk6VWqBJqCjOVXy2GOFi4D0KA4UA-1504578404397%7D'
+gs_basic_id = 1900000099
 gs_search_id = 837
 
 select_string = 'select gs_person_id,position from gs_person where gs_basic_id = %s and name = %s and source = 1'
 insert_string = 'insert into gs_person(gs_basic_id,name,position,source,updated)values(%s,%s,%s,%s,%s)'
-person_string = 'update gs_person set gs_person_id = %s,position = %s,updated = %s where gs_person_id = %s'
-
-
+person_string = 'update gs_person set gs_person_id = %s,position = %s,updated = %s,quit =0 where gs_person_id = %s'
+update_string = 'update gs_person set quit = 1 where gs_basic_id = %s '
+update_quit = 'update gs_person set quit = 0,updated = %s where gs_basic_id = %s and gs_person_id = %s'
 class Person:
     def name(self,data):
         information = {}
@@ -51,7 +51,6 @@ class Person:
                 position = data["position_CN"].replace(" ","")
             elif position == '':
                 position = None
-
             information[i] = [name, position]
         return information
 
@@ -59,17 +58,29 @@ class Person:
     def update_to_db(self,gs_basic_id, cursor, connect, information):
         insert_flag, update_flag = 0, 0
         remark = 0
+        
         try:
+            string = update_string % gs_basic_id
+            cursor.execute(string)
+            connect.commit()
+            cursor.close()
+            connect.close()
+            HOST, USER, PASSWD, DB, PORT = config.HOST, config.USER, config.PASSWD, config.DB, config.PORT
+            connect, cursor = Connect_to_DB().ConnectDB(HOST, USER, PASSWD, DB, PORT)
             for key in information.keys():
                 name = str(information[key][0])
                 position = information[key][1]
-                rows = cursor.execute(select_string, ( gs_basic_id,name))
+                rows = cursor.execute(select_string, (gs_basic_id,name))
 
                 if int(rows) >= 1:
                     sign = 0
                     for gs_person_id,pos in cursor.fetchall():
                         if pos == position:
                             sign = 1
+                            updated_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
+                            count = cursor.execute(update_quit,(updated_time,gs_basic_id,gs_person_id))
+                            connect.commit()
+                            # update_flag+= count
                         elif pos == None and position != None:
                             updated_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
                             count = cursor.execute(person_string, (gs_person_id, position, updated_time, gs_person_id))
@@ -82,7 +93,6 @@ class Person:
                         count = cursor.execute(insert_string, (gs_basic_id, name, position, source, updated_time))
                         insert_flag += count
                         connect.commit()
-
                     else:
                         pass
                 elif rows == 0:
@@ -105,8 +115,8 @@ def main():
     connect, cursor = Connect_to_DB().ConnectDB(HOST, USER, PASSWD, DB, PORT)
     pages,perpages = 0,0
     Judge(connect,cursor,gs_basic_id,url,pages,perpages).update_branch(Person,"person")
-    cursor.close()
-    connect.close()
+    # cursor.close()
+    # connect.close()
 
 if __name__ =="__main__":
     main()

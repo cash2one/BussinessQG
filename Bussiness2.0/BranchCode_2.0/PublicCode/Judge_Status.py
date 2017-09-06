@@ -8,7 +8,8 @@
 import sys
 import time
 from Public_code import Get_BranchInfo
-
+import config
+from Public_code import Connect_to_DB
 reload(sys)
 sys.setdefaultencoding('utf-8')
 Type = sys.getfilesystemencoding()
@@ -47,9 +48,14 @@ class Judge:
                 recordstotal, total, insert_total, update_total=Get_BranchInfo(self.gs_py_id).get_info(None, self.gs_basic_id, self.cursor, self.connect, self.url,QGGS, name)
         flag = self.jude_status(recordstotal,total)
         if flag!=-1:
+            HOST, USER, PASSWD, DB, PORT = config.HOST, config.USER, config.PASSWD, config.DB, config.PORT
+            connect, cursor = Connect_to_DB().ConnectDB(HOST, USER, PASSWD, DB, PORT)
             updated_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
-            self.cursor.execute(update_sql, (self.gs_py_id,flag, updated_time,self.gs_py_id))
-            self.connect.commit()
+            cursor.execute(update_sql, (self.gs_py_id,flag, updated_time,self.gs_py_id))
+            connect.commit()
+            cursor.close()
+            connect.close()
+            
         # return flag,recordstotal,update_total,insert_total,totalpage,perpage
         self.print_info(flag,recordstotal,update_total,insert_total,totalpage,perpage,self.page)
 
