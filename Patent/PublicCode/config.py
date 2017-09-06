@@ -28,7 +28,7 @@ lawurl = 'http://www.pss-system.gov.cn/sipopublicsearch/patentsearch/ui_searchLa
 #摘要图片链接
 imgurl= 'http://www.pss-system.gov.cn/sipopublicsearch/patentsearch/retrieveUrls.shtml'
 sameurl = 'http://www.pss-system.gov.cn/sipopublicsearch/patentsearch/showCognationInfo-showCognationList.shtml'
-searchparams = "resultPagination.limit=12&resultPagination.sumLimit=10&resultPagination.start=%s&resultPagination.totalCount=&searchCondition.searchType=Sino_foreign&search_scope= AND ((DOC_TYPE=((@@@@I@@@@))) OR (DOC_TYPE=((@@@@U@@@@))) OR (DOC_TYPE=((@@@@D@@@@)))) AND ((CC=(@@@@HK@@@@)) OR (CC=(@@@@MO@@@@)) OR (CC=(@@@@TW@@@@)) OR (CC=(@@@@CN@@@@)))&searchCondition.dbId=&searchCondition.searchExp=%s&wee.bizlog.modulelevel=0200101&searchCondition.executableSearchExp=VDB:((IBI='%s' AND (DOC_TYPE='I' OR DOC_TYPE='U' OR DOC_TYPE='D') AND (CC='HK' OR CC='MO' OR CC='TW' OR CC='CN')))&searchCondition.literatureSF=复合文本=(%s) AND ((DOC_TYPE=(('I'))) OR (DOC_TYPE=(('U'))) OR (DOC_TYPE=(('D')))) AND ((CC=('HK')) OR (CC=('MO')) OR (CC=('TW')) OR (CC=('CN')))&searchCondition.strategy=&searchCondition.searchKeywords=&searchCondition.searchKeywords=%s&searchCondition.searchKeywords=[ ]{0,}[T][ ]{0,}[W][ ]{0,}[ ]{0,}&searchCondition.searchKeywords=[ ]{0,}[M][ ]{0,}[O][ ]{0,}[ ]{0,}&searchCondition.searchKeywords=[ ]{0,}[H][ ]{0,}[K][ ]{0,}[ ]{0,}&searchCondition.searchKeywords=[ ]{0,}[C][ ]{0,}[N][ ]{0,}[ ]{0,}"
+searchparams = "resultPagination.limit=12&resultPagination.sumLimit=10&resultPagination.start=%s&resultPagination.totalCount=&searchCondition.searchType=Sino_foreign&search_scope= AND ((DOC_TYPE=((@@@@I@@@@))) OR (DOC_TYPE=((@@@@U@@@@))) OR (DOC_TYPE=((@@@@D@@@@)))) AND ((CC=(@@@@HK@@@@)) OR (CC=(@@@@MO@@@@)) OR (CC=(@@@@TW@@@@)) OR (CC=(@@@@CN@@@@)))&searchCondition.dbId=&searchCondition.searchExp=%s&wee.bizlog.modulelevel=0200101&searchCondition.executableSearchExp=VDB:((TBI='%s' AND (DOC_TYPE='I' OR DOC_TYPE='U' OR DOC_TYPE='D') AND (CC='HK' OR CC='MO' OR CC='TW' OR CC='CN')))&searchCondition.literatureSF=复合文本=(%s) AND ((DOC_TYPE=(('I'))) OR (DOC_TYPE=(('U'))) OR (DOC_TYPE=(('D')))) AND ((CC=('HK')) OR (CC=('MO')) OR (CC=('TW')) OR (CC=('CN')))&searchCondition.strategy=&searchCondition.searchKeywords=&searchCondition.searchKeywords=%s&searchCondition.searchKeywords=[ ]{0,}[T][ ]{0,}[W][ ]{0,}[ ]{0,}&searchCondition.searchKeywords=[ ]{0,}[M][ ]{0,}[O][ ]{0,}[ ]{0,}&searchCondition.searchKeywords=[ ]{0,}[H][ ]{0,}[K][ ]{0,}[ ]{0,}&searchCondition.searchKeywords=[ ]{0,}[C][ ]{0,}[N][ ]{0,}[ ]{0,}"
 #网页链接End----------------------------------------------------------------------------------
 
 #网页登录的用户名和密码Start------------------------------------------------------------------
@@ -38,19 +38,19 @@ password = "mm481002"
 
 
 #搜索页面的请求头信息仿照Start----------------------------------------------------------------
+
 header = {
 "Host": "www.pss-system.gov.cn",
 "Connection": "keep-alive",
-"Content-Length": "180",
-"Pragma": "no-cache",
-"Cache-Control": "no-cache",
-"Accept": "*/*",
+"Content-Length": "1670",
+"Accept": "text/html, */*; q=0.01",
 "Origin": "http://www.pss-system.gov.cn",
 "X-Requested-With": "XMLHttpRequest",
-#"User-Agent": "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36",
+#User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36
 "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8",
+#Referer: http://www.pss-system.gov.cn/sipopublicsearch/patentsearch/portal2HomeSearch-portalSearch.shtml?params=4C3F74C3281B65A97F2870FF32DEFA099C9A47BCE9F85DF3E7ABCC2069DA0B2891DAF6838DC9DE171DB66CA6F4F1049B64541E872BD0A61D34BA0F57977987786AF1C8BB8883CBE5CC4EA7180E2F44E1F7B8DFF8A99CAA5C022B2A6D205E4A18B690CAF964F59C6C437E41C7A1D6C3D934BA0F5797798778EBE9A26F910E388ABD71E45E7563F132CBF45670C95C94A78878779A38710B2E374F874806C720A62FDD908C867FF5E23D3E7B1524A77A487381605684C845807D3050CA3CD1EF0A703FCD3A8A4E9EA4B93519873E977E22337F1D136FCD1AE2B30AE55F05D1AE85A82FA94C4763A52F193D5708C9A494B19A7471FA7721AF4F
 "Accept-Encoding": "gzip, deflate",
-"Accept-Language": "zh-CN,zh;q=0.8",
+"Accept-Language": "zh-CN,zh;q=0.8"
 }
 #搜索页面的请求头信息仿照End------------------------------------------------------------------
 
@@ -76,4 +76,4 @@ USER_AGENTS = [
     "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36 TheWorld 7"
 ]
 
-#长用的User-Agent End-------------------------------------------------------------------------
+#常用的User-Agent End-------------------------------------------------------------------------

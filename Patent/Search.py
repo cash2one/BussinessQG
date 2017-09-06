@@ -13,29 +13,42 @@ import time
 import sys
 from lxml import etree
 from Update_Patent import Ia_Patent
+from PublicCode.Public_code import Connect_to_DB
 
 headers = config.header
-string = '农业'
+
 # 用于解决中文编码问题
 reload(sys)
 sys.setdefaultencoding('utf-8')
 Type = sys.getfilesystemencoding()
-
-# rspage = sys.argv[1]#当前页数
-# cookies = sys.argv[2]#总共页数
-rspage = 1
-
-cookies ={u'_gscbrs_761734625': '1', u'_gscs_761734625': '04238325kds2xm96|pv:1', u'WEE_SID': 'V8s7lsx3RcFovJq7XMGiEiw6dMFPX3WMm65-qIniXVLFUFi_2ubV!-2138351820!1985999437!1504238292087', u'_gscu_761734625': '042383257ieq8r96', u'JSESSIONID': 'V8s7lsx3RcFovJq7XMGiEiw6dMFPX3WMm65-qIniXVLFUFi_2ubV!-2138351820!1985999437', u'IS_LOGIN': 'true'}
+keyword = '帽类制品'
+# keyword = sys.argv[1]#关键词
+# rspage = sys.argv[2]#当前页数
+# cookies = sys.argv[3]#cookies值
+# totalpage = sys.argv[4]#总页数
+rspage = 2
+cookies = {u'_gscbrs_761734625': '1', u'_gscs_761734625': '04507687ph9wit13|pv:1', u'WEE_SID': 'Z8tLoiljDx1kVabTNLtK8JrrWUujbjvzgWfYIlrwUc_bKNunoXUI!446741660!421874926!1504507472227', u'_gscu_761734625': '04507687yhtmjd13', u'JSESSIONID': 'Z8tLoiljDx1kVabTNLtK8JrrWUujbjvzgWfYIlrwUc_bKNunoXUI!446741660!421874926', u'IS_LOGIN': 'true'}
+totalpage = 0
 def search_info(string, keywords):
-    if cookies["IS_LOGIN"] =='true':
+    flag = 1
+    cookies["IS_LOGIN"] ='true'
+    if cookies["IS_LOGIN"] == 'true':
         user_agent = random.choice(config.USER_AGENTS)
         headers["User-Agent"] = user_agent
         url = config.searchurl
         start = (int(rspage) - 1) * 12
-        search_text = config.searchparams % (start, string, string, string, keywords)
+        search_text = config.searchparams % (start, string, string, string, str(keywords))
+        # print search_text
         result = requests.post(url, search_text, headers=headers, cookies=cookies)
-        print result.content
-        return result.content, cookies
+        # print result.content
+        status = result.status_code
+        if status ==200:
+            information = result.content
+        else:
+            flag = 100000004
+            information = ''
+       
+        return information, cookies,flag
 
 
 def get_need_info(result):
@@ -53,12 +66,12 @@ def get_need_info(result):
         else:
             first_info = []
             flag = 100000004
-    except Exception,e:
-        print e
+    except Exception, e:
+        logging.error("post search page error:%s"%e)
         flag = 100000004
-        first_info
-
-    return first_info,page,flag
+        first_info = []
+    finally:
+        return first_info, page, flag
 
 
 def caculate_page(count, perpage):
@@ -78,21 +91,62 @@ def get_keywords(key):
         temp = '[%s][ ]{0,}' % single
         key = key + temp
     return key
-
+def printinfo(flag,rspage,totalpage,totalinfo,insert):
+    print_info ={
+        "flag":0,
+        "rspage":0,
+        "totalpage":0,
+        "totalinfo":0,
+        "insert":0
+    }
+    if int(rspage)>= int(totalpage):
+        rspage = 0
+    print_info["flag"] = int(flag)
+    print_info["rspage"] = int(rspage)
+    print_info["totalpage"] = int(totalpage)
+    print_info["totalinfo"] = int(totalinfo)
+    print_info["insert"] = int(insert)
+    print print_info
 
 def main():
+    page,total,insert_flag = 0,0,0
     try:
-        key = get_keywords(string)
-        result,cookies = search_info(string,key)
-        info, page, flag = get_need_info(result)
-        print info,page,flag
-        if flag ==1:
-            object = Ia_Patent()
-            info = Ia_Patent().get_info(info, cookies)
-
+        HOST, USER, PASSWD, DB, PORT = config.HOST, config.USER, config.PASSWD, config.DB, config.PORT
+        connect, cursor = Connect_to_DB().ConnectDB(HOST, USER, PASSWD, DB, PORT)
+        key = get_keywords(keyword)
+        if int(rspage) ==1:
+            result, cookies,flag = search_info(keyword, key)
+            if flag ==1:
+                info, page, flag = get_need_info(result)
+                if flag == 1:
+                    object = Ia_Patent()
+                    info = object.get_info(info, cookies)
+                    remark, total, insert_flag = object.update_basic_to_db(info, cursor, connect)
+                    if remark >100000001:
+                        flag = 100000006
+            elif flag ==100000004:
+                page = 0
+                
+        elif int(rspage)>1:
+            result, cookies, flag = search_info(keyword, key)
+            if flag ==1:
+                info, page, flag = get_need_info(result)
+                if flag == 1:
+                    object = Ia_Patent()
+                    info = object.get_info(info, cookies)
+                    remark, total, insert_flag = object.update_basic_to_db(info, cursor, connect)
+                    if remark > 100000001:
+                        flag = 100000006
     except Exception, e:
-        flag = 100000004
-
+        logging.error("search error:%s"%e)
+        flag = 100000005
+    finally:
+        cursor.close()
+        connect.close()
+        printinfo(flag,rspage,page,total,insert_flag)
+        
+        
+        
 
 
 if __name__ == "__main__":

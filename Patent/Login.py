@@ -4,21 +4,31 @@
 # @Author: Lmm
 # @Date  : 2017-08-28
 # @Desc  : 利用selenium+PhantomJS 获取cookie及验证码 利用图片包识别后再利用工具模拟登录专利首页
-#          登录过程中需要保持登录状态及session会话，否则会导致搜索不到信息
+#          登录过程中需要保持登录状态及session会话，否则验证码识别会出现错误
 from PublicCode import config
 import pytesseract
 from PIL import Image
 import requests
 from selenium import webdriver
+import logging
+from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 from selenium.webdriver.common.keys import Keys
 import random
 import time
 
+
 # 用于保持回话
 session = requests.session()
-# 创建浏览器对象
-driver = webdriver.Chrome()
+
+dcap = dict(DesiredCapabilities.PHANTOMJS)  #设置userAgent
+dcap["phantomjs.page.settings.userAgent"] = (random.choice(config.USER_AGENTS))
+dcap["phantomjs.page.settings.loadImages"] = False #禁止加载图片，用于提升加载速度
+
 headers = config.header
+#用于创建浏览器对象
+driver = webdriver.PhantomJS()
+#driver = webdriver.Chrome()
+driver.set_page_load_timeout(40) #设置页面最长加载时间为40s
 
 
 class Patent_Login:
@@ -31,20 +41,26 @@ class Patent_Login:
             for cookie in cookies:
                 session.cookies.set(cookie['name'], cookie['value'])
         except Exception, e:
-            print e
+            logging.error("cookies error:%s"%e)
             flag = 100000001
         finally:
             return flag
 
     # 用于识别验证码
     def recognize_code(self):
-        codeurl = driver.find_element_by_xpath("//*[@id= 'codePic']").get_attribute("src")
-        result = session.get(codeurl)
-        with open('./Image/code.jpg', "wb") as f:
-            f.write(result.content)
-        result = Image.open("./Image/code.jpg")
-        code = pytesseract.image_to_string(result, config=config.tessdata_dir_config)
-        return code
+        flag = 1
+        try:
+            codeurl = driver.find_element_by_xpath("//*[@id= 'codePic']").get_attribute("src")
+            result = session.get(codeurl)
+            with open('./Image/code.jpg', "wb") as f:
+                f.write(result.content)
+            result = Image.open("./Image/code.jpg")
+            code = pytesseract.image_to_string(result, config=config.tessdata_dir_config)
+        except Exception,e:
+            flag = 100000003
+            logging.error("recognise code error:%s"%e)
+        finally:
+            return code,flag
 
     # 用于模拟登录
     def analog_login(self, code):
@@ -59,14 +75,18 @@ class Patent_Login:
             elem = driver.find_element_by_class_name("btn")
             elem.send_keys(Keys.ENTER)
             url = 'http://www.pss-system.gov.cn/sipopublicsearch/portal/checkLoginTimes-check.shtml'
-            string = 'username = 79data'
+            string = 'username=79data'
             user_agent = random.choice(config.USER_AGENTS)
             headers["User-Agent"] = user_agent
             session.post(url, string, headers=headers)
-            # cookies = driver.get_cookies()
             # cookies = session.cookies
+            # print cookies
+            #cookies = driver.get_cookies()
+            # cookies = session.cookies
+            # print cookies
             # for cookie in cookies:
             #     session.cookies.set(cookie['name'], cookie['value'])
+			#cookies = session.cookies
             cookies = requests.utils.dict_from_cookiejar(session.cookies)
         except Exception, e:
             flag = 100000002
@@ -81,27 +101,25 @@ def main():
         object = Patent_Login()
         flag = object.get_cookies()
         if flag == 1:
-            code = object.recognize_code()
-            if len(code) == 4:
+            code,flag = object.recognize_code()
+            if len(code) == 4 and flag !=100000003:
                 cookies, flag = object.analog_login(code)
-                if cookies["IS_LOGIN"] == 'flase':
-                    flag = 100000003
         else:
             cookies = {}
     except Exception, e:
         cookies = {}
-        print e
-    # finally:
-    #     driver.quit()
-    return cookies, flag, driver
+        logging.error("Login error:%s"%e)
+    finally:
+        driver.quit() #退出浏览器
+        for key in cookies:
+            string = str(key)
+            cookies[string] = str(cookies[key])
+        print cookies
+        print 'flag:%s' % flag
 
 
 if __name__ == "__main__":
     print "The Program start time:", time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
     start = time.time()
-    cookies, flag, driver = main()
-    for key in cookies:
-        cookies[str(key)] = str(cookies[key])
-    print cookies
-    print 'flag:%s' % flag
+    main()
     print "The Program end time:", time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()), "[%s]" % (time.time() - start)
