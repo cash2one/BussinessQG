@@ -1,0 +1,50 @@
+Tue, 05 Sep 2017 13:59:55 Public_code.py[line:24] INFO connect is success!
+Tue, 05 Sep 2017 13:59:55 App_basic.py[line:103] INFO update basic:1
+Tue, 05 Sep 2017 13:59:55 Public_code.py[line:24] INFO connect is success!
+Tue, 05 Sep 2017 13:59:55 App_branch.py[line:51] INFO branch total:0
+Tue, 05 Sep 2017 13:59:55 App_branch.py[line:70] INFO execute branch 0
+Tue, 05 Sep 2017 13:59:55 Public_code.py[line:24] INFO connect is success!
+Tue, 05 Sep 2017 13:59:55 App_black.py[line:58] INFO black total:0
+Tue, 05 Sep 2017 13:59:55 App_black.py[line:84] INFO execute black :0
+Tue, 05 Sep 2017 13:59:55 Public_code.py[line:24] INFO connect is success!
+Tue, 05 Sep 2017 13:59:55 App_brand.py[line:81] INFO brand total:2
+Tue, 05 Sep 2017 13:59:55 App_brand.py[line:117] INFO execute brand:2
+Tue, 05 Sep 2017 13:59:55 Public_code.py[line:24] INFO connect is success!
+Tue, 05 Sep 2017 13:59:55 App_change.py[line:50] INFO change total:14
+Tue, 05 Sep 2017 13:59:56 App_change.py[line:83] INFO execute change:11
+Tue, 05 Sep 2017 13:59:56 Public_code.py[line:24] INFO connect is success!
+Tue, 05 Sep 2017 13:59:56 App_check.py[line:48] INFO check total:0
+Tue, 05 Sep 2017 13:59:56 App_check.py[line:69] INFO execute check :0
+Tue, 05 Sep 2017 13:59:56 Public_code.py[line:24] INFO connect is success!
+Tue, 05 Sep 2017 13:59:56 App_clear.py[line:34] INFO clear error:0
+Tue, 05 Sep 2017 13:59:56 App_clear.py[line:57] INFO execute clear:0
+Tue, 05 Sep 2017 13:59:56 Public_code.py[line:24] INFO connect is success!
+Tue, 05 Sep 2017 13:59:56 App_except.py[line:58] INFO except total:0
+Tue, 05 Sep 2017 13:59:56 App_except.py[line:83] INFO excute except :0
+Tue, 05 Sep 2017 13:59:56 Public_code.py[line:24] INFO connect is success!
+Tue, 05 Sep 2017 13:59:56 Public_code.py[line:24] INFO connect is success!
+Tue, 05 Sep 2017 13:59:56 App_mort.py[line:106] INFO mort total:0
+Tue, 05 Sep 2017 13:59:56 App_mort.py[line:151] INFO execute mort:0
+Tue, 05 Sep 2017 13:59:56 Public_code.py[line:24] INFO connect is success!
+Tue, 05 Sep 2017 13:59:56 App_permit.py[line:90] INFO permit total:0
+Tue, 05 Sep 2017 13:59:56 App_permit.py[line:119] INFO execute permit:0
+Tue, 05 Sep 2017 13:59:56 Public_code.py[line:24] INFO connect is success!
+Tue, 05 Sep 2017 13:59:56 App_permit2.py[line:92] INFO  permit2 total: 0
+Tue, 05 Sep 2017 13:59:56 App_permit2.py[line:122] INFO execute permit2:0
+Tue, 05 Sep 2017 13:59:56 Public_code.py[line:24] INFO connect is success!
+Tue, 05 Sep 2017 13:59:56 App_person.py[line:37] INFO person total:2
+Tue, 05 Sep 2017 13:59:56 Public_code.py[line:24] INFO connect is success!
+Tue, 05 Sep 2017 13:59:57 App_person.py[line:71] INFO execute person:0
+Tue, 05 Sep 2017 13:59:57 Public_code.py[line:24] INFO connect is success!
+Tue, 05 Sep 2017 13:59:57 App_punish.py[line:56] INFO punish total:0
+Tue, 05 Sep 2017 13:59:57 App_punish.py[line:78] INFO execute punish:0
+Tue, 05 Sep 2017 13:59:57 Public_code.py[line:24] INFO connect is success!
+Tue, 05 Sep 2017 13:59:57 App_punish2.py[line:61] INFO punish2 total:0
+Tue, 05 Sep 2017 13:59:57 App_punish2.py[line:83] INFO execute punish2:0 
+Tue, 05 Sep 2017 13:59:57 Public_code.py[line:24] INFO connect is success!
+Tue, 05 Sep 2017 13:59:57 App_shareholder.py[line:125] INFO share total:5
+Tue, 05 Sep 2017 13:59:57 Public_code.py[line:24] INFO connect is success!
+Tue, 05 Sep 2017 13:59:57 App_shareholder.py[line:184] INFO execute share:0
+Tue, 05 Sep 2017 13:59:57 Public_code.py[line:24] INFO connect is success!
+Tue, 05 Sep 2017 13:59:57 App_stock.py[line:76] INFO stock total:0
+Tue, 05 Sep 2017 13:59:57 App_stock.py[line:108] INFO  execute stock:0

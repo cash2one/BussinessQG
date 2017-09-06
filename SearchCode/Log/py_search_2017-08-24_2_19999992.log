@@ -1,0 +1,3 @@
+Thu, 24 Aug 2017 14:01:46 Public_code.py[line:24] INFO connect is success!
+Thu, 24 Aug 2017 14:01:46 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): sh.gsxt.gov.cn
+Thu, 24 Aug 2017 14:01:46 connectionpool.py[line:400] DEBUG http://sh.gsxt.gov.cn:80 "GET /notice/ws/data/ent_info_list/ywier3qrwi/1/50 HTTP/1.1" 200 None
