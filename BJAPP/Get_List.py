@@ -9,7 +9,11 @@ import sys
 from PublicCode import config
 from lxml import etree
 from PublicCode import deal_html_code
+from PublicCode.Public_code import Connect_to_DB
 import re
+import time
+import logging
+
 
 reload(sys)
 sys.setdefaultencoding('utf-8')
@@ -18,8 +22,13 @@ Type = sys.getfilesystemencoding()
 headers = config.headers
 
 
-code = '91110000740085820P'
-ccode = '91110000740085820P'
+code = '91110000100011743X'
+ccode = '91110000100011743X'
+gs_basic_id = '229417601'
+gs_py_id = '1'
+
+update_string = 'update gs_basic set gs_basic_id = %s, name = %s ,ccode = %s,status = %s ,types = %s ,legal_person = %s, \
+responser = %s ,investor = %s,runner = %s ,reg_date = %s ,appr_date = %s,reg_amount = %s, start_date = %s ,end_date = %s ,reg_zone = %s,reg_address = %s ,scope = %s,updated = %s  where gs_basic_id = %s'
 #用于获取搜索列表
 def get_list(string):
 	url = config.list_url
@@ -38,7 +47,7 @@ def get_list(string):
 	except Exception,e:
 		print e
 	finally:
-		return  info
+		return info
 #用于获取基本信息以及详情信息
 def get_detail(info):
 	detaillist = {}
@@ -48,8 +57,9 @@ def get_detail(info):
 		status = result.status_code
 		if status ==200:
 			content = result.content
-			deal_single_info(content)
-	return content
+			detaillist[key] = deal_single_info(content)
+			print detaillist[key]
+	return detaillist
 		
 #用于处理单条信息
 def deal_single_info(result):
@@ -77,10 +87,10 @@ def deal_single_info(result):
 		dd = single.xpath("./following-sibling::*[1]")[0].xpath("string(.)")
 		dd = deal_html_code.remove_symbol(dd)
 		infolist[key] = dd
-	# print infolist
+	#print infolist
 	return infolist
 #将基本信息插入到数据库中
-def update_to_db(information,connect, cursor, gs_basic_id):
+def update_to_db(information, cursor, connect,gs_basic_id):
 	if '企业名称' in information.keys():
 		name = information[u"企业名称"]
 	elif '名称' in information.keys():
@@ -101,12 +111,11 @@ def update_to_db(information,connect, cursor, gs_basic_id):
 			ccode = ccode[0]
 	if '登记状态' in information.keys():
 		status = information[u"登记状态"]
+	elif '经营状态' in information.keys():
+		status = information[u'经营状态']
 	if '类型' in information.keys():
 		types = information[u'类型']
-	if '组成形式' in information.keys():
-		jj_type = information[u'组成形式']
-	else:
-		jj_type = None
+	
 	if '法定代表人' in information.keys():
 		legal_person = information[u"法定代表人"]
 		responser = None
@@ -137,13 +146,13 @@ def update_to_db(information,connect, cursor, gs_basic_id):
 	
 	if '成立日期' in information.keys():
 		sign_date = information[u"成立日期"]
-		sign_date = change_chinese_date(sign_date)
+		sign_date = sign_date.strip()
+		# print sign_date
 	elif '注册日期' in information.keys():
 		sign_date = information[u"注册日期"]
-		sign_date = change_chinese_date(sign_date)
+		sign_date =sign_date.strip()
 	else:
 		sign_date = None
-	
 	if '注册资本' in information.keys():
 		reg_amount = information[u"注册资本"]
 	elif '成员出资额' in information.keys():
@@ -152,25 +161,22 @@ def update_to_db(information,connect, cursor, gs_basic_id):
 		reg_amount = None
 	if '核准日期' in information.keys():
 		appr_date = information[u"核准日期"]
-		appr_date = change_chinese_date(appr_date)
 	else:
 		appr_date = None
 	if '营业期限自' in information.keys():
 		start_date = information[u"营业期限自"]
-		start_date = change_chinese_date(start_date)
 	elif '合伙期限自' in information.keys():
 		start_date = information[u"合伙期限至"]
-		start_date = change_chinese_date(start_date)
 	else:
 		start_date = None
 	if '营业期限至' in information.keys():
 		end_date = information[u"营业期限至"]
-		end_date = change_chinese_date(end_date)
 	elif '合伙期限至' in information.keys():
 		end_date = information[u"合伙期限至"]
-		end_date = change_chinese_date(end_date)
 	else:
 		end_date = None
+	if end_date =='':
+		end_date =None
 	if '登记机关' in information.keys():
 		reg_zone = information[u"登记机关"]
 	if '住所' in information.keys():
@@ -188,22 +194,40 @@ def update_to_db(information,connect, cursor, gs_basic_id):
 	updated_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
 	row_count = 0
 	flag = 0
-	ccode = remove_symbol(ccode)
-	
+	ccode = deal_html_code.remove_symbol(ccode)
+
 	try:
 		row_count = cursor.execute(update_string, (
-			gs_basic_id, name, ccode, status, types, jj_type, legal_person, responser, investor, runner, sign_date,
+			gs_basic_id, name, ccode, status, types,  legal_person, responser, investor, runner, sign_date,
 			appr_date, reg_amount, start_date, end_date, reg_zone, reg_address, scope, updated_time, gs_basic_id))
 		logging.info('update basic :%s' % row_count)
 		connect.commit()
 	except Exception, e:
-		flag = 100000004
-		logging.error("basic error:" % e)
+		flag = 100000006
+		logging.error("basic error:%s" % e)
 	finally:
 		if flag < 100000001:
 			flag = row_count
 		return flag
 
 
-info = get_list(code)
-get_detail(info)
+def main():
+	try:
+		HOST, USER, PASSWD, DB, PORT = config.HOST, config.USER, config.PASSWD, config.DB, config.PORT
+		connect, cursor = Connect_to_DB().ConnectDB(HOST, USER, PASSWD, DB, PORT)
+		string = '北京事务合伙人'
+		#info = get_list(string)
+		info = get_list(code)
+		info_list = get_detail(info)
+		update_to_db(info_list[0],cursor,connect,gs_basic_id)
+	except Exception,e:
+		print e
+		flag = 100000005
+		logging.error("unknow error:%s"%e)
+	finally:
+		cursor.close()
+		connect.close()
+  
+if __name__ == '__main__':
+    main()
+
