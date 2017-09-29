@@ -7,14 +7,15 @@ import time
 from PublicCode.Public_code import Judge_status
 from PublicCode import deal_html_code
 from PublicCode.Public_code import Log
+import hashlib
 
 reload(sys)
 sys.setdefaultencoding('utf-8')
 Type = sys.getfilesystemencoding()
 
 #entBranchSet
-branch_string = 'insert into gs_branch(gs_basic_id,code,name,gov_dept,ccode,updated)values(%s,%s,%s,%s,%s,%s)'
-select_branch = 'select gs_branch_id from gs_branch where gs_basic_id = %s and name = %s'
+branch_string = 'insert into gs_branch(gs_basic_id,id,code,name,gov_dept,ccode,updated)values(%s,%s,%s,%s,%s,%s,%s)'
+select_branch = 'select gs_branch_id from gs_branch where gs_basic_id = %s and id = %s'
 update_branch_py = 'update gs_py set gs_py_id= %s, gs_branch = %s,updated = %s where gs_py_id = %s'
 
 class Branch:
@@ -55,10 +56,13 @@ class Branch:
                 code = information[key][1]
                 gov_dept = information[key][2]
                 ccode = information[key][3]
-                count = cursor.execute(select_branch,(gs_basic_id,name))
+                m = hashlib.md5()
+                m.update(str(gs_basic_id) + str(name))
+                id = m.hexdigest()
+                count = cursor.execute(select_branch,(gs_basic_id,id))
                 if count == 0:
                     updated_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
-                    rows_count = cursor.execute(branch_string, (gs_basic_id, code, name, gov_dept,ccode, updated_time))
+                    rows_count = cursor.execute(branch_string, (gs_basic_id,id, code, name, gov_dept,ccode, updated_time))
                     insert_flag += rows_count
                     connect.commit()
         except Exception, e:
@@ -72,7 +76,7 @@ class Branch:
             return flag,total,insert_flag,update_flag
 def main(gs_py_id,gs_basic_id,data):
     Log().found_log(gs_py_id, gs_basic_id)
-    Judge_status().updaye_py(gs_py_id,gs_basic_id,Branch,"branch",data,update_branch_py)
+    Judge_status().update_py(gs_py_id,gs_basic_id,Branch,"branch",data,update_branch_py)
 
 
 

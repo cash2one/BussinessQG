@@ -7,7 +7,7 @@ import logging
 import sys
 import time
 
-from  PublicCode.Public_code import Send_Request as Send_Request
+from PublicCode.Public_code import Send_Request as Send_Request
 from PublicCode.deal_html_code import change_date_style
 
 reload(sys)
@@ -17,20 +17,21 @@ Type = sys.getfilesystemencoding()
 select_mort = 'select gs_mort_id from gs_mort where gs_basic_id = %s and code = %s'
 mort_string = 'insert into gs_mort(gs_basic_id,id,code, dates, dept, amount, status,cates,period, ranges, remark,updated)' \
               'values(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)'
-update_mort = 'update gs_mort set dates = %s, dept = %s, amount = %s, status = %s,cates = %s,period = %s, ranges = %s, remark = %s,updated = %s ' \
+update_mort = 'update gs_mort set gs_mort_id = %s ,dates = %s, dept = %s, amount = %s, status = %s,cates = %s,period = %s, ranges = %s, remark = %s,updated = %s ' \
               'where gs_mort_id = %s'
 
 select_goods = 'select gs_mort_goods_id from gs_mort_goods where gs_mort_id = %s and name = %s and ownership = %s'
 goods_string = 'insert into gs_mort_goods(gs_mort_id,id,gs_basic_id,name,ownership,situation,remark,updated)values(%s,%s,%s,%s,%s,%s,%s,%s)'
-update_goods = 'update gs_mort_goods set situation = %s,remark = %s,updated = %s where gs_mort_goods_id = %s'
+update_goods_sql = 'update gs_mort_goods set gs_mort_goods_id = %s,situation = %s,remark = %s,updated = %s where gs_mort_goods_id = %s'
 goods_url = 'http://www.gsxt.gov.cn/corp-query-entprise-info-mortGuaranteeInfo-%s.html'
 person_url = 'http://www.gsxt.gov.cn/corp-query-entprise-info-mortregpersoninfo-%s.html'
 select_person = 'select gs_mort_person_id from gs_mort_person where gs_mort_id = %s and number = %s'
 person_string = 'insert into gs_mort_person(gs_mort_id,id,gs_basic_id,name,cert,number,updated) values (%s,%s,%s,%s,%s,%s,%s)'
-update_mort_person = 'update gs_mort_person set name = %s,cert = %s,updated = %s where gs_mort_person_id = %s'
+update_mort_person = 'update gs_mort_person set gs_mort_person_id = %s,name = %s,cert = %s,updated = %s where gs_mort_person_id = %s'
 
-person_py = 'update gs_py set gs_mort_goods = %s where gs_basic_id = %s'
-goods_py = 'update gs_py set gs_mort_person = %s where gs_basic_id = %s'
+person_py = 'update gs_py set gs_py_id = %s,gs_mort_goods = %s ,updated = %s where gs_basic_id = %s and gs_py_id = %s'
+goods_py = 'update gs_py set gs_py_id = %s, gs_mort_person = %s ,updated = %s where gs_basic_id = %s and gs_py_id = %s'
+
 def name(data):
     informaiton = {}
     for i in xrange(len(data)):
@@ -60,15 +61,16 @@ def name(data):
     return informaiton
 
 
-def update_to_db(gs_basic_id, cursor, connect, info):
+def update_to_db(gs_py_id,gs_basic_id, cursor, connect, info):
     update_flag, insert_flag = 0, 0
-    mort_flag = {}
-    for key in info.keys():
-        code, dates, dept, amount = info[key][0], info[key][1], info[key][2], info[key][3]
-        status, cates, period, ranges, remark = info[key][4], info[key][5], info[key][6], info[key][7], info[key][8]
-        goods_info = info[key][9]
-        person_info = info[key][10]
-        try:
+    mort_flag = 0
+    try:
+        for key in info.keys():
+            code, dates, dept, amount = info[key][0], info[key][1], info[key][2], info[key][3]
+            status, cates, period, ranges, remark = info[key][4], info[key][5], info[key][6], info[key][7], info[key][8]
+            goods_info = info[key][9]
+            person_info = info[key][10]
+
             count = cursor.execute(select_mort, (gs_basic_id, code))
             if count == 0:
                 m = hashlib.md5()
@@ -83,18 +85,23 @@ def update_to_db(gs_basic_id, cursor, connect, info):
             elif int(count) == 1:
                 gs_mort_id = cursor.fetchall()[0][0]
                 updated_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
-                flag = cursor.execute(update_mort, (
+                flag = cursor.execute(update_mort, (gs_mort_id,
                 dates, dept, amount, status, cates, period, ranges, remark, updated_time, gs_mort_id))
                 update_flag += flag
                 connect.commit()
+            update_goods_py(gs_py_id,gs_mort_id, gs_basic_id, cursor, connect, goods_info)
+            update_person_py(gs_py_id,gs_mort_id, gs_basic_id, cursor, connect, person_info)
+    except Exception, e:
+        logging.info('mort error :%s' % e)
+        mort_flag = 100000001
+    finally:
+        total = insert_flag + update_flag
+        if mort_flag <100000001:
+            mort_flag = total
+        return mort_flag
 
-        except Exception, e:
-            logging.info('mort error :%s' % e)
-            mort_flag[0] = 100000001
-    total = insert_flag + update_flag
-    return total,mort_flag
 
-def update_goods_py(gs_mort_id, gs_basic_id, cursor, connect, goods_info):
+def update_goods_py(gs_py_id,gs_mort_id, gs_basic_id, cursor, connect, goods_info):
     try:
         total, execute = update_goods(gs_mort_id, gs_basic_id, cursor, connect, goods_info)
         if total == 0:
@@ -111,12 +118,13 @@ def update_goods_py(gs_mort_id, gs_basic_id, cursor, connect, goods_info):
         if flag == None:
             pass
         else:
-            cursor.execute(goods_py, (flag, gs_basic_id))
+            updated_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
+            cursor.execute(goods_py, (gs_py_id,flag, updated_time,gs_basic_id,gs_py_id))
             connect.commit()
 
-def update_person_py(gs_mort_id, gs_basic_id, cursor, connect, person_info):
+def update_person_py(gs_py_id,gs_mort_id, gs_basic_id, cursor, connect, person_info):
     try:
-        total, execute = update_goods(gs_mort_id, gs_basic_id, cursor, connect, person_info)
+        total, execute = update_person(gs_mort_id, gs_basic_id, cursor, connect, person_info)
         if total == 0:
             flag = None
         elif total > 0 and execute>=0 and execute< 100000001:
@@ -131,7 +139,8 @@ def update_person_py(gs_mort_id, gs_basic_id, cursor, connect, person_info):
         if flag == None:
             pass
         else:
-            cursor.execute(person_py, (flag, gs_basic_id))
+            updated_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
+            cursor.execute(person_py, (gs_py_id,flag, updated_time ,gs_basic_id,gs_py_id))
             connect.commit()
 # 更新抵押物品信息
 def update_goods(gs_mort_id, gs_basic_id, cursor, connect, info):
@@ -156,7 +165,7 @@ def update_goods(gs_mort_id, gs_basic_id, cursor, connect, info):
             elif int(count) == 1:
                 updated_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
                 gs_mort_goods_id = cursor.fetchall()[0][0]
-                flag = cursor.execute(update_goods, (situation, remark, updated_time, gs_mort_goods_id))
+                flag = cursor.execute(update_goods_sql, (gs_mort_goods_id,situation, remark, updated_time, gs_mort_goods_id))
                 update_flag += flag
     except Exception, e:
         goods_flag = 100000001
@@ -193,7 +202,7 @@ def update_person(gs_mort_id, gs_basic_id, cursor, connect, info):
             elif int(count) == 1:
                 gs_mort_person_id = cursor.fetchall()[0][0]
                 updated_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
-                flag = cursor.execute(update_mort_person, (name, cert, updated_time, gs_mort_person_id))
+                flag = cursor.execute(update_mort_person, (gs_mort_person_id,name, cert, updated_time, gs_mort_person_id))
                 update_flag += flag
                 connect.commit()
     except Exception, e:
@@ -288,6 +297,7 @@ def get_single_person(data):
             cert = singledata["bLicType_CN"]
             number = singledata["bLicNo"]
             perId = singledata["perId"]
+            # remark = singledata["remark"]
             information[perId] = [name, cert, number]
     return information
 

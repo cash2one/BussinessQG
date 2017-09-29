@@ -19,7 +19,6 @@ reg_date = %s ,appr_date = %s,reg_amount = %s, start_date = %s ,end_date = %s ,r
 update_py = 'update gs_py set gs_py_id = %s,gs_basic = %s,updated = %s where gs_py_id = %s'
 class Basic:
     def name(self,data):
-        info = []
         name = data["entName"]
         if "uniScid" in data.keys():
             ccode = data["uniScid"]

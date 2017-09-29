@@ -35,7 +35,7 @@ class Permit:
             for key in information.keys():
                 uuid, types, valto = information[key][0], information[key][1], information[key][2]
                 updated_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
-                flag = cursor.execute(gs_basic_id, gs_report_id, uuid, province, types, valto,updated_time,updated_time)
+                flag = cursor.execute(permit_string,(gs_basic_id, gs_report_id, uuid, province, types, valto,updated_time,updated_time))
                 insert_flag += flag
                 connect.commit()
         except Exception, e:

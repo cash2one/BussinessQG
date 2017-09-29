@@ -8,11 +8,14 @@ from PublicCode import config
 from PublicCode.Public_code import Judge_status
 from PublicCode.Public_code import Log
 from PublicCode.Public_code import Connect_to_DB
+from PublicCode.Public_code import Send_Request
 reload(sys)
 sys.setdefaultencoding('utf-8')
 Type = sys.getfilesystemencoding()
 
-
+url = ''
+gs_basic_id = ''
+gs_py_id = ''
 select_string = 'select gs_person_id from gs_person where name = %s and position = %s and gs_basic_id = %s and source = 0'
 insert_string = 'insert into gs_person(gs_basic_id,name,position,updated)values(%s,%s,%s,%s)'
 person_string = 'update gs_person set gs_person_id = %s,updated = %s where gs_person_id = %s'
@@ -32,12 +35,14 @@ class Person:
                     position = ''
                 info[i] = [name,position]
         return info
-    def update_to_db(self,cursor, connect,gs_basic_id, information):
+    def update_to_db(self, information,gs_basic_id):
         insert_flag, update_flag = 0, 0
         remark = 0
         total = len(information)
         logging.info("person total:%s"%total)
         try:
+            HOST, USER, PASSWD, DB, PORT = config.HOST, config.USER, config.PASSWD, config.DB, config.PORT
+            connect, cursor = Connect_to_DB().ConnectDB(HOST, USER, PASSWD, DB, PORT)
             string = update_string % gs_basic_id
             cursor.execute(string)
             connect.commit()
@@ -56,6 +61,7 @@ class Person:
                     updated_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
                     count = cursor.execute(update_quit, (updated_time, gs_basic_id, gs_person_id))
                     connect.commit()
+                    update_flag+= count
                 elif rows == 0:
                     updated_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
                     count = cursor.execute(insert_string, (gs_basic_id, name,position, updated_time))
@@ -75,8 +81,12 @@ class Person:
             return remark,total,insert_flag,update_flag
 def main(gs_py_id,gs_basic_id,data):
     Log().found_log(gs_py_id, gs_basic_id)
-    print_info = Judge_status().updaye_py(gs_py_id,gs_basic_id,Person,"person",data,update_person_py)
+    print_info = Judge_status().update_py(gs_py_id,gs_basic_id,Person,"person",data,update_person_py)
     return print_info
+def main(gs_py_id,gs_basic_id):
+	Log().found_log(gs_py_id,gs_basic_id)
+	name = 'person'
+	Judge_status().judge(gs_basic_id,name,Person,url)
 
 
 

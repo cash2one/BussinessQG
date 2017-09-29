@@ -186,7 +186,7 @@ class Share:
             return remark,total,insert_flag,update_flag
 def main(gs_py_id,gs_basic_id,data):
     Log().found_log(gs_py_id, gs_basic_id)
-    Judge_status().updaye_py(gs_py_id,gs_basic_id,Share,"shareholder",data,update_share_py)
+    Judge_status().update_py(gs_py_id,gs_basic_id,Share,"shareholder",data,update_share_py)
 
 
 

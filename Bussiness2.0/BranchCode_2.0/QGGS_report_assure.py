@@ -18,12 +18,12 @@ reload(sys)
 sys.setdefaultencoding('utf-8')
 Type = sys.getfilesystemencoding()
 
-assure_string = 'insert into gs_report_assure(gs_basic_id,gs_report_id, uuid, province, creditor, debtor, cates, amount, deadline, period, ways,created,updated) \
-values(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)'
+assure_string = 'insert into gs_report_assure(gs_basic_id,gs_report_id, uuid, province, creditor, debtor, cates, amount, deadline, period, ways,if_fwarnnt,created,updated) \
+values(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)'
 assure_py = 'update gs_py set report_assure = %s where gs_basic_id = %s '
 class Assure:
     def name(self,data):
-        information = {}
+        info = {}
         for i in xrange(len(data)):
             singledata = data[i]
             uuid = singledata["moreId"]
@@ -43,19 +43,22 @@ class Assure:
             deadline = str(pefPerForm) + '至' +str(pefPerTo)
             period = singledata["guaranperiod"]
             ways = singledata["gaType"]
-            information[i] = [uuid, creditor, debtor, cates, amount, deadline, period, ways]
-        return information
-    def update_to_db(self,gs_report_id, gs_basic_id, cursor, connect, information,province):
+            if_fwarnnt = singledata["moreDis"]
+            if if_fwarnnt =="2":
+                if_fwarnnt = 0
+            info[i] = [uuid, creditor, debtor, cates, amount, deadline, period, ways,if_fwarnnt]
+        return info
+    def update_to_db(self,gs_report_id, gs_basic_id, cursor, connect, info,province):
         remark = 0
-
-        insert_flag,update_flag = 0,0
+        insert_flag, update_flag = 0, 0
+        total = len(info)
         try:
-            for key in information.keys():
-                uuid, creditor, debtor, cates = information[key][0],information[key][1],information[key][2],information[key][3]
-                amount, deadline, period, ways = information[key][4],information[key][5],information[key][6],information[key][7]
-
+            for key in info.keys():
+                uuid, creditor, debtor, cates = info[key][0],info[key][1],info[key][2],info[key][3]
+                amount, deadline, period, ways = info[key][4],info[key][5],info[key][6],info[key][7]
+                if_fwarnnt = info[key][8]
                 updated_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
-                flag = cursor.execute(assure_string,(gs_basic_id,gs_report_id, uuid, province, creditor, debtor, cates, amount, deadline, period, ways, updated_time, updated_time))
+                flag = cursor.execute(assure_string,(gs_basic_id,gs_report_id, uuid, province, creditor, debtor, cates, amount, deadline, period, ways,if_fwarnnt, updated_time, updated_time))
                 insert_flag += flag
                 connect.commit()
         except Exception, e:
@@ -64,4 +67,4 @@ class Assure:
         finally:
             if remark < 100000001:
                 remark = insert_flag
-            return remark,insert_flag,update_flag
+            return remark, total, insert_flag, update_flag

@@ -92,7 +92,7 @@ class Judge_status:
             flag = 100000006
         return flag
 
-    def updaye_py(self,gs_basic_id,APP,name,data):
+    def update_py(self,gs_basic_id,APP,name,data):
         try:
             HOST, USER, PASSWD, DB, PORT = config.HOST, config.USER, config.PASSWD, config.DB, config.PORT
             connect, cursor = Connect_to_DB().ConnectDB(HOST, USER, PASSWD, DB, PORT)

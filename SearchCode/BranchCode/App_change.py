@@ -84,4 +84,4 @@ class Change:
             return flag,total,insert_flag,update_flag
 def main(gs_search_id,gs_basic_id,data):
     Log().found_log(gs_search_id, gs_basic_id)
-    Judge_status().updaye_py(gs_basic_id,Change,"change",data)
+    Judge_status().update_py(gs_basic_id,Change,"change",data)

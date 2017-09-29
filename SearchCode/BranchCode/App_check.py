@@ -74,4 +74,4 @@ class Check:
 
 def main(gs_py_id,gs_basic_id,data):
     Log().found_log(gs_py_id, gs_basic_id)
-    Judge_status().updaye_py(gs_basic_id,Check,"check",data)
+    Judge_status().update_py(gs_basic_id,Check,"check",data)

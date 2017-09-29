@@ -135,7 +135,7 @@ class Permit:
             logging.error("permit detail error:%s"%e)
 def main(gs_py_id,gs_basic_id,data):
     Log().found_log(gs_py_id, gs_basic_id)
-    print_info = Judge_status().updaye_py(gs_py_id,gs_basic_id,Permit,"permit2",data,update_permit_py)
+    print_info = Judge_status().update_py(gs_py_id,gs_basic_id,Permit,"permit2",data,update_permit_py)
     return print_info
 
 

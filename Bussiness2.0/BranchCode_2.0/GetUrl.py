@@ -33,9 +33,9 @@ url_first = config.host
 # code = sys.argv[3]
 # ccode = sys.argv[4]
 gs_py_id = 1
-gs_basic_id = 1900000699
-code = '91310000671142819Y'
-ccode = '91310000671142819Y'
+gs_basic_id = 1
+code = '310115002562777'
+ccode = '91310115324507748U'
 
 
 update_py = 'update gs_py set gs_py_id = %s,gs_basic = %s,updated = %s where gs_py_id = %s'
@@ -45,18 +45,22 @@ insert_history = 'insert into gs_basic_exp(gs_basic_id,history,updated)values(%s
 select_basic = 'select gs_basic_exp_id from gs_basic_exp where gs_basic_id = %s'
 
 # 用于获取网页cookies
-
+proxies = {
+    "http": "http://115.203.65.169:19996"
+}
 def get_cookies():
-    i = 10
+    i = 1
     cookies = None
     while i > 0:
         try:
-            request = session.get("http://www.gsxt.gov.cn/index.html", headers=config.headersfirst, timeout=5)
+            request = session.get("http://www.gsxt.gov.cn/index.html", headers=config.headersfirst, proxies = proxies,timeout=5)
             status_code = request.status_code
+           
             if status_code == 200:
                 cookies = request.cookies
                 break
         except Exception, e:
+            #print e
             i = i - 1
             time.sleep(3)
 
@@ -89,7 +93,7 @@ def break_password(cookies):
 # 循环破解极验验证码
 def loop_break_password():
     success_flag = 0
-    i = 10
+    i = 1
     try:
         while i > 0:
             if success_flag == 0 or validate == None or cookies == None:
@@ -101,7 +105,7 @@ def loop_break_password():
     except Exception, e:
         logging.error('break password error: %s'%e)
         challenge, validate = None, None
-
+    # print challenge, validate, cookies
     return challenge, validate, cookies
 # 用于获取所需信息
 def get_need_info(result):
@@ -117,6 +121,8 @@ def get_need_info(result):
         else:
             history = None
         history = remove_symbol(history)
+        if history!=None:
+            history = history.replace(u'*','')
         if history!=None:
             list = re.split('；',str(history))
             templist = []
@@ -242,6 +248,10 @@ def main(code,ccode):
 
 
 if __name__ == "__main__":
+    print "The Program start time:", time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
+    start = time.time()
     Log().found_log(gs_py_id, gs_basic_id)
     main(code, ccode)
+    print "The Program end time:", time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()), "[%s]" % (time.time() - start)
+
 

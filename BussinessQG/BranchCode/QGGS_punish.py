@@ -30,11 +30,13 @@ def name(data):
 
 
 def update_to_db(gs_basic_id, cursor, connect, information):
-    insert_flag =  0
-    for key in information.keys():
-        number, types, content = information[key][0], information[key][1], information[key][2]
-        date, pub_date, gov_dept = information[key][3], information[key][4], information[key][5]
-        try:
+    insert_flag = 0
+    remark = 0
+    try:
+        for key in information.keys():
+            number, types, content = information[key][0], information[key][1], information[key][2]
+            date, pub_date, gov_dept = information[key][3], information[key][4], information[key][5]
+
             count = cursor.execute(select_punish, (gs_basic_id, number))
             if count == 0:
                 m = hashlib.md5()
@@ -47,8 +49,10 @@ def update_to_db(gs_basic_id, cursor, connect, information):
                 insert_flag += rows_count
                 connect.commit()
 
-        except Exception, e:
-            # print "punish error:", e
-            logging.error("punish error:%s" % e)
-    flag = insert_flag
-    return flag
+    except Exception, e:
+        remark = 100000001
+        logging.error("punish error:%s" % e)
+    finally:
+        if remark<100000001:
+            remark = insert_flag
+        return remark

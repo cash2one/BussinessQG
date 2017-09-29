@@ -32,6 +32,7 @@ driver.set_page_load_timeout(40) #设置页面最长加载时间为40s
 
 
 class Patent_Login:
+    
     # 用于获取cookies
     def get_cookies(self):
         flag = 1

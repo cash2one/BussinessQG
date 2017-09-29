@@ -35,7 +35,7 @@ from BranchCode import App_stock
 # province = sys.argv[4]
 
 url = 'http://sh.gsxt.gov.cn/notice/ws/data/ent_info/260000032013041100180'
-gs_basic_id = '1900000751'
+gs_basic_id = '229417621'
 gs_py_id = '1501'
 province = 'SHH'
 

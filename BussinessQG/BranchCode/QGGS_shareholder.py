@@ -15,9 +15,10 @@ reload(sys)
 sys.setdefaultencoding('utf-8')
 Type = sys.getfilesystemencoding()
 
-select_string = 'select gs_shareholder_id from gs_shareholder where gs_basic_id = %s and name = %s and types = %s and cate = %s'
+
 share_string = 'insert into gs_shareholder(gs_basic_id,name,cate,types,license_type,license_code,ra_date, ra_ways, true_amount,reg_amount,ta_ways,ta_date,updated)values(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)'
-update_string = 'update gs_shareholder set types = %s ,license_type = %s ,license_code = %s ,ra_date = %s,ra_ways = %s,true_amount = %s ,reg_amount = %s, ta_ways = %s, ta_date = %s,updated = %s where gs_shareholder_id = %s '
+
+select_string = 'select gs_shareholder_id from gs_shareholder where gs_basic_id = %s and name = %s and types = %s and cate = %s'
 
 
 def name(data):
@@ -83,35 +84,31 @@ def deal_detail_content(detail_url):
 
 def update_to_db(gs_basic_id, cursor, connect, information):
     cate = 0
-    insert_flag, update_flag = 0, 0
-    for key in information.keys():
-        name, license_code, license_type = information[key][0], information[key][1], information[key][2]
-        types, ra_date, ra_ways, true_amount = information[key][3], information[key][4], information[key][5], \
-                                               information[key][6]
-        reg_amount, ta_ways, ta_date = information[key][7], information[key][8], information[key][9]
-        try:
+    insert_flag = 0
+    remark = 0
+    try:
+        for key in information.keys():
+            name, license_code, license_type = information[key][0], information[key][1], information[key][2]
+            types, ra_date, ra_ways, true_amount = information[key][3], information[key][4], information[key][5], \
+                                                   information[key][6]
+            reg_amount, ta_ways, ta_date = information[key][7], information[key][8], information[key][9]
             count = cursor.execute(select_string, (gs_basic_id, name, types, cate))
 
             if count == 0:
                 updated_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
                 rows_count = cursor.execute(share_string, (
-                    gs_basic_id, name, cate, types, license_type, license_code, ra_date, ra_ways, true_amount,
-                    reg_amount, ta_ways, ta_date, updated_time))
+                        gs_basic_id, name, cate, types, license_type, license_code, ra_date, ra_ways, true_amount,
+                        reg_amount, ta_ways, ta_date, updated_time))
                 insert_flag += rows_count
                 connect.commit()
-            elif int(count) == 1:
-                gs_shareolder_id = cursor.fetchall()[0][0]
-                updated_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
-                rows_count = cursor.execute(update_string, (
-                    types, license_type, license_code, ra_date, ra_ways, true_amount, reg_amount, ta_ways, ta_date,
-                    updated_time, gs_shareolder_id))
-                update_flag += rows_count
-                connect.commit()
-        except Exception, e:
-            # print "shareholder error:", e
-            logging.error("shareholder error:" % e)
 
-    # print insert_flag,update_flag
-    flag = insert_flag + update_flag
-    # print flag
-    return flag
+    except Exception, e:
+        remark = 100000001
+        logging.error("shareholder error:%s" % e)
+    finally:
+        if remark < 100000001:
+            remark = insert_flag
+        return remark
+
+
+

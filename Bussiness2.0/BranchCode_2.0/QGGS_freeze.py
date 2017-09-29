@@ -32,7 +32,7 @@ gs_py_id = sys.argv[3]
 # gs_py_id = 1501
 
 freeze_string = 'insert into gs_freeze(gs_basic_id,executor, stock_amount, court, notice_no,status,items, rule_no, enforce_no,cert_cate,cert_code, start_date, end_date,period, pub_date,updated)values(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)'
-select_freeze = 'select gs_freeze_id from gs_freeze where gs_basic_id = %s and rule_no = %s'
+select_freeze = 'select gs_freeze_id from gs_freeze where gs_basic_id = %s and rule_no = %s and executor = %s'
 update_freeze_py = 'update gs_py set gs_py_id = %s ,gs_freeze = %s ,updated = %s where gs_py_id = %s'
 
 class Freeze:
@@ -117,7 +117,7 @@ class Freeze:
                 cert_cate, cert_code, start_date, end_date = information[key][8], information[key][9], information[key][10], \
                                                              information[key][11]
                 period, pub_date = information[key][12], information[key][13]
-                count = cursor.execute(select_freeze, (gs_basic_id, rule_no))
+                count = cursor.execute(select_freeze, (gs_basic_id, rule_no,executor))
                 if count == 0:
                     updated_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
                     rows_count = cursor.execute(freeze_string, (

@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 # -*- coding:utf-8 -*-
 
-import hashlib
 import logging
 import re
 import sys
@@ -116,6 +115,8 @@ def update_basic(information, connect, cursor, gs_basic_id):
         sign_date = None
     if '注册资本' in information.keys():
         reg_amount = information[u"注册资本"]
+    elif '成员出资额' in information.keys():
+        reg_amount = information[u"成员出资额"]
     else:
         reg_amount = None
     if '核准日期' in information.keys():
@@ -150,6 +151,13 @@ def update_basic(information, connect, cursor, gs_basic_id):
         else:
             end_date = re.sub(re.compile(u'年|月'), '-', end_date)
             end_date = re.sub(re.compile(u'日'), '', end_date)
+    elif '合伙期限至' in information.keys():
+        end_date = information[u"合伙期限至"]
+        if end_date == '':
+            end_date = None
+        else:
+            end_date = re.sub(re.compile(u'年|月'), '-', end_date)
+            end_date = re.sub(re.compile(u'日'), '', end_date)
     else:
         end_date = None
     if '登记机关' in information.keys():
@@ -168,6 +176,7 @@ def update_basic(information, connect, cursor, gs_basic_id):
         scope = information[u"经营范围"]
     updated_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
     row_count = 0
+    flag = 0
     try:
         row_count = cursor.execute(update_string, (
             gs_basic_id, name, ccode, status, types, jj_type, legal_person, responser, investor, runner, sign_date,
@@ -175,6 +184,10 @@ def update_basic(information, connect, cursor, gs_basic_id):
         print 'update basic :%s' % row_count
         connect.commit()
     except Exception, e:
+        flag = 100000001
         logging.error("basic error:" % e)
     finally:
-        return row_count
+        if flag < 1000000001:
+            flag = row_count
+        return flag
+

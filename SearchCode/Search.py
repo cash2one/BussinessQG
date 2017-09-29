@@ -31,6 +31,7 @@ logging.basicConfig(level=logging.DEBUG,
                     filename=log_path + '/log/py_search_%s_%s_%s.log' % (
                             time.strftime("%Y-%m-%d", time.localtime()), user_id,unique_id),
                     filemode='w')
+
 insert_string = "insert into gs_basic(id,province,name,code,ccode,legal_person,reg_date,status,updated ) values ( %s, %s,%s,%s, %s,%s,%s, %s,%s)"
 update_string = "update gs_basic set gs_basic_id = %s,name = %s ,legal_person = %s ,status = %s ,reg_date = %s,uuid = %s where gs_basic_id = %s"
 update_ccode = 'update gs_basic set gs_basic_id = %s,ccode = %s ,name = %s,legal_person = %s,status =%s,reg_date=%s,uuid = %s where gs_basic_id =%s'

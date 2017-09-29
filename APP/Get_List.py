@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-# @File  : Get_List.py
+# @File  : Get_Url.py
 # @Author: Lmm
 # @Date  : 2017-08-15
 # @Desc  : 用于获取列表信息
@@ -20,11 +20,11 @@ import sys
 # gs_basic_id = sys.argv[3]
 # gs_py_id = sys.argv[4]
 # province = sys.argv[5]
-# code = '9131000013221158XC'
-# ccode = '9131000013221158X'
-# gs_basic_id = 229418511
-# gs_py_id = 1
-# privince = 'SHH'
+code = '915106007118101492'
+ccode = '915106007118101492'
+gs_basic_id = 229417628
+gs_py_id = 1
+privince = 'SCH'
 
 s = requests.session()
 s.keep_alive = False
@@ -56,76 +56,76 @@ def get_index(code):
     else:
         flag = 100000001
     return second_url,flag,entName
-def main():
-    gs_user_id = 1501
-    try:
-        HOST, USER, PASSWD, DB, PORT = config.HOST, config.USER, config.PASSWD, config.DB, config.PORT
-        connect, cursor = Connect_to_DB().ConnectDB(HOST, USER, PASSWD, DB, PORT)
-        printinfo = {
-            "url": 0,
-            'flag': 0
-        }
-        cursor.execute(select_basic)
-        for gs_basic_id,code in cursor.fetchall():
-            print gs_basic_id
-            cursor.execute(insert_py,(gs_basic_id,gs_user_id))
-            gs_py_id = connect.insert_id()
-            Log().found_log(gs_py_id, gs_basic_id)
-            connect.commit()
-
-            second_url, flag, entName = get_index(code)
-
-            if flag == 100000003:
-                select_string = select_name % gs_basic_id
-                cursor.execute(select_string)
-                name = cursor.fetchall()[0][0]
-                second_url, flag, entName = get_index(name)
-                if name != entName:
-                    second_url = 0
-                    flag = 0
-            gs_user_id+=1
-            App_Update.update_all_info(gs_py_id,gs_basic_id,second_url)
-            printinfo["url"] = second_url
-            printinfo["flag"] = flag
-            print printinfo
-    except Exception, e:
-        logging.info("get list error:%s" % e)
-    finally:
-        cursor.close()
-        connect.close()
-    #     printinfo["url"] = second_url
-    #     printinfo["flag"] = flag
-    #     print printinfo
-
-
 # def main():
-#     log().found_log(gs_py_id,gs_basic_id)
+#     gs_user_id = 1501
 #     try:
 #         HOST, USER, PASSWD, DB, PORT = config.HOST, config.USER, config.PASSWD, config.DB, config.PORT
 #         connect, cursor = Connect_to_DB().ConnectDB(HOST, USER, PASSWD, DB, PORT)
 #         printinfo = {
-#             "url":0,
-#             'flag':0
+#             "url": 0,
+#             'flag': 0
 #         }
-#         second_url,flag,entName = get_index(code)
-#         if flag ==100000003:
-#             second_url,flag,entName = get_index(ccode)
-#         if flag == 100000003:
-#             select_string = select_name % gs_basic_id
-#             cursor.execute(select_string)
-#             name = cursor.fetchall()[0][0]
-#             second_url, flag, entName = get_index(name)
-#             if name != entName:
-#                 second_url = 0
-#                 flag = 100000002
-#     except Exception,e:
-#         logging.info("get list error:%s"%e)
+#         cursor.execute(select_basic)
+#         for gs_basic_id,code in cursor.fetchall():
+#             print gs_basic_id
+#             cursor.execute(insert_py,(gs_basic_id,gs_user_id))
+#             gs_py_id = connect.insert_id()
+#             Log().found_log(gs_py_id, gs_basic_id)
+#             connect.commit()
+#
+#             second_url, flag, entName = get_index(code)
+#
+#             if flag == 100000003:
+#                 select_string = select_name % gs_basic_id
+#                 cursor.execute(select_string)
+#                 name = cursor.fetchall()[0][0]
+#                 second_url, flag, entName = get_index(name)
+#                 if name != entName:
+#                     second_url = 0
+#                     flag = 0
+#             gs_user_id+=1
+#             App_Update.update_all_info(gs_py_id,gs_basic_id,second_url)
+#             printinfo["url"] = second_url
+#             printinfo["flag"] = flag
+#             print printinfo
+#     except Exception, e:
+#         logging.info("get list error:%s" % e)
 #     finally:
 #         cursor.close()
 #         connect.close()
-#         printinfo["url"] = second_url
-#         printinfo["flag"] = flag
-#         print printinfo
+#     #     printinfo["url"] = second_url
+#     #     printinfo["flag"] = flag
+#     #     print printinfo
+
+
+def main():
+    Log().found_log(gs_py_id,gs_basic_id)
+    try:
+        HOST, USER, PASSWD, DB, PORT = config.HOST, config.USER, config.PASSWD, config.DB, config.PORT
+        connect, cursor = Connect_to_DB().ConnectDB(HOST, USER, PASSWD, DB, PORT)
+        printinfo = {
+            "url":0,
+            'flag':0
+        }
+        second_url,flag,entName = get_index(code)
+        if flag ==100000003:
+            second_url,flag,entName = get_index(ccode)
+        if flag == 100000003:
+            select_string = select_name % gs_basic_id
+            cursor.execute(select_string)
+            name = cursor.fetchall()[0][0]
+            second_url, flag, entName = get_index(name)
+            if name != entName:
+                second_url = 0
+                flag = 100000002
+    except Exception,e:
+        logging.info("get list error:%s"%e)
+    finally:
+        cursor.close()
+        connect.close()
+        printinfo["url"] = second_url
+        printinfo["flag"] = flag
+        print printinfo
 if __name__ == "__main__":
     main()
 

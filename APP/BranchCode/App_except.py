@@ -8,6 +8,7 @@ from PublicCode.Public_code import Log
 from PublicCode import deal_html_code
 from PublicCode.Public_code import Judge_status
 
+
 reload(sys)
 sys.setdefaultencoding('utf-8')
 Type = sys.getfilesystemencoding()
@@ -67,7 +68,7 @@ class Except:
                     gs_basic_id, types, in_reason, in_date, out_reason, out_date, gov_dept, updated_time))
                     insert_flag += rows_count
                     connect.commit()
-                elif count == 1:
+                elif int(count) == 1:
                     gs_except_id = cursor.fetchall()[0][0]
                     updated_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
                     rows_count = cursor.execute(update_except, (
@@ -84,5 +85,5 @@ class Except:
             return remark,total,insert_flag,update_flag
 def main(gs_py_id,gs_basic_id,data):
     Log().found_log(gs_py_id, gs_basic_id)
-    print_info = Judge_status().updaye_py(gs_py_id,gs_basic_id,Except,"except",data,update_except_py)
+    print_info = Judge_status().update_py(gs_py_id,gs_basic_id,Except,"except",data,update_except_py)
     return print_info

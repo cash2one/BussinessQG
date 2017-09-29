@@ -21,7 +21,7 @@ host = "http://www.gsxt.gov.cn"
 #网络主站end----------------------------------------------------------------
 
 #极验破解start
-break_url = "http://59.110.138.116/geetest/get?token=seo_test1&reg=http://www.gsxt.gov.cn/SearchItemCaptcha"
+break_url = "http://59.110.138.116/geetest/get?token=seo_dsboye&reg=http://www.gsxt.gov.cn/SearchItemCaptcha"
 search_url = 'http://www.gsxt.gov.cn/corp-query-search-1.html'
 search_text = "tab=ent_tab&token=34911389&searchword=%s&geetest_challenge=%s&geetest_validate=%s&geetest_seccode=%s|7Cjordan"
 #极验破解end

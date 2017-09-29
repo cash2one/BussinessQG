@@ -92,7 +92,7 @@ class Judge_status:
             flag = 100000006
         return flag
 
-    def updaye_py(self,gs_py_id,gs_basic_id,APP,name,data,update_py):
+    def update_py(self,gs_py_id,gs_basic_id,APP,name,data,update_py):
         try:
             HOST, USER, PASSWD, DB, PORT = config.HOST, config.USER, config.PASSWD, config.DB, config.PORT
             connect, cursor = Connect_to_DB().ConnectDB(HOST, USER, PASSWD, DB, PORT)
@@ -110,6 +110,8 @@ class Judge_status:
                     updated_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
                     cursor.execute(update_py,(gs_py_id,flag,updated_time,gs_py_id))
                     connect.commit()
+                    cursor.close()
+                    connect.close()
                 else:
                     updated_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
                     cursor.execute(update_py, (gs_py_id, flag, updated_time, gs_py_id))
@@ -117,8 +119,11 @@ class Judge_status:
         except Exception,e:
             logging.error("judge error :%s"%e)
         finally:
-            cursor.close()
-            connect.close()
+            if name =="shareholder" or name =="person":
+                pass
+            else:
+                cursor.close()
+                connect.close()
 
 
 

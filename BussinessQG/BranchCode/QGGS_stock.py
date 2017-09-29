@@ -10,9 +10,9 @@ from PublicCode.deal_html_code import change_date_style
 reload(sys)
 sys.setdefaultencoding('utf-8')
 Type = sys.getfilesystemencoding()
-stock_string = 'insert into gs_stock(gs_basic_id,equityNo,pledgor,pledBLicNo,impAm,impOrg,impOrgBLicNo,equPleDate,publicDate,type,updated)values(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)'
+stock_string = 'insert into gs_stock(gs_basic_id,equityno,pledgor,pled_blicno,impam,imporg,imporg_blicno,equlle_date,public_date,type,updated)values(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)'
 select_stock = 'select gs_stock_id from gs_stock where gs_basic_id = %s and equityNo = %s'
-update_stock = 'update gs_stock set gs_basic_id = %s,pledgor = %s,pledBLicNo = %s,impAm = %s,impOrg = %s,impOrgBLicNo = %s,equPleDate = %s,publicDate = %s,type = %s ,updated = %s where gs_stock_id = %s'
+update_stock = 'update gs_stock set gs_basic_id = %s,pledgor = %s,pled_blicno = %s,impam = %s,imporg = %s,imporg_blicno = %s,equlle_date = %s,public_date = %s,type = %s ,updated = %s where gs_stock_id = %s'
 
 
 def name(data):
@@ -46,18 +46,20 @@ def name(data):
 
 def update_to_db(gs_basic_id, cursor, connect, information):
     insert_flag, update_flag = 0, 0
-    for key in information.keys():
-        equityNo, pledgor, pledBLicNo = information[key][0], information[key][1], information[key][2]
-        impAm, impOrg, impOrgBLicNo = information[key][3], information[key][4], information[key][5]
-        equPleDate, publicDate, type = information[key][6], information[key][7], information[key][8]
-        try:
+    remark = 0
+    try:
+        for key in information.keys():
+            equityNo, pledgor, pledBLicNo = information[key][0], information[key][1], information[key][2]
+            impAm, impOrg, impOrgBLicNo = information[key][3], information[key][4], information[key][5]
+            equPleDate, publicDate, type = information[key][6], information[key][7], information[key][8]
+
             count = cursor.execute(select_stock, (gs_basic_id, equityNo))
-            # print count
+                # print count
             if count == 0:
                 updated_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
                 rows_count = cursor.execute(stock_string, (
-                gs_basic_id, equityNo, pledgor, pledBLicNo, impAm, impOrg, impOrgBLicNo, equPleDate, publicDate, type,
-                updated_time))
+                    gs_basic_id, equityNo, pledgor, pledBLicNo, impAm, impOrg, impOrgBLicNo, equPleDate, publicDate, type,
+                    updated_time))
                 insert_flag += rows_count
                 connect.commit()
             elif count == 1:
@@ -65,12 +67,17 @@ def update_to_db(gs_basic_id, cursor, connect, information):
                 updated_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
 
                 rows_count = cursor.execute(update_stock,
-                                            (gs_basic_id, pledgor, pledBLicNo, impAm, impOrg, impOrgBLicNo, equPleDate,
-                                             publicDate, type, updated_time, gs_stock_id))
+                                                (gs_basic_id, pledgor, pledBLicNo, impAm, impOrg, impOrgBLicNo, equPleDate,
+                                                 publicDate, type, updated_time, gs_stock_id))
                 update_flag += rows_count
                 connect.commit()
-        except Exception, e:
-            # print "stock error:", e
-            logging.error("stock error: %s" % e)
-    flag = insert_flag + update_flag
-    return flag
+    except Exception, e:
+        remark = 100000001
+        # print "stock error:", e
+        logging.error("stock error: %s" % e)
+    finally:
+        flag = insert_flag + update_flag
+        if remark < 100000001:
+            remark = flag
+        print remark
+        return remark

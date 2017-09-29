@@ -22,14 +22,15 @@ from PublicCode.Bulid_Log import Log
 from PublicCode.Public_code import Connect_to_DB
 from PublicCode.Public_code import Get_BranchInfo as Get_BranchInfo
 from PublicCode.Public_code import Send_Request as Send_Request
+from PublicCode import deal_html_code
 
-url = sys.argv[1]
-gs_basic_id = sys.argv[2]
-gs_py_id = sys.argv[3]
+# url = sys.argv[1]
+# gs_basic_id = sys.argv[2]
+# gs_py_id = sys.argv[3]
 
-# url = 'http://www.gsxt.gov.cn/%7B5ggRiUY6sPTb0mUkF3xs4qSlx2pSdVGKYYopv5Q1qDZs6gP2OfzFjTMOcLXcTkgDwzsiWBiKi5-nU2rT3IzeMhXthF9OvHvqoeRh0VgKlMquDWzv7asiVEgZLvzmPwRP-1502706710097%7D'
-# gs_basic_id = 1900000097
-# gs_py_id = 1501
+url = 'http://www.gsxt.gov.cn/%7BvF02QVDxL3gTUIh9cKKWcu7iC9RoRNqQ66SOVdTCvL6M3jI0Fhl7R1qNHDpzr70n7bjL5I9PZ1BBFtRxRc4f8P4lYjBQxPJyO_UQ7sSjlrYu_bDfHxVO4fRRXxs-zyGi-1505446588040%7D'
+gs_basic_id = 1900000099
+gs_py_id = 1501
 
 
 reload(sys)
@@ -39,9 +40,9 @@ Type = sys.getfilesystemencoding()
 
 host = config.host
 
-select_report = 'select gs_report_id from gs_report where gs_basic_id = %s and year = %s'
+select_report = 'select gs_report_id from gs_report where gs_basic_id = %s and year = %s '
 basic_string = 'insert into gs_report(gs_basic_id,year,province,name,uuid, tel, address, email, postcode, status, employee, if_empnum, womennum,\
- if_womennum, holding, if_holding,mainbus,code,ccode,pripid,source,runner,amount,created,updated) values(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)'
+ if_womennum, holding, if_holding,mainbus,code,ccode,pripid,source,runner,amount,fill_date,created,updated) values(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)'
 select_report1 = 'select gs_report_id from gs_report where gs_basic_id = %s and year = %s and source = 0'
 run_string = 'insert into gs_report_run(gs_report_id,gs_basic_id,province,asset,if_asset,benifit,if_benifit,income,if_income,profit,if_profit,main_income,if_main,net_income,if_net,tax,if_tax,debt,if_debt,uuid,created,updated) values(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)'
 frun_string = 'insert into gs_report_run(gs_report_id,gs_basic_id,province,uuid,income,if_income,profit,if_profit,tax,if_tax,loan, if_loan, subsidy, if_subsidy,created,updated) values(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)'
@@ -56,7 +57,7 @@ permit_py = 'update gs_py set gs_py_id = %s ,report_permit = %s ,updated = %s wh
 schange_py = 'update gs_py set gs_py_id = %s ,report_schange = %s,updated = %s where gs_basic_id = %s and gs_py_id = %s'
 share_py = 'update gs_py set gs_py_id = %s,report_share = %s,updated = %s where gs_basic_id = %s and gs_py_id = %s'
 web_py = 'update gs_py set gs_py_id = %s,report_web = %s,updated = %s where gs_basic_id = %s and gs_py_id = %s'
-update_address = 'update gs_basic set gs_basic_id = %s,tel = %s,address = %s,email = %s,updated = %s where gs_basic_id = %s'
+update_address = 'update gs_basic set gs_basic_id = %s,tel = %s,address = %s,email = %s where gs_basic_id = %s'
 select_year = 'select year from gs_report where gs_basic_id = %s '
 select_basic_year = 'select reg_date from gs_basic where gs_basic_id = %s'
 update_pbreport = 'insert into gs_report(gs_basic_id,year,province,name,uuid,code,ccode,source,report_mode,created,updated) values(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)'
@@ -228,7 +229,7 @@ class Report:
             remark = 100000006
             logging.info('frun error:%s'%e)
         finally:
-            if remark <10000001:
+            if remark <100000001:
                 remark = row_count
             updated_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
             self.cursor.execute(update_run_py, (self.gs_py_id, remark, updated_time, gs_basic_id, self.gs_py_id))
@@ -236,8 +237,6 @@ class Report:
             logging.info('execute report %s frun:%s' % (year, row_count))
 
             return remark
-
-
 
 
     #获取合作社家庭的个人用户的基本信息
@@ -284,6 +283,7 @@ class Report:
             logging.error('report error %s'%e)
         finally:
             return flag
+    #年报类型为e的类型链接
     def get_report_url(self, anCheId):
         information = {}
         url = host + '/corp-query-entprise-info-vAnnualReportBaseInfoForJs-%s.html' % anCheId
@@ -307,6 +307,7 @@ class Report:
         schangeUrl = host + data["vAnnualReportAlterstockinfoUrl"]
         information["schange"] = schangeUrl
         return information
+    #年报类型为sfc的链接
     def get_freport_url(self,anCheId):
         info = {}
         #http://www.gsxt.gov.cn/corp-query-entprise-info-vAnnualSfcReportBaseInfoForJs-PROVINCENODENUM53000000c868f3492a41db8f5aecac83084053.html
@@ -323,6 +324,7 @@ class Report:
         info["society"] = annSfcSocsecinfoUrl
         info["base"] = vannualSfcAssertUrl
         return info
+    #年报类型为pb类型的链接
     def get_preport_url(self,anCheId):
         info = {}
         url = host +'/corp-query-entprise-info-vAnnualPbReportBaseInfoForJs-%s.html'%anCheId
@@ -382,7 +384,18 @@ class Report:
             mainbus = data["mainBusiAct"]
             code = data["regNo"]
             ccode = data["uniscId"]
-            information[0] = [name,uuid, tel, address, email, postcode, status, employee, if_empnum, womennum, if_womennum, holding, if_holding,mainbus,code,ccode]
+            if "name" in data.keys():
+                runner = data["name"]
+            else:
+                runner = None
+            if "fundAm" in data.keys():
+                amount = data["fundAm"]
+            else:
+                amount = None
+            pripid = data["pripId"]
+            fill_date = data["anCheDate"]
+            fill_date = deal_html_code.change_date_style(fill_date)
+            information[0] = [name,uuid, tel, address, email, postcode, status,employee, if_empnum, womennum, if_womennum, holding, if_holding,mainbus,code,ccode,pripid,runner,amount,fill_date]
             loan = data["priYeaLoan"]
             if_loan = data["priYeaLoanDis"]
             if if_loan!=u"" and if_loan!=None:
@@ -470,7 +483,9 @@ class Report:
             mainbus = data["mainBusiAct"]
             pripid = data["pripId"]
             runner,amount = None,None
-            information[0] = [name,uuid, tel, address, email, postcode, status, employee, if_empnum, womennum, if_womennum, holding, if_holding,mainbus,code,ccode,pripid,runner,amount]
+            fill_date = data["anCheDate"]
+            fill_date = deal_html_code.change_date_style(fill_date)
+            information[0] = [name,uuid, tel, address, email, postcode, status, employee, if_empnum, womennum, if_womennum, holding, if_holding,mainbus,code,ccode,pripid,runner,amount,fill_date]
             asset = data["assGro"]
             if_asset = data["assGroDis"]
             if asset!=None and str(if_asset)!='':
@@ -513,7 +528,6 @@ class Report:
                 if_main = 0
             net_income = data["netInc"]
             if_net = data["netIncDis"]
-
             if if_net!=None and str(if_net)!='':
                 if_net = int(data["netIncDis"])
                 if if_net ==2:
@@ -556,7 +570,9 @@ class Report:
             status = None
             employee = data["empNum"]
             if_empnum = data["empNumDis"]
-
+            pripid = data["pripId"]
+            fill_date = data["anCheDate"]
+            fill_date = deal_html_code.change_date_style(fill_date)
             if if_empnum != u"" and if_empnum != None:
                 if_empnum = int(if_empnum)
                 if if_empnum == 2:
@@ -575,14 +591,13 @@ class Report:
             if "name" in data.keys():
                 runner = data["name"]
             else:
-                name = None
+                runner = None
             if "fundAm" in data.keys():
                 amount = data["fundAm"]
             else:
                 amount = None
-
             information[0] = [name, uuid, tel, address, email, postcode, status, employee, if_empnum, womennum,
-                              if_womennum, holding, if_holding, mainbus, code, ccode,runner,amount]
+                              if_womennum, holding, if_holding, mainbus, code, ccode,pripid,runner,amount,fill_date]
             loan = None
             if_loan = 0
 
@@ -615,12 +630,13 @@ class Report:
         name, uuid, tel, address = baseinfo[0][0], baseinfo[0][1], baseinfo[0][2], baseinfo[0][3]
 
         email, postcode, status, employee = baseinfo[0][4],baseinfo[0][5],baseinfo[0][6],baseinfo[0][7]
-        pripid = baseinfo[0][8]
+
         if_empnum, womennum, if_womennum, holding = baseinfo[0][8],baseinfo[0][9],baseinfo[0][10],baseinfo[0][11]
         if_holding, mainbus = baseinfo[0][12],baseinfo[0][13]
         code,ccode= baseinfo[0][14],baseinfo[0][15]
-        runner, amount = baseinfo[0][16],baseinfo[0][17]
-        updated_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
+        pripid = baseinfo[0][16]
+        runner, amount = baseinfo[0][17],baseinfo[0][18]
+        fill_date = baseinfo[0][19]
         m = hashlib.md5()
         m.update(str(self.gs_basic_id) + str(year))
         uuid = m.hexdigest()
@@ -630,7 +646,7 @@ class Report:
             tel = None
         if address == '无':
             address = None
-        cursor.execute(update_address, (gs_basic_id, tel, address, email, updated_time, gs_basic_id))
+        cursor.execute(update_address, (gs_basic_id, tel, address, email,gs_basic_id))
         connect.commit()
         remark = 0
         source = 1
@@ -638,7 +654,7 @@ class Report:
             updated_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
             row_count = cursor.execute(basic_string, (gs_basic_id, year, province,
                     name, uuid, tel, address, email, postcode, status, employee, if_empnum, womennum, if_womennum,
-                    holding, if_holding, mainbus,code,ccode,pripid,source,runner,amount,updated_time,updated_time))
+                    holding, if_holding, mainbus,code,ccode,pripid,source,runner,amount,fill_date,updated_time,updated_time))
             gs_report_id = connect.insert_id()
             connect.commit()
         except Exception, e:
@@ -666,14 +682,14 @@ class Report:
             remark = 100000006
             logging.error('report %sfrun error %s' %(year,e))
         finally:
-            if remark <100000001:
+            if remark <10000001:
                 remark = row_count
             updated_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
             cursor.execute(update_run_py,(self.gs_py_id,remark,updated_time,gs_basic_id,self.gs_py_id))
             connect.commit()
             logging.error('execute report %s frun:%s' % (year, row_count))
 
-            # print 'execute report %s frun:%s' % (year, row_count)
+           
 
     #对于股份有限公司等的资产状况信息
     def update_run(self,year,gs_report_id,gs_basic_id,cursor,connect,province,runinfo):
@@ -720,11 +736,11 @@ class Report:
             return remark
 #对年报中的各分项数据进行更新
 def update_report_main(url, cursor, connect, gs_basic_id,gs_py_id):
-    total,insert_toal = 0,0
+    total, insert_toal = 0, 0
     update_total = 0
     try:
         info = Report(url, cursor, connect, gs_basic_id,gs_py_id)
-        year_href,remark = info.get_year_href()
+        year_href, remark = info.get_year_href()
         if len(year_href) == 0:
             if remark == 1:
                 flag = -1
@@ -758,11 +774,11 @@ def update_report_main(url, cursor, connect, gs_basic_id,gs_py_id):
                         flag = info.get_report_info(year, anCheId, province)
                     elif entType == 'sfc':
                         flag = info.get_freport_info(year, anCheId, province)
-                    elif entType == 'pb' and annRepFrom!='2':
-                        flag = info.get_pbreport_info(year,anCheId,province)
-                    elif entType == 'pb' and annRepFrom =='2':
-                        flag = info.update_pbreport(year,gs_basic_id,cursor,connect,province)
-                    insert_toal+=flag
+                    elif entType == 'pb' and annRepFrom != '2':
+                        flag = info.get_pbreport_info(year, anCheId, province)
+                    elif entType == 'pb' and annRepFrom == '2':
+                        flag = info.update_pbreport(year, gs_basic_id, cursor, connect, province)
+                    insert_toal += flag
     except Exception, e:
         flag = 100000006
         updated_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
@@ -770,10 +786,10 @@ def update_report_main(url, cursor, connect, gs_basic_id,gs_py_id):
         connect.commit()
         logging.info('report error %s' % e)
     finally:
-        return flag,total,insert_toal,update_total
+        return flag, total, insert_toal, update_total
 
 
-
+#用于判断公司是否是当年成立的，当年成立的认为没有年报
 def update_report(url,cursor, connect, gs_basic_id,gs_py_id):
     total,insert_total = 0,0
     update_total = 0
@@ -787,6 +803,7 @@ def update_report(url,cursor, connect, gs_basic_id,gs_py_id):
         elif now_year > int(sign_date):
             flag,total,insert_total,update_total = update_report_main(url, cursor, connect, gs_basic_id,gs_py_id)
     except Exception, e:
+        #print e
         flag = 100000006
         logging.error('report error :%s' % e)
     finally:

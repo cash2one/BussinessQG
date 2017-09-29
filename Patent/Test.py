@@ -67,13 +67,13 @@ elem = driver.find_element_by_class_name("btn")
 elem.send_keys(Keys.ENTER)
 cookies = driver.get_cookies()
 print cookies
-string = u"物理"
-elem = driver.find_element_by_xpath("//*[@id= 'quickInput']")
-
-
-elem.send_keys(string)
-elem = driver.find_element_by_xpath("//*[@id= 'quickSearch']")
-elem.send_keys(Keys.ENTER)
+string = u"建筑物"
+# elem = driver.find_element_by_xpath("//*[@id= 'quickInput']")
+#
+#
+# elem.send_keys(string)
+# elem = driver.find_element_by_xpath("//*[@id= 'quickSearch']")
+# elem.send_keys(Keys.ENTER)
 # print driver.page_source
 # driver.quit()
 

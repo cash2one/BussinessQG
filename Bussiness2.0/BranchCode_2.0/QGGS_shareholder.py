@@ -29,7 +29,7 @@ Type = sys.getfilesystemencoding()
 # pagenumber = sys.argv[4]
 # perpage = sys.argv[5]
 
-url = 'http://www.gsxt.gov.cn/%7BvGiu0EPxn5iq9g2e0UFvq4uPjfSgGUlXFpDRESz5lXQodzkBarXKDQesPP_TjGDv3Ddww4PsVga46ohA2o0BW4K-E1jbabtSQtKHb0JbXX1g-VszZxV850y08Q7djJxHFYNVYEuuNrCS7hmWAbhERA-1504608710311%7D'
+url = 'http://www.gsxt.gov.cn/%7Ba8cGdSp6ifXpkAR8qkKIOpkfNYcK9YfPrCXIeYnQa1sda20_lWPh51pwIpBRvdsNr0fRVS7S_BikiJmAbMDk-yW3TzQHYWvKCzeQ4neGvuIdZRcD4pb-OhhQtRn9h7-CXqavHOrOaPG18xlGjfgO3A-1505091743115%7D'
 gs_basic_id = 1900000099
 gs_py_id = 1501
 pagenumber = 1
@@ -181,6 +181,7 @@ class Shareholder:
                 reg_amount, ta_ways, ta_date = information[key][7], information[key][8], information[key][9]
 
                 country,address = information[key][10],information[key][11]
+                iv_basic_id = 0
                 if name!= '' or name !=None:
                     pattern = re.compile('.*公司.*|.*中心.*|.*集团.*|.*企业.*')
                     result = re.findall(pattern,name)
@@ -195,7 +196,7 @@ class Shareholder:
                             iv_basic_id = cursor.fechall[0][0]
                 else:
                     iv_basic_id = 0
-
+                ps_basic_id = 0
                 if license_type == '中华人民共和国居民身份证':
                     if license_code == '' or license_code == None:
                         license_code = '非公示项'
@@ -219,7 +220,6 @@ class Shareholder:
                     gs_shareholder_id = cursor.fetchall()[0][0]
                     cursor.execute(update_quit, (updated_time, gs_shareholder_id, gs_basic_id))
                     connect.commit()
-
         except Exception, e:
             remark = 100000006
             logging.error("shareholder error:%s" % e)

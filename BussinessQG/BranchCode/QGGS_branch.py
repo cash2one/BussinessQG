@@ -28,24 +28,26 @@ def name(data):
 def update_to_db(gs_basic_id, cursor, connect, information):
     insert_flag = 0
     flag = 0
+    replay = 0
     try:
         for key in information.keys():
             name = information[key][0]
             code = information[key][1]
             gov_dept = information[key][2]
-
             count = cursor.execute(select_string,(name, gs_basic_id))
             if count == 0:
                 updated_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
                 rows_count = cursor.execute(branch_string, (gs_basic_id, code, name, gov_dept, updated_time))
                 insert_flag += rows_count
                 connect.commit()
+            if count > 0:
+                replay+= count
 
     except Exception, e:
         flag = 100000001
         logging.error('branch error: %s'%e)
     finally:
-        if flag <100000001:
-            flag = insert_flag
+        if flag < 100000001:
+            flag = insert_flag + replay
         return flag
 

@@ -12,7 +12,7 @@ sys.setdefaultencoding('utf-8')
 Type = sys.getfilesystemencoding()
 
 insert_string = 'insert into gs_change(gs_basic_id,types,item,content_before,content_after,change_date,updated)values(%s,%s,%s,%s,%s,%s,%s)'
-
+select_string = 'select gs_basic_id,content_after from gs_change where gs_basic_id = %s and item = %s and change_date = %s '
 
 def name(data):
     information = {}
@@ -39,10 +39,24 @@ def update_to_db(gs_basic_id, cursor, connect, information):
             change_date, item = information[key][2], information[key][3]
             types = '变更'
             updated_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
-            row_count = cursor.execute(insert_string, (
+            count = cursor.execute(select_string,(gs_basic_id,item,change_date))
+            if count == 0:
+                row_count = cursor.execute(insert_string, (
+                            gs_basic_id, types, item, content_before, content_after, change_date, updated_time))
+                insert_flag += row_count
+                connect.commit()
+            elif count > 1:
+                remark = 0
+                for gs_basic_id, content in cursor.fetchall():
+                    if content == content_after:
+                        remark = 1
+                        break
+                if remark == 0:
+                    row_count = cursor.execute(insert_string, (
                         gs_basic_id, types, item, content_before, content_after, change_date, updated_time))
-            insert_flag += row_count
-            connect.commit()
+                    insert_flag += row_count
+                    connect.commit()
+
     except Exception, e:
         flag = 100000001
         logging.error("change error :%s " % e)

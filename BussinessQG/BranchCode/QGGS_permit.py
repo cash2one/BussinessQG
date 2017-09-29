@@ -11,9 +11,9 @@ from PublicCode.deal_html_code import change_date_style
 reload(sys)
 sys.setdefaultencoding('utf-8')
 Type = sys.getfilesystemencoding()
-select_string = 'select gs_permit_id from gs_permit where gs_basic_id = %s and code = %s and start_date = %s'
+select_string = 'select gs_permit_id from gs_permit where gs_basic_id = %s and name = %s'
 permit_string = 'insert into gs_permit(gs_basic_id,id,name, code, filename, start_date, end_date, content, gov_dept,updated)values(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)'
-update_string = 'update gs_permit set name = %s,filename = %s ,start_date = %s ,end_date = %s ,content = %s,gov_dept = %s,updated= %s where gs_permit_id = %s'
+
 
 
 def name(data):
@@ -35,11 +35,12 @@ def name(data):
 
 def update_to_db(gs_basic_id, cursor, connect, information):
     insert_flag = 0
+    remark = 0
     for key in information.keys():
         name, code, filename, start_date = information[key][0], information[key][1], information[key][2], \
                                            information[key][3]
         end_date, content, gov_dept = information[key][4], information[key][5], information[key][6]
-        count = cursor.execute(select_string, (gs_basic_id, code, start_date))
+        count = cursor.execute(select_string, (gs_basic_id, name))
         m = hashlib.md5()
         m.update(code)
         id = m.hexdigest()
@@ -52,7 +53,9 @@ def update_to_db(gs_basic_id, cursor, connect, information):
                 connect.commit()
 
         except Exception, e:
-
+            remark = 100000001
             logging.error("permit error: %s" % e)
-    flag = insert_flag
-    return flag
+    if remark < 100000001:
+        remark = insert_flag
+
+    return remark

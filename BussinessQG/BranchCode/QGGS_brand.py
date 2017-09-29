@@ -4,10 +4,8 @@
 import logging
 import sys
 import time
-
-from PublicCode.Public_code import Send_Request
 from PublicCode.deal_html_code import change_date_style
-import os
+
 reload(sys)
 sys.setdefaultencoding('utf-8')
 Type = sys.getfilesystemencoding()
@@ -52,8 +50,8 @@ def update_to_db(gs_basic_id, cursor, connect, information):
                 ia_img_url = 'http://www.gsxt.gov.cn' + '/doc/%s/tmfiles/' % nodeNum + str(tmImage)
             else:
                 ia_img_url = None
-
-            count = cursor.execute(select_brand, (ia_zch))
+            select_string = select_brand % ia_zch
+            count = cursor.execute(select_string)
             if count == 0:
                 updated_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
                 rows_count = cursor.execute(brand_string, (

@@ -36,7 +36,7 @@ class Clear:
             for key in information.keys():
                 person_name = str(information[key][0])
                 position = str(information[key][1])
-                rows = cursor.execute(select_string, (person_name, position, gs_basic_id))
+                rows = cursor.execute(select_string, (gs_basic_id,person_name,position))
                 if int(rows) == 1:
                     gs_clear_id = cursor.fetchall()[0][0]
                     updated_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
@@ -59,5 +59,5 @@ class Clear:
             return remark,total,insert_flag,update_flag
 def main(gs_py_id,gs_basic_id,data):
     Log().found_log(gs_py_id, gs_basic_id)
-    print_info = Judge_status().updaye_py(gs_py_id,gs_basic_id,Clear,"clear",data,update_clear_py)
+    print_info = Judge_status().update_py(gs_py_id,gs_basic_id,Clear,"clear",data,update_clear_py)
     return print_info

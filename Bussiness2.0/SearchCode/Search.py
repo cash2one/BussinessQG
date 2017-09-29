@@ -27,9 +27,9 @@ Type = sys.getfilesystemencoding()
 # user_id = sys.argv[1]
 # keyword = sys.argv[2]
 # unique_id = sys.argv[3]
-keyword = '上海绿地'
+keyword = '南京银行股份有限公司'
 user_id = 1
-unique_id = '1502189197.13'
+unique_id = '150218919723232'
 
 
 log_path = config.log_path

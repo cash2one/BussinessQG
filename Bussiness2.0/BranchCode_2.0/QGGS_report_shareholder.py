@@ -43,7 +43,7 @@ class Share:
 
 
     def update_to_db(self,gs_report_id, gs_basic_id, cursor, connect, information,province):
-        insert_flag,update_flag = 0,0
+        insert_flag, update_flag = 0, 0
         remark = 0
         try:
             for key in information.keys():

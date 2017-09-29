@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding:utf-8 -*-
 
-import hashlib
+
 import json
 import logging
 import sys
@@ -15,7 +15,7 @@ sys.setdefaultencoding('utf-8')
 Type = sys.getfilesystemencoding()
 freeze_string = 'insert into gs_freeze(gs_basic_id,executor, stock_amount, court, notice_no,status,items, rule_no, enforce_no,cert_cate,cert_code, start_date, end_date,period, pub_date,updated)values(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)'
 select_freeze = 'select gs_freeze_id from gs_freeze where gs_basic_id = %s and rule_no = %s'
-update_freeze = 'update gs_freeze set gs_basic_id = %s,executor = %s ,stock_amount = %s, court = %s,status = %s ,items = %s,rule_no = %s,enforce_no = %s ,cert_cate = %s, cert_code = %s,start_date = %s,end_date = %s,period = %s ,pub_date = %s ,updated = %s where gs_freeze_id = %s'
+
 
 
 def name(data):
@@ -53,7 +53,7 @@ def name(data):
                           cert_code, start_date, end_date, period, pub_date]
     return information
 
-
+#用于处理详情页，获取详情页信息
 def deal_detail_content(detail_url):
     result, status_code = Send_Request().send_requests(detail_url)
     # print detail_url
@@ -91,7 +91,6 @@ def update_to_db(gs_basic_id, cursor, connect, information):
         try:
             count = cursor.execute(select_freeze, (gs_basic_id, rule_no))
             if count == 0:
-
                 updated_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
                 rows_count = cursor.execute(freeze_string, (
                 gs_basic_id, executor, stock_amount, court, notice_no, status, items, rule_no, enforce_no,

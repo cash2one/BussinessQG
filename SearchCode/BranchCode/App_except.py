@@ -84,5 +84,5 @@ class Except:
             return remark,total,insert_flag,update_flag
 def main(gs_py_id,gs_basic_id,data):
     Log().found_log(gs_py_id, gs_basic_id)
-    print_info = Judge_status().updaye_py(gs_basic_id,Except,"except",data)
+    print_info = Judge_status().update_py(gs_basic_id,Except,"except",data)
     return print_info

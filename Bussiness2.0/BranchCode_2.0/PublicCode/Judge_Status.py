@@ -36,7 +36,7 @@ class Judge:
     def update_branch(self,update_sql,QGGS,name):
 
         if name == 'share' or name == 'brand' or name =='branch':
-        # recordstotal, total,insert_total,update_total = Get_BranchInfo(self.gs_py_id).get_info(None, self.gs_basic_id,self.cursor,self.connect,self.url, QGGS,name)
+
             recordstotal, total,insert_total,update_total,totalpage,perpage = Get_BranchInfo(self.gs_py_id).get_singleinfo(None, self.gs_basic_id,self.cursor,self.connect,self.url, QGGS,name,self.page,self.perpage)
         else:
             totalpage, perpage = 0, 0

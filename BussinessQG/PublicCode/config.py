@@ -4,21 +4,30 @@
 import random
 import re
 import sys
-
+import os
+#------------------------------------------------------------
+os.environ['PYTHON_EGG_CACHE'] = '/tmp'
+#------------------------------------------------------------
 reload(sys)
 sys.setdefaultencoding('utf-8')
 Type = sys.getfilesystemencoding()
 #日志文件路径start-----------------------------------------------------------
-log_path = './Public/Python'
+#log_path = './Public/Python'
+log_path = '.'
 #日志文件路径end-------------------------------------------------------------
 
 #网络主站start---------------------------------------------------------------
 host = "http://www.gsxt.gov.cn"
 #网络主站end----------------------------------------------------------------
 
+#极验破解start
+break_url = "http://59.110.138.116/geetest/get?token=seo_dsboye&reg=http://www.gsxt.gov.cn/SearchItemCaptcha"
+search_url = 'http://www.gsxt.gov.cn/corp-query-search-1.html'
+search_text = "tab=ent_tab&token=34911389&searchword=%s&geetest_challenge=%s&geetest_validate=%s&geetest_seccode=%s|7Cjordan"
+#极验破解end
 
 #数据库用户名配置-----------------------------------------------------------
-HOST, USER, PASSWD, DB, PORT = 'localhost', 'root', '123456', 'test', 3306
+HOST, USER, PASSWD, DB, PORT = '127.0.0.1', 'root', '123456', 'test', 3306
 #数据库用户名配置end--------------------------------------------------------
 
 
@@ -38,8 +47,14 @@ person_img = {
     'DkAAAAOCAYAAACVZ7SQAAACg0lEQVR42rWXQWScQRTHR0SsWqGH': '其他人员',
     'FUAAAAOCAYAAABevFBuAAAEC0lEQVR42r2YcUScYRzHXzknk8hk': '董事兼总经理',
     'DkAAAAOCAYAAACVZ7SQAAACk0lEQVR42rWWQWRcURSGn4roYoSI': '经理',
-    'DkAAAAOCAYAAACVZ7SQAAACqElEQVR42r2WUYSUURTHx1irh8RK': '执行董事'
-
+    'DkAAAAOCAYAAACVZ7SQAAACqElEQVR42r2WUYSUURTHx1irh8RK': '执行董事',
+    'CsAAAAOCAYAAAC2POVFAAAB6klEQVR42p2VQUTDURzH/2bSYWKH': '负责人',
+    'DkAAAAOCAYAAACVZ7SQAAACxUlEQVR42r2WX2RbURzHr4iYiRE1':'副总经理',
+    'EcAAAAOCAYAAAB95wG7AAACn0lEQVR42sWXT2RcURTGnxGRRYUa':'董事，行长',
+    'FUAAAAOCAYAAABevFBuAAADKklEQVR42sWXX2RbURzHIyL6EKVi':'董事，副行长',
+    'B0AAAAOCAYAAADT0Rc6AAABoUlEQVR42r2UT0REURTGr5G0eCJJ':'经理',
+    'CsAAAAOCAYAAAC2POVFAAAB00lEQVR42q2VMUgDMRSGi5TSoQil' :'副行长',
+    'EcAAAAOCAYAAAB95wG7AAADcUlEQVR42r2Xb0TcYRzAf05O5kRm' :'董事兼经理'
 }
 #人员图片与职位对应end -----------------------------------------------------
 
@@ -101,6 +116,9 @@ report_pattern = re.compile(r'var anCheYearInfo = "(.*?)"')
 mort_pattern = re.compile(r'var mortRegInfoUrl = "(.*?)"')
 gtshare_pattern = re.compile('var insInvinfoUrl = "(.*?)"')
 gtpunish_pattern = re.compile('var insPunishmentinfoUrl = "(.*?)"')
+liquidation_pattern = re.compile('var liquidationUrl = "(.*?)"')
+black_pattern = re.compile('var IllInfoUrl = "(.*?)"')
+
 #各分块数据url---------------------------------------------------------------------------
 
 

@@ -3,7 +3,6 @@
 import hashlib
 import json
 import os
-import random
 import re
 import sys
 import time
@@ -16,7 +15,7 @@ from bs4 import BeautifulSoup
 from PublicCode import config
 from PublicCode.Public_code import Connect_to_DB
 
-# import provincelist
+
 # 用于解决中文编码问题
 reload(sys)
 sys.setdefaultencoding('utf-8')
@@ -30,7 +29,25 @@ select_string = 'select gs_basic_id from gs_basic where code = %s'
 insert_string = "insert into gs_basic(id,province,name,code,ccode,legal_person,reg_date,status,updated ) values (%s,%s,%s, %s, %s,%s,%s, %s,%s)"
 update_string = "update gs_basic set name = %s,legal_person = %s,reg_date = %s,status = %s,updated = %s where gs_basic_id = %s"
 
+# 代理服务器
+proxyHost = "proxy.abuyun.com"
+proxyPort = "9010"
 
+# 代理隧道验证信息
+proxyUser = "HQRMZT62299COJ2P"
+proxyPass = "1B668ADB969075FD"
+
+proxyMeta = "http://%(user)s:%(pass)s@%(host)s:%(port)s" % {
+      "host" : proxyHost,
+      "port" : proxyPort,
+      "user" : proxyUser,
+      "pass" : proxyPass,
+    }
+
+proxies = {
+        "http": proxyMeta,
+        "https": proxyMeta,
+}
 # 用于程序自我重启
 def restart_program():
     python = sys.executable
@@ -52,8 +69,9 @@ def get_cookies():
 # 用于获取validate与challenge
 
 def break_password(cookies):
-    url = 'http://115.28.86.78/geetest/get?token=seo_test1&reg=http://www.gsxt.gov.cn/SearchItemCaptcha'
+    url = 'http://59.110.138.116/geetest/get?token=seo_dsboye&reg=http://www.gsxt.gov.cn/SearchItemCaptcha'
     result = session.get(url, cookies=cookies, headers=config.headersfirst)
+    print result
     json_list = json.loads(result.content)
     success_flag = json_list["success"]
     if success_flag == 1:
@@ -117,15 +135,19 @@ def update_db(information, cursor, connect):
         pattern = re.compile(r"^91.*|92.*|93.*")
         ccode = re.findall(pattern, code)
         if len(ccode) == 0:
-            ccode = None
+            ccode = code
         elif len(ccode) == 1:
             ccode = ccode[0]
+            code = ccode
         m = hashlib.md5()
         m.update(code)
         id = m.hexdigest()
         updated = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
         company, status, daibiao, dates = information[key][1], information[key][2], information[key][4], \
                                           information[key][5]
+        list = re.split(u'、', daibiao)
+        daibiao = list[0] +'等'
+
         try:
             cursor.execute(select_string, code)
             basic_id = cursor.fetchall()
@@ -176,13 +198,66 @@ def main():
         HOST, USER, PASSWD, DB, PORT = config.HOST, config.USER, config.PASSWD, config.DB, config.PORT
         connect, cursor = Connect_to_DB().ConnectDB(HOST, USER, PASSWD, DB, PORT)
         # string = '914100001711393654'
-        string = '91421303X1574749XM'
+        string = '91110000740085820P'
+        # string_list = [
+        #                '四川五金店',
+        #                '云南五金店',
+        #                '河北五金店',
+        #                '上海五金店']
+        string_list = ['乐视信息技术']
+        # string_list = [
+        #     '北京知识产权',
+        #     '天津知识产权',
+        #     '河北知识产权',
+        #     '山西知识产权',
+        #     '内蒙古知识产权',
+        #     '辽宁知识产权',
+        #     '吉林知识产权',
+        #     '黑龙江知识产权',
+        #     '上海知识产权',
+        #     '江苏知识产权',
+        #     '浙江知识产权',
+        #     '安徽知识产权',
+        #     '福建知识产权',
+        #     '江西知识产权',
+        #     '山东知识产权',
+        #     '河南知识产权',
+        #     '湖北知识产权',
+        #     '湖南知识产权',
+        #     '广东知识产权',
+        #     '广西知识产权',
+        #     '海南知识产权',
+        #     '重庆知识产权',
+        #     '四川知识产权',
+        #     '贵州知识产权',
+        #     '云南知识产权',
+        #     '西藏知识产权',
+        #     '陕西知识产权',
+        #     '甘肃知识产权',
+        #     '青海知识产权',
+        #     '宁夏知识产权',
+        #     '新疆知识产权',
+        #     '台湾知识产权',
+        #     '香港知识产权',
+        #     '澳门知识产权'
+        # ]
         # string = '洛阳银行股份有限公司'
-        challenge, validate, cookies = loop_break_password()
-        information = last_request(challenge, validate, string, cookies)
-        update_db(information, cursor, connect)
+        for i,string in enumerate(string_list):
+            print string
+            try:
+                challenge, validate, cookies = loop_break_password()
+                print challenge,validate,cookies
+                information = last_request(challenge, validate, string, cookies)
+            except Exception,e:
+                raise
+            else:
+                update_db(information, cursor, connect)
     except Exception, e:
         print e
+        raise
+    finally:
+        cursor.close()
+        connect.close()
 
 
 if __name__ == "__main__":
