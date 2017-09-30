@@ -36,12 +36,12 @@ class Permit:
                 start_date = singledata["valFrom"]
                 start_date = deal_html_code.change_chinese_date(start_date)
             else:
-                start_date = None
+                start_date = '0000-00-00'
             if "valTo" in singledata.keys():
                 end_date = singledata["valTo"]
                 end_date = deal_html_code.change_chinese_date(end_date)
             else:
-                end_date = None
+                end_date = '0000-00-00'
 
             if "licItem" in singledata.keys():
                 content = singledata["licItem"]

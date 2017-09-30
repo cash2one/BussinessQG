@@ -32,7 +32,7 @@ class Except:
                 in_date = singledata["abnTime"]
                 in_date = deal_html_code.change_chinese_date(in_date)
             else:
-                in_date = None
+                in_date = '0000-00-00'
 
             if "remExcpResInterpreted" in singledata.keys():
                 out_reason = singledata["remExcpResInterpreted"]
@@ -43,7 +43,7 @@ class Except:
                 out_date = singledata["remDate"]
                 out_date = deal_html_code.change_chinese_date(out_date)
             else:
-                out_date = None
+                out_date = '0000-00-00'
             if "decOrgInterpreted" in singledata.keys():
                 gov_dept = singledata["decOrgInterpreted"]
             else:

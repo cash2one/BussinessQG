@@ -34,7 +34,7 @@ class Punish:
                 date = singledata["penDecissDate"]
                 date = deal_html_code.change_chinese_date(date)
                 # updateDate = singledata["updateDate"]
-                pub_date = None
+                pub_date = '0000-00-00'
                 pdfurl = singledata["penFilePath"]
                 name = singledata["illegPt"]
                 gov_dept = singledata["penOrgan"]

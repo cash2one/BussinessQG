@@ -44,8 +44,8 @@ class Share:
                     license_type = single["cetfTypeInterpreted"]
                     license_code = single["cetfId"]
                 elif single["blicTypeInterpreted"]=='' and single["cetfTypeInterpreted"] =='':
-                    license_code = None
-                    license_type = None
+                    license_code = ''
+                    license_type = ''
                 license_code = deal_html_code.remove_symbol(license_code)
                 if "subconAm" in single.keys():
                     reg_amount = single["subconAm"]
@@ -59,7 +59,7 @@ class Share:
                     ta_date = single["conDate"]
                     ta_date = deal_html_code.change_chinese_date(ta_date)
                 else:
-                    ta_date = None
+                    ta_date = '0000-00-00'
                 if "conForm" in single.keys():
                     ta_ways = single["conForm"]
                 else:
@@ -73,7 +73,7 @@ class Share:
                 if "dom" in single.keys():
                     address = single["dom"]
                 else:
-                    address = None
+                    address = ''
                 encrypted = single["encrypted"]
                 cetfType = single["cetfType"]
                 info[i] = [name, types, license_code, license_type, reg_amount, true_amount, ta_date, ta_ways, country,
@@ -132,7 +132,7 @@ class Share:
                 name, types, license_code, license_type = info[key][0],info[key][1],info[key][2],info[key][3]
                 reg_amount, true_amount, ta_date, ta_ways = info[key][4],info[key][5],info[key][6],info[key][7]
                 country, address = info[key][8],info[key][9]
-                if name!= '' or name !=None:
+                if name!= '' :
                     pattern = re.compile('.*公司.*|.*中心.*|.*集团.*|.*企业.*')
                     result = re.findall(pattern,name)
                     if len(result) ==0:
@@ -151,7 +151,7 @@ class Share:
                 cetfType = info[key][11]
                 ps_basic_id = 0
                 if cetfType == '1':
-                    if license_code == '' or license_code == None:
+                    if license_code == '' or license_code == '':
                         license_code = '非公示项'
                     
                     elif len(license_code) == 15 or len(license_code) == 18:

@@ -49,7 +49,7 @@ class Mort:
                 dates = singledata["regDate"]
                 dates = deal_html_code.change_chinese_date(dates)
             else:
-                dates = None
+                dates = '0000-00-00'
             if "regOrgInterpreted" in singledata.keys():
                 dept = singledata["regOrgInterpreted"]
             else:
@@ -66,24 +66,24 @@ class Mort:
             if "priclasecKind" in singledata.keys():
                 cates = singledata["priclasecKind"]
             else:
-                cates = None
+                cates = ''
             if "pefperForm" in singledata.keys():
                 begin = deal_html_code.change_chinese_date(singledata["pefperForm"])
                 end = deal_html_code.change_chinese_date(singledata["pefperTo"])
-                if begin == None and end == None:
-                    period = None
+                if begin == '0000-00-00' and end == '0000-00-00':
+                    period = ''
                 else:
                     period = begin+'至'+end
             else:
-                period = None
+                period = ''
             if "warCov" in singledata.keys():
                 ranges = singledata["warCov"]
             else:
-                ranges = None
+                ranges = ''
             if "remark" in singledata.keys():
                 remark = singledata["remark"]
             else:
-                remark = None
+                remark = ''
             url = mort_url[province].format(uuid)
 
             info = requests.get(url).content
@@ -160,7 +160,7 @@ class Mort:
     def update_goods_py(self,gs_py_id, gs_basic_id, cursor, connect, total,execute):
         try:
             if total == 0:
-                flag = None
+                flag = ''
             elif total > 0 and execute>=0 and execute< 100000001:
                 flag = execute
             elif total > 0 and execute > 100000001:
@@ -170,7 +170,7 @@ class Mort:
             flag = 100000005
             logging.error("mort goods error %s" % e)
         finally:
-            if flag == None:
+            if flag == '':
                 pass
             else:
                 updated_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
@@ -180,7 +180,7 @@ class Mort:
     def update_person_py(self,gs_py_id,gs_basic_id, cursor, connect, total,execute):
         try:
             if total == 0:
-                flag = None
+                flag = ''
             elif total > 0 and execute>=0 and execute< 100000001:
                 flag = execute
             elif total > 0 and execute > 100000001:
@@ -190,7 +190,7 @@ class Mort:
             flag = 100000005
             logging.error("mort goods error %s" % e)
         finally:
-            if flag == None:
+            if flag == '':
                 pass
             else:
                 updated_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
@@ -274,19 +274,19 @@ class Mort:
     # 获取单页的动产抵押信息
     def get_single_goods(self,data):
         information = {}
-        if data != None:
+        if data != '':
             for i,singledata in enumerate(data):
                 name = singledata["guaName"]
                 if "own" in singledata.keys():
                     ownership = singledata["own"]
                 else:
-                    ownership = None
+                    ownership = ''
                 situation = singledata["guaDesc"]
                 situation = deal_html_code.remove_symbol(situation)
                 if "remark" in singledata.keys():
                     remark = singledata["remark"]
                 else:
-                    remark = None
+                    remark = ''
                 information[i] = [name, ownership, situation, remark]
         return information
 
@@ -295,7 +295,7 @@ class Mort:
     # http://www.gsxt.gov.cn/corp-query-entprise-info-mortregpersoninfo-PROVINCENODENUM4300002c9902d558baa3de015a36605e6a0961.html
     def get_single_person(self,data):
         information = {}
-        if data != None:
+        if data != '':
             for i ,singledata in enumerate(data):
                 name = singledata["more"]
                 if "blicType" in singledata.keys():

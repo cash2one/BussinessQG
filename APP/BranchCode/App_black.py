@@ -33,7 +33,7 @@ class Black:
                 in_date = singledata["abnTime"]
                 in_date = change_chinese_date(in_date)
             else:
-                in_date = None
+                in_date = '0000-00-00'
             if "bulletinRemoved" in singledata.keys():
                 out_reason = singledata["bulletinRemoved"]
                 out_reason = deal_html_code.remove_symbol(out_reason)
@@ -44,7 +44,7 @@ class Black:
                 out_date = singledata["remTime"]
                 out_date = change_chinese_date(out_date)
             else:
-                out_date = None
+                out_date = '0000-00-00'
             if "remOrganInterpreted" in singledata.keys():
                 gov_dept = singledata["remOrganInterpreted"]
             else:

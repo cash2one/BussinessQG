@@ -31,16 +31,13 @@ class Assure:
                 pefPerForm = singledata["pefPerForm"]
                 pefPerForm = change_chinese_date(pefPerForm)
             else:
-                pefPerForm = None
+                pefPerForm = '0000-00-00'
             if "pefPerTo" in singledata.keys():
                 pefPerTo = singledata["pefPerTo"]
                 pefPerTo = change_chinese_date(pefPerTo)
             else:
-                pefPerTo = None
-            if pefPerForm ==None:
-                pefPerForm = ''
-            if pefPerTo  == None:
-                pefPerTo = ''
+                pefPerTo = '0000-00-00'
+           
 
             deadline = str(pefPerForm) + '至' +str(pefPerTo )
             period = singledata["guaranPeriodInterpreted"]

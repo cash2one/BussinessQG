@@ -33,7 +33,7 @@ class Check:
                 check_date = singledata["insDate"]
                 check_date = deal_html_code.change_chinese_date(check_date)
             else:
-                check_date = None
+                check_date = '0000-00-00'
             if "insAuthInterpreted" in singledata.keys():
                 gov_dept = singledata["insAuthInterpreted"]
             else:

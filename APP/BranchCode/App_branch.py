@@ -31,7 +31,7 @@ class Branch:
                 if "uniScid" in single.keys():
                     ccode = single["uniScid"]
                 else:
-                    ccode = None
+                    ccode = ''
                 ccode = deal_html_code.remove_symbol(ccode)
                 if "brName" in single.keys():
                     name = single["brName"]

@@ -27,7 +27,7 @@ class Permit:
                 valto = singledata["valTo"]
                 valto = change_chinese_date(valto)
             else:
-                valto = None
+                valto = '0000-00-00'
 
             information[i] = [uuid, types, valto]
         return information

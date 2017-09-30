@@ -63,7 +63,7 @@ class Stock:
             if "publicDate" in singledata.keys():
                 publicDate = singledata["publicDate"]
             else:
-                publicDate = None
+                publicDate = '0000-00-00'
             publicDate = deal_html_code.change_chinese_date(publicDate)
             information[i] = [equityNo, pledgor, pledBLicNo, impAm, impOrg, impOrgBLicNo, equPleDate, publicDate, type]
         return information

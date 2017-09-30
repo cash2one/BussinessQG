@@ -17,11 +17,11 @@ class Invest:
             if "regNo" in singledata.keys():
                 code = singledata["regNo"]
             else:
-                code = None
+                code = ''
             if "uniScid" in singledata.keys():
                 ccode = singledata["uniScid"]
             else:
-                ccode = None
+                ccode = ''
             information[i] = [name, code, ccode,uuid]
         return information
     def update_to_db(self,gs_report_id, gs_basic_id, cursor, connect, information,province):

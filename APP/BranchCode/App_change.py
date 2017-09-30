@@ -14,8 +14,8 @@ Type = sys.getfilesystemencoding()
 
 
 
-insert_string = 'insert into gs_change(gs_basic_id,types,item,content_before,content_after,change_date,source,updated)values(%s,%s,%s,%s,%s,%s,%s,%s)'
-select_string = 'select gs_basic_id,content_after from gs_change where gs_basic_id = %s and item = %s and change_date = %s and source =0 '
+insert_string = 'insert into gs_change(gs_basic_id,types,item,content_before,content_after,change_date,updated)values(%s,%s,%s,%s,%s,%s,%s)'
+select_string = 'select gs_basic_id,content_after from gs_change where gs_basic_id = %s and item = %s and change_date = %s and source = 0'
 update_change_py = 'update gs_py set gs_py_id = %s,gs_change = %s,updated = %s where gs_py_id = %s'
 
 class Change:
@@ -37,7 +37,7 @@ class Change:
                     change_date = single["altDate"]
                     change_date = deal_html_code.change_chinese_date(change_date)
                 else:
-                    change_date = None
+                    change_date = '0000-00-00'
                 if "altItem" in single.keys():
                     item = single["altItem"]
                 else:
@@ -54,17 +54,16 @@ class Change:
                 content_before, content_after = information[key][0], information[key][1]
                 change_date, item = information[key][2], information[key][3]
                 types = '变更'
-                source = 0
+                # source = 1
                 updated_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
                 count = cursor.execute(select_string, (gs_basic_id, item, change_date))
                 if count == 0:
 
                     row_count = cursor.execute(insert_string, (
-                        gs_basic_id, types, item, content_before, content_after, change_date, source, updated_time))
+                        gs_basic_id, types, item, content_before, content_after, change_date,  updated_time))
                     insert_flag += row_count
                     connect.commit()
-                elif count >= 1:
-
+                elif int(count) >= 1:
                     remark = 0
                     for gs_basic_id, content in cursor.fetchall():
                         if content == content_after:
@@ -72,7 +71,7 @@ class Change:
                             break
                     if remark == 0:
                         row_count = cursor.execute(insert_string, (
-                            gs_basic_id, types, item, content_before, content_after, change_date, source,updated_time))
+                            gs_basic_id, types, item, content_before, content_after, change_date, updated_time))
                         insert_flag += row_count
                         connect.commit()
         except Exception, e:

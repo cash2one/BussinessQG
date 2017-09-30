@@ -35,7 +35,7 @@ class Schange:
                 dates = singledata["altDate"]
                 dates = change_chinese_date(dates)
             else:
-                dates = None
+                dates = '0000-00-00'
 
             information[i] = [name, percent_pre, percent_after, dates,uuid]
         return information

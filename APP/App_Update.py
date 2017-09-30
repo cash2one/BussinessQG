@@ -50,7 +50,8 @@ def get_info_list(url):
     # print result
     info = {}
     if status_code == 200:
-        data = json.loads(result)
+        # print result.content
+        data = json.loads(result.content)
         info["basic"] = data
         province = config.province[data["regOrgan"][0:2]]
         info["black"] = data["entBlackSet"]

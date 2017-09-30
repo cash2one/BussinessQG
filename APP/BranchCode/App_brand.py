@@ -46,18 +46,18 @@ class Brand:
                 begin = singledata["propertyBgnDate"]
                 begin = deal_html_code.change_chinese_date(begin)
             else:
-                begin = None
+                begin = '0000-00-00'
             if "propertyEndDate" in singledata.keys():
                 end = singledata["propertyEndDate"]
                 end = deal_html_code.change_chinese_date(end)
             else:
-                end = None
+                end = '0000-00-00'
             if "uniScid" in singledata.keys():
                 regNo = singledata["uniScid"]
             else:
                 regNo = singledata["regNo"]
             province = judge_province(regNo)
-            if begin== None and end ==None:
+            if begin== '0000-00-00' and end =='0000-00-00':
                 ia_zyqqx = ''
             else:
                 ia_zyqqx = begin + '至' + end
@@ -65,7 +65,7 @@ class Brand:
                 ia_zcdate = singledata["regAnncDate"]
                 ia_zcdate = deal_html_code.change_chinese_date(ia_zcdate)
             else:
-                ia_zcdate = None
+                ia_zcdate = '0000-00-00'
             if "tmImage" in singledata.keys():
                 tmImage = singledata["tmImage"]
             else:
@@ -88,7 +88,7 @@ class Brand:
                 if tmImage!= '' or tmImage!= None:
                     ia_img_url = img_list[province].format(tmImage)
                 else:
-                    ia_img_url = None
+                    ia_img_url = ''
 
                 select_string = select_brand % ia_zch
                 # print select_string

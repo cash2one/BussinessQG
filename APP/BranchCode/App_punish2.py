@@ -44,7 +44,7 @@ class Punish:
                     updateDate = singledata["noticeDate"]
                     pub_date = deal_html_code.change_chinese_date(updateDate)
                 else:
-                    pub_date = None
+                    pub_date = '0000-00-00'
                 if "penOrgan" in singledata.keys():
                     gov_dept = singledata["penOrgan"]
                 else:
