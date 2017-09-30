@@ -16,16 +16,16 @@ from PublicCode.Bulid_Log import Log
 from PublicCode.deal_html_code import remove_symbol
 
 
-# url = sys.argv[1]
-# gs_basic_id = sys.argv[2]
-# gs_py_id = sys.argv[3]
-# pagenumber = sys.argv[4]
-# perpage = sys.argv[5]
-url = 'http://www.gsxt.gov.cn/%7B2jnvFE_glKBnPs5aZ44ZgwPSlVqvWT_CQl8il-4XnPrYRAgfZDM7wZxEVOacrcErc558kE_pkbTU1uVNudlPWs6dZfl8zPbdkkKaYVQ6k50-1501755526368%7D'
-gs_basic_id = 229418502
-gs_py_id = 1501
-pagenumber = 1
-perpage = 0
+url = sys.argv[1]
+gs_basic_id = sys.argv[2]
+gs_py_id = sys.argv[3]
+pagenumber = sys.argv[4]
+perpage = sys.argv[5]
+# url = 'http://www.gsxt.gov.cn/%7B2jnvFE_glKBnPs5aZ44ZgwPSlVqvWT_CQl8il-4XnPrYRAgfZDM7wZxEVOacrcErc558kE_pkbTU1uVNudlPWs6dZfl8zPbdkkKaYVQ6k50-1501755526368%7D'
+# gs_basic_id = 229418502
+# gs_py_id = 1501
+# pagenumber = 1
+# perpage = 0
 reload(sys)
 sys.setdefaultencoding('utf-8')
 Type = sys.getfilesystemencoding()
@@ -49,8 +49,8 @@ class Brand:
             begin = change_date_style(begin)
             end = singledata["propertyEndDate"]
             end = change_date_style(end)
-            if begin== None and end ==None:
-                ia_zyqqx = None
+            if begin== '0000-0000-00' and end =='0000-00-00':
+                ia_zyqqx = ''
             else:
                 ia_zyqqx = begin + '至' + end
             ia_zcdate = singledata["regAnncDate"]

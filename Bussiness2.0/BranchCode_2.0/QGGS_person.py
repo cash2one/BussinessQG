@@ -52,7 +52,7 @@ class Person:
             elif position != '':
                 position = data["position_CN"].replace(" ","")
             elif position == '':
-                position = None
+                position = ''
             #print name,position
             information[i] = [name, position]
         return information

@@ -45,7 +45,7 @@ class Branch:
             uniscId = singledata["uniscId"]
             # print uniscId
             if uniscId !='':
-                code = None
+                code = ''
             gov_dept = singledata["regOrg_CN"]
             information[i] = [name, code, gov_dept]
         return information

@@ -16,13 +16,14 @@ from PublicCode import config
 from PublicCode.Public_code import Connect_to_DB
 from PublicCode.Judge_Status import Judge
 from PublicCode.Bulid_Log import Log
-# url = sys.argv[1]
-# gs_basic_id = sys.argv[2]
-# gs_py_id = sys.argv[3]
+from PublicCode import deal_html_code
+url = sys.argv[1]
+gs_basic_id = sys.argv[2]
+gs_py_id = sys.argv[3]
 
-url = 'http://www.gsxt.gov.cn/%7BTgfN2Py4EG9HUlLktZwmxPBixxO493YQp02u3wptRcP2d4GzMefp1XL9WUPxdS1AosIMgZW267ZEht8Xuq7LDpcnCrLz-Z99eyceMvATPD8-1502157397046%7Dqisusohttp://www.gsxt.gov.cn/%7BTgfN2Py4EG9HUlLktZwmxPBixxO493YQp02u3wptRcP2d4GzMefp1XL9WUPxdS1AosIMgZW267ZEht8Xuq7LDpcnCrLz-Z99eyceMvATPD8-1502157397046%7D'
-gs_basic_id = 1900000103
-gs_py_id = 1501
+# url = 'http://www.gsxt.gov.cn/%7BTgfN2Py4EG9HUlLktZwmxPBixxO493YQp02u3wptRcP2d4GzMefp1XL9WUPxdS1AosIMgZW267ZEht8Xuq7LDpcnCrLz-Z99eyceMvATPD8-1502157397046%7Dqisusohttp://www.gsxt.gov.cn/%7BTgfN2Py4EG9HUlLktZwmxPBixxO493YQp02u3wptRcP2d4GzMefp1XL9WUPxdS1AosIMgZW267ZEht8Xuq7LDpcnCrLz-Z99eyceMvATPD8-1502157397046%7D'
+# gs_basic_id = 1900000103
+# gs_py_id = 1501
 
 reload(sys)
 sys.setdefaultencoding('utf-8')
@@ -40,9 +41,7 @@ class Change:
             content_before = single_data["altBe"]
             content_after = single_data["altAf"]
             change_date = single_data["altDate"]
-            change_date = datetime.datetime.utcfromtimestamp(change_date / 1000)
-            otherStyleTime = change_date.strftime("%Y-%m-%d")
-            change_date = otherStyleTime
+            change_date = deal_html_code.change_date_style(change_date)
             item = single_data["altItem_CN"]
             item = deal_lable(item)
             information[i] = [content_before, content_after, change_date, item]

@@ -51,7 +51,7 @@ class Punish:
             name = singledata["unitName"]
             vPunishmentDecision = singledata["vPunishmentDecision"]
             if len(vPunishmentDecision)==0:
-                pdfurl = None
+                pdfurl = ''
             else:
                 fileName = vPunishmentDecision["fileName"]
                 pdfurl = config.host+'/doc/%s/casefiles/'%nodeNum+fileName

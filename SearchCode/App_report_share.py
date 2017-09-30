@@ -40,9 +40,9 @@ class Share:
                 else:
                     unit = ''
             else:
-                reg_amount = None
-                reg_date = None
-                reg_way = None
+                reg_amount = ''
+                reg_date = '0000-00-00'
+                reg_way = ''
 
             if len(singledata["entAnnlInvtactlSet"])!=0:
                 entAnnlInvtactlSet = singledata["entAnnlInvtactlSet"][0]
@@ -65,9 +65,9 @@ class Share:
                     unit = ''
 
             else:
-                ac_amount = None
-                ac_date = None
-                ac_way = None
+                ac_amount = ''
+                ac_date = ''
+                ac_way = ''
 
             information[i] = [name, uuid, reg_amount, reg_date, reg_way, ac_amount, ac_date, ac_way,unit]
         return information

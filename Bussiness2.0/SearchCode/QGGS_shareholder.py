@@ -62,7 +62,7 @@ class Shareholder:
                 license_code = deal_lable(license_code)
             else:
                 license_type = ''
-                license_code = None
+                license_code = ''
             types = data["invType_CN"]
             types = deal_lable(types)
 
@@ -76,20 +76,20 @@ class Shareholder:
                 ra_date, ra_ways, true_amount, reg_amount, ta_ways, ta_date = self.deal_detail_content(detail_url)
             else:
                 logging.info('无 shareholder 详情信息')
-                ra_date, ra_ways, true_amount, reg_amount, ta_ways, ta_date = None, None, None, None, None, None
+                ra_date, ra_ways, true_amount, reg_amount, ta_ways, ta_date = '', '', '', '', '', ''
             information[i] = [name, license_code, license_type, types, ra_date, ra_ways, true_amount, reg_amount,
                               ta_ways,
                               ta_date, country, address]
         return information
 
-    def deal_detail_content(self,detail_url):
+    def deal_detail_content(self, detail_url):
         # print detail_url
         detail_code, status_code = Send_Request().send_requests(detail_url)
         if status_code == 200:
             detail_code = json.loads(detail_code)["data"]
-            if len(detail_code[1]) ==0:
-                ra_date, ra_ways, true_amount = None,None,None
-                reg_amount, ta_ways, ta_date = None,None,None
+            if len(detail_code[1]) == 0:
+                ra_date, ra_ways, true_amount = '0000-00-00','',''
+                reg_amount, ta_ways, ta_date = '','','0000-00-00'
             else:
                 if len(detail_code[1]) != 0:
                     content1 = detail_code[1][0]
@@ -99,36 +99,36 @@ class Shareholder:
                     if "conDate" in content1.keys():
                         ra_date = content1["conDate"]
                         ra_date = change_date_style(ra_date)
-                        ta_date = ra_date
+                        ta_date = '0000-00-00'
                     else:
-                        ta_date = None
-                        ra_date = None
+                        ta_date = '0000-00-00'
+                        ra_date = '0000-00-00'
                     if "conForm_CN" in content1.keys():
                         ra_ways = content1["conForm_CN"]
                         ta_ways = ra_ways
                     else:
-                        ta_ways = None
-                        ra_ways = None
+                        ta_ways = ''
+                        ra_ways = ''
                     if "subConAm" in content1.keys():
                         reg_amount = content1["subConAm"]
                     else:
-                        reg_amount = None
+                        reg_amount = ''
                     if "acConAm" in content1.keys():
                         true_amount = content1["acConAm"]
                     else:
-                        true_amount = None
+                        true_amount = ''
                 else:
-                    ra_date, ra_ways, true_amount = None, None, None
-                    reg_amount, ta_ways, ta_date = None, None, None
+                    ra_date, ra_ways, true_amount = '0000-00-00', '', ''
+                    reg_amount, ta_ways, ta_date = '', '', ''
         else:
-            ra_date, ra_ways, true_amount = None, None, None
-            reg_amount, ta_ways, ta_date = None, None, None
+            ra_date, ra_ways, true_amount = '0000-00-00', '', ''
+            reg_amount, ta_ways, ta_date = '', '', '0000-00-00'
         return ra_date, ra_ways, true_amount, reg_amount, ta_ways, ta_date
 
 
     def update_to_db(self,gs_basic_id, cursor, connect, information):
         cate = 0
-        insert_flag,update_flag = 0,0
+        insert_flag, update_flag = 0, 0
         remark = 0
         
         try:
@@ -146,7 +146,7 @@ class Shareholder:
                 reg_amount, ta_ways, ta_date = information[key][7], information[key][8], information[key][9]
                 count = cursor.execute(select_string, (gs_basic_id, name, types, cate))
                 country, address = information[key][10], information[key][11]
-                if name != '' or name != None:
+                if name != '' or name != '':
                     pattern = re.compile('.*公司.*|.*中心.*|.*集团.*|.*企业.*')
                     result = re.findall(pattern, name)
                     if len(result) == 0:
@@ -162,11 +162,11 @@ class Shareholder:
                     iv_basic_id = 0
                 ps_basic_id = 0
                 if license_type == '中华人民共和国居民身份证':
-                    if license_code == '' or license_code == None:
+                    if license_code == '' or license_code == '':
                         license_code = '非公示项'
                     elif len(license_code) == 15 or len(license_code) == 18:
                         ps_basic_id = self.judge_certcode(name, license_code, cursor, connect, gs_basic_id)
-                elif license_code == None or license_code == '' and license_type != '':
+                elif license_code == '' or license_code == '' and license_type != '':
                     license_code = '非公示项'
                 else:
                     ps_basic_id = 0
@@ -177,7 +177,7 @@ class Shareholder:
                             reg_amount, ta_ways, ta_date, country,address,iv_basic_id,ps_basic_id,updated_time))
                     insert_flag += rows_count
                     connect.commit()
-                elif int(count)==1:
+                elif int(count) == 1:
                     updated_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
                     gs_shareholder_id = cursor.fetchall()[0][0]
                     cursor.execute(update_quit,(updated_time,gs_shareholder_id,gs_basic_id))
@@ -190,12 +190,12 @@ class Shareholder:
             connect.close()
             if remark < 100000001:
                 remark = insert_flag
-            return remark,insert_flag,update_flag
+            return remark, insert_flag, update_flag
 def main():
-    Log().found_search_log(gs_search_id,gs_basic_id)
+    Log().found_search_log(gs_search_id, gs_basic_id)
     HOST, USER, PASSWD, DB, PORT = config.HOST, config.USER, config.PASSWD, config.DB, config.PORT
     connect, cursor = Connect_to_DB().ConnectDB(HOST, USER, PASSWD, DB, PORT)
-    Judge(connect, cursor, gs_basic_id, url,pagenumber, perpage).update_branch(Shareholder, "share")
+    Judge(connect, cursor, gs_basic_id, url, pagenumber, perpage).update_branch(Shareholder, "share")
     # cursor.close()
     # connect.close()
 

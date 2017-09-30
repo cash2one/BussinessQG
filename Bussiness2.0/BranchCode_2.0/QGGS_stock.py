@@ -20,13 +20,13 @@ sys.setdefaultencoding('utf-8')
 Type = sys.getfilesystemencoding()
 
 
-# url = sys.argv[1]
-# gs_basic_id = sys.argv[2]
-# gs_py_id = sys.argv[3]
+url = sys.argv[1]
+gs_basic_id = sys.argv[2]
+gs_py_id = sys.argv[3]
 
-url = 'http://www.gsxt.gov.cn/%7B2jnvFE_glKBnPs5aZ44ZgwovbECKi4FCNkxI-KUUSeFb5POYf73EX0LEGgd55A60vFH415BH9hjMU2fHqaFfyLarbJ85Dn2WCV-IuRO4CR1jiEbutLwuT3PK7xpM3PqI-1501755233013%7D'
-gs_basic_id = 229421773
-gs_py_id = 1501
+# url = 'http://www.gsxt.gov.cn/%7B2jnvFE_glKBnPs5aZ44ZgwovbECKi4FCNkxI-KUUSeFb5POYf73EX0LEGgd55A60vFH415BH9hjMU2fHqaFfyLarbJ85Dn2WCV-IuRO4CR1jiEbutLwuT3PK7xpM3PqI-1501755233013%7D'
+# gs_basic_id = 229421773
+# gs_py_id = 1501
 
 stock_string = 'insert into gs_stock(gs_basic_id,equityno,pledgor,pled_blicno,impam,imporg,imporg_blicno,equlle_date,public_date,type,updated)values(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)'
 select_stock = 'select gs_stock_id from gs_stock where gs_basic_id = %s and equityno = %s'
@@ -58,7 +58,7 @@ class Stock:
             elif type == '1':
                 type = '有效'
             elif type == 'K':
-                type = None
+                type = ''
             information[i] = [equityNo, pledgor, pledBLicNo, impAm, impOrg, impOrgBLicNo, equPleDate, publicDate, type]
         return information
 

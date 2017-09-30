@@ -15,7 +15,7 @@ reload(sys)
 sys.setdefaultencoding('utf-8')
 Type = sys.getfilesystemencoding()
 
-share_string = 'insert into gs_shareholder(gs_basic_id,name,cate,types,license_type,license_code, true_amount,reg_amount,ta_ways,ta_date,country,address,iv_basic_id,ps_basic_id,updated)values(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)'
+share_string = 'insert into gs_shareholder(gs_basic_id,name,cate,types,license_type,license_code, true_amount,reg_amount,ta_ways,ta_date,country,address,iv_basic_id,ps_basic_id,updated)values(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)'
 select_string = 'select gs_shareholder_id from gs_shareholder where gs_basic_id = %s and name = %s and types = %s and cate = %s'
 select_name = 'select gs_basic_id from gs_unique where name = "%s"'
 select_ps = 'select ps_basic_id,gs_basic_id from ps_basic where name = "%s"'
@@ -38,11 +38,11 @@ class Share:
                 else:
                     types = ''
                 if single["blicTypeInterpreted"]=='':
-                    license_code = None
-                    license_type = None
+                    license_code = ''
+                    license_type = ''
                 elif single["cetfTypeInterpreted"] =='':
-                    license_type = None
-                    license_code = None
+                    license_type = ''
+                    license_code = ''
                 elif single["blicTypeInterpreted"]!='':
                     license_type = single["blicTypeInterpreted"]
                     license_code = single["bLicNo"]
@@ -64,7 +64,7 @@ class Share:
                     ta_date = single["conDate"]
                     ta_date = deal_html_code.change_chinese_date(ta_date)
                 else:
-                    ta_date = None
+                    ta_date = '0000-00-00'
                 if "conForm" in single.keys():
                     ta_ways = single["conForm"]
                 else:
@@ -78,7 +78,7 @@ class Share:
                 if "dom" in single.keys():
                     address = single["dom"]
                 else:
-                    address = None
+                    address = ''
                 info[i] = [name,types,license_code,license_type,reg_amount,true_amount,ta_date,ta_ways,country,address,encrypted,cetfType]
         return info
     def judge_certcode(self,name,code,cursor,connect,basic_id):
@@ -139,7 +139,7 @@ class Share:
                 cetfType = info[key][11]
                 ps_basic_id = 0
                 if cetfType == '1':
-                    if license_code =='' or license_code ==None :
+                    if license_code =='' or license_code =='' :
                         license_code ='非公示项'
                     elif len(license_code)==15 or len(license_code)==18:
                         ps_basic_id = self.judge_certcode(name,license_code,cursor,connect,gs_basic_id)
@@ -147,7 +147,7 @@ class Share:
                     license_code = '非公示项'
 
                 count = cursor.execute(select_string, (gs_basic_id, name, types, cate))
-                if name!= '' or name !=None:
+                if name!= '' or name !='':
                     pattern = re.compile('.*公司.*|.*中心.*|.*集团.*|.*企业.*')
                     result = re.findall(pattern,name)
                     if len(result) ==0:
@@ -157,7 +157,7 @@ class Share:
                         number=cursor.execute(select_unique)
                         if number ==0:
                             iv_basic_id = 0
-                        elif int(number)==1:
+                        elif int(number) == 1:
                             iv_basic_id = cursor.fechall[0][0]
                 else:
                     iv_basic_id = 0

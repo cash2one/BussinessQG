@@ -19,11 +19,12 @@ basic_string = 'insert into gs_report(gs_basic_id,year,province,name,uuid, tel, 
 run_string = 'insert into gs_report_run(gs_report_id,gs_basic_id,province,asset,if_asset,benifit,if_benifit,income,if_income,profit,if_profit,main_income,if_main,net_income,if_net,tax,if_tax,debt,if_debt,uuid,loan, if_loan, subsidy, if_subsidy,created,updated) values(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)'
 update_address = 'update gs_basic set gs_basic_id = %s,tel = %s,address = %s,email = %s where gs_basic_id = %s'
 update_report_py ='update gs_py set gs_py_id = %s ,report = %s ,updated = %s where gs_basic_id = %s and gs_py_id = %s'
-
+update_run_py = 'update gs_py set gs_py_id = %s ,report_run = %s,updated = %s where gs_basic_id = %s and gs_py_id = %s'
 class Report_Basic:
-	def __init__(self, url, headers):
+	def __init__(self, url, headers,gs_py_id):
 		self.url = url
 		self.headers = headers
+		self.gs_py_id = gs_py_id
 	def get_info(self):
 		result,status_code = Send_Request(self.url,self.headers).send_request()
 		info = {}

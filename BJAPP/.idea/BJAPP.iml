@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="PYTHON_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$" />
+    <orderEntry type="jdk" jdkName="Python 2.7.12 (D:\Python\python.exe)" jdkType="Python SDK" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="BJWap" />
+    <orderEntry type="module" module-name="BJWap" />
+    <orderEntry type="module" module-name="BJWap" />
+    <orderEntry type="module" module-name="BJSearch" />
+    <orderEntry type="module" module-name="BJWap" />
+    <orderEntry type="module" module-name="Business_JS" />
+    <orderEntry type="module" module-name="Bussiness2.0" />
+    <orderEntry type="module" module-name="Business_JSU" />
+    <orderEntry type="module" module-name="Business_JSU" />
+    <orderEntry type="module" module-name="APP" />
+    <orderEntry type="module" module-name="SearchCode" />
+    <orderEntry type="module" module-name="JSU_Search" />
+  </component>
+</module>

@@ -31,15 +31,15 @@ class Assure:
                 pefPerForm = singledata["pefPerForm"]
                 pefPerForm = change_chinese_date(pefPerForm)
             else:
-                pefPerForm = None
+                pefPerForm = ''
             if "pefPerTo" in singledata.keys():
                 pefPerTo = singledata["pefPerTo"]
                 pefPerTo = change_chinese_date(pefPerTo)
             else:
-                pefPerTo = None
-            if pefPerForm ==None:
+                pefPerTo = ''
+            if pefPerForm =='':
                 pefPerForm = ''
-            if pefPerTo  == None:
+            if pefPerTo  == '':
                 pefPerTo = ''
 
             deadline = str(pefPerForm) + '至' +str(pefPerTo )

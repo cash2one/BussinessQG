@@ -36,7 +36,7 @@ class Change:
                     change_date = single["altDate"]
                     change_date = deal_html_code.change_chinese_date(change_date)
                 else:
-                    change_date = None
+                    change_date = '0000-00-00'
                 if "altItem" in single.keys():
                     item = single["altItem"]
                 else:

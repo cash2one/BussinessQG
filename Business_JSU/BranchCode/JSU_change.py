@@ -29,8 +29,8 @@ select_string = 'select gs_basic_id,content_after from gs_change where gs_basic_
 update_change_py = 'update gs_py set gs_py_id = %s,gs_change = %s,updated = %s where gs_py_id = %s'
 class Change:
 	#用于处理单页信息
-	def deal_single_info(self,data,info):
-		for i,single in enumerate(data):
+	def deal_single_info(self, data, info):
+		for i, single in enumerate(data):
 			content_before = single["OLD_CONTENT"]
 			content_after = single["NEW_CONTENT"]
 			change_date = single["CHANGE_DATE"]
@@ -58,7 +58,7 @@ class Change:
 								gs_basic_id, types, item, content_before, content_after, change_date,source,updated_time))
 					insert_flag += row_count
 					connect.commit()
-				elif count >= 1:
+				elif int(count) >= 1:
 					remark = 0
 					for gs_basic_id, content in cursor.fetchall():
 						if content == content_after:

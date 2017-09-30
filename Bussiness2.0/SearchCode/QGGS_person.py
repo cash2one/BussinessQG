@@ -17,13 +17,13 @@ from SPublicCode.Bulid_Log import Log
 reload(sys)
 sys.setdefaultencoding('utf-8')
 Type = sys.getfilesystemencoding()
-# url = sys.argv[1]
-# gs_basic_id = sys.argv[2]
-# gs_search_id = sys.argv[3]
+url = sys.argv[1]
+gs_basic_id = sys.argv[2]
+gs_search_id = sys.argv[3]
 
-url = 'http://www.gsxt.gov.cn/%7Bh3PaFzrRehMR5SrwpBqrkAIrG4S4WWBAG2LE0hZDbzqRpa7_39xHUMFKuWLiWz-pSMDhKAptyNybj4wEFjwb0NwkCJduUfUXBke8_TDaXp6zCPJdxu3reoj_B6uk6VWqBJqCjOVXy2GOFi4D0KA4UA-1504578404397%7D'
-gs_basic_id = 1900000099
-gs_search_id = 837
+# url = 'http://www.gsxt.gov.cn/%7Bh3PaFzrRehMR5SrwpBqrkAIrG4S4WWBAG2LE0hZDbzqRpa7_39xHUMFKuWLiWz-pSMDhKAptyNybj4wEFjwb0NwkCJduUfUXBke8_TDaXp6zCPJdxu3reoj_B6uk6VWqBJqCjOVXy2GOFi4D0KA4UA-1504578404397%7D'
+# gs_basic_id = 1900000099
+# gs_search_id = 837
 
 select_string = 'select gs_person_id,position from gs_person where gs_basic_id = %s and name = %s and source = 1'
 insert_string = 'insert into gs_person(gs_basic_id,name,position,source,updated)values(%s,%s,%s,%s,%s)'
@@ -50,7 +50,7 @@ class Person:
             elif position != '':
                 position = data["position_CN"].replace(" ","")
             elif position == '':
-                position = None
+                position = ''
             information[i] = [name, position]
         return information
 

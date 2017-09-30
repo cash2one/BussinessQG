@@ -23,17 +23,17 @@ sys.setdefaultencoding('utf-8')
 Type = sys.getfilesystemencoding()
 
 
-# url = sys.argv[1]
-# gs_basic_id = sys.argv[2]
-# gs_py_id = sys.argv[3]
-# pagenumber = sys.argv[4]
-# perpage = sys.argv[5]
+url = sys.argv[1]
+gs_basic_id = sys.argv[2]
+gs_py_id = sys.argv[3]
+pagenumber = sys.argv[4]
+perpage = sys.argv[5]
 
-url = 'http://www.gsxt.gov.cn/%7Ba8cGdSp6ifXpkAR8qkKIOpkfNYcK9YfPrCXIeYnQa1sda20_lWPh51pwIpBRvdsNr0fRVS7S_BikiJmAbMDk-yW3TzQHYWvKCzeQ4neGvuIdZRcD4pb-OhhQtRn9h7-CXqavHOrOaPG18xlGjfgO3A-1505091743115%7D'
-gs_basic_id = 1900000099
-gs_py_id = 1501
-pagenumber = 1
-perpage = 0
+# url = 'http://www.gsxt.gov.cn/%7Ba8cGdSp6ifXpkAR8qkKIOpkfNYcK9YfPrCXIeYnQa1sda20_lWPh51pwIpBRvdsNr0fRVS7S_BikiJmAbMDk-yW3TzQHYWvKCzeQ4neGvuIdZRcD4pb-OhhQtRn9h7-CXqavHOrOaPG18xlGjfgO3A-1505091743115%7D'
+# gs_basic_id = 1900000099
+# gs_py_id = 1501
+# pagenumber = 1
+# perpage = 0
 share_string = 'insert into gs_shareholder(gs_basic_id,name,cate,types,license_type,license_code,ra_date, ra_ways, true_amount,reg_amount,ta_ways,ta_date,country,address,iv_basic_id,ps_basic_id,updated)values(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)'
 select_string = 'select gs_shareholder_id from gs_shareholder where gs_basic_id = %s and name = %s and types = %s and cate = %s'
 update_share_py = 'update gs_py set gs_py_id = %s,gs_shareholder = %s,updated = %s where gs_py_id = %s'
@@ -64,7 +64,7 @@ class Shareholder:
                 license_code = deal_lable(license_code)
             else:
                 license_type = ''
-                license_code = None
+                license_code = ''
             types = data["invType_CN"]
             types = deal_lable(types)
 
@@ -74,11 +74,11 @@ class Shareholder:
             if detail_check == "true":
                 detail_key = data["invId"]
                 detail_url = "http://www.gsxt.gov.cn/corp-query-entprise-info-shareholderDetail-%s.html" % detail_key
-                #print detail_url
+                
                 ra_date, ra_ways, true_amount,reg_amount, ta_ways, ta_date= self.deal_detail_content(detail_url)
             else:
                 logging.info('无 shareholder 详情信息')
-                ra_date, ra_ways, true_amount, reg_amount, ta_ways, ta_date = None, None, None, None, None, None
+                ra_date, ra_ways, true_amount, reg_amount, ta_ways, ta_date = '', '', '', '', '', ''
             information[i] = [name, license_code, license_type, types, ra_date, ra_ways, true_amount, reg_amount, ta_ways,
                               ta_date,country,address]
         return information
@@ -90,8 +90,8 @@ class Shareholder:
         if status_code == 200:
             detail_code = json.loads(detail_code)["data"]
             if len(detail_code[1]) ==0:
-                ra_date, ra_ways, true_amount = None,None,None
-                reg_amount, ta_ways, ta_date = None,None,None
+                ra_date, ra_ways, true_amount = '','',''
+                reg_amount, ta_ways, ta_date = '','',''
             else:
                 if len(detail_code[1]) != 0:
                     content1 = detail_code[1][0]
@@ -101,38 +101,38 @@ class Shareholder:
                     if "conDate" in content1.keys():
                         ra_date = content1["conDate"]
                         ra_date = change_date_style(ra_date)
-                        ta_date = ra_date
+                        ta_date = '0000-00-00'
                     else:
-                        ta_date = None
-                        ra_date = None
+                        
+                        ra_date = '0000-00-00'
                     if "conForm_CN" in content1.keys():
                         ra_ways = content1["conForm_CN"]
                         ta_ways = ra_ways
                     else:
-                        ta_ways = None
-                        ra_ways = None
+                        ta_ways = ''
+                        ra_ways = ''
                     if "subConAm" in content1.keys():
                         reg_amount = content1["subConAm"]
                     else:
-                        reg_amount = None
+                        reg_amount = ''
                     if "acConAm" in content1.keys():
                         true_amount = content1["acConAm"]
                     else:
-                        true_amount = None
+                        true_amount = ''
                 else:
-                    ra_date, ra_ways, true_amount = None, None, None
-                    reg_amount, ta_ways, ta_date = None, None, None
+                    ra_date, ra_ways, true_amount = '0000-00-00', '', ''
+                    reg_amount, ta_ways, ta_date = '', '', '0000-00-00'
         else:
-            ra_date, ra_ways, true_amount = None, None, None
-            reg_amount, ta_ways, ta_date = None, None, None
+            ra_date, ra_ways, true_amount = '', '', ''
+            reg_amount, ta_ways, ta_date = '', '', ''
         return ra_date, ra_ways, true_amount, reg_amount, ta_ways, ta_date
     def judge_certcode(self,name,code,cursor,connect,basic_id):
         ps = 0
-        if len(code)== 15 or len(code)==18:
-            select_string = select_ps %name
+        if len(code) == 15 or len(code) == 18:
+            select_string = select_ps % name
             count = cursor.execute(select_string)
-            if int(count)==1:
-                for ps_basic_id,gs_basic_id in cursor.fetchall():
+            if int(count) == 1:
+                for ps_basic_id, gs_basic_id in cursor.fetchall():
                     if basic_id in gs_basic_id:
                         ps = ps_basic_id
                     else:
@@ -146,18 +146,18 @@ class Shareholder:
                 province = code[0:2]
                 city = code[2:4]
                 town = code[4:6]
-                if len(code)==15:
-                    birthday= code[6:12]
-                elif len(code)==18:
+                if len(code) == 15:
+                    birthday = code[6:12]
+                elif len(code) == 18:
                     birthday = code[6:14]
-                if len(code)==15:
+                if len(code) == 15:
                     encode = base64.b64encode(code[12:15])
-                elif len(code)==18:
+                elif len(code) == 18:
                     encode = base64.b64encode(code[14:18])
                 gs_basic_id = '"'+str(basic_id)+'",'
                 remark = ''
                 updated_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
-                cursor.execute(insert_ps,(gs_basic_id,name,idcard,province,city,town,birthday,encode,remark,updated_time,updated_time))
+                cursor.execute(insert_ps, (gs_basic_id, name, idcard, province, city, town, birthday, encode, remark, updated_time,updated_time))
                 ps = connect.insert_id()
                 connect.commit()
             return ps
@@ -182,7 +182,7 @@ class Shareholder:
 
                 country,address = information[key][10],information[key][11]
                 iv_basic_id = 0
-                if name!= '' or name !=None:
+                if name!= '' or name !='':
                     pattern = re.compile('.*公司.*|.*中心.*|.*集团.*|.*企业.*')
                     result = re.findall(pattern,name)
                     if len(result) ==0:
@@ -198,11 +198,11 @@ class Shareholder:
                     iv_basic_id = 0
                 ps_basic_id = 0
                 if license_type == '中华人民共和国居民身份证':
-                    if license_code == '' or license_code == None:
+                    if license_code == '' or license_code == '':
                         license_code = '非公示项'
                     elif len(license_code) == 15 or len(license_code) == 18:
                         ps_basic_id = self.judge_certcode(name, license_code, cursor, connect, gs_basic_id)
-                elif license_code == None or license_code == '' and license_type!='':
+                elif license_code == '' or license_code == '' and license_type!='':
                     license_code = '非公示项'
                 else:
                     ps_basic_id = 0

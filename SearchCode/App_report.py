@@ -32,7 +32,7 @@ Type = sys.getfilesystemencoding()
 
 url = sys.argv[1]
 gs_basic_id = sys.argv[2]
-gs_search_id =  sys.argv[3]
+gs_search_id = sys.argv[3]
 year = sys.argv[4]
 province = sys.argv[5]
 # url = 'http://sh.gsxt.gov.cn/notice/ws/data/ent_annlBasic/48347d2a34cb4386b610cb0a182226aa'
@@ -146,9 +146,9 @@ class Report:
             else:
                 if_sharetrans = 0
         else:
-            tel = None
-            email = None
-            postcode = None
+            tel = ''
+            email = ''
+            postcode = ''
             if_invest = 0
             if_sharetrans = 0
         if "hasFwarnnt" in data.keys():
@@ -165,13 +165,13 @@ class Report:
             employee = employees["empNum"]
             if_empnum = int(employees["empNumSign"])
         else:
-            employee = None
+            employee = ''
             if_empnum = 0
         if "womEmpNum" in data.keys():
             womennum = data["womEmpNum"]
             if_womennum = int(data["womEmpNumSign"])
         else:
-            womennum = None
+            womennum = ''
             if_womennum = 0
         if "holdingsMsg" in data.keys():
             holding = data["holdingsMsg"]
@@ -184,11 +184,11 @@ class Report:
             mainbus = data["mainBusiact"]
             mainbus = deal_html_code.remove_symbol(mainbus)
         else:
-            mainbus = None
+            mainbus = ''
         if "priPid" in data.keys():
             pripid = data["priPid"]
         else:
-            pripid = None
+            pripid = ''
         refuuid = data["refUuid"]
         if "hasWebsite" in data.keys():
             if_website = int(data["hasWebsite"])
@@ -205,7 +205,7 @@ class Report:
         if "reportType" in data.keys():
             types = config.company_type[data["reportType"]]
         else:
-            types = None
+            types = ''
         if len(data["entAnnlPeSet"]) != 0:
             entAnnlPeSet = data["entAnnlPeSet"][0]
             if "psnName" in entAnnlPeSet.keys():
@@ -219,8 +219,8 @@ class Report:
             else:
                 tel = ''
         else:
-            runner = None
-            amount = None
+            runner = ''
+            amount = ''
         fill_date = data["anCheDate"]
         fill_date = deal_html_code.change_chinese_date(fill_date)
         information[0] = [name, uuid, tel, address, email, postcode, status, employee, if_empnum, womennum, if_womennum,
@@ -247,62 +247,62 @@ class Report:
                 asset = data["assGro"]
                 if_asset = int(data["assGroSign"])
             else:
-                asset = None
+                asset = ''
                 if_asset = 0
             if "totEqu" in data.keys():
                 benifit = data["totEqu"]
                 if_benifit = int(data["totEquSign"])
             else:
-                benifit = None
+                benifit = ''
                 if_benifit = 0
             if "vendInc" in data.keys():
                 income = data["vendInc"]
                 if_income = int(data["vendIncSign"])
             else:
-                income = None
+                income = ''
                 if_income = 0
             if "proGro" in data.keys():
                 profit = data["proGro"]
                 if_profit = int(data["proGroSign"])
             else:
-                profit = None
+                profit = ''
                 if_profit = 0
             if "maiBusInc" in data.keys():
                 main_income = data["maiBusInc"]
                 if_main = int(data["maiBusIncSign"])
             else:
-                main_income = None
+                main_income = ''
                 if_main = 0
             if "netInc" in data.keys():
                 net_income = data["netInc"]
                 if_net = int(data["netIncSign"])
             else:
-                net_income = None
+                net_income = ''
                 if_net = 0
             if "ratGro" in data.keys():
                 tax = data["ratGro"]
                 if_tax = int(data["ratGroSign"])
             else:
-                tax = None
+                tax = ''
                 if_tax = 0
             if "liaGro" in data.keys():
                 debt = data["liaGro"]
                 if_debt = int(data["liaGroSign"])
             else:
-                debt = None
+                debt = ''
                 if_debt = 0
 
             if "priYeaLoan" in data.keys():
                 loan = data["priYeaLoan"]
                 if_loan = int(data["priYeaLoanSign"])
             else:
-                loan = None
+                loan = ''
                 if_loan = 0
             if "priYeaSub" in data.keys():
                 subsidy = data["priYeaSub"]
                 if_subsidy = int(data["priYeaSubSign"])
             else:
-                subsidy = None
+                subsidy = ''
                 if_subsidy = 0
             info = [asset, if_asset, benifit, if_benifit, income, if_income, profit, if_profit, main_income, if_main,
                     net_income, if_net,

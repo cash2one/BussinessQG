@@ -91,7 +91,7 @@ class Report:
 			headers = config.headers
 			types = config.key_params["report_basic"]
 			basic_url = main_url + config.report_params1.format(types, report_id)
-			basic_object = JSU_report_basic.Report_Basic(basic_url, headers)
+			basic_object = JSU_report_basic.Report_Basic(basic_url, headers,self.gs_py_id)
 			baseinfo, runinfo, flag = basic_object.get_info()
 			if flag == 1:
 				gs_report_id = basic_object.update_report_basic(cursor, connect, self.gs_basic_id, baseinfo, year)
@@ -109,7 +109,7 @@ class Report:
 			else:
 				logging.info("打开基本信息年报链接失败")
 		except Exception, e:
-			#print e
+			
 			remark = 100000006
 			logging.info("report error:%s" % e)
 		finally:
@@ -135,10 +135,10 @@ def get_all_report_info(info, object, cursor, connect,gs_basic_id):
 			remark = object.update_single_report_info(year,report_id,cursor,connect)
 			
 			if remark <100000001:
-				insert+=1
+				insert +=1
 		else:
 			pass
-	return total,insert
+	return total, insert
 			
 			
 def report_main(org, id, seqid, regno, gs_basic_id,gs_py_id):

@@ -199,17 +199,17 @@ class Judge:
 		logging.info("%s:"%pattern +str(flag)+'||'+str(total)+"||" +str(insert_flag)+'||'+ str(update_flag))
 		print "%s:"%pattern +str(flag)+'||'+str(total)+"||" +str(insert_flag)+'||'+ str(update_flag)
 		return flag
-	
+	#用于更新年报信息
 	def update_report_info(self,flag,info,gs_report_id,gs_basic_id,cursor,connect,pattern):
 		if flag == 1:
 			flag, total, insert_flag, update_flag = object.update_to_db(gs_report_id, gs_basic_id, cursor, connect,															info)
 			if total == 0 and flag < 100000001:
 				flag = -1
-			logging.info("execute assure:%s" % flag)
+			logging.info("execute report_%s:%s" % (pattern,flag))
 		else:
 			logging.info("打开report_%s链接失败！" % pattern)
 		return flag
-	#将运行状态更新至数据库中
+	#将运行状态更新至数据库中,只是为了看一下运行状态，详细信息在日志中
 	def update_py(self, gs_py_id, update_py, flag):
 		try:
 			if flag == -1:
@@ -224,6 +224,3 @@ class Judge:
 				connect.close()
 		except Exception, e:
 			logging.error("update py error :%s" % e)
-	
-	
-	

@@ -27,11 +27,11 @@ class Invest:
             if "uniscId" in singledata.keys():
                 code = singledata["uniscId"]
             else:
-                code = None
+                code = ''
             if "regNo" in singledata.keys():
                 ccode = singledata["regNo"]
             else:
-                ccode = None
+                ccode = ''
             information[i] = [name, code, ccode,uuid]
         return information
 

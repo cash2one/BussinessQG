@@ -24,13 +24,13 @@ from PublicCode.Public_code import Get_BranchInfo as Get_BranchInfo
 from PublicCode.Public_code import Send_Request as Send_Request
 from PublicCode import deal_html_code
 
-# url = sys.argv[1]
-# gs_basic_id = sys.argv[2]
-# gs_py_id = sys.argv[3]
+url = sys.argv[1]
+gs_basic_id = sys.argv[2]
+gs_py_id = sys.argv[3]
 
-url = 'http://www.gsxt.gov.cn/%7BvF02QVDxL3gTUIh9cKKWcu7iC9RoRNqQ66SOVdTCvL6M3jI0Fhl7R1qNHDpzr70n7bjL5I9PZ1BBFtRxRc4f8P4lYjBQxPJyO_UQ7sSjlrYu_bDfHxVO4fRRXxs-zyGi-1505446588040%7D'
-gs_basic_id = 1900000099
-gs_py_id = 1501
+# url = 'http://www.gsxt.gov.cn/%7BvF02QVDxL3gTUIh9cKKWcu7iC9RoRNqQ66SOVdTCvL6M3jI0Fhl7R1qNHDpzr70n7bjL5I9PZ1BBFtRxRc4f8P4lYjBQxPJyO_UQ7sSjlrYu_bDfHxVO4fRRXxs-zyGi-1505446588040%7D'
+# gs_basic_id = 1900000099
+# gs_py_id = 1501
 
 
 reload(sys)
@@ -71,12 +71,12 @@ class Report:
         self.gs_py_id = gs_py_id
     def judge_status(self,update_sql,records,total):
         if records == 0:
-            flag = None
+            flag = ''
         elif records > 0 and total >= 0 and total < 100000001:
             flag = total
         elif records > 0 and total > 100000001:
                 flag = 100000006
-        if flag == None:
+        if flag == '':
             flag = -1
         else:
             updated_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
@@ -358,12 +358,12 @@ class Report:
 
             address = data["addr"]
             email = data["email"]
-            postcode = None
-            status = None
+            postcode = ''
+            status = ''
             employee = data["memNum"]
             if_empnum = data["empNumDis"]
 
-            if if_empnum != u""and if_empnum != None:
+            if if_empnum != u""and if_empnum != '':
                 if_empnum = int(if_empnum)
                 if if_empnum == 2:
                     if_empnum = 0
@@ -372,13 +372,13 @@ class Report:
 
             womennum = data["womEmpNum"]
             if_womennum = data["womEmpNumDis"]
-            if womennum != None and str(womennum) != '':
+            if womennum != '' and str(womennum) != '':
                 if_womennum = int(if_womennum)
                 if if_womennum == 2:
                     if_womennum = 0
             else:
                 if_womennum = 0
-            holding = None
+            holding = ''
             if_holding = 0
 
             mainbus = data["mainBusiAct"]
@@ -387,18 +387,18 @@ class Report:
             if "name" in data.keys():
                 runner = data["name"]
             else:
-                runner = None
+                runner = ''
             if "fundAm" in data.keys():
                 amount = data["fundAm"]
             else:
-                amount = None
+                amount = ''
             pripid = data["pripId"]
             fill_date = data["anCheDate"]
             fill_date = deal_html_code.change_date_style(fill_date)
             information[0] = [name,uuid, tel, address, email, postcode, status,employee, if_empnum, womennum, if_womennum, holding, if_holding,mainbus,code,ccode,pripid,runner,amount,fill_date]
             loan = data["priYeaLoan"]
             if_loan = data["priYeaLoanDis"]
-            if if_loan!=u"" and if_loan!=None:
+            if if_loan!=u"" and if_loan!='':
                 if_loan = int(if_loan)
                 if if_loan ==2:
                     if_loan = 0
@@ -406,7 +406,7 @@ class Report:
                 if_loan = 0
             subsidy = data["priYeaSub"]
             if_subsidy = data["priYeaSubDis"]
-            if if_subsidy!=u"" and if_subsidy!=None:
+            if if_subsidy!=u"" and if_subsidy!='':
                 if_subsidy = int(if_subsidy)
                 if if_subsidy ==2:
                     if_subsidy = 0
@@ -414,7 +414,7 @@ class Report:
                 if_subsidy = 0
             income = data["priYeaSales"]
             if_income = data["priYeaSalesDis"]
-            if if_income!=u"" and if_income!=None:
+            if if_income!=u"" and if_income!='':
                 if_income = int(if_income)
                 if if_income ==2:
                     if_income = 0
@@ -422,7 +422,7 @@ class Report:
                 if_income = 0
             tax = data["ratGro"]
             if_tax = data["ratGroDis"]
-            if if_tax!=u"" and if_tax!= None:
+            if if_tax!=u"" and if_tax!= '':
                 if_tax = int(if_tax)
                 if if_tax == 2:
                     if_tax = 0
@@ -430,7 +430,7 @@ class Report:
                 if_tax = 0
             profit = data["priYeaProfit"]
             if_profit = data["priYeaProfitDis"]
-            if if_profit!=u"" and if_profit!= None:
+            if if_profit!=u"" and if_profit!= '':
                 if_profit = int(if_profit)
                 if if_profit == 2:
                     if_profit = 0
@@ -458,7 +458,7 @@ class Report:
             status = data["busSt_CN"]
             employee = data["empNum"]
             if_empnum = data["empNumDis"]
-            if if_empnum!=u'' and if_empnum!=None:
+            if if_empnum!=u'' and if_empnum!='':
                 if_empnum = int(if_empnum)
                 if if_empnum ==2:
                     if_empnum =0
@@ -466,7 +466,7 @@ class Report:
                 if_empnum = 0
             womennum = data["womemPNum"]
             if_womennum = data["womemPNumDis"]
-            if womennum!=None and str(womennum)!= '':
+            if womennum!='' and str(womennum)!= '':
                 if_womennum = int(if_womennum)
                 if if_empnum ==2:
                     if_empnum =0
@@ -474,7 +474,7 @@ class Report:
                 if_womennum = 0
             holding = data["holdingSmsg"]
             if_holding = data["holdingSmsgDis"]
-            if holding!=None and str(holding)!='':
+            if holding!='' and str(holding)!='':
                 if_holding = int(if_holding)
                 if if_holding == 2:
                     if_holding =0
@@ -482,13 +482,13 @@ class Report:
                 if_holding = 0
             mainbus = data["mainBusiAct"]
             pripid = data["pripId"]
-            runner,amount = None,None
+            runner,amount = '',''
             fill_date = data["anCheDate"]
             fill_date = deal_html_code.change_date_style(fill_date)
             information[0] = [name,uuid, tel, address, email, postcode, status, employee, if_empnum, womennum, if_womennum, holding, if_holding,mainbus,code,ccode,pripid,runner,amount,fill_date]
             asset = data["assGro"]
             if_asset = data["assGroDis"]
-            if asset!=None and str(if_asset)!='':
+            if asset!='' and str(if_asset)!='':
                 if_asset = int(data["assGroDis"])
                 if if_asset ==2:
                     if_asset =0
@@ -496,7 +496,7 @@ class Report:
                 if_asset = 0
             benifit = data["totEqu"]
             if_benifit = data["totEquDis"]
-            if if_benifit!=None and str(if_benifit)!='':
+            if if_benifit!='' and str(if_benifit)!='':
                 if_benifit = int(data["totEquDis"])
                 if if_benifit ==2:
                     if_benifit =0
@@ -504,7 +504,7 @@ class Report:
                 if_benifit = 0
             income = data["vendInc"]
             if_income = data["vendIncDis"]
-            if if_income != None and str(if_income) != '':
+            if if_income != '' and str(if_income) != '':
                 if_income = int(data["vendIncDis"])
                 if if_income == 2:
                     if_income = 0
@@ -512,7 +512,7 @@ class Report:
                 if_income = 0
             profit = data["proGro"]
             if_profit = data["proGroDis"]
-            if if_profit!= None and str(if_profit)!='':
+            if if_profit!= '' and str(if_profit)!='':
                 if_profit = int(data["proGroDis"])
                 if if_profit ==2:
                     if_profit = 0
@@ -520,7 +520,7 @@ class Report:
                 if_profit = 0
             main_income = data["maiBusInc"]
             if_main = data["maiBusIncDis"]
-            if if_main !=None and str(if_main)!='':
+            if if_main !='' and str(if_main)!='':
                 if_main = int(data["maiBusIncDis"])
                 if if_main == 2:
                     if_main = 0
@@ -528,7 +528,7 @@ class Report:
                 if_main = 0
             net_income = data["netInc"]
             if_net = data["netIncDis"]
-            if if_net!=None and str(if_net)!='':
+            if if_net!='' and str(if_net)!='':
                 if_net = int(data["netIncDis"])
                 if if_net ==2:
                     if_net = 0
@@ -536,14 +536,14 @@ class Report:
                 if_net = 0
             tax = data["ratGro"]
             if_tax = data["ratGroDis"]
-            if if_tax!=None and str(if_tax)!="":
+            if if_tax!='' and str(if_tax)!="":
                 if_tax = int(data["ratGroDis"])
                 if if_tax ==2:
                     if_tax= 0
             else:
                 if_tax = 0
             debt = data["liaGro"]
-            if debt!=None and str(debt)!='':
+            if debt!='' and str(debt)!='':
                 if_debt = int(data["liaGroDis"])
                 if if_debt == 2:
                     if_debt =0
@@ -564,48 +564,48 @@ class Report:
             name = data["traName"]
             tel = data["tel"]
 
-            address = None
-            email = None
-            postcode = None
-            status = None
+            address = ''
+            email = ''
+            postcode = ''
+            status = ''
             employee = data["empNum"]
             if_empnum = data["empNumDis"]
             pripid = data["pripId"]
             fill_date = data["anCheDate"]
             fill_date = deal_html_code.change_date_style(fill_date)
-            if if_empnum != u"" and if_empnum != None:
+            if if_empnum != u"" and if_empnum != '':
                 if_empnum = int(if_empnum)
                 if if_empnum == 2:
                     if_empnum = 0
             else:
                 if_empnum = 0
 
-            womennum = None
+            womennum = ''
             if_womennum = 0
 
-            holding = None
+            holding = ''
             if_holding = 0
-            mainbus = None
+            mainbus = ''
             code = data["regNo"]
             ccode = data["uniscId"]
             if "name" in data.keys():
                 runner = data["name"]
             else:
-                runner = None
+                runner = ''
             if "fundAm" in data.keys():
                 amount = data["fundAm"]
             else:
-                amount = None
+                amount = ''
             information[0] = [name, uuid, tel, address, email, postcode, status, employee, if_empnum, womennum,
                               if_womennum, holding, if_holding, mainbus, code, ccode,pripid,runner,amount,fill_date]
-            loan = None
+            loan = ''
             if_loan = 0
 
-            subsidy = None
+            subsidy = ''
             if_subsidy = 0
             income = data["vendInc"]
             if_income = data["vendIncDis"]
-            if if_income != u"" and if_income != None:
+            if if_income != u"" and if_income != '':
                 if_income = int(if_income)
                 if if_income == 2:
                     if_income = 0
@@ -613,13 +613,13 @@ class Report:
                 if_income = 0
             tax = data["ratGro"]
             if_tax = data["ratGroDis"]
-            if if_tax != u"" and if_tax != None:
+            if if_tax != u"" and if_tax != '':
                 if_tax = int(if_tax)
                 if if_tax == 2:
                     if_tax = 0
             else:
                 if_tax = 0
-            profit = None
+            profit = ''
             if_profit = 0
 
             fruninfo[0] = [uuid, loan, if_loan, subsidy, if_subsidy, income, if_income, tax, if_tax, profit, if_profit]
@@ -641,11 +641,11 @@ class Report:
         m.update(str(self.gs_basic_id) + str(year))
         uuid = m.hexdigest()
         if email =='无':
-            email = None
+            email = ''
         if tel == '无':
-            tel = None
+            tel = ''
         if address == '无':
-            address = None
+            address = ''
         cursor.execute(update_address, (gs_basic_id, tel, address, email,gs_basic_id))
         connect.commit()
         remark = 0

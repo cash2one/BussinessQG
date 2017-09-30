@@ -40,12 +40,12 @@ class Invest:
                 else:
                     code = code[0:15]
             else:
-                code = None
+                code = ''
             if "uniscId" in singledata.keys():
                 ccode = singledata["uniscId"]
                 ccode = ccode[0:18]
             else:
-                ccode = None
+                ccode = ''
             information[i] = [name, code, ccode,uuid]
         return information
 

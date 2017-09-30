@@ -18,12 +18,12 @@ from PublicCode.Public_code import Connect_to_DB
 from PublicCode.Judge_Status import Judge
 from PublicCode.Bulid_Log import Log
 
-# url = sys.argv[1]
-# gs_basic_id = sys.argv[2]
-# gs_py_id = sys.argv[3]
-url = 'http://www.gsxt.gov.cn/%7BBkWuG51z8_CwdB0OOclio5jWh7D5HQNDl3t-DW8LlCq9-f5S12GIcLQPO3LJGqtdDhBCBt_kTIWdEjDWOtx234IoswVN4Lc1SFQGr-M3Ne47gm5vCVqCDHzOAwnsx6SN-1502677219108%7D'
-gs_basic_id = 229421822
-gs_py_id = 1501
+url = sys.argv[1]
+gs_basic_id = sys.argv[2]
+gs_py_id = sys.argv[3]
+# url = 'http://www.gsxt.gov.cn/%7BBkWuG51z8_CwdB0OOclio5jWh7D5HQNDl3t-DW8LlCq9-f5S12GIcLQPO3LJGqtdDhBCBt_kTIWdEjDWOtx234IoswVN4Lc1SFQGr-M3Ne47gm5vCVqCDHzOAwnsx6SN-1502677219108%7D'
+# gs_basic_id = 229421822
+# gs_py_id = 1501
 reload(sys)
 sys.setdefaultencoding('utf-8')
 Type = sys.getfilesystemencoding()
@@ -68,7 +68,7 @@ class Mort:
             info = self.get_info(url, 'mortCreditorRightInfo')
             info = self.get_mort_credit(info)
             if info == None or len(info) == 0:
-                cates, period, ranges, remark = None, None, None, None
+                cates, period, ranges, remark = '', '', '', ''
             else:
                 cates, period, ranges, remark = info[0][0], info[0][1], info[0][2], info[0][3]
             goods_info = self.get_mort_branch(morReg_Id, goods_url, 'mort_goods')

@@ -6,9 +6,11 @@
 # @Desc  :
 import re
 import decimal
-finger = '11万'
-pattern = re.compile(u"[-+]?[0-9]*\.?[0-9]+")
-finger = re.findall(pattern, finger)
-print finger
-finger = decimal.Decimal(finger[0])
-print finger
+# finger = '11万'
+# pattern = re.compile(u"[-+]?[0-9]*\.?[0-9]+")
+# finger = re.findall(pattern, finger)
+# print finger
+# finger = decimal.Decimal(finger[0])
+# print finger
+string = '123||1213||112'
+print string.split("||")

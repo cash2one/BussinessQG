@@ -15,6 +15,7 @@ from SPublicCode import config
 from SPublicCode.Public_code import Connect_to_DB
 from SPublicCode.Judge_Status import Judge
 from SPublicCode.Bulid_Log import Log
+from SPublicCode import deal_html_code
 url = sys.argv[1]
 gs_basic_id = sys.argv[2]
 gs_search_id = sys.argv[3]
@@ -39,9 +40,7 @@ class Change:
             content_before = single_data["altBe"]
             content_after = single_data["altAf"]
             change_date = single_data["altDate"]
-            change_date = datetime.datetime.utcfromtimestamp(change_date / 1000)
-            otherStyleTime = change_date.strftime("%Y-%m-%d")
-            change_date = otherStyleTime
+            change_date = deal_html_code.change_date_style(change_date)
             item = single_data["altItem_CN"]
             item = deal_lable(item)
             information[i] = [content_before, content_after, change_date, item]

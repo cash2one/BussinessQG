@@ -37,7 +37,7 @@ class Brand:
             if "regAnncIssue" in singledata.keys():
                 ia_zcgg = singledata["regAnncIssue"]
             else:
-                ia_zcgg = None
+                ia_zcgg = ''
             if "goodsCnName" in singledata.keys():
                 ia_servicelist = deal_html_code.remove_symbol(singledata["goodsCnName"])
             else:
@@ -46,18 +46,18 @@ class Brand:
                 begin = singledata["propertyBgnDate"]
                 begin = deal_html_code.change_chinese_date(begin)
             else:
-                begin = None
+                begin = ''
             if "propertyEndDate" in singledata.keys():
                 end = singledata["propertyEndDate"]
                 end = deal_html_code.change_chinese_date(end)
             else:
-                end = None
+                end = ''
             if "uniScid" in singledata.keys():
                 regNo = singledata["uniScid"]
             else:
                 regNo = singledata["regNo"]
             province = judge_province(regNo)
-            if begin== None and end ==None:
+            if begin== '' and end =='':
                 ia_zyqqx = ''
             else:
                 ia_zyqqx = begin + '至' + end
@@ -65,7 +65,7 @@ class Brand:
                 ia_zcdate = singledata["regAnncDate"]
                 ia_zcdate = deal_html_code.change_chinese_date(ia_zcdate)
             else:
-                ia_zcdate = None
+                ia_zcdate = ''
             if "tmImage" in singledata.keys():
                 tmImage = singledata["tmImage"]
             else:
@@ -85,10 +85,10 @@ class Brand:
                 ia_servicelist, ia_zyqqx, ia_zcdate = information[key][3], information[key][4], information[key][5]
                 province ,tmImage= information[key][6], information[key][7]
 
-                if tmImage!= '' or tmImage!= None:
+                if tmImage!= '' or tmImage!= '':
                     ia_img_url = img_list[province].format(tmImage)
                 else:
-                    ia_img_url = None
+                    ia_img_url = ''
 
                 select_string = select_brand % ia_zch
                 # print select_string
