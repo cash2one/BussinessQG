@@ -23,7 +23,7 @@ url = 'http://www.jsgsj.gov.cn:58888/ecipplatform/publicInfoQueryServlet.json?qu
 
 freeze_string = 'insert into gs_freeze(gs_basic_id,executor, stock_amount, court, notice_no,status,items, rule_no, enforce_no,cert_cate,cert_code, start_date, end_date,period, pub_date,updated)values(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)'
 select_freeze = 'select gs_freeze_id from gs_freeze where gs_basic_id = %s and rule_no = %s and executor = %s'
-
+headers = config.headers
 class Freeze:
 	def deal_single_info(self,data,info):
 		for i,singledata in enumerate(data):
@@ -41,6 +41,8 @@ class Freeze:
 			
 			data = json.loads(result.content)["djInfo"][0]
 			executor = data["ASSIST_NAME"]
+			if executor ==None:
+				executor = ''
 			stock_amount = data["FREEZE_AMOUNT"]
 			court = data["EXECUTE_COURT"]
 			notice_no = data["NOTICE_NO"]

@@ -100,6 +100,7 @@ class GetBranchInfo:
     #用于获得单页信息
     def get_single_page_info(self,url,info):
         result, status_code = Send_Request(url, self.headers).send_request()
+        pagecount = 0
         if status_code == 200:
             flag = 1
             content = json.loads(result.content)

@@ -43,7 +43,7 @@ params = '&org={0}&id={1}&seqId={2}'
 
 
 update_mort_py = 'update gs_py set gs_py_id = %s,gs_mort = %s,updated = %s where gs_py_id = %s'
-
+headers = config.headers
 class Mort:
 	def deal_single_info(self,data,info):
 		

@@ -17,7 +17,7 @@ def remove_space(string):
 #对中文日期进行处理
 def change_chinese_date(date):
     if date == ''or date ==None or date == ' ':
-        date = None
+        date = '0000-00-00'
     else:
         date = re.sub(re.compile(u'年|月'), '-', date)
         date = re.sub(re.compile(u'日'), '', date)
@@ -25,7 +25,7 @@ def change_chinese_date(date):
 #把时间戳转换为0000-00-00类型,十二位以上的时间戳不做处理
 def change_date_style(old_date):
     if old_date == '' or old_date == None:
-        new_date = None
+        new_date = '0000-00-00'
     elif len(str(old_date/1000)) >= 12:
         new_date = '9999-12-31'
     else:
@@ -36,9 +36,9 @@ def change_date_style(old_date):
 #用于匹配浮点型数据
 def match_float(finger):
     if finger == None or finger == '':
-        finger = None
+        finger = 0
     elif "不公示" in finger:
-        finger = None
+        finger = 0
     else:
         pattern = re.compile(u"[-+]?[0-9]*\.?[0-9]+")
         finger = re.findall(pattern, finger)

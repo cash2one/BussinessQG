@@ -89,5 +89,4 @@ class Stock:
 
 def main(org, id, seqid, regno, gs_basic_id):
 	pattern = "stock"
-	flag = Judge().update_info2(pattern, org, id, seqid, regno, Stock, gs_basic_id)
-	
+	Judge().update_info2(pattern, org, id, seqid, regno, Stock, gs_basic_id)

@@ -23,6 +23,8 @@ class Permit:
 			name = ''
 			code = singledata["AUDIT_NO"]
 			filename = singledata["AUDIT_NAME"]
+			if filename ==None:
+				filename = ''
 			start_date = singledata["VALID_START_DATE"]
 			start_date = deal_html_code.change_chinese_date(start_date)
 			end_date = singledata["VALID_END_DATE"]

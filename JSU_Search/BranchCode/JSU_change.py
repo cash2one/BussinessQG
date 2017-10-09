@@ -17,9 +17,6 @@ import logging
 
 #信息类型
 
-
-
-
 insert_string = 'insert into gs_change(gs_basic_id,types,item,content_before,content_after,change_date,source,updated)values(%s,%s,%s,%s,%s,%s,%s,%s)'
 select_string = 'select gs_basic_id,content_after from gs_change where gs_basic_id = %s and item = %s and change_date = %s and source =0'
 
@@ -29,6 +26,8 @@ class Change:
 		for i,single in enumerate(data):
 			content_before = single["OLD_CONTENT"]
 			content_after = single["NEW_CONTENT"]
+			if content_after ==None:
+				content_after = ''
 			change_date = single["CHANGE_DATE"]
 			change_date = deal_html_code.change_chinese_date(change_date)
 			item = single["CHANGE_ITEM_NAME"]
@@ -49,9 +48,9 @@ class Change:
 				updated_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
 				count = cursor.execute(select_string,(gs_basic_id,item,change_date))
 				if count == 0:
-					source = 0
+					# source = 0
 					row_count = cursor.execute(insert_string, (
-								gs_basic_id, types, item, content_before, content_after, change_date,source,updated_time))
+								gs_basic_id, types, item, content_before, content_after, change_date,updated_time))
 					insert_flag += row_count
 					connect.commit()
 				elif count >= 1:

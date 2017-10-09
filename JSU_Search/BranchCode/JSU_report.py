@@ -28,10 +28,6 @@ select_basic_year = 'select reg_date from gs_basic where gs_basic_id = %s'
 select_report = 'select gs_report_id from gs_report where gs_basic_id = %s and year = %s '
 hide_report = 'insert into gs_report(gs_basic_id,year,province,name,uuid,code,ccode,source,report_mode,created,updated) values(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)'
 
-# org = '78AB4DDC058110BDAA3B82E7C2990A07'
-# id = '4D6557472C5E5A088C887D721414358B'
-# seqid = 'C486462EC151CB99F84896EC5D0A4AD4'
-# regno = '57CA52C4B769FC45D75A6F0E96A0908D04E5149259A57FABF1480E3886B8F6D5'
 
 class Report:
 	def __init__(self, url, headers, org, id, seqid, regno,gs_basic_id):

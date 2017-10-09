@@ -71,13 +71,13 @@ class Brand:
 					goods = single["GOODS"]
 					ia_servicelist = ia_servicelist+similarcode+'--'+goods
 			else:
-				ia_servicelist = None
+				ia_servicelist = ''
 			
 			begin = data["PERIBGN"]
 			end = data["PERIEND"]
 			
-			if begin == None and end == None:
-				ia_zyqqx = None
+			if begin == '' and end == '':
+				ia_zyqqx = ''
 			else:
 				ia_zyqqx = begin + '至' + end
 			ia_zcdate = data["REGANNCDATE"]

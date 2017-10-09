@@ -3,7 +3,7 @@
 # @File  : JSU_basic.py
 # @Author: Lmm
 # @Date  : 2017-09-21
-# @Desc  : 用于获取北京的连接信息
+# @Desc  : 用于获取江苏的连接信息
 from PublicCode import config
 from PublicCode.Public_Code import Send_Request
 from PublicCode.Public_Code import Connect_to_DB
@@ -27,6 +27,7 @@ class Basic:
 		self.headers = headers
 	def name(self):
 		result,status_code = Send_Request(self.url,self.headers).send_request()
+		info = []
 		if status_code ==200:
 			#flag用于标记程序运行状态
 			flag = 1

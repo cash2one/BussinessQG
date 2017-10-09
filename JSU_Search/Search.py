@@ -16,8 +16,8 @@ import requests
 import time
 import json
 import re
-keyword = '南京银行股份有限公司'
-unique_id = '1999999999912131212'
+keyword = '科学技术有限公司'
+unique_id = '199999212'
 user_id = '1345'
 
 insert_string = "insert into gs_basic(id,province,name,code,ccode,legal_person,responser,investor,runner,reg_date,status,updated) values (%s,%s,%s, %s, %s,%s,%s, %s,%s,%s, %s,%s)"
@@ -56,7 +56,7 @@ def get_search_info(name,cookies):
 		
 		error = data["ERROR"]
 		print error
-		if u"失败" in error:
+		if "失败" in error or "重新输入" in error:
 			flag = 100000003
 			logging.info(error)
 		else:
@@ -238,7 +238,8 @@ def main():
 		if flag == 1:
 			flag, items = get_search_info(idname, cookies)
 			info = get_keyword(items)
-			flag, insert_flag, update_flag = insert_search(keyword, user_id, info, cursor, connect)
+			if flag ==1:
+				flag, insert_flag, update_flag = insert_search(keyword, user_id, info, cursor, connect)
 	except Exception, e:
 		flag = 100000005
 		logging.error("unknow error:%s" % e)

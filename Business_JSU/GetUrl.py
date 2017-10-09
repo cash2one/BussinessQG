@@ -14,8 +14,8 @@ import logging
 import re
 import time
 
-code = '320705600016732'
-ccode = '320705600016732'
+code = '913201007541328275'
+ccode = '913201007541328275'
 gs_basic_id ='1'
 
 
@@ -49,11 +49,17 @@ def get_search_info(name,cookies):
 		flag = 1
 		second_url = config.second_url.format(name)
 		result = requests.get(second_url,headers =config.headers,cookies = cookies)
-		total = json.loads(result.content)["total"]
-		if total > 0:
-			items = json.loads(result.content)["items"]
-		else:
+		data = json.loads(result.content)
+		error = data["ERROR"]
+		if u"失败" in error:
 			flag = 100000003
+			logging.info(error)
+		else:
+			total = json.loads(result.content)["total"]
+			if total > 0:
+				items = json.loads(result.content)["items"]
+			else:
+				flag = 100000003
 	except Exception,e:
 		flag = 100000004
 		logging.error("search error:%s"%e)

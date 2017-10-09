@@ -42,6 +42,8 @@ class Person:
 			for i,single in enumerate(data):
 				name = single["PERSON_NAME"]
 				position = single["POSITION_NAME"]
+				if position == None:
+					position = ''
 				info[i] = [name,position]
 		else:
 			flag = 100000004

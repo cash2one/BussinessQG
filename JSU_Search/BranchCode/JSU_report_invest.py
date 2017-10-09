@@ -12,10 +12,6 @@ import logging
 import time
 out_invest_string = 'insert into gs_report_invest(gs_basic_id,gs_report_id,province,name, code, ccode,uuid,created,updated) values(%s,%s,%s,%s,%s,%s,%s,%s,%s)'
 
-
-
-
-
 class Report_Invest:
 	def __init__(self, url, headers):
 		self.url = url

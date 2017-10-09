@@ -34,6 +34,8 @@ class Shareholder:
 			license_code = singledata["IDENT_NO"]
 			license_type = singledata["IDENT_TYPE_NAME"]
 			types = singledata["STOCK_TYPE"]
+			if types ==None:
+				types = ''
 			id = singledata["ID"]
 			org = singledata["ORG"]
 			country = singledata["COUNTRY"]
@@ -84,7 +86,7 @@ class Shareholder:
 		else:
 			pass
 		
-	def update_to_db(self,info,gs_basic_id):
+	def update_to_db(self, info, gs_basic_id):
 		cate = 0
 		insert_flag, update_flag = 0, 0
 		remark = 0
@@ -143,7 +145,7 @@ class Shareholder:
 			connect.close()
 			if remark < 100000001:
 				remark = insert_flag
-			return remark, total,insert_flag, update_flag
+			return remark, total, insert_flag, update_flag
 
 
 def main(org, id, seqid, regno, gs_basic_id):

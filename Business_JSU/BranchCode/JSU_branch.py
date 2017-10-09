@@ -20,13 +20,7 @@ sys.setdefaultencoding('utf-8')
 Type = sys.getfilesystemencoding()
 
 
-# org = '8BD57D086433FE76407EBEB21C318A99'
-# id = 'C7F07915079BC570367524673937ED1A'
-# seq_id = '22C72034011B36A98AF38569B13712C7'
-# gs_basic_id = '1'
-# regno = '3285999FF2A457319C9CD179CB18600EF75DDBF3D007D8DEEBA79BE855DED106'
 
-# gs_py_id = ''
 headers = config.headers
 branch_string = 'insert into gs_branch(gs_basic_id,id,code,ccode,name,gov_dept,updated)values(%s,%s,%s,%s,%s,%s,%s)'
 select_string = 'select * from gs_branch where id = %s and gs_basic_id =%s'
@@ -42,22 +36,31 @@ class Branch:
 	def get_info(self):
 		result,status_code = Send_Request(self.url,self.headers).send_request()
 		info = {}
+		
 		if status_code ==200:
 			flag = 1
 			data = json.loads(result.content)
+			
 			for i,singledata in enumerate(data):
 				
 				name = singledata["DIST_NAME"]
+				if name ==None:
+					name = ''
 				code = singledata["DIST_REG_NO"]
+				if code == None:
+					code = ''
 				
 				#省份代号中没有以9开头的因此可以用是否以9开头区分是否为注册号
 				if code.startswith('9'):
 					ccode = code
-					code = None
+					code = ''
 				else:
-					ccode = None
+					ccode = ''
 				gov_dept = singledata["DIST_BELONG_ORG"]
-				info[i] = [name, code,ccode, gov_dept]
+				if name =='' and code == '':
+					pass
+				else:
+					info[i] = [name, code,ccode, gov_dept]
 		else:
 			flag = 100000004
 		return info,flag

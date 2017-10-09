@@ -27,7 +27,11 @@ class Permit:
 		for i,singledata in enumerate(data):
 			name = ''
 			code = singledata["LIC_NO"]
+			if code == None:
+				code = ''
 			filename = singledata["LIC_NAME"]
+			if filename == None:
+				filename = ''
 			start_date = singledata["VAL_FROM"]
 			start_date = deal_html_code.change_chinese_date(start_date)
 			end_date = singledata["VAL_TO"]

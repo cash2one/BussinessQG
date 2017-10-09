@@ -41,16 +41,22 @@ class Branch:
 			for i,singledata in enumerate(data):
 				
 				name = singledata["DIST_NAME"]
+				if name ==None:
+					name = ''
 				code = singledata["DIST_REG_NO"]
-				
+				if code == None:
+					code = ''
 				#省份代号中没有以9开头的因此可以用是否以9开头区分是否为注册号
 				if code.startswith('9'):
 					ccode = code
-					code = None
+					code = ''
 				else:
-					ccode = None
+					ccode = ''
 				gov_dept = singledata["DIST_BELONG_ORG"]
-				info[i] = [name, code,ccode, gov_dept]
+				if name =='' and code =='':
+					pass
+				else:
+					info[i] = [name, code,ccode, gov_dept]
 		else:
 			flag = 100000004
 		return info,flag
