@@ -14,7 +14,7 @@
 # print list[0]
 # print list[1]
 # print type(list)
-list = {"name":1}
+list = {"name": 1}
 data = {}
 data[0] = list
 print type(data)
@@ -34,16 +34,16 @@ import hashlib
 import traceback
 
 try:
-    1/0
+	1 / 0
 except Exception, e:
-    # print 'str(Exception):\t', str(Exception)
-    # print 'str(e):\t\t', str(e)
-    # print 'repr(e):\t', repr(e)
-    # print 'e.message:\t', e.message
-    # print 'traceback.print_exc():';traceback.print_exc()
-    print 'traceback.format_exc():\n%s' % traceback.format_exc()
-# from PublicCode import config
-# import requests
-# url = 'http://sn.gsxt.gov.cn/ztxy.do?method=frInfoDetail&maent.xh=610000000000893121&maent.pripid=6100000000008931&isck=Y&random=1508406673399'
-# result = requests.get(url,headers = config.headers)
-# print result.text
+	# print 'str(Exception):\t', str(Exception)
+	# print 'str(e):\t\t', str(e)
+	# print 'repr(e):\t', repr(e)
+	# print 'e.message:\t', e.message
+	# print 'traceback.print_exc():';traceback.print_exc()
+	print 'traceback.format_exc():\n%s' % traceback.format_exc()
+	# from PublicCode import config
+	# import requests
+	# url = 'http://sn.gsxt.gov.cn/ztxy.do?method=frInfoDetail&maent.xh=610000000000893121&maent.pripid=6100000000008931&isck=Y&random=1508406673399'
+	# result = requests.get(url,headers = config.headers)
+	# print result.text

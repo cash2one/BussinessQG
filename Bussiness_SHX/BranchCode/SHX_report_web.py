@@ -14,17 +14,17 @@ web_string = 'insert into gs_report_web(gs_basic_id,province,gs_report_id,name,t
 
 
 class Report_Web:
-	def get_info(self,data):
+	def get_info(self, data):
 		tr_list = data.xpath("//tr")
 		info = {}
-		for i,singledata in enumerate(tr_list):
+		for i, singledata in enumerate(tr_list):
 			temp = {}
 			td_list = singledata.xpath("./td")
 			temp["name"] = deal_html_code.remove_symbol(td_list[1].xpath("string(.)"))
 			temp["types"] = deal_html_code.remove_symbol(td_list[2].xpath("string(.)"))
 			temp["website"] = deal_html_code.remove_symbol(td_list[3].xpath("string(.)"))
 			info[i] = temp
-		
+	
 	def update_to_db(self, info, gs_basic_id, gs_report_id, cursor, connect):
 		insert_flag, update_flag = 0, 0
 		remark = 0

@@ -22,40 +22,42 @@ select_name = 'select gs_basic_id from gs_unique where name = "%s"'
 update_share = 'update gs_shareholder set quit = 1 where gs_basic_id = %s and cate = 0'
 update_quit = 'update gs_shareholder set quit = 0,updated = %s where gs_shareholder_id = %s and gs_basic_id = %s'
 
+
 class Shareholder:
-	def __init__(self,pripid,url):
+	def __init__(self, pripid, url):
 		self._pripid = pripid
 		self._url = url
 	
-	#用于获得股东及出资信息
-    #data.xpath("//table[@class= 'table_fr']")
-	def get_info(self,data):
+	# 用于获得股东及出资信息
+	# data.xpath("//table[@class= 'table_fr']")
+	def get_info(self, data):
 		info = {}
 		for i, singledata in enumerate(data):
 			
 			td_list = singledata.xpath("./td")
-			if len(td_list)==0:
+			if len(td_list) == 0:
 				continue
 			
 			self.deal_single_info(td_list, i, info)
 		return info
-	#用于单条页面信息
-	def deal_single_info(self,td_list,i,info):
+	
+	# 用于单条页面信息
+	def deal_single_info(self, td_list, i, info):
 		json_data = {
-			"name":"",
-			"types":"",
-			"license_code":"",
-			"license_type":"",
-			"true_amount":"",
-			"reg_amount":"",
-			"ra_ways":"",
-			"ra_date":"0000-00-00",
-			"ta_ways":"",
-			"ta_date":"0000-00-00"
+			"name": "",
+			"types": "",
+			"license_code": "",
+			"license_type": "",
+			"true_amount": "",
+			"reg_amount": "",
+			"ra_ways": "",
+			"ra_date": "0000-00-00",
+			"ta_ways": "",
+			"ta_date": "0000-00-00"
 		}
-		#如果是投资人，即包含两个字段
+		# 如果是投资人，即包含两个字段
 		
-		if len(td_list)<=2:
+		if len(td_list) <= 2:
 			
 			name = deal_html_code.remove_symbol(td_list[1].xpath("string(.)"))
 			types = deal_html_code.remove_symbol(td_list[2].xpath("string(.)"))
@@ -75,8 +77,8 @@ class Shareholder:
 			license_code = deal_html_code.remove_symbol(td_list[3].xpath("string(.)"))
 			json_data["license_code"] = license_code
 			detail = td_list[4].xpath("./a")
-			#如果长度为0证明是个假的详情，~-~即没有链接
-			if len(detail) ==0:
+			# 如果长度为0证明是个假的详情，~-~即没有链接
+			if len(detail) == 0:
 				logging.info("该条信息无详情！")
 			else:
 				showRyxx = td_list[4].xpath("./a/@onclick")[0]
@@ -87,8 +89,9 @@ class Shareholder:
 				detail_url = self.url.format(xh, pripid, isck)
 				self.deal_detail_info(detail_url)
 		info[i] = json_data
-	#用于处理详情信息
-	def deal_detail_info(self,detail_url,json_data):
+	
+	# 用于处理详情信息
+	def deal_detail_info(self, detail_url, json_data):
 		headers = config.headers
 		result, status_code = Send_Request().send_requests(detail_url, headers)
 		if status_code != 200:
@@ -107,14 +110,16 @@ class Shareholder:
 			string = u"实缴明细信息"
 			flag = 'sj'
 			self.get_detail(string, data, json_data, flag)
-	#获得实缴出资额，认缴出资额
-	def get_number(self,string,data):
+	
+	# 获得实缴出资额，认缴出资额
+	def get_number(self, string, data):
 		td = data.xpath("//*[contains(.,'%s')]" % string)[0].xpath(".//following-sibling::*[1]")
 		content = td[0].xpath("string(.)")
 		content = deal_html_code.remove_symbol(content)
 		return content
-	#认缴明细信息，实缴明细信息
-	def get_detail(self,string,data,json_data,flag):
+	
+	# 认缴明细信息，实缴明细信息
+	def get_detail(self, string, data, json_data, flag):
 		table = data.xpath("//*[contains(.,'%s')]" % string)[0].xpath(".//following-sibline::*[1]")
 		td = table[0].xpath(".//td")
 		if flag == 'rj':
@@ -158,7 +163,8 @@ class Shareholder:
 			connect, cursor = Connect_to_DB().ConnectDB(HOST, USER, PASSWD, DB, PORT)
 			for key, value in info.items():
 				name, license_code, license_type = value["name"], value["license_code"], value["license_type"]
-				types, ra_date, ra_ways, true_amount = value["types"], value["ra_date"], value["ra_ways"], value["true_amount"]
+				types, ra_date, ra_ways, true_amount = value["types"], value["ra_date"], value["ra_ways"], value[
+					"true_amount"]
 				reg_amount, ta_ways, ta_date = value["reg_amount"], value["ta_ways"], value["ta_date"]
 				
 				iv_basic_id = 0
@@ -183,7 +189,7 @@ class Shareholder:
 					updated_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
 					rows_count = cursor.execute(share_string, (
 						gs_basic_id, name, cate, types, license_type, license_code, ra_date, ra_ways, true_amount,
-						reg_amount, ta_ways, ta_date,iv_basic_id, updated_time))
+						reg_amount, ta_ways, ta_date, iv_basic_id, updated_time))
 					insert_flag += rows_count
 					connect.commit()
 				elif int(count) == 1:
@@ -201,24 +207,3 @@ class Shareholder:
 			if remark < 100000001:
 				remark = insert_flag
 			return remark, total, insert_flag, update_flag
-		
-		
-		
-		
-		
-		
-	
-		
-	
-		
-	
-	
-	
-	
-	
-	
-		
-		
-		
-		
-	

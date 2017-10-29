@@ -10,9 +10,11 @@ import hashlib
 import time
 
 schange_string = 'insert into gs_report_schange(gs_basic_id,gs_report_id,province,name,percent_pre,percent_after,dates,uuid,created,updated)values' \
-                 '(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)'
+				 '(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)'
+
+
 class Report_Schange:
-	def get_info(self,data):
+	def get_info(self, data):
 		info = {}
 		tr_list = data.xpath("//tr")
 		for i, singledata in enumerate(tr_list):
@@ -24,7 +26,7 @@ class Report_Schange:
 			dates = deal_html_code.remove_symbol(td_list[4].xpath("string(.)"))
 			temp["dates"] = deal_html_code.change_chinese_date(dates)
 			info[i] = temp
-
+	
 	def update_to_db(self, gs_report_id, gs_basic_id, cursor, connect, info):
 		insert_flag, update_flag = 0, 0
 		remark = 0

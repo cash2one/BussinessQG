@@ -11,24 +11,28 @@ from PublicCode.Public_code import Send_Request
 from lxml import etree
 import logging
 import time
+
 except_string = 'insert into gs_except(gs_basic_id,types, in_reason, in_date,out_reason, out_date, gov_dept,out_gov,updated)values(%s,%s,%s,%s,%s,%s,%s,%s,%s)'
 select_except = 'select gs_except_id from gs_except where gs_basic_id = %s and in_date = %s'
 update_except = 'update gs_except set gs_except_id = %s,types = %s ,in_reason = %s,out_reason = %s ,out_date=%s,gov_dept = %s ,out_gov = %s,updated = %s where gs_except_id = %s'
 url = 'http://sn.gsxt.gov.cn/ztxy.do?method=qyinfo_jyycxx&pripid={0}&random=1508725286354'
+
+
 class Except:
-	def __init__(self,pripid,url):
+	def __init__(self, pripid, url):
 		self._pripid = pripid
 		self._url = url
+	
 	#
 	def get_info(self):
 		headers = config.headers
 		url = self._url.format(self._pripid)
-		result,status_code = Send_Request().send_requests(url,headers)
+		result, status_code = Send_Request().send_requests(url, headers)
 		info = {}
-		if status_code ==200:
-			data = etree.xpath(result,parser=etree.HTMLParser(encoding='utf-8'))
+		if status_code == 200:
+			data = etree.xpath(result, parser=etree.HTMLParser(encoding='utf-8'))
 			tr_list = data.xpath("//table[id= 'table_jyyc']//tr[@name = 'jyyc']")
-			for i,singledata in enumerate(tr_list):
+			for i, singledata in enumerate(tr_list):
 				temp = {}
 				td_list = singledata.xpath("./td")
 				temp["types"] = '经营异常'
@@ -50,22 +54,23 @@ class Except:
 		try:
 			HOST, USER, PASSWD, DB, PORT = config.HOST, config.USER, config.PASSWD, config.DB, config.PORT
 			connect, cursor = Connect_to_DB().ConnectDB(HOST, USER, PASSWD, DB, PORT)
-			for key,value in info.iteritems():
-				types, in_reason, in_date = value["types"],value["in_reason"], value["in_date"]
+			for key, value in info.iteritems():
+				types, in_reason, in_date = value["types"], value["in_reason"], value["in_date"]
 				out_reason, out_date, gov_dept = value["out_reason"], value["out_date"], value["gov_dept"]
 				out_gov = value["out_gov"]
 				count = cursor.execute(select_except, (gs_basic_id, in_date))
 				if count == 0:
 					updated_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
 					rows_count = cursor.execute(except_string, (
-						gs_basic_id, types, in_reason, in_date, out_reason, out_date, gov_dept,out_gov, updated_time))
+						gs_basic_id, types, in_reason, in_date, out_reason, out_date, gov_dept, out_gov, updated_time))
 					insert_flag += rows_count
 					connect.commit()
 				elif count == 1:
 					gs_except_id = cursor.fetchall()[0][0]
 					updated_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
 					rows_count = cursor.execute(update_except, (
-						gs_except_id, types, in_reason, out_reason, out_date, gov_dept,out_gov, updated_time, gs_except_id))
+						gs_except_id, types, in_reason, out_reason, out_date, gov_dept, out_gov, updated_time,
+						gs_except_id))
 					update_flag += rows_count
 					connect.commit()
 		except Exception, e:

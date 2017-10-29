@@ -18,15 +18,16 @@ select_freeze = 'select gs_freeze_id from gs_freeze where gs_basic_id = %s and r
 
 
 class Freeze:
-	def __init__(self,pripid,url):
+	def __init__(self, pripid, url):
 		self._pripid = pripid
 		self._url = url
-	#若是多省统一代码该如何修改？
-	#data.xpath("//table[@id = 'table_sfxz']//tr[@name = 'sfxz']"
-	def get_info(self,data):
+	
+	# 若是多省统一代码该如何修改？
+	# data.xpath("//table[@id = 'table_sfxz']//tr[@name = 'sfxz']"
+	def get_info(self, data):
 		info = {}
 		tr_list = data.xpath(".//table[@id='table_sfxz']//tr[@name = 'sfxz']")
-		for i,singledata in enumerate(tr_list):
+		for i, singledata in enumerate(tr_list):
 			temp = {}
 			td_list = singledata.xpath("./td")
 			if len(td_list) == 0:
@@ -50,28 +51,29 @@ class Freeze:
 			self.get_deatail_info(detail_url, info)
 			info[i] = temp
 		return info
-	def get_deatail_info(self,detail_url,info):
+	
+	def get_deatail_info(self, detail_url, info):
 		dict = {
-			u"执行事项":"items",
-			u"裁定书文号":"rule_no",
-			u"证照种类":"cert_cate",
-			u"证照号码":"cert_code",
-			u"冻结期限自":"start_date",
-			u"冻结期限至":"end_date",
-			u"冻结期限":"period",
-			u"公示日期":"pub_date"
+			u"执行事项": "items",
+			u"裁定书文号": "rule_no",
+			u"证照种类": "cert_cate",
+			u"证照号码": "cert_code",
+			u"冻结期限自": "start_date",
+			u"冻结期限至": "end_date",
+			u"冻结期限": "period",
+			u"公示日期": "pub_date"
 		}
 		headers = config.headers
 		result, status_code = Send_Request().send_requests(detail_url, headers)
-		if status_code ==200:
+		if status_code == 200:
 			data = result.xpath(result, parser=etree.HTMLParser(encoding='utf-8'))
 			for key, value in dict:
 				content = deal_html_code.get_match_info(key, data)
 				info[value] = content
 		else:
 			logging.info("获取司法协助详情信息失败！")
-		
-	def update_to_db(self,info,gs_basic_id):
+	
+	def update_to_db(self, info, gs_basic_id):
 		
 		insert_flag, update_flag = 0, 0
 		flag = 0
@@ -81,9 +83,12 @@ class Freeze:
 			HOST, USER, PASSWD, DB, PORT = config.HOST, config.USER, config.PASSWD, config.DB, config.PORT
 			connect, cursor = Connect_to_DB().ConnectDB(HOST, USER, PASSWD, DB, PORT)
 			for key, value in info.iteritems():
-				executor, stock_amount, court, notice_no = value["executor"], value["stock_amount"], value["court"], value["notice_no"]
-				status, items, rule_no, enforce_no = value["status"], value["items"], value["rule_no"], value["enforce_no"]
-				cert_cate, cert_code, start_date, end_date = value["cert_cate"], value["cert_code"], value["start_date"], value["end_date"]
+				executor, stock_amount, court, notice_no = value["executor"], value["stock_amount"], value["court"], \
+														   value["notice_no"]
+				status, items, rule_no, enforce_no = value["status"], value["items"], value["rule_no"], value[
+					"enforce_no"]
+				cert_cate, cert_code, start_date, end_date = value["cert_cate"], value["cert_code"], value[
+					"start_date"], value["end_date"]
 				period, pub_date = value["period"], value["pub_date"]
 				count = cursor.execute(select_freeze, (gs_basic_id, rule_no, executor))
 				if count == 0:
@@ -102,10 +107,3 @@ class Freeze:
 			if flag < 100000001:
 				flag = insert_flag
 			return flag, total, insert_flag, update_flag
-	
-			
-	
-	
-	
-	
-	

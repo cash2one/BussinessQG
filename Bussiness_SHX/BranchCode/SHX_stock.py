@@ -13,16 +13,18 @@ stock_string = 'insert into gs_stock(gs_basic_id,equityno,pledgor,pled_blicno,im
 select_stock = 'select gs_stock_id from gs_stock where gs_basic_id = %s and equityno = %s'
 update_stock = 'update gs_stock set gs_basic_id = %s,pledgor = %s,pled_blicno = %s,impam = %s,imporg = %s,imporg_blicno = %s,equlle_date = %s,public_date = %s,type = %s ,updated = %s where gs_stock_id = %s'
 
+
 class Stock:
 	def __init__(self):
 		pass
+	
 	# data.xpath("//table[@id = 'table_gqcz']//tr[@name='gqcz']")
 	def get_info(self, data):
 		info = {}
 		for i, singledata in enumerate(data):
 			temp = {}
 			td_list = singledata.xpath("./td")
-			if len(td_list)==0:
+			if len(td_list) == 0:
 				continue
 			temp["equityNo"] = deal_html_code.remove_symbol(td_list[1].xpath("string(.)"))
 			temp["pledgor"] = deal_html_code.remove_symbol(td_list[2].xpath("string(.)"))
@@ -37,6 +39,7 @@ class Stock:
 			temp["publicDate"] = deal_html_code.change_chinese_date(publicDate)
 			info[i] = temp
 		return info
+	
 	def update_to_db(self, info, gs_basic_id):
 		insert_flag, update_flag = 0, 0
 		remark = 0
@@ -44,7 +47,7 @@ class Stock:
 		try:
 			HOST, USER, PASSWD, DB, PORT = config.HOST, config.USER, config.PASSWD, config.DB, config.PORT
 			connect, cursor = Connect_to_DB().ConnectDB(HOST, USER, PASSWD, DB, PORT)
-			for key,value in info.iteritems():
+			for key, value in info.iteritems():
 				equityNo, pledgor, pledBLicNo = value["equityNo"], value["pledgor"], value["pledBLicNo"]
 				impAm, impOrg, impOrgBLicNo = value["impAm"], value["impOrg"], value["impOrgBLicNo"]
 				equPleDate, publicDate, type = value["equPleDate"], value["publicDate"], value["type"]

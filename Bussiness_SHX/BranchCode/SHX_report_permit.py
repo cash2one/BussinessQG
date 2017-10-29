@@ -11,15 +11,15 @@ import logging
 import hashlib
 import time
 
-
 permit_string = 'insert into gs_report_permit(gs_basic_id,gs_report_id,uuid,province,types,valto,created,updated)' \
-                'values(%s,%s,%s,%s,%s,%s,%s,%s)'
+				'values(%s,%s,%s,%s,%s,%s,%s,%s)'
+
 
 class Report_Permit:
-	def get_info(self,data):
+	def get_info(self, data):
 		tr_list = data.xpath("//tr")
 		info = {}
-		for i,singledata in enumerate(tr_list):
+		for i, singledata in enumerate(tr_list):
 			temp = {}
 			td_list = singledata.xpath("./td")
 			if len(td_list) == 0:
@@ -34,14 +34,14 @@ class Report_Permit:
 		remark = 0
 		total = len(info)
 		try:
-			for key,value in info.iteritems():
+			for key, value in info.iteritems():
 				types, valto = value["types"], value["valto"]
 				m = hashlib.md5()
 				m.update(str(gs_basic_id) + str(gs_report_id) + str(key))
 				uuid = m.hexdigest()
 				updated_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
 				flag = cursor.execute(permit_string, (
-				gs_basic_id, gs_report_id, uuid, config.province, types, valto, updated_time, updated_time))
+					gs_basic_id, gs_report_id, uuid, config.province, types, valto, updated_time, updated_time))
 				insert_flag += flag
 				connect.commit()
 		except Exception, e:

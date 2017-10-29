@@ -11,11 +11,13 @@ import logging
 import time
 
 out_invest_string = 'insert into gs_report_invest(gs_basic_id,gs_report_id,province,name, code, ccode,uuid,created,updated) values(%s,%s,%s,%s,%s,%s,%s,%s,%s)'
+
+
 class Report_Invest:
-	def get_info(self,data):
+	def get_info(self, data):
 		info = {}
 		tr_list = data.xpath("//tr")
-		for i,singledata in enumerate(tr_list):
+		for i, singledata in enumerate(tr_list):
 			td_list = singledata.xpath("./td")
 			if len(td_list) == 0:
 				continue
@@ -27,7 +29,8 @@ class Report_Invest:
 				ccode = ''
 			info[i] = [name, code, ccode]
 		return info
-	def update_to_db(self,info,gs_basic_id,gs_report_id,cursor,connect):
+	
+	def update_to_db(self, info, gs_basic_id, gs_report_id, cursor, connect):
 		insert_flag, update_flag = 0, 0
 		remark = 0
 		total = len(info)

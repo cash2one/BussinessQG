@@ -10,6 +10,7 @@ from PublicCode import deal_html_code
 import logging
 import hashlib
 import time
+
 assure_string = 'insert into gs_report_assure(gs_basic_id,gs_report_id, uuid, province, creditor, debtor, cates, amount, deadline, period, ways,if_fwarnnt,created,updated) \
 values(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)'
 
@@ -18,10 +19,10 @@ class Report_Assure:
 	def get_info(self, data):
 		tr_list = data.xpath("//tr")
 		info = {}
-		for i,singledata in enumerate(tr_list):
+		for i, singledata in enumerate(tr_list):
 			temp = {}
 			td_list = singledata.xpath("./td")
-			if len(td_list)==0:
+			if len(td_list) == 0:
 				continue
 			temp["creditor"] = deal_html_code.remove_symbol(td_list[1].xpath("string(.)"))
 			temp["debtor"] = deal_html_code.remove_symbol(td_list[2].xpath("string(.)"))
@@ -32,16 +33,14 @@ class Report_Assure:
 			temp["ways"] = deal_html_code.remove_symbol(deal_html_code[7].xpath("string(.)"))
 			info[i] = temp
 		return info
-		
-		
 	
-	def update_to_db(self,info,gs_basic_id,gs_report_id,cursor,connect):
+	def update_to_db(self, info, gs_basic_id, gs_report_id, cursor, connect):
 		remark = 0
 		insert_flag, update_flag = 0, 0
 		total = len(info)
 		info = {}
 		try:
-			for key,value in info.keys():
+			for key, value in info.keys():
 				creditor, debtor, cates = value["creditor"], value["debtor"], value["cates"]
 				amount, deadline, period, ways = value["amount"], value["deadline"], value["period"], value["ways"]
 				if_fwarnnt = info[key][8]

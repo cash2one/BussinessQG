@@ -16,29 +16,27 @@ reload(sys)
 sys.setdefaultencoding('utf-8')
 Type = sys.getfilesystemencoding()
 
-
-
-
 select_string = 'select gs_person_id,position from gs_person where gs_basic_id = %s and name = %s and source = 0'
 insert_string = 'insert into gs_person(gs_basic_id,name,position,source,updated)values(%s,%s,%s,%s,%s)'
 person_string = 'update gs_person set gs_person_id = %s,position = %s,updated = %s,quit =0 where gs_person_id = %s'
 
 update_string = 'update gs_person set quit = 1 where gs_basic_id = %s '
 update_quit = 'update gs_person set quit = 0,updated = %s where gs_basic_id = %s and gs_person_id = %s'
+
+
 class Person:
-	#data.xpath("")
-	#人员，成员
-	def get_info(self,data):
+	# data.xpath("")
+	# 人员，成员
+	def get_info(self, data):
 		info = {}
 		tr_list = data.xpath(".//tr")
 		
-		for i,singledata in enumerate(tr_list):
+		for i, singledata in enumerate(tr_list):
 			temp = {}
 			td_list = singledata.xpath(".//td")
 			if len(td_list) == 0:
 				continue
 			
-		
 			temp["name"] = deal_html_code.remove_symbol(td_list[1].xpath("string(.)"))
 			temp["position"] = deal_html_code.remove_symbol(td_list[2].xpath("string(.)"))
 			info[i] = temp
@@ -58,7 +56,7 @@ class Person:
 			connect.close()
 			HOST, USER, PASSWD, DB, PORT = config.HOST, config.USER, config.PASSWD, config.DB, config.PORT
 			connect, cursor = Connect_to_DB().ConnectDB(HOST, USER, PASSWD, DB, PORT)
-			for key,value in info.iteritems():
+			for key, value in info.iteritems():
 				name = value["name"]
 				position = value["position"]
 				rows = cursor.execute(select_string, (gs_basic_id, name))
@@ -104,8 +102,3 @@ class Person:
 				flag = insert_flag + update_flag
 				remark = flag
 			return remark, total, insert_flag, update_flag
-			
-		
-		
-	
-

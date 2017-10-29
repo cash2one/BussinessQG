@@ -12,15 +12,18 @@ from PublicCode.Public_code import Send_Request
 import logging
 import time
 import hashlib
+
 punish_string = 'insert into gs_punish(gs_basic_id,id,number, types, content,date, pub_date, gov_dept,name,pdfurl,updated)values(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)'
 select_punish = 'select gs_punish_id from gs_punish where gs_basic_id = %s and number = %s'
 url = 'http://sn.gsxt.gov.cn/ztxy.do?method=qyinfo_xzcfxx&pripid={0}&random=1508721684203'
 detail_url = 'http://sn.gsxt.gov.cn/ztxy.do?method=xzfyDetail&maent.pripid={0}&maent.xh={1}&random=1508723649286 '
 
+
 class Punish:
-	def __init__(self,pripid,url):
+	def __init__(self, pripid, url):
 		self._pripid = pripid
 		self._url = url
+	
 	def get_info(self):
 		url = self._url.format(self._pripid)
 		headers = config.headers
@@ -40,13 +43,13 @@ class Punish:
 				temp["date"] = deal_html_code.change_chinese_date(date)
 				pub_date = deal_html_code.remove_symbol(td_list[6].xpath("string(.)"))
 				temp["pub_date"] = deal_html_code.change_chinese_date(pub_date)
-				if len(tr_list)>7:
+				if len(tr_list) > 7:
 					onclick = tr_list[7].xpath("./a[@onclick]")
-					if len(onclick) ==0:
+					if len(onclick) == 0:
 						tuple = deal_html_code.match_key_content(onclick[0])
 						pripid = tuple[0]
 						xh = tuple[1]
-						pdfurl = detail_url.format(pripid,xh)
+						pdfurl = detail_url.format(pripid, xh)
 				else:
 					pdfurl = ''
 				temp["pdfutl"] = pdfurl
@@ -61,7 +64,7 @@ class Punish:
 		try:
 			HOST, USER, PASSWD, DB, PORT = config.HOST, config.USER, config.PASSWD, config.DB, config.PORT
 			connect, cursor = Connect_to_DB().ConnectDB(HOST, USER, PASSWD, DB, PORT)
-			for key,value in information.iteritems():
+			for key, value in information.iteritems():
 				number, types, content = value["number"], value["types"], value["content"]
 				date, pub_date, gov_dept = value["date"], value["pub_date"], value["gov_dept"]
 				name, pdfurl = value["name"], value["pdfurl"]

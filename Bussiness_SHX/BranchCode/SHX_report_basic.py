@@ -17,15 +17,15 @@ run_string = 'insert into gs_report_run(gs_report_id,gs_basic_id,province,asset,
 update_address = 'update gs_basic set gs_basic_id = %s,tel = %s,address = %s,email = %s where gs_basic_id = %s'
 
 
-
 class Report_Basic:
 	def __init__(self):
 		pass
-	#用于获取基本信息
-	def get_info(self,data):
+	
+	# 用于获取基本信息
+	def get_info(self, data):
 		info = {}
-		for key,value in config.report_basic_dict.iteritems():
-			info[value] = deal_html_code.get_match_info(key,data)
+		for key, value in config.report_basic_dict.iteritems():
+			info[value] = deal_html_code.get_match_info(key, data)
 		if u"不公示" in info["employee"]:
 			info["if_empnum"] = 0
 		womennum = info["womennum"]
@@ -39,23 +39,23 @@ class Report_Basic:
 		info["if_fwarnnt"] = self.transform_ifornot(info["if_fwarnnt"])
 		info["if_website"] = self.transform_ifornot(info["if_website"])
 		info["if_sharetrans"] = self.transform_ifornot(info["if_sharetrans"])
-		
-	#由于数据库中的是否是用1和0表示的因此需要将是否转换为1和0来表示
-	def transform_ifornot(self,string):
-		if u'是'== string:
+	
+	# 由于数据库中的是否是用1和0表示的因此需要将是否转换为1和0来表示
+	def transform_ifornot(self, string):
+		if u'是' == string:
 			trans_data = 0
 		elif u"否" == string:
 			trans_data = 0
 		else:
 			trans_data = 0
 		return trans_data
-		
-		
-	#用于将数据更新到数据库中
+	
+	# 用于将数据更新到数据库中
 	def update_to_db(self, info, gs_basic_id, cursor, connect, year):
 		name, tel, address, email = info["name"], info["tel"], info["address"], info["email"]
 		postcode, status, employee, if_empnum = info["postcode"], info["status"], info["employee"], info["if_empnum"]
-		womennum, if_womennum, holding, if_holding = info["womennum"], info["if_womennum"], info["holding"], info["if_holding"]
+		womennum, if_womennum, holding, if_holding = info["womennum"], info["if_womennum"], info["holding"], info[
+			"if_holding"]
 		mainbus, code = info["mainbus"], info["code"]
 		if code.startswith("9"):
 			ccode = code
@@ -87,6 +87,5 @@ class Report_Basic:
 		finally:
 			if remark < 100000001:
 				remark = row_count
-			
-		return gs_report_id
 		
+		return gs_report_id

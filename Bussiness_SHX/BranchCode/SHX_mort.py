@@ -13,17 +13,16 @@ from lxml import etree
 import logging
 import hashlib
 import time
+
 reload(sys)
 sys.setdefaultencoding('utf-8')
 Type = sys.getfilesystemencoding()
 
-
-
 select_mort = 'select gs_mort_id from gs_mort where gs_basic_id = %s and code = %s'
 mort_string = 'insert into gs_mort(gs_basic_id,id,code, dates, dept, amount, status,cates,period, ranges, remark,updated)' \
-              'values(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)'
+			  'values(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)'
 update_mort = 'update gs_mort set gs_mort_id = %s ,dates = %s, dept = %s, amount = %s, status = %s,cates = %s,period = %s, ranges = %s, remark = %s,updated = %s ' \
-              'where gs_mort_id = %s'
+			  'where gs_mort_id = %s'
 
 select_goods = 'select gs_mort_goods_id from gs_mort_goods where gs_mort_id = %s and name = %s and ownership = %s and situation = %s'
 goods_string = 'insert into gs_mort_goods(gs_mort_id,id,gs_basic_id,name,ownership,situation,remark,updated)values(%s,%s,%s,%s,%s,%s,%s,%s)'
@@ -35,18 +34,19 @@ update_mort_person = 'update gs_mort_person set gs_mort_person_id = %s,name = %s
 
 
 class Mort:
-	def __init__(self,pripid,url):
+	def __init__(self, pripid, url):
 		self._pripid = pripid
 		self._url = url
-	#data.xpath("//table[@id = 'table_dcdy']//tr[@name='dcdy']")
-	#用于获取页面上的单条信息
-	def get_info(self,data):
+	
+	# data.xpath("//table[@id = 'table_dcdy']//tr[@name='dcdy']")
+	# 用于获取页面上的单条信息
+	def get_info(self, data):
 		info = {}
 		tr_list = data.xpath(".//table[@id='table_dcdy']//tr[@name = 'dcdy']")
-		for i,singledata in enumerate(tr_list):
+		for i, singledata in enumerate(tr_list):
 			temp = {}
 			td_list = singledata.xpath("./td")
-			if len(td_list)==0:
+			if len(td_list) == 0:
 				continue
 			
 			temp["code"] = deal_html_code.remove_symbol(td_list[1].xpath("string(.)"))
@@ -60,28 +60,29 @@ class Mort:
 			onclick = td_list[6].xpath("./a/@onclick")[0]
 			tuple = deal_html_code.match_key_content(str(onclick))
 			xh = tuple[0]
-			detail_url = self._url.format(self._pripid,xh)
-			person_info, goods_info = self.get_detail_info(detail_url,temp)
+			detail_url = self._url.format(self._pripid, xh)
+			person_info, goods_info = self.get_detail_info(detail_url, temp)
 			temp["person_info"] = person_info
 			temp["goods_info"] = goods_info
 			info[i] = temp
 		return info
-	#用于打开详情页，获取担保概权信息，抵押人，抵押物信息
-	def get_detail_info(self,detail_url,info):
+	
+	# 用于打开详情页，获取担保概权信息，抵押人，抵押物信息
+	def get_detail_info(self, detail_url, info):
 		dict = {
-			u"种类":"cates",
-			u"范围":"ranges",
-			u"期限":"period",
-			u"备注":"remark",
+			u"种类": "cates",
+			u"范围": "ranges",
+			u"期限": "period",
+			u"备注": "remark",
 		}
 		headers = config.headers
-		result,status_code = Send_Request().send_requests(detail_url,headers)
+		result, status_code = Send_Request().send_requests(detail_url, headers)
 		if status_code == 200:
-			data = etree.xpath(result,parser = etree.HTMLParser(encoding='utf-8'))
+			data = etree.xpath(result, parser=etree.HTMLParser(encoding='utf-8'))
 			string = u"被担保债权概况信息"
 			table = data.xpath("//*[contains(.,'%s')]" % string)[0]
-			for key,value in dict.iteritems():
-				info[value] = deal_html_code.get_match_info(key,table)
+			for key, value in dict.iteritems():
+				info[value] = deal_html_code.get_match_info(key, table)
 			string = u"抵押权人概况信息"
 			person_info = data.xpath("//*[contains(.,'%s')]" % string)[0]
 			string = u"抵押权物概况信息"
@@ -93,12 +94,13 @@ class Mort:
 			info["remark"] = ''
 			person_info = {}
 			goods_info = {}
-		return person_info,goods_info
-	#抽取动产抵押物信息
-	def get_goods_info(self,data):
+		return person_info, goods_info
+	
+	# 抽取动产抵押物信息
+	def get_goods_info(self, data):
 		tr_list = data.xpath(".//tr[@name = 'dywgk']")
 		info = {}
-		for i,singledata in enumerate(tr_list):
+		for i, singledata in enumerate(tr_list):
 			temp = {}
 			td_list = singledata.xpath("./td")
 			name = deal_html_code.remove_symbol(td_list[1].xpath("string(.)"))
@@ -110,11 +112,12 @@ class Mort:
 			remark = deal_html_code.remove_symbol(td_list[4].xpath("string(.)"))
 			temp["remark"] = remark
 			info[i] = temp
-	#抽取动产抵押人信息
-	def get_person_info(self,data):
+	
+	# 抽取动产抵押人信息
+	def get_person_info(self, data):
 		tr_list = data.xpath(".//tr[@name = 'dydj']")
 		info = {}
-		for i,singledata in enumerate(tr_list):
+		for i, singledata in enumerate(tr_list):
 			temp = {}
 			td_list = singledata.xpath("./td")
 			name = deal_html_code.remove_symbol(td_list[1].xpath("string(.)"))
@@ -126,17 +129,18 @@ class Mort:
 			info[i] = temp
 		return info
 	
-	def update_to_db(self, info,gs_basic_id):
+	def update_to_db(self, info, gs_basic_id):
 		update_flag, insert_flag = 0, 0
 		mort_flag = 0
 		totalinfo = len(info)
 		try:
 			HOST, USER, PASSWD, DB, PORT = config.HOST, config.USER, config.PASSWD, config.DB, config.PORT
 			connect, cursor = Connect_to_DB().ConnectDB(HOST, USER, PASSWD, DB, PORT)
-			for key,singledata in info.iteritems():
+			for key, singledata in info.iteritems():
 				value = singledata[0]
 				code, dates, dept, amount = value["code"], value["dates"], value["dept"], value["amount"]
-				status, cates, period, ranges, remark = value["status"], value["cates"], value["period"], value["ranges"], \
+				status, cates, period, ranges, remark = value["status"], value["cates"], value["period"], value[
+					"ranges"], \
 														value["remark"]
 				
 				person_info = value["person_info"]
@@ -174,8 +178,7 @@ class Mort:
 			if mort_flag < 100000001:
 				mort_flag = total
 			return mort_flag, totalinfo, insert_flag, update_flag
-
-
+	
 	def update_goods(self, gs_mort_id, gs_basic_id, cursor, connect, info):
 		total = len(info)
 		

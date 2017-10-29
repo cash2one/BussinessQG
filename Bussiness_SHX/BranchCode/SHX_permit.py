@@ -16,10 +16,12 @@ import re
 select_string = 'select gs_permit_id from gs_permit where gs_basic_id = %s and filename = %s and code = %s and start_date = %s and end_date = %s '
 permit_string = 'insert into gs_permit(gs_basic_id,id,name, code, filename, start_date, end_date, content, gov_dept,source,updated)values(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)'
 
+
 class Permit:
 	def __init__(self, pripid, url):
 		self._pripid = pripid
 		self._url = url
+	
 	def get_info(self):
 		url = self._url.format(self._pripid)
 		headers = config.headers
@@ -27,9 +29,9 @@ class Permit:
 		data = etree.HTML(result, parser=etree.HTMLParser(encoding='utf-8'))
 		tr_list = data.xpath("//table[@id ='table_xzxk']//tr[name = 'xzxk']")
 		info = {}
-		for i,singledata in enumerate(tr_list):
+		for i, singledata in enumerate(tr_list):
 			td_list = singledata.xpath("./td")
-			if len(td_list) ==0:
+			if len(td_list) == 0:
 				continue
 			temp = {}
 			# number = deal_html_code.remove_symbol(td_list[0].xpath("string(.)"))
@@ -50,7 +52,7 @@ class Permit:
 		remark = 0
 		source = 0
 		
-		for key,value in info.iteritems():
+		for key, value in info.iteritems():
 			name, code, filename, start_date = value["name"], value["code"], value["filename"], value["start_date"]
 			end_date, content, gov_dept = value["end_date"], value["content"], value["gov_dept"]
 			count = cursor.execute(select_string, (gs_basic_id, filename, code, start_date, end_date))

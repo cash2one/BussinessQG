@@ -17,15 +17,16 @@ lab_string = 'insert into gs_report_lab(gs_basic_id,gs_report_id,uuid,province,i
 			 ',old_num, old_owe, old, old_base,unemploy, unemploy_base, unemploy_owe, unemploy_num,medical, medical_base, medical_owe, medical_num, ' \
 			 'injury, injury_owe, injury_num,created,updated)values(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)'
 
+
 class Report_Lab:
-	def get_info(self,data):
+	def get_info(self, data):
 		info = {}
-		for key,value in config.report_lab_dict.iteritems():
-			info[value] = deal_html_code.get_match_info(key,data)
-		#判定欠费金额，实际缴费金额，缴费基数 是否公示
-		#判定标准选取生育的各个对应信息进行标准，
-		#即认为如果生育、医疗、养老、失业中有一个欠费，实缴，基数是不公示的
-		#则其他的也是不公示的
+		for key, value in config.report_lab_dict.iteritems():
+			info[value] = deal_html_code.get_match_info(key, data)
+		# 判定欠费金额，实际缴费金额，缴费基数 是否公示
+		# 判定标准选取生育的各个对应信息进行标准，
+		# 即认为如果生育、医疗、养老、失业中有一个欠费，实缴，基数是不公示的
+		# 则其他的也是不公示的
 		if u"不公示" in info["birth_owe"]:
 			if_owe = 0
 		else:
@@ -41,12 +42,11 @@ class Report_Lab:
 		else:
 			if_periodamount = 1
 		info["if_periodamount"] = if_periodamount
-		for key,value in info.iteritems():
+		for key, value in info.iteritems():
 			info[key] = deal_html_code.match_float(value)
 		return info
-		
-		
-	def update_to_db(self,info,gs_basic_id,gs_report_id,year,cursor,connect):
+	
+	def update_to_db(self, info, gs_basic_id, gs_report_id, year, cursor, connect):
 		m = hashlib.md5()
 		m.update(str(gs_basic_id) + str(year))
 		uuid = m.hexdigest()
@@ -63,10 +63,12 @@ class Report_Lab:
 			injury, injury_owe, injury_num = info["injury"], info["injury_owe"], info["injury_num"]
 			updated_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
 			row_count = cursor.execute(lab_string, (
-			gs_basic_id, gs_report_id, uuid, config.province, if_owe, if_basenum, if_periodamount, birth_owe, birth_num, birth,
-			birth_base, old_num, old_owe, old, old_base, unemploy, unemploy_base, unemploy_owe,
-			unemploy_num, medical, medical_base, medical_owe, medical_num, injury, injury_owe, injury_num, updated_time,
-			updated_time))
+				gs_basic_id, gs_report_id, uuid, config.province, if_owe, if_basenum, if_periodamount, birth_owe,
+				birth_num, birth,
+				birth_base, old_num, old_owe, old, old_base, unemploy, unemploy_base, unemploy_owe,
+				unemploy_num, medical, medical_base, medical_owe, medical_num, injury, injury_owe, injury_num,
+				updated_time,
+				updated_time))
 			connect.commit()
 		except Exception, e:
 			remark = 100000006

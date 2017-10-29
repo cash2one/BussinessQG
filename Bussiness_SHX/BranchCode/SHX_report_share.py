@@ -9,18 +9,20 @@ from PublicCode import deal_html_code
 import logging
 import time
 import sys
+
 reload(sys)
 sys.setdefaultencoding('utf-8')
 Type = sys.getfilesystemencoding()
 
 share_string = 'insert into gs_report_share(gs_basic_id,gs_report_id,province,name, uuid, reg_amount, reg_date, reg_way, ac_amount, ac_date, ac_way,created,updated) values ' \
-               '(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)'
+			   '(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)'
+
 
 class Report_Share:
-	def get_info(self,data):
+	def get_info(self, data):
 		tr_list = data.xpath("//tr")
 		info = {}
-		for i,singledata in enumerate(tr_list):
+		for i, singledata in enumerate(tr_list):
 			temp = {}
 			td_list = singledata.xpath("./td")
 			if len(td_list) == 0:
@@ -37,17 +39,16 @@ class Report_Share:
 			temp["ac_date"] = deal_html_code.change_chinese_date(ac_date)
 			temp["ac_way"] = deal_html_code.remove_symbol(td_list[7].xpath("string(.)"))
 			info[i] = temp
-			
-			
-			
-	def update_to_db(self,info,gs_basic_id,gs_report_id,cursor,connect):
+	
+	def update_to_db(self, info, gs_basic_id, gs_report_id, cursor, connect):
 		insert_flag, update_flag = 0, 0
 		remark = 0
 		total = len(info)
 		try:
 			for key, value in info.iteritems():
 				name, uuid, reg_amount, reg_date = value["name"], key, value["reg_amount"], value["reg_date"]
-				reg_way, ac_amount, ac_date, ac_way = value["reg_way"], value["ac_amount"], value["ac_date"], value["ac_way"]
+				reg_way, ac_amount, ac_date, ac_way = value["reg_way"], value["ac_amount"], value["ac_date"], value[
+					"ac_way"]
 				
 				updated_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
 				flag = cursor.execute(share_string, (

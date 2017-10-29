@@ -16,20 +16,19 @@ select_string = 'select gs_permit_id from gs_permit where gs_basic_id = %s and f
 permit_string = 'insert into gs_permit(gs_basic_id,id,name, code, filename, start_date, end_date, content, gov_dept,status,source,updated)values(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)'
 update_permit_py = 'update gs_py set gs_py_id = %s ,gs_permit = %s ,updated = %s where gs_py_id = %s'
 permit_alter = 'insert into gs_permit_alter(gs_permit_id,alt_name, alt_date, alt_af, alt_be,updated) values(%s,%s,%s,%s,%s,%s)'
-select_permit =  'select gs_permit_alter_id from gs_permit_alter where gs_permit_id = %s and alt_name = %s and alt_date = %s'
-
+select_permit = 'select gs_permit_alter_id from gs_permit_alter where gs_permit_id = %s and alt_name = %s and alt_date = %s'
 
 
 class Permit:
-	def __init__(self,pripid,url):
+	def __init__(self, pripid, url):
 		self._pripid = pripid
 		self._url = url
 	
-	#data.xpath("//table[@id = 'xzxk']")
-	def get_info(self,data):
+	# data.xpath("//table[@id = 'xzxk']")
+	def get_info(self, data):
 		tr_list = data.xpath(".//tr[@name = 'xzxk']")
 		info = {}
-		for i,singledata in enumerate(tr_list):
+		for i, singledata in enumerate(tr_list):
 			temp = {}
 			td_list = singledata.xpath("./td")
 			# number = deal_html_code.remove_symbol(td_list[0].xpath("string(.)"))
@@ -44,7 +43,7 @@ class Permit:
 			temp["content"] = deal_html_code.remove_symbol(td_list[6].xpath("string(.)"))
 			temp["status"] = deal_html_code.remove_symbol(td_list[7].xpath("string(.)"))
 			onclick = td_list[8].xpath("./a/@onclick")
-			if len(onclick) ==0:
+			if len(onclick) == 0:
 				logging.info("该条信息无详情信息！")
 			else:
 				onclick = onclick[0]
@@ -52,7 +51,7 @@ class Permit:
 				pripid = tuple[0]
 				xh = tuple[1]
 				lx = tuple[2]
-				detail_url = self._url.format(pripid,xh,lx)
+				detail_url = self._url.format(pripid, xh, lx)
 				self.get_detail_info(detail_url)
 			info[i] = temp
 		return info
@@ -61,7 +60,7 @@ class Permit:
 		result, status_code = Send_Request().send_requests(url)
 		info = {}
 		if status_code == 200:
-			data = etree.xpath(result,parser = etree.HTMLParser(encoding='utf-8'))
+			data = etree.xpath(result, parser=etree.HTMLParser(encoding='utf-8'))
 			if len(data) == 0:
 				logging.info("暂无permit详情信息")
 			else:
@@ -78,7 +77,7 @@ class Permit:
 	
 	def update_detail_info(self, info, cursor, connect, gs_permit_id):
 		try:
-			for key,value in info.keys():
+			for key, value in info.keys():
 				alt_name, alt_date, alt_af, alt_be = info[key][0], info[key][1], info[key][2], info[key][3]
 				count = cursor.execute(select_permit, (gs_permit_id, alt_name, alt_date))
 				if count == 0:
@@ -96,7 +95,7 @@ class Permit:
 		try:
 			HOST, USER, PASSWD, DB, PORT = config.HOST, config.USER, config.PASSWD, config.DB, config.PORT
 			connect, cursor = Connect_to_DB().ConnectDB(HOST, USER, PASSWD, DB, PORT)
-			for key,value in info.iteritems():
+			for key, value in info.iteritems():
 				name, code, filename, start_date = value["name"], value["code"], value["filename"], value["start_date"]
 				end_date, content, gov_dept = value["end_date"], value["content"], value["gov_dept"]
 				status = value["status"]
