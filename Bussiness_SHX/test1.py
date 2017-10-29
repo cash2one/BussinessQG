@@ -42,8 +42,8 @@ except Exception, e:
 	# print 'e.message:\t', e.message
 	# print 'traceback.print_exc():';traceback.print_exc()
 	print 'traceback.format_exc():\n%s' % traceback.format_exc()
-	# from PublicCode import config
-	# import requests
-	# url = 'http://sn.gsxt.gov.cn/ztxy.do?method=frInfoDetail&maent.xh=610000000000893121&maent.pripid=6100000000008931&isck=Y&random=1508406673399'
-	# result = requests.get(url,headers = config.headers)
-	# print result.text
+# from PublicCode import config
+# import requests
+# url = 'http://sn.gsxt.gov.cn/ztxy.do?method=frInfoDetail&maent.xh=610000000000893121&maent.pripid=6100000000008931&isck=Y&random=1508406673399'
+# result = requests.get(url,headers = config.headers)
+# print result.text

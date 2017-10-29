@@ -64,7 +64,8 @@ class Send_Request:
 class Log:
 	def __init__(self):
 		pass
-		# self.gs_basic_id = gs_basic_id
+	
+	# self.gs_basic_id = gs_basic_id
 	
 	# 自动创建文件夹检查是否存在文件夹返回当前路径，不存在则创建文件
 	def mkdir_floder(self):
