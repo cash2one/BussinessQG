@@ -125,15 +125,11 @@ class Report:
 							if flag == 1:
 								remark, total, insert_flag, update_flag = BJ_report_share.update_to_db(gs_report_id, gs_basic_id, year,cursor, connect, info, province)
 							
-				
-						
 						if "invest" in branch_list.keys():
 							invest_url = branch_list["invest"]
 							info, flag = BJ_report_invest.name(invest_url)
 							if flag ==1:
 								remark, total, insert_flag, update_flag = BJ_report_invest.update_to_db(gs_report_id,gs_basic_id,year, cursor,connect, info, province)
-							
-						
 						if "permit" in branch_list.keys():
 							permit_url = branch_list["permit"]
 							info, flag = BJ_report_permit.name(permit_url)
@@ -141,8 +137,6 @@ class Report:
 								remark, total, insert_flag, update_flag = BJ_report_permit.update_to_db(gs_report_id,
 																										gs_basic_id,year, cursor,
 																										connect, info, province)
-							
-							
 						if "run" in branch_list.keys():
 							run_url = branch_list["run"]
 							info,flag = BJ_report_run.name(run_url,cookies,headers)
@@ -157,8 +151,6 @@ class Report:
 								remark, total, insert_flag, update_flag =BJ_report_schange.update_to_db(gs_report_id,
 																										gs_basic_id,year, cursor,
 																									connect, info, province)
-								
-						
 						if "web" in branch_list.keys():
 							web_url = branch_list["web"]
 							info,flag = BJ_report_web.name(web_url)
@@ -166,8 +158,6 @@ class Report:
 								remark, total, insert_flag, update_flag = BJ_report_web.update_to_db(gs_report_id,
 																										gs_basic_id, year,cursor,
 																							connect, info, province)
-							
-
 				else:
 					mark = flag
 		else:

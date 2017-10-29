@@ -12,6 +12,10 @@ from PublicCode.Public_Code import Judge
 from PublicCode import deal_html_code
 import logging
 import time
+import sys
+reload(sys)
+sys.setdefaultencoding('utf-8')
+Type = sys.getfilesystemencoding()
 
 
 

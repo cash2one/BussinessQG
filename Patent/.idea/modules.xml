@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://E:/APP/.idea/APP.iml" filepath="E:/APP/.idea/APP.iml" />
+      <module fileurl="file://E:/BJAPP/.idea/BJAPP.iml" filepath="E:/BJAPP/.idea/BJAPP.iml" />
+      <module fileurl="file://E:/Bussiness2.0/.idea/Bussiness2.0.iml" filepath="E:/Bussiness2.0/.idea/Bussiness2.0.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Patent.iml" filepath="$PROJECT_DIR$/.idea/Patent.iml" />
+      <module fileurl="file://E:/SearchCode/.idea/SearchCode.iml" filepath="E:/SearchCode/.idea/SearchCode.iml" />
+    </modules>
+  </component>
+</project>

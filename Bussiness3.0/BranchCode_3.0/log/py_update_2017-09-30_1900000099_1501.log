@@ -1,0 +1,18 @@
+Sat, 30 Sep 2017 15:18:44 Public_code.py[line:28] INFO connect is success!
+Sat, 30 Sep 2017 15:18:44 Public_code.py[line:62] INFO there remains 0 times to send requests 
+Sat, 30 Sep 2017 15:18:44 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cn
+Sat, 30 Sep 2017 15:18:44 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "GET /%7BhfZdl9AytPz8YR5GNeJYFKD_1R6Zc-DB69owp3vVCICPYRcFlUtuFjJR-I62YPjmJ6d3nnpp_Ob1l3FyA3mEka5YLZ9gHd8Mkxlkx-OsMKZqyNQYCbm5JFkoNi-ugovTw-o8vIRPUCUeyPEK6ldcjg-1506755677558%7D HTTP/1.1" 200 None
+Sat, 30 Sep 2017 15:18:44 Public_code.py[line:65] INFO the status_code is 200 
+Sat, 30 Sep 2017 15:18:44 Public_code.py[line:155] INFO person: 7
+Sat, 30 Sep 2017 15:18:44 Public_code.py[line:28] INFO connect is success!
+Sat, 30 Sep 2017 15:18:45 Public_code.py[line:191] INFO execute person: 0
+Sat, 30 Sep 2017 15:18:45 Public_code.py[line:28] INFO connect is success!
+Sat, 30 Sep 2017 15:21:06 Public_code.py[line:28] INFO connect is success!
+Sat, 30 Sep 2017 15:21:06 Public_code.py[line:62] INFO there remains 0 times to send requests 
+Sat, 30 Sep 2017 15:21:06 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cn
+Sat, 30 Sep 2017 15:21:06 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "GET /%7BhfZdl9AytPz8YR5GNeJYFKD_1R6Zc-DB69owp3vVCICPYRcFlUtuFjJR-I62YPjmJ6d3nnpp_Ob1l3FyA3mEka5YLZ9gHd8Mkxlkx-OsMKZqyNQYCbm5JFkoNi-ugovTw-o8vIRPUCUeyPEK6ldcjg-1506755677558%7D HTTP/1.1" 200 None
+Sat, 30 Sep 2017 15:21:06 Public_code.py[line:65] INFO the status_code is 200 
+Sat, 30 Sep 2017 15:21:06 Public_code.py[line:155] INFO person: 7
+Sat, 30 Sep 2017 15:21:06 Public_code.py[line:28] INFO connect is success!
+Sat, 30 Sep 2017 15:21:06 Public_code.py[line:191] INFO execute person: 7
+Sat, 30 Sep 2017 15:21:06 Public_code.py[line:28] INFO connect is success!

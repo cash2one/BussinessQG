@@ -14,7 +14,10 @@ import random
 import json
 import logging
 import time
-
+import sys
+reload(sys)
+sys.setdefaultencoding('utf-8')
+Type = sys.getfilesystemencoding()
 
 
 
@@ -97,8 +100,8 @@ def main(org,id,seq_id,gs_basic_id):
 	print "basic_flag:%s" % flag
 	
 	return encryed_code
-# if __name__ == '__main__':
-# 	print "The Program start time:", time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
-# 	start = time.time()
-# 	main()
-# 	print "The Program end time:", time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()), "[%s]" % (time.time() - start)
+if __name__ == '__main__':
+	print "The Program start time:", time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
+	start = time.time()
+	main()
+	print "The Program end time:", time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()), "[%s]" % (time.time() - start)

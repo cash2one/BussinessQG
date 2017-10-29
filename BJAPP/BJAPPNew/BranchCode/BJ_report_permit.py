@@ -18,33 +18,33 @@ import logging
 import hashlib
 
 permit_string = 'insert into gs_report_permit(gs_basic_id,gs_report_id,uuid,province,types,valto,created,updated)' \
-                'values(%s,%s,%s,%s,%s,%s,%s,%s)'
+				'values(%s,%s,%s,%s,%s,%s,%s,%s)'
+
+
 def name(url):
 	headers = config.headers_detail
 	content, status_code = Send_Request().send_request(url, headers)
 	info = {}
-	if status_code ==200:
+	if status_code == 200:
 		flag = 1
-		result = etree.HTML(content,parser=etree.HTMLParser(encoding="utf-8"))
+		result = etree.HTML(content, parser=etree.HTMLParser(encoding="utf-8"))
 		dl = result.xpath("//div[@class= 'viewBox']//dl")[0]
 		datalist = etree.tostring(dl).split('<br/>')
 		datalist.remove(datalist[-1])
-		for i,single in enumerate(datalist):
-			single = etree.HTML(single,parser=etree.HTMLParser(encoding="utf-8"))
+		for i, single in enumerate(datalist):
+			single = etree.HTML(single, parser=etree.HTMLParser(encoding="utf-8"))
 			string = u"许可文件名称"
-			types = deal_dd_content(string,single)
+			types = deal_dd_content(string, single)
 			string = u"有效期至"
-			valto = deal_dd_content(string,single)
+			valto = deal_dd_content(string, single)
 			uuid = ''
-			info[i] = [types,valto,uuid]
+			info[i] = [types, valto, uuid]
 	else:
 		flag = 100000004
-	if flag ==1:
+	if flag == 1:
 		deal_html_code.remove_repeat(info)
-	return info,flag
-	
-		
-	
+	return info, flag
+
 
 # 用于处理dd标签中的内容
 def deal_dd_content(string, result):
@@ -54,19 +54,17 @@ def deal_dd_content(string, result):
 	return data
 
 
-def update_to_db( gs_report_id, gs_basic_id,year, cursor, connect, information, province):
+def update_to_db(gs_report_id, gs_basic_id, year, cursor, connect, information, province):
 	insert_flag, update_flag = 0, 0
 	remark = 0
 	total = len(information)
 	try:
 		for key in information.keys():
-			
 			types, valto, uuid = information[key][0], information[key][1], information[key][2]
 			m = hashlib.md5()
-			m.update(str(gs_basic_id) + str(year) + str(types)+str(valto))
+			m.update(str(gs_basic_id) + str(year) + str(types) + str(valto))
 			uuid = m.hexdigest()
 			updated_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
-			
 			
 			flag = cursor.execute(gs_basic_id, gs_report_id, uuid, province, types, valto, updated_time,
 								  updated_time)

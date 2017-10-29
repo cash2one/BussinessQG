@@ -85,12 +85,12 @@ class Permit:
                     updated_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
                     cursor.execute(permit_alter,(gs_permit_id,alt_name, alt_date, alt_af, alt_be,updated_time))
                     connect.commit()
-        except Exception,e:
-            logging.error("permit detail error:%s"%e)
+        except Exception, e:
+            logging.error("permit detail error:%s" % e)
 
 
-    def update_to_db(self,gs_basic_id, cursor, connect, information):
-        insert_flag,update_flag = 0,0
+    def update_to_db(self, gs_basic_id, cursor, connect, information):
+        insert_flag, update_flag = 0, 0
         remark = 0
         for key in information.keys():
             name, code, filename, start_date = information[key][0], information[key][1], information[key][2], \
@@ -113,11 +113,11 @@ class Permit:
                     insert_flag += rows_count
                     connect.commit()
                     info = self.get_detail_info(detail_url)
-                    if len(info)==0:
+                    if len(info) == 0:
                         logging.info("暂无permit详情信息！")
                     else:
                         self.update_detail_info(info, cursor, connect, gs_permit_id)
-                elif int(count )==1:
+                elif int(count) == 1:
                     gs_permit_id = cursor.fetchall()[0][0]
                     info = self.get_detail_info(detail_url)
                     if len(info) == 0:
@@ -132,12 +132,12 @@ class Permit:
         return remark,insert_flag,update_flag
 
 def main():
-    Log().found_log(gs_py_id,gs_basic_id)
-    pages,perpages = 0,0
+    Log().found_log(gs_py_id, gs_basic_id)
+    pages, perpages = 0, 0
     HOST, USER, PASSWD, DB, PORT = config.HOST, config.USER, config.PASSWD, config.DB, config.PORT
     connect, cursor = Connect_to_DB().ConnectDB(HOST, USER, PASSWD, DB, PORT)
     # urllist = url.split('qisuso')
-    Judge(gs_py_id,connect,cursor,gs_basic_id,url,pages,perpages).update_branch(update_permit_py,Permit,"permit")
+    Judge(gs_py_id, connect, cursor, gs_basic_id, url, pages, perpages).update_branch(update_permit_py,Permit,"permit")
     cursor.close()
     connect.close()
 

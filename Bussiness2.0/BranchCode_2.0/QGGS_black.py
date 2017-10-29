@@ -18,17 +18,17 @@ from PublicCode.Bulid_Log import Log
 reload(sys)
 sys.setdefaultencoding('utf-8')
 Type = sys.getfilesystemencoding()
-# url = sys.argv[1]
-# gs_basic_id = sys.argv[2]
-# gs_py_id = sys.argv[3]
+url = sys.argv[1]
+gs_basic_id = sys.argv[2]
+gs_py_id = sys.argv[3]
 
-url = 'http://www.gsxt.gov.cn/%7B098EkvYOHmG5Uu3y4gublygGRqYTfamVI-lsZmJjNIG5toFyv73yrLcM7a83jR1B6id7rTn-SI8ZcE-Hbn9jduxy7Ivk_JvI3Wn0Bk2-S32nmFP7sfFW9QvxnM-tOxNZ-1501637293288%7D'
-gs_basic_id = 229418502
-gs_py_id = 1501
+# url = 'http://www.gsxt.gov.cn/%7B098EkvYOHmG5Uu3y4gublygGRqYTfamVI-lsZmJjNIG5toFyv73yrLcM7a83jR1B6id7rTn-SI8ZcE-Hbn9jduxy7Ivk_JvI3Wn0Bk2-S32nmFP7sfFW9QvxnM-tOxNZ-1501637293288%7D'
+# gs_basic_id = 229418502
+# gs_py_id = 1501
 
-black_string = 'insert into gs_black(gs_basic_id,types, in_reason, in_date,out_reason, out_date, gov_dept,updated)values(%s,%s,%s,%s,%s,%s,%s,%s)'
+black_string = 'insert into gs_black(gs_basic_id,types, in_reason, in_date,out_reason, out_date, gov_dept,out_gov,updated)values(%s,%s,%s,%s,%s,%s,%s,%s,%s)'
 select_black = 'select gs_black_id from gs_black where gs_basic_id = %s and in_date = %s and in_reason = %s'
-update_black = 'update gs_black set gs_black_id = %s,types = %s ,in_reason = %s,out_reason = %s ,out_date=%s,gov_dept = %s ,updated = %s where gs_black_id = %s'
+update_black = 'update gs_black set gs_black_id = %s,types = %s ,in_reason = %s,out_reason = %s ,out_date=%s,gov_dept = %s ,out_gov = %s,updated = %s where gs_black_id = %s'
 update_black_py = 'update gs_py set gs_py_id = %s,gs_black = %s,updated =%s where gs_py_id = %s'
 select_black_py = 'select  updated from gs_black where gs_basic_id = %s order by updated desc  LIMIT 1'
 
@@ -46,7 +46,8 @@ class Black:
             out_date = singledata["remDate"]
             out_date = change_date_style(out_date)
             gov_dept = singledata["decOrg_CN"]
-            information[i] = [types, in_reason, in_date, out_reason, out_date, gov_dept]
+            out_gov = singledata["reDecOrg_CN"]
+            information[i] = [types, in_reason, in_date, out_reason, out_date, gov_dept,out_gov]
         return information
     def update_to_db(self,gs_basic_id, cursor, connect, information):
         update_flag, insert_flag = 0, 0
@@ -55,19 +56,20 @@ class Black:
             for key in information.keys():
                 types, in_reason, in_date = information[key][0], information[key][1], information[key][2]
                 out_reason, out_date, gov_dept = information[key][3], information[key][4], information[key][5]
+                out_gov = information[key][6]
 
                 count = cursor.execute(select_black, (gs_basic_id, in_date,in_reason))
                 if count == 0:
                     updated_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
                     rows_count = cursor.execute(black_string, (
-                    gs_basic_id, types, in_reason, in_date, out_reason, out_date, gov_dept, updated_time))
+                    gs_basic_id, types, in_reason, in_date, out_reason, out_date, gov_dept,out_gov, updated_time))
                     insert_flag += rows_count
                     connect.commit()
                 elif count == 1:
                     gs_except_id = cursor.fetchall()[0][0]
                     updated_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
                     rows_count = cursor.execute(update_black, (
-                        gs_except_id,types, in_reason,  out_reason, out_date, gov_dept, updated_time, gs_except_id))
+                        gs_except_id,types, in_reason,  out_reason, out_date, gov_dept,out_gov, updated_time, gs_except_id))
                     update_flag += rows_count
                     connect.commit()
         except Exception, e:

@@ -15,6 +15,10 @@ import re
 import logging
 import time
 import json
+import sys
+reload(sys)
+sys.setdefaultencoding('utf-8')
+Type = sys.getfilesystemencoding()
 
 
 share_string = 'insert into gs_shareholder(gs_basic_id,name,cate,types,license_type,license_code,ra_date, ra_ways, true_amount,reg_amount,ta_ways,ta_date,country,address,iv_basic_id,updated)values(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)'
@@ -64,9 +68,9 @@ class Shareholder:
 					reg_amount = data["SHOULD_CAPI_DATE"]
 				else:
 					logging.info("无认缴信息")
-					ra_date, ra_ways, reg_amount = None,None,None
+					ra_date, ra_ways, reg_amount = '0000-00-00','',''
 			else:
-				ra_date, ra_ways, reg_amount = None, None, None
+				ra_date, ra_ways, reg_amount = '0000-00-00', '', ''
 			return ra_date, ra_ways, reg_amount 
 		elif type == "sj":
 			result,status_code = Send_Request(url,config.headers).send_request()
@@ -79,9 +83,9 @@ class Shareholder:
 					true_amount = data["INVEST_TYPE_NAME"]
 				else:
 					logging.info("无实缴信息")
-					ta_date, ta_ways, true_amount = None,None,None
+					ta_date, ta_ways, true_amount = '0000-00-00','',''
 			else:
-				ta_date, ta_ways, true_amount = None, None, None
+				ta_date, ta_ways, true_amount = '0000-00-00', '', ''
 			return ta_date, ta_ways, true_amount
 		else:
 			pass

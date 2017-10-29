@@ -25,7 +25,7 @@ class Person:
     def name(self,data):
         info = {}
         if len(data)!=0:
-            for i ,single in enumerate(data):
+            for i,single in enumerate(data):
                 name = single["personName"]
                 if "positionInterpreted" in single.keys():
                     position = single["positionInterpreted"]
@@ -61,7 +61,6 @@ class Person:
                     connect.commit()
                     update_flag += count
                 elif rows == 0:
-                    
                     updated_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
                     count = cursor.execute(insert_string, (gs_basic_id, name,position, updated_time))
                     insert_flag += count

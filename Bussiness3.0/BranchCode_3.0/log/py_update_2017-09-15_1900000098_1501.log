@@ -1,0 +1,45 @@
+Fri, 15 Sep 2017 11:37:24 Public_code.py[line:28] INFO connect is success!
+Fri, 15 Sep 2017 11:37:24 Public_code.py[line:62] INFO there remains 0 times to send requests 
+Fri, 15 Sep 2017 11:37:24 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cn
+Fri, 15 Sep 2017 11:37:24 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "GET /%7BvF02QVDxL3gTUIh9cKKWcu7iC9RoRNqQ66SOVdTCvL6M3jI0Fhl7R1qNHDpzr70n7bjL5I9PZ1BBFtRxRc4f8CMu3AUYeW7MY55NOE0a8YOX0fMvoinrPjyMRsmO8uSg-1505446442142%7D HTTP/1.1" 200 None
+Fri, 15 Sep 2017 11:37:24 Public_code.py[line:65] INFO the status_code is 200 
+Fri, 15 Sep 2017 11:37:24 Public_code.py[line:62] INFO there remains 0 times to send requests 
+Fri, 15 Sep 2017 11:37:24 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cn
+Fri, 15 Sep 2017 11:37:24 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "GET /corp-query-entprise-info-vAnnualReportBaseInfoForJs-PROVINCENODENUM530000661d5872a01a43109be48dd401b8f29c.html HTTP/1.1" 200 None
+Fri, 15 Sep 2017 11:37:24 Public_code.py[line:65] INFO the status_code is 200 
+Fri, 15 Sep 2017 11:37:24 Public_code.py[line:62] INFO there remains 0 times to send requests 
+Fri, 15 Sep 2017 11:37:24 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cn
+Fri, 15 Sep 2017 11:37:25 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "GET /corp-query-entprise-info-baseinfo-PROVINCENODENUM530000661d5872a01a43109be48dd401b8f29c.html HTTP/1.1" 200 None
+Fri, 15 Sep 2017 11:37:25 Public_code.py[line:65] INFO the status_code is 200 
+Fri, 15 Sep 2017 11:37:25 Public_code.py[line:62] INFO there remains 0 times to send requests 
+Fri, 15 Sep 2017 11:37:25 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cn
+Fri, 15 Sep 2017 11:37:25 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "GET /corp-query-entprise-info-webSiteInfo-PROVINCENODENUM530000661d5872a01a43109be48dd401b8f29c.html HTTP/1.1" 200 None
+Fri, 15 Sep 2017 11:37:25 Public_code.py[line:65] INFO the status_code is 200 
+Fri, 15 Sep 2017 11:37:25 Public_code.py[line:155] INFO reportweb2016: 0
+Fri, 15 Sep 2017 11:37:25 Public_code.py[line:187] INFO 暂无 reportweb2016信息
+Fri, 15 Sep 2017 11:37:25 Public_code.py[line:191] INFO execute reportweb2016: 0
+Fri, 15 Sep 2017 11:37:25 Public_code.py[line:62] INFO there remains 0 times to send requests 
+Fri, 15 Sep 2017 11:37:25 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cn
+Fri, 15 Sep 2017 11:37:25 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "GET /corp-query-entprise-info-forInvestment-PROVINCENODENUM530000661d5872a01a43109be48dd401b8f29c.html HTTP/1.1" 200 None
+Fri, 15 Sep 2017 11:37:25 Public_code.py[line:65] INFO the status_code is 200 
+Fri, 15 Sep 2017 11:37:25 Public_code.py[line:155] INFO reportinvest2016: 0
+Fri, 15 Sep 2017 11:37:25 Public_code.py[line:187] INFO 暂无 reportinvest2016信息
+Fri, 15 Sep 2017 11:37:25 Public_code.py[line:191] INFO execute reportinvest2016: 0
+Fri, 15 Sep 2017 11:37:25 Public_code.py[line:62] INFO there remains 0 times to send requests 
+Fri, 15 Sep 2017 11:37:25 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cn
+Fri, 15 Sep 2017 11:37:26 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "GET /corp-query-entprise-info-sponsor-PROVINCENODENUM530000661d5872a01a43109be48dd401b8f29c.html HTTP/1.1" 200 None
+Fri, 15 Sep 2017 11:37:26 Public_code.py[line:65] INFO the status_code is 200 
+Fri, 15 Sep 2017 11:37:26 Public_code.py[line:155] INFO reportshare2016: 0
+Fri, 15 Sep 2017 11:37:26 Public_code.py[line:187] INFO 暂无 reportshare2016信息
+Fri, 15 Sep 2017 11:37:26 Public_code.py[line:191] INFO execute reportshare2016: 0
+Fri, 15 Sep 2017 11:37:26 Public_code.py[line:62] INFO there remains 0 times to send requests 
+Fri, 15 Sep 2017 11:37:26 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cn
+Fri, 15 Sep 2017 11:37:26 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "GET /corp-query-entprise-info-vAnnualReportAlterstockinfo-PROVINCENODENUM530000661d5872a01a43109be48dd401b8f29c.html HTTP/1.1" 200 None
+Fri, 15 Sep 2017 11:37:26 Public_code.py[line:65] INFO the status_code is 200 
+Fri, 15 Sep 2017 11:37:26 Public_code.py[line:155] INFO reportschange2016: 0
+Fri, 15 Sep 2017 11:37:26 Public_code.py[line:187] INFO 暂无 reportschange2016信息
+Fri, 15 Sep 2017 11:37:26 Public_code.py[line:191] INFO execute reportschange2016: 0
+Fri, 15 Sep 2017 11:37:26 Public_code.py[line:62] INFO there remains 0 times to send requests 
+Fri, 15 Sep 2017 11:37:26 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cn
+Fri, 15 Sep 2017 11:37:26 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "GET /corp-query-entprise-info-AnnSocsecinfo-PROVINCENODENUM530000661d5872a01a43109be48dd401b8f29c.html HTTP/1.1" 200 None
+Fri, 15 Sep 2017 11:37:26 Public_code.py[line:65] INFO the status_code is 200 

@@ -37,11 +37,7 @@ class Assure:
                 pefPerTo = change_chinese_date(pefPerTo)
             else:
                 pefPerTo = ''
-            if pefPerForm =='':
-                pefPerForm = ''
-            if pefPerTo  == '':
-                pefPerTo = ''
-
+            
             deadline = str(pefPerForm) + '至' +str(pefPerTo )
             period = singledata["guaranPeriodInterpreted"]
             ways = singledata["gaTypeInterpreted"]

@@ -7,11 +7,14 @@
 from PublicCode import config
 from PublicCode import deal_html_code
 from PublicCode.Public_Code import Connect_to_DB
-from PublicCode.Public_Code import Log
 from PublicCode.Public_Code import Judge
 from lxml import etree
 import logging
 import time
+import sys
+reload(sys)
+sys.setdefaultencoding('utf-8')
+Type = sys.getfilesystemencoding()
 
 
 stock_string = 'insert into gs_stock(gs_basic_id,equityno,pledgor,pled_blicno,impam,imporg,imporg_blicno,equlle_date,public_date,type,updated)values(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)'
@@ -23,7 +26,7 @@ class Stock:
 	def deal_single_info(self, data, info):
 		for i, singledata in enumerate(data):
 			equityNo = singledata["REGISTER_NO"]
-			impAm = singledata["MORTGAGOPR_STOCK"]
+			impAm = singledata["MORTGAGOR_STOCK"]
 			pledBLicNo = singledata["IDENT_NO"]
 			pledgor = singledata["MORTGAGOR_NAME"]
 			type = singledata["STATUS"]

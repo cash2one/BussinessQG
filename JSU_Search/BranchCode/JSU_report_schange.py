@@ -11,6 +11,10 @@ from PublicCode.Public_Code import Judge
 import logging
 import time
 import hashlib
+import sys
+reload(sys)
+sys.setdefaultencoding('utf-8')
+Type = sys.getfilesystemencoding()
 
 schange_string = 'insert into gs_report_schange(gs_basic_id,gs_report_id,province,name,percent_pre,percent_after,dates,uuid,created,updated)values' \
                  '(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)'

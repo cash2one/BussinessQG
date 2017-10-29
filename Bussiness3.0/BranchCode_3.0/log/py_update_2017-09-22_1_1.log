@@ -1,0 +1,130 @@
+Fri, 22 Sep 2017 19:16:44 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): 115.209.30.156
+Fri, 22 Sep 2017 19:16:48 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): 59.110.138.116
+Fri, 22 Sep 2017 19:17:13 connectionpool.py[line:400] DEBUG http://59.110.138.116:80 "GET /geetest/get?token=seo_dsboye&reg=http://www.gsxt.gov.cn/SearchItemCaptcha HTTP/1.1" 200 None
+Fri, 22 Sep 2017 19:17:13 Public_code.py[line:28] INFO connect is success!
+Fri, 22 Sep 2017 19:17:13 GetUrl.py[line:243] ERROR get url error local variable 'history_name' referenced before assignment
+Fri, 22 Sep 2017 19:18:51 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): 60.167.132.97
+Fri, 22 Sep 2017 19:18:55 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): 59.110.138.116
+Fri, 22 Sep 2017 19:18:59 connectionpool.py[line:400] DEBUG http://59.110.138.116:80 "GET /geetest/get?token=seo_dsboye&reg=http://www.gsxt.gov.cn/SearchItemCaptcha HTTP/1.1" 200 None
+Fri, 22 Sep 2017 19:18:59 Public_code.py[line:28] INFO connect is success!
+Fri, 22 Sep 2017 19:18:59 GetUrl.py[line:243] ERROR get url error local variable 'history_name' referenced before assignment
+Fri, 22 Sep 2017 19:19:54 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): 175.153.22.4
+Fri, 22 Sep 2017 19:19:55 connectionpool.py[line:400] DEBUG http://175.153.22.4:40197 "GET http://www.gsxt.gov.cn/index.html HTTP/1.1" 200 None
+Fri, 22 Sep 2017 19:19:55 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): 59.110.138.116
+Fri, 22 Sep 2017 19:20:08 connectionpool.py[line:400] DEBUG http://59.110.138.116:80 "GET /geetest/get?token=seo_dsboye&reg=http://www.gsxt.gov.cn/SearchItemCaptcha HTTP/1.1" 200 None
+Fri, 22 Sep 2017 19:20:08 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cn
+Fri, 22 Sep 2017 19:20:08 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "POST /corp-query-search-1.html HTTP/1.1" 200 None
+Fri, 22 Sep 2017 19:20:08 Public_code.py[line:28] INFO connect is success!
+Fri, 22 Sep 2017 19:23:42 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): 120.42.126.61
+Fri, 22 Sep 2017 19:23:42 connectionpool.py[line:400] DEBUG http://120.42.126.61:48541 "GET http://www.gsxt.gov.cn/index.html HTTP/1.1" 200 None
+Fri, 22 Sep 2017 19:23:42 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): 59.110.138.116
+Fri, 22 Sep 2017 19:23:47 connectionpool.py[line:400] DEBUG http://59.110.138.116:80 "GET /geetest/get?token=seo_dsboye&reg=http://www.gsxt.gov.cn/SearchItemCaptcha HTTP/1.1" 200 None
+Fri, 22 Sep 2017 19:23:47 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cn
+Fri, 22 Sep 2017 19:23:47 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "POST /corp-query-search-1.html HTTP/1.1" 200 None
+Fri, 22 Sep 2017 19:23:47 Public_code.py[line:28] INFO connect is success!
+Fri, 22 Sep 2017 19:24:06 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): 49.82.105.231
+Fri, 22 Sep 2017 19:24:06 connectionpool.py[line:400] DEBUG http://49.82.105.231:21667 "GET http://www.gsxt.gov.cn/index.html HTTP/1.1" 200 None
+Fri, 22 Sep 2017 19:24:14 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): 59.110.138.116
+Fri, 22 Sep 2017 19:24:18 connectionpool.py[line:400] DEBUG http://59.110.138.116:80 "GET /geetest/get?token=seo_dsboye&reg=http://www.gsxt.gov.cn/SearchItemCaptcha HTTP/1.1" 200 None
+Fri, 22 Sep 2017 19:24:18 Public_code.py[line:28] INFO connect is success!
+Fri, 22 Sep 2017 19:24:18 GetUrl.py[line:243] ERROR get url error local variable 'history_name' referenced before assignment
+Fri, 22 Sep 2017 19:25:02 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): 49.82.105.231
+Fri, 22 Sep 2017 19:25:03 connectionpool.py[line:400] DEBUG http://49.82.105.231:21667 "GET http://www.gsxt.gov.cn/index.html HTTP/1.1" 200 None
+Fri, 22 Sep 2017 19:25:03 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): 59.110.138.116
+Fri, 22 Sep 2017 19:25:18 connectionpool.py[line:400] DEBUG http://59.110.138.116:80 "GET /geetest/get?token=seo_dsboye&reg=http://www.gsxt.gov.cn/SearchItemCaptcha HTTP/1.1" 200 None
+Fri, 22 Sep 2017 19:25:18 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cn
+Fri, 22 Sep 2017 19:25:19 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "POST /corp-query-search-1.html HTTP/1.1" 200 None
+Fri, 22 Sep 2017 19:25:19 Public_code.py[line:28] INFO connect is success!
+Fri, 22 Sep 2017 19:25:24 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): 49.82.105.231
+Fri, 22 Sep 2017 19:25:32 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): 59.110.138.116
+Fri, 22 Sep 2017 19:25:48 connectionpool.py[line:400] DEBUG http://59.110.138.116:80 "GET /geetest/get?token=seo_dsboye&reg=http://www.gsxt.gov.cn/SearchItemCaptcha HTTP/1.1" 200 None
+Fri, 22 Sep 2017 19:25:48 Public_code.py[line:28] INFO connect is success!
+Fri, 22 Sep 2017 19:25:48 GetUrl.py[line:243] ERROR get url error local variable 'history_name' referenced before assignment
+Fri, 22 Sep 2017 19:25:53 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): 49.82.105.231
+Fri, 22 Sep 2017 19:26:01 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): 59.110.138.116
+Fri, 22 Sep 2017 19:26:06 connectionpool.py[line:400] DEBUG http://59.110.138.116:80 "GET /geetest/get?token=seo_dsboye&reg=http://www.gsxt.gov.cn/SearchItemCaptcha HTTP/1.1" 200 None
+Fri, 22 Sep 2017 19:26:06 Public_code.py[line:28] INFO connect is success!
+Fri, 22 Sep 2017 19:26:06 GetUrl.py[line:243] ERROR get url error local variable 'history_name' referenced before assignment
+Fri, 22 Sep 2017 19:26:15 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): 49.82.105.231
+Fri, 22 Sep 2017 19:26:23 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): 59.110.138.116
+Fri, 22 Sep 2017 19:26:25 connectionpool.py[line:400] DEBUG http://59.110.138.116:80 "GET /geetest/get?token=seo_dsboye&reg=http://www.gsxt.gov.cn/SearchItemCaptcha HTTP/1.1" 200 None
+Fri, 22 Sep 2017 19:26:25 Public_code.py[line:28] INFO connect is success!
+Fri, 22 Sep 2017 19:26:25 GetUrl.py[line:243] ERROR get url error local variable 'history_name' referenced before assignment
+Fri, 22 Sep 2017 19:27:24 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): 42.179.0.129
+Fri, 22 Sep 2017 19:27:32 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): 59.110.138.116
+Fri, 22 Sep 2017 19:27:36 connectionpool.py[line:400] DEBUG http://59.110.138.116:80 "GET /geetest/get?token=seo_dsboye&reg=http://www.gsxt.gov.cn/SearchItemCaptcha HTTP/1.1" 200 None
+Fri, 22 Sep 2017 19:27:36 Public_code.py[line:28] INFO connect is success!
+Fri, 22 Sep 2017 19:27:36 GetUrl.py[line:243] ERROR get url error local variable 'history_name' referenced before assignment
+Fri, 22 Sep 2017 19:28:18 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): 114.230.126.223
+Fri, 22 Sep 2017 19:28:26 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): 59.110.138.116
+Fri, 22 Sep 2017 19:28:28 connectionpool.py[line:400] DEBUG http://59.110.138.116:80 "GET /geetest/get?token=seo_dsboye&reg=http://www.gsxt.gov.cn/SearchItemCaptcha HTTP/1.1" 200 None
+Fri, 22 Sep 2017 19:28:28 Public_code.py[line:28] INFO connect is success!
+Fri, 22 Sep 2017 19:28:28 GetUrl.py[line:243] ERROR get url error local variable 'history_name' referenced before assignment
+Fri, 22 Sep 2017 19:28:57 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): 114.230.126.223
+Fri, 22 Sep 2017 19:28:58 connectionpool.py[line:400] DEBUG http://114.230.126.223:16095 "GET http://www.gsxt.gov.cn/index.html HTTP/1.1" 200 None
+Fri, 22 Sep 2017 19:28:59 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): 59.110.138.116
+Fri, 22 Sep 2017 19:29:03 connectionpool.py[line:400] DEBUG http://59.110.138.116:80 "GET /geetest/get?token=seo_dsboye&reg=http://www.gsxt.gov.cn/SearchItemCaptcha HTTP/1.1" 200 None
+Fri, 22 Sep 2017 19:29:03 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cn
+Fri, 22 Sep 2017 19:29:03 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "POST /corp-query-search-1.html HTTP/1.1" 200 None
+Fri, 22 Sep 2017 19:29:03 Public_code.py[line:28] INFO connect is success!
+Fri, 22 Sep 2017 19:29:15 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): 114.230.126.223
+Fri, 22 Sep 2017 19:29:23 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): 59.110.138.116
+Fri, 22 Sep 2017 19:29:25 connectionpool.py[line:400] DEBUG http://59.110.138.116:80 "GET /geetest/get?token=seo_dsboye&reg=http://www.gsxt.gov.cn/SearchItemCaptcha HTTP/1.1" 200 None
+Fri, 22 Sep 2017 19:29:25 Public_code.py[line:28] INFO connect is success!
+Fri, 22 Sep 2017 19:29:25 GetUrl.py[line:243] ERROR get url error local variable 'history_name' referenced before assignment
+Fri, 22 Sep 2017 19:29:30 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): 114.230.126.223
+Fri, 22 Sep 2017 19:29:34 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): 59.110.138.116
+Fri, 22 Sep 2017 19:29:37 connectionpool.py[line:400] DEBUG http://59.110.138.116:80 "GET /geetest/get?token=seo_dsboye&reg=http://www.gsxt.gov.cn/SearchItemCaptcha HTTP/1.1" 200 None
+Fri, 22 Sep 2017 19:29:37 Public_code.py[line:28] INFO connect is success!
+Fri, 22 Sep 2017 19:29:37 GetUrl.py[line:243] ERROR get url error local variable 'history_name' referenced before assignment
+Fri, 22 Sep 2017 19:29:57 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): 114.230.126.223
+Fri, 22 Sep 2017 19:30:02 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): 59.110.138.116
+Fri, 22 Sep 2017 19:30:04 connectionpool.py[line:400] DEBUG http://59.110.138.116:80 "GET /geetest/get?token=seo_dsboye&reg=http://www.gsxt.gov.cn/SearchItemCaptcha HTTP/1.1" 200 None
+Fri, 22 Sep 2017 19:30:04 Public_code.py[line:28] INFO connect is success!
+Fri, 22 Sep 2017 19:30:04 GetUrl.py[line:243] ERROR get url error local variable 'history_name' referenced before assignment
+Fri, 22 Sep 2017 19:31:05 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): 123.180.69.219
+Fri, 22 Sep 2017 19:31:09 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): 59.110.138.116
+Fri, 22 Sep 2017 19:31:22 connectionpool.py[line:400] DEBUG http://59.110.138.116:80 "GET /geetest/get?token=seo_dsboye&reg=http://www.gsxt.gov.cn/SearchItemCaptcha HTTP/1.1" 200 None
+Fri, 22 Sep 2017 19:31:22 Public_code.py[line:28] INFO connect is success!
+Fri, 22 Sep 2017 19:31:22 GetUrl.py[line:243] ERROR get url error local variable 'history_name' referenced before assignment
+Fri, 22 Sep 2017 19:32:02 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): 115.213.177.112
+Fri, 22 Sep 2017 19:32:03 connectionpool.py[line:400] DEBUG http://115.213.177.112:56138 "GET http://www.gsxt.gov.cn/index.html HTTP/1.1" 200 None
+Fri, 22 Sep 2017 19:32:03 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): 59.110.138.116
+Fri, 22 Sep 2017 19:32:23 connectionpool.py[line:400] DEBUG http://59.110.138.116:80 "GET /geetest/get?token=seo_dsboye&reg=http://www.gsxt.gov.cn/SearchItemCaptcha HTTP/1.1" 200 None
+Fri, 22 Sep 2017 19:32:23 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cn
+Fri, 22 Sep 2017 19:32:23 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "POST /corp-query-search-1.html HTTP/1.1" 200 None
+Fri, 22 Sep 2017 19:32:23 Public_code.py[line:28] INFO connect is success!
+Fri, 22 Sep 2017 19:32:29 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): 115.213.177.112
+Fri, 22 Sep 2017 19:32:32 connectionpool.py[line:400] DEBUG http://115.213.177.112:56138 "GET http://www.gsxt.gov.cn/index.html HTTP/1.1" 200 None
+Fri, 22 Sep 2017 19:32:32 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): 59.110.138.116
+Fri, 22 Sep 2017 19:32:56 connectionpool.py[line:400] DEBUG http://59.110.138.116:80 "GET /geetest/get?token=seo_dsboye&reg=http://www.gsxt.gov.cn/SearchItemCaptcha HTTP/1.1" 200 None
+Fri, 22 Sep 2017 19:32:56 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cn
+Fri, 22 Sep 2017 19:32:56 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "POST /corp-query-search-1.html HTTP/1.1" 200 None
+Fri, 22 Sep 2017 19:32:56 Public_code.py[line:28] INFO connect is success!
+Fri, 22 Sep 2017 19:33:06 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): 115.213.177.112
+Fri, 22 Sep 2017 19:33:06 connectionpool.py[line:400] DEBUG http://115.213.177.112:56138 "GET http://www.gsxt.gov.cn/index.html HTTP/1.1" 200 None
+Fri, 22 Sep 2017 19:33:06 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): 59.110.138.116
+Fri, 22 Sep 2017 19:33:10 connectionpool.py[line:400] DEBUG http://59.110.138.116:80 "GET /geetest/get?token=seo_dsboye&reg=http://www.gsxt.gov.cn/SearchItemCaptcha HTTP/1.1" 200 None
+Fri, 22 Sep 2017 19:33:10 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cn
+Fri, 22 Sep 2017 19:33:10 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "POST /corp-query-search-1.html HTTP/1.1" 200 None
+Fri, 22 Sep 2017 19:33:10 Public_code.py[line:28] INFO connect is success!
+Fri, 22 Sep 2017 19:33:15 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): 115.213.177.112
+Fri, 22 Sep 2017 19:33:23 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): 59.110.138.116
+Fri, 22 Sep 2017 19:33:26 connectionpool.py[line:400] DEBUG http://59.110.138.116:80 "GET /geetest/get?token=seo_dsboye&reg=http://www.gsxt.gov.cn/SearchItemCaptcha HTTP/1.1" 200 None
+Fri, 22 Sep 2017 19:33:26 Public_code.py[line:28] INFO connect is success!
+Fri, 22 Sep 2017 19:33:26 GetUrl.py[line:243] ERROR get url error local variable 'history_name' referenced before assignment
+Fri, 22 Sep 2017 19:33:56 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): 115.203.65.169
+Fri, 22 Sep 2017 19:34:01 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): 59.110.138.116
+Fri, 22 Sep 2017 19:34:16 connectionpool.py[line:400] DEBUG http://59.110.138.116:80 "GET /geetest/get?token=seo_dsboye&reg=http://www.gsxt.gov.cn/SearchItemCaptcha HTTP/1.1" 200 None
+Fri, 22 Sep 2017 19:34:16 Public_code.py[line:28] INFO connect is success!
+Fri, 22 Sep 2017 19:34:16 GetUrl.py[line:243] ERROR get url error local variable 'history_name' referenced before assignment
+Fri, 22 Sep 2017 19:34:44 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): 115.203.65.169
+Fri, 22 Sep 2017 19:34:48 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): 59.110.138.116
+Fri, 22 Sep 2017 19:34:50 connectionpool.py[line:400] DEBUG http://59.110.138.116:80 "GET /geetest/get?token=seo_dsboye&reg=http://www.gsxt.gov.cn/SearchItemCaptcha HTTP/1.1" 200 None
+Fri, 22 Sep 2017 19:34:50 Public_code.py[line:28] INFO connect is success!
+Fri, 22 Sep 2017 19:34:50 GetUrl.py[line:243] ERROR get url error local variable 'history_name' referenced before assignment
+Fri, 22 Sep 2017 19:34:59 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): 115.203.65.169
+Fri, 22 Sep 2017 19:35:03 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): 59.110.138.116
+Fri, 22 Sep 2017 19:35:19 connectionpool.py[line:400] DEBUG http://59.110.138.116:80 "GET /geetest/get?token=seo_dsboye&reg=http://www.gsxt.gov.cn/SearchItemCaptcha HTTP/1.1" 200 None
+Fri, 22 Sep 2017 19:35:19 Public_code.py[line:28] INFO connect is success!
+Fri, 22 Sep 2017 19:35:19 GetUrl.py[line:243] ERROR get url error local variable 'history_name' referenced before assignment

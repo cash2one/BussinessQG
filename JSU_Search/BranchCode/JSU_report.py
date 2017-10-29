@@ -21,6 +21,10 @@ import logging
 import time
 import json
 import hashlib
+import sys
+reload(sys)
+sys.setdefaultencoding('utf-8')
+Type = sys.getfilesystemencoding()
 
 headers = config.headers
 

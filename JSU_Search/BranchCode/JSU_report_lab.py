@@ -12,6 +12,10 @@ import logging
 import time
 
 import json
+import sys
+reload(sys)
+sys.setdefaultencoding('utf-8')
+Type = sys.getfilesystemencoding()
 
 lab_string = 'insert into gs_report_lab(gs_basic_id,gs_report_id,uuid,province,if_owe, if_basenum, if_periodamount,birth_owe, birth_num, birth, birth_base' \
 			 ',old_num, old_owe, old, old_base,unemploy, unemploy_base, unemploy_owe, unemploy_num,medical, medical_base, medical_owe, medical_num, ' \

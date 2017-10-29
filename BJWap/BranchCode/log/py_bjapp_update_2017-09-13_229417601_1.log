@@ -1,0 +1,358 @@
+Wed, 13 Sep 2017 18:17:22 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Wed, 13 Sep 2017 18:17:22 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!view_bgxx_wap.dhtml?reg_bus_ent_id=EF0C42C4BC0F42BFB8C5E6C9BEC2A969&clear=true HTTP/1.1" 200 None
+Wed, 13 Sep 2017 18:17:22 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Wed, 13 Sep 2017 18:17:22 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!tzrBgxx.dhtml?old_reg_his_id=a1a1a1a022c9de410122cfb1e88847fc&new_reg_his_id=a1a1a1a022c9de410122cfb1e88847fc&clear=true&chr_id=5cbe6081bdd243ff973b82a6f89090f3 HTTP/1.1" 200 None
+Wed, 13 Sep 2017 18:17:22 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Wed, 13 Sep 2017 18:17:22 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!tzrBgxx.dhtml?old_reg_his_id=a1a1a1a022c9de410122cfb1e88847fc&new_reg_his_id=a1a1a1a023c10aa60123eae59bde34ea&clear=true&chr_id=3d0d4d404f344d2992b8244d95f64f28 HTTP/1.1" 200 None
+Wed, 13 Sep 2017 18:17:22 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Wed, 13 Sep 2017 18:17:23 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!tzrBgxx.dhtml?old_reg_his_id=a1a1a1a023c10aa60123eae59bde34ea&new_reg_his_id=a1a1a1a024995d9d0124a3f601331e76&clear=true&chr_id=4a5e7fd650034e58bb380a4e94da0c74 HTTP/1.1" 200 None
+Wed, 13 Sep 2017 18:17:23 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Wed, 13 Sep 2017 18:17:23 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!tzrBgxx.dhtml?old_reg_his_id=a1a1a1a024995d9d0124a3f601331e76&new_reg_his_id=20e38b8b363f14b701365355df5e28a5&clear=true&chr_id=43a8e223ad0346df9b7812e6dbf4e3e3 HTTP/1.1" 200 None
+Wed, 13 Sep 2017 18:17:23 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Wed, 13 Sep 2017 18:17:23 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!zyryBgxx.dhtml?old_reg_his_id=20e38b8b363f14b701365355df5e28a5&new_reg_his_id=ff8080815a259e8d015a25cecb375056&clear=true&chr_id=b6fe95e6203a4728bf30162644eabccf HTTP/1.1" 200 None
+Wed, 13 Sep 2017 18:17:23 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Wed, 13 Sep 2017 18:17:23 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!zyryBgxx.dhtml?old_reg_his_id=a1a1a1a022c9de410122cfb1e88847fc&new_reg_his_id=a1a1a1a023c10aa60123eae59bde34ea&clear=true&chr_id=15caf6ca072e4220b3d7b546495ad941 HTTP/1.1" 200 None
+Wed, 13 Sep 2017 18:17:23 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Wed, 13 Sep 2017 18:17:24 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!zyryBgxx.dhtml?old_reg_his_id=a1a1a1a023c10aa60123eae59bde34ea&new_reg_his_id=a1a1a1a03006841101300b32e9a41415&clear=true&chr_id=d359296f8fe9481084420db7013d0e26 HTTP/1.1" 200 None
+Wed, 13 Sep 2017 18:17:24 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Wed, 13 Sep 2017 18:17:24 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!zyryBgxx.dhtml?old_reg_his_id=a1a1a1a03006841101300b32e9a41415&new_reg_his_id=20e38b8b363f14b701365355df5e28a5&clear=true&chr_id=9680221bb5614d2999ce13d783f36cc0 HTTP/1.1" 200 None
+Wed, 13 Sep 2017 18:17:24 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Wed, 13 Sep 2017 18:17:24 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!view_bgxx_wap.dhtml?reg_bus_ent_id=EF0C42C4BC0F42BFB8C5E6C9BEC2A969&bgxxFlag=bgxxFlag&alt_itemenName=%E4%BC%81%E4%B8%9A%E5%90%8D%E7%A7%B0&approve_date=2009-09-24 HTTP/1.1" 200 None
+Wed, 13 Sep 2017 18:17:24 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Wed, 13 Sep 2017 18:17:24 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!view_bgxx_wap.dhtml?reg_bus_ent_id=EF0C42C4BC0F42BFB8C5E6C9BEC2A969&bgxxFlag=bgxxFlag&alt_itemenName=%E4%BC%81%E4%B8%9A%E7%B1%BB%E5%9E%8B&approve_date=2009-09-24 HTTP/1.1" 200 None
+Wed, 13 Sep 2017 18:17:24 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Wed, 13 Sep 2017 18:17:24 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!view_bgxx_wap.dhtml?reg_bus_ent_id=EF0C42C4BC0F42BFB8C5E6C9BEC2A969&bgxxFlag=bgxxFlag&alt_itemenName=%E4%BD%8F%E6%89%80&approve_date=2015-01-27 HTTP/1.1" 200 None
+Wed, 13 Sep 2017 18:17:24 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Wed, 13 Sep 2017 18:17:24 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!view_bgxx_wap.dhtml?reg_bus_ent_id=EF0C42C4BC0F42BFB8C5E6C9BEC2A969&bgxxFlag=bgxxFlag&alt_itemenName=%E5%AE%9E%E6%94%B6%E8%B5%84%E6%9C%AC%EF%BC%88%E9%87%91%EF%BC%89&approve_date=2009-09-24 HTTP/1.1" 200 None
+Wed, 13 Sep 2017 18:17:24 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Wed, 13 Sep 2017 18:17:24 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!view_bgxx_wap.dhtml?reg_bus_ent_id=EF0C42C4BC0F42BFB8C5E6C9BEC2A969&bgxxFlag=bgxxFlag&alt_itemenName=%E5%AE%9E%E6%94%B6%E8%B5%84%E6%9C%AC%EF%BC%88%E9%87%91%EF%BC%89&approve_date=2009-11-09 HTTP/1.1" 200 None
+Wed, 13 Sep 2017 18:17:24 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Wed, 13 Sep 2017 18:17:24 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!view_bgxx_wap.dhtml?reg_bus_ent_id=EF0C42C4BC0F42BFB8C5E6C9BEC2A969&bgxxFlag=bgxxFlag&alt_itemenName=%E5%AE%9E%E6%94%B6%E8%B5%84%E6%9C%AC%EF%BC%88%E9%87%91%EF%BC%89&approve_date=2012-03-29 HTTP/1.1" 200 None
+Wed, 13 Sep 2017 18:17:24 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Wed, 13 Sep 2017 18:17:24 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!view_bgxx_wap.dhtml?reg_bus_ent_id=EF0C42C4BC0F42BFB8C5E6C9BEC2A969&bgxxFlag=bgxxFlag&alt_itemenName=%E6%B3%95%E5%AE%9A%E4%BB%A3%E8%A1%A8%E4%BA%BA&approve_date=2017-02-10 HTTP/1.1" 200 None
+Wed, 13 Sep 2017 18:17:24 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Wed, 13 Sep 2017 18:17:25 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!view_bgxx_wap.dhtml?reg_bus_ent_id=EF0C42C4BC0F42BFB8C5E6C9BEC2A969&bgxxFlag=bgxxFlag&alt_itemenName=%E6%B3%A8%E5%86%8C%E8%B5%84%E6%9C%AC&approve_date=2009-09-24 HTTP/1.1" 200 None
+Wed, 13 Sep 2017 18:17:25 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Wed, 13 Sep 2017 18:17:25 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!view_bgxx_wap.dhtml?reg_bus_ent_id=EF0C42C4BC0F42BFB8C5E6C9BEC2A969&bgxxFlag=bgxxFlag&alt_itemenName=%E6%B3%A8%E5%86%8C%E8%B5%84%E6%9C%AC&approve_date=2009-11-09 HTTP/1.1" 200 None
+Wed, 13 Sep 2017 18:17:25 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Wed, 13 Sep 2017 18:17:25 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!view_bgxx_wap.dhtml?reg_bus_ent_id=EF0C42C4BC0F42BFB8C5E6C9BEC2A969&bgxxFlag=bgxxFlag&alt_itemenName=%E6%B3%A8%E5%86%8C%E8%B5%84%E6%9C%AC&approve_date=2012-03-29 HTTP/1.1" 200 None
+Wed, 13 Sep 2017 18:17:25 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Wed, 13 Sep 2017 18:17:25 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!view_bgxx_wap.dhtml?reg_bus_ent_id=EF0C42C4BC0F42BFB8C5E6C9BEC2A969&bgxxFlag=bgxxFlag&alt_itemenName=%E6%B3%A8%E5%86%8C%E8%B5%84%E6%9C%AC&approve_date=2016-09-30 HTTP/1.1" 200 None
+Wed, 13 Sep 2017 18:17:25 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Wed, 13 Sep 2017 18:17:25 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!view_bgxx_wap.dhtml?reg_bus_ent_id=EF0C42C4BC0F42BFB8C5E6C9BEC2A969&bgxxFlag=bgxxFlag&alt_itemenName=%E7%BB%8F%E8%90%A5%E8%8C%83%E5%9B%B4&approve_date=2009-11-09 HTTP/1.1" 200 None
+Wed, 13 Sep 2017 18:17:25 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Wed, 13 Sep 2017 18:17:25 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!view_bgxx_wap.dhtml?reg_bus_ent_id=EF0C42C4BC0F42BFB8C5E6C9BEC2A969&bgxxFlag=bgxxFlag&alt_itemenName=%E7%BB%8F%E8%90%A5%E8%8C%83%E5%9B%B4&approve_date=2012-03-29 HTTP/1.1" 200 None
+Wed, 13 Sep 2017 18:17:25 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Wed, 13 Sep 2017 18:17:25 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!view_bgxx_wap.dhtml?reg_bus_ent_id=EF0C42C4BC0F42BFB8C5E6C9BEC2A969&bgxxFlag=bgxxFlag&alt_itemenName=%E8%90%A5%E4%B8%9A%E6%9C%9F%E9%99%90&approve_date=2009-09-24 HTTP/1.1" 200 None
+Wed, 13 Sep 2017 18:17:25 Public_code.py[line:29] INFO connect is success!
+Wed, 13 Sep 2017 18:17:25 BJ_change.py[line:129] INFO change total:22
+Wed, 13 Sep 2017 18:17:25 BJ_change.py[line:157] ERROR change error :not enough arguments for format string 
+Wed, 13 Sep 2017 18:17:42 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Wed, 13 Sep 2017 18:17:42 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!view_bgxx_wap.dhtml?reg_bus_ent_id=EF0C42C4BC0F42BFB8C5E6C9BEC2A969&clear=true HTTP/1.1" 200 None
+Wed, 13 Sep 2017 18:17:42 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Wed, 13 Sep 2017 18:17:42 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!tzrBgxx.dhtml?old_reg_his_id=a1a1a1a022c9de410122cfb1e88847fc&new_reg_his_id=a1a1a1a022c9de410122cfb1e88847fc&clear=true&chr_id=a1b590eae2e44c63bcca72330fcc1ade HTTP/1.1" 200 None
+Wed, 13 Sep 2017 18:17:42 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Wed, 13 Sep 2017 18:17:42 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!tzrBgxx.dhtml?old_reg_his_id=a1a1a1a022c9de410122cfb1e88847fc&new_reg_his_id=a1a1a1a023c10aa60123eae59bde34ea&clear=true&chr_id=3c2c189335a14b74b89f567a54cad46c HTTP/1.1" 200 None
+Wed, 13 Sep 2017 18:17:42 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Wed, 13 Sep 2017 18:17:42 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!tzrBgxx.dhtml?old_reg_his_id=a1a1a1a023c10aa60123eae59bde34ea&new_reg_his_id=a1a1a1a024995d9d0124a3f601331e76&clear=true&chr_id=5400ccf5676b49f1a10c00a3ac5f1da9 HTTP/1.1" 200 None
+Wed, 13 Sep 2017 18:17:43 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Wed, 13 Sep 2017 18:17:43 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!tzrBgxx.dhtml?old_reg_his_id=a1a1a1a024995d9d0124a3f601331e76&new_reg_his_id=20e38b8b363f14b701365355df5e28a5&clear=true&chr_id=7797d4c28a9c40f89cfae72445b08f8c HTTP/1.1" 200 None
+Wed, 13 Sep 2017 18:17:43 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Wed, 13 Sep 2017 18:17:43 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!zyryBgxx.dhtml?old_reg_his_id=20e38b8b363f14b701365355df5e28a5&new_reg_his_id=ff8080815a259e8d015a25cecb375056&clear=true&chr_id=fe904074de464799a598c2a084456b7f HTTP/1.1" 200 None
+Wed, 13 Sep 2017 18:17:43 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Wed, 13 Sep 2017 18:17:43 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!zyryBgxx.dhtml?old_reg_his_id=a1a1a1a022c9de410122cfb1e88847fc&new_reg_his_id=a1a1a1a023c10aa60123eae59bde34ea&clear=true&chr_id=15b0ac47d3da4180bec0184a72d3a77c HTTP/1.1" 200 None
+Wed, 13 Sep 2017 18:17:43 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Wed, 13 Sep 2017 18:17:43 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!zyryBgxx.dhtml?old_reg_his_id=a1a1a1a023c10aa60123eae59bde34ea&new_reg_his_id=a1a1a1a03006841101300b32e9a41415&clear=true&chr_id=b6671bb6ef9641c898e46a225840e040 HTTP/1.1" 200 None
+Wed, 13 Sep 2017 18:17:43 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Wed, 13 Sep 2017 18:17:43 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!zyryBgxx.dhtml?old_reg_his_id=a1a1a1a03006841101300b32e9a41415&new_reg_his_id=20e38b8b363f14b701365355df5e28a5&clear=true&chr_id=f867038a85ef438fb701a391ace62ea8 HTTP/1.1" 200 None
+Wed, 13 Sep 2017 18:17:43 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Wed, 13 Sep 2017 18:17:44 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!view_bgxx_wap.dhtml?reg_bus_ent_id=EF0C42C4BC0F42BFB8C5E6C9BEC2A969&bgxxFlag=bgxxFlag&alt_itemenName=%E4%BC%81%E4%B8%9A%E5%90%8D%E7%A7%B0&approve_date=2009-09-24 HTTP/1.1" 200 None
+Wed, 13 Sep 2017 18:17:44 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Wed, 13 Sep 2017 18:17:44 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!view_bgxx_wap.dhtml?reg_bus_ent_id=EF0C42C4BC0F42BFB8C5E6C9BEC2A969&bgxxFlag=bgxxFlag&alt_itemenName=%E4%BC%81%E4%B8%9A%E7%B1%BB%E5%9E%8B&approve_date=2009-09-24 HTTP/1.1" 200 None
+Wed, 13 Sep 2017 18:17:44 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Wed, 13 Sep 2017 18:17:44 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!view_bgxx_wap.dhtml?reg_bus_ent_id=EF0C42C4BC0F42BFB8C5E6C9BEC2A969&bgxxFlag=bgxxFlag&alt_itemenName=%E4%BD%8F%E6%89%80&approve_date=2015-01-27 HTTP/1.1" 200 None
+Wed, 13 Sep 2017 18:17:44 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Wed, 13 Sep 2017 18:17:44 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!view_bgxx_wap.dhtml?reg_bus_ent_id=EF0C42C4BC0F42BFB8C5E6C9BEC2A969&bgxxFlag=bgxxFlag&alt_itemenName=%E5%AE%9E%E6%94%B6%E8%B5%84%E6%9C%AC%EF%BC%88%E9%87%91%EF%BC%89&approve_date=2009-09-24 HTTP/1.1" 200 None
+Wed, 13 Sep 2017 18:17:44 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Wed, 13 Sep 2017 18:17:44 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!view_bgxx_wap.dhtml?reg_bus_ent_id=EF0C42C4BC0F42BFB8C5E6C9BEC2A969&bgxxFlag=bgxxFlag&alt_itemenName=%E5%AE%9E%E6%94%B6%E8%B5%84%E6%9C%AC%EF%BC%88%E9%87%91%EF%BC%89&approve_date=2009-11-09 HTTP/1.1" 200 None
+Wed, 13 Sep 2017 18:17:44 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Wed, 13 Sep 2017 18:17:44 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!view_bgxx_wap.dhtml?reg_bus_ent_id=EF0C42C4BC0F42BFB8C5E6C9BEC2A969&bgxxFlag=bgxxFlag&alt_itemenName=%E5%AE%9E%E6%94%B6%E8%B5%84%E6%9C%AC%EF%BC%88%E9%87%91%EF%BC%89&approve_date=2012-03-29 HTTP/1.1" 200 None
+Wed, 13 Sep 2017 18:17:44 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Wed, 13 Sep 2017 18:17:44 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!view_bgxx_wap.dhtml?reg_bus_ent_id=EF0C42C4BC0F42BFB8C5E6C9BEC2A969&bgxxFlag=bgxxFlag&alt_itemenName=%E6%B3%95%E5%AE%9A%E4%BB%A3%E8%A1%A8%E4%BA%BA&approve_date=2017-02-10 HTTP/1.1" 200 None
+Wed, 13 Sep 2017 18:17:45 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Wed, 13 Sep 2017 18:17:45 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!view_bgxx_wap.dhtml?reg_bus_ent_id=EF0C42C4BC0F42BFB8C5E6C9BEC2A969&bgxxFlag=bgxxFlag&alt_itemenName=%E6%B3%A8%E5%86%8C%E8%B5%84%E6%9C%AC&approve_date=2009-09-24 HTTP/1.1" 200 None
+Wed, 13 Sep 2017 18:17:45 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Wed, 13 Sep 2017 18:17:45 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!view_bgxx_wap.dhtml?reg_bus_ent_id=EF0C42C4BC0F42BFB8C5E6C9BEC2A969&bgxxFlag=bgxxFlag&alt_itemenName=%E6%B3%A8%E5%86%8C%E8%B5%84%E6%9C%AC&approve_date=2009-11-09 HTTP/1.1" 200 None
+Wed, 13 Sep 2017 18:17:45 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Wed, 13 Sep 2017 18:17:45 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!view_bgxx_wap.dhtml?reg_bus_ent_id=EF0C42C4BC0F42BFB8C5E6C9BEC2A969&bgxxFlag=bgxxFlag&alt_itemenName=%E6%B3%A8%E5%86%8C%E8%B5%84%E6%9C%AC&approve_date=2012-03-29 HTTP/1.1" 200 None
+Wed, 13 Sep 2017 18:17:45 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Wed, 13 Sep 2017 18:17:45 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!view_bgxx_wap.dhtml?reg_bus_ent_id=EF0C42C4BC0F42BFB8C5E6C9BEC2A969&bgxxFlag=bgxxFlag&alt_itemenName=%E6%B3%A8%E5%86%8C%E8%B5%84%E6%9C%AC&approve_date=2016-09-30 HTTP/1.1" 200 None
+Wed, 13 Sep 2017 18:17:45 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Wed, 13 Sep 2017 18:17:45 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!view_bgxx_wap.dhtml?reg_bus_ent_id=EF0C42C4BC0F42BFB8C5E6C9BEC2A969&bgxxFlag=bgxxFlag&alt_itemenName=%E7%BB%8F%E8%90%A5%E8%8C%83%E5%9B%B4&approve_date=2009-11-09 HTTP/1.1" 200 None
+Wed, 13 Sep 2017 18:17:45 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Wed, 13 Sep 2017 18:17:45 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!view_bgxx_wap.dhtml?reg_bus_ent_id=EF0C42C4BC0F42BFB8C5E6C9BEC2A969&bgxxFlag=bgxxFlag&alt_itemenName=%E7%BB%8F%E8%90%A5%E8%8C%83%E5%9B%B4&approve_date=2012-03-29 HTTP/1.1" 200 None
+Wed, 13 Sep 2017 18:17:45 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Wed, 13 Sep 2017 18:17:45 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!view_bgxx_wap.dhtml?reg_bus_ent_id=EF0C42C4BC0F42BFB8C5E6C9BEC2A969&bgxxFlag=bgxxFlag&alt_itemenName=%E8%90%A5%E4%B8%9A%E6%9C%9F%E9%99%90&approve_date=2009-09-24 HTTP/1.1" 200 None
+Wed, 13 Sep 2017 18:17:46 Public_code.py[line:29] INFO connect is success!
+Wed, 13 Sep 2017 18:17:46 BJ_change.py[line:129] INFO change total:22
+Wed, 13 Sep 2017 18:17:46 BJ_change.py[line:157] ERROR change error :not enough arguments for format string 
+Wed, 13 Sep 2017 18:17:46 Public_code.py[line:29] INFO connect is success!
+Wed, 13 Sep 2017 18:19:05 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Wed, 13 Sep 2017 18:19:05 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!view_bgxx_wap.dhtml?reg_bus_ent_id=EF0C42C4BC0F42BFB8C5E6C9BEC2A969&clear=true HTTP/1.1" 200 None
+Wed, 13 Sep 2017 18:19:05 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Wed, 13 Sep 2017 18:19:05 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!tzrBgxx.dhtml?old_reg_his_id=a1a1a1a022c9de410122cfb1e88847fc&new_reg_his_id=a1a1a1a022c9de410122cfb1e88847fc&clear=true&chr_id=38d2c9583406458fa1ca2c98af3d5225 HTTP/1.1" 200 None
+Wed, 13 Sep 2017 18:19:05 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Wed, 13 Sep 2017 18:19:05 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!tzrBgxx.dhtml?old_reg_his_id=a1a1a1a022c9de410122cfb1e88847fc&new_reg_his_id=a1a1a1a023c10aa60123eae59bde34ea&clear=true&chr_id=2921bd9c10604de38c8225bb029d9408 HTTP/1.1" 200 None
+Wed, 13 Sep 2017 18:19:05 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Wed, 13 Sep 2017 18:19:05 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!tzrBgxx.dhtml?old_reg_his_id=a1a1a1a023c10aa60123eae59bde34ea&new_reg_his_id=a1a1a1a024995d9d0124a3f601331e76&clear=true&chr_id=df3194d2a7884acbb82ca09b001b1c73 HTTP/1.1" 200 None
+Wed, 13 Sep 2017 18:19:05 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Wed, 13 Sep 2017 18:19:05 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!tzrBgxx.dhtml?old_reg_his_id=a1a1a1a024995d9d0124a3f601331e76&new_reg_his_id=20e38b8b363f14b701365355df5e28a5&clear=true&chr_id=6f05941d1b8c474bace42a4a1c596856 HTTP/1.1" 200 None
+Wed, 13 Sep 2017 18:19:06 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Wed, 13 Sep 2017 18:19:06 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!zyryBgxx.dhtml?old_reg_his_id=20e38b8b363f14b701365355df5e28a5&new_reg_his_id=ff8080815a259e8d015a25cecb375056&clear=true&chr_id=790b490c04d04ebaac57fc7c7d543d03 HTTP/1.1" 200 None
+Wed, 13 Sep 2017 18:19:06 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Wed, 13 Sep 2017 18:19:06 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!zyryBgxx.dhtml?old_reg_his_id=a1a1a1a022c9de410122cfb1e88847fc&new_reg_his_id=a1a1a1a023c10aa60123eae59bde34ea&clear=true&chr_id=43f9863783c743ab9593e1adfcef337a HTTP/1.1" 200 None
+Wed, 13 Sep 2017 18:19:06 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Wed, 13 Sep 2017 18:19:06 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!zyryBgxx.dhtml?old_reg_his_id=a1a1a1a023c10aa60123eae59bde34ea&new_reg_his_id=a1a1a1a03006841101300b32e9a41415&clear=true&chr_id=8b17d7fb94d64a08ade0c2858bfdda21 HTTP/1.1" 200 None
+Wed, 13 Sep 2017 18:19:06 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Wed, 13 Sep 2017 18:19:06 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!zyryBgxx.dhtml?old_reg_his_id=a1a1a1a03006841101300b32e9a41415&new_reg_his_id=20e38b8b363f14b701365355df5e28a5&clear=true&chr_id=d0bf5eb3dad24b46ae787847c3bd7337 HTTP/1.1" 200 None
+Wed, 13 Sep 2017 18:19:06 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Wed, 13 Sep 2017 18:19:06 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!view_bgxx_wap.dhtml?reg_bus_ent_id=EF0C42C4BC0F42BFB8C5E6C9BEC2A969&bgxxFlag=bgxxFlag&alt_itemenName=%E4%BC%81%E4%B8%9A%E5%90%8D%E7%A7%B0&approve_date=2009-09-24 HTTP/1.1" 200 None
+Wed, 13 Sep 2017 18:19:06 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Wed, 13 Sep 2017 18:19:06 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!view_bgxx_wap.dhtml?reg_bus_ent_id=EF0C42C4BC0F42BFB8C5E6C9BEC2A969&bgxxFlag=bgxxFlag&alt_itemenName=%E4%BC%81%E4%B8%9A%E7%B1%BB%E5%9E%8B&approve_date=2009-09-24 HTTP/1.1" 200 None
+Wed, 13 Sep 2017 18:19:06 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Wed, 13 Sep 2017 18:19:06 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!view_bgxx_wap.dhtml?reg_bus_ent_id=EF0C42C4BC0F42BFB8C5E6C9BEC2A969&bgxxFlag=bgxxFlag&alt_itemenName=%E4%BD%8F%E6%89%80&approve_date=2015-01-27 HTTP/1.1" 200 None
+Wed, 13 Sep 2017 18:19:06 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Wed, 13 Sep 2017 18:19:06 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!view_bgxx_wap.dhtml?reg_bus_ent_id=EF0C42C4BC0F42BFB8C5E6C9BEC2A969&bgxxFlag=bgxxFlag&alt_itemenName=%E5%AE%9E%E6%94%B6%E8%B5%84%E6%9C%AC%EF%BC%88%E9%87%91%EF%BC%89&approve_date=2009-09-24 HTTP/1.1" 200 None
+Wed, 13 Sep 2017 18:19:07 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Wed, 13 Sep 2017 18:19:07 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!view_bgxx_wap.dhtml?reg_bus_ent_id=EF0C42C4BC0F42BFB8C5E6C9BEC2A969&bgxxFlag=bgxxFlag&alt_itemenName=%E5%AE%9E%E6%94%B6%E8%B5%84%E6%9C%AC%EF%BC%88%E9%87%91%EF%BC%89&approve_date=2009-11-09 HTTP/1.1" 200 None
+Wed, 13 Sep 2017 18:19:07 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Wed, 13 Sep 2017 18:19:07 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!view_bgxx_wap.dhtml?reg_bus_ent_id=EF0C42C4BC0F42BFB8C5E6C9BEC2A969&bgxxFlag=bgxxFlag&alt_itemenName=%E5%AE%9E%E6%94%B6%E8%B5%84%E6%9C%AC%EF%BC%88%E9%87%91%EF%BC%89&approve_date=2012-03-29 HTTP/1.1" 200 None
+Wed, 13 Sep 2017 18:19:07 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Wed, 13 Sep 2017 18:19:07 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!view_bgxx_wap.dhtml?reg_bus_ent_id=EF0C42C4BC0F42BFB8C5E6C9BEC2A969&bgxxFlag=bgxxFlag&alt_itemenName=%E6%B3%95%E5%AE%9A%E4%BB%A3%E8%A1%A8%E4%BA%BA&approve_date=2017-02-10 HTTP/1.1" 200 None
+Wed, 13 Sep 2017 18:19:07 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Wed, 13 Sep 2017 18:19:07 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!view_bgxx_wap.dhtml?reg_bus_ent_id=EF0C42C4BC0F42BFB8C5E6C9BEC2A969&bgxxFlag=bgxxFlag&alt_itemenName=%E6%B3%A8%E5%86%8C%E8%B5%84%E6%9C%AC&approve_date=2009-09-24 HTTP/1.1" 200 None
+Wed, 13 Sep 2017 18:19:07 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Wed, 13 Sep 2017 18:19:07 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!view_bgxx_wap.dhtml?reg_bus_ent_id=EF0C42C4BC0F42BFB8C5E6C9BEC2A969&bgxxFlag=bgxxFlag&alt_itemenName=%E6%B3%A8%E5%86%8C%E8%B5%84%E6%9C%AC&approve_date=2009-11-09 HTTP/1.1" 200 None
+Wed, 13 Sep 2017 18:19:07 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Wed, 13 Sep 2017 18:19:07 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!view_bgxx_wap.dhtml?reg_bus_ent_id=EF0C42C4BC0F42BFB8C5E6C9BEC2A969&bgxxFlag=bgxxFlag&alt_itemenName=%E6%B3%A8%E5%86%8C%E8%B5%84%E6%9C%AC&approve_date=2012-03-29 HTTP/1.1" 200 None
+Wed, 13 Sep 2017 18:19:07 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Wed, 13 Sep 2017 18:19:07 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!view_bgxx_wap.dhtml?reg_bus_ent_id=EF0C42C4BC0F42BFB8C5E6C9BEC2A969&bgxxFlag=bgxxFlag&alt_itemenName=%E6%B3%A8%E5%86%8C%E8%B5%84%E6%9C%AC&approve_date=2016-09-30 HTTP/1.1" 200 None
+Wed, 13 Sep 2017 18:19:07 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Wed, 13 Sep 2017 18:19:07 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!view_bgxx_wap.dhtml?reg_bus_ent_id=EF0C42C4BC0F42BFB8C5E6C9BEC2A969&bgxxFlag=bgxxFlag&alt_itemenName=%E7%BB%8F%E8%90%A5%E8%8C%83%E5%9B%B4&approve_date=2009-11-09 HTTP/1.1" 200 None
+Wed, 13 Sep 2017 18:19:07 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Wed, 13 Sep 2017 18:19:08 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!view_bgxx_wap.dhtml?reg_bus_ent_id=EF0C42C4BC0F42BFB8C5E6C9BEC2A969&bgxxFlag=bgxxFlag&alt_itemenName=%E7%BB%8F%E8%90%A5%E8%8C%83%E5%9B%B4&approve_date=2012-03-29 HTTP/1.1" 200 None
+Wed, 13 Sep 2017 18:19:08 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Wed, 13 Sep 2017 18:19:08 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!view_bgxx_wap.dhtml?reg_bus_ent_id=EF0C42C4BC0F42BFB8C5E6C9BEC2A969&bgxxFlag=bgxxFlag&alt_itemenName=%E8%90%A5%E4%B8%9A%E6%9C%9F%E9%99%90&approve_date=2009-09-24 HTTP/1.1" 200 None
+Wed, 13 Sep 2017 18:19:12 Public_code.py[line:29] INFO connect is success!
+Wed, 13 Sep 2017 18:19:14 BJ_change.py[line:129] INFO change total:22
+Wed, 13 Sep 2017 18:20:42 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Wed, 13 Sep 2017 18:20:42 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!view_bgxx_wap.dhtml?reg_bus_ent_id=EF0C42C4BC0F42BFB8C5E6C9BEC2A969&clear=true HTTP/1.1" 200 None
+Wed, 13 Sep 2017 18:20:42 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Wed, 13 Sep 2017 18:20:42 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!tzrBgxx.dhtml?old_reg_his_id=a1a1a1a022c9de410122cfb1e88847fc&new_reg_his_id=a1a1a1a022c9de410122cfb1e88847fc&clear=true&chr_id=43c8ab6b0ee04bf8928f6f266cf7c5a2 HTTP/1.1" 200 None
+Wed, 13 Sep 2017 18:20:42 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Wed, 13 Sep 2017 18:20:42 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!tzrBgxx.dhtml?old_reg_his_id=a1a1a1a022c9de410122cfb1e88847fc&new_reg_his_id=a1a1a1a023c10aa60123eae59bde34ea&clear=true&chr_id=6647f1124fb1453ea3a874b4cf947491 HTTP/1.1" 200 None
+Wed, 13 Sep 2017 18:20:43 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Wed, 13 Sep 2017 18:20:43 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!tzrBgxx.dhtml?old_reg_his_id=a1a1a1a023c10aa60123eae59bde34ea&new_reg_his_id=a1a1a1a024995d9d0124a3f601331e76&clear=true&chr_id=09fe95a028914c2caeae4c856f8f3f08 HTTP/1.1" 200 None
+Wed, 13 Sep 2017 18:20:43 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Wed, 13 Sep 2017 18:20:43 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!tzrBgxx.dhtml?old_reg_his_id=a1a1a1a024995d9d0124a3f601331e76&new_reg_his_id=20e38b8b363f14b701365355df5e28a5&clear=true&chr_id=4abfa8cc3e5345a186d74c48f21d32c4 HTTP/1.1" 200 None
+Wed, 13 Sep 2017 18:20:43 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Wed, 13 Sep 2017 18:20:43 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!zyryBgxx.dhtml?old_reg_his_id=20e38b8b363f14b701365355df5e28a5&new_reg_his_id=ff8080815a259e8d015a25cecb375056&clear=true&chr_id=bd78e773b4f746ee8eb15364049cb22c HTTP/1.1" 200 None
+Wed, 13 Sep 2017 18:20:43 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Wed, 13 Sep 2017 18:20:43 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!zyryBgxx.dhtml?old_reg_his_id=a1a1a1a022c9de410122cfb1e88847fc&new_reg_his_id=a1a1a1a023c10aa60123eae59bde34ea&clear=true&chr_id=122868a4eb484deab3f225e2edf303e3 HTTP/1.1" 200 None
+Wed, 13 Sep 2017 18:20:43 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Wed, 13 Sep 2017 18:20:43 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!zyryBgxx.dhtml?old_reg_his_id=a1a1a1a023c10aa60123eae59bde34ea&new_reg_his_id=a1a1a1a03006841101300b32e9a41415&clear=true&chr_id=29f781b682f449bcac012f4539019a44 HTTP/1.1" 200 None
+Wed, 13 Sep 2017 18:20:43 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Wed, 13 Sep 2017 18:20:43 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!zyryBgxx.dhtml?old_reg_his_id=a1a1a1a03006841101300b32e9a41415&new_reg_his_id=20e38b8b363f14b701365355df5e28a5&clear=true&chr_id=234baaa62ca74a9a9089d22ef0f94747 HTTP/1.1" 200 None
+Wed, 13 Sep 2017 18:20:43 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Wed, 13 Sep 2017 18:20:43 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!view_bgxx_wap.dhtml?reg_bus_ent_id=EF0C42C4BC0F42BFB8C5E6C9BEC2A969&bgxxFlag=bgxxFlag&alt_itemenName=%E4%BC%81%E4%B8%9A%E5%90%8D%E7%A7%B0&approve_date=2009-09-24 HTTP/1.1" 200 None
+Wed, 13 Sep 2017 18:20:43 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Wed, 13 Sep 2017 18:20:43 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!view_bgxx_wap.dhtml?reg_bus_ent_id=EF0C42C4BC0F42BFB8C5E6C9BEC2A969&bgxxFlag=bgxxFlag&alt_itemenName=%E4%BC%81%E4%B8%9A%E7%B1%BB%E5%9E%8B&approve_date=2009-09-24 HTTP/1.1" 200 None
+Wed, 13 Sep 2017 18:20:43 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Wed, 13 Sep 2017 18:20:43 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!view_bgxx_wap.dhtml?reg_bus_ent_id=EF0C42C4BC0F42BFB8C5E6C9BEC2A969&bgxxFlag=bgxxFlag&alt_itemenName=%E4%BD%8F%E6%89%80&approve_date=2015-01-27 HTTP/1.1" 200 None
+Wed, 13 Sep 2017 18:20:44 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Wed, 13 Sep 2017 18:20:44 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!view_bgxx_wap.dhtml?reg_bus_ent_id=EF0C42C4BC0F42BFB8C5E6C9BEC2A969&bgxxFlag=bgxxFlag&alt_itemenName=%E5%AE%9E%E6%94%B6%E8%B5%84%E6%9C%AC%EF%BC%88%E9%87%91%EF%BC%89&approve_date=2009-09-24 HTTP/1.1" 200 None
+Wed, 13 Sep 2017 18:20:44 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Wed, 13 Sep 2017 18:20:44 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!view_bgxx_wap.dhtml?reg_bus_ent_id=EF0C42C4BC0F42BFB8C5E6C9BEC2A969&bgxxFlag=bgxxFlag&alt_itemenName=%E5%AE%9E%E6%94%B6%E8%B5%84%E6%9C%AC%EF%BC%88%E9%87%91%EF%BC%89&approve_date=2009-11-09 HTTP/1.1" 200 None
+Wed, 13 Sep 2017 18:20:44 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Wed, 13 Sep 2017 18:20:44 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!view_bgxx_wap.dhtml?reg_bus_ent_id=EF0C42C4BC0F42BFB8C5E6C9BEC2A969&bgxxFlag=bgxxFlag&alt_itemenName=%E5%AE%9E%E6%94%B6%E8%B5%84%E6%9C%AC%EF%BC%88%E9%87%91%EF%BC%89&approve_date=2012-03-29 HTTP/1.1" 200 None
+Wed, 13 Sep 2017 18:20:44 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Wed, 13 Sep 2017 18:20:44 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!view_bgxx_wap.dhtml?reg_bus_ent_id=EF0C42C4BC0F42BFB8C5E6C9BEC2A969&bgxxFlag=bgxxFlag&alt_itemenName=%E6%B3%95%E5%AE%9A%E4%BB%A3%E8%A1%A8%E4%BA%BA&approve_date=2017-02-10 HTTP/1.1" 200 None
+Wed, 13 Sep 2017 18:20:44 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Wed, 13 Sep 2017 18:20:44 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!view_bgxx_wap.dhtml?reg_bus_ent_id=EF0C42C4BC0F42BFB8C5E6C9BEC2A969&bgxxFlag=bgxxFlag&alt_itemenName=%E6%B3%A8%E5%86%8C%E8%B5%84%E6%9C%AC&approve_date=2009-09-24 HTTP/1.1" 200 None
+Wed, 13 Sep 2017 18:20:44 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Wed, 13 Sep 2017 18:20:44 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!view_bgxx_wap.dhtml?reg_bus_ent_id=EF0C42C4BC0F42BFB8C5E6C9BEC2A969&bgxxFlag=bgxxFlag&alt_itemenName=%E6%B3%A8%E5%86%8C%E8%B5%84%E6%9C%AC&approve_date=2009-11-09 HTTP/1.1" 200 None
+Wed, 13 Sep 2017 18:20:44 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Wed, 13 Sep 2017 18:20:44 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!view_bgxx_wap.dhtml?reg_bus_ent_id=EF0C42C4BC0F42BFB8C5E6C9BEC2A969&bgxxFlag=bgxxFlag&alt_itemenName=%E6%B3%A8%E5%86%8C%E8%B5%84%E6%9C%AC&approve_date=2012-03-29 HTTP/1.1" 200 None
+Wed, 13 Sep 2017 18:20:44 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Wed, 13 Sep 2017 18:20:44 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!view_bgxx_wap.dhtml?reg_bus_ent_id=EF0C42C4BC0F42BFB8C5E6C9BEC2A969&bgxxFlag=bgxxFlag&alt_itemenName=%E6%B3%A8%E5%86%8C%E8%B5%84%E6%9C%AC&approve_date=2016-09-30 HTTP/1.1" 200 None
+Wed, 13 Sep 2017 18:20:44 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Wed, 13 Sep 2017 18:20:44 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!view_bgxx_wap.dhtml?reg_bus_ent_id=EF0C42C4BC0F42BFB8C5E6C9BEC2A969&bgxxFlag=bgxxFlag&alt_itemenName=%E7%BB%8F%E8%90%A5%E8%8C%83%E5%9B%B4&approve_date=2009-11-09 HTTP/1.1" 200 None
+Wed, 13 Sep 2017 18:20:44 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Wed, 13 Sep 2017 18:20:44 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!view_bgxx_wap.dhtml?reg_bus_ent_id=EF0C42C4BC0F42BFB8C5E6C9BEC2A969&bgxxFlag=bgxxFlag&alt_itemenName=%E7%BB%8F%E8%90%A5%E8%8C%83%E5%9B%B4&approve_date=2012-03-29 HTTP/1.1" 200 None
+Wed, 13 Sep 2017 18:20:44 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Wed, 13 Sep 2017 18:20:44 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!view_bgxx_wap.dhtml?reg_bus_ent_id=EF0C42C4BC0F42BFB8C5E6C9BEC2A969&bgxxFlag=bgxxFlag&alt_itemenName=%E8%90%A5%E4%B8%9A%E6%9C%9F%E9%99%90&approve_date=2009-09-24 HTTP/1.1" 200 None
+Wed, 13 Sep 2017 18:20:45 Public_code.py[line:29] INFO connect is success!
+Wed, 13 Sep 2017 18:20:45 BJ_change.py[line:129] INFO change total:22
+Wed, 13 Sep 2017 18:20:45 BJ_change.py[line:163] INFO execute change:8
+Wed, 13 Sep 2017 18:20:45 Public_code.py[line:29] INFO connect is success!
+Wed, 13 Sep 2017 18:20:56 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Wed, 13 Sep 2017 18:20:56 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!view_bgxx_wap.dhtml?reg_bus_ent_id=EF0C42C4BC0F42BFB8C5E6C9BEC2A969&clear=true HTTP/1.1" 200 None
+Wed, 13 Sep 2017 18:20:56 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Wed, 13 Sep 2017 18:20:56 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!tzrBgxx.dhtml?old_reg_his_id=a1a1a1a022c9de410122cfb1e88847fc&new_reg_his_id=a1a1a1a022c9de410122cfb1e88847fc&clear=true&chr_id=1512a3057c374710822bbcb053e6de10 HTTP/1.1" 200 None
+Wed, 13 Sep 2017 18:20:57 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Wed, 13 Sep 2017 18:20:57 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!tzrBgxx.dhtml?old_reg_his_id=a1a1a1a022c9de410122cfb1e88847fc&new_reg_his_id=a1a1a1a023c10aa60123eae59bde34ea&clear=true&chr_id=b53b0367c6ca4766a7fd195746d1fbd6 HTTP/1.1" 200 None
+Wed, 13 Sep 2017 18:20:57 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Wed, 13 Sep 2017 18:20:57 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!tzrBgxx.dhtml?old_reg_his_id=a1a1a1a023c10aa60123eae59bde34ea&new_reg_his_id=a1a1a1a024995d9d0124a3f601331e76&clear=true&chr_id=de8aa800332e4bac88d04eebc1a63222 HTTP/1.1" 200 None
+Wed, 13 Sep 2017 18:20:57 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Wed, 13 Sep 2017 18:20:57 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!tzrBgxx.dhtml?old_reg_his_id=a1a1a1a024995d9d0124a3f601331e76&new_reg_his_id=20e38b8b363f14b701365355df5e28a5&clear=true&chr_id=a9b5f27d11e94d4fbb75d115f2a02ebd HTTP/1.1" 200 None
+Wed, 13 Sep 2017 18:20:57 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Wed, 13 Sep 2017 18:20:57 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!zyryBgxx.dhtml?old_reg_his_id=20e38b8b363f14b701365355df5e28a5&new_reg_his_id=ff8080815a259e8d015a25cecb375056&clear=true&chr_id=f729440e9ed44abb9cc3518c5cef1d25 HTTP/1.1" 200 None
+Wed, 13 Sep 2017 18:20:57 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Wed, 13 Sep 2017 18:20:57 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!zyryBgxx.dhtml?old_reg_his_id=a1a1a1a022c9de410122cfb1e88847fc&new_reg_his_id=a1a1a1a023c10aa60123eae59bde34ea&clear=true&chr_id=cce13bf4ed62442abe2a15cea38aba10 HTTP/1.1" 200 None
+Wed, 13 Sep 2017 18:20:57 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Wed, 13 Sep 2017 18:20:57 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!zyryBgxx.dhtml?old_reg_his_id=a1a1a1a023c10aa60123eae59bde34ea&new_reg_his_id=a1a1a1a03006841101300b32e9a41415&clear=true&chr_id=8d2156b671e94b8b8bb471b219c576ef HTTP/1.1" 200 None
+Wed, 13 Sep 2017 18:20:57 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Wed, 13 Sep 2017 18:20:58 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!zyryBgxx.dhtml?old_reg_his_id=a1a1a1a03006841101300b32e9a41415&new_reg_his_id=20e38b8b363f14b701365355df5e28a5&clear=true&chr_id=2279d0160fe04d84b8ffb229bd36f1fc HTTP/1.1" 200 921
+Wed, 13 Sep 2017 18:20:58 Public_code.py[line:87] INFO unknow error:list index out of range
+Wed, 13 Sep 2017 18:20:58 Public_code.py[line:29] INFO connect is success!
+Wed, 13 Sep 2017 18:21:04 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Wed, 13 Sep 2017 18:21:05 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!view_bgxx_wap.dhtml?reg_bus_ent_id=EF0C42C4BC0F42BFB8C5E6C9BEC2A969&clear=true HTTP/1.1" 200 921
+Wed, 13 Sep 2017 18:21:08 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Wed, 13 Sep 2017 18:21:08 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!view_bgxx_wap.dhtml?reg_bus_ent_id=EF0C42C4BC0F42BFB8C5E6C9BEC2A969&clear=true HTTP/1.1" 200 921
+Wed, 13 Sep 2017 18:21:48 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Wed, 13 Sep 2017 18:21:48 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!view_bgxx_wap.dhtml?reg_bus_ent_id=EF0C42C4BC0F42BFB8C5E6C9BEC2A969&clear=true HTTP/1.1" 200 921
+Wed, 13 Sep 2017 18:22:12 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Wed, 13 Sep 2017 18:22:12 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!view_bgxx_wap.dhtml?reg_bus_ent_id=EF0C42C4BC0F42BFB8C5E6C9BEC2A969&clear=true HTTP/1.1" 200 921
+Wed, 13 Sep 2017 18:22:32 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Wed, 13 Sep 2017 18:22:33 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!view_bgxx_wap.dhtml?reg_bus_ent_id=EF0C42C4BC0F42BFB8C5E6C9BEC2A969&clear=true HTTP/1.1" 200 921
+Wed, 13 Sep 2017 18:23:13 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Wed, 13 Sep 2017 18:23:13 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!view_bgxx_wap.dhtml?reg_bus_ent_id=EF0C42C4BC0F42BFB8C5E6C9BEC2A969&clear=true HTTP/1.1" 200 921
+Wed, 13 Sep 2017 18:23:35 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Wed, 13 Sep 2017 18:23:35 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!view_bgxx_wap.dhtml?reg_bus_ent_id=EF0C42C4BC0F42BFB8C5E6C9BEC2A969&clear=true HTTP/1.1" 200 921
+Wed, 13 Sep 2017 18:24:08 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Wed, 13 Sep 2017 18:24:08 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!view_bgxx_wap.dhtml?reg_bus_ent_id=EF0C42C4BC0F42BFB8C5E6C9BEC2A969&clear=true HTTP/1.1" 200 921
+Wed, 13 Sep 2017 18:24:45 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Wed, 13 Sep 2017 18:24:45 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!view_bgxx_wap.dhtml?reg_bus_ent_id=EF0C42C4BC0F42BFB8C5E6C9BEC2A969&clear=true HTTP/1.1" 200 921
+Wed, 13 Sep 2017 18:25:07 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Wed, 13 Sep 2017 18:25:07 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!view_bgxx_wap.dhtml?reg_bus_ent_id=EF0C42C4BC0F42BFB8C5E6C9BEC2A969&clear=true HTTP/1.1" 200 921
+Wed, 13 Sep 2017 18:25:07 Public_code.py[line:29] INFO connect is success!
+Wed, 13 Sep 2017 18:25:07 BJ_change.py[line:129] INFO change total:0
+Wed, 13 Sep 2017 18:25:07 BJ_change.py[line:163] INFO execute change:0
+Wed, 13 Sep 2017 18:25:07 Public_code.py[line:29] INFO connect is success!
+Wed, 13 Sep 2017 18:26:34 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Wed, 13 Sep 2017 18:26:34 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!view_bgxx_wap.dhtml?reg_bus_ent_id=EF0C42C4BC0F42BFB8C5E6C9BEC2A969&clear=true HTTP/1.1" 200 921
+Wed, 13 Sep 2017 18:26:34 Public_code.py[line:29] INFO connect is success!
+Wed, 13 Sep 2017 18:26:34 BJ_change.py[line:129] INFO change total:0
+Wed, 13 Sep 2017 18:26:34 BJ_change.py[line:163] INFO execute change:0
+Wed, 13 Sep 2017 18:26:34 Public_code.py[line:29] INFO connect is success!
+Wed, 13 Sep 2017 18:26:58 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Wed, 13 Sep 2017 18:26:58 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!view_bgxx_wap.dhtml?reg_bus_ent_id=EF0C42C4BC0F42BFB8C5E6C9BEC2A969&clear=true HTTP/1.1" 200 921
+Wed, 13 Sep 2017 18:27:06 Public_code.py[line:29] INFO connect is success!
+Wed, 13 Sep 2017 18:27:06 BJ_change.py[line:129] INFO change total:0
+Wed, 13 Sep 2017 18:27:06 BJ_change.py[line:163] INFO execute change:0
+Wed, 13 Sep 2017 18:27:58 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Wed, 13 Sep 2017 18:27:58 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!view_bgxx_wap.dhtml?reg_bus_ent_id=EF0C42C4BC0F42BFB8C5E6C9BEC2A969&clear=true HTTP/1.1" 200 921
+Wed, 13 Sep 2017 18:27:58 Public_code.py[line:29] INFO connect is success!
+Wed, 13 Sep 2017 18:32:28 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Wed, 13 Sep 2017 18:32:28 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!view_bgxx_wap.dhtml?reg_bus_ent_id=EF0C42C4BC0F42BFB8C5E6C9BEC2A969&clear=true HTTP/1.1" 200 921
+Wed, 13 Sep 2017 18:32:28 Public_code.py[line:29] INFO connect is success!
+Wed, 13 Sep 2017 18:33:17 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Wed, 13 Sep 2017 18:33:17 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!view_bgxx_wap.dhtml?reg_bus_ent_id=EF0C42C4BC0F42BFB8C5E6C9BEC2A969&clear=true HTTP/1.1" 200 None
+Wed, 13 Sep 2017 18:33:17 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Wed, 13 Sep 2017 18:33:17 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!tzrBgxx.dhtml?old_reg_his_id=a1a1a1a022c9de410122cfb1e88847fc&new_reg_his_id=a1a1a1a022c9de410122cfb1e88847fc&clear=true&chr_id=3518ecd7a5a341c2b6e4e55bf5d1e080 HTTP/1.1" 200 None
+Wed, 13 Sep 2017 18:33:17 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Wed, 13 Sep 2017 18:33:18 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!tzrBgxx.dhtml?old_reg_his_id=a1a1a1a022c9de410122cfb1e88847fc&new_reg_his_id=a1a1a1a023c10aa60123eae59bde34ea&clear=true&chr_id=08dc6ce0433b49b9a34da4541bb0b17f HTTP/1.1" 200 None
+Wed, 13 Sep 2017 18:33:18 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Wed, 13 Sep 2017 18:33:18 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!tzrBgxx.dhtml?old_reg_his_id=a1a1a1a023c10aa60123eae59bde34ea&new_reg_his_id=a1a1a1a024995d9d0124a3f601331e76&clear=true&chr_id=560aad1991c746cd886e07da6ee49475 HTTP/1.1" 200 None
+Wed, 13 Sep 2017 18:33:18 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Wed, 13 Sep 2017 18:33:18 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!tzrBgxx.dhtml?old_reg_his_id=a1a1a1a024995d9d0124a3f601331e76&new_reg_his_id=20e38b8b363f14b701365355df5e28a5&clear=true&chr_id=783504c5c2b843f0bb3d6c9bc282c361 HTTP/1.1" 200 None
+Wed, 13 Sep 2017 18:33:18 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Wed, 13 Sep 2017 18:33:18 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!zyryBgxx.dhtml?old_reg_his_id=20e38b8b363f14b701365355df5e28a5&new_reg_his_id=ff8080815a259e8d015a25cecb375056&clear=true&chr_id=8d72402ce9a2481ea51de9ef4c8e8484 HTTP/1.1" 200 None
+Wed, 13 Sep 2017 18:33:18 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Wed, 13 Sep 2017 18:33:18 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!zyryBgxx.dhtml?old_reg_his_id=a1a1a1a022c9de410122cfb1e88847fc&new_reg_his_id=a1a1a1a023c10aa60123eae59bde34ea&clear=true&chr_id=3c62c7f8973247449543e93e8d5b3654 HTTP/1.1" 200 None
+Wed, 13 Sep 2017 18:33:18 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Wed, 13 Sep 2017 18:33:18 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!zyryBgxx.dhtml?old_reg_his_id=a1a1a1a023c10aa60123eae59bde34ea&new_reg_his_id=a1a1a1a03006841101300b32e9a41415&clear=true&chr_id=1cbc5fe035a0418e9d89721b0c7a29c7 HTTP/1.1" 200 None
+Wed, 13 Sep 2017 18:33:18 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Wed, 13 Sep 2017 18:33:19 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!zyryBgxx.dhtml?old_reg_his_id=a1a1a1a03006841101300b32e9a41415&new_reg_his_id=20e38b8b363f14b701365355df5e28a5&clear=true&chr_id=e508bf4b421b4a6597158ecde3448038 HTTP/1.1" 200 None
+Wed, 13 Sep 2017 18:33:19 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Wed, 13 Sep 2017 18:33:19 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!view_bgxx_wap.dhtml?reg_bus_ent_id=EF0C42C4BC0F42BFB8C5E6C9BEC2A969&bgxxFlag=bgxxFlag&alt_itemenName=%E4%BC%81%E4%B8%9A%E5%90%8D%E7%A7%B0&approve_date=2009-09-24 HTTP/1.1" 200 None
+Wed, 13 Sep 2017 18:33:19 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Wed, 13 Sep 2017 18:33:19 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!view_bgxx_wap.dhtml?reg_bus_ent_id=EF0C42C4BC0F42BFB8C5E6C9BEC2A969&bgxxFlag=bgxxFlag&alt_itemenName=%E4%BC%81%E4%B8%9A%E7%B1%BB%E5%9E%8B&approve_date=2009-09-24 HTTP/1.1" 200 None
+Wed, 13 Sep 2017 18:33:19 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Wed, 13 Sep 2017 18:33:19 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!view_bgxx_wap.dhtml?reg_bus_ent_id=EF0C42C4BC0F42BFB8C5E6C9BEC2A969&bgxxFlag=bgxxFlag&alt_itemenName=%E4%BD%8F%E6%89%80&approve_date=2015-01-27 HTTP/1.1" 200 None
+Wed, 13 Sep 2017 18:33:19 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Wed, 13 Sep 2017 18:33:19 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!view_bgxx_wap.dhtml?reg_bus_ent_id=EF0C42C4BC0F42BFB8C5E6C9BEC2A969&bgxxFlag=bgxxFlag&alt_itemenName=%E5%AE%9E%E6%94%B6%E8%B5%84%E6%9C%AC%EF%BC%88%E9%87%91%EF%BC%89&approve_date=2009-09-24 HTTP/1.1" 200 None
+Wed, 13 Sep 2017 18:33:19 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Wed, 13 Sep 2017 18:33:19 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!view_bgxx_wap.dhtml?reg_bus_ent_id=EF0C42C4BC0F42BFB8C5E6C9BEC2A969&bgxxFlag=bgxxFlag&alt_itemenName=%E5%AE%9E%E6%94%B6%E8%B5%84%E6%9C%AC%EF%BC%88%E9%87%91%EF%BC%89&approve_date=2009-11-09 HTTP/1.1" 200 None
+Wed, 13 Sep 2017 18:33:19 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Wed, 13 Sep 2017 18:33:19 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!view_bgxx_wap.dhtml?reg_bus_ent_id=EF0C42C4BC0F42BFB8C5E6C9BEC2A969&bgxxFlag=bgxxFlag&alt_itemenName=%E5%AE%9E%E6%94%B6%E8%B5%84%E6%9C%AC%EF%BC%88%E9%87%91%EF%BC%89&approve_date=2012-03-29 HTTP/1.1" 200 None
+Wed, 13 Sep 2017 18:33:19 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Wed, 13 Sep 2017 18:33:19 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!view_bgxx_wap.dhtml?reg_bus_ent_id=EF0C42C4BC0F42BFB8C5E6C9BEC2A969&bgxxFlag=bgxxFlag&alt_itemenName=%E6%B3%95%E5%AE%9A%E4%BB%A3%E8%A1%A8%E4%BA%BA&approve_date=2017-02-10 HTTP/1.1" 200 None
+Wed, 13 Sep 2017 18:33:19 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Wed, 13 Sep 2017 18:33:19 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!view_bgxx_wap.dhtml?reg_bus_ent_id=EF0C42C4BC0F42BFB8C5E6C9BEC2A969&bgxxFlag=bgxxFlag&alt_itemenName=%E6%B3%A8%E5%86%8C%E8%B5%84%E6%9C%AC&approve_date=2009-09-24 HTTP/1.1" 200 None
+Wed, 13 Sep 2017 18:33:19 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Wed, 13 Sep 2017 18:33:19 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!view_bgxx_wap.dhtml?reg_bus_ent_id=EF0C42C4BC0F42BFB8C5E6C9BEC2A969&bgxxFlag=bgxxFlag&alt_itemenName=%E6%B3%A8%E5%86%8C%E8%B5%84%E6%9C%AC&approve_date=2009-11-09 HTTP/1.1" 200 None
+Wed, 13 Sep 2017 18:33:20 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Wed, 13 Sep 2017 18:33:20 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!view_bgxx_wap.dhtml?reg_bus_ent_id=EF0C42C4BC0F42BFB8C5E6C9BEC2A969&bgxxFlag=bgxxFlag&alt_itemenName=%E6%B3%A8%E5%86%8C%E8%B5%84%E6%9C%AC&approve_date=2012-03-29 HTTP/1.1" 200 None
+Wed, 13 Sep 2017 18:33:20 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Wed, 13 Sep 2017 18:33:20 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!view_bgxx_wap.dhtml?reg_bus_ent_id=EF0C42C4BC0F42BFB8C5E6C9BEC2A969&bgxxFlag=bgxxFlag&alt_itemenName=%E6%B3%A8%E5%86%8C%E8%B5%84%E6%9C%AC&approve_date=2016-09-30 HTTP/1.1" 200 None
+Wed, 13 Sep 2017 18:33:20 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Wed, 13 Sep 2017 18:33:20 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!view_bgxx_wap.dhtml?reg_bus_ent_id=EF0C42C4BC0F42BFB8C5E6C9BEC2A969&bgxxFlag=bgxxFlag&alt_itemenName=%E7%BB%8F%E8%90%A5%E8%8C%83%E5%9B%B4&approve_date=2009-11-09 HTTP/1.1" 200 None
+Wed, 13 Sep 2017 18:33:20 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Wed, 13 Sep 2017 18:33:20 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!view_bgxx_wap.dhtml?reg_bus_ent_id=EF0C42C4BC0F42BFB8C5E6C9BEC2A969&bgxxFlag=bgxxFlag&alt_itemenName=%E7%BB%8F%E8%90%A5%E8%8C%83%E5%9B%B4&approve_date=2012-03-29 HTTP/1.1" 200 None
+Wed, 13 Sep 2017 18:33:20 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Wed, 13 Sep 2017 18:33:20 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!view_bgxx_wap.dhtml?reg_bus_ent_id=EF0C42C4BC0F42BFB8C5E6C9BEC2A969&bgxxFlag=bgxxFlag&alt_itemenName=%E8%90%A5%E4%B8%9A%E6%9C%9F%E9%99%90&approve_date=2009-09-24 HTTP/1.1" 200 None
+Wed, 13 Sep 2017 18:33:20 Public_code.py[line:29] INFO connect is success!
+Wed, 13 Sep 2017 18:33:20 BJ_change.py[line:125] INFO change total:22
+Wed, 13 Sep 2017 18:33:20 BJ_change.py[line:159] INFO execute change:0
+Wed, 13 Sep 2017 18:33:20 Public_code.py[line:29] INFO connect is success!
+Wed, 13 Sep 2017 18:33:27 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Wed, 13 Sep 2017 18:33:27 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!view_bgxx_wap.dhtml?reg_bus_ent_id=EF0C42C4BC0F42BFB8C5E6C9BEC2A969&clear=true HTTP/1.1" 200 None
+Wed, 13 Sep 2017 18:33:28 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Wed, 13 Sep 2017 18:33:28 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!tzrBgxx.dhtml?old_reg_his_id=a1a1a1a022c9de410122cfb1e88847fc&new_reg_his_id=a1a1a1a022c9de410122cfb1e88847fc&clear=true&chr_id=2ba220c5a86c479a8bfde80cee621ea9 HTTP/1.1" 200 None
+Wed, 13 Sep 2017 18:33:28 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Wed, 13 Sep 2017 18:33:28 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!tzrBgxx.dhtml?old_reg_his_id=a1a1a1a022c9de410122cfb1e88847fc&new_reg_his_id=a1a1a1a023c10aa60123eae59bde34ea&clear=true&chr_id=c2202b04198d4aad8e7da959699018e7 HTTP/1.1" 200 None
+Wed, 13 Sep 2017 18:33:28 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Wed, 13 Sep 2017 18:33:28 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!tzrBgxx.dhtml?old_reg_his_id=a1a1a1a023c10aa60123eae59bde34ea&new_reg_his_id=a1a1a1a024995d9d0124a3f601331e76&clear=true&chr_id=201734a2445e4c998a15c2aa0849a018 HTTP/1.1" 200 None
+Wed, 13 Sep 2017 18:33:28 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Wed, 13 Sep 2017 18:33:28 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!tzrBgxx.dhtml?old_reg_his_id=a1a1a1a024995d9d0124a3f601331e76&new_reg_his_id=20e38b8b363f14b701365355df5e28a5&clear=true&chr_id=69cc02c264fb42468e6021e5c97d83b2 HTTP/1.1" 200 None
+Wed, 13 Sep 2017 18:33:28 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Wed, 13 Sep 2017 18:33:28 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!zyryBgxx.dhtml?old_reg_his_id=20e38b8b363f14b701365355df5e28a5&new_reg_his_id=ff8080815a259e8d015a25cecb375056&clear=true&chr_id=6f94839cd26646fd877d1b3adafe3926 HTTP/1.1" 200 None
+Wed, 13 Sep 2017 18:33:28 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Wed, 13 Sep 2017 18:33:28 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!zyryBgxx.dhtml?old_reg_his_id=a1a1a1a022c9de410122cfb1e88847fc&new_reg_his_id=a1a1a1a023c10aa60123eae59bde34ea&clear=true&chr_id=4b6fb4f6b5a04b45bba2c989bffedbae HTTP/1.1" 200 None
+Wed, 13 Sep 2017 18:33:28 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Wed, 13 Sep 2017 18:33:28 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!zyryBgxx.dhtml?old_reg_his_id=a1a1a1a023c10aa60123eae59bde34ea&new_reg_his_id=a1a1a1a03006841101300b32e9a41415&clear=true&chr_id=1561581f89b5476eb5245c0646f3e66f HTTP/1.1" 200 None
+Wed, 13 Sep 2017 18:33:29 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Wed, 13 Sep 2017 18:33:29 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!zyryBgxx.dhtml?old_reg_his_id=a1a1a1a03006841101300b32e9a41415&new_reg_his_id=20e38b8b363f14b701365355df5e28a5&clear=true&chr_id=d83cc6a7e7a442328a94bca951801495 HTTP/1.1" 200 None
+Wed, 13 Sep 2017 18:33:29 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Wed, 13 Sep 2017 18:33:29 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!view_bgxx_wap.dhtml?reg_bus_ent_id=EF0C42C4BC0F42BFB8C5E6C9BEC2A969&bgxxFlag=bgxxFlag&alt_itemenName=%E4%BC%81%E4%B8%9A%E5%90%8D%E7%A7%B0&approve_date=2009-09-24 HTTP/1.1" 200 None
+Wed, 13 Sep 2017 18:33:29 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Wed, 13 Sep 2017 18:33:29 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!view_bgxx_wap.dhtml?reg_bus_ent_id=EF0C42C4BC0F42BFB8C5E6C9BEC2A969&bgxxFlag=bgxxFlag&alt_itemenName=%E4%BC%81%E4%B8%9A%E7%B1%BB%E5%9E%8B&approve_date=2009-09-24 HTTP/1.1" 200 None
+Wed, 13 Sep 2017 18:33:29 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Wed, 13 Sep 2017 18:33:29 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!view_bgxx_wap.dhtml?reg_bus_ent_id=EF0C42C4BC0F42BFB8C5E6C9BEC2A969&bgxxFlag=bgxxFlag&alt_itemenName=%E4%BD%8F%E6%89%80&approve_date=2015-01-27 HTTP/1.1" 200 None
+Wed, 13 Sep 2017 18:33:29 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Wed, 13 Sep 2017 18:33:29 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!view_bgxx_wap.dhtml?reg_bus_ent_id=EF0C42C4BC0F42BFB8C5E6C9BEC2A969&bgxxFlag=bgxxFlag&alt_itemenName=%E5%AE%9E%E6%94%B6%E8%B5%84%E6%9C%AC%EF%BC%88%E9%87%91%EF%BC%89&approve_date=2009-09-24 HTTP/1.1" 200 None
+Wed, 13 Sep 2017 18:33:29 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Wed, 13 Sep 2017 18:33:29 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!view_bgxx_wap.dhtml?reg_bus_ent_id=EF0C42C4BC0F42BFB8C5E6C9BEC2A969&bgxxFlag=bgxxFlag&alt_itemenName=%E5%AE%9E%E6%94%B6%E8%B5%84%E6%9C%AC%EF%BC%88%E9%87%91%EF%BC%89&approve_date=2009-11-09 HTTP/1.1" 200 None
+Wed, 13 Sep 2017 18:33:29 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Wed, 13 Sep 2017 18:33:29 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!view_bgxx_wap.dhtml?reg_bus_ent_id=EF0C42C4BC0F42BFB8C5E6C9BEC2A969&bgxxFlag=bgxxFlag&alt_itemenName=%E5%AE%9E%E6%94%B6%E8%B5%84%E6%9C%AC%EF%BC%88%E9%87%91%EF%BC%89&approve_date=2012-03-29 HTTP/1.1" 200 None
+Wed, 13 Sep 2017 18:33:29 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Wed, 13 Sep 2017 18:33:29 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!view_bgxx_wap.dhtml?reg_bus_ent_id=EF0C42C4BC0F42BFB8C5E6C9BEC2A969&bgxxFlag=bgxxFlag&alt_itemenName=%E6%B3%95%E5%AE%9A%E4%BB%A3%E8%A1%A8%E4%BA%BA&approve_date=2017-02-10 HTTP/1.1" 200 None
+Wed, 13 Sep 2017 18:33:29 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Wed, 13 Sep 2017 18:33:30 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!view_bgxx_wap.dhtml?reg_bus_ent_id=EF0C42C4BC0F42BFB8C5E6C9BEC2A969&bgxxFlag=bgxxFlag&alt_itemenName=%E6%B3%A8%E5%86%8C%E8%B5%84%E6%9C%AC&approve_date=2009-09-24 HTTP/1.1" 200 None
+Wed, 13 Sep 2017 18:33:30 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Wed, 13 Sep 2017 18:33:30 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!view_bgxx_wap.dhtml?reg_bus_ent_id=EF0C42C4BC0F42BFB8C5E6C9BEC2A969&bgxxFlag=bgxxFlag&alt_itemenName=%E6%B3%A8%E5%86%8C%E8%B5%84%E6%9C%AC&approve_date=2009-11-09 HTTP/1.1" 200 None
+Wed, 13 Sep 2017 18:33:30 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Wed, 13 Sep 2017 18:33:30 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!view_bgxx_wap.dhtml?reg_bus_ent_id=EF0C42C4BC0F42BFB8C5E6C9BEC2A969&bgxxFlag=bgxxFlag&alt_itemenName=%E6%B3%A8%E5%86%8C%E8%B5%84%E6%9C%AC&approve_date=2012-03-29 HTTP/1.1" 200 None
+Wed, 13 Sep 2017 18:33:30 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Wed, 13 Sep 2017 18:33:30 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!view_bgxx_wap.dhtml?reg_bus_ent_id=EF0C42C4BC0F42BFB8C5E6C9BEC2A969&bgxxFlag=bgxxFlag&alt_itemenName=%E6%B3%A8%E5%86%8C%E8%B5%84%E6%9C%AC&approve_date=2016-09-30 HTTP/1.1" 200 None
+Wed, 13 Sep 2017 18:33:30 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Wed, 13 Sep 2017 18:33:30 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!view_bgxx_wap.dhtml?reg_bus_ent_id=EF0C42C4BC0F42BFB8C5E6C9BEC2A969&bgxxFlag=bgxxFlag&alt_itemenName=%E7%BB%8F%E8%90%A5%E8%8C%83%E5%9B%B4&approve_date=2009-11-09 HTTP/1.1" 200 None
+Wed, 13 Sep 2017 18:33:30 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Wed, 13 Sep 2017 18:33:30 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!view_bgxx_wap.dhtml?reg_bus_ent_id=EF0C42C4BC0F42BFB8C5E6C9BEC2A969&bgxxFlag=bgxxFlag&alt_itemenName=%E7%BB%8F%E8%90%A5%E8%8C%83%E5%9B%B4&approve_date=2012-03-29 HTTP/1.1" 200 None
+Wed, 13 Sep 2017 18:33:30 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Wed, 13 Sep 2017 18:33:30 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!view_bgxx_wap.dhtml?reg_bus_ent_id=EF0C42C4BC0F42BFB8C5E6C9BEC2A969&bgxxFlag=bgxxFlag&alt_itemenName=%E8%90%A5%E4%B8%9A%E6%9C%9F%E9%99%90&approve_date=2009-09-24 HTTP/1.1" 200 None
+Wed, 13 Sep 2017 18:33:30 Public_code.py[line:29] INFO connect is success!
+Wed, 13 Sep 2017 18:33:30 BJ_change.py[line:125] INFO change total:22
+Wed, 13 Sep 2017 18:33:30 BJ_change.py[line:159] INFO execute change:0
+Wed, 13 Sep 2017 18:33:30 Public_code.py[line:29] INFO connect is success!

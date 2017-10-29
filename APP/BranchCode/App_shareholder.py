@@ -75,7 +75,12 @@ class Share:
                 else:
                     address = ''
                 encrypted = single["encrypted"]
-                cetfType = single["cetfType"]
+                if "cetfType" in single.keys():
+                    cetfType = single["cetfType"]
+                elif "bLicType" in single.keys():
+                    cetfType = single["bLicType"]
+                else:
+                    cetfType = ''
                 info[i] = [name, types, license_code, license_type, reg_amount, true_amount, ta_date, ta_ways, country,
                            address, encrypted, cetfType]
         return info

@@ -14,6 +14,10 @@ from PublicCode.Public_Code import Judge
 import logging
 import hashlib
 import time
+import sys
+reload(sys)
+sys.setdefaultencoding('utf-8')
+Type = sys.getfilesystemencoding()
 
 permit_string = 'insert into gs_report_permit(gs_basic_id,gs_report_id,uuid,province,types,valto,created,updated)' \
                 'values(%s,%s,%s,%s,%s,%s,%s,%s)'
@@ -38,7 +42,7 @@ class Report_Permit:
 				m.update(str(gs_basic_id)+str(gs_report_id)+str(key))
 				uuid = m.hexdigest()
 				updated_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
-				flag = cursor.execute(permit_string,(gs_basic_id, gs_report_id, uuid, config.province, types, valto, updated_time, updated_time))
+				flag = cursor.execute(permit_string, (gs_basic_id, gs_report_id, uuid, config.province, types, valto, updated_time, updated_time))
 				insert_flag += flag
 				connect.commit()
 		except Exception, e:

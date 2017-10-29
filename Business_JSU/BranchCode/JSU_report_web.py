@@ -25,7 +25,7 @@ class Report_Web:
 		self.headers = headers
 	def get_info(self):
 		info = {}
-		result,status_code = Send_Request(self.url,self.headers).send_request()
+		result,status_code = Send_Request(self.url, self.headers).send_request()
 		if status_code == 200:
 			flag = 1
 			data = json.loads(result.content)
@@ -70,9 +70,8 @@ def main(report_id,gs_report_id,cursor,connect,gs_basic_id,gs_py_id):
 	url = config.main_branch_url
 	headers = config.headers
 	types = config.key_params["report_web"]
-	url = url + config.report_params1.format(types,report_id)
-	object = Report_Web(url,headers)
-	info,flag = object.get_info()
-
+	url = url + config.report_params1.format(types, report_id)
+	object = Report_Web(url, headers)
+	info, flag = object.get_info()
 	flag = Judge().update_report_info(flag, info, gs_report_id, gs_basic_id, cursor, connect, pattern)
 	Judge().update_py(gs_py_id, web_py, flag)

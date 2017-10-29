@@ -1,0 +1,201 @@
+Mon, 18 Sep 2017 10:54:47 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Mon, 18 Sep 2017 10:54:48 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!view_credit_wap.dhtml?categ_info=012004&ent_id=4B126ACE9AF84F70BEAD6AFA83B86435&chr_id=F48EAF15E4DB0084E043D40000050084,&info_categ_name=%E8%AE%B8%E5%8F%AF%E8%B5%84%E8%B4%A8%E4%BF%A1%E6%81%AF%20%3E%3E%20%E5%B9%BF%E5%91%8A%E7%BB%8F%E8%90%A5%E8%AE%B8%E5%8F%AF%E8%AF%81%E4%BF%A1%E6%81%AF HTTP/1.1" 200 None
+Mon, 18 Sep 2017 10:54:48 Public_code.py[line:145] INFO unknow error:list index out of range
+Mon, 18 Sep 2017 10:55:01 Image.py[line:397] DEBUG Importing BmpImagePlugin
+Mon, 18 Sep 2017 10:55:01 Image.py[line:397] DEBUG Importing BufrStubImagePlugin
+Mon, 18 Sep 2017 10:55:01 Image.py[line:397] DEBUG Importing CurImagePlugin
+Mon, 18 Sep 2017 10:55:01 Image.py[line:397] DEBUG Importing DcxImagePlugin
+Mon, 18 Sep 2017 10:55:01 Image.py[line:397] DEBUG Importing DdsImagePlugin
+Mon, 18 Sep 2017 10:55:01 Image.py[line:397] DEBUG Importing EpsImagePlugin
+Mon, 18 Sep 2017 10:55:01 Image.py[line:397] DEBUG Importing FitsStubImagePlugin
+Mon, 18 Sep 2017 10:55:01 Image.py[line:397] DEBUG Importing FliImagePlugin
+Mon, 18 Sep 2017 10:55:01 Image.py[line:397] DEBUG Importing FpxImagePlugin
+Mon, 18 Sep 2017 10:55:01 Image.py[line:397] DEBUG Importing FtexImagePlugin
+Mon, 18 Sep 2017 10:55:01 Image.py[line:397] DEBUG Importing GbrImagePlugin
+Mon, 18 Sep 2017 10:55:01 Image.py[line:397] DEBUG Importing GifImagePlugin
+Mon, 18 Sep 2017 10:55:01 Image.py[line:397] DEBUG Importing GribStubImagePlugin
+Mon, 18 Sep 2017 10:55:01 Image.py[line:397] DEBUG Importing Hdf5StubImagePlugin
+Mon, 18 Sep 2017 10:55:01 Image.py[line:397] DEBUG Importing IcnsImagePlugin
+Mon, 18 Sep 2017 10:55:01 Image.py[line:397] DEBUG Importing IcoImagePlugin
+Mon, 18 Sep 2017 10:55:01 Image.py[line:397] DEBUG Importing ImImagePlugin
+Mon, 18 Sep 2017 10:55:01 Image.py[line:397] DEBUG Importing ImtImagePlugin
+Mon, 18 Sep 2017 10:55:01 Image.py[line:397] DEBUG Importing IptcImagePlugin
+Mon, 18 Sep 2017 10:55:01 Image.py[line:397] DEBUG Importing JpegImagePlugin
+Mon, 18 Sep 2017 10:55:01 Image.py[line:397] DEBUG Importing Jpeg2KImagePlugin
+Mon, 18 Sep 2017 10:55:01 Image.py[line:397] DEBUG Importing McIdasImagePlugin
+Mon, 18 Sep 2017 10:55:01 Image.py[line:397] DEBUG Importing MicImagePlugin
+Mon, 18 Sep 2017 10:55:01 Image.py[line:397] DEBUG Importing MpegImagePlugin
+Mon, 18 Sep 2017 10:55:01 Image.py[line:397] DEBUG Importing MpoImagePlugin
+Mon, 18 Sep 2017 10:55:01 Image.py[line:397] DEBUG Importing MspImagePlugin
+Mon, 18 Sep 2017 10:55:01 Image.py[line:397] DEBUG Importing PalmImagePlugin
+Mon, 18 Sep 2017 10:55:01 Image.py[line:397] DEBUG Importing PcdImagePlugin
+Mon, 18 Sep 2017 10:55:01 Image.py[line:397] DEBUG Importing PcxImagePlugin
+Mon, 18 Sep 2017 10:55:01 Image.py[line:397] DEBUG Importing PdfImagePlugin
+Mon, 18 Sep 2017 10:55:01 Image.py[line:397] DEBUG Importing PixarImagePlugin
+Mon, 18 Sep 2017 10:55:01 Image.py[line:397] DEBUG Importing PngImagePlugin
+Mon, 18 Sep 2017 10:55:01 Image.py[line:397] DEBUG Importing PpmImagePlugin
+Mon, 18 Sep 2017 10:55:01 Image.py[line:397] DEBUG Importing PsdImagePlugin
+Mon, 18 Sep 2017 10:55:01 Image.py[line:397] DEBUG Importing SgiImagePlugin
+Mon, 18 Sep 2017 10:55:01 Image.py[line:397] DEBUG Importing SpiderImagePlugin
+Mon, 18 Sep 2017 10:55:01 Image.py[line:397] DEBUG Importing SunImagePlugin
+Mon, 18 Sep 2017 10:55:01 Image.py[line:397] DEBUG Importing TgaImagePlugin
+Mon, 18 Sep 2017 10:55:01 Image.py[line:397] DEBUG Importing TiffImagePlugin
+Mon, 18 Sep 2017 10:55:01 Image.py[line:397] DEBUG Importing WebPImagePlugin
+Mon, 18 Sep 2017 10:55:01 Image.py[line:397] DEBUG Importing WmfImagePlugin
+Mon, 18 Sep 2017 10:55:01 Image.py[line:397] DEBUG Importing XbmImagePlugin
+Mon, 18 Sep 2017 10:55:01 Image.py[line:397] DEBUG Importing XpmImagePlugin
+Mon, 18 Sep 2017 10:55:01 Image.py[line:397] DEBUG Importing XVThumbImagePlugin
+Mon, 18 Sep 2017 10:55:11 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Mon, 18 Sep 2017 10:55:11 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!view_credit_wap.dhtml?categ_info=012004&ent_id=4B126ACE9AF84F70BEAD6AFA83B86435&chr_id=F48EAF15E4DB0084E043D40000050084,&info_categ_name=%E8%AE%B8%E5%8F%AF%E8%B5%84%E8%B4%A8%E4%BF%A1%E6%81%AF%20%3E%3E%20%E5%B9%BF%E5%91%8A%E7%BB%8F%E8%90%A5%E8%AE%B8%E5%8F%AF%E8%AF%81%E4%BF%A1%E6%81%AF HTTP/1.1" 200 None
+Mon, 18 Sep 2017 10:55:39 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Mon, 18 Sep 2017 10:55:39 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!view_credit_wap.dhtml?categ_info=012004&ent_id=4B126ACE9AF84F70BEAD6AFA83B86435&chr_id=F48EAF15E4DB0084E043D40000050084,&info_categ_name=%E8%AE%B8%E5%8F%AF%E8%B5%84%E8%B4%A8%E4%BF%A1%E6%81%AF%20%3E%3E%20%E5%B9%BF%E5%91%8A%E7%BB%8F%E8%90%A5%E8%AE%B8%E5%8F%AF%E8%AF%81%E4%BF%A1%E6%81%AF HTTP/1.1" 200 None
+Mon, 18 Sep 2017 10:55:39 Public_code.py[line:145] INFO unknow error:local variable 'contents' referenced before assignment
+Mon, 18 Sep 2017 10:55:44 Image.py[line:397] DEBUG Importing BmpImagePlugin
+Mon, 18 Sep 2017 10:55:44 Image.py[line:397] DEBUG Importing BufrStubImagePlugin
+Mon, 18 Sep 2017 10:55:44 Image.py[line:397] DEBUG Importing CurImagePlugin
+Mon, 18 Sep 2017 10:55:44 Image.py[line:397] DEBUG Importing DcxImagePlugin
+Mon, 18 Sep 2017 10:55:44 Image.py[line:397] DEBUG Importing DdsImagePlugin
+Mon, 18 Sep 2017 10:55:44 Image.py[line:397] DEBUG Importing EpsImagePlugin
+Mon, 18 Sep 2017 10:55:44 Image.py[line:397] DEBUG Importing FitsStubImagePlugin
+Mon, 18 Sep 2017 10:55:44 Image.py[line:397] DEBUG Importing FliImagePlugin
+Mon, 18 Sep 2017 10:55:44 Image.py[line:397] DEBUG Importing FpxImagePlugin
+Mon, 18 Sep 2017 10:55:44 Image.py[line:397] DEBUG Importing FtexImagePlugin
+Mon, 18 Sep 2017 10:55:44 Image.py[line:397] DEBUG Importing GbrImagePlugin
+Mon, 18 Sep 2017 10:55:44 Image.py[line:397] DEBUG Importing GifImagePlugin
+Mon, 18 Sep 2017 10:55:44 Image.py[line:397] DEBUG Importing GribStubImagePlugin
+Mon, 18 Sep 2017 10:55:44 Image.py[line:397] DEBUG Importing Hdf5StubImagePlugin
+Mon, 18 Sep 2017 10:55:44 Image.py[line:397] DEBUG Importing IcnsImagePlugin
+Mon, 18 Sep 2017 10:55:44 Image.py[line:397] DEBUG Importing IcoImagePlugin
+Mon, 18 Sep 2017 10:55:44 Image.py[line:397] DEBUG Importing ImImagePlugin
+Mon, 18 Sep 2017 10:55:44 Image.py[line:397] DEBUG Importing ImtImagePlugin
+Mon, 18 Sep 2017 10:55:44 Image.py[line:397] DEBUG Importing IptcImagePlugin
+Mon, 18 Sep 2017 10:55:44 Image.py[line:397] DEBUG Importing JpegImagePlugin
+Mon, 18 Sep 2017 10:55:44 Image.py[line:397] DEBUG Importing Jpeg2KImagePlugin
+Mon, 18 Sep 2017 10:55:44 Image.py[line:397] DEBUG Importing McIdasImagePlugin
+Mon, 18 Sep 2017 10:55:44 Image.py[line:397] DEBUG Importing MicImagePlugin
+Mon, 18 Sep 2017 10:55:44 Image.py[line:397] DEBUG Importing MpegImagePlugin
+Mon, 18 Sep 2017 10:55:44 Image.py[line:397] DEBUG Importing MpoImagePlugin
+Mon, 18 Sep 2017 10:55:44 Image.py[line:397] DEBUG Importing MspImagePlugin
+Mon, 18 Sep 2017 10:55:44 Image.py[line:397] DEBUG Importing PalmImagePlugin
+Mon, 18 Sep 2017 10:55:44 Image.py[line:397] DEBUG Importing PcdImagePlugin
+Mon, 18 Sep 2017 10:55:44 Image.py[line:397] DEBUG Importing PcxImagePlugin
+Mon, 18 Sep 2017 10:55:44 Image.py[line:397] DEBUG Importing PdfImagePlugin
+Mon, 18 Sep 2017 10:55:44 Image.py[line:397] DEBUG Importing PixarImagePlugin
+Mon, 18 Sep 2017 10:55:44 Image.py[line:397] DEBUG Importing PngImagePlugin
+Mon, 18 Sep 2017 10:55:44 Image.py[line:397] DEBUG Importing PpmImagePlugin
+Mon, 18 Sep 2017 10:55:44 Image.py[line:397] DEBUG Importing PsdImagePlugin
+Mon, 18 Sep 2017 10:55:44 Image.py[line:397] DEBUG Importing SgiImagePlugin
+Mon, 18 Sep 2017 10:55:44 Image.py[line:397] DEBUG Importing SpiderImagePlugin
+Mon, 18 Sep 2017 10:55:44 Image.py[line:397] DEBUG Importing SunImagePlugin
+Mon, 18 Sep 2017 10:55:44 Image.py[line:397] DEBUG Importing TgaImagePlugin
+Mon, 18 Sep 2017 10:55:44 Image.py[line:397] DEBUG Importing TiffImagePlugin
+Mon, 18 Sep 2017 10:55:44 Image.py[line:397] DEBUG Importing WebPImagePlugin
+Mon, 18 Sep 2017 10:55:44 Image.py[line:397] DEBUG Importing WmfImagePlugin
+Mon, 18 Sep 2017 10:55:44 Image.py[line:397] DEBUG Importing XbmImagePlugin
+Mon, 18 Sep 2017 10:55:44 Image.py[line:397] DEBUG Importing XpmImagePlugin
+Mon, 18 Sep 2017 10:55:44 Image.py[line:397] DEBUG Importing XVThumbImagePlugin
+Mon, 18 Sep 2017 10:55:48 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Mon, 18 Sep 2017 10:55:48 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!view_credit_wap.dhtml?categ_info=012004&ent_id=4B126ACE9AF84F70BEAD6AFA83B86435&chr_id=F48EAF15E4DB0084E043D40000050084,&info_categ_name=%E8%AE%B8%E5%8F%AF%E8%B5%84%E8%B4%A8%E4%BF%A1%E6%81%AF%20%3E%3E%20%E5%B9%BF%E5%91%8A%E7%BB%8F%E8%90%A5%E8%AE%B8%E5%8F%AF%E8%AF%81%E4%BF%A1%E6%81%AF HTTP/1.1" 200 None
+Mon, 18 Sep 2017 10:56:03 Image.py[line:397] DEBUG Importing BmpImagePlugin
+Mon, 18 Sep 2017 10:56:03 Image.py[line:397] DEBUG Importing BufrStubImagePlugin
+Mon, 18 Sep 2017 10:56:03 Image.py[line:397] DEBUG Importing CurImagePlugin
+Mon, 18 Sep 2017 10:56:03 Image.py[line:397] DEBUG Importing DcxImagePlugin
+Mon, 18 Sep 2017 10:56:03 Image.py[line:397] DEBUG Importing DdsImagePlugin
+Mon, 18 Sep 2017 10:56:03 Image.py[line:397] DEBUG Importing EpsImagePlugin
+Mon, 18 Sep 2017 10:56:03 Image.py[line:397] DEBUG Importing FitsStubImagePlugin
+Mon, 18 Sep 2017 10:56:03 Image.py[line:397] DEBUG Importing FliImagePlugin
+Mon, 18 Sep 2017 10:56:03 Image.py[line:397] DEBUG Importing FpxImagePlugin
+Mon, 18 Sep 2017 10:56:03 Image.py[line:397] DEBUG Importing FtexImagePlugin
+Mon, 18 Sep 2017 10:56:03 Image.py[line:397] DEBUG Importing GbrImagePlugin
+Mon, 18 Sep 2017 10:56:03 Image.py[line:397] DEBUG Importing GifImagePlugin
+Mon, 18 Sep 2017 10:56:03 Image.py[line:397] DEBUG Importing GribStubImagePlugin
+Mon, 18 Sep 2017 10:56:03 Image.py[line:397] DEBUG Importing Hdf5StubImagePlugin
+Mon, 18 Sep 2017 10:56:03 Image.py[line:397] DEBUG Importing IcnsImagePlugin
+Mon, 18 Sep 2017 10:56:03 Image.py[line:397] DEBUG Importing IcoImagePlugin
+Mon, 18 Sep 2017 10:56:03 Image.py[line:397] DEBUG Importing ImImagePlugin
+Mon, 18 Sep 2017 10:56:03 Image.py[line:397] DEBUG Importing ImtImagePlugin
+Mon, 18 Sep 2017 10:56:03 Image.py[line:397] DEBUG Importing IptcImagePlugin
+Mon, 18 Sep 2017 10:56:03 Image.py[line:397] DEBUG Importing JpegImagePlugin
+Mon, 18 Sep 2017 10:56:03 Image.py[line:397] DEBUG Importing Jpeg2KImagePlugin
+Mon, 18 Sep 2017 10:56:03 Image.py[line:397] DEBUG Importing McIdasImagePlugin
+Mon, 18 Sep 2017 10:56:03 Image.py[line:397] DEBUG Importing MicImagePlugin
+Mon, 18 Sep 2017 10:56:03 Image.py[line:397] DEBUG Importing MpegImagePlugin
+Mon, 18 Sep 2017 10:56:03 Image.py[line:397] DEBUG Importing MpoImagePlugin
+Mon, 18 Sep 2017 10:56:03 Image.py[line:397] DEBUG Importing MspImagePlugin
+Mon, 18 Sep 2017 10:56:03 Image.py[line:397] DEBUG Importing PalmImagePlugin
+Mon, 18 Sep 2017 10:56:03 Image.py[line:397] DEBUG Importing PcdImagePlugin
+Mon, 18 Sep 2017 10:56:03 Image.py[line:397] DEBUG Importing PcxImagePlugin
+Mon, 18 Sep 2017 10:56:03 Image.py[line:397] DEBUG Importing PdfImagePlugin
+Mon, 18 Sep 2017 10:56:03 Image.py[line:397] DEBUG Importing PixarImagePlugin
+Mon, 18 Sep 2017 10:56:03 Image.py[line:397] DEBUG Importing PngImagePlugin
+Mon, 18 Sep 2017 10:56:03 Image.py[line:397] DEBUG Importing PpmImagePlugin
+Mon, 18 Sep 2017 10:56:03 Image.py[line:397] DEBUG Importing PsdImagePlugin
+Mon, 18 Sep 2017 10:56:03 Image.py[line:397] DEBUG Importing SgiImagePlugin
+Mon, 18 Sep 2017 10:56:03 Image.py[line:397] DEBUG Importing SpiderImagePlugin
+Mon, 18 Sep 2017 10:56:03 Image.py[line:397] DEBUG Importing SunImagePlugin
+Mon, 18 Sep 2017 10:56:03 Image.py[line:397] DEBUG Importing TgaImagePlugin
+Mon, 18 Sep 2017 10:56:03 Image.py[line:397] DEBUG Importing TiffImagePlugin
+Mon, 18 Sep 2017 10:56:03 Image.py[line:397] DEBUG Importing WebPImagePlugin
+Mon, 18 Sep 2017 10:56:03 Image.py[line:397] DEBUG Importing WmfImagePlugin
+Mon, 18 Sep 2017 10:56:03 Image.py[line:397] DEBUG Importing XbmImagePlugin
+Mon, 18 Sep 2017 10:56:03 Image.py[line:397] DEBUG Importing XpmImagePlugin
+Mon, 18 Sep 2017 10:56:03 Image.py[line:397] DEBUG Importing XVThumbImagePlugin
+Mon, 18 Sep 2017 10:56:10 Image.py[line:397] DEBUG Importing BmpImagePlugin
+Mon, 18 Sep 2017 10:56:10 Image.py[line:397] DEBUG Importing BufrStubImagePlugin
+Mon, 18 Sep 2017 10:56:10 Image.py[line:397] DEBUG Importing CurImagePlugin
+Mon, 18 Sep 2017 10:56:10 Image.py[line:397] DEBUG Importing DcxImagePlugin
+Mon, 18 Sep 2017 10:56:10 Image.py[line:397] DEBUG Importing DdsImagePlugin
+Mon, 18 Sep 2017 10:56:10 Image.py[line:397] DEBUG Importing EpsImagePlugin
+Mon, 18 Sep 2017 10:56:10 Image.py[line:397] DEBUG Importing FitsStubImagePlugin
+Mon, 18 Sep 2017 10:56:10 Image.py[line:397] DEBUG Importing FliImagePlugin
+Mon, 18 Sep 2017 10:56:10 Image.py[line:397] DEBUG Importing FpxImagePlugin
+Mon, 18 Sep 2017 10:56:10 Image.py[line:397] DEBUG Importing FtexImagePlugin
+Mon, 18 Sep 2017 10:56:10 Image.py[line:397] DEBUG Importing GbrImagePlugin
+Mon, 18 Sep 2017 10:56:10 Image.py[line:397] DEBUG Importing GifImagePlugin
+Mon, 18 Sep 2017 10:56:10 Image.py[line:397] DEBUG Importing GribStubImagePlugin
+Mon, 18 Sep 2017 10:56:10 Image.py[line:397] DEBUG Importing Hdf5StubImagePlugin
+Mon, 18 Sep 2017 10:56:10 Image.py[line:397] DEBUG Importing IcnsImagePlugin
+Mon, 18 Sep 2017 10:56:10 Image.py[line:397] DEBUG Importing IcoImagePlugin
+Mon, 18 Sep 2017 10:56:10 Image.py[line:397] DEBUG Importing ImImagePlugin
+Mon, 18 Sep 2017 10:56:10 Image.py[line:397] DEBUG Importing ImtImagePlugin
+Mon, 18 Sep 2017 10:56:10 Image.py[line:397] DEBUG Importing IptcImagePlugin
+Mon, 18 Sep 2017 10:56:10 Image.py[line:397] DEBUG Importing JpegImagePlugin
+Mon, 18 Sep 2017 10:56:10 Image.py[line:397] DEBUG Importing Jpeg2KImagePlugin
+Mon, 18 Sep 2017 10:56:10 Image.py[line:397] DEBUG Importing McIdasImagePlugin
+Mon, 18 Sep 2017 10:56:10 Image.py[line:397] DEBUG Importing MicImagePlugin
+Mon, 18 Sep 2017 10:56:10 Image.py[line:397] DEBUG Importing MpegImagePlugin
+Mon, 18 Sep 2017 10:56:10 Image.py[line:397] DEBUG Importing MpoImagePlugin
+Mon, 18 Sep 2017 10:56:10 Image.py[line:397] DEBUG Importing MspImagePlugin
+Mon, 18 Sep 2017 10:56:10 Image.py[line:397] DEBUG Importing PalmImagePlugin
+Mon, 18 Sep 2017 10:56:10 Image.py[line:397] DEBUG Importing PcdImagePlugin
+Mon, 18 Sep 2017 10:56:10 Image.py[line:397] DEBUG Importing PcxImagePlugin
+Mon, 18 Sep 2017 10:56:10 Image.py[line:397] DEBUG Importing PdfImagePlugin
+Mon, 18 Sep 2017 10:56:10 Image.py[line:397] DEBUG Importing PixarImagePlugin
+Mon, 18 Sep 2017 10:56:10 Image.py[line:397] DEBUG Importing PngImagePlugin
+Mon, 18 Sep 2017 10:56:10 Image.py[line:397] DEBUG Importing PpmImagePlugin
+Mon, 18 Sep 2017 10:56:10 Image.py[line:397] DEBUG Importing PsdImagePlugin
+Mon, 18 Sep 2017 10:56:10 Image.py[line:397] DEBUG Importing SgiImagePlugin
+Mon, 18 Sep 2017 10:56:10 Image.py[line:397] DEBUG Importing SpiderImagePlugin
+Mon, 18 Sep 2017 10:56:10 Image.py[line:397] DEBUG Importing SunImagePlugin
+Mon, 18 Sep 2017 10:56:10 Image.py[line:397] DEBUG Importing TgaImagePlugin
+Mon, 18 Sep 2017 10:56:10 Image.py[line:397] DEBUG Importing TiffImagePlugin
+Mon, 18 Sep 2017 10:56:10 Image.py[line:397] DEBUG Importing WebPImagePlugin
+Mon, 18 Sep 2017 10:56:10 Image.py[line:397] DEBUG Importing WmfImagePlugin
+Mon, 18 Sep 2017 10:56:10 Image.py[line:397] DEBUG Importing XbmImagePlugin
+Mon, 18 Sep 2017 10:56:10 Image.py[line:397] DEBUG Importing XpmImagePlugin
+Mon, 18 Sep 2017 10:56:10 Image.py[line:397] DEBUG Importing XVThumbImagePlugin
+Mon, 18 Sep 2017 10:56:18 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Mon, 18 Sep 2017 10:56:18 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!view_credit_wap.dhtml?categ_info=012004&ent_id=4B126ACE9AF84F70BEAD6AFA83B86435&chr_id=F48EAF15E4DB0084E043D40000050084,&info_categ_name=%E8%AE%B8%E5%8F%AF%E8%B5%84%E8%B4%A8%E4%BF%A1%E6%81%AF%20%3E%3E%20%E5%B9%BF%E5%91%8A%E7%BB%8F%E8%90%A5%E8%AE%B8%E5%8F%AF%E8%AF%81%E4%BF%A1%E6%81%AF HTTP/1.1" 200 None
+Mon, 18 Sep 2017 10:57:01 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Mon, 18 Sep 2017 10:57:01 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!view_credit_wap.dhtml?categ_info=012004&ent_id=4B126ACE9AF84F70BEAD6AFA83B86435&chr_id=F48EAF15E4DB0084E043D40000050084,&info_categ_name=%E8%AE%B8%E5%8F%AF%E8%B5%84%E8%B4%A8%E4%BF%A1%E6%81%AF%20%3E%3E%20%E5%B9%BF%E5%91%8A%E7%BB%8F%E8%90%A5%E8%AE%B8%E5%8F%AF%E8%AF%81%E4%BF%A1%E6%81%AF HTTP/1.1" 200 None
+Mon, 18 Sep 2017 10:57:01 Public_code.py[line:145] INFO unknow error:local variable 'contents' referenced before assignment
+Mon, 18 Sep 2017 11:00:15 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Mon, 18 Sep 2017 11:00:15 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!view_credit_wap.dhtml?categ_info=012004&ent_id=4B126ACE9AF84F70BEAD6AFA83B86435&chr_id=F48EAF15E4DB0084E043D40000050084,&info_categ_name=%E8%AE%B8%E5%8F%AF%E8%B5%84%E8%B4%A8%E4%BF%A1%E6%81%AF%20%3E%3E%20%E5%B9%BF%E5%91%8A%E7%BB%8F%E8%90%A5%E8%AE%B8%E5%8F%AF%E8%AF%81%E4%BF%A1%E6%81%AF HTTP/1.1" 200 None
+Mon, 18 Sep 2017 11:00:15 BJ_permit.py[line:108] INFO permit total:1
+Mon, 18 Sep 2017 11:00:15 Public_code.py[line:30] INFO connect is success!
+Mon, 18 Sep 2017 11:00:15 BJ_permit.py[line:134] INFO execute permit:1
+Mon, 18 Sep 2017 11:00:35 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Mon, 18 Sep 2017 11:00:35 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!view_credit_wap.dhtml?categ_info=012004&ent_id=4B126ACE9AF84F70BEAD6AFA83B86435&chr_id=F48EAF15E4DB0084E043D40000050084,&info_categ_name=%E8%AE%B8%E5%8F%AF%E8%B5%84%E8%B4%A8%E4%BF%A1%E6%81%AF%20%3E%3E%20%E5%B9%BF%E5%91%8A%E7%BB%8F%E8%90%A5%E8%AE%B8%E5%8F%AF%E8%AF%81%E4%BF%A1%E6%81%AF HTTP/1.1" 200 None
+Mon, 18 Sep 2017 11:00:36 BJ_permit.py[line:108] INFO permit total:1
+Mon, 18 Sep 2017 11:00:36 Public_code.py[line:30] INFO connect is success!
+Mon, 18 Sep 2017 11:00:36 BJ_permit.py[line:134] INFO execute permit:0

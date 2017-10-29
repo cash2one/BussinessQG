@@ -60,7 +60,7 @@ class Clear:
 			for key in information.keys():
 				person_name = str(information[key][0])
 				position = str(information[key][1])
-				rows = cursor.execute(select_string, (person_name, position, gs_basic_id))
+				rows = cursor.execute(select_string, (gs_basic_id,person_name, position))
 				if int(rows) == 1:
 					gs_clear_id = cursor.fetchall()[0][0]
 					updated_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))

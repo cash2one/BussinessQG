@@ -14,6 +14,10 @@ import random
 import json
 import logging
 import time
+import sys
+reload(sys)
+sys.setdefaultencoding('utf-8')
+Type = sys.getfilesystemencoding()
 
 
 

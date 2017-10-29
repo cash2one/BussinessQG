@@ -1,0 +1,248 @@
+Tue, 05 Sep 2017 10:31:01 Public_code.py[line:28] INFO connect is success!
+Tue, 05 Sep 2017 10:31:01 Public_code.py[line:62] INFO there remains 0 times to send requests 
+Tue, 05 Sep 2017 10:31:11 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): 127.0.0.1
+Tue, 05 Sep 2017 10:31:12 connectionpool.py[line:400] DEBUG http://127.0.0.1:8888 "GET http://www.gsxt.gov.cn/%7Bu8_qntxY5ZljFphdhHA4CcrZNSXUy6u9ZlFmIQBl7HDcS7x48N97rGWLE6-Ua8TsL8_SbdhqXTdiAOHbjEUG_aznPxID5WikUwxrFRs8Iwf5HEAYTbQ9ZWnor73ktPBMPIfZDbPk8ocY3AU3YJr1HAOijsdo1At7V32zA3pRx74-1504577934456%7D HTTP/1.1" 200 None
+Tue, 05 Sep 2017 10:31:12 Public_code.py[line:65] INFO the status_code is 200 
+Tue, 05 Sep 2017 10:33:35 Public_code.py[line:28] INFO connect is success!
+Tue, 05 Sep 2017 10:33:35 Public_code.py[line:62] INFO there remains 0 times to send requests 
+Tue, 05 Sep 2017 10:33:45 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): 127.0.0.1
+Tue, 05 Sep 2017 10:33:45 connectionpool.py[line:400] DEBUG http://127.0.0.1:8888 "GET http://www.gsxt.gov.cn/%7Bh3PaFzrRehMR5SrwpBqrkAIrG4S4WWBAG2LE0hZDbzqRpa7_39xHUMFKuWLiWz-pSMDhKAptyNybj4wEFjwb0NwkCJduUfUXBke8_TDaXp6zCPJdxu3reoj_B6uk6VWqBJqCjOVXy2GOFi4D0KA4UA-1504578404397%7D HTTP/1.1" 200 None
+Tue, 05 Sep 2017 10:33:45 Public_code.py[line:65] INFO the status_code is 200 
+Tue, 05 Sep 2017 10:33:45 Public_code.py[line:155] INFO person: 7
+Tue, 05 Sep 2017 10:33:45 Public_code.py[line:28] INFO connect is success!
+Tue, 05 Sep 2017 10:33:45 Public_code.py[line:191] INFO execute person: 7
+Tue, 05 Sep 2017 10:34:44 Public_code.py[line:28] INFO connect is success!
+Tue, 05 Sep 2017 10:34:51 Image.py[line:397] DEBUG Importing BmpImagePlugin
+Tue, 05 Sep 2017 10:34:51 Image.py[line:397] DEBUG Importing BufrStubImagePlugin
+Tue, 05 Sep 2017 10:34:51 Image.py[line:397] DEBUG Importing CurImagePlugin
+Tue, 05 Sep 2017 10:34:51 Image.py[line:397] DEBUG Importing DcxImagePlugin
+Tue, 05 Sep 2017 10:34:51 Image.py[line:397] DEBUG Importing DdsImagePlugin
+Tue, 05 Sep 2017 10:34:51 Image.py[line:397] DEBUG Importing EpsImagePlugin
+Tue, 05 Sep 2017 10:34:51 Image.py[line:397] DEBUG Importing FitsStubImagePlugin
+Tue, 05 Sep 2017 10:34:51 Image.py[line:397] DEBUG Importing FliImagePlugin
+Tue, 05 Sep 2017 10:34:51 Image.py[line:397] DEBUG Importing FpxImagePlugin
+Tue, 05 Sep 2017 10:34:51 Image.py[line:397] DEBUG Importing FtexImagePlugin
+Tue, 05 Sep 2017 10:34:51 Image.py[line:397] DEBUG Importing GbrImagePlugin
+Tue, 05 Sep 2017 10:34:51 Image.py[line:397] DEBUG Importing GifImagePlugin
+Tue, 05 Sep 2017 10:34:51 Image.py[line:397] DEBUG Importing GribStubImagePlugin
+Tue, 05 Sep 2017 10:34:52 Image.py[line:397] DEBUG Importing Hdf5StubImagePlugin
+Tue, 05 Sep 2017 10:34:52 Image.py[line:397] DEBUG Importing IcnsImagePlugin
+Tue, 05 Sep 2017 10:34:52 Image.py[line:397] DEBUG Importing IcoImagePlugin
+Tue, 05 Sep 2017 10:34:52 Image.py[line:397] DEBUG Importing ImImagePlugin
+Tue, 05 Sep 2017 10:34:52 Image.py[line:397] DEBUG Importing ImtImagePlugin
+Tue, 05 Sep 2017 10:34:52 Image.py[line:397] DEBUG Importing IptcImagePlugin
+Tue, 05 Sep 2017 10:34:52 Image.py[line:397] DEBUG Importing JpegImagePlugin
+Tue, 05 Sep 2017 10:34:52 Image.py[line:397] DEBUG Importing Jpeg2KImagePlugin
+Tue, 05 Sep 2017 10:34:52 Image.py[line:397] DEBUG Importing McIdasImagePlugin
+Tue, 05 Sep 2017 10:34:52 Image.py[line:397] DEBUG Importing MicImagePlugin
+Tue, 05 Sep 2017 10:34:52 Image.py[line:397] DEBUG Importing MpegImagePlugin
+Tue, 05 Sep 2017 10:34:52 Image.py[line:397] DEBUG Importing MpoImagePlugin
+Tue, 05 Sep 2017 10:34:52 Image.py[line:397] DEBUG Importing MspImagePlugin
+Tue, 05 Sep 2017 10:34:52 Image.py[line:397] DEBUG Importing PalmImagePlugin
+Tue, 05 Sep 2017 10:34:52 Image.py[line:397] DEBUG Importing PcdImagePlugin
+Tue, 05 Sep 2017 10:34:52 Image.py[line:397] DEBUG Importing PcxImagePlugin
+Tue, 05 Sep 2017 10:34:52 Image.py[line:397] DEBUG Importing PdfImagePlugin
+Tue, 05 Sep 2017 10:34:52 Image.py[line:397] DEBUG Importing PixarImagePlugin
+Tue, 05 Sep 2017 10:34:52 Image.py[line:397] DEBUG Importing PngImagePlugin
+Tue, 05 Sep 2017 10:34:52 Image.py[line:397] DEBUG Importing PpmImagePlugin
+Tue, 05 Sep 2017 10:34:52 Image.py[line:397] DEBUG Importing PsdImagePlugin
+Tue, 05 Sep 2017 10:34:52 Image.py[line:397] DEBUG Importing SgiImagePlugin
+Tue, 05 Sep 2017 10:34:52 Image.py[line:397] DEBUG Importing SpiderImagePlugin
+Tue, 05 Sep 2017 10:34:52 Image.py[line:397] DEBUG Importing SunImagePlugin
+Tue, 05 Sep 2017 10:34:52 Image.py[line:397] DEBUG Importing TgaImagePlugin
+Tue, 05 Sep 2017 10:34:52 Image.py[line:397] DEBUG Importing TiffImagePlugin
+Tue, 05 Sep 2017 10:34:52 Image.py[line:397] DEBUG Importing WebPImagePlugin
+Tue, 05 Sep 2017 10:34:52 Image.py[line:397] DEBUG Importing WmfImagePlugin
+Tue, 05 Sep 2017 10:34:52 Image.py[line:397] DEBUG Importing XbmImagePlugin
+Tue, 05 Sep 2017 10:34:52 Image.py[line:397] DEBUG Importing XpmImagePlugin
+Tue, 05 Sep 2017 10:34:52 Image.py[line:397] DEBUG Importing XVThumbImagePlugin
+Tue, 05 Sep 2017 10:35:39 Public_code.py[line:62] INFO there remains 0 times to send requests 
+Tue, 05 Sep 2017 10:35:49 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): 127.0.0.1
+Tue, 05 Sep 2017 10:35:49 connectionpool.py[line:400] DEBUG http://127.0.0.1:8888 "GET http://www.gsxt.gov.cn/%7Bh3PaFzrRehMR5SrwpBqrkAIrG4S4WWBAG2LE0hZDbzqRpa7_39xHUMFKuWLiWz-pSMDhKAptyNybj4wEFjwb0NwkCJduUfUXBke8_TDaXp6zCPJdxu3reoj_B6uk6VWqBJqCjOVXy2GOFi4D0KA4UA-1504578404397%7D HTTP/1.1" 200 None
+Tue, 05 Sep 2017 10:35:49 Public_code.py[line:65] INFO the status_code is 200 
+Tue, 05 Sep 2017 10:35:49 Public_code.py[line:155] INFO person: 7
+Tue, 05 Sep 2017 10:35:49 Public_code.py[line:28] INFO connect is success!
+Tue, 05 Sep 2017 10:35:49 Public_code.py[line:191] INFO execute person: 7
+Tue, 05 Sep 2017 10:36:25 Public_code.py[line:28] INFO connect is success!
+Tue, 05 Sep 2017 10:36:25 Public_code.py[line:62] INFO there remains 0 times to send requests 
+Tue, 05 Sep 2017 10:36:34 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): 127.0.0.1
+Tue, 05 Sep 2017 10:36:34 connectionpool.py[line:400] DEBUG http://127.0.0.1:8888 "GET http://www.gsxt.gov.cn/%7Bh3PaFzrRehMR5SrwpBqrkAIrG4S4WWBAG2LE0hZDbzqRpa7_39xHUMFKuWLiWz-pSMDhKAptyNybj4wEFjwb0NwkCJduUfUXBke8_TDaXp6zCPJdxu3reoj_B6uk6VWqBJqCjOVXy2GOFi4D0KA4UA-1504578404397%7D HTTP/1.1" 200 None
+Tue, 05 Sep 2017 10:36:34 Public_code.py[line:65] INFO the status_code is 200 
+Tue, 05 Sep 2017 10:36:34 Public_code.py[line:155] INFO person: 7
+Tue, 05 Sep 2017 10:36:34 Public_code.py[line:28] INFO connect is success!
+Tue, 05 Sep 2017 10:36:35 Public_code.py[line:191] INFO execute person: 7
+Tue, 05 Sep 2017 10:46:15 Public_code.py[line:28] INFO connect is success!
+Tue, 05 Sep 2017 10:46:15 Public_code.py[line:62] INFO there remains 0 times to send requests 
+Tue, 05 Sep 2017 10:46:24 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): 127.0.0.1
+Tue, 05 Sep 2017 10:46:24 connectionpool.py[line:400] DEBUG http://127.0.0.1:8888 "GET http://www.gsxt.gov.cn/%7Bh3PaFzrRehMR5SrwpBqrkAIrG4S4WWBAG2LE0hZDbzqRpa7_39xHUMFKuWLiWz-pSMDhKAptyNybj4wEFjwb0NwkCJduUfUXBke8_TDaXp6zCPJdxu3reoj_B6uk6VWqBJqCjOVXy2GOFi4D0KA4UA-1504578404397%7D HTTP/1.1" 200 None
+Tue, 05 Sep 2017 10:46:24 Public_code.py[line:65] INFO the status_code is 200 
+Tue, 05 Sep 2017 10:46:24 Public_code.py[line:155] INFO person: 7
+Tue, 05 Sep 2017 10:46:24 Public_code.py[line:28] INFO connect is success!
+Tue, 05 Sep 2017 10:46:28 Public_code.py[line:28] INFO connect is success!
+Tue, 05 Sep 2017 10:46:28 Public_code.py[line:62] INFO there remains 0 times to send requests 
+Tue, 05 Sep 2017 10:46:37 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): 127.0.0.1
+Tue, 05 Sep 2017 10:46:37 connectionpool.py[line:400] DEBUG http://127.0.0.1:8888 "GET http://www.gsxt.gov.cn/%7Bh3PaFzrRehMR5SrwpBqrkAIrG4S4WWBAG2LE0hZDbzqRpa7_39xHUMFKuWLiWz-pSMDhKAptyNybj4wEFjwb0NwkCJduUfUXBke8_TDaXp6zCPJdxu3reoj_B6uk6VWqBJqCjOVXy2GOFi4D0KA4UA-1504578404397%7D HTTP/1.1" 200 None
+Tue, 05 Sep 2017 10:46:37 Public_code.py[line:65] INFO the status_code is 200 
+Tue, 05 Sep 2017 10:46:37 Public_code.py[line:155] INFO person: 7
+Tue, 05 Sep 2017 10:46:37 Public_code.py[line:28] INFO connect is success!
+Tue, 05 Sep 2017 10:46:37 Public_code.py[line:191] INFO execute person: 7
+Tue, 05 Sep 2017 10:46:37 Public_code.py[line:28] INFO connect is success!
+Tue, 05 Sep 2017 10:49:18 Public_code.py[line:28] INFO connect is success!
+Tue, 05 Sep 2017 10:49:18 Public_code.py[line:62] INFO there remains 0 times to send requests 
+Tue, 05 Sep 2017 10:49:27 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): 127.0.0.1
+Tue, 05 Sep 2017 10:49:27 connectionpool.py[line:400] DEBUG http://127.0.0.1:8888 "GET http://www.gsxt.gov.cn/%7Bh3PaFzrRehMR5SrwpBqrkAIrG4S4WWBAG2LE0hZDbzqRpa7_39xHUMFKuWLiWz-pSMDhKAptyNybj4wEFjwb0NwkCJduUfUXBke8_TDaXp6zCPJdxu3reoj_B6uk6VWqBJqCjOVXy2GOFi4D0KA4UA-1504578404397%7D HTTP/1.1" 200 None
+Tue, 05 Sep 2017 10:49:27 Public_code.py[line:65] INFO the status_code is 200 
+Tue, 05 Sep 2017 10:49:27 Public_code.py[line:155] INFO person: 7
+Tue, 05 Sep 2017 10:49:27 Public_code.py[line:28] INFO connect is success!
+Tue, 05 Sep 2017 10:49:28 Public_code.py[line:191] INFO execute person: 7
+Tue, 05 Sep 2017 10:49:28 Public_code.py[line:28] INFO connect is success!
+Tue, 05 Sep 2017 10:50:27 Public_code.py[line:28] INFO connect is success!
+Tue, 05 Sep 2017 10:50:27 Public_code.py[line:62] INFO there remains 0 times to send requests 
+Tue, 05 Sep 2017 10:50:36 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): 127.0.0.1
+Tue, 05 Sep 2017 10:50:36 connectionpool.py[line:400] DEBUG http://127.0.0.1:8888 "GET http://www.gsxt.gov.cn/%7Bh3PaFzrRehMR5SrwpBqrkAIrG4S4WWBAG2LE0hZDbzqRpa7_39xHUMFKuWLiWz-pSMDhKAptyNybj4wEFjwb0NwkCJduUfUXBke8_TDaXp6zCPJdxu3reoj_B6uk6VWqBJqCjOVXy2GOFi4D0KA4UA-1504578404397%7D HTTP/1.1" 200 None
+Tue, 05 Sep 2017 10:50:36 Public_code.py[line:65] INFO the status_code is 200 
+Tue, 05 Sep 2017 10:50:37 Public_code.py[line:155] INFO person: 7
+Tue, 05 Sep 2017 10:50:37 Public_code.py[line:28] INFO connect is success!
+Tue, 05 Sep 2017 10:50:37 Public_code.py[line:191] INFO execute person: 7
+Tue, 05 Sep 2017 10:50:37 Public_code.py[line:28] INFO connect is success!
+Tue, 05 Sep 2017 18:55:56 Public_code.py[line:28] INFO connect is success!
+Tue, 05 Sep 2017 18:55:56 Public_code.py[line:62] INFO there remains 0 times to send requests 
+Tue, 05 Sep 2017 18:55:57 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cn
+Tue, 05 Sep 2017 18:55:57 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "GET /%7BvGiu0EPxn5iq9g2e0UFvq4uPjfSgGUlXFpDRESz5lXQodzkBarXKDQesPP_TjGDv3Ddww4PsVga46ohA2o0BW4K-E1jbabtSQtKHb0JbXX1g-VszZxV850y08Q7djJxHFYNVYEuuNrCS7hmWAbhERA-1504608710311%7D HTTP/1.1" 200 None
+Tue, 05 Sep 2017 18:55:57 Public_code.py[line:65] INFO the status_code is 200 
+Tue, 05 Sep 2017 18:55:57 Public_code.py[line:62] INFO there remains 0 times to send requests 
+Tue, 05 Sep 2017 18:55:57 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cn
+Tue, 05 Sep 2017 18:55:57 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "GET /%7BvGiu0EPxn5iq9g2e0UFvq4uPjfSgGUlXFpDRESz5lXQodzkBarXKDQesPP_TjGDv3Ddww4PsVga46ohA2o0BW4K-E1jbabtSQtKHb0JbXX1g-VszZxV850y08Q7djJxHFYNVYEuuNrCS7hmWAbhERA-1504608710311%7D HTTP/1.1" 200 None
+Tue, 05 Sep 2017 18:55:57 Public_code.py[line:65] INFO the status_code is 200 
+Tue, 05 Sep 2017 18:55:57 Public_code.py[line:109] INFO share: 2
+Tue, 05 Sep 2017 18:55:57 QGGS_shareholder.py[line:80] INFO 无 shareholder 详情信息
+Tue, 05 Sep 2017 18:55:57 QGGS_shareholder.py[line:80] INFO 无 shareholder 详情信息
+Tue, 05 Sep 2017 18:55:57 QGGS_shareholder.py[line:223] ERROR shareholder error:cursor closed
+Tue, 05 Sep 2017 18:57:15 Image.py[line:397] DEBUG Importing BmpImagePlugin
+Tue, 05 Sep 2017 18:57:15 Image.py[line:397] DEBUG Importing BufrStubImagePlugin
+Tue, 05 Sep 2017 18:57:15 Image.py[line:397] DEBUG Importing CurImagePlugin
+Tue, 05 Sep 2017 18:57:15 Image.py[line:397] DEBUG Importing DcxImagePlugin
+Tue, 05 Sep 2017 18:57:15 Image.py[line:397] DEBUG Importing DdsImagePlugin
+Tue, 05 Sep 2017 18:57:15 Image.py[line:397] DEBUG Importing EpsImagePlugin
+Tue, 05 Sep 2017 18:57:15 Image.py[line:397] DEBUG Importing FitsStubImagePlugin
+Tue, 05 Sep 2017 18:57:15 Image.py[line:397] DEBUG Importing FliImagePlugin
+Tue, 05 Sep 2017 18:57:15 Image.py[line:397] DEBUG Importing FpxImagePlugin
+Tue, 05 Sep 2017 18:57:15 Image.py[line:397] DEBUG Importing FtexImagePlugin
+Tue, 05 Sep 2017 18:57:15 Image.py[line:397] DEBUG Importing GbrImagePlugin
+Tue, 05 Sep 2017 18:57:15 Image.py[line:397] DEBUG Importing GifImagePlugin
+Tue, 05 Sep 2017 18:57:15 Image.py[line:397] DEBUG Importing GribStubImagePlugin
+Tue, 05 Sep 2017 18:57:15 Image.py[line:397] DEBUG Importing Hdf5StubImagePlugin
+Tue, 05 Sep 2017 18:57:15 Image.py[line:397] DEBUG Importing IcnsImagePlugin
+Tue, 05 Sep 2017 18:57:15 Image.py[line:397] DEBUG Importing IcoImagePlugin
+Tue, 05 Sep 2017 18:57:15 Image.py[line:397] DEBUG Importing ImImagePlugin
+Tue, 05 Sep 2017 18:57:16 Image.py[line:397] DEBUG Importing ImtImagePlugin
+Tue, 05 Sep 2017 18:57:16 Image.py[line:397] DEBUG Importing IptcImagePlugin
+Tue, 05 Sep 2017 18:57:16 Image.py[line:397] DEBUG Importing JpegImagePlugin
+Tue, 05 Sep 2017 18:57:16 Image.py[line:397] DEBUG Importing Jpeg2KImagePlugin
+Tue, 05 Sep 2017 18:57:16 Image.py[line:397] DEBUG Importing McIdasImagePlugin
+Tue, 05 Sep 2017 18:57:16 Image.py[line:397] DEBUG Importing MicImagePlugin
+Tue, 05 Sep 2017 18:57:16 Image.py[line:397] DEBUG Importing MpegImagePlugin
+Tue, 05 Sep 2017 18:57:16 Image.py[line:397] DEBUG Importing MpoImagePlugin
+Tue, 05 Sep 2017 18:57:16 Image.py[line:397] DEBUG Importing MspImagePlugin
+Tue, 05 Sep 2017 18:57:16 Image.py[line:397] DEBUG Importing PalmImagePlugin
+Tue, 05 Sep 2017 18:57:16 Image.py[line:397] DEBUG Importing PcdImagePlugin
+Tue, 05 Sep 2017 18:57:16 Image.py[line:397] DEBUG Importing PcxImagePlugin
+Tue, 05 Sep 2017 18:57:16 Image.py[line:397] DEBUG Importing PdfImagePlugin
+Tue, 05 Sep 2017 18:57:16 Image.py[line:397] DEBUG Importing PixarImagePlugin
+Tue, 05 Sep 2017 18:57:16 Image.py[line:397] DEBUG Importing PngImagePlugin
+Tue, 05 Sep 2017 18:57:16 Image.py[line:397] DEBUG Importing PpmImagePlugin
+Tue, 05 Sep 2017 18:57:16 Image.py[line:397] DEBUG Importing PsdImagePlugin
+Tue, 05 Sep 2017 18:57:16 Image.py[line:397] DEBUG Importing SgiImagePlugin
+Tue, 05 Sep 2017 18:57:16 Image.py[line:397] DEBUG Importing SpiderImagePlugin
+Tue, 05 Sep 2017 18:57:16 Image.py[line:397] DEBUG Importing SunImagePlugin
+Tue, 05 Sep 2017 18:57:16 Image.py[line:397] DEBUG Importing TgaImagePlugin
+Tue, 05 Sep 2017 18:57:16 Image.py[line:397] DEBUG Importing TiffImagePlugin
+Tue, 05 Sep 2017 18:57:16 Image.py[line:397] DEBUG Importing WebPImagePlugin
+Tue, 05 Sep 2017 18:57:16 Image.py[line:397] DEBUG Importing WmfImagePlugin
+Tue, 05 Sep 2017 18:57:16 Image.py[line:397] DEBUG Importing XbmImagePlugin
+Tue, 05 Sep 2017 18:57:16 Image.py[line:397] DEBUG Importing XpmImagePlugin
+Tue, 05 Sep 2017 18:57:16 Image.py[line:397] DEBUG Importing XVThumbImagePlugin
+Tue, 05 Sep 2017 18:57:26 Public_code.py[line:28] INFO connect is success!
+Tue, 05 Sep 2017 18:57:39 Public_code.py[line:62] INFO there remains 0 times to send requests 
+Tue, 05 Sep 2017 18:57:39 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cn
+Tue, 05 Sep 2017 18:57:39 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "GET /%7BvGiu0EPxn5iq9g2e0UFvq4uPjfSgGUlXFpDRESz5lXQodzkBarXKDQesPP_TjGDv3Ddww4PsVga46ohA2o0BW4K-E1jbabtSQtKHb0JbXX1g-VszZxV850y08Q7djJxHFYNVYEuuNrCS7hmWAbhERA-1504608710311%7D HTTP/1.1" 200 None
+Tue, 05 Sep 2017 18:57:39 Public_code.py[line:65] INFO the status_code is 200 
+Tue, 05 Sep 2017 18:57:39 Public_code.py[line:62] INFO there remains 0 times to send requests 
+Tue, 05 Sep 2017 18:57:39 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cn
+Tue, 05 Sep 2017 18:57:39 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "GET /%7BvGiu0EPxn5iq9g2e0UFvq4uPjfSgGUlXFpDRESz5lXQodzkBarXKDQesPP_TjGDv3Ddww4PsVga46ohA2o0BW4K-E1jbabtSQtKHb0JbXX1g-VszZxV850y08Q7djJxHFYNVYEuuNrCS7hmWAbhERA-1504608710311%7D HTTP/1.1" 200 None
+Tue, 05 Sep 2017 18:57:39 Public_code.py[line:65] INFO the status_code is 200 
+Tue, 05 Sep 2017 18:57:39 Public_code.py[line:109] INFO share: 2
+Tue, 05 Sep 2017 18:57:39 QGGS_shareholder.py[line:80] INFO 无 shareholder 详情信息
+Tue, 05 Sep 2017 18:57:39 QGGS_shareholder.py[line:80] INFO 无 shareholder 详情信息
+Tue, 05 Sep 2017 18:57:39 QGGS_shareholder.py[line:223] ERROR shareholder error:cursor closed
+Tue, 05 Sep 2017 18:58:00 Image.py[line:397] DEBUG Importing BmpImagePlugin
+Tue, 05 Sep 2017 18:58:00 Image.py[line:397] DEBUG Importing BufrStubImagePlugin
+Tue, 05 Sep 2017 18:58:00 Image.py[line:397] DEBUG Importing CurImagePlugin
+Tue, 05 Sep 2017 18:58:00 Image.py[line:397] DEBUG Importing DcxImagePlugin
+Tue, 05 Sep 2017 18:58:01 Image.py[line:397] DEBUG Importing DdsImagePlugin
+Tue, 05 Sep 2017 18:58:01 Image.py[line:397] DEBUG Importing EpsImagePlugin
+Tue, 05 Sep 2017 18:58:01 Image.py[line:397] DEBUG Importing FitsStubImagePlugin
+Tue, 05 Sep 2017 18:58:01 Image.py[line:397] DEBUG Importing FliImagePlugin
+Tue, 05 Sep 2017 18:58:01 Image.py[line:397] DEBUG Importing FpxImagePlugin
+Tue, 05 Sep 2017 18:58:01 Image.py[line:397] DEBUG Importing FtexImagePlugin
+Tue, 05 Sep 2017 18:58:01 Image.py[line:397] DEBUG Importing GbrImagePlugin
+Tue, 05 Sep 2017 18:58:01 Image.py[line:397] DEBUG Importing GifImagePlugin
+Tue, 05 Sep 2017 18:58:01 Image.py[line:397] DEBUG Importing GribStubImagePlugin
+Tue, 05 Sep 2017 18:58:01 Image.py[line:397] DEBUG Importing Hdf5StubImagePlugin
+Tue, 05 Sep 2017 18:58:01 Image.py[line:397] DEBUG Importing IcnsImagePlugin
+Tue, 05 Sep 2017 18:58:01 Image.py[line:397] DEBUG Importing IcoImagePlugin
+Tue, 05 Sep 2017 18:58:01 Image.py[line:397] DEBUG Importing ImImagePlugin
+Tue, 05 Sep 2017 18:58:01 Image.py[line:397] DEBUG Importing ImtImagePlugin
+Tue, 05 Sep 2017 18:58:01 Image.py[line:397] DEBUG Importing IptcImagePlugin
+Tue, 05 Sep 2017 18:58:01 Image.py[line:397] DEBUG Importing JpegImagePlugin
+Tue, 05 Sep 2017 18:58:01 Image.py[line:397] DEBUG Importing Jpeg2KImagePlugin
+Tue, 05 Sep 2017 18:58:01 Image.py[line:397] DEBUG Importing McIdasImagePlugin
+Tue, 05 Sep 2017 18:58:01 Image.py[line:397] DEBUG Importing MicImagePlugin
+Tue, 05 Sep 2017 18:58:01 Image.py[line:397] DEBUG Importing MpegImagePlugin
+Tue, 05 Sep 2017 18:58:01 Image.py[line:397] DEBUG Importing MpoImagePlugin
+Tue, 05 Sep 2017 18:58:01 Image.py[line:397] DEBUG Importing MspImagePlugin
+Tue, 05 Sep 2017 18:58:01 Image.py[line:397] DEBUG Importing PalmImagePlugin
+Tue, 05 Sep 2017 18:58:01 Image.py[line:397] DEBUG Importing PcdImagePlugin
+Tue, 05 Sep 2017 18:58:01 Image.py[line:397] DEBUG Importing PcxImagePlugin
+Tue, 05 Sep 2017 18:58:01 Image.py[line:397] DEBUG Importing PdfImagePlugin
+Tue, 05 Sep 2017 18:58:01 Image.py[line:397] DEBUG Importing PixarImagePlugin
+Tue, 05 Sep 2017 18:58:01 Image.py[line:397] DEBUG Importing PngImagePlugin
+Tue, 05 Sep 2017 18:58:01 Image.py[line:397] DEBUG Importing PpmImagePlugin
+Tue, 05 Sep 2017 18:58:01 Image.py[line:397] DEBUG Importing PsdImagePlugin
+Tue, 05 Sep 2017 18:58:01 Image.py[line:397] DEBUG Importing SgiImagePlugin
+Tue, 05 Sep 2017 18:58:01 Image.py[line:397] DEBUG Importing SpiderImagePlugin
+Tue, 05 Sep 2017 18:58:01 Image.py[line:397] DEBUG Importing SunImagePlugin
+Tue, 05 Sep 2017 18:58:01 Image.py[line:397] DEBUG Importing TgaImagePlugin
+Tue, 05 Sep 2017 18:58:01 Image.py[line:397] DEBUG Importing TiffImagePlugin
+Tue, 05 Sep 2017 18:58:01 Image.py[line:397] DEBUG Importing WebPImagePlugin
+Tue, 05 Sep 2017 18:58:01 Image.py[line:397] DEBUG Importing WmfImagePlugin
+Tue, 05 Sep 2017 18:58:01 Image.py[line:397] DEBUG Importing XbmImagePlugin
+Tue, 05 Sep 2017 18:58:01 Image.py[line:397] DEBUG Importing XpmImagePlugin
+Tue, 05 Sep 2017 18:58:01 Image.py[line:397] DEBUG Importing XVThumbImagePlugin
+Tue, 05 Sep 2017 18:58:51 Public_code.py[line:28] INFO connect is success!
+Tue, 05 Sep 2017 18:58:51 Public_code.py[line:62] INFO there remains 0 times to send requests 
+Tue, 05 Sep 2017 18:58:51 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cn
+Tue, 05 Sep 2017 18:58:52 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "GET /%7BvGiu0EPxn5iq9g2e0UFvq4uPjfSgGUlXFpDRESz5lXQodzkBarXKDQesPP_TjGDv3Ddww4PsVga46ohA2o0BW4K-E1jbabtSQtKHb0JbXX1g-VszZxV850y08Q7djJxHFYNVYEuuNrCS7hmWAbhERA-1504608710311%7D HTTP/1.1" 200 None
+Tue, 05 Sep 2017 18:58:52 Public_code.py[line:65] INFO the status_code is 200 
+Tue, 05 Sep 2017 18:58:52 Public_code.py[line:62] INFO there remains 0 times to send requests 
+Tue, 05 Sep 2017 18:58:52 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cn
+Tue, 05 Sep 2017 18:58:52 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "GET /%7BvGiu0EPxn5iq9g2e0UFvq4uPjfSgGUlXFpDRESz5lXQodzkBarXKDQesPP_TjGDv3Ddww4PsVga46ohA2o0BW4K-E1jbabtSQtKHb0JbXX1g-VszZxV850y08Q7djJxHFYNVYEuuNrCS7hmWAbhERA-1504608710311%7D HTTP/1.1" 200 None
+Tue, 05 Sep 2017 18:58:52 Public_code.py[line:65] INFO the status_code is 200 
+Tue, 05 Sep 2017 18:58:52 Public_code.py[line:109] INFO share: 2
+Tue, 05 Sep 2017 18:58:52 QGGS_shareholder.py[line:80] INFO 无 shareholder 详情信息
+Tue, 05 Sep 2017 18:58:52 QGGS_shareholder.py[line:80] INFO 无 shareholder 详情信息
+Tue, 05 Sep 2017 18:58:52 Public_code.py[line:28] INFO connect is success!
+Tue, 05 Sep 2017 18:58:52 Public_code.py[line:28] INFO connect is success!
+Tue, 05 Sep 2017 18:59:15 Public_code.py[line:28] INFO connect is success!
+Tue, 05 Sep 2017 18:59:15 Public_code.py[line:62] INFO there remains 0 times to send requests 
+Tue, 05 Sep 2017 18:59:15 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cn
+Tue, 05 Sep 2017 18:59:15 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "GET /%7BvGiu0EPxn5iq9g2e0UFvq4uPjfSgGUlXFpDRESz5lXQodzkBarXKDQesPP_TjGDv3Ddww4PsVga46ohA2o0BW4K-E1jbabtSQtKHb0JbXX1g-VszZxV850y08Q7djJxHFYNVYEuuNrCS7hmWAbhERA-1504608710311%7D HTTP/1.1" 200 None
+Tue, 05 Sep 2017 18:59:15 Public_code.py[line:65] INFO the status_code is 200 
+Tue, 05 Sep 2017 18:59:15 Public_code.py[line:62] INFO there remains 0 times to send requests 
+Tue, 05 Sep 2017 18:59:15 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cn
+Tue, 05 Sep 2017 18:59:15 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "GET /%7BvGiu0EPxn5iq9g2e0UFvq4uPjfSgGUlXFpDRESz5lXQodzkBarXKDQesPP_TjGDv3Ddww4PsVga46ohA2o0BW4K-E1jbabtSQtKHb0JbXX1g-VszZxV850y08Q7djJxHFYNVYEuuNrCS7hmWAbhERA-1504608710311%7D HTTP/1.1" 200 None
+Tue, 05 Sep 2017 18:59:15 Public_code.py[line:65] INFO the status_code is 200 
+Tue, 05 Sep 2017 18:59:15 Public_code.py[line:109] INFO share: 2
+Tue, 05 Sep 2017 18:59:15 QGGS_shareholder.py[line:80] INFO 无 shareholder 详情信息
+Tue, 05 Sep 2017 18:59:15 QGGS_shareholder.py[line:80] INFO 无 shareholder 详情信息
+Tue, 05 Sep 2017 18:59:16 QGGS_shareholder.py[line:224] ERROR shareholder error:cursor closed

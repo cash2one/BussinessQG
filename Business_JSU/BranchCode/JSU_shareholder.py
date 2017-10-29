@@ -15,6 +15,10 @@ import re
 import logging
 import time
 import json
+import sys
+reload(sys)
+sys.setdefaultencoding('utf-8')
+Type = sys.getfilesystemencoding()
 
 
 share_string = 'insert into gs_shareholder(gs_basic_id,name,cate,types,license_type,license_code,ra_date, ra_ways, true_amount,reg_amount,ta_ways,ta_date,country,address,iv_basic_id,updated)values(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)'
@@ -106,7 +110,7 @@ class Shareholder:
 				
 				country, address = info[key][10], info[key][11]
 				iv_basic_id = 0
-				if name != '' or name != None:
+				if name != '' and name != None:
 					pattern = re.compile('.*公司.*|.*中心.*|.*集团.*|.*企业.*')
 					result = re.findall(pattern, name)
 					if len(result) == 0:

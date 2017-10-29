@@ -3,7 +3,7 @@
 # @File  : Paged_Search.py
 # @Author: Lmm
 # @Date  : 2017-08-09
-# @Desc  :
+# @Desc  :需要进行翻页的代码实时搜索
 
 import hashlib
 import json

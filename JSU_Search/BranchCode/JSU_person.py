@@ -19,8 +19,6 @@ sys.setdefaultencoding('utf-8')
 Type = sys.getfilesystemencoding()
 
 
-
-
 select_string = 'select gs_person_id,position from gs_person where gs_basic_id = %s and name = %s and source = 1'
 insert_string = 'insert into gs_person(gs_basic_id,name,position,source,updated)values(%s,%s,%s,%s,%s)'
 person_string = 'update gs_person set gs_person_id = %s,position = %s,updated = %s,quit =0 where gs_person_id = %s'
@@ -112,5 +110,3 @@ class Person:
 def main(org, id, seqid, regno, gs_basic_id):
 	pattern = "person"
 	flag = Judge().update_info1(pattern, org, id, seqid, regno, Person, gs_basic_id)
-	
-	

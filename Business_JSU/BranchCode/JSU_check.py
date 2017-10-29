@@ -15,6 +15,10 @@ import logging
 import json
 import re
 import time
+import sys
+reload(sys)
+sys.setdefaultencoding('utf-8')
+Type = sys.getfilesystemencoding()
 
 check_string = 'insert  into gs_check(gs_basic_id,types,result,check_date,gov_dept,updated)values(%s,%s,%s,%s,%s,%s)'
 select_check = 'select gs_check_id from gs_check where gs_basic_id = %s and check_date = %s and types = %s'

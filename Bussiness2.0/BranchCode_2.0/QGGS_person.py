@@ -23,7 +23,7 @@ url = sys.argv[1]
 gs_basic_id = sys.argv[2]
 gs_py_id = sys.argv[3]
 
-# url = 'http://www.gsxt.gov.cn/%7Bh3PaFzrRehMR5SrwpBqrkAIrG4S4WWBAG2LE0hZDbzqRpa7_39xHUMFKuWLiWz-pSMDhKAptyNybj4wEFjwb0NwkCJduUfUXBke8_TDaXp6zCPJdxu3reoj_B6uk6VWqBJqCjOVXy2GOFi4D0KA4UA-1504578404397%7D'
+# url = 'http://www.gsxt.gov.cn/%7BhfZdl9AytPz8YR5GNeJYFKD_1R6Zc-DB69owp3vVCICPYRcFlUtuFjJR-I62YPjmJ6d3nnpp_Ob1l3FyA3mEka5YLZ9gHd8Mkxlkx-OsMKZqyNQYCbm5JFkoNi-ugovTw-o8vIRPUCUeyPEK6ldcjg-1506755677558%7D'
 # gs_basic_id = 1900000099
 # gs_py_id = 1501
 select_string = 'select gs_person_id,position from gs_person where gs_basic_id = %s and name = %s and source = 1'
@@ -62,6 +62,8 @@ class Person:
         insert_flag, update_flag = 0, 0
         remark = 0
         try:
+            HOST, USER, PASSWD, DB, PORT = config.HOST, config.USER, config.PASSWD, config.DB, config.PORT
+            connect, cursor = Connect_to_DB().ConnectDB(HOST, USER, PASSWD, DB, PORT)
             string = update_string % gs_basic_id
             cursor.execute(string)
             connect.commit()
@@ -90,7 +92,7 @@ class Person:
                             count = cursor.execute(person_string, (gs_person_id, position, updated_time, gs_person_id))
                             update_flag += count
                             connect.commit()
-                            sign = 0
+                            sign = 1
                     if sign == 0:
                         source = 1
                         updated_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
@@ -117,8 +119,9 @@ class Person:
             return remark,insert_flag,update_flag
 def main():
     Log().found_log(gs_py_id,gs_basic_id)
-    HOST, USER, PASSWD, DB, PORT = config.HOST, config.USER, config.PASSWD, config.DB, config.PORT
-    connect, cursor = Connect_to_DB().ConnectDB(HOST, USER, PASSWD, DB, PORT)
+    # HOST, USER, PASSWD, DB, PORT = config.HOST, config.USER, config.PASSWD, config.DB, config.PORT
+    # connect, cursor = Connect_to_DB().ConnectDB(HOST, USER, PASSWD, DB, PORT)
+    connect,cursor = None,None
     pages,perpages = 0,0
     Judge(gs_py_id,connect,cursor,gs_basic_id,url,pages,perpages).update_branch(update_person_py,Person,"person")
     # cursor.close()

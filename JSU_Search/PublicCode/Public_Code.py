@@ -213,4 +213,3 @@ class Judge:
 		else:
 			logging.info("打开report_%s链接失败！" % pattern)
 		return flag
-	

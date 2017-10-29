@@ -45,7 +45,6 @@ update_mort_person = 'update gs_mort_person set gs_mort_person_id = %s,name = %s
 
 person_py = 'update gs_py set gs_py_id = %s,gs_mort_goods = %s ,updated = %s where gs_basic_id = %s and gs_py_id = %s'
 goods_py = 'update gs_py set gs_py_id = %s, gs_mort_person = %s ,updated = %s where gs_basic_id = %s and gs_py_id = %s'
-
 update_mort_py = 'update gs_py set gs_py_id = %s,gs_mort = %s,updated = %s where gs_py_id = %s'
 class Mort:
 
@@ -168,7 +167,6 @@ class Mort:
         try:
             for key in info.keys():
                 name, ownership, situation, remark = info[key][0], info[key][1], info[key][2], info[key][3]
-
                 count = cursor.execute(select_goods, (gs_mort_id, name, ownership))
                 if count == 0:
                     m = hashlib.md5()

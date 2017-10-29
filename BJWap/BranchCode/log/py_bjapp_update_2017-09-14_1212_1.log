@@ -1,0 +1,4 @@
+Thu, 14 Sep 2017 16:05:41 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): proxy.abuyun.com
+Thu, 14 Sep 2017 16:05:42 connectionpool.py[line:400] DEBUG http://proxy.abuyun.com:9010 "GET http://qyxy.baic.gov.cn/wap/creditWapAction!view_credit_wap.dhtml?categ_info=030404&ent_id=197A3E86527C570DE050007F01007DB1&chr_id=20e38b8b50c7d44f0150db8397d14845,&info_categ_name= HTTP/1.1" 200 None
+Thu, 14 Sep 2017 16:05:42 Public_code.py[line:29] INFO connect is success!
+Thu, 14 Sep 2017 16:05:42 Public_code.py[line:29] INFO connect is success!

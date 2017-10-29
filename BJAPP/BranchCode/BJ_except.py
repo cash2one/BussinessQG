@@ -25,40 +25,42 @@ except_string = 'insert into gs_except(gs_basic_id,types, in_reason, in_date,out
 select_except = 'select gs_except_id from gs_except where gs_basic_id = %s and in_date = %s'
 update_except = 'update gs_except set gs_except_id = %s,types = %s ,in_reason = %s,out_reason = %s ,out_date=%s,gov_dept = %s ,updated = %s where gs_except_id = %s'
 update_except_py = 'update gs_py set gs_py_id = %s,gs_except = %s,updated =%s where gs_py_id = %s'
+
+
 class Except:
-	def name(self,url):
-		content,status_code = Send_Request().send_request(url)
+	def name(self, url):
+		content, status_code = Send_Request().send_request(url)
 		info = {}
-		if status_code ==200:
+		if status_code == 200:
 			flag = 1
-			result = etree.HTML(content,parser=etree.HTMLParser(encoding="utf-8"))
+			result = etree.HTML(content, parser=etree.HTMLParser(encoding="utf-8"))
 			dl = result.xpath("//div[@class = 'viewBox']//dl")[0]
 			dlcontent = etree.tostring(dl)
 			string = '<dd style="border-top:1px dashed #ccc;">'
 			dllist = dlcontent.split(string)
 			dllist.remove(dllist[-1])
-			for i,single in enumerate(dllist):
+			for i, single in enumerate(dllist):
 				types = '经营异常'
 				single = etree.HTML(single, parser=etree.HTMLParser(encoding="utf-8"))
 				string = u'列入原因'
-				in_reason = self.deal_dd_content(string,single)
+				in_reason = self.deal_dd_content(string, single)
 				string = u'列入日期'
-				in_date = self.deal_dd_content(string,single)
-				if in_date ==u'':
+				in_date = self.deal_dd_content(string, single)
+				if in_date == u'':
 					in_date = '0000-00-00'
 				string = u'作出决定机关(列入)'
-				gov_dept = self.deal_dd_content(string,single)
+				gov_dept = self.deal_dd_content(string, single)
 				string = u'移出原因'
-				out_reason = self.deal_dd_content(string,single)
+				out_reason = self.deal_dd_content(string, single)
 				string = u'移出日期'
-				out_date = self.deal_dd_content(string,single)
-				if out_date==u"":
-					out_date ='0000-00-00'
-				info[i] = [types,in_reason,in_date,gov_dept,out_reason,out_date]
+				out_date = self.deal_dd_content(string, single)
+				if out_date == u"":
+					out_date = '0000-00-00'
+				info[i] = [types, in_reason, in_date, gov_dept, out_reason, out_date]
 		else:
 			flag = 100000004
-		return info,flag
-		
+		return info, flag
+	
 	# 用于处理dd标签中的内容
 	def deal_dd_content(self, string, result):
 		dd = result.xpath(".//dt[contains(.,'%s')]" % string)[0].xpath("./following-sibling::*[1]")
@@ -66,7 +68,7 @@ class Except:
 		data = deal_html_code.remove_symbol(dd.xpath("string(.)"))
 		return data
 	
-	def update_to_db(self, information,gs_basic_id):
+	def update_to_db(self, information, gs_basic_id):
 		update_flag, insert_flag = 0, 0
 		remark = 0
 		total = len(information)
@@ -102,10 +104,12 @@ class Except:
 				remark = insert_flag + update_flag
 				logging.info("excute except :%s" % remark)
 			return remark, total, insert_flag, update_flag
-def main(gs_py_id,gs_basic_id,url):
-	Log().found_log(gs_py_id,gs_basic_id)
+
+
+def main(gs_py_id, gs_basic_id, url):
+	Log().found_log(gs_py_id, gs_basic_id)
 	name = 'except'
-	flag = Judge_status().judge(gs_basic_id,name,Except,url)
-	Judge_status().update_py(gs_py_id,update_except_py,flag)
-# if __name__ == '__main__':
-#     main(gs_py_id,gs_basic_id,url)
+	flag = Judge_status().judge(gs_basic_id, name, Except, url)
+	Judge_status().update_py(gs_py_id, update_except_py, flag)
+	# if __name__ == '__main__':
+	#     main(gs_py_id,gs_basic_id,url)

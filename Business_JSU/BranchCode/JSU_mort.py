@@ -60,7 +60,6 @@ class Mort:
 			status = singledata["STATUS"]
 			cates = singledata["ASSURE_KIND"]
 			start_date = singledata["ASSURE_START_DATE"]
-			
 			start_date = deal_html_code.change_date_style(start_date)
 			end_date = singledata["ASSURE_END_DATE"]
 			end_date = deal_html_code.change_date_style(end_date)

@@ -1,0 +1,178 @@
+Tue, 19 Sep 2017 13:10:19 Public_code.py[line:30] INFO connect is success!
+Tue, 19 Sep 2017 13:10:19 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Tue, 19 Sep 2017 13:10:19 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapqyzb/wapqyzbAction!wapbsnd.dhtml?entId=CE37445CD0DC4B65B690D8FCBD5FE005 HTTP/1.1" 200 None
+Tue, 19 Sep 2017 13:10:19 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Tue, 19 Sep 2017 13:10:20 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapnb/wapnbAction!nb_list.dhtml?cid=f5b5f0a0928245bfb08162323fd8e9f4&entid=CE37445CD0DC4B65B690D8FCBD5FE005&credit_ticket=D7D26E660B5FA5D4DD44C3C699F17EA4 HTTP/1.1" 200 None
+Tue, 19 Sep 2017 13:10:20 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Tue, 19 Sep 2017 13:10:20 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapnb/wapnbAction!wapnbxx.dhtml?cid=f5b5f0a0928245bfb08162323fd8e9f4&entid=CE37445CD0DC4B65B690D8FCBD5FE005&credit_ticket=D7D26E660B5FA5D4DD44C3C699F17EA4 HTTP/1.1" 200 None
+Tue, 19 Sep 2017 13:10:20 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Tue, 19 Sep 2017 13:10:20 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapnb/wapnbAction!wapgdcz_bj.dhtml?clear=true&cid=f5b5f0a0928245bfb08162323fd8e9f4&entid=CE37445CD0DC4B65B690D8FCBD5FE005 HTTP/1.1" 200 None
+Tue, 19 Sep 2017 13:10:21 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Tue, 19 Sep 2017 13:10:21 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapnb/wapnbAction!wapgdcz_bj.dhtml?entid=f5b5f0a0928245bfb08162323fd8e9f4&cid=f5b5f0a0928245bfb08162323fd8e9f4&pageNo=2&pageSize=&clear= HTTP/1.1" 200 None
+Tue, 19 Sep 2017 13:10:21 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Tue, 19 Sep 2017 13:10:21 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapnb/wapnbAction!wapgdcz_bj.dhtml?entid=f5b5f0a0928245bfb08162323fd8e9f4&cid=f5b5f0a0928245bfb08162323fd8e9f4&pageNo=3&pageSize=&clear= HTTP/1.1" 200 None
+Tue, 19 Sep 2017 13:10:22 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Tue, 19 Sep 2017 13:10:22 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapnb/wapnbAction!wapgdcz_bj.dhtml?entid=f5b5f0a0928245bfb08162323fd8e9f4&cid=f5b5f0a0928245bfb08162323fd8e9f4&pageNo=4&pageSize=&clear= HTTP/1.1" 200 None
+Tue, 19 Sep 2017 13:10:22 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Tue, 19 Sep 2017 13:10:22 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapnb/wapnbAction!wapgdcz_bj.dhtml?entid=f5b5f0a0928245bfb08162323fd8e9f4&cid=f5b5f0a0928245bfb08162323fd8e9f4&pageNo=5&pageSize=&clear= HTTP/1.1" 200 None
+Tue, 19 Sep 2017 13:10:23 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Tue, 19 Sep 2017 13:10:23 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapnb/wapnbAction!wapgdcz_bj.dhtml?entid=f5b5f0a0928245bfb08162323fd8e9f4&cid=f5b5f0a0928245bfb08162323fd8e9f4&pageNo=6&pageSize=&clear= HTTP/1.1" 200 None
+Tue, 19 Sep 2017 13:10:23 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Tue, 19 Sep 2017 13:10:23 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapnb/wapnbAction!wapgdcz_bj.dhtml?entid=f5b5f0a0928245bfb08162323fd8e9f4&cid=f5b5f0a0928245bfb08162323fd8e9f4&pageNo=7&pageSize=&clear= HTTP/1.1" 200 None
+Tue, 19 Sep 2017 13:10:23 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Tue, 19 Sep 2017 13:10:23 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapnb/wapnbAction!wapgdcz_bj.dhtml?entid=f5b5f0a0928245bfb08162323fd8e9f4&cid=f5b5f0a0928245bfb08162323fd8e9f4&pageNo=8&pageSize=&clear= HTTP/1.1" 200 None
+Tue, 19 Sep 2017 13:10:24 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Tue, 19 Sep 2017 13:10:24 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapnb/wapnbAction!wapgdcz_bj.dhtml?entid=f5b5f0a0928245bfb08162323fd8e9f4&cid=f5b5f0a0928245bfb08162323fd8e9f4&pageNo=9&pageSize=&clear= HTTP/1.1" 200 None
+Tue, 19 Sep 2017 13:10:24 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Tue, 19 Sep 2017 13:10:24 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapnb/wapnbAction!wapgdcz_bj.dhtml?entid=f5b5f0a0928245bfb08162323fd8e9f4&cid=f5b5f0a0928245bfb08162323fd8e9f4&pageNo=10&pageSize=&clear= HTTP/1.1" 200 None
+Tue, 19 Sep 2017 13:10:25 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Tue, 19 Sep 2017 13:10:25 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapnb/wapnbAction!wapgdcz_bj.dhtml?entid=f5b5f0a0928245bfb08162323fd8e9f4&cid=f5b5f0a0928245bfb08162323fd8e9f4&pageNo=11&pageSize=&clear= HTTP/1.1" 200 None
+Tue, 19 Sep 2017 13:10:25 BJ_report_share.py[line:126] ERROR share error (1062, "Duplicate entry '27a5b91e6cac41e88982c046daa1b8e6' for key 'uuid'")
+Tue, 19 Sep 2017 13:10:25 Public_code.py[line:30] INFO connect is success!
+Tue, 19 Sep 2017 13:10:25 Public_code.py[line:148] ERROR update py error :not enough arguments for format string
+Tue, 19 Sep 2017 13:10:25 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Tue, 19 Sep 2017 13:10:27 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapnb/wapnbAction!wapdwtz_bj.dhtml?clear=true&cid=f5b5f0a0928245bfb08162323fd8e9f4&entid=CE37445CD0DC4B65B690D8FCBD5FE005 HTTP/1.1" 200 None
+Tue, 19 Sep 2017 13:10:27 BJ_report.py[line:217] INFO report error:'module' object has no attribute 'xpath'
+Tue, 19 Sep 2017 13:11:07 Public_code.py[line:30] INFO connect is success!
+Tue, 19 Sep 2017 13:11:08 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Tue, 19 Sep 2017 13:11:08 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapqyzb/wapqyzbAction!wapbsnd.dhtml?entId=CE37445CD0DC4B65B690D8FCBD5FE005 HTTP/1.1" 200 None
+Tue, 19 Sep 2017 13:11:21 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Tue, 19 Sep 2017 13:11:22 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapnb/wapnbAction!nb_list.dhtml?cid=1f43716e5b7040cb9f9faadeb13e6f38&entid=CE37445CD0DC4B65B690D8FCBD5FE005&credit_ticket=8EF1327B99F2485941FAC68A943CC657 HTTP/1.1" 200 None
+Tue, 19 Sep 2017 13:11:22 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Tue, 19 Sep 2017 13:11:22 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapnb/wapnbAction!wapnbxx.dhtml?cid=1f43716e5b7040cb9f9faadeb13e6f38&entid=CE37445CD0DC4B65B690D8FCBD5FE005&credit_ticket=8EF1327B99F2485941FAC68A943CC657 HTTP/1.1" 200 None
+Tue, 19 Sep 2017 13:11:23 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Tue, 19 Sep 2017 13:11:23 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapnb/wapnbAction!wapgdcz_bj.dhtml?clear=true&cid=1f43716e5b7040cb9f9faadeb13e6f38&entid=CE37445CD0DC4B65B690D8FCBD5FE005 HTTP/1.1" 200 None
+Tue, 19 Sep 2017 13:11:25 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Tue, 19 Sep 2017 13:11:25 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapnb/wapnbAction!wapgdcz_bj.dhtml?entid=1f43716e5b7040cb9f9faadeb13e6f38&cid=1f43716e5b7040cb9f9faadeb13e6f38&pageNo=2&pageSize=&clear= HTTP/1.1" 200 None
+Tue, 19 Sep 2017 13:11:27 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Tue, 19 Sep 2017 13:11:27 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapnb/wapnbAction!wapgdcz_bj.dhtml?entid=1f43716e5b7040cb9f9faadeb13e6f38&cid=1f43716e5b7040cb9f9faadeb13e6f38&pageNo=3&pageSize=&clear= HTTP/1.1" 200 None
+Tue, 19 Sep 2017 13:11:28 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Tue, 19 Sep 2017 13:11:28 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapnb/wapnbAction!wapgdcz_bj.dhtml?entid=1f43716e5b7040cb9f9faadeb13e6f38&cid=1f43716e5b7040cb9f9faadeb13e6f38&pageNo=4&pageSize=&clear= HTTP/1.1" 200 None
+Tue, 19 Sep 2017 13:11:30 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Tue, 19 Sep 2017 13:11:30 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapnb/wapnbAction!wapgdcz_bj.dhtml?entid=1f43716e5b7040cb9f9faadeb13e6f38&cid=1f43716e5b7040cb9f9faadeb13e6f38&pageNo=5&pageSize=&clear= HTTP/1.1" 200 952
+Tue, 19 Sep 2017 13:11:36 BJ_report.py[line:217] INFO report error:list index out of range
+Tue, 19 Sep 2017 13:12:08 Public_code.py[line:30] INFO connect is success!
+Tue, 19 Sep 2017 13:12:10 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Tue, 19 Sep 2017 13:12:10 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapqyzb/wapqyzbAction!wapbsnd.dhtml?entId=CE37445CD0DC4B65B690D8FCBD5FE005 HTTP/1.1" 200 952
+Tue, 19 Sep 2017 13:12:31 Public_code.py[line:30] INFO connect is success!
+Tue, 19 Sep 2017 13:12:31 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Tue, 19 Sep 2017 13:12:32 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapqyzb/wapqyzbAction!wapbsnd.dhtml?entId=CE37445CD0DC4B65B690D8FCBD5FE005 HTTP/1.1" 200 952
+Tue, 19 Sep 2017 13:13:57 Public_code.py[line:30] INFO connect is success!
+Tue, 19 Sep 2017 13:13:57 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Tue, 19 Sep 2017 13:13:57 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapqyzb/wapqyzbAction!wapbsnd.dhtml?entId=CE37445CD0DC4B65B690D8FCBD5FE005 HTTP/1.1" 200 None
+Tue, 19 Sep 2017 13:13:57 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Tue, 19 Sep 2017 13:13:58 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapnb/wapnbAction!nb_list.dhtml?cid=f5b5f0a0928245bfb08162323fd8e9f4&entid=CE37445CD0DC4B65B690D8FCBD5FE005&credit_ticket=B952F6081A86CCAE7A31FF4282646A30 HTTP/1.1" 200 None
+Tue, 19 Sep 2017 13:13:58 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Tue, 19 Sep 2017 13:13:58 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapnb/wapnbAction!wapnbxx.dhtml?cid=f5b5f0a0928245bfb08162323fd8e9f4&entid=CE37445CD0DC4B65B690D8FCBD5FE005&credit_ticket=B952F6081A86CCAE7A31FF4282646A30 HTTP/1.1" 200 None
+Tue, 19 Sep 2017 13:13:58 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Tue, 19 Sep 2017 13:13:58 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapnb/wapnbAction!wapgdcz_bj.dhtml?clear=true&cid=f5b5f0a0928245bfb08162323fd8e9f4&entid=CE37445CD0DC4B65B690D8FCBD5FE005 HTTP/1.1" 200 None
+Tue, 19 Sep 2017 13:13:59 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Tue, 19 Sep 2017 13:13:59 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapnb/wapnbAction!wapgdcz_bj.dhtml?entid=f5b5f0a0928245bfb08162323fd8e9f4&cid=f5b5f0a0928245bfb08162323fd8e9f4&pageNo=2&pageSize=&clear= HTTP/1.1" 200 None
+Tue, 19 Sep 2017 13:13:59 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Tue, 19 Sep 2017 13:13:59 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapnb/wapnbAction!wapgdcz_bj.dhtml?entid=f5b5f0a0928245bfb08162323fd8e9f4&cid=f5b5f0a0928245bfb08162323fd8e9f4&pageNo=3&pageSize=&clear= HTTP/1.1" 200 None
+Tue, 19 Sep 2017 13:14:00 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Tue, 19 Sep 2017 13:14:00 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapnb/wapnbAction!wapgdcz_bj.dhtml?entid=f5b5f0a0928245bfb08162323fd8e9f4&cid=f5b5f0a0928245bfb08162323fd8e9f4&pageNo=4&pageSize=&clear= HTTP/1.1" 200 None
+Tue, 19 Sep 2017 13:14:00 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Tue, 19 Sep 2017 13:14:00 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapnb/wapnbAction!wapgdcz_bj.dhtml?entid=f5b5f0a0928245bfb08162323fd8e9f4&cid=f5b5f0a0928245bfb08162323fd8e9f4&pageNo=5&pageSize=&clear= HTTP/1.1" 200 None
+Tue, 19 Sep 2017 13:14:01 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Tue, 19 Sep 2017 13:14:01 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapnb/wapnbAction!wapgdcz_bj.dhtml?entid=f5b5f0a0928245bfb08162323fd8e9f4&cid=f5b5f0a0928245bfb08162323fd8e9f4&pageNo=6&pageSize=&clear= HTTP/1.1" 200 None
+Tue, 19 Sep 2017 13:14:01 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Tue, 19 Sep 2017 13:14:02 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapnb/wapnbAction!wapgdcz_bj.dhtml?entid=f5b5f0a0928245bfb08162323fd8e9f4&cid=f5b5f0a0928245bfb08162323fd8e9f4&pageNo=7&pageSize=&clear= HTTP/1.1" 200 None
+Tue, 19 Sep 2017 13:14:02 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Tue, 19 Sep 2017 13:14:02 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapnb/wapnbAction!wapgdcz_bj.dhtml?entid=f5b5f0a0928245bfb08162323fd8e9f4&cid=f5b5f0a0928245bfb08162323fd8e9f4&pageNo=8&pageSize=&clear= HTTP/1.1" 200 None
+Tue, 19 Sep 2017 13:14:02 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Tue, 19 Sep 2017 13:14:03 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapnb/wapnbAction!wapgdcz_bj.dhtml?entid=f5b5f0a0928245bfb08162323fd8e9f4&cid=f5b5f0a0928245bfb08162323fd8e9f4&pageNo=9&pageSize=&clear= HTTP/1.1" 200 None
+Tue, 19 Sep 2017 13:14:03 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Tue, 19 Sep 2017 13:14:03 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapnb/wapnbAction!wapgdcz_bj.dhtml?entid=f5b5f0a0928245bfb08162323fd8e9f4&cid=f5b5f0a0928245bfb08162323fd8e9f4&pageNo=10&pageSize=&clear= HTTP/1.1" 200 None
+Tue, 19 Sep 2017 13:14:04 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Tue, 19 Sep 2017 13:14:04 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapnb/wapnbAction!wapgdcz_bj.dhtml?entid=f5b5f0a0928245bfb08162323fd8e9f4&cid=f5b5f0a0928245bfb08162323fd8e9f4&pageNo=11&pageSize=&clear= HTTP/1.1" 200 None
+Tue, 19 Sep 2017 13:14:04 BJ_report_share.py[line:126] ERROR share error (1062, "Duplicate entry 'bac0eb42677a1f4b78ef35fcc502f9f6' for key 'uuid'")
+Tue, 19 Sep 2017 13:14:04 Public_code.py[line:30] INFO connect is success!
+Tue, 19 Sep 2017 13:14:04 Public_code.py[line:148] ERROR update py error :not enough arguments for format string
+Tue, 19 Sep 2017 13:14:04 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Tue, 19 Sep 2017 13:14:06 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapnb/wapnbAction!wapdwtz_bj.dhtml?clear=true&cid=f5b5f0a0928245bfb08162323fd8e9f4&entid=CE37445CD0DC4B65B690D8FCBD5FE005 HTTP/1.1" 200 None
+Tue, 19 Sep 2017 13:14:06 BJ_report.py[line:217] INFO report error:'module' object has no attribute 'xpath'
+Tue, 19 Sep 2017 13:14:20 Public_code.py[line:30] INFO connect is success!
+Tue, 19 Sep 2017 13:14:21 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Tue, 19 Sep 2017 13:14:24 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapqyzb/wapqyzbAction!wapbsnd.dhtml?entId=CE37445CD0DC4B65B690D8FCBD5FE005 HTTP/1.1" 200 None
+Tue, 19 Sep 2017 13:14:50 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Tue, 19 Sep 2017 13:14:50 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapnb/wapnbAction!nb_list.dhtml?cid=1f43716e5b7040cb9f9faadeb13e6f38&entid=CE37445CD0DC4B65B690D8FCBD5FE005&credit_ticket=1E1B1BC2CF2FF065EB178581856821F3 HTTP/1.1" 200 None
+Tue, 19 Sep 2017 13:14:54 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Tue, 19 Sep 2017 13:14:54 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapnb/wapnbAction!wapnbxx.dhtml?cid=1f43716e5b7040cb9f9faadeb13e6f38&entid=CE37445CD0DC4B65B690D8FCBD5FE005&credit_ticket=1E1B1BC2CF2FF065EB178581856821F3 HTTP/1.1" 200 None
+Tue, 19 Sep 2017 13:15:03 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Tue, 19 Sep 2017 13:15:03 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapnb/wapnbAction!wapgdcz_bj.dhtml?clear=true&cid=1f43716e5b7040cb9f9faadeb13e6f38&entid=CE37445CD0DC4B65B690D8FCBD5FE005 HTTP/1.1" 200 None
+Tue, 19 Sep 2017 13:15:05 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Tue, 19 Sep 2017 13:15:05 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapnb/wapnbAction!wapgdcz_bj.dhtml?entid=1f43716e5b7040cb9f9faadeb13e6f38&cid=1f43716e5b7040cb9f9faadeb13e6f38&pageNo=2&pageSize=&clear= HTTP/1.1" 200 None
+Tue, 19 Sep 2017 13:15:06 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Tue, 19 Sep 2017 13:15:06 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapnb/wapnbAction!wapgdcz_bj.dhtml?entid=1f43716e5b7040cb9f9faadeb13e6f38&cid=1f43716e5b7040cb9f9faadeb13e6f38&pageNo=3&pageSize=&clear= HTTP/1.1" 200 None
+Tue, 19 Sep 2017 13:15:07 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Tue, 19 Sep 2017 13:15:07 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapnb/wapnbAction!wapgdcz_bj.dhtml?entid=1f43716e5b7040cb9f9faadeb13e6f38&cid=1f43716e5b7040cb9f9faadeb13e6f38&pageNo=4&pageSize=&clear= HTTP/1.1" 200 None
+Tue, 19 Sep 2017 13:15:08 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Tue, 19 Sep 2017 13:15:09 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapnb/wapnbAction!wapgdcz_bj.dhtml?entid=1f43716e5b7040cb9f9faadeb13e6f38&cid=1f43716e5b7040cb9f9faadeb13e6f38&pageNo=5&pageSize=&clear= HTTP/1.1" 200 None
+Tue, 19 Sep 2017 13:15:10 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Tue, 19 Sep 2017 13:15:10 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapnb/wapnbAction!wapgdcz_bj.dhtml?entid=1f43716e5b7040cb9f9faadeb13e6f38&cid=1f43716e5b7040cb9f9faadeb13e6f38&pageNo=6&pageSize=&clear= HTTP/1.1" 200 None
+Tue, 19 Sep 2017 13:15:11 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Tue, 19 Sep 2017 13:15:11 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapnb/wapnbAction!wapgdcz_bj.dhtml?entid=1f43716e5b7040cb9f9faadeb13e6f38&cid=1f43716e5b7040cb9f9faadeb13e6f38&pageNo=7&pageSize=&clear= HTTP/1.1" 200 None
+Tue, 19 Sep 2017 13:15:12 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Tue, 19 Sep 2017 13:15:12 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapnb/wapnbAction!wapgdcz_bj.dhtml?entid=1f43716e5b7040cb9f9faadeb13e6f38&cid=1f43716e5b7040cb9f9faadeb13e6f38&pageNo=8&pageSize=&clear= HTTP/1.1" 200 None
+Tue, 19 Sep 2017 13:15:13 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Tue, 19 Sep 2017 13:15:13 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapnb/wapnbAction!wapgdcz_bj.dhtml?entid=1f43716e5b7040cb9f9faadeb13e6f38&cid=1f43716e5b7040cb9f9faadeb13e6f38&pageNo=9&pageSize=&clear= HTTP/1.1" 200 None
+Tue, 19 Sep 2017 13:15:14 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Tue, 19 Sep 2017 13:15:14 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapnb/wapnbAction!wapgdcz_bj.dhtml?entid=1f43716e5b7040cb9f9faadeb13e6f38&cid=1f43716e5b7040cb9f9faadeb13e6f38&pageNo=10&pageSize=&clear= HTTP/1.1" 200 None
+Tue, 19 Sep 2017 13:15:15 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Tue, 19 Sep 2017 13:15:16 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapnb/wapnbAction!wapgdcz_bj.dhtml?entid=1f43716e5b7040cb9f9faadeb13e6f38&cid=1f43716e5b7040cb9f9faadeb13e6f38&pageNo=11&pageSize=&clear= HTTP/1.1" 200 None
+Tue, 19 Sep 2017 13:15:25 BJ_report_share.py[line:126] ERROR share error (1062, "Duplicate entry '024a7048914c7ec9073db168770ef651' for key 'uuid'")
+Tue, 19 Sep 2017 13:15:26 Public_code.py[line:30] INFO connect is success!
+Tue, 19 Sep 2017 13:15:26 Public_code.py[line:148] ERROR update py error :not enough arguments for format string
+Tue, 19 Sep 2017 13:15:29 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Tue, 19 Sep 2017 13:15:29 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapnb/wapnbAction!wapdwtz_bj.dhtml?clear=true&cid=1f43716e5b7040cb9f9faadeb13e6f38&entid=CE37445CD0DC4B65B690D8FCBD5FE005 HTTP/1.1" 200 None
+Tue, 19 Sep 2017 15:37:03 Public_code.py[line:30] INFO connect is success!
+Tue, 19 Sep 2017 15:37:03 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Tue, 19 Sep 2017 15:37:03 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapqyzb/wapqyzbAction!wapbsnd.dhtml?entId=CE37445CD0DC4B65B690D8FCBD5FE005 HTTP/1.1" 200 None
+Tue, 19 Sep 2017 15:37:03 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Tue, 19 Sep 2017 15:37:03 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapnb/wapnbAction!nb_list.dhtml?cid=7be2630eca3d4cf7949c70df3a01e373&entid=CE37445CD0DC4B65B690D8FCBD5FE005&credit_ticket=A10D01E25491664010184DCE457D1C39 HTTP/1.1" 200 None
+Tue, 19 Sep 2017 15:37:03 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Tue, 19 Sep 2017 15:37:03 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapnb/wapnbAction!wapnbxx.dhtml?cid=7be2630eca3d4cf7949c70df3a01e373&entid=CE37445CD0DC4B65B690D8FCBD5FE005&credit_ticket=A10D01E25491664010184DCE457D1C39 HTTP/1.1" 200 None
+Tue, 19 Sep 2017 15:37:04 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Tue, 19 Sep 2017 15:37:04 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapnb/wapnbAction!wapgdcz_bj.dhtml?clear=true&cid=7be2630eca3d4cf7949c70df3a01e373&entid=CE37445CD0DC4B65B690D8FCBD5FE005 HTTP/1.1" 200 None
+Tue, 19 Sep 2017 15:37:04 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Tue, 19 Sep 2017 15:37:04 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapnb/wapnbAction!wapgdcz_bj.dhtml?entid=CE37445CD0DC4B65B690D8FCBD5FE005&cid=7be2630eca3d4cf7949c70df3a01e373&pageNo=2&pageSize=&clear= HTTP/1.1" 200 None
+Tue, 19 Sep 2017 15:37:04 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Tue, 19 Sep 2017 15:37:04 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapnb/wapnbAction!wapgdcz_bj.dhtml?entid=CE37445CD0DC4B65B690D8FCBD5FE005&cid=7be2630eca3d4cf7949c70df3a01e373&pageNo=3&pageSize=&clear= HTTP/1.1" 200 None
+Tue, 19 Sep 2017 15:37:05 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Tue, 19 Sep 2017 15:37:05 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapnb/wapnbAction!wapgdcz_bj.dhtml?entid=CE37445CD0DC4B65B690D8FCBD5FE005&cid=7be2630eca3d4cf7949c70df3a01e373&pageNo=4&pageSize=&clear= HTTP/1.1" 200 None
+Tue, 19 Sep 2017 15:37:05 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Tue, 19 Sep 2017 15:37:05 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapnb/wapnbAction!wapgdcz_bj.dhtml?entid=CE37445CD0DC4B65B690D8FCBD5FE005&cid=7be2630eca3d4cf7949c70df3a01e373&pageNo=5&pageSize=&clear= HTTP/1.1" 200 None
+Tue, 19 Sep 2017 15:37:05 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Tue, 19 Sep 2017 15:37:05 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapnb/wapnbAction!wapgdcz_bj.dhtml?entid=CE37445CD0DC4B65B690D8FCBD5FE005&cid=7be2630eca3d4cf7949c70df3a01e373&pageNo=6&pageSize=&clear= HTTP/1.1" 200 None
+Tue, 19 Sep 2017 15:37:06 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Tue, 19 Sep 2017 15:37:06 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapnb/wapnbAction!wapgdcz_bj.dhtml?entid=CE37445CD0DC4B65B690D8FCBD5FE005&cid=7be2630eca3d4cf7949c70df3a01e373&pageNo=7&pageSize=&clear= HTTP/1.1" 200 None
+Tue, 19 Sep 2017 15:37:06 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Tue, 19 Sep 2017 15:37:06 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapnb/wapnbAction!wapgdcz_bj.dhtml?entid=CE37445CD0DC4B65B690D8FCBD5FE005&cid=7be2630eca3d4cf7949c70df3a01e373&pageNo=8&pageSize=&clear= HTTP/1.1" 200 None
+Tue, 19 Sep 2017 15:37:06 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Tue, 19 Sep 2017 15:37:06 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapnb/wapnbAction!wapgdcz_bj.dhtml?entid=CE37445CD0DC4B65B690D8FCBD5FE005&cid=7be2630eca3d4cf7949c70df3a01e373&pageNo=9&pageSize=&clear= HTTP/1.1" 200 None
+Tue, 19 Sep 2017 15:37:07 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Tue, 19 Sep 2017 15:37:07 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapnb/wapnbAction!wapgdcz_bj.dhtml?entid=CE37445CD0DC4B65B690D8FCBD5FE005&cid=7be2630eca3d4cf7949c70df3a01e373&pageNo=10&pageSize=&clear= HTTP/1.1" 200 None
+Tue, 19 Sep 2017 15:37:07 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Tue, 19 Sep 2017 15:37:07 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapnb/wapnbAction!wapgdcz_bj.dhtml?entid=CE37445CD0DC4B65B690D8FCBD5FE005&cid=7be2630eca3d4cf7949c70df3a01e373&pageNo=11&pageSize=&clear= HTTP/1.1" 200 None
+Tue, 19 Sep 2017 15:37:08 BJ_report_share.py[line:126] ERROR share error (1062, "Duplicate entry '8043a823857c34cac5e6a1860e1c6cb9' for key 'uuid'")
+Tue, 19 Sep 2017 15:37:08 Public_code.py[line:30] INFO connect is success!
+Tue, 19 Sep 2017 15:37:08 Public_code.py[line:148] ERROR update py error :not enough arguments for format string
+Tue, 19 Sep 2017 15:37:08 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Tue, 19 Sep 2017 15:37:08 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapnb/wapnbAction!wapdwtz_bj.dhtml?clear=true&cid=7be2630eca3d4cf7949c70df3a01e373&entid=CE37445CD0DC4B65B690D8FCBD5FE005 HTTP/1.1" 200 None
+Tue, 19 Sep 2017 15:37:08 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Tue, 19 Sep 2017 15:37:08 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapnb/wapnbAction!wapdwtz_bj.dhtml?entid=CE37445CD0DC4B65B690D8FCBD5FE005&cid=7be2630eca3d4cf7949c70df3a01e373&pageNo=2&pageSize=&clear= HTTP/1.1" 200 None
+Tue, 19 Sep 2017 15:37:08 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Tue, 19 Sep 2017 15:37:08 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapnb/wapnbAction!wapdwtz_bj.dhtml?entid=CE37445CD0DC4B65B690D8FCBD5FE005&cid=7be2630eca3d4cf7949c70df3a01e373&pageNo=3&pageSize=&clear= HTTP/1.1" 200 None
+Tue, 19 Sep 2017 15:37:08 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Tue, 19 Sep 2017 15:37:09 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapnb/wapnbAction!wapdwtz_bj.dhtml?entid=CE37445CD0DC4B65B690D8FCBD5FE005&cid=7be2630eca3d4cf7949c70df3a01e373&pageNo=4&pageSize=&clear= HTTP/1.1" 200 None
+Tue, 19 Sep 2017 15:37:09 BJ_report_invest.py[line:104] ERROR invest error list index out of range
+Tue, 19 Sep 2017 15:37:09 Public_code.py[line:30] INFO connect is success!
+Tue, 19 Sep 2017 15:37:09 Public_code.py[line:148] ERROR update py error :not enough arguments for format string
+Tue, 19 Sep 2017 15:37:09 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Tue, 19 Sep 2017 15:37:09 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapnb/wapnbAction!wapqyzc.dhtml?cid=7be2630eca3d4cf7949c70df3a01e373&entid=CE37445CD0DC4B65B690D8FCBD5FE005&credit_ticket=A10D01E25491664010184DCE457D1C39 HTTP/1.1" 200 None
+Tue, 19 Sep 2017 15:37:09 Public_code.py[line:30] INFO connect is success!
+Tue, 19 Sep 2017 15:37:09 Public_code.py[line:148] ERROR update py error :not enough arguments for format string
+Tue, 19 Sep 2017 15:37:09 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Tue, 19 Sep 2017 15:37:09 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapnb/wapnbAction!wapwz_bj.dhtml?clear=true&cid=7be2630eca3d4cf7949c70df3a01e373&entid=CE37445CD0DC4B65B690D8FCBD5FE005 HTTP/1.1" 200 None
+Tue, 19 Sep 2017 15:37:09 BJ_report.py[line:217] INFO report error:'lxml.etree._Element' object has no attribute 'path'

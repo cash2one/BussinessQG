@@ -1,0 +1,66 @@
+Wed, 13 Sep 2017 14:21:01 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): 127.0.0.1
+Wed, 13 Sep 2017 14:21:01 connectionpool.py[line:400] DEBUG http://127.0.0.1:8888 "GET http://qyxy.baic.gov.cn/wap/creditWapAction!view_clearInfo_wap.dhtml?reg_bus_ent_id=20e38b8b50c7d44f0150d043b6620ce2&clear=true HTTP/1.1" 200 None
+Wed, 13 Sep 2017 14:21:01 Public_code.py[line:87] INFO unknow error:list index out of range
+Wed, 13 Sep 2017 14:21:01 Public_code.py[line:29] INFO connect is success!
+Wed, 13 Sep 2017 14:21:47 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): 127.0.0.1
+Wed, 13 Sep 2017 14:21:47 connectionpool.py[line:400] DEBUG http://127.0.0.1:8888 "GET http://qyxy.baic.gov.cn/wap/creditWapAction!view_clearInfo_wap.dhtml?reg_bus_ent_id=20e38b8b50c7d44f0150d043b6620ce2&clear=true HTTP/1.1" 200 None
+Wed, 13 Sep 2017 14:21:48 Public_code.py[line:87] INFO unknow error:list index out of range
+Wed, 13 Sep 2017 14:21:48 Public_code.py[line:29] INFO connect is success!
+Wed, 13 Sep 2017 14:22:31 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): 127.0.0.1
+Wed, 13 Sep 2017 14:23:02 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): 127.0.0.1
+Wed, 13 Sep 2017 14:23:02 connectionpool.py[line:400] DEBUG http://127.0.0.1:8888 "GET http://qyxy.baic.gov.cn/wap/creditWapAction!view_clearInfo_wap.dhtml?reg_bus_ent_id=20e38b8b50c7d44f0150d043b6620ce2&clear=true HTTP/1.1" 200 None
+Wed, 13 Sep 2017 14:23:57 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): 127.0.0.1
+Wed, 13 Sep 2017 14:23:57 connectionpool.py[line:400] DEBUG http://127.0.0.1:8888 "GET http://qyxy.baic.gov.cn/wap/creditWapAction!view_clearInfo_wap.dhtml?reg_bus_ent_id=20e38b8b50c7d44f0150d043b6620ce2&clear=true HTTP/1.1" 200 None
+Wed, 13 Sep 2017 14:23:57 Public_code.py[line:87] INFO unknow error:'int' object is not iterable
+Wed, 13 Sep 2017 14:23:57 Public_code.py[line:29] INFO connect is success!
+Wed, 13 Sep 2017 14:25:41 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): 127.0.0.1
+Wed, 13 Sep 2017 14:25:41 connectionpool.py[line:400] DEBUG http://127.0.0.1:8888 "GET http://qyxy.baic.gov.cn/wap/creditWapAction!view_clearInfo_wap.dhtml?reg_bus_ent_id=20e38b8b50c7d44f0150d043b6620ce2&clear=true HTTP/1.1" 200 None
+Wed, 13 Sep 2017 14:25:42 Public_code.py[line:87] INFO unknow error:'int' object is not iterable
+Wed, 13 Sep 2017 14:25:42 Public_code.py[line:29] INFO connect is success!
+Wed, 13 Sep 2017 14:26:18 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): 127.0.0.1
+Wed, 13 Sep 2017 14:26:18 connectionpool.py[line:400] DEBUG http://127.0.0.1:8888 "GET http://qyxy.baic.gov.cn/wap/creditWapAction!view_clearInfo_wap.dhtml?reg_bus_ent_id=20e38b8b50c7d44f0150d043b6620ce2&clear=true HTTP/1.1" 200 None
+Wed, 13 Sep 2017 14:26:18 Public_code.py[line:87] INFO unknow error:'int' object is not iterable
+Wed, 13 Sep 2017 14:26:18 Public_code.py[line:29] INFO connect is success!
+Wed, 13 Sep 2017 14:27:36 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): 127.0.0.1
+Wed, 13 Sep 2017 14:27:36 connectionpool.py[line:400] DEBUG http://127.0.0.1:8888 "GET http://qyxy.baic.gov.cn/wap/creditWapAction!view_clearInfo_wap.dhtml?reg_bus_ent_id=20e38b8b50c7d44f0150d043b6620ce2&clear=true HTTP/1.1" 200 None
+Wed, 13 Sep 2017 14:41:43 Public_code.py[line:87] INFO unknow error:'int' object is not iterable
+Wed, 13 Sep 2017 14:42:19 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): 127.0.0.1
+Wed, 13 Sep 2017 14:42:19 connectionpool.py[line:400] DEBUG http://127.0.0.1:8888 "GET http://qyxy.baic.gov.cn/wap/creditWapAction!view_clearInfo_wap.dhtml?reg_bus_ent_id=20e38b8b50c7d44f0150d043b6620ce2&clear=true HTTP/1.1" 200 None
+Wed, 13 Sep 2017 14:43:05 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): 127.0.0.1
+Wed, 13 Sep 2017 14:43:05 connectionpool.py[line:400] DEBUG http://127.0.0.1:8888 "GET http://qyxy.baic.gov.cn/wap/creditWapAction!view_clearInfo_wap.dhtml?reg_bus_ent_id=20e38b8b50c7d44f0150d043b6620ce2&clear=true HTTP/1.1" 200 None
+Wed, 13 Sep 2017 14:44:19 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): 127.0.0.1
+Wed, 13 Sep 2017 14:44:19 connectionpool.py[line:400] DEBUG http://127.0.0.1:8888 "GET http://qyxy.baic.gov.cn/wap/creditWapAction!view_clearInfo_wap.dhtml?reg_bus_ent_id=20e38b8b50c7d44f0150d043b6620ce2&clear=true HTTP/1.1" 200 None
+Wed, 13 Sep 2017 14:44:19 BJ_clear.py[line:63] INFO clear error:2
+Wed, 13 Sep 2017 14:44:19 Public_code.py[line:29] INFO connect is success!
+Wed, 13 Sep 2017 14:44:19 BJ_clear.py[line:91] INFO execute clear:2
+Wed, 13 Sep 2017 14:44:19 Public_code.py[line:29] INFO connect is success!
+Wed, 13 Sep 2017 14:47:35 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): 127.0.0.1
+Wed, 13 Sep 2017 14:47:36 connectionpool.py[line:400] DEBUG http://127.0.0.1:8888 "GET http://qyxy.baic.gov.cn/wap/creditWapAction!view_clearInfo_wap.dhtml?reg_bus_ent_id=20e38b8b50c7d44f0150d043b6620ce2&clear=true HTTP/1.1" 200 None
+Wed, 13 Sep 2017 14:47:36 BJ_clear.py[line:63] INFO clear error:3
+Wed, 13 Sep 2017 14:47:36 Public_code.py[line:29] INFO connect is success!
+Wed, 13 Sep 2017 14:47:36 BJ_clear.py[line:91] INFO execute clear:3
+Wed, 13 Sep 2017 14:47:36 Public_code.py[line:29] INFO connect is success!
+Wed, 13 Sep 2017 14:49:21 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): 127.0.0.1
+Wed, 13 Sep 2017 14:49:21 connectionpool.py[line:400] DEBUG http://127.0.0.1:8888 "GET http://qyxy.baic.gov.cn/wap/creditWapAction!view_clearInfo_wap.dhtml?reg_bus_ent_id=20e38b8b50c7d44f0150d043b6620ce2&clear=true HTTP/1.1" 200 None
+Wed, 13 Sep 2017 14:49:21 BJ_clear.py[line:63] INFO clear error:3
+Wed, 13 Sep 2017 14:49:21 Public_code.py[line:29] INFO connect is success!
+Wed, 13 Sep 2017 14:49:22 BJ_clear.py[line:92] INFO execute clear:3
+Wed, 13 Sep 2017 14:49:22 Public_code.py[line:29] INFO connect is success!
+Wed, 13 Sep 2017 14:57:20 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): 127.0.0.1
+Wed, 13 Sep 2017 14:57:20 connectionpool.py[line:400] DEBUG http://127.0.0.1:8888 "GET http://qyxy.baic.gov.cn/wap/creditWapAction!view_clearInfo_wap.dhtml?reg_bus_ent_id=20e38b8b50c7d44f0150d043b6620ce2&clear=true HTTP/1.1" 200 None
+Wed, 13 Sep 2017 14:57:20 BJ_clear.py[line:63] INFO clear error:3
+Wed, 13 Sep 2017 14:57:20 Public_code.py[line:29] INFO connect is success!
+Wed, 13 Sep 2017 14:57:20 BJ_clear.py[line:92] INFO execute clear:3
+Wed, 13 Sep 2017 14:57:20 Public_code.py[line:29] INFO connect is success!
+Wed, 13 Sep 2017 14:57:52 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): 127.0.0.1
+Wed, 13 Sep 2017 14:57:52 connectionpool.py[line:400] DEBUG http://127.0.0.1:8888 "GET http://qyxy.baic.gov.cn/wap/creditWapAction!view_clearInfo_wap.dhtml?reg_bus_ent_id=20e38b8b50c7d44f0150d043b6620ce2&clear=true HTTP/1.1" 200 None
+Wed, 13 Sep 2017 14:57:52 BJ_clear.py[line:63] INFO clear error:3
+Wed, 13 Sep 2017 14:57:52 Public_code.py[line:29] INFO connect is success!
+Wed, 13 Sep 2017 14:57:52 BJ_clear.py[line:92] INFO execute clear:0
+Wed, 13 Sep 2017 14:57:52 Public_code.py[line:29] INFO connect is success!
+Wed, 13 Sep 2017 14:58:06 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): 127.0.0.1
+Wed, 13 Sep 2017 14:58:06 connectionpool.py[line:400] DEBUG http://127.0.0.1:8888 "GET http://qyxy.baic.gov.cn/wap/creditWapAction!view_clearInfo_wap.dhtml?reg_bus_ent_id=20e38b8b50c7d44f0150d043b6620ce2&clear=true HTTP/1.1" 200 None
+Wed, 13 Sep 2017 14:58:06 BJ_clear.py[line:63] INFO clear error:3
+Wed, 13 Sep 2017 14:58:06 Public_code.py[line:29] INFO connect is success!
+Wed, 13 Sep 2017 14:58:06 BJ_clear.py[line:92] INFO execute clear:0
+Wed, 13 Sep 2017 14:58:06 Public_code.py[line:29] INFO connect is success!

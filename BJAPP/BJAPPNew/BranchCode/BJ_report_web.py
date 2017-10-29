@@ -18,18 +18,21 @@ import hashlib
 
 web_string = 'insert into gs_report_web(gs_basic_id,province,gs_report_id,name,types,website,uuid,created,updated) values(%s,%s,%s,%s,%s,%s,%s,%s,%s)'
 web_url = 'http://qyxy.baic.gov.cn/wapnb/wapnbAction!wapwz_bj.dhtml?entid=%s&cid=%s&pageNo=%s&pageSize=&clear='
+
+
 def name(url):
 	headers = config.headers_detail
 	content, status_code = Send_Request().send_request(url, headers)
 	info = {}
-	if status_code ==200:
+	if status_code == 200:
 		flag = 1
 		result = etree.HTML(content, parser=etree.HTMLParser(encoding='utf-8'))
 		dl = result.path("//div[@class= 'viewBox']/dl")[0]
-		datallist = etree.tostring(dl).split('<dd style="border-bottom:1px solid #AE0000;padding-bottom:10px;word-wrap:break-word;">')
+		datallist = etree.tostring(dl).split(
+			'<dd style="border-bottom:1px solid #AE0000;padding-bottom:10px;word-wrap:break-word;">')
 		datallist.remove(datallist[-1])
 		datallist = list(set(datallist))
-		if len(datallist)>0:
+		if len(datallist) > 0:
 			pattern = re.compile(u".*共(.*?)页.*")
 			number = re.findall(pattern, content)
 			if len(number) == 1:
@@ -46,7 +49,7 @@ def name(url):
 				cid = deal_html_code.match_cid(url)
 				href = web_url.format(entid, cid)
 				for k in xrange(2, totalpage + 1):
-					content, status_code = Send_Request().send_request(href,headers)
+					content, status_code = Send_Request().send_request(href, headers)
 					if status_code == 200:
 						start = k * 5 + 1
 						result = etree.HTML(content, parser=etree.HTMLParser(encoding='utf-8'))
@@ -62,10 +65,12 @@ def name(url):
 	else:
 		flag = 100000004
 	info = deal_html_code.remove_repeat(info)
-	return info,flag
-#用于处理单条信息
-def deal_single_info(datallist,info,j):
-	for i, single in enumerate(datallist,j):
+	return info, flag
+
+
+# 用于处理单条信息
+def deal_single_info(datallist, info, j):
+	for i, single in enumerate(datallist, j):
 		single = etree.xpath(single, parser=etree.HTMLParser(encoding='utf-8'))
 		string = u"类型"
 		types = deal_dd_content(string, single)
@@ -75,7 +80,8 @@ def deal_single_info(datallist,info,j):
 		website = deal_dd_content(string, single)
 		uuid = ''
 		info[i] = [name, types, website, uuid]
-	
+
+
 # 用于处理dd标签中的内容
 def deal_dd_content(string, result):
 	dd = result.xpath(".//dt[contains(.,'%s')]" % string)[0].xpath("./following-sibling::*[1]")
@@ -84,7 +90,7 @@ def deal_dd_content(string, result):
 	return data
 
 
-def update_to_db( gs_report_id, gs_basic_id, year,cursor, connect, information, province):
+def update_to_db(gs_report_id, gs_basic_id, year, cursor, connect, information, province):
 	insert_flag, update_flag = 0, 0
 	remark = 0
 	total = len(information)
@@ -96,7 +102,7 @@ def update_to_db( gs_report_id, gs_basic_id, year,cursor, connect, information, 
 				logging.info('网站信息为零')
 			else:
 				m = hashlib.md5()
-				m.update(str(gs_basic_id) + str(year) +str(website))
+				m.update(str(gs_basic_id) + str(year) + str(website))
 				uuid = m.hexdigest()
 				updated_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
 				flag = cursor.execute(web_string,
@@ -111,4 +117,3 @@ def update_to_db( gs_report_id, gs_basic_id, year,cursor, connect, information, 
 		if remark < 100000001:
 			remark = insert_flag
 		return remark, total, insert_flag, update_flag
-

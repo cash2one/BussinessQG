@@ -122,7 +122,7 @@ class Brand:
 			return flag, total, insert_flag, update_flag
 
 
-def main(org, id, seq_id, regno, gs_basic_id ):
+def main(org, id, seq_id, regno, gs_basic_id):
 	pattern = "brand"
 	flag = Judge().update_info1(pattern, org, id, seq_id, regno, Brand, gs_basic_id)
 	

@@ -1,0 +1,6 @@
+Wed, 13 Sep 2017 15:19:03 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): 127.0.0.1
+Wed, 13 Sep 2017 15:19:04 connectionpool.py[line:400] DEBUG http://127.0.0.1:8888 "GET http://qyxy.baic.gov.cn/wap/creditWapAction!view_credit_wap.dhtml?categ_info=040301&ent_id=87F3E0BDCB4042EB9AC42F692AABC2EE&chr_id=3b9a3ece8fe24074836eb607111d866e&info_categ_name=%E8%AD%A6%E7%A4%BA%E4%BF%A1%E6%81%AF%20%3E%3E%20%E7%BB%8F%E8%90%A5%E5%BC%82%E5%B8%B8%E5%90%8D%E5%BD%95 HTTP/1.1" 200 None
+Wed, 13 Sep 2017 15:19:04 BJ_except.py[line:74] INFO except total:1
+Wed, 13 Sep 2017 15:19:04 Public_code.py[line:29] INFO connect is success!
+Wed, 13 Sep 2017 15:19:04 BJ_except.py[line:105] INFO excute except :1
+Wed, 13 Sep 2017 15:19:04 Public_code.py[line:29] INFO connect is success!

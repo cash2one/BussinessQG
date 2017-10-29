@@ -27,65 +27,67 @@ update_change_py = 'update gs_py set gs_py_id = %s,gs_change = %s,updated = %s w
 UA = random.choice(config.USER_AGENTS)
 headers = config.headers_detail
 headers["User-Agent"] = UA
+
+
 # print UA
 class Change:
-	def name(self,url):
+	def name(self, url):
 		info = {}
 		
-		result = requests.get(url,headers=headers,timeout = 5)
+		result = requests.get(url, headers=headers, timeout=5)
 		status_code = result.status_code
 		pattern = re.compile(u".*无查询结果.*|.*查询结果较多.*")
 		match = re.findall(pattern, result.content)
-		if len(match) >0 or chardet.detect(result.content)["encoding"]!='utf-8':
-			status_code =404
-		if status_code ==200:
+		if len(match) > 0 or chardet.detect(result.content)["encoding"] != 'utf-8':
+			status_code = 404
+		if status_code == 200:
 			flag = 1
 			cookies = result.cookies
 			content = result.content
-			result = etree.HTML(content,parser=etree.HTMLParser(encoding='utf-8'))
+			result = etree.HTML(content, parser=etree.HTMLParser(encoding='utf-8'))
 			ddlist = result.xpath(".//dl/dd")
-			for i,single in enumerate(ddlist):
+			for i, single in enumerate(ddlist):
 				onclick = single.xpath("./@onclick")[0]
 				if "alt_itemenName" in onclick:
-					ddlist[i] = onclick.replace('window','zindow')
+					ddlist[i] = onclick.replace('window', 'zindow')
 				else:
 					ddlist[i] = onclick
 			ddlist.sort()
-			for i,single in enumerate(ddlist):
+			for i, single in enumerate(ddlist):
 				pattern = re.compile(".*href='(.*?)'")
 				# 匹配链接
 				href = config.host + re.findall(pattern, single)[0]
 				# time.sleep(0.5)
-				self.deal_single_info(href,i,info,cookies)
+				self.deal_single_info(href, i, info, cookies)
 		else:
 			flag = 100000004
-		return info,flag
-				
-	def deal_single_info(self,href,i,info,cookies):
-		result = requests.get(href,headers=headers,cookies = cookies,timeout = 5)
+		return info, flag
+	
+	def deal_single_info(self, href, i, info, cookies):
+		result = requests.get(href, headers=headers, cookies=cookies, timeout=5)
 		status_code = result.status_code
-		if status_code==200:
+		if status_code == 200:
 			content = result.content
-			result = etree.HTML(content,parser=etree.HTMLParser(encoding='utf-8'))
+			result = etree.HTML(content, parser=etree.HTMLParser(encoding='utf-8'))
 			types = "变更"
-			#变更分为带表格的变更事项和不带表格的变更事项
+			# 变更分为带表格的变更事项和不带表格的变更事项
 			string = u'变更时间'
-			plist = result.xpath(".//p[contains(.,'%s')]"%string)
-			#处理不带表格的信息
+			plist = result.xpath(".//p[contains(.,'%s')]" % string)
+			# 处理不带表格的信息
 			if len(plist) == 0:
 				ddlist = result.xpath(".//dl/dd/text()")
 				change_date = deal_html_code.remove_symbol(ddlist[0])
 				item = deal_html_code.remove_symbol(ddlist[1])
 				content_before = deal_html_code.remove_symbol(ddlist[2])
 				content_after = deal_html_code.remove_symbol(ddlist[3])
-				info[i] = [types,change_date,item,content_before,content_after]
-				
-			elif len(plist)==1:
+				info[i] = [types, change_date, item, content_before, content_after]
+			
+			elif len(plist) == 1:
 				change_date, item, change_before, change_after = self.deal_table_info(result)
-				info[i] = [types,change_date,item,change_before, change_after]
-				
-	#用于处理带有表格的变更信息
-	def deal_table_info(self,result):
+				info[i] = [types, change_date, item, change_before, change_after]
+	
+	# 用于处理带有表格的变更信息
+	def deal_table_info(self, result):
 		string = u'变更时间'
 		plist = result.xpath(".//p[contains(.,'%s')]" % string)[0]
 		item = plist.xpath("./following-sibling::*[1]")[0]
@@ -98,12 +100,13 @@ class Change:
 		elif u"实缴的出资额" in item:
 			item = "投资人"
 		string = u'变更前'
-		change_before = self.deal_tr_content(result,string)
+		change_before = self.deal_tr_content(result, string)
 		string = u"变更后"
-		change_after = self.deal_tr_content(result,string)
-		return change_date,item,change_before,change_after
-	#用于对表格中tr的内容进行处理
-	def deal_tr_content(self,result,string):
+		change_after = self.deal_tr_content(result, string)
+		return change_date, item, change_before, change_after
+	
+	# 用于对表格中tr的内容进行处理
+	def deal_tr_content(self, result, string):
 		before_table = result.xpath(".//table[contains(.,'%s')]" % string)[0]
 		trlist = before_table.xpath("./tr")
 		trlist.remove(trlist[0])
@@ -118,7 +121,8 @@ class Change:
 			else:
 				string = string + "||" + text
 		return string
-	def update_to_db(self,info,gs_basic_id):
+	
+	def update_to_db(self, info, gs_basic_id):
 		HOST, USER, PASSWD, DB, PORT = config.HOST, config.USER, config.PASSWD, config.DB, config.PORT
 		connect, cursor = Connect_to_DB().ConnectDB(HOST, USER, PASSWD, DB, PORT)
 		insert_flag, update_flag = 0, 0
@@ -127,8 +131,8 @@ class Change:
 		logging.info('change total:%s' % total)
 		try:
 			for key in info.keys():
-				types,change_date = info[key][0],info[key][1]
-				item, content_before, content_after = info[key][2],info[key][3],info[key][4]
+				types, change_date = info[key][0], info[key][1]
+				item, content_before, content_after = info[key][2], info[key][3], info[key][4]
 				updated_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
 				count = cursor.execute(select_string, (gs_basic_id, item, change_date))
 				if count == 0:
@@ -146,7 +150,7 @@ class Change:
 					if remark == 0:
 						source = 0
 						row_count = cursor.execute(insert_string, (
-							gs_basic_id, types, item, content_before, content_after, change_date,source, updated_time))
+							gs_basic_id, types, item, content_before, content_after, change_date, source, updated_time))
 						insert_flag += row_count
 						connect.commit()
 		except Exception, e:
@@ -160,14 +164,17 @@ class Change:
 				flag = insert_flag
 				logging.info('execute change:%s' % flag)
 			return flag, total, insert_flag, update_flag
-def main(gs_py_id,gs_basic_id,url):
-	Log().found_log(gs_py_id,gs_basic_id)
+
+
+def main(gs_py_id, gs_basic_id, url):
+	Log().found_log(gs_py_id, gs_basic_id)
 	name = 'change'
 	flag = Judge_status().judge(gs_basic_id, name, Change, url)
-	Judge_status().update_py(gs_py_id,update_change_py,flag)
+	Judge_status().update_py(gs_py_id, update_change_py, flag)
+
 
 if __name__ == '__main__':
 	print "The Program start time:", time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
 	start = time.time()
-	main(gs_py_id,gs_basic_id,url)
+	main(gs_py_id, gs_basic_id, url)
 	print "The Program end time:", time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()), "[%s]" % (time.time() - start)

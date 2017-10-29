@@ -13,9 +13,16 @@ from PublicCode.Public_Code import Judge
 
 import time
 import logging
+import sys
+reload(sys)
+sys.setdefaultencoding('utf-8')
+Type = sys.getfilesystemencoding()
 
 
 #信息类型
+
+
+
 
 insert_string = 'insert into gs_change(gs_basic_id,types,item,content_before,content_after,change_date,source,updated)values(%s,%s,%s,%s,%s,%s,%s,%s)'
 select_string = 'select gs_basic_id,content_after from gs_change where gs_basic_id = %s and item = %s and change_date = %s and source =0'
@@ -48,9 +55,9 @@ class Change:
 				updated_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
 				count = cursor.execute(select_string,(gs_basic_id,item,change_date))
 				if count == 0:
-					# source = 0
+					source = 1
 					row_count = cursor.execute(insert_string, (
-								gs_basic_id, types, item, content_before, content_after, change_date,updated_time))
+								gs_basic_id, types, item, content_before, content_after, change_date,source,updated_time))
 					insert_flag += row_count
 					connect.commit()
 				elif count >= 1:

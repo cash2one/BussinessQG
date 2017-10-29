@@ -14,6 +14,10 @@ from PublicCode.Public_Code import Judge
 import logging
 import hashlib
 import time
+import sys
+reload(sys)
+sys.setdefaultencoding('utf-8')
+Type = sys.getfilesystemencoding()
 
 permit_string = 'insert into gs_report_permit(gs_basic_id,gs_report_id,uuid,province,types,valto,created,updated)' \
                 'values(%s,%s,%s,%s,%s,%s,%s,%s)'

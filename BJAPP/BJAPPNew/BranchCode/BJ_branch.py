@@ -23,35 +23,38 @@ gs_py_id = 1
 branch_string = 'insert into gs_branch(gs_basic_id,id,code,name,gov_dept,updated)values(%s,%s,%s,%s,%s,%s)'
 select_string = 'select * from gs_branch where id = %s and gs_basic_id =%s'
 update_branch_py = 'update gs_py set gs_py_id= %s, gs_branch = %s,updated = %s where gs_py_id = %s'
+
+
 class Branch:
-	#用于获取网页信息
-	def name(self,url):
+	# 用于获取网页信息
+	def name(self, url):
 		info = {}
 		headers = config.headers_detail
-		content,status_code = Send_Request().send_request(url,headers)
-		if status_code ==200:
+		content, status_code = Send_Request().send_request(url, headers)
+		if status_code == 200:
 			flag = 1
-			result = etree.HTML(content,parser=etree.HTMLParser(encoding='utf-8'))
+			result = etree.HTML(content, parser=etree.HTMLParser(encoding='utf-8'))
 			# total = result.xpath("//table[@id='tableIdStyle']//div/text()")[0]
 			# pattern = re.compile(u".*记录总数(.*?)条.*")
 			# number = re.findall(pattern,total)
 			# if len(number)==1:
 			# 	temp =int(number[0])
 			trlist = result.xpath("//table[@id = 'tableIdStyle']//tr")
-			for i,single in enumerate(trlist):
+			for i, single in enumerate(trlist):
 				tdlist = single.xpath("./td")
-				if len(tdlist)==0 or len(tdlist)<4:
+				if len(tdlist) == 0 or len(tdlist) < 4:
 					pass
 				else:
 					name = deal_html_code.remove_symbol(tdlist[1].xpath("string(.)"))
 					code = deal_html_code.remove_symbol(tdlist[2].xpath("string(.)"))
 					gov_dept = deal_html_code.remove_symbol(tdlist[5].xpath("string(.)"))
-					info[i] = [name,code,gov_dept]
+					info[i] = [name, code, gov_dept]
 		else:
 			flag = 100000004
-		return info,flag
-	#将获取到的数据插入到数据库中
-	def update_to_db(self,info,gs_basic_id):
+		return info, flag
+	
+	# 将获取到的数据插入到数据库中
+	def update_to_db(self, info, gs_basic_id):
 		insert_flag = 0
 		update_flag = 0
 		flag = 0
@@ -60,7 +63,7 @@ class Branch:
 			HOST, USER, PASSWD, DB, PORT = config.HOST, config.USER, config.PASSWD, config.DB, config.PORT
 			connect, cursor = Connect_to_DB().ConnectDB(HOST, USER, PASSWD, DB, PORT)
 			for key in info.keys():
-				name,code,gov_dept = info[key][0],info[key][1],info[key][2]
+				name, code, gov_dept = info[key][0], info[key][1], info[key][2]
 				m = hashlib.md5()
 				m.update(str(gs_basic_id) + str(name))
 				id = m.hexdigest()
@@ -70,8 +73,8 @@ class Branch:
 					rows_count = cursor.execute(branch_string, (gs_basic_id, id, code, name, gov_dept, updated_time))
 					insert_flag += rows_count
 					connect.commit()
-		except Exception,e:
-			logging.info("update branch error:%s"%e)
+		except Exception, e:
+			logging.info("update branch error:%s" % e)
 			flag = 100000006
 		finally:
 			cursor.close()
@@ -79,14 +82,14 @@ class Branch:
 			
 			if flag < 100000001:
 				flag = insert_flag
-			return flag,total,insert_flag, update_flag
-def main(gs_py_id,gs_basic_id,url):
-	Log().found_log(gs_py_id,gs_basic_id)
+			return flag, total, insert_flag, update_flag
+
+
+def main(gs_py_id, gs_basic_id, url):
+	Log().found_log(gs_py_id, gs_basic_id)
 	name = 'branch'
-	flag = Judge_status().judge(gs_basic_id,name,Branch,url)
-	Judge_status().update_py(gs_py_id,update_branch_py,flag)
-	
+	flag = Judge_status().judge(gs_basic_id, name, Branch, url)
+	Judge_status().update_py(gs_py_id, update_branch_py, flag)
 
 # if __name__ == '__main__':
 #     main(gs_py_id,gs_basic_id,url)
-

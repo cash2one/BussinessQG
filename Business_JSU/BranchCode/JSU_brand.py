@@ -29,11 +29,11 @@ select_brand = 'select ia_brand_id from ia_brand where ia_zch = "%s"'
 update_brand = 'update ia_brand set ia_brand_id = %s,gs_basic_id = %s,ia_flh = %s, ia_zcgg = %s ,ia_servicelist = %s, ia_zyqqx = %s,ia_zcdate = %s,img_url =%s,updated = %s where ia_brand_id = %s'
 update_brand_py = 'update gs_py set gs_py_id = %s ,gs_brand = %s,updated = %s where gs_py_id = %s'
 
-gs_basic_id = '1'
-org = '78AB4DDC058110BDAA3B82E7C2990A07'
-id = '4D6557472C5E5A088C887D721414358B'
-seq_id = 'C486462EC151CB99F84896EC5D0A4AD4'
-regno = '57CA52C4B769FC45D75A6F0E96A0908D04E5149259A57FABF1480E3886B8F6D5'
+# gs_basic_id = '1'
+# org = '78AB4DDC058110BDAA3B82E7C2990A07'
+# id = '4D6557472C5E5A088C887D721414358B'
+# seq_id = 'C486462EC151CB99F84896EC5D0A4AD4'
+# regno = '57CA52C4B769FC45D75A6F0E96A0908D04E5149259A57FABF1480E3886B8F6D5'
 class Brand:
 	def __init__(self,url,headers):
 		self.url = url

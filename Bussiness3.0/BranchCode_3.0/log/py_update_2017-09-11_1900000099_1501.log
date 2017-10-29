@@ -1,0 +1,43 @@
+Mon, 11 Sep 2017 09:08:28 Public_code.py[line:28] INFO connect is success!
+Mon, 11 Sep 2017 09:08:28 Public_code.py[line:62] INFO there remains 0 times to send requests 
+Mon, 11 Sep 2017 09:08:28 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cn
+Mon, 11 Sep 2017 09:08:28 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "GET /%7Ba8cGdSp6ifXpkAR8qkKIOpkfNYcK9YfPrCXIeYnQa1sda20_lWPh51pwIpBRvdsNr0fRVS7S_BikiJmAbMDk-yW3TzQHYWvKCzeQ4neGvuIdZRcD4pb-OhhQtRn9h7-CXqavHOrOaPG18xlGjfgO3A-1505091743115%7D HTTP/1.1" 200 None
+Mon, 11 Sep 2017 09:08:28 Public_code.py[line:65] INFO the status_code is 200 
+Mon, 11 Sep 2017 09:08:28 Public_code.py[line:62] INFO there remains 0 times to send requests 
+Mon, 11 Sep 2017 09:08:28 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cn
+Mon, 11 Sep 2017 09:08:29 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "GET /%7Ba8cGdSp6ifXpkAR8qkKIOpkfNYcK9YfPrCXIeYnQa1sda20_lWPh51pwIpBRvdsNr0fRVS7S_BikiJmAbMDk-yW3TzQHYWvKCzeQ4neGvuIdZRcD4pb-OhhQtRn9h7-CXqavHOrOaPG18xlGjfgO3A-1505091743115%7D HTTP/1.1" 200 None
+Mon, 11 Sep 2017 09:08:29 Public_code.py[line:65] INFO the status_code is 200 
+Mon, 11 Sep 2017 09:08:29 Public_code.py[line:109] INFO share: 2
+Mon, 11 Sep 2017 09:08:29 QGGS_shareholder.py[line:80] INFO 无 shareholder 详情信息
+Mon, 11 Sep 2017 09:08:29 QGGS_shareholder.py[line:80] INFO 无 shareholder 详情信息
+Mon, 11 Sep 2017 09:08:29 Public_code.py[line:28] INFO connect is success!
+Mon, 11 Sep 2017 09:08:29 QGGS_shareholder.py[line:225] ERROR shareholder error:local variable 'ps_basic_id' referenced before assignment
+Mon, 11 Sep 2017 09:08:29 Public_code.py[line:28] INFO connect is success!
+Mon, 11 Sep 2017 09:11:18 Public_code.py[line:28] INFO connect is success!
+Mon, 11 Sep 2017 09:11:18 Public_code.py[line:62] INFO there remains 0 times to send requests 
+Mon, 11 Sep 2017 09:11:18 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cn
+Mon, 11 Sep 2017 09:11:18 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "GET /%7Ba8cGdSp6ifXpkAR8qkKIOpkfNYcK9YfPrCXIeYnQa1sda20_lWPh51pwIpBRvdsNr0fRVS7S_BikiJmAbMDk-yW3TzQHYWvKCzeQ4neGvuIdZRcD4pb-OhhQtRn9h7-CXqavHOrOaPG18xlGjfgO3A-1505091743115%7D HTTP/1.1" 200 None
+Mon, 11 Sep 2017 09:11:18 Public_code.py[line:65] INFO the status_code is 200 
+Mon, 11 Sep 2017 09:11:18 Public_code.py[line:62] INFO there remains 0 times to send requests 
+Mon, 11 Sep 2017 09:11:18 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cn
+Mon, 11 Sep 2017 09:11:18 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "GET /%7Ba8cGdSp6ifXpkAR8qkKIOpkfNYcK9YfPrCXIeYnQa1sda20_lWPh51pwIpBRvdsNr0fRVS7S_BikiJmAbMDk-yW3TzQHYWvKCzeQ4neGvuIdZRcD4pb-OhhQtRn9h7-CXqavHOrOaPG18xlGjfgO3A-1505091743115%7D HTTP/1.1" 200 None
+Mon, 11 Sep 2017 09:11:18 Public_code.py[line:65] INFO the status_code is 200 
+Mon, 11 Sep 2017 09:11:18 Public_code.py[line:109] INFO share: 2
+Mon, 11 Sep 2017 09:11:18 QGGS_shareholder.py[line:80] INFO 无 shareholder 详情信息
+Mon, 11 Sep 2017 09:11:18 QGGS_shareholder.py[line:80] INFO 无 shareholder 详情信息
+Mon, 11 Sep 2017 09:11:18 Public_code.py[line:28] INFO connect is success!
+Mon, 11 Sep 2017 09:11:18 Public_code.py[line:28] INFO connect is success!
+Mon, 11 Sep 2017 09:11:25 Public_code.py[line:28] INFO connect is success!
+Mon, 11 Sep 2017 09:11:25 Public_code.py[line:62] INFO there remains 0 times to send requests 
+Mon, 11 Sep 2017 09:11:25 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cn
+Mon, 11 Sep 2017 09:11:26 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "GET /%7Ba8cGdSp6ifXpkAR8qkKIOpkfNYcK9YfPrCXIeYnQa1sda20_lWPh51pwIpBRvdsNr0fRVS7S_BikiJmAbMDk-yW3TzQHYWvKCzeQ4neGvuIdZRcD4pb-OhhQtRn9h7-CXqavHOrOaPG18xlGjfgO3A-1505091743115%7D HTTP/1.1" 200 None
+Mon, 11 Sep 2017 09:11:26 Public_code.py[line:65] INFO the status_code is 200 
+Mon, 11 Sep 2017 09:11:26 Public_code.py[line:62] INFO there remains 0 times to send requests 
+Mon, 11 Sep 2017 09:11:26 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cn
+Mon, 11 Sep 2017 09:11:26 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "GET /%7Ba8cGdSp6ifXpkAR8qkKIOpkfNYcK9YfPrCXIeYnQa1sda20_lWPh51pwIpBRvdsNr0fRVS7S_BikiJmAbMDk-yW3TzQHYWvKCzeQ4neGvuIdZRcD4pb-OhhQtRn9h7-CXqavHOrOaPG18xlGjfgO3A-1505091743115%7D HTTP/1.1" 200 None
+Mon, 11 Sep 2017 09:11:26 Public_code.py[line:65] INFO the status_code is 200 
+Mon, 11 Sep 2017 09:11:26 Public_code.py[line:109] INFO share: 2
+Mon, 11 Sep 2017 09:11:26 QGGS_shareholder.py[line:80] INFO 无 shareholder 详情信息
+Mon, 11 Sep 2017 09:11:26 QGGS_shareholder.py[line:80] INFO 无 shareholder 详情信息
+Mon, 11 Sep 2017 09:11:26 Public_code.py[line:28] INFO connect is success!
+Mon, 11 Sep 2017 09:11:26 Public_code.py[line:28] INFO connect is success!

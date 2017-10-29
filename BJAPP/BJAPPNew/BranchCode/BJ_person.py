@@ -15,6 +15,7 @@ from PublicCode.Public_code import Log
 from PublicCode.Public_code import Send_Request
 import re
 import logging
+
 url = 'http://qyxy.baic.gov.cn/xycx/queryCreditAction!queryTzrxx_all.dhtml?reg_bus_ent_id=0CD1263D6BB2009EE053A0630264009E&moreInfo=&SelectPageSize=100&EntryPageNo=1&pageNo=1&pageSize=100&clear=true'
 gs_basic_id = '1'
 gs_py_id = '1'
@@ -24,14 +25,16 @@ person_string = 'update gs_person set gs_person_id = %s,position = %s,sex = %s,u
 update_person_py = 'update gs_py set gs_py_id = %s,gs_person = %s,updated = %s where  gs_py_id = %s '
 update_string = 'update gs_person set quit = 1 where gs_basic_id = %s '
 update_quit = 'update gs_person set quit = 0,updated = %s where gs_basic_id = %s and gs_person_id = %s'
+
+
 class Person:
-	def name(self,url):
+	def name(self, url):
 		info = {}
 		headers = config.headers_detail
 		content, status_code = Send_Request().send_request(url, headers)
-		if status_code ==200:
+		if status_code == 200:
 			flag = 1
-			result = etree.HTML(content,parser=etree.HTMLParser(encoding='utf-8'))
+			result = etree.HTML(content, parser=etree.HTMLParser(encoding='utf-8'))
 			total = result.xpath("//table[@id='tableIdStyle']//div/text()")[0]
 			pattern = re.compile(u".*记录总数(.*?)条.*")
 			number = re.findall(pattern, total)
@@ -50,9 +53,10 @@ class Person:
 					info[i] = [name, position, sex]
 		else:
 			flag = 100000004
-		return info,flag
-	def update_to_db(self,info,gs_basic_id):
-		insert_flag ,update_flag = 0,0
+		return info, flag
+	
+	def update_to_db(self, info, gs_basic_id):
+		insert_flag, update_flag = 0, 0
 		total = len(info)
 		remark = 0
 		try:
@@ -66,7 +70,7 @@ class Person:
 			HOST, USER, PASSWD, DB, PORT = config.HOST, config.USER, config.PASSWD, config.DB, config.PORT
 			connect, cursor = Connect_to_DB().ConnectDB(HOST, USER, PASSWD, DB, PORT)
 			for key in info.keys():
-				name,position,sex = info[key][0],info[key][1],info[key][2]
+				name, position, sex = info[key][0], info[key][1], info[key][2]
 				rows = cursor.execute(select_string, (gs_basic_id, name))
 				if int(rows) >= 1:
 					sign = 0
@@ -79,14 +83,15 @@ class Person:
 						# update_flag += count
 						elif pos == None and position != None:
 							updated_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
-							count = cursor.execute(person_string, (gs_person_id, position,sex, updated_time, gs_person_id))
+							count = cursor.execute(person_string,
+												   (gs_person_id, position, sex, updated_time, gs_person_id))
 							update_flag += count
 							connect.commit()
 							sign = 0
 					if sign == 0:
 						source = 0
 						updated_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
-						count = cursor.execute(insert_string, (gs_basic_id, name, position,sex, source, updated_time))
+						count = cursor.execute(insert_string, (gs_basic_id, name, position, sex, source, updated_time))
 						insert_flag += count
 						connect.commit()
 					else:
@@ -95,26 +100,28 @@ class Person:
 					source = 0
 					updated_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
 					
-					count = cursor.execute(insert_string, (gs_basic_id, name, position, sex,source, updated_time))
+					count = cursor.execute(insert_string, (gs_basic_id, name, position, sex, source, updated_time))
 					insert_flag += count
 					connect.commit()
-			
+		
 		except Exception, e:
 			print e
 			remark = 100000006
 			logging.error("person error: %s" % e)
-	
+		
 		finally:
 			cursor.close()
 			connect.close()
 			if remark < 100000001:
 				flag = insert_flag + update_flag
 				remark = flag
-			return remark,total, insert_flag, update_flag
-def main(gs_py_id,gs_basic_id,url):
-	Log().found_log(gs_py_id,gs_basic_id)
+			return remark, total, insert_flag, update_flag
+
+
+def main(gs_py_id, gs_basic_id, url):
+	Log().found_log(gs_py_id, gs_basic_id)
 	name = 'person'
 	flag = Judge_status().judge(gs_basic_id, name, Person, url)
 	
-# if __name__ == '__main__':
-#     main(gs_py_id,gs_basic_id,url)
+	# if __name__ == '__main__':
+	#     main(gs_py_id,gs_basic_id,url)

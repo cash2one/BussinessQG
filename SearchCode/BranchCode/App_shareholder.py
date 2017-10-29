@@ -15,7 +15,7 @@ reload(sys)
 sys.setdefaultencoding('utf-8')
 Type = sys.getfilesystemencoding()
 
-share_string = 'insert into gs_shareholder(gs_basic_id,name,cate,types,license_type,license_code, true_amount,reg_amount,ta_ways,ta_date,country,address,iv_basic_id,ps_basic_id,updated)values(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)'
+share_string = 'insert into gs_shareholder(gs_basic_id,name,cate,types,license_type,license_code, true_amount,reg_amount,ta_ways,ta_date,country,address,iv_basic_id,ps_basic_id,updated)values(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)'
 select_string = 'select gs_shareholder_id from gs_shareholder where gs_basic_id = %s and name = %s and types = %s and cate = %s'
 select_name = 'select gs_basic_id from gs_unique where name = "%s"'
 select_ps = 'select ps_basic_id,gs_basic_id from ps_basic where name = "%s"'
@@ -51,7 +51,12 @@ class Share:
                     license_type = single["cetfTypeInterpreted"]
                     license_code = single["cetfId"]
                 encrypted = single["encrypted"]
-                cetfType = single["cetfType"]
+                if "cetfType" in single.keys():
+                    cetfType = single["cetfType"]
+                elif "bLicType" in single.keys():
+                    cetfType = single["bLicType"]
+                else:
+                    cetfType = ''
                 if "subconAm" in single.keys():
                     reg_amount = single["subconAm"]
                 else:

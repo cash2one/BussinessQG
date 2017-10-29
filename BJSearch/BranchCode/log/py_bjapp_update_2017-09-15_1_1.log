@@ -1,0 +1,632 @@
+Fri, 15 Sep 2017 07:35:10 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Fri, 15 Sep 2017 07:35:11 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!view_bgxx_wap.dhtml?reg_bus_ent_id=622E95E2C9AC440EB5F084373F7218D6&clear=true HTTP/1.1" 200 None
+Fri, 15 Sep 2017 07:35:11 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Fri, 15 Sep 2017 07:35:16 Public_code.py[line:158] INFO unknow error:HTTPConnectionPool(host='qyxy.baic.gov.cn', port=80): Max retries exceeded with url: /wap/creditWapAction!view_bgxx_wap.dhtml?reg_bus_ent_id=622E95E2C9AC440EB5F084373F7218D6&bgxxFlag=bgxxFlag&alt_itemenName=%E7%BB%8F%E8%90%A5%E8%8C%83%E5%9B%B4&approve_date=2013-04-17 (Caused by ConnectTimeoutError(<requests.packages.urllib3.connection.HTTPConnection object at 0x0000000004989C50>, 'Connection to qyxy.baic.gov.cn timed out. (connect timeout=5)'))
+Fri, 15 Sep 2017 07:35:16 Public_code.py[line:29] INFO connect is success!
+Fri, 15 Sep 2017 07:35:22 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Fri, 15 Sep 2017 07:35:23 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!view_bgxx_wap.dhtml?reg_bus_ent_id=622E95E2C9AC440EB5F084373F7218D6&clear=true HTTP/1.1" 200 None
+Fri, 15 Sep 2017 07:35:23 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Fri, 15 Sep 2017 07:35:28 Public_code.py[line:158] INFO unknow error:HTTPConnectionPool(host='qyxy.baic.gov.cn', port=80): Max retries exceeded with url: /wap/creditWapAction!view_bgxx_wap.dhtml?reg_bus_ent_id=622E95E2C9AC440EB5F084373F7218D6&bgxxFlag=bgxxFlag&alt_itemenName=%E7%BB%8F%E8%90%A5%E8%8C%83%E5%9B%B4&approve_date=2013-04-17 (Caused by ConnectTimeoutError(<requests.packages.urllib3.connection.HTTPConnection object at 0x000000000440BC50>, 'Connection to qyxy.baic.gov.cn timed out. (connect timeout=5)'))
+Fri, 15 Sep 2017 07:35:28 Public_code.py[line:29] INFO connect is success!
+Fri, 15 Sep 2017 07:35:56 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Fri, 15 Sep 2017 07:35:56 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!view_bgxx_wap.dhtml?reg_bus_ent_id=622E95E2C9AC440EB5F084373F7218D6&clear=true HTTP/1.1" 200 None
+Fri, 15 Sep 2017 07:35:56 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Fri, 15 Sep 2017 07:35:56 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!view_bgxx_wap.dhtml?reg_bus_ent_id=622E95E2C9AC440EB5F084373F7218D6&bgxxFlag=bgxxFlag&alt_itemenName=%E7%BB%8F%E8%90%A5%E8%8C%83%E5%9B%B4&approve_date=2013-04-17 HTTP/1.1" 200 None
+Fri, 15 Sep 2017 07:35:56 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Fri, 15 Sep 2017 07:35:57 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!view_bgxx_wap.dhtml?reg_bus_ent_id=622E95E2C9AC440EB5F084373F7218D6&bgxxFlag=bgxxFlag&alt_itemenName=%E7%BB%8F%E8%90%A5%E8%8C%83%E5%9B%B4&approve_date=2014-12-25 HTTP/1.1" 200 None
+Fri, 15 Sep 2017 07:35:58 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Fri, 15 Sep 2017 07:36:03 Public_code.py[line:158] INFO unknow error:HTTPConnectionPool(host='qyxy.baic.gov.cn', port=80): Max retries exceeded with url: /wap/creditWapAction!view_bgxx_wap.dhtml?reg_bus_ent_id=622E95E2C9AC440EB5F084373F7218D6&bgxxFlag=bgxxFlag&alt_itemenName=%E7%BB%8F%E8%90%A5%E8%8C%83%E5%9B%B4&approve_date=2016-05-18 (Caused by ConnectTimeoutError(<requests.packages.urllib3.connection.HTTPConnection object at 0x00000000048D3F98>, 'Connection to qyxy.baic.gov.cn timed out. (connect timeout=5)'))
+Fri, 15 Sep 2017 07:36:03 Public_code.py[line:29] INFO connect is success!
+Fri, 15 Sep 2017 07:38:53 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Fri, 15 Sep 2017 07:38:53 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!view_bgxx_wap.dhtml?reg_bus_ent_id=622E95E2C9AC440EB5F084373F7218D6&clear=true HTTP/1.1" 200 None
+Fri, 15 Sep 2017 07:38:53 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Fri, 15 Sep 2017 07:38:53 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!view_bgxx_wap.dhtml?reg_bus_ent_id=622E95E2C9AC440EB5F084373F7218D6&bgxxFlag=bgxxFlag&alt_itemenName=%E7%BB%8F%E8%90%A5%E8%8C%83%E5%9B%B4&approve_date=2013-04-17 HTTP/1.1" 200 None
+Fri, 15 Sep 2017 07:38:53 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Fri, 15 Sep 2017 07:38:53 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!view_bgxx_wap.dhtml?reg_bus_ent_id=622E95E2C9AC440EB5F084373F7218D6&bgxxFlag=bgxxFlag&alt_itemenName=%E7%BB%8F%E8%90%A5%E8%8C%83%E5%9B%B4&approve_date=2014-12-25 HTTP/1.1" 200 None
+Fri, 15 Sep 2017 07:38:53 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Fri, 15 Sep 2017 07:38:54 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!view_bgxx_wap.dhtml?reg_bus_ent_id=622E95E2C9AC440EB5F084373F7218D6&bgxxFlag=bgxxFlag&alt_itemenName=%E7%BB%8F%E8%90%A5%E8%8C%83%E5%9B%B4&approve_date=2016-05-18 HTTP/1.1" 200 None
+Fri, 15 Sep 2017 07:38:54 Public_code.py[line:29] INFO connect is success!
+Fri, 15 Sep 2017 07:38:54 BJ_change.py[line:124] INFO change total:3
+Fri, 15 Sep 2017 07:38:54 BJ_change.py[line:158] INFO execute change:3
+Fri, 15 Sep 2017 07:38:54 Public_code.py[line:29] INFO connect is success!
+Fri, 15 Sep 2017 07:39:29 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Fri, 15 Sep 2017 07:39:29 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!view_bgxx_wap.dhtml?reg_bus_ent_id=622E95E2C9AC440EB5F084373F7218D6&clear=true HTTP/1.1" 200 None
+Fri, 15 Sep 2017 07:39:29 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Fri, 15 Sep 2017 07:39:29 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!view_bgxx_wap.dhtml?reg_bus_ent_id=622E95E2C9AC440EB5F084373F7218D6&bgxxFlag=bgxxFlag&alt_itemenName=%E7%BB%8F%E8%90%A5%E8%8C%83%E5%9B%B4&approve_date=2013-04-17 HTTP/1.1" 200 None
+Fri, 15 Sep 2017 07:39:30 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Fri, 15 Sep 2017 07:39:30 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!view_bgxx_wap.dhtml?reg_bus_ent_id=622E95E2C9AC440EB5F084373F7218D6&bgxxFlag=bgxxFlag&alt_itemenName=%E7%BB%8F%E8%90%A5%E8%8C%83%E5%9B%B4&approve_date=2014-12-25 HTTP/1.1" 200 None
+Fri, 15 Sep 2017 07:39:30 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Fri, 15 Sep 2017 07:39:35 Public_code.py[line:158] INFO unknow error:HTTPConnectionPool(host='qyxy.baic.gov.cn', port=80): Max retries exceeded with url: /wap/creditWapAction!view_bgxx_wap.dhtml?reg_bus_ent_id=622E95E2C9AC440EB5F084373F7218D6&bgxxFlag=bgxxFlag&alt_itemenName=%E7%BB%8F%E8%90%A5%E8%8C%83%E5%9B%B4&approve_date=2016-05-18 (Caused by ConnectTimeoutError(<requests.packages.urllib3.connection.HTTPConnection object at 0x0000000003F2BF60>, 'Connection to qyxy.baic.gov.cn timed out. (connect timeout=5)'))
+Fri, 15 Sep 2017 07:39:35 Public_code.py[line:29] INFO connect is success!
+Fri, 15 Sep 2017 08:06:19 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Fri, 15 Sep 2017 08:06:19 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!view_bgxx_wap.dhtml?reg_bus_ent_id=CE37445CD0DC4B65B690D8FCBD5FE005&clear=true HTTP/1.1" 200 None
+Fri, 15 Sep 2017 08:06:20 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Fri, 15 Sep 2017 08:06:25 Public_code.py[line:159] INFO unknow error:HTTPConnectionPool(host='qyxy.baic.gov.cn', port=80): Max retries exceeded with url: /wap/creditWapAction!tzrBgxx.dhtml?old_reg_his_id=20e38b8b3ea7a311013eabd15d7908a9&new_reg_his_id=20e38b8c40c77fb80140e81dcbec1949&clear=true&chr_id=83f2f02ded244b64bc810a377b61721f (Caused by ConnectTimeoutError(<requests.packages.urllib3.connection.HTTPConnection object at 0x0000000004164C50>, 'Connection to qyxy.baic.gov.cn timed out. (connect timeout=5)'))
+Fri, 15 Sep 2017 08:06:25 Public_code.py[line:29] INFO connect is success!
+Fri, 15 Sep 2017 08:06:30 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Fri, 15 Sep 2017 08:06:30 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!view_bgxx_wap.dhtml?reg_bus_ent_id=CE37445CD0DC4B65B690D8FCBD5FE005&clear=true HTTP/1.1" 200 921
+Fri, 15 Sep 2017 08:06:30 Public_code.py[line:29] INFO connect is success!
+Fri, 15 Sep 2017 08:06:37 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Fri, 15 Sep 2017 08:06:42 Public_code.py[line:159] INFO unknow error:HTTPConnectionPool(host='qyxy.baic.gov.cn', port=80): Max retries exceeded with url: /wap/creditWapAction!view_bgxx_wap.dhtml?reg_bus_ent_id=CE37445CD0DC4B65B690D8FCBD5FE005&clear=true (Caused by ConnectTimeoutError(<requests.packages.urllib3.connection.HTTPConnection object at 0x00000000048BF4A8>, 'Connection to qyxy.baic.gov.cn timed out. (connect timeout=5)'))
+Fri, 15 Sep 2017 08:06:42 Public_code.py[line:29] INFO connect is success!
+Fri, 15 Sep 2017 08:06:47 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Fri, 15 Sep 2017 08:06:47 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!view_bgxx_wap.dhtml?reg_bus_ent_id=CE37445CD0DC4B65B690D8FCBD5FE005&clear=true HTTP/1.1" 200 None
+Fri, 15 Sep 2017 08:06:49 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Fri, 15 Sep 2017 08:06:54 Public_code.py[line:159] INFO unknow error:HTTPConnectionPool(host='qyxy.baic.gov.cn', port=80): Max retries exceeded with url: /wap/creditWapAction!tzrBgxx.dhtml?old_reg_his_id=20e38b8b3ea7a311013eabd15d7908a9&new_reg_his_id=20e38b8c40c77fb80140e81dcbec1949&clear=true&chr_id=90f729ae1aca450c9c7a2d2eee1214fd (Caused by ConnectTimeoutError(<requests.packages.urllib3.connection.HTTPConnection object at 0x0000000003CF4C50>, 'Connection to qyxy.baic.gov.cn timed out. (connect timeout=5)'))
+Fri, 15 Sep 2017 08:06:54 Public_code.py[line:29] INFO connect is success!
+Fri, 15 Sep 2017 08:08:51 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Fri, 15 Sep 2017 08:08:51 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!view_bgxx_wap.dhtml?reg_bus_ent_id=CE37445CD0DC4B65B690D8FCBD5FE005&clear=true HTTP/1.1" 200 None
+Fri, 15 Sep 2017 08:08:51 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Fri, 15 Sep 2017 08:08:56 Public_code.py[line:159] INFO unknow error:HTTPConnectionPool(host='qyxy.baic.gov.cn', port=80): Max retries exceeded with url: /wap/creditWapAction!tzrBgxx.dhtml?old_reg_his_id=20e38b8b3ea7a311013eabd15d7908a9&new_reg_his_id=20e38b8c40c77fb80140e81dcbec1949&clear=true&chr_id=5ca6b059abf74be7af5f1bcc0491a974 (Caused by ConnectTimeoutError(<requests.packages.urllib3.connection.HTTPConnection object at 0x0000000004484C50>, 'Connection to qyxy.baic.gov.cn timed out. (connect timeout=5)'))
+Fri, 15 Sep 2017 08:08:56 Public_code.py[line:29] INFO connect is success!
+Fri, 15 Sep 2017 10:31:28 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Fri, 15 Sep 2017 10:31:28 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!view_credit_wap.dhtml?categ_info=014152&ent_id=0CD1263D6B18009EE053A0630264009E&chr_id=1811e35af4b84cf78a3283961f56ae4a,&info_categ_name= HTTP/1.1" 200 None
+Fri, 15 Sep 2017 10:31:28 Public_code.py[line:160] INFO unknow error:list index out of range
+Fri, 15 Sep 2017 10:31:28 Public_code.py[line:29] INFO connect is success!
+Fri, 15 Sep 2017 10:31:56 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Fri, 15 Sep 2017 10:31:56 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!view_credit_wap.dhtml?categ_info=014152&ent_id=0CD1263D6B18009EE053A0630264009E&chr_id=1811e35af4b84cf78a3283961f56ae4a,&info_categ_name= HTTP/1.1" 200 None
+Fri, 15 Sep 2017 10:32:26 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Fri, 15 Sep 2017 10:32:26 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!view_credit_wap.dhtml?categ_info=014152&ent_id=0CD1263D6B18009EE053A0630264009E&chr_id=1811e35af4b84cf78a3283961f56ae4a,&info_categ_name= HTTP/1.1" 200 None
+Fri, 15 Sep 2017 10:34:14 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Fri, 15 Sep 2017 10:34:14 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wap/creditWapAction!view_credit_wap.dhtml?categ_info=014152&ent_id=0CD1263D6B18009EE053A0630264009E&chr_id=1811e35af4b84cf78a3283961f56ae4a,&info_categ_name= HTTP/1.1" 200 None
+Fri, 15 Sep 2017 15:59:54 Public_code.py[line:30] INFO connect is success!
+Fri, 15 Sep 2017 15:59:54 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Fri, 15 Sep 2017 15:59:54 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapqyzb/wapqyzbAction!wapbsnd.dhtml?entId=1F613E205C1C4C71A87CAFB83E6CE993 HTTP/1.1" 200 None
+Fri, 15 Sep 2017 15:59:54 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Fri, 15 Sep 2017 15:59:54 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapnb/wapnbAction!nb_list.dhtml?cid=5bde28bf3e454b89ad6d688f8e5265a9&entid=1F613E205C1C4C71A87CAFB83E6CE993&credit_ticket=7C0552115045709F934EE1AC4D1A0D61 HTTP/1.1" 200 None
+Fri, 15 Sep 2017 15:59:55 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Fri, 15 Sep 2017 15:59:55 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapnb/wapnbAction!wapnbxx.dhtml?cid=5bde28bf3e454b89ad6d688f8e5265a9&entid=1F613E205C1C4C71A87CAFB83E6CE993&credit_ticket=7C0552115045709F934EE1AC4D1A0D61 HTTP/1.1" 200 None
+Fri, 15 Sep 2017 15:59:55 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Fri, 15 Sep 2017 15:59:55 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapnb/wapnbAction!wapgdcz_bj.dhtml?clear=true&cid=5bde28bf3e454b89ad6d688f8e5265a9&entid=1F613E205C1C4C71A87CAFB83E6CE993 HTTP/1.1" 200 None
+Fri, 15 Sep 2017 15:59:55 BJ_report.py[line:163] INFO report error:expected string or buffer
+Fri, 15 Sep 2017 16:01:54 Public_code.py[line:30] INFO connect is success!
+Fri, 15 Sep 2017 16:01:54 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Fri, 15 Sep 2017 16:01:54 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapqyzb/wapqyzbAction!wapbsnd.dhtml?entId=1F613E205C1C4C71A87CAFB83E6CE993 HTTP/1.1" 200 None
+Fri, 15 Sep 2017 16:01:54 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Fri, 15 Sep 2017 16:01:54 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapnb/wapnbAction!nb_list.dhtml?cid=a4d37a829baa4e6da93666d9c16d9afe&entid=1F613E205C1C4C71A87CAFB83E6CE993&credit_ticket=18BD5DA11DBE9E5D24FC0C8631D7EC68 HTTP/1.1" 200 None
+Fri, 15 Sep 2017 16:01:54 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Fri, 15 Sep 2017 16:01:54 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapnb/wapnbAction!wapnbxx.dhtml?cid=a4d37a829baa4e6da93666d9c16d9afe&entid=1F613E205C1C4C71A87CAFB83E6CE993&credit_ticket=18BD5DA11DBE9E5D24FC0C8631D7EC68 HTTP/1.1" 200 None
+Fri, 15 Sep 2017 16:01:54 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Fri, 15 Sep 2017 16:01:54 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapnb/wapnbAction!wapgdcz_bj.dhtml?clear=true&cid=a4d37a829baa4e6da93666d9c16d9afe&entid=1F613E205C1C4C71A87CAFB83E6CE993 HTTP/1.1" 200 None
+Fri, 15 Sep 2017 16:01:55 BJ_report.py[line:170] INFO report error:expected string or buffer
+Fri, 15 Sep 2017 16:02:00 Public_code.py[line:30] INFO connect is success!
+Fri, 15 Sep 2017 16:02:00 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Fri, 15 Sep 2017 16:02:00 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapqyzb/wapqyzbAction!wapbsnd.dhtml?entId=1F613E205C1C4C71A87CAFB83E6CE993 HTTP/1.1" 200 None
+Fri, 15 Sep 2017 16:02:01 Image.py[line:397] DEBUG Importing BmpImagePlugin
+Fri, 15 Sep 2017 16:02:01 Image.py[line:397] DEBUG Importing BufrStubImagePlugin
+Fri, 15 Sep 2017 16:02:01 Image.py[line:397] DEBUG Importing CurImagePlugin
+Fri, 15 Sep 2017 16:02:01 Image.py[line:397] DEBUG Importing DcxImagePlugin
+Fri, 15 Sep 2017 16:02:01 Image.py[line:397] DEBUG Importing DdsImagePlugin
+Fri, 15 Sep 2017 16:02:01 Image.py[line:397] DEBUG Importing EpsImagePlugin
+Fri, 15 Sep 2017 16:02:01 Image.py[line:397] DEBUG Importing FitsStubImagePlugin
+Fri, 15 Sep 2017 16:02:01 Image.py[line:397] DEBUG Importing FliImagePlugin
+Fri, 15 Sep 2017 16:02:01 Image.py[line:397] DEBUG Importing FpxImagePlugin
+Fri, 15 Sep 2017 16:02:01 Image.py[line:397] DEBUG Importing FtexImagePlugin
+Fri, 15 Sep 2017 16:02:01 Image.py[line:397] DEBUG Importing GbrImagePlugin
+Fri, 15 Sep 2017 16:02:01 Image.py[line:397] DEBUG Importing GifImagePlugin
+Fri, 15 Sep 2017 16:02:01 Image.py[line:397] DEBUG Importing GribStubImagePlugin
+Fri, 15 Sep 2017 16:02:01 Image.py[line:397] DEBUG Importing Hdf5StubImagePlugin
+Fri, 15 Sep 2017 16:02:01 Image.py[line:397] DEBUG Importing IcnsImagePlugin
+Fri, 15 Sep 2017 16:02:01 Image.py[line:397] DEBUG Importing IcoImagePlugin
+Fri, 15 Sep 2017 16:02:01 Image.py[line:397] DEBUG Importing ImImagePlugin
+Fri, 15 Sep 2017 16:02:01 Image.py[line:397] DEBUG Importing ImtImagePlugin
+Fri, 15 Sep 2017 16:02:01 Image.py[line:397] DEBUG Importing IptcImagePlugin
+Fri, 15 Sep 2017 16:02:01 Image.py[line:397] DEBUG Importing JpegImagePlugin
+Fri, 15 Sep 2017 16:02:01 Image.py[line:397] DEBUG Importing Jpeg2KImagePlugin
+Fri, 15 Sep 2017 16:02:01 Image.py[line:397] DEBUG Importing McIdasImagePlugin
+Fri, 15 Sep 2017 16:02:01 Image.py[line:397] DEBUG Importing MicImagePlugin
+Fri, 15 Sep 2017 16:02:01 Image.py[line:397] DEBUG Importing MpegImagePlugin
+Fri, 15 Sep 2017 16:02:01 Image.py[line:397] DEBUG Importing MpoImagePlugin
+Fri, 15 Sep 2017 16:02:01 Image.py[line:397] DEBUG Importing MspImagePlugin
+Fri, 15 Sep 2017 16:02:01 Image.py[line:397] DEBUG Importing PalmImagePlugin
+Fri, 15 Sep 2017 16:02:01 Image.py[line:397] DEBUG Importing PcdImagePlugin
+Fri, 15 Sep 2017 16:02:01 Image.py[line:397] DEBUG Importing PcxImagePlugin
+Fri, 15 Sep 2017 16:02:01 Image.py[line:397] DEBUG Importing PdfImagePlugin
+Fri, 15 Sep 2017 16:02:01 Image.py[line:397] DEBUG Importing PixarImagePlugin
+Fri, 15 Sep 2017 16:02:01 Image.py[line:397] DEBUG Importing PngImagePlugin
+Fri, 15 Sep 2017 16:02:01 Image.py[line:397] DEBUG Importing PpmImagePlugin
+Fri, 15 Sep 2017 16:02:01 Image.py[line:397] DEBUG Importing PsdImagePlugin
+Fri, 15 Sep 2017 16:02:01 Image.py[line:397] DEBUG Importing SgiImagePlugin
+Fri, 15 Sep 2017 16:02:01 Image.py[line:397] DEBUG Importing SpiderImagePlugin
+Fri, 15 Sep 2017 16:02:01 Image.py[line:397] DEBUG Importing SunImagePlugin
+Fri, 15 Sep 2017 16:02:01 Image.py[line:397] DEBUG Importing TgaImagePlugin
+Fri, 15 Sep 2017 16:02:01 Image.py[line:397] DEBUG Importing TiffImagePlugin
+Fri, 15 Sep 2017 16:02:01 Image.py[line:397] DEBUG Importing WebPImagePlugin
+Fri, 15 Sep 2017 16:02:01 Image.py[line:397] DEBUG Importing WmfImagePlugin
+Fri, 15 Sep 2017 16:02:01 Image.py[line:397] DEBUG Importing XbmImagePlugin
+Fri, 15 Sep 2017 16:02:01 Image.py[line:397] DEBUG Importing XpmImagePlugin
+Fri, 15 Sep 2017 16:02:01 Image.py[line:397] DEBUG Importing XVThumbImagePlugin
+Fri, 15 Sep 2017 16:02:16 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Fri, 15 Sep 2017 16:02:16 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapnb/wapnbAction!nb_list.dhtml?cid=d423f79edf604f06b490be4f71eced82&entid=1F613E205C1C4C71A87CAFB83E6CE993&credit_ticket=D44FBA2E2B57DD9F93B485647198AC51 HTTP/1.1" 200 None
+Fri, 15 Sep 2017 16:02:19 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Fri, 15 Sep 2017 16:02:19 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapnb/wapnbAction!wapnbxx.dhtml?cid=d423f79edf604f06b490be4f71eced82&entid=1F613E205C1C4C71A87CAFB83E6CE993&credit_ticket=D44FBA2E2B57DD9F93B485647198AC51 HTTP/1.1" 200 None
+Fri, 15 Sep 2017 16:02:23 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Fri, 15 Sep 2017 16:02:23 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapnb/wapnbAction!wapgdcz_bj.dhtml?clear=true&cid=d423f79edf604f06b490be4f71eced82&entid=1F613E205C1C4C71A87CAFB83E6CE993 HTTP/1.1" 200 None
+Fri, 15 Sep 2017 16:03:09 Public_code.py[line:30] INFO connect is success!
+Fri, 15 Sep 2017 16:03:09 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Fri, 15 Sep 2017 16:03:09 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapqyzb/wapqyzbAction!wapbsnd.dhtml?entId=1F613E205C1C4C71A87CAFB83E6CE993 HTTP/1.1" 200 None
+Fri, 15 Sep 2017 16:03:10 Image.py[line:397] DEBUG Importing BmpImagePlugin
+Fri, 15 Sep 2017 16:03:10 Image.py[line:397] DEBUG Importing BufrStubImagePlugin
+Fri, 15 Sep 2017 16:03:10 Image.py[line:397] DEBUG Importing CurImagePlugin
+Fri, 15 Sep 2017 16:03:10 Image.py[line:397] DEBUG Importing DcxImagePlugin
+Fri, 15 Sep 2017 16:03:10 Image.py[line:397] DEBUG Importing DdsImagePlugin
+Fri, 15 Sep 2017 16:03:10 Image.py[line:397] DEBUG Importing EpsImagePlugin
+Fri, 15 Sep 2017 16:03:10 Image.py[line:397] DEBUG Importing FitsStubImagePlugin
+Fri, 15 Sep 2017 16:03:10 Image.py[line:397] DEBUG Importing FliImagePlugin
+Fri, 15 Sep 2017 16:03:10 Image.py[line:397] DEBUG Importing FpxImagePlugin
+Fri, 15 Sep 2017 16:03:10 Image.py[line:397] DEBUG Importing FtexImagePlugin
+Fri, 15 Sep 2017 16:03:10 Image.py[line:397] DEBUG Importing GbrImagePlugin
+Fri, 15 Sep 2017 16:03:10 Image.py[line:397] DEBUG Importing GifImagePlugin
+Fri, 15 Sep 2017 16:03:10 Image.py[line:397] DEBUG Importing GribStubImagePlugin
+Fri, 15 Sep 2017 16:03:10 Image.py[line:397] DEBUG Importing Hdf5StubImagePlugin
+Fri, 15 Sep 2017 16:03:10 Image.py[line:397] DEBUG Importing IcnsImagePlugin
+Fri, 15 Sep 2017 16:03:10 Image.py[line:397] DEBUG Importing IcoImagePlugin
+Fri, 15 Sep 2017 16:03:10 Image.py[line:397] DEBUG Importing ImImagePlugin
+Fri, 15 Sep 2017 16:03:10 Image.py[line:397] DEBUG Importing ImtImagePlugin
+Fri, 15 Sep 2017 16:03:10 Image.py[line:397] DEBUG Importing IptcImagePlugin
+Fri, 15 Sep 2017 16:03:10 Image.py[line:397] DEBUG Importing JpegImagePlugin
+Fri, 15 Sep 2017 16:03:10 Image.py[line:397] DEBUG Importing Jpeg2KImagePlugin
+Fri, 15 Sep 2017 16:03:10 Image.py[line:397] DEBUG Importing McIdasImagePlugin
+Fri, 15 Sep 2017 16:03:10 Image.py[line:397] DEBUG Importing MicImagePlugin
+Fri, 15 Sep 2017 16:03:10 Image.py[line:397] DEBUG Importing MpegImagePlugin
+Fri, 15 Sep 2017 16:03:10 Image.py[line:397] DEBUG Importing MpoImagePlugin
+Fri, 15 Sep 2017 16:03:10 Image.py[line:397] DEBUG Importing MspImagePlugin
+Fri, 15 Sep 2017 16:03:10 Image.py[line:397] DEBUG Importing PalmImagePlugin
+Fri, 15 Sep 2017 16:03:10 Image.py[line:397] DEBUG Importing PcdImagePlugin
+Fri, 15 Sep 2017 16:03:10 Image.py[line:397] DEBUG Importing PcxImagePlugin
+Fri, 15 Sep 2017 16:03:10 Image.py[line:397] DEBUG Importing PdfImagePlugin
+Fri, 15 Sep 2017 16:03:10 Image.py[line:397] DEBUG Importing PixarImagePlugin
+Fri, 15 Sep 2017 16:03:10 Image.py[line:397] DEBUG Importing PngImagePlugin
+Fri, 15 Sep 2017 16:03:10 Image.py[line:397] DEBUG Importing PpmImagePlugin
+Fri, 15 Sep 2017 16:03:10 Image.py[line:397] DEBUG Importing PsdImagePlugin
+Fri, 15 Sep 2017 16:03:10 Image.py[line:397] DEBUG Importing SgiImagePlugin
+Fri, 15 Sep 2017 16:03:10 Image.py[line:397] DEBUG Importing SpiderImagePlugin
+Fri, 15 Sep 2017 16:03:10 Image.py[line:397] DEBUG Importing SunImagePlugin
+Fri, 15 Sep 2017 16:03:10 Image.py[line:397] DEBUG Importing TgaImagePlugin
+Fri, 15 Sep 2017 16:03:10 Image.py[line:397] DEBUG Importing TiffImagePlugin
+Fri, 15 Sep 2017 16:03:10 Image.py[line:397] DEBUG Importing WebPImagePlugin
+Fri, 15 Sep 2017 16:03:10 Image.py[line:397] DEBUG Importing WmfImagePlugin
+Fri, 15 Sep 2017 16:03:10 Image.py[line:397] DEBUG Importing XbmImagePlugin
+Fri, 15 Sep 2017 16:03:10 Image.py[line:397] DEBUG Importing XpmImagePlugin
+Fri, 15 Sep 2017 16:03:10 Image.py[line:397] DEBUG Importing XVThumbImagePlugin
+Fri, 15 Sep 2017 16:03:19 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Fri, 15 Sep 2017 16:03:19 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapnb/wapnbAction!nb_list.dhtml?cid=5bde28bf3e454b89ad6d688f8e5265a9&entid=1F613E205C1C4C71A87CAFB83E6CE993&credit_ticket=6D509CE6CD5EF5173BE43F5C75BFD85E HTTP/1.1" 200 None
+Fri, 15 Sep 2017 16:03:22 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Fri, 15 Sep 2017 16:03:22 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapnb/wapnbAction!wapnbxx.dhtml?cid=5bde28bf3e454b89ad6d688f8e5265a9&entid=1F613E205C1C4C71A87CAFB83E6CE993&credit_ticket=6D509CE6CD5EF5173BE43F5C75BFD85E HTTP/1.1" 200 None
+Fri, 15 Sep 2017 16:03:38 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Fri, 15 Sep 2017 16:03:42 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapnb/wapnbAction!wapgdcz_bj.dhtml?clear=true&cid=5bde28bf3e454b89ad6d688f8e5265a9&entid=1F613E205C1C4C71A87CAFB83E6CE993 HTTP/1.1" 200 None
+Fri, 15 Sep 2017 16:05:58 Public_code.py[line:30] INFO connect is success!
+Fri, 15 Sep 2017 16:05:58 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Fri, 15 Sep 2017 16:05:58 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapqyzb/wapqyzbAction!wapbsnd.dhtml?entId=1F613E205C1C4C71A87CAFB83E6CE993 HTTP/1.1" 200 None
+Fri, 15 Sep 2017 16:05:58 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Fri, 15 Sep 2017 16:05:58 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapnb/wapnbAction!nb_list.dhtml?cid=a4d37a829baa4e6da93666d9c16d9afe&entid=1F613E205C1C4C71A87CAFB83E6CE993&credit_ticket=E26A83B9F6168A32289A6B34ADBD9D89 HTTP/1.1" 200 None
+Fri, 15 Sep 2017 16:05:58 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Fri, 15 Sep 2017 16:05:58 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapnb/wapnbAction!wapnbxx.dhtml?cid=a4d37a829baa4e6da93666d9c16d9afe&entid=1F613E205C1C4C71A87CAFB83E6CE993&credit_ticket=E26A83B9F6168A32289A6B34ADBD9D89 HTTP/1.1" 200 None
+Fri, 15 Sep 2017 16:05:59 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Fri, 15 Sep 2017 16:05:59 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapnb/wapnbAction!wapgdcz_bj.dhtml?clear=true&cid=a4d37a829baa4e6da93666d9c16d9afe&entid=1F613E205C1C4C71A87CAFB83E6CE993 HTTP/1.1" 200 None
+Fri, 15 Sep 2017 16:05:59 BJ_report.py[line:170] INFO report error:deal_dd_content() takes exactly 2 arguments (3 given)
+Fri, 15 Sep 2017 16:08:20 Public_code.py[line:30] INFO connect is success!
+Fri, 15 Sep 2017 16:08:21 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Fri, 15 Sep 2017 16:08:21 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapqyzb/wapqyzbAction!wapbsnd.dhtml?entId=1F613E205C1C4C71A87CAFB83E6CE993 HTTP/1.1" 200 None
+Fri, 15 Sep 2017 16:08:21 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Fri, 15 Sep 2017 16:08:21 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapnb/wapnbAction!nb_list.dhtml?cid=d423f79edf604f06b490be4f71eced82&entid=1F613E205C1C4C71A87CAFB83E6CE993&credit_ticket=2670B10F524857B8228739C3FC63AAD6 HTTP/1.1" 200 None
+Fri, 15 Sep 2017 16:08:21 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Fri, 15 Sep 2017 16:08:21 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapnb/wapnbAction!wapnbxx.dhtml?cid=d423f79edf604f06b490be4f71eced82&entid=1F613E205C1C4C71A87CAFB83E6CE993&credit_ticket=2670B10F524857B8228739C3FC63AAD6 HTTP/1.1" 200 None
+Fri, 15 Sep 2017 16:08:21 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Fri, 15 Sep 2017 16:08:21 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapnb/wapnbAction!wapgdcz_bj.dhtml?clear=true&cid=d423f79edf604f06b490be4f71eced82&entid=1F613E205C1C4C71A87CAFB83E6CE993 HTTP/1.1" 200 None
+Fri, 15 Sep 2017 16:08:22 BJ_report.py[line:170] INFO report error:deal_dd_content() takes exactly 2 arguments (3 given)
+Fri, 15 Sep 2017 16:10:03 Public_code.py[line:30] INFO connect is success!
+Fri, 15 Sep 2017 16:10:03 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Fri, 15 Sep 2017 16:10:03 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapqyzb/wapqyzbAction!wapbsnd.dhtml?entId=1F613E205C1C4C71A87CAFB83E6CE993 HTTP/1.1" 200 None
+Fri, 15 Sep 2017 16:10:04 Image.py[line:397] DEBUG Importing BmpImagePlugin
+Fri, 15 Sep 2017 16:10:04 Image.py[line:397] DEBUG Importing BufrStubImagePlugin
+Fri, 15 Sep 2017 16:10:04 Image.py[line:397] DEBUG Importing CurImagePlugin
+Fri, 15 Sep 2017 16:10:04 Image.py[line:397] DEBUG Importing DcxImagePlugin
+Fri, 15 Sep 2017 16:10:04 Image.py[line:397] DEBUG Importing DdsImagePlugin
+Fri, 15 Sep 2017 16:10:04 Image.py[line:397] DEBUG Importing EpsImagePlugin
+Fri, 15 Sep 2017 16:10:04 Image.py[line:397] DEBUG Importing FitsStubImagePlugin
+Fri, 15 Sep 2017 16:10:04 Image.py[line:397] DEBUG Importing FliImagePlugin
+Fri, 15 Sep 2017 16:10:04 Image.py[line:397] DEBUG Importing FpxImagePlugin
+Fri, 15 Sep 2017 16:10:04 Image.py[line:397] DEBUG Importing FtexImagePlugin
+Fri, 15 Sep 2017 16:10:04 Image.py[line:397] DEBUG Importing GbrImagePlugin
+Fri, 15 Sep 2017 16:10:04 Image.py[line:397] DEBUG Importing GifImagePlugin
+Fri, 15 Sep 2017 16:10:04 Image.py[line:397] DEBUG Importing GribStubImagePlugin
+Fri, 15 Sep 2017 16:10:04 Image.py[line:397] DEBUG Importing Hdf5StubImagePlugin
+Fri, 15 Sep 2017 16:10:04 Image.py[line:397] DEBUG Importing IcnsImagePlugin
+Fri, 15 Sep 2017 16:10:04 Image.py[line:397] DEBUG Importing IcoImagePlugin
+Fri, 15 Sep 2017 16:10:04 Image.py[line:397] DEBUG Importing ImImagePlugin
+Fri, 15 Sep 2017 16:10:04 Image.py[line:397] DEBUG Importing ImtImagePlugin
+Fri, 15 Sep 2017 16:10:04 Image.py[line:397] DEBUG Importing IptcImagePlugin
+Fri, 15 Sep 2017 16:10:04 Image.py[line:397] DEBUG Importing JpegImagePlugin
+Fri, 15 Sep 2017 16:10:04 Image.py[line:397] DEBUG Importing Jpeg2KImagePlugin
+Fri, 15 Sep 2017 16:10:04 Image.py[line:397] DEBUG Importing McIdasImagePlugin
+Fri, 15 Sep 2017 16:10:04 Image.py[line:397] DEBUG Importing MicImagePlugin
+Fri, 15 Sep 2017 16:10:04 Image.py[line:397] DEBUG Importing MpegImagePlugin
+Fri, 15 Sep 2017 16:10:04 Image.py[line:397] DEBUG Importing MpoImagePlugin
+Fri, 15 Sep 2017 16:10:04 Image.py[line:397] DEBUG Importing MspImagePlugin
+Fri, 15 Sep 2017 16:10:04 Image.py[line:397] DEBUG Importing PalmImagePlugin
+Fri, 15 Sep 2017 16:10:04 Image.py[line:397] DEBUG Importing PcdImagePlugin
+Fri, 15 Sep 2017 16:10:04 Image.py[line:397] DEBUG Importing PcxImagePlugin
+Fri, 15 Sep 2017 16:10:04 Image.py[line:397] DEBUG Importing PdfImagePlugin
+Fri, 15 Sep 2017 16:10:04 Image.py[line:397] DEBUG Importing PixarImagePlugin
+Fri, 15 Sep 2017 16:10:04 Image.py[line:397] DEBUG Importing PngImagePlugin
+Fri, 15 Sep 2017 16:10:04 Image.py[line:397] DEBUG Importing PpmImagePlugin
+Fri, 15 Sep 2017 16:10:04 Image.py[line:397] DEBUG Importing PsdImagePlugin
+Fri, 15 Sep 2017 16:10:04 Image.py[line:397] DEBUG Importing SgiImagePlugin
+Fri, 15 Sep 2017 16:10:04 Image.py[line:397] DEBUG Importing SpiderImagePlugin
+Fri, 15 Sep 2017 16:10:04 Image.py[line:397] DEBUG Importing SunImagePlugin
+Fri, 15 Sep 2017 16:10:04 Image.py[line:397] DEBUG Importing TgaImagePlugin
+Fri, 15 Sep 2017 16:10:04 Image.py[line:397] DEBUG Importing TiffImagePlugin
+Fri, 15 Sep 2017 16:10:04 Image.py[line:397] DEBUG Importing WebPImagePlugin
+Fri, 15 Sep 2017 16:10:04 Image.py[line:397] DEBUG Importing WmfImagePlugin
+Fri, 15 Sep 2017 16:10:04 Image.py[line:397] DEBUG Importing XbmImagePlugin
+Fri, 15 Sep 2017 16:10:04 Image.py[line:397] DEBUG Importing XpmImagePlugin
+Fri, 15 Sep 2017 16:10:04 Image.py[line:397] DEBUG Importing XVThumbImagePlugin
+Fri, 15 Sep 2017 16:10:16 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Fri, 15 Sep 2017 16:10:17 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapnb/wapnbAction!nb_list.dhtml?cid=6faba68118b14b27a13e6cc9198f5916&entid=1F613E205C1C4C71A87CAFB83E6CE993&credit_ticket=F5B60A0E442BD76B6D6C3461A59B82D6 HTTP/1.1" 200 None
+Fri, 15 Sep 2017 16:10:17 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Fri, 15 Sep 2017 16:10:17 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapnb/wapnbAction!wapnbxx.dhtml?cid=6faba68118b14b27a13e6cc9198f5916&entid=1F613E205C1C4C71A87CAFB83E6CE993&credit_ticket=F5B60A0E442BD76B6D6C3461A59B82D6 HTTP/1.1" 200 None
+Fri, 15 Sep 2017 16:10:18 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Fri, 15 Sep 2017 16:10:18 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapnb/wapnbAction!wapgdcz_bj.dhtml?clear=true&cid=6faba68118b14b27a13e6cc9198f5916&entid=1F613E205C1C4C71A87CAFB83E6CE993 HTTP/1.1" 200 None
+Fri, 15 Sep 2017 16:10:48 Public_code.py[line:30] INFO connect is success!
+Fri, 15 Sep 2017 16:10:48 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Fri, 15 Sep 2017 16:10:48 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapqyzb/wapqyzbAction!wapbsnd.dhtml?entId=1F613E205C1C4C71A87CAFB83E6CE993 HTTP/1.1" 200 None
+Fri, 15 Sep 2017 16:10:49 Image.py[line:397] DEBUG Importing BmpImagePlugin
+Fri, 15 Sep 2017 16:10:49 Image.py[line:397] DEBUG Importing BufrStubImagePlugin
+Fri, 15 Sep 2017 16:10:49 Image.py[line:397] DEBUG Importing CurImagePlugin
+Fri, 15 Sep 2017 16:10:49 Image.py[line:397] DEBUG Importing DcxImagePlugin
+Fri, 15 Sep 2017 16:10:49 Image.py[line:397] DEBUG Importing DdsImagePlugin
+Fri, 15 Sep 2017 16:10:49 Image.py[line:397] DEBUG Importing EpsImagePlugin
+Fri, 15 Sep 2017 16:10:49 Image.py[line:397] DEBUG Importing FitsStubImagePlugin
+Fri, 15 Sep 2017 16:10:49 Image.py[line:397] DEBUG Importing FliImagePlugin
+Fri, 15 Sep 2017 16:10:49 Image.py[line:397] DEBUG Importing FpxImagePlugin
+Fri, 15 Sep 2017 16:10:49 Image.py[line:397] DEBUG Importing FtexImagePlugin
+Fri, 15 Sep 2017 16:10:49 Image.py[line:397] DEBUG Importing GbrImagePlugin
+Fri, 15 Sep 2017 16:10:49 Image.py[line:397] DEBUG Importing GifImagePlugin
+Fri, 15 Sep 2017 16:10:49 Image.py[line:397] DEBUG Importing GribStubImagePlugin
+Fri, 15 Sep 2017 16:10:49 Image.py[line:397] DEBUG Importing Hdf5StubImagePlugin
+Fri, 15 Sep 2017 16:10:49 Image.py[line:397] DEBUG Importing IcnsImagePlugin
+Fri, 15 Sep 2017 16:10:49 Image.py[line:397] DEBUG Importing IcoImagePlugin
+Fri, 15 Sep 2017 16:10:49 Image.py[line:397] DEBUG Importing ImImagePlugin
+Fri, 15 Sep 2017 16:10:49 Image.py[line:397] DEBUG Importing ImtImagePlugin
+Fri, 15 Sep 2017 16:10:49 Image.py[line:397] DEBUG Importing IptcImagePlugin
+Fri, 15 Sep 2017 16:10:49 Image.py[line:397] DEBUG Importing JpegImagePlugin
+Fri, 15 Sep 2017 16:10:49 Image.py[line:397] DEBUG Importing Jpeg2KImagePlugin
+Fri, 15 Sep 2017 16:10:49 Image.py[line:397] DEBUG Importing McIdasImagePlugin
+Fri, 15 Sep 2017 16:10:49 Image.py[line:397] DEBUG Importing MicImagePlugin
+Fri, 15 Sep 2017 16:10:49 Image.py[line:397] DEBUG Importing MpegImagePlugin
+Fri, 15 Sep 2017 16:10:49 Image.py[line:397] DEBUG Importing MpoImagePlugin
+Fri, 15 Sep 2017 16:10:49 Image.py[line:397] DEBUG Importing MspImagePlugin
+Fri, 15 Sep 2017 16:10:49 Image.py[line:397] DEBUG Importing PalmImagePlugin
+Fri, 15 Sep 2017 16:10:49 Image.py[line:397] DEBUG Importing PcdImagePlugin
+Fri, 15 Sep 2017 16:10:49 Image.py[line:397] DEBUG Importing PcxImagePlugin
+Fri, 15 Sep 2017 16:10:49 Image.py[line:397] DEBUG Importing PdfImagePlugin
+Fri, 15 Sep 2017 16:10:49 Image.py[line:397] DEBUG Importing PixarImagePlugin
+Fri, 15 Sep 2017 16:10:49 Image.py[line:397] DEBUG Importing PngImagePlugin
+Fri, 15 Sep 2017 16:10:49 Image.py[line:397] DEBUG Importing PpmImagePlugin
+Fri, 15 Sep 2017 16:10:49 Image.py[line:397] DEBUG Importing PsdImagePlugin
+Fri, 15 Sep 2017 16:10:49 Image.py[line:397] DEBUG Importing SgiImagePlugin
+Fri, 15 Sep 2017 16:10:49 Image.py[line:397] DEBUG Importing SpiderImagePlugin
+Fri, 15 Sep 2017 16:10:49 Image.py[line:397] DEBUG Importing SunImagePlugin
+Fri, 15 Sep 2017 16:10:49 Image.py[line:397] DEBUG Importing TgaImagePlugin
+Fri, 15 Sep 2017 16:10:49 Image.py[line:397] DEBUG Importing TiffImagePlugin
+Fri, 15 Sep 2017 16:10:49 Image.py[line:397] DEBUG Importing WebPImagePlugin
+Fri, 15 Sep 2017 16:10:49 Image.py[line:397] DEBUG Importing WmfImagePlugin
+Fri, 15 Sep 2017 16:10:49 Image.py[line:397] DEBUG Importing XbmImagePlugin
+Fri, 15 Sep 2017 16:10:49 Image.py[line:397] DEBUG Importing XpmImagePlugin
+Fri, 15 Sep 2017 16:10:49 Image.py[line:397] DEBUG Importing XVThumbImagePlugin
+Fri, 15 Sep 2017 16:10:59 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Fri, 15 Sep 2017 16:11:00 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapnb/wapnbAction!nb_list.dhtml?cid=5bde28bf3e454b89ad6d688f8e5265a9&entid=1F613E205C1C4C71A87CAFB83E6CE993&credit_ticket=B03295C1401240A03C10365E7A5C9FC3 HTTP/1.1" 200 None
+Fri, 15 Sep 2017 16:11:04 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Fri, 15 Sep 2017 16:11:05 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapnb/wapnbAction!wapnbxx.dhtml?cid=5bde28bf3e454b89ad6d688f8e5265a9&entid=1F613E205C1C4C71A87CAFB83E6CE993&credit_ticket=B03295C1401240A03C10365E7A5C9FC3 HTTP/1.1" 200 None
+Fri, 15 Sep 2017 16:11:13 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Fri, 15 Sep 2017 16:11:13 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapnb/wapnbAction!wapgdcz_bj.dhtml?clear=true&cid=5bde28bf3e454b89ad6d688f8e5265a9&entid=1F613E205C1C4C71A87CAFB83E6CE993 HTTP/1.1" 200 None
+Fri, 15 Sep 2017 16:13:40 Public_code.py[line:30] INFO connect is success!
+Fri, 15 Sep 2017 16:13:40 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Fri, 15 Sep 2017 16:13:40 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapqyzb/wapqyzbAction!wapbsnd.dhtml?entId=1F613E205C1C4C71A87CAFB83E6CE993 HTTP/1.1" 200 None
+Fri, 15 Sep 2017 16:13:41 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Fri, 15 Sep 2017 16:13:41 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapnb/wapnbAction!nb_list.dhtml?cid=5bde28bf3e454b89ad6d688f8e5265a9&entid=1F613E205C1C4C71A87CAFB83E6CE993&credit_ticket=9E51E47591E9EEE2E62DB4A1BA9239D4 HTTP/1.1" 200 None
+Fri, 15 Sep 2017 16:13:41 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Fri, 15 Sep 2017 16:13:41 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapnb/wapnbAction!wapnbxx.dhtml?cid=5bde28bf3e454b89ad6d688f8e5265a9&entid=1F613E205C1C4C71A87CAFB83E6CE993&credit_ticket=9E51E47591E9EEE2E62DB4A1BA9239D4 HTTP/1.1" 200 None
+Fri, 15 Sep 2017 16:13:41 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Fri, 15 Sep 2017 16:13:41 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapnb/wapnbAction!wapgdcz_bj.dhtml?clear=true&cid=5bde28bf3e454b89ad6d688f8e5265a9&entid=1F613E205C1C4C71A87CAFB83E6CE993 HTTP/1.1" 200 None
+Fri, 15 Sep 2017 16:13:41 BJ_report.py[line:170] INFO report error:list index out of range
+Fri, 15 Sep 2017 16:15:56 Public_code.py[line:30] INFO connect is success!
+Fri, 15 Sep 2017 16:15:56 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Fri, 15 Sep 2017 16:15:56 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapqyzb/wapqyzbAction!wapbsnd.dhtml?entId=1F613E205C1C4C71A87CAFB83E6CE993 HTTP/1.1" 200 None
+Fri, 15 Sep 2017 16:15:56 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Fri, 15 Sep 2017 16:15:56 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapnb/wapnbAction!nb_list.dhtml?cid=a4d37a829baa4e6da93666d9c16d9afe&entid=1F613E205C1C4C71A87CAFB83E6CE993&credit_ticket=C2EC203D743834E4B4885FDDD200E007 HTTP/1.1" 200 None
+Fri, 15 Sep 2017 16:15:56 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Fri, 15 Sep 2017 16:15:57 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapnb/wapnbAction!wapnbxx.dhtml?cid=a4d37a829baa4e6da93666d9c16d9afe&entid=1F613E205C1C4C71A87CAFB83E6CE993&credit_ticket=C2EC203D743834E4B4885FDDD200E007 HTTP/1.1" 200 None
+Fri, 15 Sep 2017 16:15:57 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Fri, 15 Sep 2017 16:15:57 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapnb/wapnbAction!wapgdcz_bj.dhtml?clear=true&cid=a4d37a829baa4e6da93666d9c16d9afe&entid=1F613E205C1C4C71A87CAFB83E6CE993 HTTP/1.1" 200 None
+Fri, 15 Sep 2017 16:15:57 BJ_report.py[line:170] INFO report error:list index out of range
+Fri, 15 Sep 2017 16:16:40 Public_code.py[line:30] INFO connect is success!
+Fri, 15 Sep 2017 16:16:40 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Fri, 15 Sep 2017 16:16:40 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapqyzb/wapqyzbAction!wapbsnd.dhtml?entId=1F613E205C1C4C71A87CAFB83E6CE993 HTTP/1.1" 200 None
+Fri, 15 Sep 2017 16:16:40 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Fri, 15 Sep 2017 16:16:40 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapnb/wapnbAction!nb_list.dhtml?cid=d423f79edf604f06b490be4f71eced82&entid=1F613E205C1C4C71A87CAFB83E6CE993&credit_ticket=63A3317B64698A6D5488B5592D6C8DE5 HTTP/1.1" 200 None
+Fri, 15 Sep 2017 16:16:40 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Fri, 15 Sep 2017 16:16:40 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapnb/wapnbAction!wapnbxx.dhtml?cid=d423f79edf604f06b490be4f71eced82&entid=1F613E205C1C4C71A87CAFB83E6CE993&credit_ticket=63A3317B64698A6D5488B5592D6C8DE5 HTTP/1.1" 200 None
+Fri, 15 Sep 2017 16:16:41 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Fri, 15 Sep 2017 16:16:41 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapnb/wapnbAction!wapgdcz_bj.dhtml?clear=true&cid=d423f79edf604f06b490be4f71eced82&entid=1F613E205C1C4C71A87CAFB83E6CE993 HTTP/1.1" 200 None
+Fri, 15 Sep 2017 16:16:41 BJ_report.py[line:170] INFO report error:list index out of range
+Fri, 15 Sep 2017 16:17:30 Public_code.py[line:30] INFO connect is success!
+Fri, 15 Sep 2017 16:17:30 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Fri, 15 Sep 2017 16:17:30 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapqyzb/wapqyzbAction!wapbsnd.dhtml?entId=1F613E205C1C4C71A87CAFB83E6CE993 HTTP/1.1" 200 None
+Fri, 15 Sep 2017 16:17:30 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Fri, 15 Sep 2017 16:17:30 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapnb/wapnbAction!nb_list.dhtml?cid=6faba68118b14b27a13e6cc9198f5916&entid=1F613E205C1C4C71A87CAFB83E6CE993&credit_ticket=C143B3EC34F55BB4CE8FE2599DEBC35B HTTP/1.1" 200 None
+Fri, 15 Sep 2017 16:17:31 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Fri, 15 Sep 2017 16:17:31 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapnb/wapnbAction!wapnbxx.dhtml?cid=6faba68118b14b27a13e6cc9198f5916&entid=1F613E205C1C4C71A87CAFB83E6CE993&credit_ticket=C143B3EC34F55BB4CE8FE2599DEBC35B HTTP/1.1" 200 None
+Fri, 15 Sep 2017 16:17:31 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Fri, 15 Sep 2017 16:17:31 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapnb/wapnbAction!wapgdcz_bj.dhtml?clear=true&cid=6faba68118b14b27a13e6cc9198f5916&entid=1F613E205C1C4C71A87CAFB83E6CE993 HTTP/1.1" 200 None
+Fri, 15 Sep 2017 16:17:31 BJ_report.py[line:170] INFO report error:list index out of range
+Fri, 15 Sep 2017 16:18:13 Public_code.py[line:30] INFO connect is success!
+Fri, 15 Sep 2017 16:18:13 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Fri, 15 Sep 2017 16:18:13 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapqyzb/wapqyzbAction!wapbsnd.dhtml?entId=1F613E205C1C4C71A87CAFB83E6CE993 HTTP/1.1" 200 None
+Fri, 15 Sep 2017 16:18:26 Public_code.py[line:30] INFO connect is success!
+Fri, 15 Sep 2017 16:18:26 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Fri, 15 Sep 2017 16:18:26 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapqyzb/wapqyzbAction!wapbsnd.dhtml?entId=1F613E205C1C4C71A87CAFB83E6CE993 HTTP/1.1" 200 None
+Fri, 15 Sep 2017 16:18:59 Public_code.py[line:30] INFO connect is success!
+Fri, 15 Sep 2017 16:18:59 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Fri, 15 Sep 2017 16:18:59 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapqyzb/wapqyzbAction!wapbsnd.dhtml?entId=1F613E205C1C4C71A87CAFB83E6CE993 HTTP/1.1" 200 None
+Fri, 15 Sep 2017 16:18:59 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Fri, 15 Sep 2017 16:19:00 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapnb/wapnbAction!nb_list.dhtml?cid=5bde28bf3e454b89ad6d688f8e5265a9&entid=1F613E205C1C4C71A87CAFB83E6CE993&credit_ticket=6BBF823D5CAA4FBF761B92168E109BE1 HTTP/1.1" 200 None
+Fri, 15 Sep 2017 16:19:00 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Fri, 15 Sep 2017 16:19:00 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapnb/wapnbAction!wapnbxx.dhtml?cid=5bde28bf3e454b89ad6d688f8e5265a9&entid=1F613E205C1C4C71A87CAFB83E6CE993&credit_ticket=6BBF823D5CAA4FBF761B92168E109BE1 HTTP/1.1" 200 None
+Fri, 15 Sep 2017 16:19:00 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Fri, 15 Sep 2017 16:19:00 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapnb/wapnbAction!wapgdcz_bj.dhtml?clear=true&cid=5bde28bf3e454b89ad6d688f8e5265a9&entid=1F613E205C1C4C71A87CAFB83E6CE993 HTTP/1.1" 200 None
+Fri, 15 Sep 2017 16:19:00 BJ_report.py[line:170] INFO report error:list index out of range
+Fri, 15 Sep 2017 16:19:08 Public_code.py[line:30] INFO connect is success!
+Fri, 15 Sep 2017 16:19:08 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Fri, 15 Sep 2017 16:19:08 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapqyzb/wapqyzbAction!wapbsnd.dhtml?entId=1F613E205C1C4C71A87CAFB83E6CE993 HTTP/1.1" 200 None
+Fri, 15 Sep 2017 16:19:08 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Fri, 15 Sep 2017 16:19:08 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapnb/wapnbAction!nb_list.dhtml?cid=a4d37a829baa4e6da93666d9c16d9afe&entid=1F613E205C1C4C71A87CAFB83E6CE993&credit_ticket=C8FA262769091CBDFAE5479D01D62843 HTTP/1.1" 200 None
+Fri, 15 Sep 2017 16:19:08 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Fri, 15 Sep 2017 16:19:09 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapnb/wapnbAction!wapnbxx.dhtml?cid=a4d37a829baa4e6da93666d9c16d9afe&entid=1F613E205C1C4C71A87CAFB83E6CE993&credit_ticket=C8FA262769091CBDFAE5479D01D62843 HTTP/1.1" 200 None
+Fri, 15 Sep 2017 16:19:09 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Fri, 15 Sep 2017 16:19:09 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapnb/wapnbAction!wapgdcz_bj.dhtml?clear=true&cid=a4d37a829baa4e6da93666d9c16d9afe&entid=1F613E205C1C4C71A87CAFB83E6CE993 HTTP/1.1" 200 None
+Fri, 15 Sep 2017 16:19:09 BJ_report.py[line:170] INFO report error:list index out of range
+Fri, 15 Sep 2017 16:23:13 Public_code.py[line:30] INFO connect is success!
+Fri, 15 Sep 2017 16:23:13 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Fri, 15 Sep 2017 16:23:13 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapqyzb/wapqyzbAction!wapbsnd.dhtml?entId=1F613E205C1C4C71A87CAFB83E6CE993 HTTP/1.1" 200 None
+Fri, 15 Sep 2017 16:23:14 Image.py[line:397] DEBUG Importing BmpImagePlugin
+Fri, 15 Sep 2017 16:23:14 Image.py[line:397] DEBUG Importing BufrStubImagePlugin
+Fri, 15 Sep 2017 16:23:14 Image.py[line:397] DEBUG Importing CurImagePlugin
+Fri, 15 Sep 2017 16:23:14 Image.py[line:397] DEBUG Importing DcxImagePlugin
+Fri, 15 Sep 2017 16:23:14 Image.py[line:397] DEBUG Importing DdsImagePlugin
+Fri, 15 Sep 2017 16:23:14 Image.py[line:397] DEBUG Importing EpsImagePlugin
+Fri, 15 Sep 2017 16:23:14 Image.py[line:397] DEBUG Importing FitsStubImagePlugin
+Fri, 15 Sep 2017 16:23:14 Image.py[line:397] DEBUG Importing FliImagePlugin
+Fri, 15 Sep 2017 16:23:14 Image.py[line:397] DEBUG Importing FpxImagePlugin
+Fri, 15 Sep 2017 16:23:14 Image.py[line:397] DEBUG Importing FtexImagePlugin
+Fri, 15 Sep 2017 16:23:14 Image.py[line:397] DEBUG Importing GbrImagePlugin
+Fri, 15 Sep 2017 16:23:14 Image.py[line:397] DEBUG Importing GifImagePlugin
+Fri, 15 Sep 2017 16:23:14 Image.py[line:397] DEBUG Importing GribStubImagePlugin
+Fri, 15 Sep 2017 16:23:14 Image.py[line:397] DEBUG Importing Hdf5StubImagePlugin
+Fri, 15 Sep 2017 16:23:14 Image.py[line:397] DEBUG Importing IcnsImagePlugin
+Fri, 15 Sep 2017 16:23:14 Image.py[line:397] DEBUG Importing IcoImagePlugin
+Fri, 15 Sep 2017 16:23:14 Image.py[line:397] DEBUG Importing ImImagePlugin
+Fri, 15 Sep 2017 16:23:14 Image.py[line:397] DEBUG Importing ImtImagePlugin
+Fri, 15 Sep 2017 16:23:14 Image.py[line:397] DEBUG Importing IptcImagePlugin
+Fri, 15 Sep 2017 16:23:14 Image.py[line:397] DEBUG Importing JpegImagePlugin
+Fri, 15 Sep 2017 16:23:14 Image.py[line:397] DEBUG Importing Jpeg2KImagePlugin
+Fri, 15 Sep 2017 16:23:14 Image.py[line:397] DEBUG Importing McIdasImagePlugin
+Fri, 15 Sep 2017 16:23:14 Image.py[line:397] DEBUG Importing MicImagePlugin
+Fri, 15 Sep 2017 16:23:14 Image.py[line:397] DEBUG Importing MpegImagePlugin
+Fri, 15 Sep 2017 16:23:14 Image.py[line:397] DEBUG Importing MpoImagePlugin
+Fri, 15 Sep 2017 16:23:14 Image.py[line:397] DEBUG Importing MspImagePlugin
+Fri, 15 Sep 2017 16:23:14 Image.py[line:397] DEBUG Importing PalmImagePlugin
+Fri, 15 Sep 2017 16:23:14 Image.py[line:397] DEBUG Importing PcdImagePlugin
+Fri, 15 Sep 2017 16:23:14 Image.py[line:397] DEBUG Importing PcxImagePlugin
+Fri, 15 Sep 2017 16:23:14 Image.py[line:397] DEBUG Importing PdfImagePlugin
+Fri, 15 Sep 2017 16:23:14 Image.py[line:397] DEBUG Importing PixarImagePlugin
+Fri, 15 Sep 2017 16:23:14 Image.py[line:397] DEBUG Importing PngImagePlugin
+Fri, 15 Sep 2017 16:23:14 Image.py[line:397] DEBUG Importing PpmImagePlugin
+Fri, 15 Sep 2017 16:23:14 Image.py[line:397] DEBUG Importing PsdImagePlugin
+Fri, 15 Sep 2017 16:23:14 Image.py[line:397] DEBUG Importing SgiImagePlugin
+Fri, 15 Sep 2017 16:23:14 Image.py[line:397] DEBUG Importing SpiderImagePlugin
+Fri, 15 Sep 2017 16:23:14 Image.py[line:397] DEBUG Importing SunImagePlugin
+Fri, 15 Sep 2017 16:23:14 Image.py[line:397] DEBUG Importing TgaImagePlugin
+Fri, 15 Sep 2017 16:23:14 Image.py[line:397] DEBUG Importing TiffImagePlugin
+Fri, 15 Sep 2017 16:23:14 Image.py[line:397] DEBUG Importing WebPImagePlugin
+Fri, 15 Sep 2017 16:23:14 Image.py[line:397] DEBUG Importing WmfImagePlugin
+Fri, 15 Sep 2017 16:23:14 Image.py[line:397] DEBUG Importing XbmImagePlugin
+Fri, 15 Sep 2017 16:23:14 Image.py[line:397] DEBUG Importing XpmImagePlugin
+Fri, 15 Sep 2017 16:23:14 Image.py[line:397] DEBUG Importing XVThumbImagePlugin
+Fri, 15 Sep 2017 16:23:32 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Fri, 15 Sep 2017 16:23:33 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapnb/wapnbAction!nb_list.dhtml?cid=5bde28bf3e454b89ad6d688f8e5265a9&entid=1F613E205C1C4C71A87CAFB83E6CE993&credit_ticket=C0AA9BB35503DDE57D1BB8DFEE05A8AB HTTP/1.1" 200 None
+Fri, 15 Sep 2017 16:23:35 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Fri, 15 Sep 2017 16:23:35 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapnb/wapnbAction!wapnbxx.dhtml?cid=5bde28bf3e454b89ad6d688f8e5265a9&entid=1F613E205C1C4C71A87CAFB83E6CE993&credit_ticket=C0AA9BB35503DDE57D1BB8DFEE05A8AB HTTP/1.1" 200 None
+Fri, 15 Sep 2017 16:23:40 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Fri, 15 Sep 2017 16:23:40 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapnb/wapnbAction!wapgdcz_bj.dhtml?clear=true&cid=5bde28bf3e454b89ad6d688f8e5265a9&entid=1F613E205C1C4C71A87CAFB83E6CE993 HTTP/1.1" 200 None
+Fri, 15 Sep 2017 16:23:52 Public_code.py[line:30] INFO connect is success!
+Fri, 15 Sep 2017 16:23:52 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Fri, 15 Sep 2017 16:23:52 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapqyzb/wapqyzbAction!wapbsnd.dhtml?entId=1F613E205C1C4C71A87CAFB83E6CE993 HTTP/1.1" 200 None
+Fri, 15 Sep 2017 16:23:53 Image.py[line:397] DEBUG Importing BmpImagePlugin
+Fri, 15 Sep 2017 16:23:53 Image.py[line:397] DEBUG Importing BufrStubImagePlugin
+Fri, 15 Sep 2017 16:23:53 Image.py[line:397] DEBUG Importing CurImagePlugin
+Fri, 15 Sep 2017 16:23:53 Image.py[line:397] DEBUG Importing DcxImagePlugin
+Fri, 15 Sep 2017 16:23:53 Image.py[line:397] DEBUG Importing DdsImagePlugin
+Fri, 15 Sep 2017 16:23:53 Image.py[line:397] DEBUG Importing EpsImagePlugin
+Fri, 15 Sep 2017 16:23:53 Image.py[line:397] DEBUG Importing FitsStubImagePlugin
+Fri, 15 Sep 2017 16:23:53 Image.py[line:397] DEBUG Importing FliImagePlugin
+Fri, 15 Sep 2017 16:23:53 Image.py[line:397] DEBUG Importing FpxImagePlugin
+Fri, 15 Sep 2017 16:23:53 Image.py[line:397] DEBUG Importing FtexImagePlugin
+Fri, 15 Sep 2017 16:23:53 Image.py[line:397] DEBUG Importing GbrImagePlugin
+Fri, 15 Sep 2017 16:23:53 Image.py[line:397] DEBUG Importing GifImagePlugin
+Fri, 15 Sep 2017 16:23:53 Image.py[line:397] DEBUG Importing GribStubImagePlugin
+Fri, 15 Sep 2017 16:23:53 Image.py[line:397] DEBUG Importing Hdf5StubImagePlugin
+Fri, 15 Sep 2017 16:23:53 Image.py[line:397] DEBUG Importing IcnsImagePlugin
+Fri, 15 Sep 2017 16:23:53 Image.py[line:397] DEBUG Importing IcoImagePlugin
+Fri, 15 Sep 2017 16:23:53 Image.py[line:397] DEBUG Importing ImImagePlugin
+Fri, 15 Sep 2017 16:23:53 Image.py[line:397] DEBUG Importing ImtImagePlugin
+Fri, 15 Sep 2017 16:23:53 Image.py[line:397] DEBUG Importing IptcImagePlugin
+Fri, 15 Sep 2017 16:23:53 Image.py[line:397] DEBUG Importing JpegImagePlugin
+Fri, 15 Sep 2017 16:23:53 Image.py[line:397] DEBUG Importing Jpeg2KImagePlugin
+Fri, 15 Sep 2017 16:23:53 Image.py[line:397] DEBUG Importing McIdasImagePlugin
+Fri, 15 Sep 2017 16:23:53 Image.py[line:397] DEBUG Importing MicImagePlugin
+Fri, 15 Sep 2017 16:23:53 Image.py[line:397] DEBUG Importing MpegImagePlugin
+Fri, 15 Sep 2017 16:23:53 Image.py[line:397] DEBUG Importing MpoImagePlugin
+Fri, 15 Sep 2017 16:23:53 Image.py[line:397] DEBUG Importing MspImagePlugin
+Fri, 15 Sep 2017 16:23:53 Image.py[line:397] DEBUG Importing PalmImagePlugin
+Fri, 15 Sep 2017 16:23:53 Image.py[line:397] DEBUG Importing PcdImagePlugin
+Fri, 15 Sep 2017 16:23:53 Image.py[line:397] DEBUG Importing PcxImagePlugin
+Fri, 15 Sep 2017 16:23:53 Image.py[line:397] DEBUG Importing PdfImagePlugin
+Fri, 15 Sep 2017 16:23:53 Image.py[line:397] DEBUG Importing PixarImagePlugin
+Fri, 15 Sep 2017 16:23:53 Image.py[line:397] DEBUG Importing PngImagePlugin
+Fri, 15 Sep 2017 16:23:53 Image.py[line:397] DEBUG Importing PpmImagePlugin
+Fri, 15 Sep 2017 16:23:53 Image.py[line:397] DEBUG Importing PsdImagePlugin
+Fri, 15 Sep 2017 16:23:53 Image.py[line:397] DEBUG Importing SgiImagePlugin
+Fri, 15 Sep 2017 16:23:53 Image.py[line:397] DEBUG Importing SpiderImagePlugin
+Fri, 15 Sep 2017 16:23:53 Image.py[line:397] DEBUG Importing SunImagePlugin
+Fri, 15 Sep 2017 16:23:53 Image.py[line:397] DEBUG Importing TgaImagePlugin
+Fri, 15 Sep 2017 16:23:53 Image.py[line:397] DEBUG Importing TiffImagePlugin
+Fri, 15 Sep 2017 16:23:53 Image.py[line:397] DEBUG Importing WebPImagePlugin
+Fri, 15 Sep 2017 16:23:53 Image.py[line:397] DEBUG Importing WmfImagePlugin
+Fri, 15 Sep 2017 16:23:53 Image.py[line:397] DEBUG Importing XbmImagePlugin
+Fri, 15 Sep 2017 16:23:53 Image.py[line:397] DEBUG Importing XpmImagePlugin
+Fri, 15 Sep 2017 16:23:53 Image.py[line:397] DEBUG Importing XVThumbImagePlugin
+Fri, 15 Sep 2017 16:24:10 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Fri, 15 Sep 2017 16:24:10 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapnb/wapnbAction!nb_list.dhtml?cid=5bde28bf3e454b89ad6d688f8e5265a9&entid=1F613E205C1C4C71A87CAFB83E6CE993&credit_ticket=2D46F241A0062C84DB8539E52F85ABA2 HTTP/1.1" 200 None
+Fri, 15 Sep 2017 16:24:14 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Fri, 15 Sep 2017 16:24:14 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapnb/wapnbAction!wapnbxx.dhtml?cid=5bde28bf3e454b89ad6d688f8e5265a9&entid=1F613E205C1C4C71A87CAFB83E6CE993&credit_ticket=2D46F241A0062C84DB8539E52F85ABA2 HTTP/1.1" 200 None
+Fri, 15 Sep 2017 16:24:21 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Fri, 15 Sep 2017 16:24:21 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapnb/wapnbAction!wapgdcz_bj.dhtml?clear=true&cid=5bde28bf3e454b89ad6d688f8e5265a9&entid=1F613E205C1C4C71A87CAFB83E6CE993 HTTP/1.1" 200 None
+Fri, 15 Sep 2017 16:26:31 Public_code.py[line:30] INFO connect is success!
+Fri, 15 Sep 2017 16:26:31 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Fri, 15 Sep 2017 16:26:34 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapqyzb/wapqyzbAction!wapbsnd.dhtml?entId=1F613E205C1C4C71A87CAFB83E6CE993 HTTP/1.1" 200 None
+Fri, 15 Sep 2017 16:26:36 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Fri, 15 Sep 2017 16:26:37 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapnb/wapnbAction!nb_list.dhtml?cid=a4d37a829baa4e6da93666d9c16d9afe&entid=1F613E205C1C4C71A87CAFB83E6CE993&credit_ticket=CAC86F96F47D1B22316D4787635F4765 HTTP/1.1" 200 None
+Fri, 15 Sep 2017 16:26:37 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Fri, 15 Sep 2017 16:26:39 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapnb/wapnbAction!wapnbxx.dhtml?cid=a4d37a829baa4e6da93666d9c16d9afe&entid=1F613E205C1C4C71A87CAFB83E6CE993&credit_ticket=CAC86F96F47D1B22316D4787635F4765 HTTP/1.1" 200 None
+Fri, 15 Sep 2017 16:26:41 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Fri, 15 Sep 2017 16:26:42 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapnb/wapnbAction!wapgdcz_bj.dhtml?clear=true&cid=a4d37a829baa4e6da93666d9c16d9afe&entid=1F613E205C1C4C71A87CAFB83E6CE993 HTTP/1.1" 200 None
+Fri, 15 Sep 2017 16:26:44 BJ_report.py[line:170] INFO report error:list index out of range
+Fri, 15 Sep 2017 16:28:49 Public_code.py[line:30] INFO connect is success!
+Fri, 15 Sep 2017 16:28:49 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Fri, 15 Sep 2017 16:28:50 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapqyzb/wapqyzbAction!wapbsnd.dhtml?entId=1F613E205C1C4C71A87CAFB83E6CE993 HTTP/1.1" 200 None
+Fri, 15 Sep 2017 16:28:51 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Fri, 15 Sep 2017 16:28:51 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapnb/wapnbAction!nb_list.dhtml?cid=5bde28bf3e454b89ad6d688f8e5265a9&entid=1F613E205C1C4C71A87CAFB83E6CE993&credit_ticket=231BEFC76750C954BD38A271A8BA5E4F HTTP/1.1" 200 None
+Fri, 15 Sep 2017 16:28:53 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Fri, 15 Sep 2017 16:28:53 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapnb/wapnbAction!wapnbxx.dhtml?cid=5bde28bf3e454b89ad6d688f8e5265a9&entid=1F613E205C1C4C71A87CAFB83E6CE993&credit_ticket=231BEFC76750C954BD38A271A8BA5E4F HTTP/1.1" 200 None
+Fri, 15 Sep 2017 16:28:55 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Fri, 15 Sep 2017 16:28:56 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapnb/wapnbAction!wapgdcz_bj.dhtml?clear=true&cid=5bde28bf3e454b89ad6d688f8e5265a9&entid=1F613E205C1C4C71A87CAFB83E6CE993 HTTP/1.1" 200 None
+Fri, 15 Sep 2017 16:28:59 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Fri, 15 Sep 2017 16:28:59 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapnb/wapnbAction!wapgdcz_bj.dhtml?entid=%s&cid=%s&pageNo=%s&pageSize=&clear= HTTP/1.1" 302 None
+Fri, 15 Sep 2017 16:28:59 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /index/charError.html HTTP/1.1" 200 253
+Fri, 15 Sep 2017 16:28:59 BJ_report.py[line:170] INFO report error:list index out of range
+Fri, 15 Sep 2017 16:30:22 Public_code.py[line:30] INFO connect is success!
+Fri, 15 Sep 2017 16:30:22 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Fri, 15 Sep 2017 16:30:22 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapqyzb/wapqyzbAction!wapbsnd.dhtml?entId=1F613E205C1C4C71A87CAFB83E6CE993 HTTP/1.1" 200 None
+Fri, 15 Sep 2017 16:30:23 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Fri, 15 Sep 2017 16:30:24 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapnb/wapnbAction!nb_list.dhtml?cid=5bde28bf3e454b89ad6d688f8e5265a9&entid=1F613E205C1C4C71A87CAFB83E6CE993&credit_ticket=C8F606AA8DCB695C4CD0DEE4370B7563 HTTP/1.1" 200 None
+Fri, 15 Sep 2017 16:30:25 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Fri, 15 Sep 2017 16:30:28 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapnb/wapnbAction!wapnbxx.dhtml?cid=5bde28bf3e454b89ad6d688f8e5265a9&entid=1F613E205C1C4C71A87CAFB83E6CE993&credit_ticket=C8F606AA8DCB695C4CD0DEE4370B7563 HTTP/1.1" 200 None
+Fri, 15 Sep 2017 16:30:34 Public_code.py[line:113] INFO request error:HTTPConnectionPool(host='qyxy.baic.gov.cn', port=80): Read timed out.
+Fri, 15 Sep 2017 16:30:34 BJ_report_basic.py[line:133] ERROR report basic error:0
+Fri, 15 Sep 2017 16:30:34 BJ_report.py[line:170] INFO report error:local variable 'gs_report_id' referenced before assignment
+Fri, 15 Sep 2017 16:32:07 Public_code.py[line:30] INFO connect is success!
+Fri, 15 Sep 2017 16:32:07 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Fri, 15 Sep 2017 16:32:14 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapqyzb/wapqyzbAction!wapbsnd.dhtml?entId=1F613E205C1C4C71A87CAFB83E6CE993 HTTP/1.1" 200 None
+Fri, 15 Sep 2017 16:32:14 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Fri, 15 Sep 2017 16:32:14 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapnb/wapnbAction!nb_list.dhtml?cid=5bde28bf3e454b89ad6d688f8e5265a9&entid=1F613E205C1C4C71A87CAFB83E6CE993&credit_ticket=B1EDB8DF13AE116A81257481C98363C5 HTTP/1.1" 200 None
+Fri, 15 Sep 2017 16:32:15 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Fri, 15 Sep 2017 16:32:15 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapnb/wapnbAction!wapnbxx.dhtml?cid=5bde28bf3e454b89ad6d688f8e5265a9&entid=1F613E205C1C4C71A87CAFB83E6CE993&credit_ticket=B1EDB8DF13AE116A81257481C98363C5 HTTP/1.1" 200 None
+Fri, 15 Sep 2017 16:32:15 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Fri, 15 Sep 2017 16:32:16 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapnb/wapnbAction!wapgdcz_bj.dhtml?clear=true&cid=5bde28bf3e454b89ad6d688f8e5265a9&entid=1F613E205C1C4C71A87CAFB83E6CE993 HTTP/1.1" 200 None
+Fri, 15 Sep 2017 16:32:22 Public_code.py[line:30] INFO connect is success!
+Fri, 15 Sep 2017 16:32:22 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Fri, 15 Sep 2017 16:32:23 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapqyzb/wapqyzbAction!wapbsnd.dhtml?entId=1F613E205C1C4C71A87CAFB83E6CE993 HTTP/1.1" 200 None
+Fri, 15 Sep 2017 16:32:23 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Fri, 15 Sep 2017 16:32:26 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapnb/wapnbAction!nb_list.dhtml?cid=a4d37a829baa4e6da93666d9c16d9afe&entid=1F613E205C1C4C71A87CAFB83E6CE993&credit_ticket=8C323CFD6588BD4526B4F84D6901BBD4 HTTP/1.1" 200 None
+Fri, 15 Sep 2017 16:32:26 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Fri, 15 Sep 2017 16:32:26 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapnb/wapnbAction!wapnbxx.dhtml?cid=a4d37a829baa4e6da93666d9c16d9afe&entid=1F613E205C1C4C71A87CAFB83E6CE993&credit_ticket=8C323CFD6588BD4526B4F84D6901BBD4 HTTP/1.1" 200 None
+Fri, 15 Sep 2017 16:32:27 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Fri, 15 Sep 2017 16:32:27 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapnb/wapnbAction!wapgdcz_bj.dhtml?clear=true&cid=a4d37a829baa4e6da93666d9c16d9afe&entid=1F613E205C1C4C71A87CAFB83E6CE993 HTTP/1.1" 200 None
+Fri, 15 Sep 2017 16:32:28 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Fri, 15 Sep 2017 16:32:28 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapnb/wapnbAction!wapgdcz_bj.dhtml?entid=%s&cid=%s&pageNo=%s&pageSize=&clear= HTTP/1.1" 302 None
+Fri, 15 Sep 2017 16:32:28 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /index/charError.html HTTP/1.1" 200 253
+Fri, 15 Sep 2017 16:32:28 BJ_report.py[line:170] INFO report error:list index out of range
+Fri, 15 Sep 2017 16:33:05 Public_code.py[line:30] INFO connect is success!
+Fri, 15 Sep 2017 16:33:05 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Fri, 15 Sep 2017 16:33:05 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapqyzb/wapqyzbAction!wapbsnd.dhtml?entId=1F613E205C1C4C71A87CAFB83E6CE993 HTTP/1.1" 200 None
+Fri, 15 Sep 2017 16:33:06 Image.py[line:397] DEBUG Importing BmpImagePlugin
+Fri, 15 Sep 2017 16:33:06 Image.py[line:397] DEBUG Importing BufrStubImagePlugin
+Fri, 15 Sep 2017 16:33:06 Image.py[line:397] DEBUG Importing CurImagePlugin
+Fri, 15 Sep 2017 16:33:06 Image.py[line:397] DEBUG Importing DcxImagePlugin
+Fri, 15 Sep 2017 16:33:06 Image.py[line:397] DEBUG Importing DdsImagePlugin
+Fri, 15 Sep 2017 16:33:06 Image.py[line:397] DEBUG Importing EpsImagePlugin
+Fri, 15 Sep 2017 16:33:06 Image.py[line:397] DEBUG Importing FitsStubImagePlugin
+Fri, 15 Sep 2017 16:33:06 Image.py[line:397] DEBUG Importing FliImagePlugin
+Fri, 15 Sep 2017 16:33:06 Image.py[line:397] DEBUG Importing FpxImagePlugin
+Fri, 15 Sep 2017 16:33:06 Image.py[line:397] DEBUG Importing FtexImagePlugin
+Fri, 15 Sep 2017 16:33:06 Image.py[line:397] DEBUG Importing GbrImagePlugin
+Fri, 15 Sep 2017 16:33:06 Image.py[line:397] DEBUG Importing GifImagePlugin
+Fri, 15 Sep 2017 16:33:06 Image.py[line:397] DEBUG Importing GribStubImagePlugin
+Fri, 15 Sep 2017 16:33:06 Image.py[line:397] DEBUG Importing Hdf5StubImagePlugin
+Fri, 15 Sep 2017 16:33:06 Image.py[line:397] DEBUG Importing IcnsImagePlugin
+Fri, 15 Sep 2017 16:33:06 Image.py[line:397] DEBUG Importing IcoImagePlugin
+Fri, 15 Sep 2017 16:33:06 Image.py[line:397] DEBUG Importing ImImagePlugin
+Fri, 15 Sep 2017 16:33:06 Image.py[line:397] DEBUG Importing ImtImagePlugin
+Fri, 15 Sep 2017 16:33:06 Image.py[line:397] DEBUG Importing IptcImagePlugin
+Fri, 15 Sep 2017 16:33:06 Image.py[line:397] DEBUG Importing JpegImagePlugin
+Fri, 15 Sep 2017 16:33:06 Image.py[line:397] DEBUG Importing Jpeg2KImagePlugin
+Fri, 15 Sep 2017 16:33:06 Image.py[line:397] DEBUG Importing McIdasImagePlugin
+Fri, 15 Sep 2017 16:33:06 Image.py[line:397] DEBUG Importing MicImagePlugin
+Fri, 15 Sep 2017 16:33:06 Image.py[line:397] DEBUG Importing MpegImagePlugin
+Fri, 15 Sep 2017 16:33:06 Image.py[line:397] DEBUG Importing MpoImagePlugin
+Fri, 15 Sep 2017 16:33:06 Image.py[line:397] DEBUG Importing MspImagePlugin
+Fri, 15 Sep 2017 16:33:06 Image.py[line:397] DEBUG Importing PalmImagePlugin
+Fri, 15 Sep 2017 16:33:06 Image.py[line:397] DEBUG Importing PcdImagePlugin
+Fri, 15 Sep 2017 16:33:06 Image.py[line:397] DEBUG Importing PcxImagePlugin
+Fri, 15 Sep 2017 16:33:06 Image.py[line:397] DEBUG Importing PdfImagePlugin
+Fri, 15 Sep 2017 16:33:06 Image.py[line:397] DEBUG Importing PixarImagePlugin
+Fri, 15 Sep 2017 16:33:06 Image.py[line:397] DEBUG Importing PngImagePlugin
+Fri, 15 Sep 2017 16:33:06 Image.py[line:397] DEBUG Importing PpmImagePlugin
+Fri, 15 Sep 2017 16:33:06 Image.py[line:397] DEBUG Importing PsdImagePlugin
+Fri, 15 Sep 2017 16:33:06 Image.py[line:397] DEBUG Importing SgiImagePlugin
+Fri, 15 Sep 2017 16:33:06 Image.py[line:397] DEBUG Importing SpiderImagePlugin
+Fri, 15 Sep 2017 16:33:06 Image.py[line:397] DEBUG Importing SunImagePlugin
+Fri, 15 Sep 2017 16:33:06 Image.py[line:397] DEBUG Importing TgaImagePlugin
+Fri, 15 Sep 2017 16:33:06 Image.py[line:397] DEBUG Importing TiffImagePlugin
+Fri, 15 Sep 2017 16:33:06 Image.py[line:397] DEBUG Importing WebPImagePlugin
+Fri, 15 Sep 2017 16:33:06 Image.py[line:397] DEBUG Importing WmfImagePlugin
+Fri, 15 Sep 2017 16:33:06 Image.py[line:397] DEBUG Importing XbmImagePlugin
+Fri, 15 Sep 2017 16:33:06 Image.py[line:397] DEBUG Importing XpmImagePlugin
+Fri, 15 Sep 2017 16:33:06 Image.py[line:397] DEBUG Importing XVThumbImagePlugin
+Fri, 15 Sep 2017 16:33:17 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Fri, 15 Sep 2017 16:33:17 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapnb/wapnbAction!nb_list.dhtml?cid=5bde28bf3e454b89ad6d688f8e5265a9&entid=1F613E205C1C4C71A87CAFB83E6CE993&credit_ticket=05A2BC18DC449AF428B61241F7FABA48 HTTP/1.1" 200 None
+Fri, 15 Sep 2017 16:33:20 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Fri, 15 Sep 2017 16:33:20 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapnb/wapnbAction!wapnbxx.dhtml?cid=5bde28bf3e454b89ad6d688f8e5265a9&entid=1F613E205C1C4C71A87CAFB83E6CE993&credit_ticket=05A2BC18DC449AF428B61241F7FABA48 HTTP/1.1" 200 None
+Fri, 15 Sep 2017 16:33:28 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Fri, 15 Sep 2017 16:33:28 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapnb/wapnbAction!wapgdcz_bj.dhtml?clear=true&cid=5bde28bf3e454b89ad6d688f8e5265a9&entid=1F613E205C1C4C71A87CAFB83E6CE993 HTTP/1.1" 200 None
+Fri, 15 Sep 2017 16:34:51 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Fri, 15 Sep 2017 16:34:52 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapnb/wapnbAction!wapgdcz_bj.dhtml?entid=%s&cid=%s&pageNo=%s&pageSize=&clear= HTTP/1.1" 302 None
+Fri, 15 Sep 2017 16:34:52 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /index/charError.html HTTP/1.1" 200 253
+Fri, 15 Sep 2017 16:36:16 Public_code.py[line:30] INFO connect is success!
+Fri, 15 Sep 2017 16:36:16 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Fri, 15 Sep 2017 16:36:20 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapqyzb/wapqyzbAction!wapbsnd.dhtml?entId=1F613E205C1C4C71A87CAFB83E6CE993 HTTP/1.1" 200 None
+Fri, 15 Sep 2017 16:36:20 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Fri, 15 Sep 2017 16:36:20 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapnb/wapnbAction!nb_list.dhtml?cid=a4d37a829baa4e6da93666d9c16d9afe&entid=1F613E205C1C4C71A87CAFB83E6CE993&credit_ticket=ABDBA8E93F25D752DA4F0B661B413BDD HTTP/1.1" 200 None
+Fri, 15 Sep 2017 16:36:20 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Fri, 15 Sep 2017 16:36:21 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapnb/wapnbAction!wapnbxx.dhtml?cid=a4d37a829baa4e6da93666d9c16d9afe&entid=1F613E205C1C4C71A87CAFB83E6CE993&credit_ticket=ABDBA8E93F25D752DA4F0B661B413BDD HTTP/1.1" 200 None
+Fri, 15 Sep 2017 16:36:21 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Fri, 15 Sep 2017 16:36:21 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapnb/wapnbAction!wapgdcz_bj.dhtml?clear=true&cid=a4d37a829baa4e6da93666d9c16d9afe&entid=1F613E205C1C4C71A87CAFB83E6CE993 HTTP/1.1" 200 None
+Fri, 15 Sep 2017 16:36:22 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Fri, 15 Sep 2017 16:36:22 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapnb/wapnbAction!wapgdcz_bj.dhtml?entid=%s&cid=%s&pageNo=%s&pageSize=&clear= HTTP/1.1" 302 None
+Fri, 15 Sep 2017 16:36:22 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /index/charError.html HTTP/1.1" 200 253
+Fri, 15 Sep 2017 16:36:22 BJ_report.py[line:170] INFO report error:list index out of range
+Fri, 15 Sep 2017 16:41:15 Public_code.py[line:30] INFO connect is success!
+Fri, 15 Sep 2017 16:41:15 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Fri, 15 Sep 2017 16:41:15 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapqyzb/wapqyzbAction!wapbsnd.dhtml?entId=1F613E205C1C4C71A87CAFB83E6CE993 HTTP/1.1" 200 None
+Fri, 15 Sep 2017 16:41:16 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Fri, 15 Sep 2017 16:41:16 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapnb/wapnbAction!nb_list.dhtml?cid=d423f79edf604f06b490be4f71eced82&entid=1F613E205C1C4C71A87CAFB83E6CE993&credit_ticket=B9A0C4DCD9D5C086C91993CBF12923DA HTTP/1.1" 200 None
+Fri, 15 Sep 2017 16:41:16 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Fri, 15 Sep 2017 16:41:16 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapnb/wapnbAction!wapnbxx.dhtml?cid=d423f79edf604f06b490be4f71eced82&entid=1F613E205C1C4C71A87CAFB83E6CE993&credit_ticket=B9A0C4DCD9D5C086C91993CBF12923DA HTTP/1.1" 200 None
+Fri, 15 Sep 2017 16:41:16 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Fri, 15 Sep 2017 16:41:16 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapnb/wapnbAction!wapgdcz_bj.dhtml?clear=true&cid=d423f79edf604f06b490be4f71eced82&entid=1F613E205C1C4C71A87CAFB83E6CE993 HTTP/1.1" 200 None
+Fri, 15 Sep 2017 16:41:17 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): qyxy.baic.gov.cn
+Fri, 15 Sep 2017 16:41:17 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /wapnb/wapnbAction!wapgdcz_bj.dhtml?entid=%s&cid=%s&pageNo=%s&pageSize=&clear= HTTP/1.1" 302 None
+Fri, 15 Sep 2017 16:41:17 connectionpool.py[line:400] DEBUG http://qyxy.baic.gov.cn:80 "GET /index/charError.html HTTP/1.1" 200 253
+Fri, 15 Sep 2017 16:41:17 BJ_report.py[line:170] INFO report error:list index out of range

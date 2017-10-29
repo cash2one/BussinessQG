@@ -16,14 +16,17 @@ import logging
 import time
 import re
 import hashlib
+
 out_invest_string = 'insert into gs_report_invest(gs_basic_id,gs_report_id,province,name, code, ccode,uuid,created,updated) values(%s,%s,%s,%s,%s,%s,%s,%s,%s)'
 out_invest_url = 'http://qyxy.baic.gov.cn/wapnb/wapnbAction!wapdwtz_bj.dhtml?entid=%s&cid=%s&pageNo=%s&pageSize=&clear='
+
+
 def name(url):
 	headers = config.headers_detail
 	content, status_code = Send_Request().send_request(url, headers)
 	if status_code == 200:
 		flag = 1
-		result = etree.xpath(content,parser=etree.HTMLParser(encoding='utf-8'))
+		result = etree.xpath(content, parser=etree.HTMLParser(encoding='utf-8'))
 		dl = result.xpath("//div[@class = viewBox']//dl")[0]
 		info = {}
 		if "企业名称" in content:
@@ -60,14 +63,16 @@ def name(url):
 						pass
 		else:
 			flag = 100000004
-		
+	
 	else:
 		flag = 100000004
-	if flag ==1:
+	if flag == 1:
 		info = deal_html_code.remove_repeat(info)
-	return info,flag
-def deal_single_info(datallist,info,j):
-	for i, single in enumerate(datallist,j):
+	return info, flag
+
+
+def deal_single_info(datallist, info, j):
+	for i, single in enumerate(datallist, j):
 		single = etree.xpath(single, parser=etree.HTMLParser(encoding='utf-8'))
 		string = u"企业名称"
 		name = deal_dd_content(string, single)
@@ -81,13 +86,17 @@ def deal_single_info(datallist,info,j):
 		else:
 			ccode = ''
 		info[i] = [name, code, ccode]
+
+
 # 用于处理dd标签中的内容
 def deal_dd_content(string, result):
 	dd = result.xpath(".//dt[contains(.,'%s')]" % string)[0].xpath("./following-sibling::*[1]")
 	dd = dd[0]
 	data = deal_html_code.remove_symbol(dd.xpath("string(.)"))
 	return data
-def update_to_db( gs_report_id, gs_basic_id, year,cursor, connect, information, province):
+
+
+def update_to_db(gs_report_id, gs_basic_id, year, cursor, connect, information, province):
 	insert_flag, update_flag = 0, 0
 	remark = 0
 	total = len(information)
@@ -97,11 +106,11 @@ def update_to_db( gs_report_id, gs_basic_id, year,cursor, connect, information, 
 			code = information[key][1]
 			ccode = information[key][2]
 			m = hashlib.md5()
-			m.update(str(gs_basic_id) + str(year)+str(name))
+			m.update(str(gs_basic_id) + str(year) + str(name))
 			uuid = m.hexdigest()
 			updated_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
 			flag = cursor.execute(out_invest_string, (
-			gs_basic_id, gs_report_id, province, name, code, ccode, uuid, updated_time, updated_time))
+				gs_basic_id, gs_report_id, province, name, code, ccode, uuid, updated_time, updated_time))
 			connect.commit()
 			insert_flag += flag
 	except Exception, e:
@@ -112,4 +121,3 @@ def update_to_db( gs_report_id, gs_basic_id, year,cursor, connect, information, 
 			remark = insert_flag
 		
 		return remark, total, insert_flag, update_flag
-

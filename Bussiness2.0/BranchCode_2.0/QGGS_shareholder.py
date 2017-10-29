@@ -34,7 +34,7 @@ perpage = sys.argv[5]
 # gs_py_id = 1501
 # pagenumber = 1
 # perpage = 0
-share_string = 'insert into gs_shareholder(gs_basic_id,name,cate,types,license_type,license_code,ra_date, ra_ways, true_amount,reg_amount,ta_ways,ta_date,country,address,iv_basic_id,ps_basic_id,updated)values(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)'
+share_string = 'insert into gs_shareholder(gs_basic_id,name,cate,types,license_type,license_code,ra_date, ra_ways, true_amount,reg_amount,ta_ways,ta_date,country,address,iv_basic_id,ps_basic_id,source,updated)values(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)'
 select_string = 'select gs_shareholder_id from gs_shareholder where gs_basic_id = %s and name = %s and types = %s and cate = %s'
 update_share_py = 'update gs_py set gs_py_id = %s,gs_shareholder = %s,updated = %s where gs_py_id = %s'
 select_name = 'select gs_basic_id from gs_unique where name = "%s"'
@@ -123,8 +123,8 @@ class Shareholder:
                     ra_date, ra_ways, true_amount = '0000-00-00', '', ''
                     reg_amount, ta_ways, ta_date = '', '', '0000-00-00'
         else:
-            ra_date, ra_ways, true_amount = '', '', ''
-            reg_amount, ta_ways, ta_date = '', '', ''
+            ra_date, ra_ways, true_amount = '0000-00-00', '', ''
+            reg_amount, ta_ways, ta_date = '', '', '0000-00-00'
         return ra_date, ra_ways, true_amount, reg_amount, ta_ways, ta_date
     def judge_certcode(self,name,code,cursor,connect,basic_id):
         ps = 0
@@ -167,6 +167,7 @@ class Shareholder:
         insert_flag,update_flag = 0,0
         remark = 0
         try:
+            
             string = update_share % gs_basic_id
             cursor.execute(string)
             connect.commit()
@@ -175,6 +176,7 @@ class Shareholder:
             HOST, USER, PASSWD, DB, PORT = config.HOST, config.USER, config.PASSWD, config.DB, config.PORT
             connect, cursor = Connect_to_DB().ConnectDB(HOST, USER, PASSWD, DB, PORT)
             for key in information.keys():
+                source = 1
                 name, license_code, license_type = information[key][0], information[key][1], information[key][2]
                 types, ra_date, ra_ways, true_amount = information[key][3], information[key][4], information[key][5], \
                                                        information[key][6]
@@ -212,7 +214,7 @@ class Shareholder:
                     updated_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
                     rows_count = cursor.execute(share_string, (
                             gs_basic_id, name, cate, types, license_type, license_code, ra_date, ra_ways, true_amount,
-                            reg_amount, ta_ways, ta_date, country,address,iv_basic_id,ps_basic_id,updated_time))
+                            reg_amount, ta_ways, ta_date, country,address,iv_basic_id,ps_basic_id,source,updated_time))
                     insert_flag += rows_count
                     connect.commit()
                 elif int(count) == 1:

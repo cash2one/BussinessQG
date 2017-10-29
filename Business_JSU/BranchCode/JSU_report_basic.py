@@ -13,6 +13,10 @@ import logging
 import time
 import hashlib
 import json
+import sys
+reload(sys)
+sys.setdefaultencoding('utf-8')
+Type = sys.getfilesystemencoding()
 
 basic_string = 'insert into gs_report(gs_basic_id,year,province,name,uuid, tel, address, email, postcode, status, employee, if_empnum, womennum,\
  if_womennum, holding, if_holding,mainbus,code,ccode,source,runner,amount,fill_date,created,updated) values(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)'
@@ -63,7 +67,6 @@ class Report_Basic:
 				if_holding = 0
 			elif u"不公示" in holding:
 				if_holding = 0
-			
 			else:
 				if_holding = 1
 			mainbus = data["MAIN_BUSIACT"]
@@ -71,7 +74,7 @@ class Report_Basic:
 			amount = data["REG_CAPI"]
 			fill_date = data["REPORT_DATE"]
 			
-			info[0] = [name,  tel, address, email, postcode, status, employee, if_empnum, womennum,
+			info[0] = [name,tel, address, email, postcode, status, employee, if_empnum, womennum,
 							  if_womennum, holding, if_holding, mainbus, code, ccode,runner, amount, fill_date]
 			asset = data["NET_AMOUNT"]
 			if_asset = self.judge_if_public(asset)
@@ -123,7 +126,7 @@ class Report_Basic:
 				if_asset = 0
 		return if_asset
 		
-	def update_report_basic(self,cursor,connect,gs_basic_id,baseinfo,year):
+	def update_report_basic(self, cursor, connect, gs_basic_id, baseinfo,year):
 		name, tel, address, email = baseinfo[0][0], baseinfo[0][1], baseinfo[0][2], baseinfo[0][3]
 		postcode, status, employee, if_empnum = baseinfo[0][4], baseinfo[0][5], baseinfo[0][6], baseinfo[0][7]
 		womennum,if_womennum, holding, if_holding = baseinfo[0][8], baseinfo[0][9], baseinfo[0][10], baseinfo[0][11]
@@ -134,7 +137,7 @@ class Report_Basic:
 		m = hashlib.md5()
 		m.update(str(gs_basic_id) + str(year))
 		uuid = m.hexdigest()
-		if email == '无' :
+		if email == '无':
 			email = None
 		if tel == '无':
 			tel = None
@@ -193,7 +196,4 @@ class Report_Basic:
 			updated_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
 			cursor.execute(update_run_py, (self.gs_py_id, remark, updated_time, gs_basic_id, self.gs_py_id))
 			connect.commit()
-		
-	
-		
 		

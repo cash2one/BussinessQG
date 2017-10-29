@@ -21,13 +21,13 @@ reload(sys)
 sys.setdefaultencoding('utf-8')
 Type = sys.getfilesystemencoding()
 
-# url = sys.argv[1]
-# gs_basic_id = sys.argv[2]
-# gs_py_id = sys.argv[3]
+url = sys.argv[1]
+gs_basic_id = sys.argv[2]
+gs_py_id = sys.argv[3]
 
-url = 'http://www.gsxt.gov.cn/%7BT3MeYJuLFfLz3_3hCLfW_D7rl24ej0FREfGxNgxzT64_NUmxZAyzXCNptPDbN6CTpIP0K5DJ4gk9glIGRMPpacfPFH9-rhCmtSezoqOCtNk-1502787164569%7D'
-gs_basic_id = 1900000103
-gs_py_id = 1501
+# url = 'http://www.gsxt.gov.cn/%7BT3MeYJuLFfLz3_3hCLfW_D7rl24ej0FREfGxNgxzT64_NUmxZAyzXCNptPDbN6CTpIP0K5DJ4gk9glIGRMPpacfPFH9-rhCmtSezoqOCtNk-1502787164569%7D'
+# gs_basic_id = 1900000103
+# gs_py_id = 1501
 # http://www.gsxt.gov.cn/%7BdDJl9n7SHrdg23Xbla16SR9L3HDMcRaEl-7SHfBdMBBmJDWFHRdN2BkawosGi2dFRTlso9Njpd_ENzN-yHkIRKUuGQZhM5PG69aSmJuDixomEzjQC306yg-87wjE4wFI-1501740503025%7Dqisusohttp://www.gsxt.gov.cn/%7BdDJl9n7SHrdg23Xbla16SaS_FabCuuYFgn8OGRF2PRmJDWFHRdN2BkawosGi2dF03_xDEmHRZAg2aRhGXqhhxsuOXRtZXJfMjQLGA0O7oAVxMHpMgIa_45I9V09LXKBeFRrYTCawphBQDg_1k1T7w-1501737583814%7D
 
  # 204109602 1327

@@ -17,13 +17,11 @@ import logging
 import chardet
 import random
 
-
 reload(sys)
 sys.setdefaultencoding('utf-8')
 Type = sys.getfilesystemencoding()
 
 headers = config.headers
-
 
 code = '911100007693890511'
 ccode = '911100007693890511'
@@ -34,80 +32,87 @@ string = "技术咨询管理"
 update_string = 'update gs_basic set gs_basic_id = %s, name = %s ,ccode = %s,status = %s ,types = %s ,legal_person = %s, \
 responser = %s ,investor = %s,runner = %s ,reg_date = %s ,appr_date = %s,reg_amount = %s, start_date = %s ,end_date = %s ,reg_zone = %s,reg_address = %s ,scope = %s,updated = %s  where gs_basic_id = %s'
 select_name = 'select name from gs_basic where gs_basic_id = %s'
-#用于获取搜索列表
+
+
+# 用于获取搜索列表
 def get_list(string):
 	url = config.list_url
 	info = {}
 	flag = 0
 	try:
-		#随机选取请求头
+		# 随机选取请求头
 		headers["User-Agent"] = random.choice(config.USER_AGENTS)
 		params = config.list_parmas.format(string)
 		result = requests.post(url, params, headers=headers)
 		status_code = result.status_code
 		s = chardet.detect(result.content)["encoding"]
 		print s
-		if status_code ==200 and s =='utf-8':
+		if status_code == 200 and s == 'utf-8':
 			pattern = re.compile(u".*无查询结果.*")
-			match = re.findall(pattern,result.content)
+			match = re.findall(pattern, result.content)
 			if len(match) == 0:
 				content = etree.HTML(result.content)
 				list = content.xpath("//li")
-				for i,single in enumerate(list):
+				for i, single in enumerate(list):
 					item = single.xpath(".//a/@href")[0]
-					url = config.host+item
+					url = config.host + item
 					info[i] = url
 				flag = 1
 			else:
 				flag = 100000003
 		else:
 			flag = 100000004
-	except Exception,e:
+	except Exception, e:
 		print e
-		logging.error("search error:%s"%e)
+		logging.error("search error:%s" % e)
 		flag = 100000004
 	finally:
-		return info,flag
-#用于获取基本信息以及详情信息
+		return info, flag
+
+
+# 用于获取基本信息以及详情信息
 def get_detail(info):
 	detaillist = {}
 	for key in info.keys():
 		url = info[key]
-		content,status_code = Send_Request().send_request(url)
+		content, status_code = Send_Request().send_request(url)
 		if status_code == 200:
 			detaillist[key] = deal_single_info(content)
 		time.sleep(0.5)
 	return detaillist
-		
-#用于处理单条信息
+
+
+# 用于处理单条信息
 def deal_single_info(result):
 	infolist = {}
-	#注意设置编码格式防止乱码
-	content = etree.HTML(result,parser=etree.HTMLParser(encoding='utf-8'))
-	url = config.host+content.xpath("//*[@class = 'moreInfo']/a/@href")[0]
+	# 注意设置编码格式防止乱码
+	content = etree.HTML(result, parser=etree.HTMLParser(encoding='utf-8'))
+	url = config.host + content.xpath("//*[@class = 'moreInfo']/a/@href")[0]
 	infolist["href"] = url
 	ddlist = content.xpath("//dl/dt")
 	codetemp = content.xpath("//dd[@style='color:red;']")
-	if len(codetemp)==1:
+	if len(codetemp) == 1:
 		string = codetemp[0].xpath('string(.)')
 		pattern = re.compile(r"\d+")
-		code = re.findall(pattern,string)
-		if len(code)==1:
+		code = re.findall(pattern, string)
+		if len(code) == 1:
 			code = code[0]
 		else:
 			code = None
 	else:
 		code = None
 	infolist['code'] = code
-	for i,single in enumerate(ddlist,0):
+	for i, single in enumerate(ddlist, 0):
 		key = single.xpath("string(.)")
 		key = deal_html_code.remove_symbol(key)
 		dd = single.xpath("./following-sibling::*[1]")[0].xpath("string(.)")
 		dd = deal_html_code.remove_symbol(dd)
 		infolist[key] = dd
 	return infolist
-#将基本信息插入到数据库中
-def update_to_db(information, cursor, connect,gs_basic_id):
+
+
+# 将基本信息插入到数据库中
+def update_to_db(information, cursor, connect, gs_basic_id):
 	if '企业名称' in information.keys():
 		name = information[u"企业名称"]
 	elif '名称' in information.keys():
@@ -171,10 +176,10 @@ def update_to_db(information, cursor, connect,gs_basic_id):
 	if '成立日期' in information.keys():
 		sign_date = information[u"成立日期"]
 		sign_date = sign_date.strip()
-		# print sign_date
+	# print sign_date
 	elif '注册日期' in information.keys():
 		sign_date = information[u"注册日期"]
-		sign_date =sign_date.strip()
+		sign_date = sign_date.strip()
 	else:
 		sign_date = None
 	if '注册资本' in information.keys():
@@ -199,8 +204,8 @@ def update_to_db(information, cursor, connect,gs_basic_id):
 		end_date = information[u"合伙期限至"]
 	else:
 		end_date = None
-	if end_date =='':
-		end_date =None
+	if end_date == '':
+		end_date = None
 	if '登记机关' in information.keys():
 		reg_zone = information[u"登记机关"]
 	elif '发照机关' in information.keys():
@@ -226,7 +231,7 @@ def update_to_db(information, cursor, connect,gs_basic_id):
 	href = information["href"]
 	try:
 		row_count = cursor.execute(update_string, (
-			gs_basic_id, name, ccode, status, types,  legal_person, responser, investor, runner, sign_date,
+			gs_basic_id, name, ccode, status, types, legal_person, responser, investor, runner, sign_date,
 			appr_date, reg_amount, start_date, end_date, reg_zone, reg_address, scope, updated_time, gs_basic_id))
 		logging.info('update basic :%s' % row_count)
 		connect.commit()
@@ -236,10 +241,11 @@ def update_to_db(information, cursor, connect,gs_basic_id):
 	finally:
 		if flag < 100000001:
 			flag = row_count
-		return flag,href
+		return flag, href
 
-#用于获得搜索结果,及状态信息
-def get_info(code,ccode):
+
+# 用于获得搜索结果,及状态信息
+def get_info(code, ccode):
 	pattern = re.compile(r'^9.*')
 	result1 = re.findall(pattern, code)
 	result2 = re.findall(pattern, ccode)
@@ -262,41 +268,40 @@ def get_info(code,ccode):
 		cursor.close()
 		connect.close()
 		info, flag = get_list(name)
-	return info,flag
+	return info, flag
+
 
 def main(string):
 	printinfo = {}
 	href = ''
 	try:
-		info,flag = get_list(string)
+		info, flag = get_list(string)
 		print len(info)
 		info_list = get_detail(info)
 		print info_list
-		# info,flag = get_list(code,ccode)
-		# if flag ==1:
-		# 	HOST, USER, PASSWD, DB, PORT = config.HOST, config.USER, config.PASSWD, config.DB, config.PORT
-		# 	connect, cursor = Connect_to_DB().ConnectDB(HOST, USER, PASSWD, DB, PORT)
-		# 	info_list = get_detail(info)
-		# 	if info_list >0:
-		# 		flag,href = update_to_db(info_list[0],cursor,connect,gs_basic_id)
-		# 	else:
-		# 		pass
-		# else:
-		# 	pass
-	except Exception,e:
+	# info,flag = get_list(code,ccode)
+	# if flag ==1:
+	# 	HOST, USER, PASSWD, DB, PORT = config.HOST, config.USER, config.PASSWD, config.DB, config.PORT
+	# 	connect, cursor = Connect_to_DB().ConnectDB(HOST, USER, PASSWD, DB, PORT)
+	# 	info_list = get_detail(info)
+	# 	if info_list >0:
+	# 		flag,href = update_to_db(info_list[0],cursor,connect,gs_basic_id)
+	# 	else:
+	# 		pass
+	# else:
+	# 	pass
+	except Exception, e:
 		print e
 		flag = 100000005
-		logging.error("unknow error:%s"%e)
+		logging.error("unknow error:%s" % e)
 	finally:
 		printinfo["flag"] = int(flag)
 		printinfo["url"] = href
 		print printinfo
-		
-	
+
 
 if __name__ == '__main__':
 	print "The Program start time:", time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
 	start = time.time()
 	main(string)
 	print "The Program end time:", time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()), "[%s]" % (time.time() - start)
-

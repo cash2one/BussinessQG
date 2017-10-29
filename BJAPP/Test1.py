@@ -14,23 +14,22 @@ from lxml import etree
 import random
 from PublicCode.Public_code import Send_Request
 
-
 # 用于解决中文编码问题
 reload(sys)
 sys.setdefaultencoding('utf-8')
 Type = sys.getfilesystemencoding()
-# string = '<table><tr>\
-# <td style="height:auto;border-left:1px dashed #ccc;">31</td>\
-# <td style="height:auto;text-align:left;padding:0 5px;">\
-# <td style="height:auto;">110115018335783</td>\
-# <td style="height:auto;text-align:center;padding:0 5px;">刘旺</td>\
-# <td style="height:auto;text-align:left;padding:0 5px;">北京市大兴区黄村镇兴华南路1号</td>\
-# <td style="height:auto;text-align:left;padding:0 5px;">大兴分局</td>\
-# </tr><table>'
-# result = etree.HTML(string,parser=etree.HTMLParser(encoding='utf-8'))
-# string = u'分局'
-# list = result.xpath("//table//tr[contains(.,'%s')]"%string)
-# print list
+string = '<table><tr>\
+<td style="height:auto;border-left:1px dashed #ccc;">31</td>\
+<td style="height:auto;text-align:left;padding:0 5px;">\
+<td style="height:auto;">110115018335783</td>\
+<td style="height:auto;text-align:center;padding:0 5px;">刘旺</td>\
+<td style="height:auto;text-align:left;padding:0 5px;">北京市大兴区黄村镇兴华南路1号</td>\
+<td style="height:auto;text-align:left;padding:0 5px;">大兴分局</td>\
+</tr><table>'
+result = etree.HTML(string,parser=etree.HTMLParser(encoding='utf-8'))
+string = u'分局'
+list = result.xpath("//table//tr[contains(.,'%s')]"%string)
+print list
 # list = ["1","2","3"]
 # print list[-1]
 # list.remove(list[-1])
@@ -116,6 +115,7 @@ Type = sys.getfilesystemencoding()
 # 	print 0
 import datetime
 import time
+
 # date1 = '2015-06-23'
 # date2 = '2015-06-23'
 #
@@ -151,7 +151,7 @@ import time
 #
 # 		s ='Mozilla/5.0 (MeeGo; NokiaN9) AppleWebKit/%s%s%s.%s%s (KHTML, like Gecko) Chrome/%s%s.%s.%s%s%s%s.%s%s%s Mobile Safari/%s%s%s.%s%s'%(list[0], list[1], list[2], list[3], list[4], list[5], list[6], list[7], list[8], list[9], list[10], list[11],list[12], list[13], list[14], list[15], list[16], list[17], list[18], list[19])
 # 		f.write(s+'\n')
-		# print s
+# print s
 # file = open("user-agent.txt")
 # UA = file.readline()
 # print UA
@@ -163,24 +163,12 @@ import time
 print "The Program start time:", time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
 start = time.time()
 url = 'http://qyxy.baic.gov.cn/wap'
-result = requests.get(url,headers =config.headers_index)
+result = requests.get(url, headers=config.headers_index)
 print "The Program end time:", time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()), "[%s]" % (time.time() - start)
 
-result = etree.HTML(result.content,parser=etree.HTMLParser(encoding='utf-8'))
+result = etree.HTML(result.content, parser=etree.HTMLParser(encoding='utf-8'))
 id = result.xpath('//span[@class = "shouButton"]/@onclick')[0]
 pattern = re.compile(".*QueryIndex\('','(.*?)'\).*")
-match = re.findall(pattern,id)[0]
-print id,match
+match = re.findall(pattern, id)[0]
+print id, match
 print "The Program end time:", time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()), "[%s]" % (time.time() - start)
-
-
-		
-
-		
-
-
-
-
-
-
-

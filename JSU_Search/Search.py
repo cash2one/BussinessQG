@@ -9,16 +9,23 @@ from PublicCode.Public_Code import Send_Request
 from PublicCode import deal_html_code
 from PublicCode.Public_Code import Connect_to_DB
 from PublicCode.Public_Code import Log
-import Update_Info
+
 import hashlib
 import logging
 import requests
 import time
 import json
 import re
-keyword = '科学技术有限公司'
-unique_id = '199999212'
-user_id = '1345'
+import sys
+reload(sys)
+sys.setdefaultencoding('utf-8')
+Type = sys.getfilesystemencoding()
+keyword = sys.argv[1]
+unique_id = sys.argv[2]
+user_id = sys.argv[3]
+# keyword = '江苏股份有限公司'
+# unique_id = '19999921212124545'
+# user_id = '1345'
 
 insert_string = "insert into gs_basic(id,province,name,code,ccode,legal_person,responser,investor,runner,reg_date,status,updated) values (%s,%s,%s, %s, %s,%s,%s, %s,%s,%s, %s,%s)"
 update_string = "update gs_basic set gs_basic_id = %s,name = %s ,legal_person = %s ,responser=%s,investor = %s,runner = %s,status = %s ,reg_date = %s,uuid = %s where gs_basic_id = %s"
@@ -55,7 +62,7 @@ def get_search_info(name,cookies):
 		data = json.loads(result.content)
 		
 		error = data["ERROR"]
-		print error
+		# print error
 		if "失败" in error or "重新输入" in error:
 			flag = 100000003
 			logging.info(error)
@@ -106,8 +113,8 @@ def insert_search(keyword, user_id, info, cursor, connect):
 				gs_basic_id = update_to_basic(int(count), info[key], cursor, connect, gs_basic_id, uuid)
 				updated = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
 				row_count = cursor.execute(search_string, (
-					gs_basic_id, user_id, unique_id, keyword, name, provin, code, code, legal_person, runner,
-					responser, investor, start_date, status, if_new, unique, updated))
+					gs_basic_id, user_id, unique_id, keyword, name, provin, code, code, legal_person,
+					responser, investor, runner,start_date, status, if_new, unique, updated))
 				connect.commit()
 				insert_flag += row_count
 			
@@ -167,7 +174,7 @@ def update_to_basic(count, info, cursor, connect, gs_basic_id, uuid):
 		m.update(code)
 		id = m.hexdigest()
 		updated = deal_html_code.get_before_date()
-		cursor.execute(insert_string, ((id, provin, name, code, code, legal_person, investor, runner, responser, start_date, status, updated)))
+		cursor.execute(insert_string, ((id, provin, name, code, code, legal_person,responser, investor, runner,start_date, status, updated)))
 		gs_basic_id = connect.insert_id()
 		connect.commit()
 		return gs_basic_id
@@ -228,7 +235,7 @@ def printinfo(flag,insert,update,unique_id):
 
 
 def main():
-	# Log().found_log(unique_id,user_id)
+	Log().found_log(unique_id,user_id)
 	insert_flag, update_flag = 0, 0
 	try:
 		HOST, USER, PASSWD, DB, PORT = config.HOST, config.USER, config.PASSWD, config.DB, config.PORT
@@ -248,20 +255,20 @@ def main():
 		cursor.close()
 		connect.close()
 		printinfo(flag, insert_flag, update_flag, unique_id)
-#用于对搜素结果进行更新
-def update_search():
-	select_string ="select gs_search_id,gs_basic_id,uuid from gs_search where token = %s and user_id = %s"
-	HOST, USER, PASSWD, DB, PORT = config.HOST, config.USER, config.PASSWD, config.DB, config.PORT
-	connect, cursor = Connect_to_DB().ConnectDB(HOST, USER, PASSWD, DB, PORT)
-	cursor.execute(select_string, (unique_id, user_id))
-	for gs_search_id,gs_basic_id,uuid in cursor.fetchall():
-		print gs_basic_id
-		Update_Info.main(uuid, gs_search_id, gs_basic_id)
+# #用于对搜素结果进行更新
+# def update_search():
+# 	select_string ="select gs_search_id,gs_basic_id,uuid from gs_search where token = %s and user_id = %s"
+# 	HOST, USER, PASSWD, DB, PORT = config.HOST, config.USER, config.PASSWD, config.DB, config.PORT
+# 	connect, cursor = Connect_to_DB().ConnectDB(HOST, USER, PASSWD, DB, PORT)
+# 	cursor.execute(select_string, (unique_id, user_id))
+# 	for gs_search_id,gs_basic_id,uuid in cursor.fetchall():
+# 		print gs_basic_id
+# 		Update_Info.main(uuid, gs_search_id, gs_basic_id)
 		
 	
 if __name__ == '__main__':
 	print "The Program start time:", time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
 	start = time.time()
 	main()
-	update_search()
+	# update_search()
 	print "The Program end time:", time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()), "[%s]" % (time.time() - start)

@@ -1,0 +1,184 @@
+Fri, 15 Sep 2017 10:37:41 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cn
+Fri, 15 Sep 2017 10:37:42 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "GET /index.html HTTP/1.1" 200 None
+Fri, 15 Sep 2017 10:37:42 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): 59.110.138.116
+Fri, 15 Sep 2017 10:37:50 connectionpool.py[line:400] DEBUG http://59.110.138.116:80 "GET /geetest/get?token=seo_dsboye&reg=http://www.gsxt.gov.cn/SearchItemCaptcha HTTP/1.1" 200 None
+Fri, 15 Sep 2017 10:37:50 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "GET /index.html HTTP/1.1" 200 None
+Fri, 15 Sep 2017 10:38:03 connectionpool.py[line:400] DEBUG http://59.110.138.116:80 "GET /geetest/get?token=seo_dsboye&reg=http://www.gsxt.gov.cn/SearchItemCaptcha HTTP/1.1" 200 None
+Fri, 15 Sep 2017 10:38:34 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "POST /corp-query-search-1.html HTTP/1.1" 303 None
+Fri, 15 Sep 2017 10:38:34 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "GET /index?elaspedtime=30.008&nodeName=21406%40GSZJ_IDC_GSXT_WB_QTWEB_014 HTTP/1.1" 200 None
+Fri, 15 Sep 2017 10:38:34 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "GET /index.html HTTP/1.1" 200 None
+Fri, 15 Sep 2017 10:40:12 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cn
+Fri, 15 Sep 2017 10:40:12 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "GET /index.html HTTP/1.1" 200 None
+Fri, 15 Sep 2017 10:40:12 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): 59.110.138.116
+Fri, 15 Sep 2017 10:40:14 connectionpool.py[line:400] DEBUG http://59.110.138.116:80 "GET /geetest/get?token=seo_dsboye&reg=http://www.gsxt.gov.cn/SearchItemCaptcha HTTP/1.1" 200 None
+Fri, 15 Sep 2017 10:40:30 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cn
+Fri, 15 Sep 2017 10:40:30 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "GET /index.html HTTP/1.1" 200 None
+Fri, 15 Sep 2017 10:40:30 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): 59.110.138.116
+Fri, 15 Sep 2017 10:40:34 connectionpool.py[line:400] DEBUG http://59.110.138.116:80 "GET /geetest/get?token=seo_dsboye&reg=http://www.gsxt.gov.cn/SearchItemCaptcha HTTP/1.1" 200 None
+Fri, 15 Sep 2017 10:41:25 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cn
+Fri, 15 Sep 2017 10:41:25 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "GET /index.html HTTP/1.1" 200 None
+Fri, 15 Sep 2017 10:41:25 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): 59.110.138.116
+Fri, 15 Sep 2017 10:41:34 connectionpool.py[line:400] DEBUG http://59.110.138.116:80 "GET /geetest/get?token=seo_dsboye&reg=http://www.gsxt.gov.cn/SearchItemCaptcha HTTP/1.1" 200 None
+Fri, 15 Sep 2017 10:41:34 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "POST /corp-query-search-1.html HTTP/1.1" 200 None
+Fri, 15 Sep 2017 10:41:34 Public_code.py[line:28] INFO connect is success!
+Fri, 15 Sep 2017 10:41:43 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cn
+Fri, 15 Sep 2017 10:41:48 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "GET /index.html HTTP/1.1" 200 None
+Fri, 15 Sep 2017 10:41:48 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): 59.110.138.116
+Fri, 15 Sep 2017 10:42:00 connectionpool.py[line:400] DEBUG http://59.110.138.116:80 "GET /geetest/get?token=seo_dsboye&reg=http://www.gsxt.gov.cn/SearchItemCaptcha HTTP/1.1" 200 None
+Fri, 15 Sep 2017 10:42:00 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "POST /corp-query-search-1.html HTTP/1.1" 200 None
+Fri, 15 Sep 2017 10:42:00 Public_code.py[line:28] INFO connect is success!
+Fri, 15 Sep 2017 11:02:31 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cn
+Fri, 15 Sep 2017 11:02:35 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "GET /index.html HTTP/1.1" 200 None
+Fri, 15 Sep 2017 11:02:35 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): 59.110.138.116
+Fri, 15 Sep 2017 11:02:52 connectionpool.py[line:400] DEBUG http://59.110.138.116:80 "GET /geetest/get?token=seo_dsboye&reg=http://www.gsxt.gov.cn/SearchItemCaptcha HTTP/1.1" 200 None
+Fri, 15 Sep 2017 11:02:52 Public_code.py[line:28] INFO connect is success!
+Fri, 15 Sep 2017 11:02:52 GetUrl.py[line:237] ERROR get url error local variable 'history_name' referenced before assignment
+Fri, 15 Sep 2017 11:04:17 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cn
+Fri, 15 Sep 2017 11:04:17 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "GET /index.html HTTP/1.1" 200 None
+Fri, 15 Sep 2017 11:04:17 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): 59.110.138.116
+Fri, 15 Sep 2017 11:04:21 connectionpool.py[line:400] DEBUG http://59.110.138.116:80 "GET /geetest/get?token=seo_dsboye&reg=http://www.gsxt.gov.cn/SearchItemCaptcha HTTP/1.1" 200 None
+Fri, 15 Sep 2017 11:04:21 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "POST /corp-query-search-1.html HTTP/1.1" 200 None
+Fri, 15 Sep 2017 11:04:21 Public_code.py[line:28] INFO connect is success!
+Fri, 15 Sep 2017 11:04:33 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cn
+Fri, 15 Sep 2017 11:04:33 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "GET /index.html HTTP/1.1" 200 None
+Fri, 15 Sep 2017 11:04:33 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): 59.110.138.116
+Fri, 15 Sep 2017 11:04:43 connectionpool.py[line:400] DEBUG http://59.110.138.116:80 "GET /geetest/get?token=seo_dsboye&reg=http://www.gsxt.gov.cn/SearchItemCaptcha HTTP/1.1" 200 None
+Fri, 15 Sep 2017 11:04:43 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "POST /corp-query-search-1.html HTTP/1.1" 200 None
+Fri, 15 Sep 2017 11:04:43 Public_code.py[line:28] INFO connect is success!
+Fri, 15 Sep 2017 11:13:27 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cn
+Fri, 15 Sep 2017 11:13:31 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "GET /index.html HTTP/1.1" 200 None
+Fri, 15 Sep 2017 11:13:31 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): 59.110.138.116
+Fri, 15 Sep 2017 11:13:33 connectionpool.py[line:400] DEBUG http://59.110.138.116:80 "GET /geetest/get?token=seo_dsboye&reg=http://www.gsxt.gov.cn/SearchItemCaptcha HTTP/1.1" 200 None
+Fri, 15 Sep 2017 11:13:33 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "POST /corp-query-search-1.html HTTP/1.1" 200 None
+Fri, 15 Sep 2017 11:13:33 Public_code.py[line:28] INFO connect is success!
+Fri, 15 Sep 2017 11:14:01 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cn
+Fri, 15 Sep 2017 11:14:04 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "GET /index.html HTTP/1.1" 200 None
+Fri, 15 Sep 2017 11:14:04 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): 59.110.138.116
+Fri, 15 Sep 2017 11:14:09 connectionpool.py[line:400] DEBUG http://59.110.138.116:80 "GET /geetest/get?token=seo_dsboye&reg=http://www.gsxt.gov.cn/SearchItemCaptcha HTTP/1.1" 200 None
+Fri, 15 Sep 2017 11:14:09 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "POST /corp-query-search-1.html HTTP/1.1" 200 None
+Fri, 15 Sep 2017 11:14:09 Public_code.py[line:28] INFO connect is success!
+Fri, 15 Sep 2017 11:18:45 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cn
+Fri, 15 Sep 2017 11:18:45 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "GET /index.html HTTP/1.1" 200 None
+Fri, 15 Sep 2017 11:18:45 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): 59.110.138.116
+Fri, 15 Sep 2017 11:18:53 connectionpool.py[line:400] DEBUG http://59.110.138.116:80 "GET /geetest/get?token=seo_dsboye&reg=http://www.gsxt.gov.cn/SearchItemCaptcha HTTP/1.1" 200 None
+Fri, 15 Sep 2017 11:18:54 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "POST /corp-query-search-1.html HTTP/1.1" 200 None
+Fri, 15 Sep 2017 11:18:54 Public_code.py[line:28] INFO connect is success!
+Fri, 15 Sep 2017 11:39:46 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cn
+Fri, 15 Sep 2017 11:39:46 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "GET /index.html HTTP/1.1" 200 None
+Fri, 15 Sep 2017 11:39:46 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): 59.110.138.116
+Fri, 15 Sep 2017 11:39:52 connectionpool.py[line:400] DEBUG http://59.110.138.116:80 "GET /geetest/get?token=seo_dsboye&reg=http://www.gsxt.gov.cn/SearchItemCaptcha HTTP/1.1" 200 None
+Fri, 15 Sep 2017 11:39:52 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "POST /corp-query-search-1.html HTTP/1.1" 200 None
+Fri, 15 Sep 2017 11:39:52 Public_code.py[line:28] INFO connect is success!
+Fri, 15 Sep 2017 11:40:28 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cn
+Fri, 15 Sep 2017 11:40:28 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "GET /index.html HTTP/1.1" 200 None
+Fri, 15 Sep 2017 11:40:28 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): 59.110.138.116
+Fri, 15 Sep 2017 11:40:40 connectionpool.py[line:400] DEBUG http://59.110.138.116:80 "GET /geetest/get?token=seo_dsboye&reg=http://www.gsxt.gov.cn/SearchItemCaptcha HTTP/1.1" 200 None
+Fri, 15 Sep 2017 11:40:40 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "POST /corp-query-search-1.html HTTP/1.1" 200 None
+Fri, 15 Sep 2017 11:40:40 Public_code.py[line:28] INFO connect is success!
+Fri, 15 Sep 2017 11:41:09 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cn
+Fri, 15 Sep 2017 11:41:09 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "GET /index.html HTTP/1.1" 200 None
+Fri, 15 Sep 2017 11:41:09 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): 59.110.138.116
+Fri, 15 Sep 2017 11:41:13 connectionpool.py[line:400] DEBUG http://59.110.138.116:80 "GET /geetest/get?token=seo_dsboye&reg=http://www.gsxt.gov.cn/SearchItemCaptcha HTTP/1.1" 200 None
+Fri, 15 Sep 2017 11:41:13 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "POST /corp-query-search-1.html HTTP/1.1" 200 None
+Fri, 15 Sep 2017 11:41:14 Public_code.py[line:28] INFO connect is success!
+Fri, 15 Sep 2017 11:41:50 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cn
+Fri, 15 Sep 2017 11:41:50 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "GET /index.html HTTP/1.1" 200 None
+Fri, 15 Sep 2017 11:41:50 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): 59.110.138.116
+Fri, 15 Sep 2017 11:41:57 connectionpool.py[line:400] DEBUG http://59.110.138.116:80 "GET /geetest/get?token=seo_dsboye&reg=http://www.gsxt.gov.cn/SearchItemCaptcha HTTP/1.1" 200 None
+Fri, 15 Sep 2017 11:41:57 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "POST /corp-query-search-1.html HTTP/1.1" 200 None
+Fri, 15 Sep 2017 11:41:57 Public_code.py[line:28] INFO connect is success!
+Fri, 15 Sep 2017 11:46:05 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cn
+Fri, 15 Sep 2017 11:46:05 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "GET /index.html HTTP/1.1" 200 None
+Fri, 15 Sep 2017 11:46:05 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): 59.110.138.116
+Fri, 15 Sep 2017 11:46:07 connectionpool.py[line:400] DEBUG http://59.110.138.116:80 "GET /geetest/get?token=seo_dsboye&reg=http://www.gsxt.gov.cn/SearchItemCaptcha HTTP/1.1" 200 None
+Fri, 15 Sep 2017 11:46:07 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "POST /corp-query-search-1.html HTTP/1.1" 200 None
+Fri, 15 Sep 2017 11:46:08 Public_code.py[line:28] INFO connect is success!
+Fri, 15 Sep 2017 11:46:15 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cn
+Fri, 15 Sep 2017 11:46:15 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "GET /index.html HTTP/1.1" 200 None
+Fri, 15 Sep 2017 11:46:15 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): 59.110.138.116
+Fri, 15 Sep 2017 11:46:27 connectionpool.py[line:400] DEBUG http://59.110.138.116:80 "GET /geetest/get?token=seo_dsboye&reg=http://www.gsxt.gov.cn/SearchItemCaptcha HTTP/1.1" 200 None
+Fri, 15 Sep 2017 11:46:27 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "POST /corp-query-search-1.html HTTP/1.1" 200 None
+Fri, 15 Sep 2017 11:46:27 Public_code.py[line:28] INFO connect is success!
+Fri, 15 Sep 2017 14:11:15 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cn
+Fri, 15 Sep 2017 14:11:15 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "GET /index.html HTTP/1.1" 200 None
+Fri, 15 Sep 2017 14:11:15 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): 59.110.138.116
+Fri, 15 Sep 2017 14:11:23 connectionpool.py[line:400] DEBUG http://59.110.138.116:80 "GET /geetest/get?token=seo_dsboye&reg=http://www.gsxt.gov.cn/SearchItemCaptcha HTTP/1.1" 200 None
+Fri, 15 Sep 2017 14:11:23 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "POST /corp-query-search-1.html HTTP/1.1" 200 None
+Fri, 15 Sep 2017 14:11:23 Public_code.py[line:28] INFO connect is success!
+Fri, 15 Sep 2017 14:11:29 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cn
+Fri, 15 Sep 2017 14:11:29 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "GET /index.html HTTP/1.1" 200 None
+Fri, 15 Sep 2017 14:11:29 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): 59.110.138.116
+Fri, 15 Sep 2017 14:11:48 connectionpool.py[line:400] DEBUG http://59.110.138.116:80 "GET /geetest/get?token=seo_dsboye&reg=http://www.gsxt.gov.cn/SearchItemCaptcha HTTP/1.1" 200 None
+Fri, 15 Sep 2017 14:11:48 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "POST /corp-query-search-1.html HTTP/1.1" 200 None
+Fri, 15 Sep 2017 14:11:48 Public_code.py[line:28] INFO connect is success!
+Fri, 15 Sep 2017 14:13:48 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cn
+Fri, 15 Sep 2017 14:13:48 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "GET /index.html HTTP/1.1" 200 None
+Fri, 15 Sep 2017 14:13:48 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): 59.110.138.116
+Fri, 15 Sep 2017 14:14:12 connectionpool.py[line:400] DEBUG http://59.110.138.116:80 "GET /geetest/get?token=seo_dsboye&reg=http://www.gsxt.gov.cn/SearchItemCaptcha HTTP/1.1" 200 None
+Fri, 15 Sep 2017 14:14:13 Public_code.py[line:28] INFO connect is success!
+Fri, 15 Sep 2017 14:14:13 GetUrl.py[line:237] ERROR get url error local variable 'history_name' referenced before assignment
+Fri, 15 Sep 2017 14:14:18 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cn
+Fri, 15 Sep 2017 14:14:18 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "GET /index.html HTTP/1.1" 200 None
+Fri, 15 Sep 2017 14:14:18 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): 59.110.138.116
+Fri, 15 Sep 2017 14:14:23 connectionpool.py[line:400] DEBUG http://59.110.138.116:80 "GET /geetest/get?token=seo_dsboye&reg=http://www.gsxt.gov.cn/SearchItemCaptcha HTTP/1.1" 200 None
+Fri, 15 Sep 2017 14:14:23 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "POST /corp-query-search-1.html HTTP/1.1" 200 None
+Fri, 15 Sep 2017 14:14:23 Public_code.py[line:28] INFO connect is success!
+Fri, 15 Sep 2017 14:14:40 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cn
+Fri, 15 Sep 2017 14:14:40 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "GET /index.html HTTP/1.1" 200 None
+Fri, 15 Sep 2017 14:14:40 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): 59.110.138.116
+Fri, 15 Sep 2017 14:14:46 connectionpool.py[line:400] DEBUG http://59.110.138.116:80 "GET /geetest/get?token=seo_dsboye&reg=http://www.gsxt.gov.cn/SearchItemCaptcha HTTP/1.1" 200 None
+Fri, 15 Sep 2017 14:14:46 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "POST /corp-query-search-1.html HTTP/1.1" 200 None
+Fri, 15 Sep 2017 14:14:46 Public_code.py[line:28] INFO connect is success!
+Fri, 15 Sep 2017 14:31:38 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cn
+Fri, 15 Sep 2017 14:31:38 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "GET /index.html HTTP/1.1" 200 None
+Fri, 15 Sep 2017 14:31:38 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): 59.110.138.116
+Fri, 15 Sep 2017 14:31:40 connectionpool.py[line:400] DEBUG http://59.110.138.116:80 "GET /geetest/get?token=seo_dsboye&reg=http://www.gsxt.gov.cn/SearchItemCaptcha HTTP/1.1" 200 None
+Fri, 15 Sep 2017 14:31:41 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "POST /corp-query-search-1.html HTTP/1.1" 200 None
+Fri, 15 Sep 2017 14:31:41 Public_code.py[line:28] INFO connect is success!
+Fri, 15 Sep 2017 14:34:23 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cn
+Fri, 15 Sep 2017 14:34:23 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "GET /index.html HTTP/1.1" 200 None
+Fri, 15 Sep 2017 14:34:23 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): 59.110.138.116
+Fri, 15 Sep 2017 14:34:27 connectionpool.py[line:400] DEBUG http://59.110.138.116:80 "GET /geetest/get?token=seo_dsboye&reg=http://www.gsxt.gov.cn/SearchItemCaptcha HTTP/1.1" 200 None
+Fri, 15 Sep 2017 14:34:27 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "POST /corp-query-search-1.html HTTP/1.1" 200 None
+Fri, 15 Sep 2017 14:34:27 Public_code.py[line:28] INFO connect is success!
+Fri, 15 Sep 2017 14:40:20 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cn
+Fri, 15 Sep 2017 14:40:20 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "GET /index.html HTTP/1.1" 200 None
+Fri, 15 Sep 2017 14:40:20 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): 59.110.138.116
+Fri, 15 Sep 2017 14:40:25 connectionpool.py[line:400] DEBUG http://59.110.138.116:80 "GET /geetest/get?token=seo_dsboye&reg=http://www.gsxt.gov.cn/SearchItemCaptcha HTTP/1.1" 200 None
+Fri, 15 Sep 2017 14:40:25 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "POST /corp-query-search-1.html HTTP/1.1" 200 None
+Fri, 15 Sep 2017 14:40:25 Public_code.py[line:28] INFO connect is success!
+Fri, 15 Sep 2017 15:00:05 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cn
+Fri, 15 Sep 2017 15:00:05 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "GET /index.html HTTP/1.1" 200 None
+Fri, 15 Sep 2017 15:00:05 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): 59.110.138.116
+Fri, 15 Sep 2017 15:00:35 connectionpool.py[line:400] DEBUG http://59.110.138.116:80 "GET /geetest/get?token=seo_dsboye&reg=http://www.gsxt.gov.cn/SearchItemCaptcha HTTP/1.1" 200 None
+Fri, 15 Sep 2017 15:00:35 Public_code.py[line:28] INFO connect is success!
+Fri, 15 Sep 2017 15:00:35 GetUrl.py[line:237] ERROR get url error local variable 'history_name' referenced before assignment
+Fri, 15 Sep 2017 15:01:04 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cn
+Fri, 15 Sep 2017 15:01:04 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "GET /index.html HTTP/1.1" 200 None
+Fri, 15 Sep 2017 15:01:04 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): 59.110.138.116
+Fri, 15 Sep 2017 15:01:12 connectionpool.py[line:400] DEBUG http://59.110.138.116:80 "GET /geetest/get?token=seo_dsboye&reg=http://www.gsxt.gov.cn/SearchItemCaptcha HTTP/1.1" 200 None
+Fri, 15 Sep 2017 15:01:12 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "POST /corp-query-search-1.html HTTP/1.1" 200 None
+Fri, 15 Sep 2017 15:01:12 Public_code.py[line:28] INFO connect is success!
+Fri, 15 Sep 2017 15:01:30 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cn
+Fri, 15 Sep 2017 15:01:30 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "GET /index.html HTTP/1.1" 200 None
+Fri, 15 Sep 2017 15:01:30 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): 59.110.138.116
+Fri, 15 Sep 2017 15:01:38 connectionpool.py[line:400] DEBUG http://59.110.138.116:80 "GET /geetest/get?token=seo_dsboye&reg=http://www.gsxt.gov.cn/SearchItemCaptcha HTTP/1.1" 200 None
+Fri, 15 Sep 2017 15:01:38 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "POST /corp-query-search-1.html HTTP/1.1" 200 None
+Fri, 15 Sep 2017 15:01:38 Public_code.py[line:28] INFO connect is success!
+Fri, 15 Sep 2017 15:02:59 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cn
+Fri, 15 Sep 2017 15:02:59 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "GET /index.html HTTP/1.1" 200 None
+Fri, 15 Sep 2017 15:02:59 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): 59.110.138.116
+Fri, 15 Sep 2017 15:03:03 connectionpool.py[line:400] DEBUG http://59.110.138.116:80 "GET /geetest/get?token=seo_dsboye&reg=http://www.gsxt.gov.cn/SearchItemCaptcha HTTP/1.1" 200 None
+Fri, 15 Sep 2017 15:03:03 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "POST /corp-query-search-1.html HTTP/1.1" 200 None
+Fri, 15 Sep 2017 15:03:40 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cn
+Fri, 15 Sep 2017 15:03:40 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "GET /index.html HTTP/1.1" 200 None
+Fri, 15 Sep 2017 15:03:40 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): 59.110.138.116
+Fri, 15 Sep 2017 15:03:43 connectionpool.py[line:400] DEBUG http://59.110.138.116:80 "GET /geetest/get?token=seo_dsboye&reg=http://www.gsxt.gov.cn/SearchItemCaptcha HTTP/1.1" 200 None
+Fri, 15 Sep 2017 15:03:43 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "POST /corp-query-search-1.html HTTP/1.1" 200 None
+Fri, 15 Sep 2017 15:03:43 Public_code.py[line:28] INFO connect is success!
+Fri, 15 Sep 2017 15:04:15 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): www.gsxt.gov.cn
+Fri, 15 Sep 2017 15:04:15 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "GET /index.html HTTP/1.1" 200 None
+Fri, 15 Sep 2017 15:04:15 connectionpool.py[line:212] DEBUG Starting new HTTP connection (1): 59.110.138.116
+Fri, 15 Sep 2017 15:04:19 connectionpool.py[line:400] DEBUG http://59.110.138.116:80 "GET /geetest/get?token=seo_dsboye&reg=http://www.gsxt.gov.cn/SearchItemCaptcha HTTP/1.1" 200 None
+Fri, 15 Sep 2017 15:04:19 connectionpool.py[line:400] DEBUG http://www.gsxt.gov.cn:80 "POST /corp-query-search-1.html HTTP/1.1" 200 None
+Fri, 15 Sep 2017 15:04:19 Public_code.py[line:28] INFO connect is success!
