@@ -120,4 +120,4 @@ class Basic:
 		finally:
 			if flag < 100000001:
 				flag = row_count
-			return flag
+			print "basic:%s"%flag
