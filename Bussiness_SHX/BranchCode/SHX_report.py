@@ -18,23 +18,12 @@ import SHX_report_run
 import SHX_report_share
 import SHX_report_schange
 import SHX_report_web
-
+import traceback
 import logging
-import time
+from lxml import etree
 
 select_basic_year = 'select reg_date from gs_basic where gs_basic_id = %s'
-
-report_dict = {
-	u"社保信息": "report_lab",
-	u"基本信息": "report_basic",
-	u"担保信息": "report_assure",
-	u"网站": "report_web",
-	u"投资信息": "report_invest",
-	u"资产状况": "report_run1",
-	u"经营状况": "reoprt_run2",
-	u"行政许可": "report_permit",
-	u"股东及出资": "report_share"
-}
+select_report = 'select gs_report_id from gs_report where gs_basic_id = %s and year = %s'
 
 
 class Report:
@@ -47,18 +36,23 @@ class Report:
 	
 	# 用于获得相应年份的对应的分项信息
 	def get_year_info(self):
-		year = self._fill_date[0:4]
+		year = int(str(self._fill_date)[0:4]) - 1
+		
 		string = u'%s年度报告' % year
-		data = self._data.xpath('//p[contains(text(),"%s")]/../../following-sibling::*[1]' % string)
+		
+		data = self._data.xpath('.//p[contains(text(),"%s")]/../..' % string)
+		
 		info = {}
 		for key, value in config.report_dict.iteritems():
-			info[value] = deal_html_code.match_info(key, data)
+			info[value] = deal_html_code.match_info(key, data[0])
+		
 		if info["report_run1"] != '':
 			info["report_run"] = info["report_run1"]
 		elif info["report_run2"] != '':
 			info["report_run"] = info["report_run2"]
 		del info["report_run1"]
 		del info["report_run2"]
+		
 		return info
 	
 	# 这一部分也可以写成一个循环,年报情况较多，暂时不改
@@ -66,98 +60,112 @@ class Report:
 		
 		try:
 			remark = 1
-			year = self._fill_date[0:4]
+			year = int(str(self._fill_date)[0:4]) - 1
+			temp_dict = {}
+			# 把一些不必要的数据项删除
+			for key, value in info_dict.iteritems():
+				if value == '':
+					continue
+				temp_dict[key] = value
+			info_dict = temp_dict
+			print temp_dict
+			
 			if "report_basic" in info_dict.keys():
-				info = SHX_report_basic.Report_Basic().get_info(info_dict["basic"])
-				gs_report_id = SHX_report_basic.Report_Basic().update_to_db(info, self.gs_basic_id, self.cursor,
-																			self.connect,
-																			self.fill_date)
-			if int(year) == 2016:
-				if "report_lab" in info_dict.keys():
-					info = SHX_report_lab.Report_Lab().get_info(info_dict["report_lab"])
+				info = SHX_report_basic.Report_Basic().get_info(info_dict["report_basic"])
+				gs_report_id = SHX_report_basic.Report_Basic().update_to_db(info, self.gs_basic_id, self._cursor,
+																			self._connect,
+																			self._fill_date)
+				if int(year) == 2016:
+					if "report_lab" in info_dict.keys():
+						info = SHX_report_lab.Report_Lab().get_info(info_dict["report_lab"])
+						if len(info) == 0:
+							flag = -1
+						else:
+							flag = SHX_report_lab.Report_Lab().update_to_db(info, self.gs_basic_id, gs_report_id,
+																			self._cursor,
+																			self._connect)
+						logging.info("report_lab:%s" % flag)
+				if "report_run" in info_dict.keys():
+					info = SHX_report_run.Report_Run().get_info(info_dict["report_run"])
 					if len(info) == 0:
 						flag = -1
 					else:
-						flag = SHX_report_lab.Report_Lab().update_to_db(info, self.gs_basic_id, gs_report_id,
+						flag = SHX_report_run.Report_Run().update_to_db(info, self.gs_basic_id, gs_report_id, year,
 																		self._cursor,
 																		self._connect)
-					logging.info("report_lab:%s" % flag)
-			if "report_run" in info_dict.keys():
-				info = SHX_report_run.Report_Run().get_info(info_dict["report_run"])
-				if len(info) == 0:
-					flag = -1
-				else:
-					flag = SHX_report_run.Report_Run().update_to_db(info, self.gs_basic_id, gs_report_id, year,
-																	self._cursor,
-																	self._connect)
-				logging.info("report_run:%s" % flag)
-			if "report_permit" in info_dict.keys():
-				self.update_info(SHX_report_permit.Report_Permit, "report_permit", info_dict)
-			if "report_web" in info_dict.keys():
-				self.update_info(SHX_report_web.Report_Web, "report_web", info_dict)
-			if "report_invest" in info_dict.keys():
-				self.update_info(SHX_report_invest.Report_Invest, "report_invest", info_dict)
-			if "report_share" in info_dict.keys():
-				self.update_info(SHX_report_share.Report_Share, "report_share", info_dict)
-			if "report_assure" in info_dict.keys():
-				self.update_info(SHX_report_assure, "report_assure", info_dict)
-			if "report_schange" in info_dict.keys():
-				self.update_info(SHX_report_schange.Report_Schange, "report_schange", info_dict)
-			
-			def update_info(self, class_object, pattern, info_dict):
-				info = class_object().get_info(info_dict[pattern])
-				if len(info) == 0:
-					flag = -1
-					logging.info("%s 无信息 " % pattern)
-				else:
-					flag, total, insert_flag, update_flag = class_object().update_to_db(info, self.gs_basic_id,
-																						self.gs_report_id, self._cursor,
-																						self._connect)
-				
-				logging.info(
-					"%s:" % pattern + str(flag) + '||' + str(total) + '||' + str(insert_flag) + '||' + str(update_flag))
+					logging.info("report_run:%s" % flag)
+				if "report_permit" in info_dict.keys():
+					self.update_info(SHX_report_permit.Report_Permit, "report_permit", info_dict, gs_report_id)
+				if "report_web" in info_dict.keys():
+					self.update_info(SHX_report_web.Report_Web, "report_web", info_dict, gs_report_id)
+				if "report_invest" in info_dict.keys():
+					self.update_info(SHX_report_invest.Report_Invest, "report_invest", info_dict, gs_report_id)
+				if "report_share" in info_dict.keys():
+					self.update_info(SHX_report_share.Report_Share, "report_share", info_dict, gs_report_id)
+				if "report_assure" in info_dict.keys():
+					self.update_info(SHX_report_assure.Report_Assure, "report_assure", info_dict, gs_report_id)
+				if "report_schange" in info_dict.keys():
+					self.update_info(SHX_report_schange.Report_Schange, "report_schange", info_dict, gs_report_id)
+			else:
+				remark = 100000006
+		
 		except Exception, e:
+			print traceback.format_exc()
 			remark = 100000006
 			logging.info("%s report error:%s" % (year, e))
 		finally:
 			print "%s:%s" % (year, remark)
-
-
-def get_all_report_info(data, cursor, connect, fill_data, gs_basic_id):
-	for key, value in enumerate(fill_data):
-		object = Report(data, value, cursor, connect, gs_basic_id)
-		info_dict = object.get_year_info()
-		object.update_all_info(info_dict)
+	
+	def update_info(self, class_object, pattern, info_dict, gs_report_id):
+		info = class_object().get_info(info_dict[pattern])
+		total, insert_flag, update_flag = 0, 0, 0
+		if len(info) == 0:
+			flag = -1
+			logging.info("%s 无信息 " % pattern)
+		else:
+			flag, total, insert_flag, update_flag = class_object().update_to_db(info, self.gs_basic_id,
+																				gs_report_id, self._cursor,
+																				self._connect)
+		# print "%s:" % pattern + str(flag) + '||' + str(total) + '||' + str(insert_flag) + '||' + str(update_flag)
+		
+		logging.info(
+			"%s:" % pattern + str(flag) + '||' + str(total) + '||' + str(insert_flag) + '||' + str(update_flag))
 
 
 def main(data, fill_data, gs_basic_id):
 	try:
 		HOST, USER, PASSWD, DB, PORT = config.HOST, config.USER, config.PASSWD, config.DB, config.PORT
 		connect, cursor = Connect_to_DB().ConnectDB(HOST, USER, PASSWD, DB, PORT)
-		# 从数据库中选择成立日期
-		now_year = time.localtime(time.time())[0]
-		select_string = select_basic_year % gs_basic_id
-		cursor.execute(select_string)
-		reg_date = cursor.fetchall()[0][0]
-		if reg_date == None or reg_date == '':
-			logging.info("数据库中无成立日期")
-		else:
-			reg_year = str(reg_date)[0:4]
-		# 这个思路认为reg_year已经存在，不存在的情况没有再写代码，而是接下来的出错，不运行，以表示异常
-		# 因为目前还没有见到有的企业没有注册日期
-		if now_year == int(reg_year):
-			flag = -1
-			logging.info("该企业无年报")
-		else:
-			if len(fill_data) == 0:
-				flag = -1
+		# 网页上面的信息是什么就是什么，不需再用这种方式尽心判断
+		# # 从数据库中选择成立日期
+		# now_year = time.localtime(time.time())[0]
+		# select_string = select_basic_year % gs_basic_id
+		# cursor.execute(select_string)
+		# reg_date = cursor.fetchall()[0][0]
+		
+		# if reg_date == None or reg_date == '':
+		# 	logging.info("数据库中无成立日期")
+		# 	reg_year = 0
+		# else:
+		# 	reg_year = str(reg_date)[0:4]
+		#
+		
+		for key, value in fill_data.iteritems():
+			
+			year = int(str(value)[0:4]) - 1
+			count = cursor.execute(select_report % (gs_basic_id, year))
+			if int(count) == 1:
+				print "%s:0" % year
 			else:
-				get_all_report_info(data, cursor, connect, fill_data, gs_basic_id)
+				object = Report(data, value, cursor, connect, gs_basic_id)
+				info_dict = object.get_year_info()
+				object.update_all_info(info_dict)
 	
 	except Exception, e:
-		flag = 100000005
+		
+		# print traceback.format_exc()
 		logging.error("error:%s" % e)
 	finally:
-		print "report:%s" % flag
+		
 		cursor.close()
 		connect.close()

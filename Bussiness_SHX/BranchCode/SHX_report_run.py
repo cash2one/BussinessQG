@@ -49,6 +49,14 @@ class Report_Run:
 		info["loan"] = deal_html_code.match_float(info["loan"])
 		info["if_subsidy"] = self.judge_if_public(info["subsidy"])
 		info["subsidy"] = deal_html_code.match_float(info["subsidy"])
+		info["if_income"] = deal_html_code.match_float(info["income"])
+		info["income"] = self.judge_if_public(info["income"])
+		info["if_profit"] = deal_html_code.match_float(info["profit"])
+		info["profit"] = self.judge_if_public(info["profit"])
+		info["if_debt"] = deal_html_code.match_float(info["debt"])
+		info["debt"] = self.judge_if_public(info["debt"])
+		
+		return info
 	
 	# 用来判断是否公示
 	def judge_if_public(self, asset):

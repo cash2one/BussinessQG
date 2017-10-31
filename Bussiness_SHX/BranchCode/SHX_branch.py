@@ -23,9 +23,12 @@ class Branch:
 	# data.xpath("//div[@class = 'baogao_part']//tr[@name= 'fzjg']")
 	def get_info(self, data):
 		info = {}
-		for i, singledata in enumerate(data):
+		tr_list = data.xpath("//div[@class = 'baogao_part']//tr[@name= 'fzjg']")
+		for i, singledata in enumerate(tr_list):
 			temp = {}
 			td_list = singledata.xpath("./td")
+			if len(td_list) == 0:
+				continue
 			# number = deal_html_code.remove_symbol(td_list[0].xpath("string(.)"))
 			temp["code"] = deal_html_code.remove_symbol(td_list[1].xpath("string(.)"))
 			temp["name"] = deal_html_code.remove_symbol(td_list[2].xpath("string(.)"))

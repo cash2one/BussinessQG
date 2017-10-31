@@ -7,6 +7,7 @@
 
 from PublicCode import deal_html_code
 from PublicCode import config
+from lxml import etree
 import logging
 import hashlib
 import time
@@ -17,17 +18,19 @@ permit_string = 'insert into gs_report_permit(gs_basic_id,gs_report_id,uuid,prov
 
 class Report_Permit:
 	def get_info(self, data):
-		tr_list = data.xpath("//tr")
+		
+		tr_list = data.xpath(".//tr")
 		info = {}
 		for i, singledata in enumerate(tr_list):
 			temp = {}
 			td_list = singledata.xpath("./td")
-			if len(td_list) == 0:
+			if len(td_list) == 0 or len(td_list) == 1:
 				continue
 			temp["types"] = deal_html_code.remove_symbol(td_list[1].xpath("string(.)"))
 			valto = deal_html_code.remove_symbol(td_list[2].xpath("string(.)"))
 			temp["valto"] = deal_html_code.change_chinese_date(valto)
 			info[i] = temp
+		return info
 	
 	def update_to_db(self, info, gs_basic_id, gs_report_id, cursor, connect):
 		insert_flag, update_flag = 0, 0

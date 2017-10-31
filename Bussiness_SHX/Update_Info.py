@@ -101,6 +101,7 @@ def get_html_data(url, print_url):
 	info = {}
 	result, status_code = Send_Request().send_requests(url, headers)
 	if status_code == 200:
+		flag = 1
 		data = etree.HTML(result, parser=etree.HTMLParser(encoding='utf-8'))
 		for key, value in dict.iteritems():
 			info[value] = deal_html_code.match_info(key, data)
@@ -115,7 +116,9 @@ def get_html_data(url, print_url):
 		del info["shareholder2"]
 		del info["shareholder3"]
 	else:
+		flag = 100000004
 		print '获取基本信息失败！'
+	
 	print_info, status_code = Send_Request().send_requests(print_url, headers)
 	if status_code == 200:
 		print_data = etree.HTML(print_info, parser=etree.HTMLParser(encoding='utf-8'))
@@ -125,43 +128,59 @@ def get_html_data(url, print_url):
 		if info["person"] == '':
 			string = u'成员信息'
 			info["person"] = deal_html_code.match_info(string, print_data)
-		string = '分支机构'
+		string = u'分支机构'
 		info["branch"] = deal_html_code.match_info(string, print_data)
-		# 将整个打印页的内容先赋值给info["report],传递给Report类，report类根据年份查找对应年份的信息
-		info["report"] = print_data
+		# 将整个打印页的内容先赋值给info["report1],传递给Report类，report类根据年份查找对应年份的信息
+		
+		info["report1"] = print_data
 	
-	return info
+	return info, flag
 
 
 # 一次性对所有的信息进行更新
 def get_all_info(gs_basic_id, gs_search_id, info_list):
 	Log().found_log(gs_basic_id, gs_search_id)
-	# info = class_dict["basic"]().get_info(info_list["basic"])
-	# flag = class_dict["basic"]().update_to_db(info,gs_basic_id)
-	# print "basic:%s"%flag
+	info = class_dict["basic"]().get_info(info_list["basic"])
+	flag = class_dict["basic"]().update_to_db(info, gs_basic_id)
+	print "basic:%s" % flag
 	pripid = '28890'
-	name = '西安银行股份有限公司'
+	name = info["name"]
 	
 	for key, value in info_list.iteritems():
-		# 这两块信息较为特殊，拿出来单独处理
-		if key == "basic" or key == "report":
-			continue
 		
+		# 这两块信息较为特殊，拿出来单独处理
+		if key == "basic" or key == "report" or key == "report1":
+			continue
+		# 如果没有获取到对应的信息就跳过
 		if key not in info_list.keys():
 			continue
 		Judge(pripid, name, config.dict_url[key]).update_info(key, class_dict[key], value, gs_basic_id)
+	# 单独处理年报
+	tr_list = info_list["report"].xpath(".//tr")
+	fill_data = {}
+	for i, singledata in enumerate(tr_list):
+		td_list = singledata.xpath(".//td")
+		if len(td_list) == 0:
+			continue
+		fill_data[i] = deal_html_code.change_chinese_date(deal_html_code.remove_symbol(td_list[2].xpath("string(.)")))
+	if len(fill_data) == 0:
+		print "report:-1"
+	else:
+		print "report:%s" % len(fill_data)
+	SHX_report.main(info_list["report1"], fill_data, gs_basic_id)
 
 
 # uuid，gs_search_id,gs_search_id,gs_basic_id在这里是php传递的，是全局变量
 # 按照参数的方式进行传递时也是为了增加代码的扩展性
-# 比如有一天php不传递参数了，参数是从另外一份代码传递的，这样只需进到这个借口，而不需改变代码结构
+# 如果参数是从另外一份代码传递的，只需进到这个接口，不需改变代码结构，就可以使用了
 
 def main(uuid, gs_search_id, gs_basic_id):
 	pripid, types = get_key(uuid)
 	url = config.jbxx_url.format(pripid)
 	print_url = config.print_url.format(pripid, types)
-	info_list = get_html_data(url, print_url)
-	get_all_info(gs_basic_id, gs_search_id, info_list)
+	info_list, flag = get_html_data(url, print_url)
+	if flag == 1:
+		get_all_info(gs_basic_id, gs_search_id, info_list)
 
 
 if __name__ == '__main__':

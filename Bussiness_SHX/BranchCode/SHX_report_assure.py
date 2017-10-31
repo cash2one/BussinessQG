@@ -17,12 +17,12 @@ values(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)'
 
 class Report_Assure:
 	def get_info(self, data):
-		tr_list = data.xpath("//tr")
+		tr_list = data.xpath(".//tr")
 		info = {}
 		for i, singledata in enumerate(tr_list):
 			temp = {}
 			td_list = singledata.xpath("./td")
-			if len(td_list) == 0:
+			if len(td_list) == 0 or len(td_list) == 1:
 				continue
 			temp["creditor"] = deal_html_code.remove_symbol(td_list[1].xpath("string(.)"))
 			temp["debtor"] = deal_html_code.remove_symbol(td_list[2].xpath("string(.)"))
@@ -43,9 +43,9 @@ class Report_Assure:
 			for key, value in info.keys():
 				creditor, debtor, cates = value["creditor"], value["debtor"], value["cates"]
 				amount, deadline, period, ways = value["amount"], value["deadline"], value["period"], value["ways"]
-				if_fwarnnt = info[key][8]
+				if_fwarnnt = 1
 				m = hashlib.md5()
-				m.update(str(gs_basic_id) + str(gs_report_id) + str(uuid))
+				m.update(str(gs_basic_id) + str(gs_report_id) + str(key))
 				uuid = m.hexdigest()
 				updated_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
 				flag = cursor.execute(assure_string, (

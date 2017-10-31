@@ -100,12 +100,14 @@ def deal_td_content(string, data):
 # 用于根据指定路径下字符串查找包含该字符串的内容并标签中的内容做处理
 def get_match_info(string, data):
 	try:
-		content = data.xpath(".//*[contains(text(),'%s')]" % string)
+		content = data.xpath(".//td[contains(.,'%s')]" % string)
 		content = content[0]
 		content = remove_symbol(content.xpath("string(.)"))
+		content = content.split("：")[-1]
 	except Exception, e:
 		content = ''
 	finally:
+		
 		return content
 
 
@@ -113,7 +115,7 @@ def get_match_info(string, data):
 # 陕西各个分项页的内容保存在p标签里
 def match_info(string, data):
 	try:
-		content = data.xpath("//p[contains(text(),'%s')]/following-sibling::*[1]" % string)
+		content = data.xpath(".//p[contains(text(),'%s')]/following-sibling::*[1]" % string)
 		content = content[0]
 	except Exception, e:
 		logging.info(traceback.format_exc())
@@ -134,7 +136,7 @@ def match_key_content(string):
 def match_float(finger):
 	if finger == None or finger == '':
 		finger = 0
-	elif "不公示" in finger:
+	elif u"不公示" in finger:
 		finger = 0
 	else:
 		pattern = re.compile(u"[-+]?[0-9]*\.?[0-9]+")  # 正则表达式匹配规则

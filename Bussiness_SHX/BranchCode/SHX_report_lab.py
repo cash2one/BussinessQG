@@ -23,27 +23,34 @@ class Report_Lab:
 		info = {}
 		for key, value in config.report_lab_dict.iteritems():
 			info[value] = deal_html_code.get_match_info(key, data)
-		# 判定欠费金额，实际缴费金额，缴费基数 是否公示
-		# 判定标准选取生育的各个对应信息进行标准，
-		# 即认为如果生育、医疗、养老、失业中有一个欠费，实缴，基数是不公示的
-		# 则其他的也是不公示的
-		if u"不公示" in info["birth_owe"]:
-			if_owe = 0
+		# 这两种情况的采集没有太大意义就不再入库
+		if info["birth_num"] == '' or info["birth_num"] == '人':
+			info = {}
 		else:
-			if_owe = 1
-		info["if_owe"] = if_owe
-		if u"不公示" in info["birth_base"]:
-			if_basenum = 0
-		else:
-			if_basenum = 1
-		info["if_basenum"] = if_basenum
-		if u"不公示" in info["birth"]:
-			if_periodamount = 0
-		else:
-			if_periodamount = 1
-		info["if_periodamount"] = if_periodamount
-		for key, value in info.iteritems():
-			info[key] = deal_html_code.match_float(value)
+			# 判定欠费金额，实际缴费金额，缴费基数 是否公示
+			# 判定标准选取生育的各个对应信息进行标准，
+			# 即认为如果生育、医疗、养老、失业中有一个欠费，实缴，基数是不公示的
+			# 则其他的也是不公示的
+			if info["birth_owe"] > 0:
+				if_owe = 0
+			else:
+				if_owe = 1
+			info["if_owe"] = if_owe
+			if info["birth_base"] == 0:
+				if_basenum = 0
+			else:
+				if_basenum = 1
+			info["if_basenum"] = if_basenum
+			if info["birth"] == 0:
+				if_periodamount = 0
+			else:
+				if_periodamount = 1
+			info["if_periodamount"] = if_periodamount
+			for key, value in info.iteritems():
+				print key, value
+				if "if" in key:
+					continue
+				info[key] = deal_html_code.match_float(value)
 		return info
 	
 	def update_to_db(self, info, gs_basic_id, gs_report_id, year, cursor, connect):

@@ -69,6 +69,7 @@ class Basic:
 			info["reg_address"] = info["reg_address2"]
 		elif info["reg_address3"] != '':
 			info["reg_address3"] = info["reg_address3"]
+		info["appr_date"] = deal_html_code.change_chinese_date(info["appr_date"])
 		
 		# for key,value in info.items():
 		# 	print key + '-->'+value
@@ -112,7 +113,7 @@ class Basic:
 				connect.commit()
 			else:
 				updated_time = deal_html_code.get_before_date()
-				row_count = cursor.execute(update_string, (
+				row_count = cursor.execute(update_string1, (
 					gs_basic_id, name, status, types, jj_type, legal_person, responser, investor, runner,
 					reg_date,
 					appr_date, reg_amount, start_date, end_date, reg_zone, reg_address, scope, updated_time,
@@ -120,9 +121,10 @@ class Basic:
 				logging.info('update basic :%s' % row_count)
 				connect.commit()
 		except Exception, e:
-			flag = 100000004
-			logging.error("basic error:" % e)
+			print "basic error:%s" % e
+			logging.error("basic error:%s" % e)
+			flag = 100000006
 		finally:
 			if flag < 100000001:
 				flag = row_count
-			print "basic:%s" % flag
+			return flag

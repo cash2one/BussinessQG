@@ -47,3 +47,4 @@ except Exception, e:
 # url = 'http://sn.gsxt.gov.cn/ztxy.do?method=frInfoDetail&maent.xh=610000000000893121&maent.pripid=6100000000008931&isck=Y&random=1508406673399'
 # result = requests.get(url,headers = config.headers)
 # print result.text
+print u'\u67e5\u770b'

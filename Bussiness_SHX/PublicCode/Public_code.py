@@ -104,7 +104,7 @@ class Judge:
 	# 将数据更新到数据库中
 	def update_info(self, pattern, Branch, data, gs_basic_id):
 		total, insert_flag, update_flag = 0, 0, 0
-		if pattern == "change" or pattern == "check" or pattern == "clear" or pattern == "stock" or pattern == "person" or pattern == "punish2":
+		if pattern == "change" or pattern == "check" or pattern == "clear" or pattern == "stock" or pattern == "person" or pattern == "punish2" or pattern == "branch":
 			object = Branch()
 		# 商标部分较为特殊需要单独处理
 		elif pattern == "brand":

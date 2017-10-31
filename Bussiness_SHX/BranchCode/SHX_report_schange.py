@@ -16,27 +16,31 @@ schange_string = 'insert into gs_report_schange(gs_basic_id,gs_report_id,provinc
 class Report_Schange:
 	def get_info(self, data):
 		info = {}
-		tr_list = data.xpath("//tr")
+		tr_list = data.xpath(".//tr")
 		for i, singledata in enumerate(tr_list):
 			temp = {}
 			td_list = singledata.xpath("./td")
+			if len(td_list) == 0 or len(td_list) == 1:
+				continue
 			temp["name"] = deal_html_code.remove_symbol(td_list[1].xpath("string(.)"))
 			temp["percent_pre"] = deal_html_code.remove_symbol(td_list[2].xpath("string(.)"))
 			temp["percent_after"] = deal_html_code.remove_symbol(td_list[3].xpath("string(.)"))
 			dates = deal_html_code.remove_symbol(td_list[4].xpath("string(.)"))
 			temp["dates"] = deal_html_code.change_chinese_date(dates)
 			info[i] = temp
+		return info
 	
 	def update_to_db(self, gs_report_id, gs_basic_id, cursor, connect, info):
 		insert_flag, update_flag = 0, 0
 		remark = 0
 		total = len(info)
 		try:
-			for key in info.keys():
-				name, percent_pre, percent_after, dates = info[key][0], info[key][1], info[key][2], info[key][3]
-				uuid = info[key][4]
+			for key, value in info.iteritems():
+				name, percent_pre, percent_after, dates = value["name"], value["percent_pre"], value["percent_after"], \
+														  value["dates"]
+				
 				m = hashlib.md5()
-				m.update(str(gs_basic_id) + str(gs_report_id) + str(uuid))
+				m.update(str(gs_basic_id) + str(gs_report_id) + str(key))
 				uuid = m.hexdigest()
 				updated_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
 				flag = cursor.execute(schange_string, (

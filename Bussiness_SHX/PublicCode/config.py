@@ -84,9 +84,9 @@ report_dict = {
 	u"基本信息": "report_basic",
 	u"担保信息": "report_assure",
 	u"网站": "report_web",
-	u"投资信息": "report_invest",
+	u"对外投资信息": "report_invest",
 	u"资产状况": "report_run1",
-	u"经营状况": "reoprt_run2",
+	u"经营状况": "report_run2",
 	u"行政许可": "report_permit",
 	u"股东及出资": "report_share"
 }
